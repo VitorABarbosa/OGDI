@@ -5,17 +5,21 @@ import { Modelos } from "./_sections/Modelos/Modelos";
 import { Manifesto } from "./_sections/Manifesto/Manifesto";
 import { Clientes } from "./_sections/Clientes/Clientes";
 import { Contato } from "./_sections/Contato/Contato";
+import { IntroOverlay } from "@/components/Intro/IntroOverlay";
 
 export default function HomePage() {
   return (
-    <main>
-      <Hero />
-      <Projetos />
-      <Atuacao />
-      <Modelos />
-      <Manifesto />
-      <Clientes />
-      <Contato />
-    </main>
+    <>
+      <IntroOverlay />
+      <main>
+        <Hero />
+        <Projetos />
+        <Atuacao />
+        <Modelos />
+        <Manifesto />
+        <Clientes />
+        <Contato />
+      </main>
+    </>
   );
 }
