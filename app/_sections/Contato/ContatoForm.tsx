@@ -12,7 +12,7 @@ export function ContatoForm() {
     return (
       <div role="status" className="p-[34px] border border-[color:var(--line-dark)]">
         <Icon name="check" />
-        <h4 className="font-sans font-semibold text-[23px] mt-[14px] mb-[8px] text-white tracking-[-.02em]">Mensagem recebida.</h4>
+        <h3 className="font-sans font-semibold text-[23px] mt-[14px] mb-[8px] text-white tracking-[-.02em]">Mensagem recebida.</h3>
         <p className="text-[rgba(242,241,237,.7)] m-0">A equipe da Open Group faz a primeira leitura e retorna com os próximos passos.</p>
       </div>
     );

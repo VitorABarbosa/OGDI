@@ -9,7 +9,7 @@ export function ContatoInfo() {
   ];
   return (
     <div>
-      <Kicker tone="on-dark-green">Vamos conversar</Kicker>
+      <Kicker tone="on-dark">Vamos conversar</Kicker>
       <h2 className="font-sans font-semibold text-[clamp(28px,3.2vw,46px)] leading-[1.1] my-[22px] text-white tracking-[-.025em]">Apresente sua oportunidade.</h2>
       <p className="text-[16px] text-[rgba(242,241,237,.72)] max-w-[440px] leading-[1.65]">Conte sobre o ativo, o terreno ou o projeto. Fazemos a primeira leitura da oportunidade e indicamos os próximos passos possíveis.</p>
       <div className="mt-[52px] flex flex-col gap-[22px]">

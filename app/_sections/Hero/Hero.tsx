@@ -9,6 +9,7 @@ export function Hero() {
   const s = heroSlides[index];
   return (
     <section id="top" className="relative h-screen min-h-[620px] overflow-hidden bg-dark">
+      <h1 className="sr-only">Open Group — Desenvolvimento imobiliário. O valor nasce antes da obra.</h1>
       <div className="absolute inset-0">
         {heroSlides.map((slide, i) => <HeroSlide key={slide.name} slide={slide} active={i === index} />)}
       </div>
