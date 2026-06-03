@@ -15,7 +15,7 @@ export function useHeaderScroll() {
         if (stage) {
           const scrolledPast = Math.max(0, -stage.getBoundingClientRect().top);
           const p = Math.min(1, Math.max(0, scrolledPast / (vh * 0.65)));
-          setOnDark(p < 0.10);
+          setOnDark(p < 0.25);
         } else {
           setOnDark(false);
         }

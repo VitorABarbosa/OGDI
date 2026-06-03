@@ -17,7 +17,7 @@ export function Header() {
         "fixed top-0 inset-x-0 z-[100] px-pad-x flex items-center justify-between",
         "transition-[background-color,padding,border-color,box-shadow] duration-[400ms] ease-brand border-b",
         scrolled && !onDark
-          ? "py-3 bg-white/[.78] backdrop-blur-[18px] backdrop-saturate-[1.8] border-[color:var(--line)] shadow-[0_10px_34px_-18px_rgba(23,26,27,0.16)]"
+          ? "py-3 bg-white/[.92] backdrop-blur-[18px] backdrop-saturate-[1.8] border-[color:var(--line)] shadow-[0_10px_34px_-18px_rgba(23,26,27,0.16)]"
           : "py-[18px] border-transparent",
         onDark && "!bg-transparent !backdrop-blur-none !border-transparent")}>
         <Link href="/#top" aria-label="Open Group — início" className="flex items-center gap-[11px]">
@@ -26,7 +26,7 @@ export function Header() {
           <span className={cn("font-sans font-medium text-[14.5px] leading-none", onDark ? "text-white" : "text-ink")}>
             {site.name}
             <small className={cn("block text-[8.5px] tracking-[.24em] uppercase mt-1 font-normal",
-              onDark ? "text-white/60" : "text-ink-3")}>{site.subtitle}</small>
+              onDark ? "text-white/80" : "text-ink-3")}>{site.subtitle}</small>
           </span>
         </Link>
         <Nav onDark={onDark} />
