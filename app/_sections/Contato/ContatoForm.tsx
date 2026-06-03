@@ -10,7 +10,7 @@ export function ContatoForm() {
   const [sent, setSent] = useState(false);
   if (sent) {
     return (
-      <div className="p-[34px] border border-[color:var(--line-dark)]">
+      <div role="status" className="p-[34px] border border-[color:var(--line-dark)]">
         <Icon name="check" />
         <h4 className="font-sans font-semibold text-[23px] mt-[14px] mb-[8px] text-white tracking-[-.02em]">Mensagem recebida.</h4>
         <p className="text-[rgba(242,241,237,.7)] m-0">A equipe da Open Group faz a primeira leitura e retorna com os próximos passos.</p>
@@ -27,7 +27,13 @@ export function ContatoForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[22px]">
         <div className="flex flex-col gap-2"><label htmlFor="f-wpp" className={labelCls}>WhatsApp</label><input id="f-wpp" type="tel" placeholder="+55 11 90000-0000" className={fieldCls} /></div>
         <div className="flex flex-col gap-2"><label htmlFor="f-tipo" className={labelCls}>Tipo de contato</label>
-          <select id="f-tipo" className={`${fieldCls} appearance-none cursor-pointer`}>
+          <select id="f-tipo" className={`${fieldCls} appearance-none cursor-pointer pr-7`}
+            style={{
+              backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239AA3A4' stroke-width='1.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E\")",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "right center",
+              backgroundSize: "14px",
+            }}>
             {["Apresentar oportunidade","Falar sobre projeto","Parceria","Investimento","Imprensa","Outro"].map(o => <option key={o} className="text-[#15282c]">{o}</option>)}
           </select>
         </div>
