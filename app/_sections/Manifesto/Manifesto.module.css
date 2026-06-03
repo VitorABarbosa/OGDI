@@ -1,0 +1,8 @@
+.arcs {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .5;
+  background:
+    radial-gradient(circle at 78% 50%, transparent 0 23.7vw, rgba(255,255,255,.07) 23.7vw 23.8vw, transparent 23.8vw),
+    radial-gradient(circle at 78% 50%, transparent 0 31.7vw, rgba(255,255,255,.06) 31.7vw 31.8vw, transparent 31.8vw),
+    radial-gradient(circle at 78% 50%, transparent 0 39.7vw, rgba(255,255,255,.05) 39.7vw 39.8vw, transparent 39.8vw);
+}
+@media (max-width: 760px) { .arcs { opacity: .4; } }
