@@ -43,14 +43,14 @@ export function Projetos() {
     <section id="projetos" className="py-section">
       <div className="wrap">
         <div className="flex items-end justify-between gap-[24px_40px] flex-wrap mb-10">
-          <div className="max-w-[520px]">
+          <div className="max-w-[520px] reveal">
             <Kicker>Projetos</Kicker>
             <SectionHeading className="mt-[14px]">Estruturados antes da obra.<br />Empreendimentos que avançam.</SectionHeading>
           </div>
-          <ProjetoTabs active={cat} onChange={onTab} />
+          <div className="reveal reveal-2"><ProjetoTabs active={cat} onChange={onTab} /></div>
         </div>
       </div>
-      <div className="relative">
+      <div className="relative reveal reveal-2">
         <div ref={viewportRef} className="relative overflow-hidden w-screen ml-[calc(50%-50vw)]">
           <div
             ref={trackRef}

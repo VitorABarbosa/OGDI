@@ -1,0 +1,12 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 1s var(--ease-brand), transform 1s var(--ease-brand);
+}
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-2 { transition-delay: .08s; }
+.reveal-3 { transition-delay: .16s; }
+.reveal-4 { transition-delay: .24s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

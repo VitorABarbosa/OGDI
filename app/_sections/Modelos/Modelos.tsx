@@ -7,7 +7,7 @@ export function Modelos() {
   return (
     <section id="modelos" className="py-section">
       <div className="wrap">
-        <div className="max-w-[760px]">
+        <div className="max-w-[760px] reveal">
           <Kicker>Modelos de atuação</Kicker>
           <SectionHeading className="mt-[14px] mb-[18px]">Atuação flexível conforme<br />o perfil da oportunidade.</SectionHeading>
           <p className="text-[clamp(15px,1.15vw,18px)] leading-[1.65] text-ink-2">Cada oportunidade exige uma lógica própria. A Open Group avalia o estágio, o potencial e a complexidade da operação para definir o modelo de atuação mais adequado.</p>
