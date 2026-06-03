@@ -11,7 +11,14 @@ export function useHeaderScroll() {
       requestAnimationFrame(() => {
         const sy = window.scrollY, vh = window.innerHeight;
         setScrolled(sy > 20);
-        setOnDark(sy < vh - 90);
+        const stage = document.getElementById("top");
+        if (stage) {
+          const scrolledPast = Math.max(0, -stage.getBoundingClientRect().top);
+          const p = Math.min(1, Math.max(0, scrolledPast / (vh * 0.65)));
+          setOnDark(p < 0.10);
+        } else {
+          setOnDark(false);
+        }
         ticking = false;
       });
     };
