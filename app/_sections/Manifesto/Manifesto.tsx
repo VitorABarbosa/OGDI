@@ -9,7 +9,7 @@ export function Manifesto() {
       <div className="wrap relative z-[2]">
         <div className="max-w-[720px]">
           <Kicker tone="on-dark-green">Manifesto</Kicker>
-          <p className="mt-[clamp(24px,3vw,36px)] font-news font-normal text-[clamp(1.9rem,3.9vw,3.2rem)] leading-[1.28] tracking-[-.01em] text-white max-w-[20ch]">
+          <p className="mt-[clamp(24px,3vw,36px)] font-news font-normal text-[clamp(1.9rem,3.9vw,3.2rem)] leading-[1.28] tracking-[-.01em] text-white max-w-[20ch] max-md:text-[clamp(1.7rem,8vw,2.4rem)] max-md:max-w-[18ch]">
             Antes da obra, existe a <span className="text-manifesto-em italic">decisão</span>.<br />
             Antes do lançamento, existe a <span className="text-manifesto-em italic">estrutura</span>.<br />
             Antes do valor, existe <span className="text-manifesto-em italic">visão</span>.
