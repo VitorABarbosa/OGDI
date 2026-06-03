@@ -61,12 +61,22 @@ export function Projetos() {
     if (!d) return;
     const card = trackRef.current?.children[index] as HTMLElement | undefined;
     const threshold = Math.min(120, (card?.offsetWidth ?? 600) * 0.14);
+    const navigates = Math.abs(d.dx) >= 5 && Math.abs(d.dx) >= threshold;
     if (Math.abs(d.dx) >= 5) dragEnd(d.dx, threshold);
+    // When the drag doesn't cross the threshold the index is unchanged, so React
+    // won't re-assert the transform — snap back to center imperatively (animated,
+    // since transition was just restored above).
+    if (!navigates && trackRef.current) {
+      trackRef.current.style.transform = `translateX(${offset}px)`;
+    }
   };
   const onDragCancel = () => {
     drag.current = null;
     setDragging(false);
-    if (trackRef.current) trackRef.current.style.transition = "";
+    if (trackRef.current) {
+      trackRef.current.style.transition = "";
+      trackRef.current.style.transform = `translateX(${offset}px)`;
+    }
   };
 
   return (
