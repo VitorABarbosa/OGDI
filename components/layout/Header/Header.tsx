@@ -30,10 +30,12 @@ export function Header() {
           </span>
         </Link>
         <Nav onDark={onDark} />
-        <button onClick={menu.toggle} aria-label="Abrir menu"
-          className="lg:hidden w-11 h-11 flex items-center justify-center">
-          <span className={cn("block w-[22px] h-px relative bg-current before:content-[''] before:absolute before:inset-x-0 before:-top-[6px] before:h-px before:bg-current after:content-[''] after:absolute after:inset-x-0 after:top-[6px] after:h-px after:bg-current",
-            onDark ? "text-white" : "text-ink")} />
+        <button onClick={menu.toggle} aria-label={menu.open ? "Fechar menu" : "Abrir menu"} aria-expanded={menu.open}
+          className="lg:hidden relative w-11 h-11 flex items-center justify-center">
+          <span aria-hidden className={cn("absolute block h-px w-[22px]", (menu.open || onDark) ? "bg-white" : "bg-ink")}
+            style={{ transition: "transform .3s cubic-bezier(.22,.61,.36,1)", transform: menu.open ? "translateY(0) rotate(45deg)" : "translateY(-3.5px)" }} />
+          <span aria-hidden className={cn("absolute block h-px w-[22px]", (menu.open || onDark) ? "bg-white" : "bg-ink")}
+            style={{ transition: "transform .3s cubic-bezier(.22,.61,.36,1)", transform: menu.open ? "translateY(0) rotate(-45deg)" : "translateY(3.5px)" }} />
         </button>
       </header>
       <MobileMenu open={menu.open} onClose={menu.close} />
