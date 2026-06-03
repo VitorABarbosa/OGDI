@@ -58,6 +58,7 @@ export function Projetos() {
             style={{ transform: `translateX(${offset}px)` }}
             onPointerDown={(e) => { drag.current = { x: e.clientX }; }}
             onPointerUp={(e) => { if (drag.current) { dragEnd(e.clientX - drag.current.x, 120); drag.current = null; } }}
+            onPointerCancel={() => { drag.current = null; }}
           >
             {list.map((p, i) => <ProjetoCard key={p.name} p={p} active={i === index} />)}
           </div>
