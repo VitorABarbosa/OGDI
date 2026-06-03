@@ -1,0 +1,38 @@
+@theme {
+  /* cores */
+  --color-white: #FFFFFF;
+  --color-paper: #FFFFFF;
+  --color-bg-soft: #F7F6F4;
+  --color-bg-soft-2: #F2F1ED;
+  --color-ink: #171A1B;
+  --color-ink-2: #565D5E;
+  --color-ink-3: #8B9192;
+  --color-teal: #1F5A63;
+  --color-teal-deep: #143E45;
+  --color-green: #5FA83C;
+  --color-green-deep: #2C5E22;
+  --color-dark: #121617;
+  --color-dark-2: #171C1D;
+  --color-on-dark: #F2F1ED;
+  --color-on-dark-2: #9AA3A4;
+  --color-manifesto: #062B3C;
+  --color-manifesto-em: #57B13A;
+
+  /* linhas (rgba — usar via var() onde precisar de borda) */
+  --line: rgba(23,26,27,0.12);
+  --line-2: rgba(23,26,27,0.22);
+  --line-dark: rgba(242,241,237,0.14);
+
+  /* tipografia */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+  --font-news: 'Newsreader', Georgia, serif;
+
+  /* easings */
+  --ease-brand: cubic-bezier(.22,.61,.36,1);
+  --ease-brand-2: cubic-bezier(.16,1,.3,1);
+
+  /* ritmo */
+  --spacing-pad-x: clamp(20px, 5vw, 88px);
+  --spacing-section: clamp(80px, 11vw, 168px);
+}
