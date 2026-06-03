@@ -24,9 +24,9 @@
   --line-dark: rgba(242,241,237,0.14);
 
   /* tipografia */
-  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Instrument Sans', system-ui, -apple-system, sans-serif;
-  --font-news: 'Newsreader', Georgia, serif;
+  --font-serif: var(--ff-serif), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--ff-sans), system-ui, -apple-system, sans-serif;
+  --font-news: var(--ff-news), Georgia, serif;
 
   /* easings */
   --ease-brand: cubic-bezier(.22,.61,.36,1);
