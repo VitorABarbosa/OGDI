@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type PointerEvent } from "react";
 import { Kicker } from "@/components/ui/Kicker";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TextLink } from "@/components/ui/TextLink";
@@ -18,8 +18,9 @@ export function Projetos() {
   const { index, goTo, next, prev, dragEnd } = useCarousel({ length: list.length });
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
-  const drag = useRef<{ x: number } | null>(null);
+  const drag = useRef<{ x: number; dx: number } | null>(null);
   const [offset, setOffset] = useState(0);
+  const [dragging, setDragging] = useState(false);
 
   const onTab = (c: ProjetoCat) => { setCat(c); goTo(0); };
 
@@ -39,6 +40,35 @@ export function Projetos() {
     return () => window.removeEventListener("resize", recenter);
   }, [recenter]);
 
+  // Drag: follow the finger live, then snap to the nearest card past the threshold.
+  const onDragStart = (e: PointerEvent<HTMLDivElement>) => {
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+    drag.current = { x: e.clientX, dx: 0 };
+    setDragging(true);
+    if (trackRef.current) trackRef.current.style.transition = "none";
+  };
+  const onDragMove = (e: PointerEvent<HTMLDivElement>) => {
+    const d = drag.current;
+    if (!d) return;
+    d.dx = e.clientX - d.x;
+    if (trackRef.current) trackRef.current.style.transform = `translateX(${offset + d.dx}px)`;
+  };
+  const onDragEnd = () => {
+    const d = drag.current;
+    drag.current = null;
+    setDragging(false);
+    if (trackRef.current) trackRef.current.style.transition = "";
+    if (!d) return;
+    const card = trackRef.current?.children[index] as HTMLElement | undefined;
+    const threshold = Math.min(120, (card?.offsetWidth ?? 600) * 0.14);
+    if (Math.abs(d.dx) >= 5) dragEnd(d.dx, threshold);
+  };
+  const onDragCancel = () => {
+    drag.current = null;
+    setDragging(false);
+    if (trackRef.current) trackRef.current.style.transition = "";
+  };
+
   return (
     <section id="projetos" className="py-section">
       <div className="wrap">
@@ -54,11 +84,12 @@ export function Projetos() {
         <div ref={viewportRef} className="relative overflow-hidden w-screen ml-[calc(50%-50vw)]">
           <div
             ref={trackRef}
-            className="flex gap-[clamp(16px,2vw,30px)] h-[clamp(440px,50vw,600px)] max-md:h-[78vw] max-md:max-h-[560px] transition-transform duration-700 ease-brand-2 touch-pan-y"
+            className={`flex gap-[clamp(16px,2vw,30px)] h-[clamp(440px,50vw,600px)] max-md:h-[78vw] max-md:max-h-[560px] transition-transform duration-700 ease-brand-2 touch-pan-y cursor-grab select-none ${dragging ? "cursor-grabbing" : ""}`}
             style={{ transform: `translateX(${offset}px)` }}
-            onPointerDown={(e) => { drag.current = { x: e.clientX }; }}
-            onPointerUp={(e) => { if (drag.current) { dragEnd(e.clientX - drag.current.x, 120); drag.current = null; } }}
-            onPointerCancel={() => { drag.current = null; }}
+            onPointerDown={onDragStart}
+            onPointerMove={onDragMove}
+            onPointerUp={onDragEnd}
+            onPointerCancel={onDragCancel}
           >
             {list.map((p, i) => <ProjetoCard key={p.name} p={p} active={i === index} />)}
           </div>
