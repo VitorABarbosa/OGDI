@@ -11,6 +11,7 @@ import { cn } from "@/lib/cn";
 export function Header() {
   const { scrolled, onDark } = useHeaderScroll();
   const menu = useMobileMenu();
+  const lightForeground = !scrolled || onDark;
   return (
     <>
       <header className={cn(
@@ -21,20 +22,20 @@ export function Header() {
           : "py-[18px] border-transparent",
         onDark && "!bg-transparent !backdrop-blur-none !border-transparent")}>
         <Link href="/#top" aria-label="Open Group — início" className="flex items-center gap-[11px]">
-          <Image src={onDark ? "/assets/logos/og-logo-light.png" : "/assets/logos/og-logo.png"}
+          <Image src={lightForeground ? "/assets/logos/og-logo-light.png" : "/assets/logos/og-logo.png"}
             alt="Open Group" width={34} height={34} className="w-[34px] h-[34px] object-contain" />
-          <span className={cn("font-sans font-medium text-[14.5px] leading-none", onDark ? "text-white" : "text-ink")}>
+          <span className={cn("font-sans font-medium text-[14.5px] leading-none", lightForeground ? "text-white" : "text-ink")}>
             {site.name}
             <small className={cn("block text-[8.5px] tracking-[.24em] uppercase mt-1 font-normal",
-              onDark ? "text-white/80" : "text-ink-3")}>{site.subtitle}</small>
+              lightForeground ? "text-white/80" : "text-ink-3")}>{site.subtitle}</small>
           </span>
         </Link>
-        <Nav onDark={onDark} />
+        <Nav onDark={lightForeground} />
         <button onClick={menu.toggle} aria-label={menu.open ? "Fechar menu" : "Abrir menu"} aria-expanded={menu.open}
           className="lg:hidden relative w-11 h-11 flex items-center justify-center">
-          <span aria-hidden className={cn("absolute block h-px w-[22px]", (menu.open || onDark) ? "bg-white" : "bg-ink")}
+          <span aria-hidden className={cn("absolute block h-px w-[22px]", (menu.open || lightForeground) ? "bg-white" : "bg-ink")}
             style={{ transition: "transform .3s cubic-bezier(.22,.61,.36,1)", transform: menu.open ? "translateY(0) rotate(45deg)" : "translateY(-3.5px)" }} />
-          <span aria-hidden className={cn("absolute block h-px w-[22px]", (menu.open || onDark) ? "bg-white" : "bg-ink")}
+          <span aria-hidden className={cn("absolute block h-px w-[22px]", (menu.open || lightForeground) ? "bg-white" : "bg-ink")}
             style={{ transition: "transform .3s cubic-bezier(.22,.61,.36,1)", transform: menu.open ? "translateY(0) rotate(-45deg)" : "translateY(3.5px)" }} />
         </button>
       </header>
