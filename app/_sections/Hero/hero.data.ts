@@ -4,6 +4,7 @@ export type HeroSlide = {
   meta: string[];   // prefixo "@" = "a confirmar" (renderiza em itálico esmaecido)
   sign: string;
   tone: "t1" | "t2" | "t3";
+  image?: string;   // foto do empreendimento; sem imagem cai no gradiente (tone)
 };
 
 export const heroSlides: HeroSlide[] = [
@@ -15,7 +16,8 @@ export const heroSlides: HeroSlide[] = [
     sign: "Atuação OGDI — leitura da oportunidade, produto e estruturação da operação.", tone: "t2" },
   { kick: "Em obra · Empreendimento", name: "Start Park Jabaquara",
     meta: ["Em obra", "Residencial", "São Paulo · SP"],
-    sign: "Atuação OGDI — inteligência de mercado, viabilidade e condução até o lançamento.", tone: "t3" },
+    sign: "Atuação OGDI — inteligência de mercado, viabilidade e condução até o lançamento.", tone: "t3",
+    image: "/assets/projetos/HITS_START_PARK_JABAQUARA/HITS_PARK.png" },
   { kick: "Em obra · Empreendimento", name: "Oh Freguesia",
     meta: ["Em obra", "Residencial", "São Paulo · SP"],
     sign: "Atuação OGDI — conceituação do produto e estruturação da operação.", tone: "t2" },

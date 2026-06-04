@@ -5,8 +5,16 @@ import { heroSlides } from "./hero.data";
 import { HeroSlide } from "./HeroSlide";
 import { Icon } from "@/components/ui/Icon";
 
+// TODO(hero): carrossel travado POR ORA em um único slide.
+// Para reativar o carrossel, basta definir LOCK_TO = null.
+const LOCK_TO: string | null = "Start Park Jabaquara";
+
 export function Hero() {
-  const { index, next, prev } = useCarousel({ length: heroSlides.length, autoplayMs: 6500 });
+  const lockIndex = LOCK_TO ? heroSlides.findIndex((sl) => sl.name === LOCK_TO) : -1;
+  const locked = lockIndex >= 0;
+  const carousel = useCarousel({ length: heroSlides.length, autoplayMs: locked ? undefined : 6500 });
+  const index = locked ? lockIndex : carousel.index;
+  const { next, prev } = carousel;
   const s = heroSlides[index];
   const stageRef = useRef<HTMLElement>(null);
   const frameRef = useRef<HTMLDivElement>(null);
@@ -56,7 +64,14 @@ export function Hero() {
       <h1 className="sr-only">Open Group — Desenvolvimento imobiliário. O valor nasce antes da obra.</h1>
       <div className="sticky top-0 h-screen min-h-[620px] overflow-hidden">
         <div ref={frameRef} className="absolute top-[var(--ht,0px)] right-[var(--hs,0px)] bottom-[var(--hb,0px)] left-[var(--hs,0px)] rounded-[var(--hr,0px)] overflow-hidden bg-dark [will-change:top,right,bottom,left,border-radius]">
-          <div className="absolute inset-0">
+          {/* camada de slides fixada ao viewport: offsets negativos cancelam os recuos
+              do frame (--ht/--hs/--hb), então a imagem não encolhe — o frame só a recorta */}
+          <div className="absolute" style={{
+            top: "calc(-1 * var(--ht, 0px))",
+            left: "calc(-1 * var(--hs, 0px))",
+            right: "calc(-1 * var(--hs, 0px))",
+            bottom: "calc(-1 * var(--hb, 0px))",
+          }}>
             {heroSlides.map((slide, i) => <HeroSlide key={slide.name} slide={slide} active={i === index} />)}
           </div>
           {/* scrim/overlay — fades out on scroll via overlayRef */}
@@ -85,9 +100,11 @@ export function Hero() {
               </div>
             </div>
           </div>
-          {/* setas (com nudge no hover — §hero-arrow-hover da referência) */}
+          {/* setas (com nudge no hover — §hero-arrow-hover da referência) — ocultas enquanto travado */}
+          {!locked && (<>
           <button onClick={prev} aria-label="Anterior" className="absolute z-[4] top-1/2 -translate-y-1/2 left-[clamp(10px,2vw,28px)] w-[clamp(44px,4vw,60px)] h-[clamp(44px,4vw,60px)] flex items-center justify-center text-white opacity-75 hover:opacity-100 transition-[opacity,transform] duration-300 ease-brand hover:-translate-x-[3px]"><Icon name="chevron-left" className="w-[30px] h-[30px]" /></button>
           <button onClick={next} aria-label="Próximo" className="absolute z-[4] top-1/2 -translate-y-1/2 right-[clamp(10px,2vw,28px)] w-[clamp(44px,4vw,60px)] h-[clamp(44px,4vw,60px)] flex items-center justify-center text-white opacity-75 hover:opacity-100 transition-[opacity,transform] duration-300 ease-brand hover:translate-x-[3px]"><Icon name="chevron-right" className="w-[30px] h-[30px]" /></button>
+          </>)}
         </div>
       </div>
     </section>
