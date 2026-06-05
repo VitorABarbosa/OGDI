@@ -13,8 +13,10 @@ export function Manifesto() {
             <h2 className="font-news font-normal text-[clamp(1.65rem,2.05vw,2.25rem)] leading-[1.12] tracking-[-.01em]">
               O que fazemos
             </h2>
-            <p className="mt-[clamp(24px,3vw,36px)] font-news font-normal text-[clamp(1.75rem,3.05vw,3.45rem)] leading-[1.2] tracking-[-.01em] text-white max-w-[25ch] max-md:text-[clamp(1.75rem,8vw,2.45rem)]">
-              Antes da obra, existe a <span className="text-manifesto-em italic">decisão</span>. Antes do lançamento, existe a <span className="text-manifesto-em italic">estrutura</span>. Antes do valor, existe <span className="text-manifesto-em italic">visão</span>.
+            <p className="mt-[clamp(24px,3vw,36px)] font-news font-normal text-[clamp(1.75rem,3.05vw,3.45rem)] leading-[1.26] tracking-[-.01em] text-white max-w-[26ch] max-md:text-[clamp(1.75rem,8vw,2.45rem)]">
+              Antes da obra, existe a <span className="text-manifesto-em italic">decisão</span>.<br />
+              Antes do lançamento, existe a <span className="text-manifesto-em italic">estrutura</span>.<br />
+              Antes do valor, existe <span className="text-manifesto-em italic">visão</span>.
             </p>
             <div className="mt-[clamp(30px,4vw,48px)] max-w-[900px] space-y-[clamp(16px,2vw,24px)] text-[clamp(.98rem,1.32vw,1.25rem)] leading-[1.62] text-white/78">
               <p>
