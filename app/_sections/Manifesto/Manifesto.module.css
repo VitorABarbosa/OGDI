@@ -1,8 +1,60 @@
 .arcs {
-  position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .5;
+  position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .55; overflow: hidden;
+}
+
+.arcs::before,
+.arcs::after {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  transform-origin: 78% 50%;
   background:
-    radial-gradient(circle at 78% 50%, transparent 0 23.7vw, rgba(255,255,255,.07) 23.7vw 23.8vw, transparent 23.8vw),
-    radial-gradient(circle at 78% 50%, transparent 0 31.7vw, rgba(255,255,255,.06) 31.7vw 31.8vw, transparent 31.8vw),
-    radial-gradient(circle at 78% 50%, transparent 0 39.7vw, rgba(255,255,255,.05) 39.7vw 39.8vw, transparent 39.8vw);
+    radial-gradient(circle at 78% 50%, transparent 0 15.6vw, rgba(255,255,255,.055) 15.6vw 15.72vw, transparent 15.72vw),
+    radial-gradient(circle at 78% 50%, transparent 0 19.7vw, rgba(255,255,255,.065) 19.7vw 19.82vw, transparent 19.82vw),
+    radial-gradient(circle at 78% 50%, transparent 0 23.7vw, rgba(255,255,255,.075) 23.7vw 23.83vw, transparent 23.83vw),
+    radial-gradient(circle at 78% 50%, transparent 0 27.8vw, rgba(255,255,255,.06) 27.8vw 27.92vw, transparent 27.92vw),
+    radial-gradient(circle at 78% 50%, transparent 0 31.7vw, rgba(255,255,255,.07) 31.7vw 31.84vw, transparent 31.84vw),
+    radial-gradient(circle at 78% 50%, transparent 0 35.9vw, rgba(255,255,255,.055) 35.9vw 36.03vw, transparent 36.03vw),
+    radial-gradient(circle at 78% 50%, transparent 0 39.7vw, rgba(255,255,255,.06) 39.7vw 39.84vw, transparent 39.84vw),
+    radial-gradient(circle at 78% 50%, transparent 0 44vw, rgba(255,255,255,.05) 44vw 44.14vw, transparent 44.14vw),
+    radial-gradient(circle at 78% 50%, transparent 0 48.2vw, rgba(255,255,255,.045) 48.2vw 48.34vw, transparent 48.34vw),
+    radial-gradient(circle at 78% 50%, transparent 0 52.6vw, rgba(255,255,255,.04) 52.6vw 52.74vw, transparent 52.74vw);
+  animation: manifesto-waves 14s var(--ease-brand) infinite;
+  will-change: transform, opacity, filter;
+}
+
+.arcs::after {
+  animation-delay: -7s;
+  opacity: .65;
+}
+
+@keyframes manifesto-waves {
+  0% {
+    opacity: 0;
+    transform: scale(.72);
+    filter: blur(0);
+  }
+  14% {
+    opacity: .82;
+  }
+  68% {
+    opacity: .52;
+    filter: blur(.25px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.24);
+    filter: blur(1.4px);
+  }
 }
 @media (max-width: 760px) { .arcs { opacity: .4; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .arcs::before,
+  .arcs::after {
+    animation: none;
+    opacity: .55;
+    transform: scale(1);
+    filter: none;
+  }
+}
