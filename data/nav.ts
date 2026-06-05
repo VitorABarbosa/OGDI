@@ -1,7 +1,7 @@
 export type NavItem = { label: string; href: string };
 
 export const navItems: NavItem[] = [
-  { label: "Manifesto", href: "/#institucional" },
+  { label: "Sobre", href: "/#institucional" },
   { label: "Atuação", href: "/#atuacao" },
   { label: "Modelos", href: "/#modelos" },
   { label: "Projetos", href: "/#projetos" },
