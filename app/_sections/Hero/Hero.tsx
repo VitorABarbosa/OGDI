@@ -5,9 +5,8 @@ import { heroSlides } from "./hero.data";
 import { HeroSlide } from "./HeroSlide";
 import { Icon } from "@/components/ui/Icon";
 
-// TODO(hero): carrossel travado POR ORA em um único slide.
-// Para reativar o carrossel, basta definir LOCK_TO = null.
-const LOCK_TO: string | null = "Start Park Jabaquara";
+// Carrossel da hero ativo. Para travar em um único slide, defina LOCK_TO = "Nome do slide".
+const LOCK_TO: string | null = null;
 
 export function Hero() {
   const lockIndex = LOCK_TO ? heroSlides.findIndex((sl) => sl.name === LOCK_TO) : -1;
