@@ -8,9 +8,10 @@ export type HeroSlide = {
 };
 
 export const heroSlides: HeroSlide[] = [
-  { kick: "Entregue · Empreendimento", name: "Hits Santa Catarina",
-    meta: ["Entregue", "Residencial", "@Localização a confirmar"],
-    sign: "Atuação OGDI — estruturação e desenvolvimento, da concepção ao lançamento.", tone: "t1" },
+  // OFF por hora (sem imagem/conteúdo) — reativar quando tiver foto:
+  // { kick: "Entregue · Empreendimento", name: "Hits Santa Catarina",
+  //   meta: ["Entregue", "Residencial", "@Localização a confirmar"],
+  //   sign: "Atuação OGDI — estruturação e desenvolvimento, da concepção ao lançamento.", tone: "t1" },
   { kick: "Em obra · Empreendimento", name: "Hits Cupecê",
     meta: ["Em obra", "Residencial", "São Paulo · SP"],
     sign: "Atuação OGDI — leitura da oportunidade, produto e estruturação da operação.", tone: "t2",
@@ -23,7 +24,8 @@ export const heroSlides: HeroSlide[] = [
     meta: ["Em obra", "Residencial", "São Paulo · SP"],
     sign: "Atuação OGDI — conceituação do produto e estruturação da operação.", tone: "t2",
     image: "/assets/projetos/OH_FREGUESIA/Oh_freguesia.png" },
-  { kick: "Investimento · SCP", name: "Immensità",
-    meta: ["Investimento", "SCP · Operação", "@Localização a confirmar"],
-    sign: "Atuação OGDI — estruturação da operação e conexão com investidores.", tone: "t1" },
+  // OFF por hora (sem imagem/conteúdo) — reativar quando tiver foto:
+  // { kick: "Investimento · SCP", name: "Immensità",
+  //   meta: ["Investimento", "SCP · Operação", "@Localização a confirmar"],
+  //   sign: "Atuação OGDI — estruturação da operação e conexão com investidores.", tone: "t1" },
 ];
