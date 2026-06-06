@@ -1,18 +1,26 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useCarousel } from "@/hooks/useCarousel";
+import { onIntroDone } from "@/components/Intro/introSignal";
 import { heroSlides } from "./hero.data";
 import { HeroSlide } from "./HeroSlide";
 import { Icon } from "@/components/ui/Icon";
 
-// Carrossel da hero ativo. Para travar em um único slide, defina LOCK_TO = "Nome do slide".
-const LOCK_TO: string | null = null;
+// A hero abre travada no Start Park (casa com o frame final da abertura) e só
+// começa a passar os projetos depois que a abertura termina.
+const START_SLIDE = "Start Park Jabaquara";
+const startIndex = Math.max(0, heroSlides.findIndex((sl) => sl.name === START_SLIDE));
 
 export function Hero() {
-  const lockIndex = LOCK_TO ? heroSlides.findIndex((sl) => sl.name === LOCK_TO) : -1;
-  const locked = lockIndex >= 0;
-  const carousel = useCarousel({ length: heroSlides.length, autoplayMs: locked ? undefined : 6500 });
-  const index = locked ? lockIndex : carousel.index;
+  const [introDone, setIntroDone] = useState(false);
+  useEffect(() => onIntroDone(() => setIntroDone(true)), []);
+
+  const carousel = useCarousel({
+    length: heroSlides.length,
+    initialIndex: startIndex,
+    autoplayMs: introDone ? 6500 : undefined,
+  });
+  const index = carousel.index;
   const { next, prev } = carousel;
   const s = heroSlides[index];
   const stageRef = useRef<HTMLElement>(null);
@@ -99,8 +107,8 @@ export function Hero() {
               </div>
             </div>
           </div>
-          {/* setas (com nudge no hover — §hero-arrow-hover da referência) — ocultas enquanto travado */}
-          {!locked && (<>
+          {/* setas (com nudge no hover — §hero-arrow-hover da referência) — só após a abertura */}
+          {introDone && (<>
           <button onClick={prev} aria-label="Anterior" className="absolute z-[4] top-1/2 -translate-y-1/2 left-[clamp(10px,2vw,28px)] w-[clamp(44px,4vw,60px)] h-[clamp(44px,4vw,60px)] flex items-center justify-center text-white opacity-75 hover:opacity-100 transition-[opacity,transform] duration-300 ease-brand hover:-translate-x-[3px]"><Icon name="chevron-left" className="w-[30px] h-[30px]" /></button>
           <button onClick={next} aria-label="Próximo" className="absolute z-[4] top-1/2 -translate-y-1/2 right-[clamp(10px,2vw,28px)] w-[clamp(44px,4vw,60px)] h-[clamp(44px,4vw,60px)] flex items-center justify-center text-white opacity-75 hover:opacity-100 transition-[opacity,transform] duration-300 ease-brand hover:translate-x-[3px]"><Icon name="chevron-right" className="w-[30px] h-[30px]" /></button>
           </>)}

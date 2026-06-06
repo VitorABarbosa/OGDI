@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-type Opts = { length: number; autoplayMs?: number };
+type Opts = { length: number; autoplayMs?: number; initialIndex?: number };
 
-export function useCarousel({ length, autoplayMs }: Opts) {
-  const [index, setIndex] = useState(0);
+export function useCarousel({ length, autoplayMs, initialIndex = 0 }: Opts) {
+  const [index, setIndex] = useState(initialIndex);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // ref para autoplay/drag lerem o índice atual sem recriar callbacks
-  const indexRef = useRef(0);
+  const indexRef = useRef(initialIndex);
   useEffect(() => { indexRef.current = index; }, [index]);
 
   const goTo = useCallback((n: number) => {

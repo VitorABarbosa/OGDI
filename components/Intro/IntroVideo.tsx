@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
+import { signalIntroDone } from "./introSignal";
 
 // Abertura: vídeo em tela cheia que "desenha" a página; ao terminar, fade pro site.
 export function IntroVideo() {
@@ -11,6 +12,7 @@ export function IntroVideo() {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
       setPhase("done");
+      signalIntroDone();
       return;
     }
     document.body.classList.add("overflow-hidden");
@@ -29,6 +31,7 @@ export function IntroVideo() {
     setPhase("done");
     document.body.classList.remove("overflow-hidden");
     window.scrollTo(0, 0);
+    signalIntroDone();
   };
 
   if (phase === "done") return null;
