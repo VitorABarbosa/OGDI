@@ -1,6 +1,6 @@
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { Button } from "@/components/ui/Button";
-import type { Projeto } from "./projetos.data";
+import { projetoHref, type Projeto } from "./projetos.data";
 import { cn } from "@/lib/cn";
 
 export function ProjetoCard({ p, active }: { p: Projeto; active: boolean }) {
@@ -14,7 +14,7 @@ export function ProjetoCard({ p, active }: { p: Projeto; active: boolean }) {
         <span className="text-[11px] tracking-[.2em] uppercase text-green">{p.status}</span>
         <h3 className="font-serif text-[clamp(28px,3.4vw,46px)] leading-[1.04] mt-[12px] mb-[8px]">{p.name}</h3>
         <p className="text-[clamp(14px,1.05vw,16px)] text-white/82 mt-[2px] mb-6 max-w-[440px] leading-[1.5]">{p.tag}</p>
-        <Button href={p.href} variant="light" sm arrow>{p.ctaLabel}</Button>
+        <Button href={projetoHref(p.slug)} variant="light" sm arrow>{p.ctaLabel}</Button>
       </div>
     </div>
   );

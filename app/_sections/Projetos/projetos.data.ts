@@ -4,7 +4,7 @@ export type GaleriaSlot = { id: string; alt: string }; // no image yet → Media
 
 export type Projeto = {
   cat: ProjetoCat; status: string; name: string; slug: string;
-  tag: string; tone: "t1" | "t2" | "t3"; ctaLabel: string; href: string;
+  tag: string; tone: "t1" | "t2" | "t3"; ctaLabel: string;
   image?: string;
   // individual page:
   segmento: string;
@@ -27,7 +27,7 @@ export const projetos: Projeto[] = [
     cat: "obra", status: "Em obra", name: "Hits Cupecê",
     slug: "hits-cupece",
     tag: "Operação estruturada na origem, do produto ao lançamento.",
-    tone: "t2", ctaLabel: "Conheça o empreendimento", href: "/projetos/hits-cupece",
+    tone: "t2", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/CUPECE/Cupece.png",
     segmento: "Residencial", local: "São Paulo · SP", regiao: "Cupecê",
     modelo: "Estruturação da operação",
@@ -49,7 +49,7 @@ export const projetos: Projeto[] = [
     cat: "obra", status: "Em obra", name: "Start Park Jabaquara",
     slug: "start-park-jabaquara",
     tag: "Da inteligência de mercado à condução até o lançamento.",
-    tone: "t3", ctaLabel: "Conheça o empreendimento", href: "/projetos/start-park-jabaquara",
+    tone: "t3", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/HITS_START_PARK_JABAQUARA/HITS_PARK.png",
     segmento: "Residencial", local: "São Paulo · SP",
     modelo: "Parceria estratégica",
@@ -71,7 +71,7 @@ export const projetos: Projeto[] = [
     cat: "obra", status: "Em obra", name: "Oh Freguesia",
     slug: "oh-freguesia",
     tag: "Produto conceituado e operação estruturada pela OGDI.",
-    tone: "t1", ctaLabel: "Conheça o empreendimento", href: "/projetos/oh-freguesia",
+    tone: "t1", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/OH_FREGUESIA/Oh_freguesia.png",
     segmento: "Residencial", local: "São Paulo · SP",
     modelo: "Estruturação da operação",
@@ -93,7 +93,7 @@ export const projetos: Projeto[] = [
     cat: "futuro", status: "Futuro lançamento", name: "Guarulhos",
     slug: "guarulhos",
     tag: "Oportunidade originada e operação em estruturação.",
-    tone: "t3", ctaLabel: "Falar sobre o projeto", href: "/projetos/guarulhos",
+    tone: "t3", ctaLabel: "Falar sobre o projeto",
     segmento: "Residencial", local: "Guarulhos · SP",
     modelo: "Estruturação da operação",
     intro: [
@@ -113,7 +113,7 @@ export const projetos: Projeto[] = [
     cat: "futuro", status: "Futuro lançamento", name: "Cupecê",
     slug: "cupece",
     tag: "Desenvolvimento de produto e viabilidade em curso.",
-    tone: "t2", ctaLabel: "Falar sobre o projeto", href: "/projetos/cupece",
+    tone: "t2", ctaLabel: "Falar sobre o projeto",
     segmento: "Residencial", local: "São Paulo · SP", regiao: "Cupecê",
     modelo: "Parceria estratégica",
     intro: [
@@ -133,7 +133,7 @@ export const projetos: Projeto[] = [
     cat: "entregue", status: "Entregue", name: "Hits Santa Catarina",
     slug: "hits-santa-catarina",
     tag: "Da concepção ao lançamento — operação entregue.",
-    tone: "t1", ctaLabel: "Conheça o empreendimento", href: "/projetos/hits-santa-catarina",
+    tone: "t1", ctaLabel: "Conheça o empreendimento",
     segmento: "Residencial", local: "Localização a confirmar", localTbd: true,
     modelo: "Estruturação da operação",
     intro: [
@@ -151,3 +151,7 @@ export const projetos: Projeto[] = [
     ],
   },
 ];
+
+export function projetoHref(slug: string): string {
+  return `/projetos/${slug}`;
+}
