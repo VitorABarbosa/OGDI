@@ -1,9 +1,51 @@
 import type { Metadata } from "next";
-import { PagePlaceholder } from "@/components/layout/PagePlaceholder";
+import { notFound } from "next/navigation";
+import { projetos } from "@/app/_sections/Projetos/projetos.data";
+import { EmpHero } from "@/app/_sections/EmpreendimentoPage/EmpHero";
+import { EmpInfo } from "@/app/_sections/EmpreendimentoPage/EmpInfo";
+import { EmpGaleria } from "@/app/_sections/EmpreendimentoPage/EmpGaleria";
+import { EmpAtuacao } from "@/app/_sections/EmpreendimentoPage/EmpAtuacao";
+import { EmpProximos } from "@/app/_sections/EmpreendimentoPage/EmpProximos";
+import { CtaBand } from "@/components/ui/CtaBand";
 
-export const metadata: Metadata = { title: "Projeto" };
+export function generateStaticParams() {
+  return projetos.map((p) => ({ slug: p.slug }));
+}
 
-export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
-  return <PagePlaceholder kicker="Projeto" title={slug.replace(/-/g, " ")} />;
+  const p = projetos.find((x) => x.slug === slug);
+  return { title: p ? p.name : "Projeto" };
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const p = projetos.find((x) => x.slug === slug);
+  if (!p) notFound();
+
+  const others = projetos.filter((x) => x.slug !== p.slug).slice(0, 3);
+
+  return (
+    <main>
+      <EmpHero p={p} />
+      <EmpInfo p={p} />
+      <EmpGaleria p={p} />
+      <EmpAtuacao />
+      <EmpProximos others={others} />
+      <CtaBand
+        title={`Interesse no ${p.name}?`}
+        text="Fale com a equipe da Open Group e receba mais informações sobre o empreendimento e a operação."
+        ctaLabel="Falar com a equipe"
+        href="/#contato"
+      />
+    </main>
+  );
 }

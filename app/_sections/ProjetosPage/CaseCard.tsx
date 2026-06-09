@@ -23,7 +23,7 @@ const aspectClass: Record<"default" | "tall" | "wide", string> = {
 
 export function CaseCard({
   p,
-  span = "6",
+  span,
   shape,
 }: {
   p: Projeto;
@@ -35,7 +35,7 @@ export function CaseCard({
   return (
     <Link
       href={projetoHref(p.slug)}
-      className={cn("group flex flex-col", spanClass[span])}
+      className={cn("group flex flex-col", span ? spanClass[span] : undefined)}
     >
       {/* ── Media ── */}
       <div

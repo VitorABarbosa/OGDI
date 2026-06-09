@@ -1,0 +1,114 @@
+import Link from "next/link";
+import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
+import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
+
+export function EmpHero({ p }: { p: Projeto }) {
+  return (
+    <section
+      className="relative overflow-hidden bg-dark"
+      style={{ height: "clamp(560px, 86vh, 880px)" }}
+    >
+      {/* Full-bleed image / gradient */}
+      <MediaPlaceholder tone={p.tone} src={p.image} alt={p.image ? p.name : ""} />
+
+      {/* Scrim */}
+      <div
+        aria-hidden
+        className="absolute inset-0 z-[2] pointer-events-none"
+        style={{
+          background: [
+            "linear-gradient(0deg, rgba(8,12,13,.82) 0%, rgba(8,12,13,.1) 46%, rgba(8,12,13,.34) 100%)",
+            "linear-gradient(90deg, rgba(8,12,13,.5) 0%, rgba(8,12,13,0) 60%)",
+          ].join(", "),
+        }}
+      />
+
+      {/* Body — positioned at bottom */}
+      <div
+        className="absolute left-0 right-0 z-[3] px-pad-x text-white"
+        style={{ bottom: "clamp(40px, 6vw, 76px)" }}
+      >
+        <div className="max-w-[1440px] mx-auto">
+          {/* Breadcrumb */}
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center gap-[10px] mb-[22px]"
+            style={{ fontSize: "12px", letterSpacing: ".08em", textTransform: "uppercase" }}
+          >
+            <Link
+              href="/"
+              className="text-white/60 transition-colors duration-200 hover:text-white"
+            >
+              Início
+            </Link>
+            <span
+              aria-hidden
+              className="inline-block shrink-0"
+              style={{ width: "14px", height: "1px", background: "rgba(255,255,255,.3)" }}
+            />
+            <Link
+              href="/projetos"
+              className="text-white/60 transition-colors duration-200 hover:text-white"
+            >
+              Projetos
+            </Link>
+            <span
+              aria-hidden
+              className="inline-block shrink-0"
+              style={{ width: "14px", height: "1px", background: "rgba(255,255,255,.3)" }}
+            />
+            <span aria-current="page" className="text-white/85">
+              {p.name}
+            </span>
+          </nav>
+
+          {/* Status badge */}
+          <span
+            className="text-green"
+            style={{ fontSize: "11px", letterSpacing: ".2em", textTransform: "uppercase" }}
+          >
+            {p.status} · Empreendimento
+          </span>
+
+          {/* Heading */}
+          <h1
+            className="font-serif font-normal text-white mt-[14px]"
+            style={{
+              fontSize: "clamp(44px, 7vw, 104px)",
+              lineHeight: 0.98,
+              letterSpacing: "-.01em",
+            }}
+          >
+            {p.name}
+          </h1>
+
+          {/* Location row */}
+          <div
+            className="flex flex-wrap items-center mt-[18px]"
+            style={{ gap: "10px 16px", fontSize: "12.5px", letterSpacing: ".12em", textTransform: "uppercase", color: "rgba(255,255,255,.85)" }}
+          >
+            <span>{p.segmento}</span>
+            <span
+              aria-hidden
+              className="w-1 h-1 rounded-full shrink-0"
+              style={{ background: "rgba(255,255,255,.5)" }}
+            />
+            {p.localTbd ? (
+              <span className="italic normal-case" style={{ color: "rgba(255,255,255,.55)" }}>
+                {p.local}
+              </span>
+            ) : (
+              <span>{p.local}</span>
+            )}
+            <span
+              aria-hidden
+              className="w-1 h-1 rounded-full shrink-0"
+              style={{ background: "rgba(255,255,255,.5)" }}
+            />
+            <span>Estruturação OGDI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
