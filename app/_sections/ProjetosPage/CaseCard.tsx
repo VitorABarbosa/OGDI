@@ -46,6 +46,7 @@ export function CaseCard({
       >
         {/* Image — wrapper carries the scale transition so MediaPlaceholder stays semantic */}
         <div className="absolute inset-0 transition-transform duration-[1100ms] ease-brand group-hover:scale-[1.045]">
+          {/* alt empty when no src: MediaPlaceholder renders a decorative aria-hidden div */}
           <MediaPlaceholder tone={p.tone} src={p.image} alt={p.image ? p.name : ""} />
         </div>
 
@@ -87,7 +88,6 @@ export function CaseCard({
             stroke="currentColor"
             strokeWidth="1.6"
             className="w-[18px] h-[18px]"
-            aria-hidden
           >
             <path d="M7 17L17 7M17 7H9M17 7V15" />
           </svg>
@@ -95,7 +95,7 @@ export function CaseCard({
       </div>
 
       {/* ── Body ── */}
-      <div className="pt-5 pb-0 px-0 flex flex-col gap-[7px]">
+      <div className="pt-5 flex flex-col gap-[7px]">
         {/* Name */}
         <div className="font-serif font-normal text-[clamp(22px,2vw,30px)] leading-[1.05] tracking-[-0.005em] text-ink">
           {p.name}
