@@ -14,7 +14,7 @@ export function CaseGrid() {
   );
 
   // Build the filter note
-  const activeTab = filterTabs.find((t) => t.cat === cat)!;
+  const activeTab = filterTabs.find((t) => t.cat === cat) ?? filterTabs[0];
   const note = useMemo(() => {
     if (cat === "all") return "Mostrando todos os projetos";
     const n = visible.length;

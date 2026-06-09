@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/lib/cn";
 import type { FilterCat } from "./projetosPage.data";
 
@@ -59,6 +57,8 @@ export function ProjetosFiltros({
 
           {/* Filter note */}
           <span
+            aria-live="polite"
+            aria-atomic="true"
             className="text-ink-3"
             style={{ fontSize: "12px", letterSpacing: ".04em" }}
           >

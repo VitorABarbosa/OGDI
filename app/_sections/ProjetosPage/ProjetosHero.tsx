@@ -42,7 +42,7 @@ export function ProjetosHero() {
             className="inline-block"
             style={{ width: "14px", height: "1px", background: "rgba(255,255,255,.3)", flexShrink: 0 }}
           />
-          <span>Projetos</span>
+          <span aria-current="page">Projetos</span>
         </nav>
 
         {/* Top row: heading + count */}
@@ -50,7 +50,7 @@ export function ProjetosHero() {
           <div>
             <Kicker tone="on-dark-green">Projetos · Cases</Kicker>
             <h1
-              className="font-sans font-semibold text-white mt-5"
+              className="font-sans font-semibold text-white"
               style={{
                 fontSize: "clamp(34px,5.4vw,76px)",
                 letterSpacing: "-.03em",

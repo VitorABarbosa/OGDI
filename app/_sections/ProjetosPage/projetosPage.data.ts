@@ -1,4 +1,4 @@
-import { projetos, type Projeto, type ProjetoCat } from "@/app/_sections/Projetos/projetos.data";
+import { projetos, projetoTabs, type Projeto, type ProjetoCat } from "@/app/_sections/Projetos/projetos.data";
 
 export type CaseLayout = { span: "6" | "4" | "8"; shape?: "tall" | "wide" };
 
@@ -30,8 +30,10 @@ export const orderedProjetos: Projeto[] = order
 export type FilterCat = "all" | ProjetoCat;
 
 export const filterTabs: { cat: FilterCat; label: string; count: number }[] = [
-  { cat: "all",      label: "Todos",              count: projetos.length },
-  { cat: "obra",     label: "Em obra",             count: projetos.filter((p) => p.cat === "obra").length },
-  { cat: "futuro",   label: "Futuro lançamento",   count: projetos.filter((p) => p.cat === "futuro").length },
-  { cat: "entregue", label: "Entregue",            count: projetos.filter((p) => p.cat === "entregue").length },
+  { cat: "all", label: "Todos", count: projetos.length },
+  ...projetoTabs.map((t) => ({
+    cat: t.cat as FilterCat,
+    label: t.label,
+    count: projetos.filter((p) => p.cat === t.cat).length,
+  })),
 ];
