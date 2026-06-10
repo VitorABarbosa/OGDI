@@ -45,6 +45,7 @@ export function EmpInfo({ p }: { p: Projeto }) {
           <div>
             <Kicker className="mb-5">O empreendimento</Kicker>
 
+            {/* Cópia editorial provisória e compartilhada — o cliente substituirá por título próprio de cada empreendimento (ver intro [PROVISÓRIO]). */}
             <h2 className="font-sans font-semibold text-[clamp(26px,3vw,42px)] leading-[1.1] tracking-[-.025em] mb-[26px]">
               Da leitura da oportunidade à condução até o lançamento.
             </h2>

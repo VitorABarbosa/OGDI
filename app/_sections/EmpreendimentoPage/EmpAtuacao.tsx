@@ -1,6 +1,7 @@
 import { Kicker } from "@/components/ui/Kicker";
 import { atuacaoSteps } from "@/data/empreendimento";
 
+// Seção de método OGDI — conteúdo igual para todos os empreendimentos (não recebe prop do projeto).
 export function EmpAtuacao() {
   return (
     <section className="bg-bg-soft py-section">
@@ -23,9 +24,9 @@ export function EmpAtuacao() {
               <span className="font-sans text-[13px] font-semibold text-teal tracking-[.04em]">
                 {step.n}
               </span>
-              <h4 className="font-sans font-semibold text-[16.5px] tracking-[-.01em]">
+              <h3 className="font-sans font-semibold text-[16.5px] tracking-[-.01em]">
                 {step.title}
-              </h4>
+              </h3>
               <p className="text-[13.5px] leading-[1.55] text-ink-2">
                 {step.desc}
               </p>

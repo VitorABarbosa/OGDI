@@ -8,6 +8,8 @@ import { EmpAtuacao } from "@/app/_sections/EmpreendimentoPage/EmpAtuacao";
 import { EmpProximos } from "@/app/_sections/EmpreendimentoPage/EmpProximos";
 import { CtaBand } from "@/components/ui/CtaBand";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return projetos.map((p) => ({ slug: p.slug }));
 }
@@ -31,7 +33,8 @@ export default async function Page({
   const p = projetos.find((x) => x.slug === slug);
   if (!p) notFound();
 
-  const others = projetos.filter((x) => x.slug !== p.slug).slice(0, 3);
+  const idx = projetos.findIndex((x) => x.slug === p.slug);
+  const others = [...projetos.slice(idx + 1), ...projetos.slice(0, idx)].slice(0, 3);
 
   return (
     <main>
