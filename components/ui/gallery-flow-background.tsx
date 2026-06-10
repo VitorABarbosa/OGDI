@@ -60,8 +60,8 @@ function applyRopeSway(point: Point, progress: number, time: number): Point {
   const counterWave = Math.sin(progress * Math.PI * 4.4 - time * 0.00082);
 
   return {
-    x: point.x + edgeFade * counterWave * 18,
-    y: point.y + edgeFade * (longWave * 58 + counterWave * 14),
+    x: point.x + edgeFade * counterWave * 8,
+    y: point.y + edgeFade * (longWave * 26 + counterWave * 6),
   };
 }
 
