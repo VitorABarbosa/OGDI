@@ -54,6 +54,17 @@ function applyMouseRipple(point: Point, mouse: Point, time: number): Point {
   };
 }
 
+function applyRopeSway(point: Point, progress: number, time: number): Point {
+  const edgeFade = Math.sin(Math.PI * progress);
+  const longWave = Math.sin(progress * Math.PI * 2.2 + time * 0.0012);
+  const counterWave = Math.sin(progress * Math.PI * 4.4 - time * 0.00082);
+
+  return {
+    x: point.x + edgeFade * counterWave * 18,
+    y: point.y + edgeFade * (longWave * 58 + counterWave * 14),
+  };
+}
+
 function strokeFlowPath(
   ctx: CanvasRenderingContext2D,
   segments: [Point, Point, Point, Point][],
@@ -68,11 +79,10 @@ function strokeFlowPath(
     for (let step = 0; step <= stepsPerSegment; step += 1) {
       if (segmentIndex > 0 && step === 0) continue;
 
-      const point = applyMouseRipple(
-        cubicPoint(segment[0], segment[1], segment[2], segment[3], step / stepsPerSegment),
-        mouse,
-        time,
-      );
+      const localProgress = step / stepsPerSegment;
+      const pathProgress = (segmentIndex + localProgress) / segments.length;
+      const basePoint = cubicPoint(segment[0], segment[1], segment[2], segment[3], localProgress);
+      const point = applyMouseRipple(applyRopeSway(basePoint, pathProgress, time), mouse, time);
 
       if (segmentIndex === 0 && step === 0) {
         ctx.moveTo(point.x, point.y);
