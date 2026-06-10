@@ -148,7 +148,7 @@ export const projetos: Projeto[] = [
     },
     strategyStory: {
       kicker: "Estruturacao Open Group",
-      title: "A estrutura da operacao foi pensada antes da obra chegar ao canteiro.",
+      title: "A operacao foi pensada antes da obra chegar ao canteiro.",
       body: [
         "No Hits Cupece, a Open Group atua na etapa em que o valor e construido com mais precisao: leitura da oportunidade, definicao de produto, analise de viabilidade, articulacao de parceiros e conducao ate a fase de obra.",
         "Essa inteligencia transforma uma localizacao promissora em uma operacao estruturada, com produto, mercado e execucao caminhando na mesma direcao.",

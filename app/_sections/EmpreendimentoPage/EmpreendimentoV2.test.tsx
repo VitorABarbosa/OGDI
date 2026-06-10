@@ -17,9 +17,16 @@ describe("Empreendimento V2 data", () => {
       "Terraco com churrasqueira",
       "Cupece - Sao Paulo",
     ]);
+    expect(hitsCupece?.heroSummary).toBe(
+      "Um empreendimento residencial no Cupece, em uma regiao conectada, conveniente e em valorizacao na zona sul de Sao Paulo.",
+    );
     expect(hitsCupece?.locationStory?.title).toMatch(/leitura do territorio/i);
     expect(hitsCupece?.productStory?.cards).toHaveLength(4);
-    expect(hitsCupece?.strategyStory?.title).toMatch(/estrutura/i);
+    expect(hitsCupece?.strategyStory?.title).toBe(
+      "A operacao foi pensada antes da obra chegar ao canteiro.",
+    );
+    expect(hitsCupece?.strategyStory?.kicker).toMatch(/estrutura/i);
+    expect(hitsCupece?.galleryIntro?.title).toBe("A narrativa tambem aparece nos espacos.");
     expect(hitsCupece?.closingStatement?.title).toMatch(/nao e apenas um endereco/i);
   });
 
