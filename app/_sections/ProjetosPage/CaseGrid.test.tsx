@@ -19,6 +19,14 @@ describe("CaseGrid", () => {
     expect(screen.getByText("Cupecê")).toBeInTheDocument();
   });
 
+  it("marks project cards for scroll reveal animation", () => {
+    render(<CaseGrid />);
+
+    const card = screen.getByText("Start Park Jabaquara").closest("a");
+
+    expect(card).toHaveClass("reveal", "reveal-card");
+  });
+
   it('filters to 3 obra projects when "Em obra" tab is clicked', () => {
     render(<CaseGrid />);
 

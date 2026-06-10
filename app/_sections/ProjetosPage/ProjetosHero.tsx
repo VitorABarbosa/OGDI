@@ -19,7 +19,7 @@ export function ProjetosHero() {
         {/* Breadcrumb */}
         <nav
           aria-label="Breadcrumb"
-          className="flex items-center gap-[10px] mb-[26px] text-[12px] tracking-[.08em] uppercase text-white/50"
+          className="reveal flex items-center gap-[10px] mb-[26px] text-[12px] tracking-[.08em] uppercase text-white/50"
         >
           <Link
             href="/"
@@ -37,7 +37,7 @@ export function ProjetosHero() {
 
         {/* Top row: heading + count */}
         <div className="flex items-end justify-between flex-wrap gap-[40px]">
-          <div>
+          <div className="reveal reveal-2">
             <Kicker tone="on-dark-green">Projetos · Cases</Kicker>
             <h1
               className="font-sans font-semibold text-white text-[clamp(34px,5.4vw,76px)] tracking-[-.03em] leading-[1.04] max-w-[14ch] mt-[20px]"
@@ -47,7 +47,7 @@ export function ProjetosHero() {
           </div>
 
           {/* Counter */}
-          <div className="flex items-baseline gap-[10px]">
+          <div className="reveal reveal-3 flex items-baseline gap-[10px]">
             <b
               className="font-serif font-normal text-white text-[clamp(40px,5vw,68px)] leading-none [font-variant-numeric:tabular-nums]"
             >
@@ -63,7 +63,7 @@ export function ProjetosHero() {
 
         {/* Sub-line */}
         <p
-          className="leading-[1.6] text-[clamp(15px,1.2vw,18px)] text-[rgba(242,241,237,.72)] max-w-[440px] mt-[28px]"
+          className="reveal reveal-4 leading-[1.6] text-[clamp(15px,1.2vw,18px)] text-[rgba(242,241,237,.72)] max-w-[440px] mt-[28px]"
         >
           Da leitura da oportunidade ao lançamento — cada projeto reflete a atuação da Open Group na
           estruturação da operação imobiliária.

@@ -34,10 +34,11 @@ export function CaseGrid() {
             without modifying CaseCard itself.
           */}
           <div className="grid grid-cols-12 max-md:grid-cols-1 gap-x-[clamp(20px,2vw,32px)] gap-y-[clamp(20px,2.4vw,38px)]">
-            {visible.map((p) => (
+            {visible.map((p, index) => (
               <CaseCard
                 key={p.slug}
                 p={p}
+                index={index}
                 span={caseLayout[p.slug]?.span ?? "6"}
                 shape={caseLayout[p.slug]?.shape}
               />

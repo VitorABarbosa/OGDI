@@ -4,11 +4,30 @@ import { useEffect } from "react";
 export function RevealController() {
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const els = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
+
+    const collectRevealElements = (node: ParentNode) =>
+      Array.from(node.querySelectorAll<HTMLElement>(".reveal:not(.visible)"));
+
+    const collectFromAddedNode = (node: Node) => {
+      if (!(node instanceof HTMLElement)) return [];
+      const els: HTMLElement[] = [];
+      if (node.matches(".reveal:not(.visible)")) els.push(node);
+      els.push(...collectRevealElements(node));
+      return els;
+    };
+
     if (reduce) {
-      els.forEach((el) => el.classList.add("visible"));
-      return;
+      const show = (node: ParentNode) => collectRevealElements(node).forEach((el) => el.classList.add("visible"));
+      show(document);
+      const mo = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          mutation.addedNodes.forEach((node) => collectFromAddedNode(node).forEach((el) => el.classList.add("visible")));
+        });
+      });
+      mo.observe(document.body, { childList: true, subtree: true });
+      return () => mo.disconnect();
     }
+
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -17,8 +36,20 @@ export function RevealController() {
         }
       });
     }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+
+    collectRevealElements(document).forEach((el) => io.observe(el));
+
+    const mo = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => collectFromAddedNode(node).forEach((el) => io.observe(el)));
+      });
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mo.disconnect();
+      io.disconnect();
+    };
   }, []);
   return null;
 }

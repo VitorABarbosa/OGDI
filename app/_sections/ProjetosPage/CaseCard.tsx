@@ -23,19 +23,22 @@ const aspectClass: Record<"default" | "tall" | "wide", string> = {
 
 export function CaseCard({
   p,
+  index = 0,
   span,
   shape,
 }: {
   p: Projeto;
+  index?: number;
   span?: "6" | "4" | "8";
   shape?: "tall" | "wide";
 }) {
   const aspectKey = shape ?? "default";
+  const revealDelay = `reveal-card-${Math.min(index, 5)}`;
 
   return (
     <Link
       href={projetoHref(p.slug)}
-      className={cn("group flex flex-col", span ? spanClass[span] : undefined)}
+      className={cn("reveal reveal-card group flex flex-col", revealDelay, span ? spanClass[span] : undefined)}
     >
       {/* ── Media ── */}
       <div

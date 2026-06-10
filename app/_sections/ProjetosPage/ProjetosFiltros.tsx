@@ -16,7 +16,7 @@ export function ProjetosFiltros({
 }) {
   return (
     <div
-      className="sticky top-0 z-50 border-b border-[color:var(--line)]"
+      className="reveal reveal-filter sticky top-0 z-50 border-b border-[color:var(--line)]"
       style={{
         background: "rgba(255,255,255,.85)",
         backdropFilter: "saturate(180%) blur(16px)",

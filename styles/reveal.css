@@ -7,6 +7,19 @@
 .reveal-2 { transition-delay: .08s; }
 .reveal-3 { transition-delay: .16s; }
 .reveal-4 { transition-delay: .24s; }
+.reveal-filter {
+  transform: translateY(18px);
+  transition-duration: .85s;
+}
+.reveal-card {
+  transform: translateY(42px);
+  transition: opacity .95s var(--ease-brand), transform .95s var(--ease-brand);
+}
+.reveal-card-1 { transition-delay: .06s; }
+.reveal-card-2 { transition-delay: .12s; }
+.reveal-card-3 { transition-delay: .18s; }
+.reveal-card-4 { transition-delay: .24s; }
+.reveal-card-5 { transition-delay: .30s; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
