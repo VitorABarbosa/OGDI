@@ -47,7 +47,7 @@ export default async function Page({
       <EmpLocationStory p={p} />
       <EmpProductStory p={p} />
       <EmpGaleria p={p} />
-      <EmpAtuacao />
+      <EmpAtuacao p={p} />
       <EmpProximos others={others} />
       <CtaBand
         title={`Interesse no ${p.name}?`}

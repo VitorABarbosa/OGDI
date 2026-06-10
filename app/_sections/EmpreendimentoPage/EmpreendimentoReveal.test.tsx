@@ -36,6 +36,10 @@ describe("Empreendimento page reveals", () => {
     const { container: atuacao } = render(<EmpAtuacao />);
     expect(atuacao.querySelectorAll(".reveal-step")).toHaveLength(8);
 
+    const { container: atuacaoV2 } = render(<EmpAtuacao p={projeto} />);
+    expect(atuacaoV2.querySelectorAll(".reveal-step")).toHaveLength(8);
+    expect(screen.getByRole("heading", { name: /operacao foi pensada antes da obra/i })).toHaveClass("reveal", "reveal-2");
+
     const related = projetos.slice(1, 4);
     const { container: proximos } = render(<EmpProximos others={related} />);
     expect(proximos.querySelectorAll(".reveal-card")).toHaveLength(related.length);

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
+import { Kicker } from "@/components/ui/Kicker";
 import { cn } from "@/lib/cn";
 import type { GaleriaSlot, Projeto } from "@/app/_sections/Projetos/projetos.data";
 
@@ -104,6 +105,26 @@ export function EmpGaleria({ p }: { p: Projeto }) {
   return (
     <section className="pb-section" aria-label="Galeria de imagens">
       <div className="wrap">
+        {p.galleryIntro && (
+          <div className="mb-[clamp(34px,4.5vw,62px)] max-w-[760px]">
+            <Kicker className="reveal">{p.galleryIntro.kicker}</Kicker>
+            <h2 className="reveal reveal-2 mt-5 font-sans text-[clamp(28px,3.4vw,48px)] font-semibold leading-[1.08] tracking-[-.025em]">
+              {p.galleryIntro.title}
+            </h2>
+            {p.galleryIntro.body.map((paragraph, index) => (
+              <p
+                key={`${p.slug}-gallery-intro-${index}`}
+                className={cn(
+                  "reveal mt-5 max-w-[640px] text-[clamp(15px,1.12vw,18px)] leading-[1.7] text-ink-2",
+                  `reveal-info-${Math.min(index + 1, 5)}`,
+                )}
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
+
         <div className="grid grid-cols-12 gap-[clamp(14px,1.6vw,24px)]">
           {gallery.map((slot, i) => {
             const cell = cellLayout[i];

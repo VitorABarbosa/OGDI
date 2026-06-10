@@ -43,4 +43,16 @@ describe("EmpGaleria", () => {
     expect(imageButtons[3]).toHaveClass("h-[clamp(280px,30vw,440px)]");
     expect(imageButtons[4]).toHaveClass("h-[clamp(280px,30vw,440px)]");
   });
+
+  it("renders the Cupece gallery narrative header", () => {
+    expect(hitsCupece).toBeDefined();
+
+    render(<EmpGaleria p={hitsCupece!} />);
+
+    expect(screen.getByText("Do conceito a experiencia")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /A narrativa tambem aparece nos espacos/i })).toHaveClass(
+      "reveal",
+      "reveal-2",
+    );
+  });
 });
