@@ -39,17 +39,17 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ctx.moveTo(startX, startY);
   ctx.bezierCurveTo(
     width * 0.02,
-    height * 0.18 + drift,
-    width * 0.22 + influenceX,
-    height * 0.22 + influenceY,
-    width * 0.31,
-    height * 0.05,
+    height * 0.2 + drift,
+    width * 0.03,
+    height * 0.1,
+    width * -0.06,
+    height * 0.06,
   );
   ctx.bezierCurveTo(
-    width * 0.37,
-    height * -0.06,
-    width * 0.27,
-    height * 0.24,
+    width * 0.05,
+    height * 0.28 + drift,
+    width * 0.27 + influenceX,
+    height * 0.22 + influenceY,
     width * 0.52,
     height * 0.3,
   );
@@ -98,8 +98,8 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ctx.stroke();
 
   const nodes = [
-    { x: width * 0.21, y: height * 0.2 },
-    { x: width * 0.32, y: height * 0.08 },
+    { x: width * 0.03, y: height * 0.2 },
+    { x: width * 0.28, y: height * 0.25 },
     { x: width * 0.59, y: height * 0.33 },
     { x: width * 0.83, y: height * 0.56 },
     { x: width * 0.43, y: height * 0.66 },
