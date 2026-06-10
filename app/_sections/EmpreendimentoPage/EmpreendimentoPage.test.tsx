@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "./EmpHero";
 import { EmpLocationStory } from "./EmpLocationStory";
@@ -119,21 +119,13 @@ describe("Empreendimento page data", () => {
     );
   });
 
-  it("renders the Cupece controlled neighborhood map filters", () => {
+  it("renders the Cupece Google Maps embed for the project location", () => {
     expect(hitsCupece).toBeDefined();
 
     render(<EmpNeighborhoodMap p={hitsCupece!} />);
 
     expect(screen.getByRole("heading", { name: /Localização e entorno/i })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Empreendimento" })).toHaveAttribute("aria-pressed", "true");
     expect(screen.getByTitle("Google Maps - Hits Cupecê")).toHaveAttribute("src", expect.stringContaining("Hits%20Cupec"));
-
-    fireEvent.click(screen.getByRole("button", { name: "Mobilidade" }));
-
-    expect(screen.getByRole("button", { name: "Mobilidade" })).toHaveAttribute("aria-pressed", "true");
-    expect(screen.getByTitle("Google Maps - Hits Cupecê")).toHaveAttribute(
-      "src",
-      expect.stringContaining("transporte%20publico%20perto%20de"),
-    );
+    expect(screen.queryByRole("button", { name: "Mobilidade" })).not.toBeInTheDocument();
   });
 });

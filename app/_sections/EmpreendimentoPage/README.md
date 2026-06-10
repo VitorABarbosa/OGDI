@@ -41,7 +41,7 @@ A narrativa pretendida é:
 3. Mostrar como o produto responde a essa leitura em `EmpProductStory`.
 4. Usar a galeria como prova visual do conceito.
 5. Explicar a estrutura da Open Group por trás da operação em `EmpAtuacao`.
-6. Mostrar localização e entorno filtrável via Google Maps em `EmpNeighborhoodMap`, quando houver mapa configurado.
+6. Mostrar a localização do empreendimento via Google Maps em `EmpNeighborhoodMap`, quando houver mapa configurado.
 7. Fechar com uma síntese objetiva e CTA em `EmpClosing` quando o mapa ainda não estiver configurado.
 
 ## Testes

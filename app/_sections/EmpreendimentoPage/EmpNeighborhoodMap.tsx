@@ -1,18 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
 import { Kicker } from "@/components/ui/Kicker";
-import { cn } from "@/lib/cn";
-import type { Projeto, ProjetoMapCategoryId } from "@/app/_sections/Projetos/projetos.data";
-
-const GOOGLE_MAP_QUERIES: Record<ProjetoMapCategoryId | "empreendimento", string> = {
-  empreendimento: "",
-  educacao: "escolas e faculdades perto de",
-  mobilidade: "transporte publico perto de",
-  comercio: "mercados comercio e conveniencias perto de",
-  saude: "hospitais clinicas e farmacias perto de",
-  lazer: "parques praca e lazer perto de",
-};
+import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 
 function googleMapsEmbedUrl(query: string) {
   return `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
@@ -20,20 +9,10 @@ function googleMapsEmbedUrl(query: string) {
 
 export function EmpNeighborhoodMap({ p }: { p: Projeto }) {
   const map = p.map;
-  const [activeCategory, setActiveCategory] = useState<ProjetoMapCategoryId | "empreendimento">("empreendimento");
-
-  const iframeSrc = useMemo(() => {
-    if (!map) return "";
-
-    const baseQuery =
-      activeCategory === "empreendimento"
-        ? `${p.name}, ${map.address}`
-        : `${GOOGLE_MAP_QUERIES[activeCategory]} ${map.address}`;
-
-    return googleMapsEmbedUrl(baseQuery);
-  }, [activeCategory, map, p.name]);
 
   if (!map) return null;
+
+  const iframeSrc = googleMapsEmbedUrl(`${p.name}, ${map.address}`);
 
   return (
     <section className="bg-bg py-[clamp(72px,9vw,128px)]">
@@ -51,42 +30,7 @@ export function EmpNeighborhoodMap({ p }: { p: Projeto }) {
           </div>
         </div>
 
-        <div className="reveal reveal-3 mt-[clamp(34px,5vw,68px)] flex flex-wrap gap-2">
-          <button
-            type="button"
-            aria-pressed={activeCategory === "empreendimento"}
-            onClick={() => setActiveCategory("empreendimento")}
-            className={cn(
-              "rounded-full border px-4 py-2 text-[12px] font-medium uppercase tracking-[.12em] transition-colors duration-300",
-              activeCategory === "empreendimento"
-                ? "border-ink bg-ink text-white"
-                : "border-[color:var(--line)] bg-white text-ink-2 hover:border-ink hover:text-ink",
-            )}
-          >
-            Empreendimento
-          </button>
-          {map.categories.map((category) => {
-            const active = category.id === activeCategory;
-            return (
-              <button
-                key={category.id}
-                type="button"
-                aria-pressed={active}
-                onClick={() => setActiveCategory(category.id)}
-                className={cn(
-                  "rounded-full border px-4 py-2 text-[12px] font-medium uppercase tracking-[.12em] transition-colors duration-300",
-                  active
-                    ? "border-ink bg-ink text-white"
-                    : "border-[color:var(--line)] bg-white text-ink-2 hover:border-ink hover:text-ink",
-                )}
-              >
-                {category.label}
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="reveal reveal-4 mt-5 overflow-hidden border border-[color:var(--line)] bg-[#eef0ec]">
+        <div className="reveal reveal-4 mt-[clamp(34px,5vw,68px)] overflow-hidden border border-[color:var(--line)] bg-[#eef0ec]">
           <iframe
             key={iframeSrc}
             title={`Google Maps - ${p.name}`}
