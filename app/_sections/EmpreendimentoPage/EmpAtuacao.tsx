@@ -1,5 +1,6 @@
 import { Kicker } from "@/components/ui/Kicker";
 import { atuacaoSteps } from "@/data/empreendimento";
+import { cn } from "@/lib/cn";
 
 // Seção de método OGDI — conteúdo igual para todos os empreendimentos (não recebe prop do projeto).
 export function EmpAtuacao() {
@@ -7,19 +8,19 @@ export function EmpAtuacao() {
     <section className="bg-bg-soft py-section">
       <div className="wrap">
         {/* Head */}
-        <div className="max-w-[620px] mb-[clamp(40px,5vw,64px)]">
+        <div className="reveal max-w-[620px] mb-[clamp(40px,5vw,64px)]">
           <Kicker>A atuação da Open Group</Kicker>
-          <h2 className="font-sans font-semibold text-[clamp(24px,2.6vw,36px)] tracking-[-.025em] leading-[1.1] mt-4">
+          <h2 className="reveal reveal-2 font-sans font-semibold text-[clamp(24px,2.6vw,36px)] tracking-[-.025em] leading-[1.1] mt-4">
             Como estruturamos esta operação.
           </h2>
         </div>
 
         {/* Steps grid */}
         <div className="grid grid-cols-4 gap-px bg-[color:var(--line)] border border-[color:var(--line)] max-[900px]:grid-cols-2 max-[480px]:grid-cols-1">
-          {atuacaoSteps.map((step) => (
+          {atuacaoSteps.map((step, index) => (
             <div
               key={step.n}
-              className="bg-bg-soft p-[30px_26px] flex flex-col gap-3 transition-colors duration-[350ms] hover:bg-white"
+              className={cn("reveal reveal-step bg-bg-soft p-[30px_26px] flex flex-col gap-3 transition-colors duration-[350ms] hover:bg-white", `reveal-step-${Math.min(index, 5)}`)}
             >
               <span className="font-sans text-[13px] font-semibold text-teal tracking-[.04em]">
                 {step.n}

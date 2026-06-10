@@ -7,6 +7,7 @@ import { EmpGaleria } from "@/app/_sections/EmpreendimentoPage/EmpGaleria";
 import { EmpAtuacao } from "@/app/_sections/EmpreendimentoPage/EmpAtuacao";
 import { EmpProximos } from "@/app/_sections/EmpreendimentoPage/EmpProximos";
 import { CtaBand } from "@/components/ui/CtaBand";
+import { RevealController } from "@/components/Reveal/RevealController";
 
 export const dynamicParams = false;
 
@@ -38,6 +39,7 @@ export default async function Page({
 
   return (
     <main>
+      <RevealController />
       <EmpHero p={p} />
       <EmpInfo p={p} />
       <EmpGaleria p={p} />

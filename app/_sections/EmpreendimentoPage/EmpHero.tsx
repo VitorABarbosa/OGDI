@@ -24,7 +24,7 @@ export function EmpHero({ p }: { p: Projeto }) {
           {/* Breadcrumb */}
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-[10px] mb-[22px] text-[12px] tracking-[.08em] uppercase"
+            className="reveal flex items-center gap-[10px] mb-[22px] text-[12px] tracking-[.08em] uppercase"
           >
             <Link
               href="/"
@@ -52,20 +52,20 @@ export function EmpHero({ p }: { p: Projeto }) {
           </nav>
 
           {/* Status badge */}
-          <span className="text-green text-[11px] tracking-[.2em] uppercase">
+          <span className="reveal reveal-2 inline-block text-green text-[11px] tracking-[.2em] uppercase">
             {p.status} · Empreendimento
           </span>
 
           {/* Heading */}
           <h1
-            className="font-serif font-normal text-white mt-[14px] text-[clamp(44px,7vw,104px)] leading-[.98] tracking-[-.01em]"
+            className="reveal reveal-3 font-serif font-normal text-white mt-[14px] text-[clamp(44px,7vw,104px)] leading-[.98] tracking-[-.01em]"
           >
             {p.name}
           </h1>
 
           {/* Location row */}
           <div
-            className="flex flex-wrap items-center mt-[18px] gap-[10px_16px] text-[12.5px] tracking-[.12em] uppercase text-white/85"
+            className="reveal reveal-4 flex flex-wrap items-center mt-[18px] gap-[10px_16px] text-[12.5px] tracking-[.12em] uppercase text-white/85"
           >
             <span>{p.segmento}</span>
             <span

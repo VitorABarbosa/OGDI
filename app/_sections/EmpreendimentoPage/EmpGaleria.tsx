@@ -24,6 +24,8 @@ export function EmpGaleria({ p }: { p: Projeto }) {
                 key={slot.id}
                 className={cn(
                   "relative overflow-hidden bg-dark",
+                  "reveal reveal-gallery",
+                  `reveal-gallery-${Math.min(i, 5)}`,
                   cell.span,
                   cell.aspect,
                   "max-md:col-span-12 max-md:aspect-[4/3]",

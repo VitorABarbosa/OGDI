@@ -20,6 +20,29 @@
 .reveal-card-3 { transition-delay: .18s; }
 .reveal-card-4 { transition-delay: .24s; }
 .reveal-card-5 { transition-delay: .30s; }
+.reveal-gallery {
+  transform: translateY(46px) scale(.985);
+  transition: opacity 1s var(--ease-brand), transform 1s var(--ease-brand);
+}
+.reveal-step {
+  transform: translateY(30px);
+  transition: opacity .85s var(--ease-brand), transform .85s var(--ease-brand), background-color .35s var(--ease-brand);
+}
+.reveal-info-1,
+.reveal-gallery-1,
+.reveal-step-1 { transition-delay: .06s; }
+.reveal-info-2,
+.reveal-gallery-2,
+.reveal-step-2 { transition-delay: .12s; }
+.reveal-info-3,
+.reveal-gallery-3,
+.reveal-step-3 { transition-delay: .18s; }
+.reveal-info-4,
+.reveal-gallery-4,
+.reveal-step-4 { transition-delay: .24s; }
+.reveal-info-5,
+.reveal-gallery-5,
+.reveal-step-5 { transition-delay: .30s; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
