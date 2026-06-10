@@ -8,6 +8,7 @@ import { EmpAtuacao } from "./EmpAtuacao";
 import { EmpProximos } from "./EmpProximos";
 import { EmpLocationStory } from "./EmpLocationStory";
 import { EmpProductStory } from "./EmpProductStory";
+import { EmpClosing } from "./EmpClosing";
 
 const projeto = projetos[0];
 
@@ -54,5 +55,15 @@ describe("Empreendimento page reveals", () => {
     const { container: product } = render(<EmpProductStory p={projeto} />);
     expect(product.querySelectorAll(".reveal-step")).toHaveLength(4);
     expect(screen.getByRole("heading", { name: /Tipologias pensadas/i })).toHaveClass("reveal", "reveal-2");
+  });
+
+  it("marks the closing synthesis for reveal animation", () => {
+    render(<EmpClosing p={projeto} />);
+
+    expect(screen.getByRole("heading", { name: /Cupece nao e apenas um endereco/i })).toHaveClass("reveal");
+    expect(screen.getByRole("link", { name: /Tenho interesse no empreendimento/i }).closest("div")).toHaveClass(
+      "reveal",
+      "reveal-3",
+    );
   });
 });

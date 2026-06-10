@@ -5,6 +5,7 @@ import { EmpHero } from "./EmpHero";
 import { EmpLocationStory } from "./EmpLocationStory";
 import { EmpProductStory } from "./EmpProductStory";
 import { EmpAtuacao } from "./EmpAtuacao";
+import { EmpClosing } from "./EmpClosing";
 
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
 const startPark = projetos.find((p) => p.slug === "start-park-jabaquara");
@@ -87,5 +88,15 @@ describe("Empreendimento V2 data", () => {
     expect(screen.getByText("Estruturacao Open Group")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /operacao foi pensada antes da obra/i })).toBeInTheDocument();
     expect(screen.getByText(/leitura da oportunidade, definicao de produto/i)).toBeInTheDocument();
+  });
+
+  it("renders the Cupece closing synthesis and CTA", () => {
+    expect(hitsCupece).toBeDefined();
+
+    render(<EmpClosing p={hitsCupece!} />);
+
+    expect(screen.getByRole("heading", { name: /Cupece nao e apenas um endereco/i })).toHaveClass("reveal");
+    expect(screen.getByText(/localizacao, demanda e visao de produto/i)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Tenho interesse no empreendimento/i })).toHaveAttribute("href", "/#contato");
   });
 });
