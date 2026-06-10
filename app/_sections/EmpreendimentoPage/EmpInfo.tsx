@@ -26,7 +26,7 @@ function MetaRow({ label, value, tbd, className }: { label: string; value: strin
 export function EmpInfo({ p }: { p: Projeto }) {
   return (
     <section className="relative overflow-hidden py-section">
-      <GalleryFlowBackground />
+      <GalleryFlowBackground variant="simple" />
       <div className="wrap relative z-[2]">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-[clamp(40px,6vw,100px)] items-start">
           <div className="flex flex-col border-t border-[color:var(--line)] lg:sticky lg:top-[110px]">

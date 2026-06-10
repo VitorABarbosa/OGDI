@@ -8,6 +8,7 @@ type Point = {
 };
 
 type FlowSegment = [Point, Point, Point, Point];
+type FlowVariant = "full" | "simple";
 
 const pathControl = {
   // Entry point for the extra lead-in segment. Values are percentages of the full canvas.
@@ -113,7 +114,7 @@ function strokeFlowPath(
   });
 }
 
-function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, time: number, mouse: Point) {
+function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, time: number, mouse: Point, variant: FlowVariant) {
   const teal = resolveCssColor("--color-teal", "#1F5A63");
   const green = resolveCssColor("--color-green", "#5FA83C");
   const manifesto = resolveCssColor("--color-manifesto", "#062B3C");
@@ -128,7 +129,7 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   const originalStartY = height * pathControl.originalPathStart.y;
   const endX = width * 1.05;
   const endY = height * 0.94;
-  const segments: FlowSegment[] = [
+  const fullSegments: FlowSegment[] = [
     [
       { x: startX, y: startY },
       { x: width * 0.42, y: height * 0.02 + drift * 0.25 },
@@ -166,6 +167,27 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
       { x: endX, y: endY },
     ],
   ];
+  const simpleSegments: FlowSegment[] = [
+    [
+      { x: startX, y: startY },
+      { x: width * 0.52, y: height * 0.02 + drift * 0.2 },
+      { x: width * 0.05, y: height * 0.18 + drift * 0.35 },
+      { x: width * 0.24, y: height * 0.38 },
+    ],
+    [
+      { x: width * 0.24, y: height * 0.38 },
+      { x: width * 0.48 + influenceX, y: height * 0.54 + influenceY },
+      { x: width * 0.78, y: height * 0.36 - influenceY },
+      { x: width * 0.7, y: height * 0.68 },
+    ],
+    [
+      { x: width * 0.7, y: height * 0.68 },
+      { x: width * 0.62, y: height * 0.86 },
+      { x: width * 0.86, y: height * 0.88 - drift },
+      { x: endX, y: endY },
+    ],
+  ];
+  const segments = variant === "simple" ? simpleSegments : fullSegments;
 
   const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
   gradient.addColorStop(0, `rgba(31, 90, 99, ${0.1 + pulse * 0.08})`);
@@ -213,7 +235,7 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ctx.restore();
 }
 
-export function GalleryFlowBackground() {
+export function GalleryFlowBackground({ variant = "full" }: { variant?: FlowVariant }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const mouseRef = useRef<Point>({ x: 0, y: 0 });
   const targetMouseRef = useRef<Point>({ x: 0, y: 0 });
@@ -263,7 +285,7 @@ export function GalleryFlowBackground() {
       ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = "rgba(247,246,244,0.92)";
       ctx.fillRect(0, 0, width, height);
-      drawPath(ctx, width, height, time, mouseRef.current);
+      drawPath(ctx, width, height, time, mouseRef.current, variant);
 
       animationId = window.requestAnimationFrame(animate);
     };
@@ -281,7 +303,7 @@ export function GalleryFlowBackground() {
       window.removeEventListener("resize", resize);
       window.cancelAnimationFrame(animationId);
     };
-  }, []);
+  }, [variant]);
 
   return <canvas ref={canvasRef} aria-hidden className="absolute inset-0 h-full w-full" />;
 }
