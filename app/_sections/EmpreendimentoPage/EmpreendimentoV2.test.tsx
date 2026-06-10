@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
+import { EmpHero } from "./EmpHero";
 
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
 const startPark = projetos.find((p) => p.slug === "start-park-jabaquara");
@@ -34,5 +36,16 @@ describe("Empreendimento V2 data", () => {
     expect(startPark).toBeDefined();
     expect(startPark?.name).toBe("Start Park Jabaquara");
     expect(startPark?.facts).toBeUndefined();
+  });
+
+  it("renders the Cupece editorial hero summary, facts, and CTA", () => {
+    expect(hitsCupece).toBeDefined();
+
+    render(<EmpHero p={hitsCupece!} />);
+
+    expect(screen.getByText(/regiao conectada, conveniente e em valorizacao/i)).toBeInTheDocument();
+    expect(screen.getByText("1 e 2 dormitorios")).toBeInTheDocument();
+    expect(screen.getByText("Terraco com churrasqueira")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Tenho interesse/i })).toHaveAttribute("href", "/#contato");
   });
 });

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
+import { Button } from "@/components/ui/Button";
 import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 
 export function EmpHero({ p }: { p: Projeto }) {
@@ -85,6 +86,33 @@ export function EmpHero({ p }: { p: Projeto }) {
             />
             <span>Estruturação OGDI</span>
           </div>
+
+          {p.heroSummary && (
+            <p className="reveal reveal-4 mt-[clamp(18px,2vw,26px)] max-w-[720px] text-[clamp(16px,1.35vw,21px)] leading-[1.55] text-white/82">
+              {p.heroSummary}
+            </p>
+          )}
+
+          {p.facts && p.facts.length > 0 && (
+            <ul className="reveal reveal-4 mt-[clamp(22px,2.4vw,34px)] flex max-w-[900px] flex-wrap gap-2.5">
+              {p.facts.map((fact) => (
+                <li
+                  key={fact}
+                  className="rounded-full border border-white/22 bg-white/10 px-4 py-2 text-[11px] font-medium uppercase tracking-[.12em] text-white/88 backdrop-blur-md"
+                >
+                  {fact}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {p.closingStatement && (
+            <div className="reveal reveal-4 mt-[clamp(24px,2.8vw,38px)]">
+              <Button href="/#contato" variant="light" arrow>
+                {p.closingStatement.ctaLabel}
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </section>
