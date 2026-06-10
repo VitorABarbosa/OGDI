@@ -49,8 +49,8 @@ describe("EmpGaleria", () => {
 
     render(<EmpGaleria p={hitsCupece!} />);
 
-    expect(screen.getByText("Do conceito a experiencia")).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /A narrativa tambem aparece nos espacos/i })).toHaveClass(
+    expect(screen.getByText("Do conceito à experiência")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /A narrativa também aparece nos espaços/i })).toHaveClass(
       "reveal",
       "reveal-2",
     );

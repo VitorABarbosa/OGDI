@@ -108,7 +108,7 @@ export function EmpHero({ p }: { p: Projeto }) {
 
           {p.closingStatement && (
             <div className="reveal reveal-4 mt-[clamp(24px,2.8vw,38px)]">
-              <Button href="/#contato" variant="light" arrow>
+              <Button href={p.closingStatement.ctaHref ?? "/#contato"} variant="light" arrow>
                 {p.closingStatement.ctaLabel}
               </Button>
             </div>

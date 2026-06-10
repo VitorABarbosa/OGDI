@@ -31,6 +31,7 @@ export type ProjetoClosingStatement = {
   title: string;
   text: string;
   ctaLabel: string;
+  ctaHref?: string;
 };
 
 export type Projeto = {
@@ -76,88 +77,89 @@ export const projetos: Projeto[] = [
     image: "/assets/projetos/CUPECE/Cupece.png",
     segmento: "Residencial", local: "São Paulo · SP", regiao: "Cupecê",
     modelo: "Parceria estratégica",
-    address: "Rua Dom Joao Soares Coelho",
-    units: "1 e 2 dormitorios",
-    unitFeature: "Terraco com churrasqueira",
+    address: "Rua Dom João Soares Coelho",
+    units: "1 e 2 dormitórios",
+    unitFeature: "Terraço com churrasqueira",
     heroSummary:
-      "Um empreendimento residencial no Cupece, em uma regiao conectada, conveniente e em valorizacao na zona sul de Sao Paulo.",
-    facts: ["Em obra", "1 e 2 dormitorios", "Terraco com churrasqueira", "Cupece - Sao Paulo"],
+      "Um empreendimento residencial no Cupecê, em uma região conectada, conveniente e em valorização, na zona sul de São Paulo.",
+    facts: ["Em obra", "1 e 2 dormitórios", "Terraço com churrasqueira", "Cupecê - São Paulo"],
     intro: [
-      "O Hits Cupece nasce de uma leitura objetiva de territorio: uma regiao em ascensao, com comercio, conveniencias e conexoes urbanas que sustentam demanda real por moradia.",
-      "A Open Group estruturou a oportunidade olhando antes para o lugar, depois para o produto e, por fim, para a operacao necessaria para transformar potencial em empreendimento.",
+      "O Hits Cupecê nasce de uma leitura objetiva do território: uma região em ascensão, com comércio, conveniências e conexões urbanas que sustentam uma demanda real por moradia.",
+      "A Open Group estruturou a oportunidade olhando, primeiro, para o lugar; depois, para o produto; e, por fim, para a operação necessária para transformar potencial em empreendimento.",
     ],
     locationStory: {
       kicker: "A tese do lugar",
-      title: "Antes da obra, existe a leitura do territorio.",
+      title: "Antes da obra, existe a leitura do território.",
       body: [
-        "Localizado na Rua Dom Joao Soares Coelho, o Hits Cupece esta inserido em uma regiao em plena ascensao e valorizacao, com comercio forte e conveniencias que simplificam a rotina.",
-        "A proximidade com a Avenida Cupece amplia essa leitura. Com 5,3 km de extensao, ela conecta a Ponte do Morumbi, na Marginal Pinheiros, ao centro de Diadema, criando um eixo relevante de mobilidade na zona sul.",
-        "A poucos minutos da Rodovia dos Imigrantes, o endereco tambem aproxima a cidade do litoral sul. Para a Open Group, essa combinacao de acesso, vida cotidiana e valorizacao transforma localizacao em tese de produto.",
+        "Localizado na Rua Dom João Soares Coelho, o Hits Cupecê está inserido em uma região em plena ascensão e valorização, com comércio forte e conveniências que simplificam a rotina.",
+        "A proximidade com a Avenida Cupecê amplia essa leitura. Com 5,3 km de extensão, ela conecta a Ponte do Morumbi, na Marginal Pinheiros, ao centro de Diadema, criando um eixo relevante de mobilidade na zona sul.",
+        "A poucos minutos da Rodovia dos Imigrantes, o endereço também aproxima a cidade do litoral sul. Para a Open Group, essa combinação de acesso, vida cotidiana e valorização transforma a localização em tese de produto.",
       ],
       highlights: [
         {
-          title: "Regiao em ascensao",
-          text: "Um entorno com valorizacao, comercio e servicos que reforcam a consistencia da demanda.",
+          title: "Região em ascensão",
+          text: "Um entorno com valorização, comércio e serviços que reforçam a consistência da demanda.",
         },
         {
-          title: "Conexoes urbanas",
-          text: "Avenida Cupece, Marginal Pinheiros, Diadema e Rodovia dos Imigrantes no raio estrategico do projeto.",
+          title: "Conexões urbanas",
+          text: "Avenida Cupecê, Marginal Pinheiros, Diadema e Rodovia dos Imigrantes no raio estratégico do projeto.",
         },
         {
           title: "Cotidiano conveniente",
-          text: "Facilidade de acesso e conveniencias proximas para reduzir deslocamentos e dar fluidez a rotina.",
+          text: "Facilidade de acesso e conveniências próximas para reduzir deslocamentos e dar fluidez à rotina.",
         },
       ],
     },
     productStory: {
       kicker: "O produto como resposta",
-      title: "Tipologias pensadas para uma vida urbana mais pratica.",
+      title: "Tipologias pensadas para uma vida urbana mais prática.",
       body: [
-        "As unidades de 1 e 2 dormitorios respondem a um publico que busca morar bem, com eficiencia e conexao com a cidade.",
-        "O terraco com churrasqueira adiciona uma camada de uso e desejo ao produto: um espaco privado para receber, respirar e ampliar a experiencia do apartamento.",
+        "As unidades de 1 e 2 dormitórios respondem a um público que busca morar bem, com eficiência e conexão com a cidade.",
+        "O terraço com churrasqueira adiciona uma camada de uso e desejo ao produto: um espaço privado para receber, respirar e ampliar a experiência do apartamento.",
       ],
       cards: [
         {
           label: "Tipologia",
-          value: "1 e 2 dormitorios",
-          text: "Configuracoes alinhadas a diferentes momentos de vida e perfis de moradia.",
+          value: "1 e 2 dormitórios",
+          text: "Configurações alinhadas a diferentes momentos de vida e perfis de moradia.",
         },
         {
-          label: "Endereco",
-          value: "Rua Dom Joao Soares Coelho",
-          text: "Implantacao em uma area de conveniencia e valorizacao no Cupece.",
+          label: "Endereço",
+          value: "Rua Dom João Soares Coelho",
+          text: "Implantação em uma área de conveniência e valorização no Cupecê.",
         },
         {
           label: "Mobilidade",
-          value: "Eixo Avenida Cupece",
-          text: "Conexao com Marginal Pinheiros, Diadema e Rodovia dos Imigrantes.",
+          value: "Eixo Avenida Cupecê",
+          text: "Conexão com Marginal Pinheiros, Diadema e Rodovia dos Imigrantes.",
         },
         {
-          label: "Experiencia",
-          value: "Terraco com churrasqueira",
-          text: "Um diferencial que transforma area privativa em lugar de encontro.",
+          label: "Experiência",
+          value: "Terraço com churrasqueira",
+          text: "Um diferencial que transforma a área privativa em lugar de encontro.",
         },
       ],
     },
     galleryIntro: {
-      kicker: "Do conceito a experiencia",
-      title: "A narrativa tambem aparece nos espacos.",
+      kicker: "Do conceito à experiência",
+      title: "A narrativa também aparece nos espaços.",
       body: [
-        "A galeria apresenta ambientes que traduzem a proposta do Hits Cupece: morar com praticidade, areas de uso bem definidas e uma rotina conectada ao entorno.",
+        "A galeria apresenta ambientes que traduzem a proposta do Hits Cupecê: morar com praticidade, áreas de uso bem definidas e uma rotina conectada ao entorno.",
       ],
     },
     strategyStory: {
-      kicker: "Estruturacao Open Group",
-      title: "A operacao foi pensada antes da obra chegar ao canteiro.",
+      kicker: "Estruturação Open Group",
+      title: "A operação foi pensada antes de a obra chegar ao canteiro.",
       body: [
-        "No Hits Cupece, a Open Group atua na etapa em que o valor e construido com mais precisao: leitura da oportunidade, definicao de produto, analise de viabilidade, articulacao de parceiros e conducao ate a fase de obra.",
-        "Essa inteligencia transforma uma localizacao promissora em uma operacao estruturada, com produto, mercado e execucao caminhando na mesma direcao.",
+        "No Hits Cupecê, a Open Group atua na etapa em que o valor é construído com mais precisão: leitura da oportunidade, definição de produto, análise de viabilidade, articulação de parceiros e condução até a fase de obra.",
+        "Essa inteligência transforma uma localização promissora em uma operação estruturada, com produto, mercado e execução caminhando na mesma direção.",
       ],
     },
     closingStatement: {
-      title: "Cupece nao e apenas um endereco.",
-      text: "E uma operacao estruturada a partir de localizacao, demanda e visao de produto.",
+      title: "Cupecê não é apenas um endereço.",
+      text: "É uma operação estruturada a partir de localização, demanda e visão de produto.",
       ctaLabel: "Tenho interesse no empreendimento",
+      ctaHref: "https://www.tsengenharia.com/imovel/hits-cupece/",
     },
     gallery: [
       { id: "hits-cupece-g1", alt: "Fachada / render principal" },
