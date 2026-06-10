@@ -4,7 +4,7 @@ export const navItems: NavItem[] = [
   { label: "Sobre", href: "/#institucional" },
   { label: "Atuação", href: "/#atuacao" },
   { label: "Modelos", href: "/#modelos" },
-  { label: "Projetos", href: "/#projetos" },
+  { label: "Projetos", href: "/projetos" },
   { label: "Clientes", href: "/#parceiros" },
   { label: "Investidores", href: "/investidores" },
   { label: "Insights", href: "/insights" },
