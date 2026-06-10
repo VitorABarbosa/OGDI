@@ -1,31 +1,9 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpGaleria } from "./EmpGaleria";
 
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
-
-beforeEach(() => {
-  vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockReturnValue({
-    arc: vi.fn(),
-    beginPath: vi.fn(),
-    bezierCurveTo: vi.fn(),
-    clearRect: vi.fn(),
-    createLinearGradient: vi.fn(() => ({ addColorStop: vi.fn() })),
-    fill: vi.fn(),
-    fillRect: vi.fn(),
-    lineTo: vi.fn(),
-    moveTo: vi.fn(),
-    restore: vi.fn(),
-    save: vi.fn(),
-    setTransform: vi.fn(),
-    stroke: vi.fn(),
-  } as unknown as CanvasRenderingContext2D);
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
-});
 
 describe("EmpGaleria", () => {
   it("renders Cupece images and opens a shared-element fullscreen viewer", async () => {

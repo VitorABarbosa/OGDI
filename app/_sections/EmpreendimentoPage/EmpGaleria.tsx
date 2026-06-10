@@ -3,7 +3,6 @@
 import { useMemo } from "react";
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { Kicker } from "@/components/ui/Kicker";
-import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 import { Gallery, GalleryGrid, GalleryImage } from "@/components/ui/shared-element-gallery";
 import { cn } from "@/lib/cn";
 import type { GaleriaSlot, Projeto } from "@/app/_sections/Projetos/projetos.data";
@@ -41,9 +40,8 @@ export function EmpGaleria({ p }: { p: Projeto }) {
   );
 
   return (
-    <section className="relative overflow-hidden bg-bg-soft pb-section pt-[clamp(68px,8vw,112px)]" aria-label="Galeria de imagens">
-      <GalleryFlowBackground />
-      <div className="wrap relative z-[2]">
+    <section className="pb-section pt-[clamp(68px,8vw,112px)]" aria-label="Galeria de imagens">
+      <div className="wrap">
         {p.galleryIntro && (
           <div className="mb-[clamp(34px,4.5vw,62px)] max-w-[760px]">
             <Kicker className="reveal">{p.galleryIntro.kicker}</Kicker>

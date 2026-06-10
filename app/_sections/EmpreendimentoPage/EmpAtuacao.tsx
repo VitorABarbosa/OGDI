@@ -6,7 +6,7 @@ import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 // Seção de método OGDI — conteúdo igual para todos os empreendimentos (não recebe prop do projeto).
 export function EmpAtuacao({ p }: { p?: Projeto }) {
   return (
-    <section className="bg-bg-soft py-section">
+    <section className="py-section">
       <div className="wrap">
         {p?.strategyStory && (
           <div className="mb-[clamp(52px,7vw,96px)] grid grid-cols-1 gap-[clamp(28px,5vw,76px)] lg:grid-cols-[.9fr_1.1fr]">
@@ -39,7 +39,7 @@ export function EmpAtuacao({ p }: { p?: Projeto }) {
           {atuacaoSteps.map((step, index) => (
             <div
               key={step.n}
-              className={cn("reveal reveal-step bg-bg-soft p-[30px_26px] flex flex-col gap-3 transition-colors duration-[350ms] hover:bg-white", `reveal-step-${Math.min(index, 5)}`)}
+              className={cn("reveal reveal-step bg-bg-soft/92 p-[30px_26px] flex flex-col gap-3 transition-colors duration-[350ms] hover:bg-white", `reveal-step-${Math.min(index, 5)}`)}
             >
               <span className="font-sans text-[13px] font-semibold text-teal tracking-[.04em]">
                 {step.n}

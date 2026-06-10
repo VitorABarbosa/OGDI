@@ -8,7 +8,7 @@ export function EmpProductStory({ p }: { p: Projeto }) {
   const { productStory } = p;
 
   return (
-    <section className="bg-bg-soft py-section">
+    <section className="py-section">
       <div className="wrap">
         <div className="grid grid-cols-1 items-start gap-[clamp(42px,6vw,100px)] lg:grid-cols-[.9fr_1.1fr]">
           <div className="lg:sticky lg:top-[110px]">

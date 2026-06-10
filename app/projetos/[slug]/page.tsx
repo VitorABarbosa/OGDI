@@ -4,6 +4,7 @@ import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "@/app/_sections/EmpreendimentoPage/EmpHero";
 import { EmpInfo } from "@/app/_sections/EmpreendimentoPage/EmpInfo";
 import { EmpLocationStory } from "@/app/_sections/EmpreendimentoPage/EmpLocationStory";
+import { EmpExperienceFlow } from "@/app/_sections/EmpreendimentoPage/EmpExperienceFlow";
 import { EmpProductStory } from "@/app/_sections/EmpreendimentoPage/EmpProductStory";
 import { EmpGaleria } from "@/app/_sections/EmpreendimentoPage/EmpGaleria";
 import { EmpAtuacao } from "@/app/_sections/EmpreendimentoPage/EmpAtuacao";
@@ -46,9 +47,11 @@ export default async function Page({
       <EmpHero p={p} />
       <EmpInfo p={p} />
       <EmpLocationStory p={p} />
-      <EmpProductStory p={p} />
-      <EmpGaleria p={p} />
-      <EmpAtuacao p={p} />
+      <EmpExperienceFlow>
+        <EmpProductStory p={p} />
+        <EmpGaleria p={p} />
+        <EmpAtuacao p={p} />
+      </EmpExperienceFlow>
       <EmpNeighborhoodMap p={p} />
       <EmpProximos others={others} />
       <CtaBand
