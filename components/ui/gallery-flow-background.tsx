@@ -7,7 +7,11 @@ type Point = {
   y: number;
 };
 
-type FlowSegment = [Point, Point, Point, Point];
+type FlowSegment = {
+  curve: [Point, Point, Point, Point];
+  progressStart: number;
+  progressEnd: number;
+};
 
 const pathControl = {
   // Entry point for the extra lead-in segment. Values are percentages of the full canvas.
@@ -100,9 +104,10 @@ function strokeFlowPath(
       if (segmentIndex > 0 && step === 0) continue;
 
       const localProgress = step / stepsPerSegment;
-      const pathProgress = (segmentIndex + localProgress) / segments.length;
-      const basePoint = cubicPoint(segment[0], segment[1], segment[2], segment[3], localProgress);
-      const tangent = cubicTangent(segment[0], segment[1], segment[2], segment[3], localProgress);
+      const pathProgress =
+        segment.progressStart + (segment.progressEnd - segment.progressStart) * localProgress;
+      const basePoint = cubicPoint(segment.curve[0], segment.curve[1], segment.curve[2], segment.curve[3], localProgress);
+      const tangent = cubicTangent(segment.curve[0], segment.curve[1], segment.curve[2], segment.curve[3], localProgress);
       const point = applyMouseRipple(
         applyTravelingWaves(basePoint, tangent, pathProgress, time, motionScale),
         mouse,
@@ -137,52 +142,80 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   const endX = width * 1.05;
   const endY = height * 0.94;
   const segments: FlowSegment[] = [
-    [
-      { x: leadStartX, y: leadStartY },
-      { x: width * 0.96, y: height * -0.02 + drift * 0.12 },
-      { x: width * 0.72, y: height * -0.035 + drift * 0.16 },
-      { x: startX, y: startY },
-    ],
-    [
-      { x: startX, y: startY },
-      { x: width * 0.42, y: height * 0.02 + drift * 0.25 },
-      { x: width * 0.12, y: height * 0.03 + drift * 0.2 },
-      { x: originalStartX, y: originalStartY },
-    ],
-    [
-      { x: originalStartX, y: originalStartY },
-      { x: width * 0.05, y: height * 0.28 + drift },
-      { x: width * 0.27 + influenceX, y: height * 0.22 + influenceY },
-      { x: width * 0.52, y: height * 0.3 },
-    ],
-    [
-      { x: width * 0.52, y: height * 0.3 },
-      { x: width * 0.78, y: height * 0.38 - influenceY },
-      { x: width * 1.06, y: height * 0.3 + drift },
-      { x: width * 1.01, y: height * 0.48 },
-    ],
-    [
-      { x: width * 1.01, y: height * 0.48 },
-      { x: width * 0.96, y: height * 0.68 },
-      { x: width * 0.72 + influenceX, y: height * 0.58 },
-      { x: width * 0.51, y: height * 0.64 },
-    ],
-    [
-      { x: width * 0.51, y: height * 0.64 },
-      { x: width * 0.32, y: height * 0.7 },
-      { x: width * 0.14 - influenceX, y: height * 0.72 },
-      { x: width * 0.19, y: height * 0.82 },
-    ],
-    [
-      { x: width * 0.19, y: height * 0.82 },
-      { x: width * 0.25, y: height * 0.94 },
-      { x: width * 0.66, y: height * 0.84 - drift },
-      { x: endX, y: endY },
-    ],
+    {
+      curve: [
+        { x: leadStartX, y: leadStartY },
+        { x: width * 5, y: height * -0.02 + drift * 0.12 },
+        { x: width * 0.72, y: height * -0.035 + drift * 0.16 },
+        { x: startX, y: startY },
+      ],
+      progressStart: 0,
+      progressEnd: 0,
+    },
+    {
+      curve: [
+        { x: startX, y: startY },
+        { x: width * 0.42, y: height * 0.02 + drift * 0.25 },
+        { x: width * 0.12, y: height * 0.03 + drift * 0.2 },
+        { x: originalStartX, y: originalStartY },
+      ],
+      progressStart: 0 / 6,
+      progressEnd: 1 / 6,
+    },
+    {
+      curve: [
+        { x: originalStartX, y: originalStartY },
+        { x: width * 0.05, y: height * 0.28 + drift },
+        { x: width * 0.27 + influenceX, y: height * 0.22 + influenceY },
+        { x: width * 0.52, y: height * 0.3 },
+      ],
+      progressStart: 1 / 6,
+      progressEnd: 2 / 6,
+    },
+    {
+      curve: [
+        { x: width * 0.52, y: height * 0.3 },
+        { x: width * 0.78, y: height * 0.38 - influenceY },
+        { x: width * 1.06, y: height * 0.3 + drift },
+        { x: width * 1.01, y: height * 0.48 },
+      ],
+      progressStart: 2 / 6,
+      progressEnd: 3 / 6,
+    },
+    {
+      curve: [
+        { x: width * 1.01, y: height * 0.48 },
+        { x: width * 0.96, y: height * 0.68 },
+        { x: width * 0.72 + influenceX, y: height * 0.58 },
+        { x: width * 0.51, y: height * 0.64 },
+      ],
+      progressStart: 3 / 6,
+      progressEnd: 4 / 6,
+    },
+    {
+      curve: [
+        { x: width * 0.51, y: height * 0.64 },
+        { x: width * 0.32, y: height * 0.7 },
+        { x: width * 0.14 - influenceX, y: height * 0.72 },
+        { x: width * 0.19, y: height * 0.82 },
+      ],
+      progressStart: 4 / 6,
+      progressEnd: 5 / 6,
+    },
+    {
+      curve: [
+        { x: width * 0.19, y: height * 0.82 },
+        { x: width * 0.25, y: height * 0.94 },
+        { x: width * 0.66, y: height * 0.84 - drift },
+        { x: endX, y: endY },
+      ],
+      progressStart: 5 / 6,
+      progressEnd: 6 / 6,
+    },
   ];
   const motionScale = 1;
 
-  const gradient = ctx.createLinearGradient(leadStartX, leadStartY, endX, endY);
+  const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
   gradient.addColorStop(0, `rgba(31, 90, 99, ${0.1 + pulse * 0.08})`);
   gradient.addColorStop(0.42, `rgba(95, 168, 60, ${0.18 + pulse * 0.08})`);
   gradient.addColorStop(1, `rgba(6, 43, 60, ${0.12 + pulse * 0.08})`);
