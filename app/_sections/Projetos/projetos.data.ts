@@ -376,6 +376,57 @@ export const projetos: Projeto[] = [
       "[PROVISÓRIO] A oportunidade em Guarulhos foi originada pela OGDI com base em leitura de mercado local e avaliação criteriosa do potencial de desenvolvimento da área.",
       "[PROVISÓRIO] A operação está em estruturação: viabilidade em análise, parceiros sendo articulados e modelagem financeira em curso para alinhar capital e execução.",
     ],
+    heroSummary:
+      "Um futuro lançamento residencial em Guarulhos, em fase de estruturação de oportunidade, produto e viabilidade.",
+    facts: ["Futuro lançamento", "Residencial", "Guarulhos - SP", "Parceria estratégica"],
+    locationStory: {
+      kicker: "A tese do lugar",
+      title: "Em Guarulhos, a leitura da oportunidade vem antes do lançamento.",
+      body: [
+        "O projeto em Guarulhos está em fase de estruturação a partir de uma leitura de mercado local e do potencial de desenvolvimento da área.",
+        "Antes de comunicar produto ou lançamento, a Open Group organiza as variáveis que sustentam a operação: território, demanda, viabilidade e parceiros.",
+        "Essa etapa inicial é decisiva para transformar uma oportunidade imobiliária em um empreendimento com direção clara.",
+      ],
+      highlights: [
+        { title: "Mercado local", text: "Leitura da praça e do potencial de absorção antes da definição final do produto." },
+        { title: "Viabilidade em curso", text: "Análise técnica, financeira e estratégica para sustentar a evolução da operação." },
+        { title: "Estruturação inicial", text: "Articulação de parceiros e desenho de caminho antes do compromisso de lançamento." },
+      ],
+    },
+    productStory: {
+      kicker: "O produto como resposta",
+      title: "O produto será consequência da viabilidade, não ponto de partida.",
+      body: [
+        "Em Guarulhos, a Open Group conduz a etapa em que o produto ainda está sendo calibrado a partir da oportunidade.",
+        "A definição de posicionamento, mix e estratégia comercial deve nascer da consistência entre território, demanda e execução possível.",
+      ],
+      cards: [
+        { label: "Status", value: "Futuro lançamento", text: "Projeto em estruturação, ainda antes da comunicação final de mercado." },
+        { label: "Segmento", value: "Residencial", text: "Direção de produto voltada à moradia e ao potencial local." },
+        { label: "Localização", value: "Guarulhos", text: "Praça em análise para definição de posicionamento e viabilidade." },
+        { label: "Modelo", value: "Parceria estratégica", text: "Operação construída com alinhamento entre capital, parceiros e execução." },
+      ],
+    },
+    galleryIntro: {
+      kicker: "Do estudo à materialização",
+      title: "A galeria marca o espaço reservado para a evolução do projeto.",
+      body: [
+        "Enquanto o produto avança, a galeria mantém a estrutura visual da página e será atualizada com imagens, renders ou materiais oficiais do empreendimento.",
+      ],
+    },
+    strategyStory: {
+      kicker: "Estruturação Open Group",
+      title: "A operação está sendo desenhada antes de chegar ao mercado.",
+      body: [
+        "No projeto Guarulhos, a Open Group atua na origem: leitura da oportunidade, análise de viabilidade, modelagem financeira e articulação dos parceiros necessários.",
+        "O objetivo é preparar a operação com clareza antes do lançamento, evitando decisões desconectadas entre produto, mercado e execução.",
+      ],
+    },
+    closingStatement: {
+      title: "Guarulhos ainda está em estruturação.",
+      text: "Um projeto em desenvolvimento, conduzido com método para transformar potencial em operação viável.",
+      ctaLabel: "Tenho interesse no empreendimento",
+    },
     gallery: [
       { id: "guarulhos-g1", alt: "Fachada / render principal" },
       { id: "guarulhos-g2", alt: "Render vertical" },
@@ -383,26 +434,6 @@ export const projetos: Projeto[] = [
       { id: "guarulhos-g4", alt: "Apartamento decorado" },
       { id: "guarulhos-g5", alt: "Detalhe arquitetônico" },
       { id: "guarulhos-g6", alt: "Render panorâmico / implantação" },
-    ],
-  },
-  {
-    cat: "futuro", status: "Futuro lançamento", name: "Cupecê",
-    slug: "cupece",
-    tag: "Desenvolvimento de produto e viabilidade em curso.",
-    tone: "t2", ctaLabel: "Falar sobre o projeto",
-    segmento: "Residencial", local: "São Paulo · SP", regiao: "Cupecê",
-    modelo: "Parceria estratégica",
-    intro: [
-      "[PROVISÓRIO] O projeto no Cupecê está em fase de desenvolvimento de produto e análise de viabilidade. A OGDI conduziu a leitura da oportunidade e trabalha na definição de tipologia, mix e posicionamento.",
-      "[PROVISÓRIO] A estruturação da operação avança com foco em alinhar potencial, capital e execução antes de qualquer comprometimento de lançamento.",
-    ],
-    gallery: [
-      { id: "cupece-g1", alt: "Fachada / render principal" },
-      { id: "cupece-g2", alt: "Render vertical" },
-      { id: "cupece-g3", alt: "Área comum" },
-      { id: "cupece-g4", alt: "Apartamento decorado" },
-      { id: "cupece-g5", alt: "Detalhe arquitetônico" },
-      { id: "cupece-g6", alt: "Render panorâmico / implantação" },
     ],
   },
   {
@@ -417,6 +448,57 @@ export const projetos: Projeto[] = [
       "[PROVISÓRIO] A estruturação reuniu viabilidade, parceiros e execução na mesma direção — permitindo que o empreendimento chegasse ao lançamento com a operação consolidada.",
       "[PROVISÓRIO] O resultado é uma entrega que reflete o valor construído antes da obra: produto posicionado, operação estruturada, lançamento bem-sucedido.",
     ],
+    heroSummary:
+      "Uma operação residencial entregue, conduzida da concepção ao lançamento com produto, parceiros e execução alinhados.",
+    facts: ["Entregue", "Residencial", "Localização a confirmar", "Parceria estratégica"],
+    locationStory: {
+      kicker: "A tese do lugar",
+      title: "A entrega começa antes da obra: na leitura da oportunidade.",
+      body: [
+        "O Hits Santa Catarina representa uma operação já concluída, construída a partir da leitura inicial da oportunidade e da definição estratégica do produto.",
+        "Mesmo com a localização ainda pendente de detalhamento público neste cadastro, a narrativa do projeto segue o mesmo padrão: tese, produto, estruturação e entrega.",
+        "A página preserva a arquitetura completa para receber os dados finais sem alterar o modelo visual dos empreendimentos.",
+      ],
+      highlights: [
+        { title: "Operação entregue", text: "Projeto conduzido da concepção ao lançamento, com ciclo estratégico completo." },
+        { title: "Produto posicionado", text: "A conceituação foi orientada por inteligência de mercado e viabilidade." },
+        { title: "Estrutura consolidada", text: "Parceiros, execução e lançamento foram organizados em uma mesma direção." },
+      ],
+    },
+    productStory: {
+      kicker: "O produto como resposta",
+      title: "Um projeto entregue valida a estruturação feita na origem.",
+      body: [
+        "No Hits Santa Catarina, o valor foi construído antes da obra: na concepção do produto, na leitura da demanda e no alinhamento da operação.",
+        "A entrega evidencia o papel da Open Group em transformar oportunidade imobiliária em empreendimento lançado e consolidado.",
+      ],
+      cards: [
+        { label: "Status", value: "Entregue", text: "Operação concluída e validada pelo avanço até o lançamento." },
+        { label: "Segmento", value: "Residencial", text: "Produto orientado para moradia e posicionamento de mercado." },
+        { label: "Localização", value: "A confirmar", text: "Campo preparado para receber o endereço definitivo quando informado." },
+        { label: "Modelo", value: "Parceria estratégica", text: "Estruturação com parceiros, viabilidade e execução conectados." },
+      ],
+    },
+    galleryIntro: {
+      kicker: "Da concepção à entrega",
+      title: "A galeria organiza a memória visual da operação.",
+      body: [
+        "A seção mantém o espaço para apresentar materiais oficiais do empreendimento e reforçar o percurso entre concepção, lançamento e entrega.",
+      ],
+    },
+    strategyStory: {
+      kicker: "Estruturação Open Group",
+      title: "A entrega é consequência de decisões tomadas antes.",
+      body: [
+        "No Hits Santa Catarina, a Open Group conduziu uma operação que reuniu leitura de oportunidade, conceituação de produto, viabilidade e articulação de parceiros.",
+        "O resultado é uma entrega que demonstra a importância da estruturação anterior ao lançamento e à execução.",
+      ],
+    },
+    closingStatement: {
+      title: "Hits Santa Catarina é uma operação entregue.",
+      text: "Um empreendimento que reflete o valor construído antes da obra: produto posicionado, operação estruturada e lançamento conduzido.",
+      ctaLabel: "Tenho interesse no empreendimento",
+    },
     gallery: [
       { id: "hits-santa-catarina-g1", alt: "Fachada / render principal" },
       { id: "hits-santa-catarina-g2", alt: "Render vertical" },

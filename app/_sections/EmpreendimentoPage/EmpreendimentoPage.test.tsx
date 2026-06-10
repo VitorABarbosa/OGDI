@@ -10,9 +10,12 @@ import { EmpNeighborhoodMap } from "./EmpNeighborhoodMap";
 
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
 const startPark = projetos.find((p) => p.slug === "start-park-jabaquara");
-const ohFreguesia = projetos.find((p) => p.slug === "oh-freguesia");
 
 describe("Empreendimento page data", () => {
+  it("does not keep the duplicate standalone Cupece project", () => {
+    expect(projetos.find((p) => p.slug === "cupece")).toBeUndefined();
+  });
+
   it("provides the narrative content for Hits Cupece", () => {
     expect(hitsCupece).toBeDefined();
 
@@ -42,8 +45,8 @@ describe("Empreendimento page data", () => {
     expect(hitsCupece?.map?.points.length).toBeGreaterThanOrEqual(10);
   });
 
-  it("provides the narrative page standard for current projects in progress", () => {
-    for (const project of [hitsCupece, startPark, ohFreguesia]) {
+  it("provides the narrative page standard for every registered project", () => {
+    for (const project of projetos) {
       expect(project).toBeDefined();
       expect(project?.heroSummary).toBeTruthy();
       expect(project?.facts).toHaveLength(4);

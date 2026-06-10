@@ -9,7 +9,6 @@ export const caseLayout: Record<string, CaseLayout> = {
   "oh-freguesia":         { span: "4", shape: "tall" },
   "hits-santa-catarina":  { span: "8", shape: "wide" },
   "guarulhos":            { span: "6" },
-  "cupece":               { span: "6" },
 };
 
 const order = [
@@ -18,7 +17,6 @@ const order = [
   "oh-freguesia",
   "hits-santa-catarina",
   "guarulhos",
-  "cupece",
 ];
 
 // ordered list of the actual Projeto objects for the grid
