@@ -60,7 +60,7 @@ function strokeFlowPath(
   mouse: Point,
   time: number,
 ) {
-  const stepsPerSegment = 96;
+  const stepsPerSegment = 252;
 
   ctx.beginPath();
 
