@@ -8,7 +8,6 @@ type Point = {
 };
 
 type FlowSegment = [Point, Point, Point, Point];
-type FlowVariant = "full" | "simple";
 
 const pathControl = {
   // Entry point for the extra lead-in segment. Values are percentages of the full canvas.
@@ -120,7 +119,7 @@ function strokeFlowPath(
   });
 }
 
-function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, time: number, mouse: Point, variant: FlowVariant) {
+function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, time: number, mouse: Point) {
   const teal = resolveCssColor("--color-teal", "#1F5A63");
   const green = resolveCssColor("--color-green", "#5FA83C");
   const manifesto = resolveCssColor("--color-manifesto", "#062B3C");
@@ -135,11 +134,18 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   const originalStartY = height * pathControl.originalPathStart.y;
   const endX = width * 1.05;
   const endY = height * 0.94;
-  const fullSegments: FlowSegment[] = [
+  const entryKnot = { x: width * 0.28, y: height * 0.08 };
+  const segments: FlowSegment[] = [
     [
       { x: startX, y: startY },
-      { x: width * 0.42, y: height * 0.02 + drift * 0.25 },
-      { x: width * 0.12, y: height * 0.03 + drift * 0.2 },
+      { x: width * 0.62, y: height * 0.02 + drift * 0.12 },
+      { x: width * 0.38, y: height * 0.04 + drift * 0.16 },
+      entryKnot,
+    ],
+    [
+      entryKnot,
+      { x: width * 0.14, y: height * 0.11 + drift * 0.18 },
+      { x: width * 0.05, y: height * 0.1 + drift * 0.18 },
       { x: originalStartX, y: originalStartY },
     ],
     [
@@ -173,23 +179,7 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
       { x: endX, y: endY },
     ],
   ];
-  const simpleSegments: FlowSegment[] = [
-    [
-      { x: startX, y: startY },
-      { x: width * 0.48, y: height * 0.05 + drift * 0.2 },
-      { x: width * 0.12, y: height * 0.28 + drift * 0.35 },
-      { x: width * 0.54, y: height * 0.5 },
-    ],
-    [
-      { x: width * 0.54, y: height * 0.5 },
-      { x: width * 0.92 + influenceX, y: height * 0.58 + influenceY },
-      { x: width * 0.58, y: height * 0.82 - drift },
-      { x: endX, y: endY },
-    ],
-  ];
-  const segments = variant === "simple" ? simpleSegments : fullSegments;
-  const motionScale = variant === "simple" ? 0.1 : 1;
-  const lineScale = variant === "simple" ? 2 : 1;
+  const motionScale = 1;
 
   const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
   gradient.addColorStop(0, `rgba(31, 90, 99, ${0.1 + pulse * 0.08})`);
@@ -204,13 +194,13 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ctx.shadowBlur = 32;
   ctx.shadowColor = green;
   ctx.strokeStyle = gradient;
-  ctx.lineWidth = Math.max(1.4, Math.min(width, height) * 0.003) * lineScale;
+  ctx.lineWidth = Math.max(1.4, Math.min(width, height) * 0.003);
   ctx.stroke();
 
   ctx.shadowBlur = 0;
   strokeFlowPath(ctx, segments, mouse, time, motionScale);
   ctx.strokeStyle = `rgba(255,255,255,${0.45 + pulse * 0.1})`;
-  ctx.lineWidth = Math.max(0.7, Math.min(width, height) * 0.0012) * lineScale;
+  ctx.lineWidth = Math.max(0.7, Math.min(width, height) * 0.0012);
   ctx.stroke();
 
   const nodes = [
@@ -237,7 +227,7 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ctx.restore();
 }
 
-export function GalleryFlowBackground({ variant = "full" }: { variant?: FlowVariant }) {
+export function GalleryFlowBackground() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const mouseRef = useRef<Point>({ x: 0, y: 0 });
   const targetMouseRef = useRef<Point>({ x: 0, y: 0 });
@@ -287,7 +277,7 @@ export function GalleryFlowBackground({ variant = "full" }: { variant?: FlowVari
       ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = "rgba(247,246,244,0.92)";
       ctx.fillRect(0, 0, width, height);
-      drawPath(ctx, width, height, time, mouseRef.current, variant);
+      drawPath(ctx, width, height, time, mouseRef.current);
 
       animationId = window.requestAnimationFrame(animate);
     };
@@ -305,7 +295,7 @@ export function GalleryFlowBackground({ variant = "full" }: { variant?: FlowVari
       window.removeEventListener("resize", resize);
       window.cancelAnimationFrame(animationId);
     };
-  }, [variant]);
+  }, []);
 
   return <canvas ref={canvasRef} aria-hidden className="absolute inset-0 h-full w-full" />;
 }

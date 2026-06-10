@@ -1,6 +1,5 @@
 import { Kicker } from "@/components/ui/Kicker";
 import { Button } from "@/components/ui/Button";
-import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 import { cn } from "@/lib/cn";
 
@@ -25,9 +24,8 @@ function MetaRow({ label, value, tbd, className }: { label: string; value: strin
 
 export function EmpInfo({ p }: { p: Projeto }) {
   return (
-    <section className="relative overflow-hidden py-section">
-      <GalleryFlowBackground variant="simple" />
-      <div className="wrap relative z-[2]">
+    <section className="py-section">
+      <div className="wrap">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-[clamp(40px,6vw,100px)] items-start">
           <div className="flex flex-col border-t border-[color:var(--line)] lg:sticky lg:top-[110px]">
             <MetaRow label="Status" value={p.status} />

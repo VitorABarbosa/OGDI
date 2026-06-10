@@ -45,9 +45,9 @@ export default async function Page({
     <main>
       <RevealController />
       <EmpHero p={p} />
-      <EmpInfo p={p} />
-      <EmpLocationStory p={p} />
       <EmpExperienceFlow>
+        <EmpInfo p={p} />
+        <EmpLocationStory p={p} />
         <EmpProductStory p={p} />
         <EmpGaleria p={p} />
         <EmpAtuacao p={p} />
