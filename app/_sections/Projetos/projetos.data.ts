@@ -183,6 +183,57 @@ export const projetos: Projeto[] = [
       "[PROVISÓRIO] A conceituação do produto e a modelagem da operação alinharam capital, parceiros e execução na mesma direção — condição para que o lançamento fosse viável e sustentável.",
       "[PROVISÓRIO] O empreendimento avança hoje em obra, resultado de uma operação preparada com rigor desde a origem.",
     ],
+    heroSummary:
+      "Um empreendimento residencial em obra no Jabaquara, estruturado a partir de leitura de mercado, produto e viabilidade.",
+    facts: ["Em obra", "Residencial", "Jabaquara - São Paulo", "Parceria estratégica"],
+    locationStory: {
+      kicker: "A tese do lugar",
+      title: "No Jabaquara, a oportunidade nasce da leitura da praça.",
+      body: [
+        "O Start Park Jabaquara parte de uma leitura objetiva do território: demanda residencial, conexão urbana e um contexto de bairro capaz de sustentar produto e operação.",
+        "Antes da obra, a Open Group avaliou o ativo, o entorno e a dinâmica competitiva para entender onde estava o valor real da oportunidade.",
+        "Essa leitura orientou a tese do empreendimento e definiu as bases para transformar potencial de mercado em desenvolvimento estruturado.",
+      ],
+      highlights: [
+        { title: "Leitura de praça", text: "Análise do contexto local, concorrência e aderência do produto ao território." },
+        { title: "Potencial urbano", text: "Um projeto residencial pensado para responder à vida cotidiana da região." },
+        { title: "Origem estruturada", text: "A oportunidade foi organizada antes da execução, com produto e operação alinhados." },
+      ],
+    },
+    productStory: {
+      kicker: "O produto como resposta",
+      title: "A estruturação conecta mercado, produto e execução.",
+      body: [
+        "A conceituação do Start Park Jabaquara foi conduzida para aproximar inteligência de mercado e viabilidade prática.",
+        "O produto nasce da combinação entre leitura territorial, posicionamento residencial e uma operação preparada para avançar com consistência.",
+      ],
+      cards: [
+        { label: "Status", value: "Em obra", text: "A operação já avançou da estruturação para a execução." },
+        { label: "Segmento", value: "Residencial", text: "Produto orientado para demanda urbana de moradia." },
+        { label: "Localização", value: "Jabaquara", text: "Praça avaliada a partir de contexto, acesso e leitura concorrencial." },
+        { label: "Modelo", value: "Parceria estratégica", text: "Capital, parceiros e execução alinhados desde a origem." },
+      ],
+    },
+    galleryIntro: {
+      kicker: "Do conceito à experiência",
+      title: "A galeria apresenta a materialização da tese.",
+      body: [
+        "As imagens do Start Park Jabaquara funcionam como continuidade da narrativa: produto, implantação e percepção de valor ganham forma visual.",
+      ],
+    },
+    strategyStory: {
+      kicker: "Estruturação Open Group",
+      title: "A operação foi organizada antes de chegar ao canteiro.",
+      body: [
+        "No Start Park Jabaquara, a Open Group conectou leitura da oportunidade, conceituação do produto, modelagem da operação e articulação dos parceiros necessários.",
+        "O resultado é um empreendimento em obra com uma tese construída antes da execução, reduzindo improviso e dando clareza ao processo.",
+      ],
+    },
+    closingStatement: {
+      title: "Start Park Jabaquara é resultado de estruturação.",
+      text: "Uma operação que saiu da leitura de mercado para a obra com produto, parceiros e execução alinhados.",
+      ctaLabel: "Tenho interesse no empreendimento",
+    },
     gallery: [
       { id: "start-park-jabaquara-g1", alt: "Fachada / render principal" },
       { id: "start-park-jabaquara-g2", alt: "Render vertical" },
@@ -205,6 +256,57 @@ export const projetos: Projeto[] = [
       "[PROVISÓRIO] A OGDI conduziu a conceituação do produto e a estruturação da operação, conectando os parceiros necessários e preparando o empreendimento para lançamento.",
       "[PROVISÓRIO] Com a operação consolidada, o empreendimento avança em obra — evidência de que o valor foi construído antes mesmo do início da execução.",
     ],
+    heroSummary:
+      "Um empreendimento residencial em obra na Freguesia, com produto conceituado e operação estruturada pela Open Group.",
+    facts: ["Em obra", "Residencial", "Freguesia - São Paulo", "Parceria estratégica"],
+    locationStory: {
+      kicker: "A tese do lugar",
+      title: "A Freguesia entra na narrativa como território de oportunidade.",
+      body: [
+        "O Oh Freguesia foi estruturado a partir de uma leitura cuidadosa do ativo e do potencial da região.",
+        "A Open Group avaliou o contexto de mercado, o posicionamento possível e a aderência do produto antes de consolidar a operação.",
+        "Essa leitura transforma localização em estratégia: o lugar orienta o produto, e o produto dá clareza à execução.",
+      ],
+      highlights: [
+        { title: "Potencial mapeado", text: "O ativo foi analisado antes da definição do produto e da operação." },
+        { title: "Inteligência de mercado", text: "A tese foi construída com base em leitura da região e oportunidade real." },
+        { title: "Operação consolidada", text: "Produto, parceiros e execução foram conectados para viabilizar o avanço da obra." },
+      ],
+    },
+    productStory: {
+      kicker: "O produto como resposta",
+      title: "A conceituação organiza o potencial em empreendimento.",
+      body: [
+        "No Oh Freguesia, o produto foi pensado como consequência da leitura da oportunidade, não como decisão isolada.",
+        "A estruturação conduzida pela Open Group conectou potencial de mercado, parceria e execução para preparar o projeto para lançamento e obra.",
+      ],
+      cards: [
+        { label: "Status", value: "Em obra", text: "A operação avançou para execução após a consolidação da tese." },
+        { label: "Segmento", value: "Residencial", text: "Empreendimento voltado à demanda urbana da região." },
+        { label: "Localização", value: "Freguesia", text: "Região trabalhada como parte central da estratégia do produto." },
+        { label: "Modelo", value: "Parceria estratégica", text: "Estruturação com parceiros e operação preparados pela Open Group." },
+      ],
+    },
+    galleryIntro: {
+      kicker: "Do conceito à experiência",
+      title: "As imagens mostram a passagem da tese para o produto.",
+      body: [
+        "A galeria do Oh Freguesia apresenta a materialização da operação: conceito, produto e percepção de valor organizados em uma experiência visual.",
+      ],
+    },
+    strategyStory: {
+      kicker: "Estruturação Open Group",
+      title: "O valor foi construído antes do início da execução.",
+      body: [
+        "No Oh Freguesia, a Open Group conduziu a leitura do ativo, a conceituação do produto e a articulação dos parceiros necessários para consolidar a operação.",
+        "A obra é consequência desse trabalho anterior: uma sequência de decisões que deu forma, viabilidade e direção ao empreendimento.",
+      ],
+    },
+    closingStatement: {
+      title: "Oh Freguesia traduz potencial em operação.",
+      text: "Um empreendimento que nasce da inteligência de mercado e avança com produto e execução conectados.",
+      ctaLabel: "Tenho interesse no empreendimento",
+    },
     gallery: [
       { id: "oh-freguesia-g1", alt: "Fachada / render principal" },
       { id: "oh-freguesia-g2", alt: "Render vertical" },

@@ -9,6 +9,7 @@ import { EmpClosing } from "./EmpClosing";
 
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
 const startPark = projetos.find((p) => p.slug === "start-park-jabaquara");
+const ohFreguesia = projetos.find((p) => p.slug === "oh-freguesia");
 
 describe("Empreendimento page data", () => {
   it("provides the narrative content for Hits Cupece", () => {
@@ -37,10 +38,17 @@ describe("Empreendimento page data", () => {
     expect(hitsCupece?.closingStatement?.ctaHref).toBe("https://www.tsengenharia.com/imovel/hits-cupece/");
   });
 
-  it("keeps projects without narrative fields valid during the transition", () => {
-    expect(startPark).toBeDefined();
-    expect(startPark?.name).toBe("Start Park Jabaquara");
-    expect(startPark?.facts).toBeUndefined();
+  it("provides the narrative page standard for current projects in progress", () => {
+    for (const project of [hitsCupece, startPark, ohFreguesia]) {
+      expect(project).toBeDefined();
+      expect(project?.heroSummary).toBeTruthy();
+      expect(project?.facts).toHaveLength(4);
+      expect(project?.locationStory?.highlights).toHaveLength(3);
+      expect(project?.productStory?.cards).toHaveLength(4);
+      expect(project?.galleryIntro?.body.length).toBeGreaterThan(0);
+      expect(project?.strategyStory?.body.length).toBeGreaterThan(0);
+      expect(project?.closingStatement?.ctaLabel).toBe("Tenho interesse no empreendimento");
+    }
   });
 
   it("renders the Cupece editorial hero summary, facts, and CTA", () => {
