@@ -132,20 +132,21 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   const startY = height * pathControl.entryPoint.y;
   const originalStartX = width * pathControl.originalPathStart.x;
   const originalStartY = height * pathControl.originalPathStart.y;
+  const leadStartX = width * 1.08;
+  const leadStartY = height * -0.08;
   const endX = width * 1.05;
   const endY = height * 0.94;
-  const entryKnot = { x: width * 0.28, y: height * 0.08 };
   const segments: FlowSegment[] = [
     [
+      { x: leadStartX, y: leadStartY },
+      { x: width * 0.96, y: height * -0.02 + drift * 0.12 },
+      { x: width * 0.72, y: height * -0.035 + drift * 0.16 },
       { x: startX, y: startY },
-      { x: width * 0.62, y: height * 0.02 + drift * 0.12 },
-      { x: width * 0.38, y: height * 0.04 + drift * 0.16 },
-      entryKnot,
     ],
     [
-      entryKnot,
-      { x: width * 0.14, y: height * 0.11 + drift * 0.18 },
-      { x: width * 0.05, y: height * 0.1 + drift * 0.18 },
+      { x: startX, y: startY },
+      { x: width * 0.42, y: height * 0.02 + drift * 0.25 },
+      { x: width * 0.12, y: height * 0.03 + drift * 0.2 },
       { x: originalStartX, y: originalStartY },
     ],
     [
@@ -181,7 +182,7 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ];
   const motionScale = 1;
 
-  const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
+  const gradient = ctx.createLinearGradient(leadStartX, leadStartY, endX, endY);
   gradient.addColorStop(0, `rgba(31, 90, 99, ${0.1 + pulse * 0.08})`);
   gradient.addColorStop(0.42, `rgba(95, 168, 60, ${0.18 + pulse * 0.08})`);
   gradient.addColorStop(1, `rgba(6, 43, 60, ${0.12 + pulse * 0.08})`);
