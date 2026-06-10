@@ -7,6 +7,8 @@ type Point = {
   y: number;
 };
 
+type FlowSegment = [Point, Point, Point, Point];
+
 const pathControl = {
   // Entry point for the extra lead-in segment. Values are percentages of the full canvas.
   entryPoint: { x: 0.6, y: 0.0001 },
@@ -37,6 +39,21 @@ function cubicPoint(p0: Point, p1: Point, p2: Point, p3: Point, t: number): Poin
   };
 }
 
+function cubicTangent(p0: Point, p1: Point, p2: Point, p3: Point, t: number): Point {
+  const inverse = 1 - t;
+
+  return {
+    x:
+      3 * inverse * inverse * (p1.x - p0.x) +
+      6 * inverse * t * (p2.x - p1.x) +
+      3 * t * t * (p3.x - p2.x),
+    y:
+      3 * inverse * inverse * (p1.y - p0.y) +
+      6 * inverse * t * (p2.y - p1.y) +
+      3 * t * t * (p3.y - p2.y),
+  };
+}
+
 function applyMouseRipple(point: Point, mouse: Point, time: number): Point {
   const dx = point.x - mouse.x;
   const dy = point.y - mouse.y;
@@ -54,20 +71,24 @@ function applyMouseRipple(point: Point, mouse: Point, time: number): Point {
   };
 }
 
-function applyRopeSway(point: Point, progress: number, time: number): Point {
-  const edgeFade = Math.sin(Math.PI * progress);
-  const longWave = Math.sin(progress * Math.PI * 2.2 + time * 0.006);
-  const counterWave = Math.sin(progress * Math.PI * 4.4 - time * 0.0041);
+function applyTravelingWaves(point: Point, tangent: Point, progress: number, time: number): Point {
+  const length = Math.max(1, Math.sqrt(tangent.x * tangent.x + tangent.y * tangent.y));
+  const normal = { x: -tangent.y / length, y: tangent.x / length };
+  const edgeFade = Math.sin(Math.PI * progress) ** 0.75;
+  const wave =
+    Math.sin(progress * Math.PI * 18 - time * 0.035) * 8 +
+    Math.sin(progress * Math.PI * 31 + time * 0.024) * 4.5 +
+    Math.sin(progress * Math.PI * 9 - time * 0.018) * 6;
 
   return {
-    x: point.x + edgeFade * counterWave * 8,
-    y: point.y + edgeFade * (longWave * 26 + counterWave * 6),
+    x: point.x + normal.x * wave * edgeFade,
+    y: point.y + normal.y * wave * edgeFade,
   };
 }
 
 function strokeFlowPath(
   ctx: CanvasRenderingContext2D,
-  segments: [Point, Point, Point, Point][],
+  segments: FlowSegment[],
   mouse: Point,
   time: number,
 ) {
@@ -82,7 +103,8 @@ function strokeFlowPath(
       const localProgress = step / stepsPerSegment;
       const pathProgress = (segmentIndex + localProgress) / segments.length;
       const basePoint = cubicPoint(segment[0], segment[1], segment[2], segment[3], localProgress);
-      const point = applyMouseRipple(applyRopeSway(basePoint, pathProgress, time), mouse, time);
+      const tangent = cubicTangent(segment[0], segment[1], segment[2], segment[3], localProgress);
+      const point = applyMouseRipple(applyTravelingWaves(basePoint, tangent, pathProgress, time), mouse, time);
 
       if (segmentIndex === 0 && step === 0) {
         ctx.moveTo(point.x, point.y);
@@ -108,7 +130,7 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   const originalStartY = height * pathControl.originalPathStart.y;
   const endX = width * 1.05;
   const endY = height * 0.94;
-  const segments: [Point, Point, Point, Point][] = [
+  const segments: FlowSegment[] = [
     [
       { x: startX, y: startY },
       { x: width * 0.42, y: height * 0.02 + drift * 0.25 },
