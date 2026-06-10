@@ -2,11 +2,46 @@ export type ProjetoCat = "obra" | "futuro" | "entregue";
 
 export type GaleriaSlot = { id: string; alt: string }; // no image yet → MediaPlaceholder
 
+export type ProjetoStoryHighlight = {
+  title: string;
+  text: string;
+};
+
+export type ProjetoStory = {
+  kicker: string;
+  title: string;
+  body: string[];
+  highlights?: ProjetoStoryHighlight[];
+};
+
+export type ProjetoProductCard = {
+  label: string;
+  value: string;
+  text?: string;
+};
+
+export type ProjetoProductStory = {
+  kicker: string;
+  title: string;
+  body: string[];
+  cards: ProjetoProductCard[];
+};
+
+export type ProjetoClosingStatement = {
+  title: string;
+  text: string;
+  ctaLabel: string;
+};
+
 export type Projeto = {
-  cat: ProjetoCat; status: string; name: string; slug: string;
-  tag: string; tone: "t1" | "t2" | "t3"; ctaLabel: string;
+  cat: ProjetoCat;
+  status: string;
+  name: string;
+  slug: string;
+  tag: string;
+  tone: "t1" | "t2" | "t3";
+  ctaLabel: string;
   image?: string;
-  // individual page:
   segmento: string;
   local: string;
   regiao?: string;
@@ -14,6 +49,16 @@ export type Projeto = {
   localTbd?: boolean;
   intro: string[];
   gallery: GaleriaSlot[];
+  address?: string;
+  units?: string;
+  unitFeature?: string;
+  heroSummary?: string;
+  facts?: string[];
+  locationStory?: ProjetoStory;
+  productStory?: ProjetoProductStory;
+  strategyStory?: ProjetoStory;
+  galleryIntro?: ProjetoStory;
+  closingStatement?: ProjetoClosingStatement;
 };
 
 export const projetoTabs: { cat: ProjetoCat; label: string }[] = [
@@ -31,11 +76,89 @@ export const projetos: Projeto[] = [
     image: "/assets/projetos/CUPECE/Cupece.png",
     segmento: "Residencial", local: "São Paulo · SP", regiao: "Cupecê",
     modelo: "Parceria estratégica",
+    address: "Rua Dom Joao Soares Coelho",
+    units: "1 e 2 dormitorios",
+    unitFeature: "Terraco com churrasqueira",
+    heroSummary:
+      "Um empreendimento residencial no Cupece, em uma regiao conectada, conveniente e em valorizacao na zona sul de Sao Paulo.",
+    facts: ["Em obra", "1 e 2 dormitorios", "Terraco com churrasqueira", "Cupece - Sao Paulo"],
     intro: [
-      "[PROVISÓRIO] A oportunidade no Cupecê foi lida antes de qualquer comprometimento de capital. A OGDI conduziu a análise do ativo, avaliou o potencial da região e estruturou a operação desde a origem.",
-      "[PROVISÓRIO] O desenvolvimento do produto partiu da inteligência de mercado local: tipologia, mix e posicionamento definidos com base em demanda real, não em premissas genéricas.",
-      "[PROVISÓRIO] Com a viabilidade travada e os parceiros alinhados, a operação avançou para lançamento — e hoje o empreendimento está em obra, conduzido com a estrutura definida na origem.",
+      "O Hits Cupece nasce de uma leitura objetiva de territorio: uma regiao em ascensao, com comercio, conveniencias e conexoes urbanas que sustentam demanda real por moradia.",
+      "A Open Group estruturou a oportunidade olhando antes para o lugar, depois para o produto e, por fim, para a operacao necessaria para transformar potencial em empreendimento.",
     ],
+    locationStory: {
+      kicker: "A tese do lugar",
+      title: "Antes da obra, existe a leitura do territorio.",
+      body: [
+        "Localizado na Rua Dom Joao Soares Coelho, o Hits Cupece esta inserido em uma regiao em plena ascensao e valorizacao, com comercio forte e conveniencias que simplificam a rotina.",
+        "A proximidade com a Avenida Cupece amplia essa leitura. Com 5,3 km de extensao, ela conecta a Ponte do Morumbi, na Marginal Pinheiros, ao centro de Diadema, criando um eixo relevante de mobilidade na zona sul.",
+        "A poucos minutos da Rodovia dos Imigrantes, o endereco tambem aproxima a cidade do litoral sul. Para a Open Group, essa combinacao de acesso, vida cotidiana e valorizacao transforma localizacao em tese de produto.",
+      ],
+      highlights: [
+        {
+          title: "Regiao em ascensao",
+          text: "Um entorno com valorizacao, comercio e servicos que reforcam a consistencia da demanda.",
+        },
+        {
+          title: "Conexoes urbanas",
+          text: "Avenida Cupece, Marginal Pinheiros, Diadema e Rodovia dos Imigrantes no raio estrategico do projeto.",
+        },
+        {
+          title: "Cotidiano conveniente",
+          text: "Facilidade de acesso e conveniencias proximas para reduzir deslocamentos e dar fluidez a rotina.",
+        },
+      ],
+    },
+    productStory: {
+      kicker: "O produto como resposta",
+      title: "Tipologias pensadas para uma vida urbana mais pratica.",
+      body: [
+        "As unidades de 1 e 2 dormitorios respondem a um publico que busca morar bem, com eficiencia e conexao com a cidade.",
+        "O terraco com churrasqueira adiciona uma camada de uso e desejo ao produto: um espaco privado para receber, respirar e ampliar a experiencia do apartamento.",
+      ],
+      cards: [
+        {
+          label: "Tipologia",
+          value: "1 e 2 dormitorios",
+          text: "Configuracoes alinhadas a diferentes momentos de vida e perfis de moradia.",
+        },
+        {
+          label: "Endereco",
+          value: "Rua Dom Joao Soares Coelho",
+          text: "Implantacao em uma area de conveniencia e valorizacao no Cupece.",
+        },
+        {
+          label: "Mobilidade",
+          value: "Eixo Avenida Cupece",
+          text: "Conexao com Marginal Pinheiros, Diadema e Rodovia dos Imigrantes.",
+        },
+        {
+          label: "Experiencia",
+          value: "Terraco com churrasqueira",
+          text: "Um diferencial que transforma area privativa em lugar de encontro.",
+        },
+      ],
+    },
+    galleryIntro: {
+      kicker: "Do conceito a experiencia",
+      title: "A narrativa tambem aparece nos espacos.",
+      body: [
+        "A galeria apresenta ambientes que traduzem a proposta do Hits Cupece: morar com praticidade, areas de uso bem definidas e uma rotina conectada ao entorno.",
+      ],
+    },
+    strategyStory: {
+      kicker: "Estruturacao Open Group",
+      title: "A estrutura da operacao foi pensada antes da obra chegar ao canteiro.",
+      body: [
+        "No Hits Cupece, a Open Group atua na etapa em que o valor e construido com mais precisao: leitura da oportunidade, definicao de produto, analise de viabilidade, articulacao de parceiros e conducao ate a fase de obra.",
+        "Essa inteligencia transforma uma localizacao promissora em uma operacao estruturada, com produto, mercado e execucao caminhando na mesma direcao.",
+      ],
+    },
+    closingStatement: {
+      title: "Cupece nao e apenas um endereco.",
+      text: "E uma operacao estruturada a partir de localizacao, demanda e visao de produto.",
+      ctaLabel: "Tenho interesse no empreendimento",
+    },
     gallery: [
       { id: "hits-cupece-g1", alt: "Fachada / render principal" },
       { id: "hits-cupece-g2", alt: "Render vertical" },
