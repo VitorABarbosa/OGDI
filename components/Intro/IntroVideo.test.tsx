@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { render, waitFor } from "@testing-library/react";
+import { renderToString } from "react-dom/server";
 import { IntroVideo } from "./IntroVideo";
 
 beforeEach(() => {
@@ -15,6 +16,10 @@ beforeEach(() => {
 });
 
 describe("IntroVideo", () => {
+  it("renders the intro layer on the initial server render before browser effects run", () => {
+    expect(renderToString(<IntroVideo />)).toContain("/Abertura/Abertura.mp4");
+  });
+
   it("skips the intro after it has already played in the current tab", async () => {
     sessionStorage.setItem("ogdi:intro-played", "1");
 

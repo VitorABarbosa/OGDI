@@ -23,7 +23,7 @@ function markIntroPlayedInTab() {
 
 // Abertura: video em tela cheia que "desenha" a pagina; ao terminar, fade pro site.
 export function IntroVideo() {
-  const [phase, setPhase] = useState<"checking" | "playing" | "hiding" | "done">("checking");
+  const [phase, setPhase] = useState<"playing" | "hiding" | "done">("playing");
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -41,7 +41,6 @@ export function IntroVideo() {
       return;
     }
 
-    setPhase("playing");
     document.body.classList.add("overflow-hidden");
     window.scrollTo(0, 0);
     // Seguranca: se o evento 'ended' nao disparar, esconde assim mesmo.
@@ -62,7 +61,7 @@ export function IntroVideo() {
     signalIntroDone();
   };
 
-  if (phase === "checking" || phase === "done") return null;
+  if (phase === "done") return null;
 
   return (
     <div
