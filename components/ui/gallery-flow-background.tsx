@@ -188,8 +188,8 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
     ],
   ];
   const segments = variant === "simple" ? simpleSegments : fullSegments;
-  const motionScale = variant === "simple" ? 0.2 : 1;
-  const lineScale = variant === "simple" ? 1.55 : 1;
+  const motionScale = variant === "simple" ? 0.1 : 1;
+  const lineScale = variant === "simple" ? 2 : 1;
 
   const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
   gradient.addColorStop(0, `rgba(31, 90, 99, ${0.1 + pulse * 0.08})`);
