@@ -6,7 +6,6 @@ import { EmpInfo } from "@/app/_sections/EmpreendimentoPage/EmpInfo";
 import { EmpGaleria } from "@/app/_sections/EmpreendimentoPage/EmpGaleria";
 import { EmpAtuacao } from "@/app/_sections/EmpreendimentoPage/EmpAtuacao";
 import { EmpProximos } from "@/app/_sections/EmpreendimentoPage/EmpProximos";
-import { EmpRippleBackground } from "@/app/_sections/EmpreendimentoPage/EmpRippleBackground";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { RevealController } from "@/components/Reveal/RevealController";
 
@@ -42,15 +41,10 @@ export default async function Page({
     <main>
       <RevealController />
       <EmpHero p={p} />
-      <div className="relative overflow-hidden bg-white">
-        <EmpRippleBackground />
-        <div className="relative z-[1]">
-          <EmpInfo p={p} />
-          <EmpGaleria p={p} />
-          <EmpAtuacao />
-          <EmpProximos others={others} />
-        </div>
-      </div>
+      <EmpInfo p={p} />
+      <EmpGaleria p={p} />
+      <EmpAtuacao />
+      <EmpProximos others={others} />
       <CtaBand
         title={`Interesse no ${p.name}?`}
         text="Fale com a equipe da Open Group e receba mais informações sobre o empreendimento e a operação."
