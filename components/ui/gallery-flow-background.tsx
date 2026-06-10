@@ -9,8 +9,8 @@ type Point = {
 
 const pathControl = {
   // Entry point for the extra lead-in segment. Values are percentages of the full canvas.
-  entryPoint: { x: 0.5, y: 0.001 },
-  originalPathStart: { x: -0.06, y: 0.06 },
+  entryPoint: { x: 0.6, y: 0.0001 },
+  originalPathStart: { x: -0.08, y: 0.15 },
 };
 
 function resolveCssColor(variable: string, fallback: string) {
@@ -18,30 +18,20 @@ function resolveCssColor(variable: string, fallback: string) {
   return value || fallback;
 }
 
-function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, time: number, mouse: Point) {
-  const teal = resolveCssColor("--color-teal", "#1F5A63");
-  const green = resolveCssColor("--color-green", "#5FA83C");
-  const manifesto = resolveCssColor("--color-manifesto", "#062B3C");
-  const influenceX = ((mouse.x / Math.max(width, 1)) - 0.5) * 24;
-  const influenceY = ((mouse.y / Math.max(height, 1)) - 0.5) * 18;
-  const drift = Math.sin(time * 0.0014) * 12;
-  const pulse = (Math.sin(time * 0.002) + 1) / 2;
-
+function buildFlowPath(
+  ctx: CanvasRenderingContext2D,
+  width: number,
+  height: number,
+  drift: number,
+  influenceX: number,
+  influenceY: number,
+) {
   const startX = width * pathControl.entryPoint.x;
   const startY = height * pathControl.entryPoint.y;
   const originalStartX = width * pathControl.originalPathStart.x;
   const originalStartY = height * pathControl.originalPathStart.y;
   const endX = width * 1.05;
   const endY = height * 0.94;
-
-  const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
-  gradient.addColorStop(0, `rgba(31, 90, 99, ${0.1 + pulse * 0.08})`);
-  gradient.addColorStop(0.42, `rgba(95, 168, 60, ${0.18 + pulse * 0.08})`);
-  gradient.addColorStop(1, `rgba(6, 43, 60, ${0.12 + pulse * 0.08})`);
-
-  ctx.save();
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
 
   ctx.beginPath();
   ctx.moveTo(startX, startY);
@@ -94,16 +84,89 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
     endY,
   );
 
-  ctx.shadowBlur = 32;
+  return { startX, startY, endX, endY };
+}
+
+function rgbaFromHex(hex: string, alpha: number) {
+  if (!hex.startsWith("#") || (hex.length !== 4 && hex.length !== 7)) return hex;
+
+  const normalized =
+    hex.length === 4
+      ? `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}`
+      : hex;
+  const value = Number.parseInt(normalized.slice(1), 16);
+  const red = (value >> 16) & 255;
+  const green = (value >> 8) & 255;
+  const blue = value & 255;
+
+  return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+}
+
+function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, time: number, mouse: Point) {
+  const teal = resolveCssColor("--color-teal", "#1F5A63");
+  const green = resolveCssColor("--color-green", "#5FA83C");
+  const manifesto = resolveCssColor("--color-manifesto", "#062B3C");
+  const influenceX = ((mouse.x / Math.max(width, 1)) - 0.5) * 28;
+  const influenceY = ((mouse.y / Math.max(height, 1)) - 0.5) * 22;
+  const drift = Math.sin(time * 0.00115) * 14;
+  const pulse = (Math.sin(time * 0.0018) + 1) / 2;
+  const shimmer = (Math.sin(time * 0.0032) + 1) / 2;
+
+  const { startX, startY, endX, endY } = buildFlowPath(ctx, width, height, drift, influenceX, influenceY);
+
+  const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
+  gradient.addColorStop(0, `rgba(31, 90, 99, ${0.12 + pulse * 0.08})`);
+  gradient.addColorStop(0.36, `rgba(95, 168, 60, ${0.2 + shimmer * 0.1})`);
+  gradient.addColorStop(0.7, `rgba(31, 90, 99, ${0.14 + pulse * 0.08})`);
+  gradient.addColorStop(1, `rgba(6, 43, 60, ${0.14 + pulse * 0.08})`);
+
+  ctx.save();
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+
+  const minSide = Math.min(width, height);
+
+  buildFlowPath(ctx, width, height, drift, influenceX, influenceY);
+  ctx.shadowBlur = 72;
   ctx.shadowColor = green;
-  ctx.strokeStyle = gradient;
-  ctx.lineWidth = Math.max(1.4, Math.min(width, height) * 0.003);
+  ctx.strokeStyle = `rgba(95,168,60,${0.07 + pulse * 0.04})`;
+  ctx.lineWidth = Math.max(10, minSide * 0.014);
   ctx.stroke();
 
-  ctx.shadowBlur = 0;
-  ctx.strokeStyle = `rgba(255,255,255,${0.45 + pulse * 0.1})`;
-  ctx.lineWidth = Math.max(0.7, Math.min(width, height) * 0.0012);
+  [-1, 1].forEach((direction) => {
+    ctx.save();
+    ctx.translate(0, direction * (8 + shimmer * 6));
+    buildFlowPath(ctx, width, height, drift * 0.8, influenceX * 0.7, influenceY * 0.7);
+    ctx.shadowBlur = 34;
+    ctx.shadowColor = direction > 0 ? teal : green;
+    ctx.strokeStyle = direction > 0 ? rgbaFromHex(teal, 0.1) : rgbaFromHex(green, 0.12);
+    ctx.lineWidth = Math.max(1.2, minSide * 0.0022);
+    ctx.stroke();
+    ctx.restore();
+  });
+
+  buildFlowPath(ctx, width, height, drift, influenceX, influenceY);
+  ctx.shadowBlur = 38;
+  ctx.shadowColor = green;
+  ctx.strokeStyle = gradient;
+  ctx.lineWidth = Math.max(1.6, minSide * 0.0032);
   ctx.stroke();
+
+  buildFlowPath(ctx, width, height, drift, influenceX, influenceY);
+  ctx.shadowBlur = 0;
+  ctx.strokeStyle = `rgba(255,255,255,${0.38 + shimmer * 0.16})`;
+  ctx.lineWidth = Math.max(0.7, minSide * 0.0012);
+  ctx.stroke();
+
+  buildFlowPath(ctx, width, height, drift, influenceX, influenceY);
+  ctx.setLineDash([Math.max(72, width * 0.075), Math.max(180, width * 0.16)]);
+  ctx.lineDashOffset = -time * 0.85;
+  ctx.shadowBlur = 24;
+  ctx.shadowColor = "rgba(255,255,255,0.6)";
+  ctx.strokeStyle = `rgba(255,255,255,${0.14 + shimmer * 0.16})`;
+  ctx.lineWidth = Math.max(1, minSide * 0.0018);
+  ctx.stroke();
+  ctx.setLineDash([]);
 
   const nodes = [
     { x: width * 0.03, y: height * 0.2 },
@@ -117,10 +180,21 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
 
   nodes.forEach((node, index) => {
     const nodePulse = (Math.sin(time * 0.0022 + index * 0.9) + 1) / 2;
+    const x = node.x + Math.sin(time * 0.001 + index) * 4;
+
     ctx.beginPath();
-    ctx.arc(node.x + Math.sin(time * 0.001 + index) * 4, node.y, 2.5 + nodePulse * 2, 0, Math.PI * 2);
+    ctx.arc(x, node.y, 8 + nodePulse * 10, 0, Math.PI * 2);
+    ctx.strokeStyle = index % 2 === 0 ? rgbaFromHex(green, 0.12) : rgbaFromHex(teal, 0.1);
+    ctx.lineWidth = 1;
+    ctx.shadowBlur = 18;
+    ctx.shadowColor = index % 2 === 0 ? green : teal;
+    ctx.globalAlpha = 0.55;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(x, node.y, 2.5 + nodePulse * 2, 0, Math.PI * 2);
     ctx.fillStyle = index % 2 === 0 ? green : teal;
-    ctx.globalAlpha = 0.2 + nodePulse * 0.18;
+    ctx.globalAlpha = 0.26 + nodePulse * 0.22;
     ctx.fill();
   });
 
