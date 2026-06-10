@@ -56,8 +56,8 @@ function applyMouseRipple(point: Point, mouse: Point, time: number): Point {
 
 function applyRopeSway(point: Point, progress: number, time: number): Point {
   const edgeFade = Math.sin(Math.PI * progress);
-  const longWave = Math.sin(progress * Math.PI * 2.2 + time * 0.0012);
-  const counterWave = Math.sin(progress * Math.PI * 4.4 - time * 0.00082);
+  const longWave = Math.sin(progress * Math.PI * 2.2 + time * 0.006);
+  const counterWave = Math.sin(progress * Math.PI * 4.4 - time * 0.0041);
 
   return {
     x: point.x + edgeFade * counterWave * 8,
