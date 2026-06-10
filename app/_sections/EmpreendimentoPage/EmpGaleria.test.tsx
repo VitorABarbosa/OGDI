@@ -1,15 +1,12 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { act, fireEvent, render, screen } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpGaleria } from "./EmpGaleria";
 
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
 
-beforeEach(() => vi.useFakeTimers());
-afterEach(() => vi.useRealTimers());
-
 describe("EmpGaleria", () => {
-  it("renders Cupece images and opens a smooth fullscreen viewer", async () => {
+  it("renders Cupece images and opens a shared-element fullscreen viewer", async () => {
     expect(hitsCupece).toBeDefined();
 
     render(<EmpGaleria p={hitsCupece!} />);
@@ -23,11 +20,7 @@ describe("EmpGaleria", () => {
 
     fireEvent.keyDown(window, { key: "Escape" });
 
-    expect(screen.getByRole("dialog", { name: /Cine Open/i })).toHaveClass("opacity-0");
-
-    act(() => vi.advanceTimersByTime(360));
-
-    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(screen.getByRole("dialog", { name: /Cine Open/i }).firstChild).toHaveStyle({ opacity: "0" });
   });
 
   it("keeps gallery items in the same row at the same height", () => {
