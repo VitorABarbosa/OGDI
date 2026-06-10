@@ -55,14 +55,14 @@ function cubicTangent(p0: Point, p1: Point, p2: Point, p3: Point, t: number): Po
   };
 }
 
-function applyMouseRipple(point: Point, mouse: Point, time: number): Point {
+function applyMouseRipple(point: Point, mouse: Point, time: number, motionScale: number): Point {
   const dx = point.x - mouse.x;
   const dy = point.y - mouse.y;
   const distance = Math.sqrt(dx * dx + dy * dy);
   const influenceRadius = 180;
   const mouseInfluence = 70;
   const influence = Math.max(0, 1 - distance / influenceRadius);
-  const mouseEffect = influence * mouseInfluence * Math.sin(time * 0.001 + point.x * 0.01);
+  const mouseEffect = influence * mouseInfluence * motionScale * Math.sin(time * 0.001 + point.x * 0.01);
 
   return {
     x: point.x,
@@ -70,7 +70,7 @@ function applyMouseRipple(point: Point, mouse: Point, time: number): Point {
   };
 }
 
-function applyTravelingWaves(point: Point, tangent: Point, progress: number, time: number): Point {
+function applyTravelingWaves(point: Point, tangent: Point, progress: number, time: number, motionScale: number): Point {
   const length = Math.max(1, Math.sqrt(tangent.x * tangent.x + tangent.y * tangent.y));
   const normal = { x: -tangent.y / length, y: tangent.x / length };
   const edgeFade = Math.sin(Math.PI * progress) ** 0.75;
@@ -80,8 +80,8 @@ function applyTravelingWaves(point: Point, tangent: Point, progress: number, tim
     Math.sin(progress * Math.PI * 9 - time * 0.018) * 6;
 
   return {
-    x: point.x + normal.x * wave * edgeFade,
-    y: point.y + normal.y * wave * edgeFade,
+    x: point.x + normal.x * wave * edgeFade * motionScale,
+    y: point.y + normal.y * wave * edgeFade * motionScale,
   };
 }
 
@@ -90,6 +90,7 @@ function strokeFlowPath(
   segments: FlowSegment[],
   mouse: Point,
   time: number,
+  motionScale: number,
 ) {
   const stepsPerSegment = 252;
 
@@ -103,7 +104,12 @@ function strokeFlowPath(
       const pathProgress = (segmentIndex + localProgress) / segments.length;
       const basePoint = cubicPoint(segment[0], segment[1], segment[2], segment[3], localProgress);
       const tangent = cubicTangent(segment[0], segment[1], segment[2], segment[3], localProgress);
-      const point = applyMouseRipple(applyTravelingWaves(basePoint, tangent, pathProgress, time), mouse, time);
+      const point = applyMouseRipple(
+        applyTravelingWaves(basePoint, tangent, pathProgress, time, motionScale),
+        mouse,
+        time,
+        motionScale,
+      );
 
       if (segmentIndex === 0 && step === 0) {
         ctx.moveTo(point.x, point.y);
@@ -170,24 +176,20 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   const simpleSegments: FlowSegment[] = [
     [
       { x: startX, y: startY },
-      { x: width * 0.52, y: height * 0.02 + drift * 0.2 },
-      { x: width * 0.05, y: height * 0.18 + drift * 0.35 },
-      { x: width * 0.24, y: height * 0.38 },
+      { x: width * 0.48, y: height * 0.05 + drift * 0.2 },
+      { x: width * 0.12, y: height * 0.28 + drift * 0.35 },
+      { x: width * 0.54, y: height * 0.5 },
     ],
     [
-      { x: width * 0.24, y: height * 0.38 },
-      { x: width * 0.48 + influenceX, y: height * 0.54 + influenceY },
-      { x: width * 0.78, y: height * 0.36 - influenceY },
-      { x: width * 0.7, y: height * 0.68 },
-    ],
-    [
-      { x: width * 0.7, y: height * 0.68 },
-      { x: width * 0.62, y: height * 0.86 },
-      { x: width * 0.86, y: height * 0.88 - drift },
+      { x: width * 0.54, y: height * 0.5 },
+      { x: width * 0.92 + influenceX, y: height * 0.58 + influenceY },
+      { x: width * 0.58, y: height * 0.82 - drift },
       { x: endX, y: endY },
     ],
   ];
   const segments = variant === "simple" ? simpleSegments : fullSegments;
+  const motionScale = variant === "simple" ? 0.2 : 1;
+  const lineScale = variant === "simple" ? 1.55 : 1;
 
   const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
   gradient.addColorStop(0, `rgba(31, 90, 99, ${0.1 + pulse * 0.08})`);
@@ -198,17 +200,17 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
 
-  strokeFlowPath(ctx, segments, mouse, time);
+  strokeFlowPath(ctx, segments, mouse, time, motionScale);
   ctx.shadowBlur = 32;
   ctx.shadowColor = green;
   ctx.strokeStyle = gradient;
-  ctx.lineWidth = Math.max(1.4, Math.min(width, height) * 0.003);
+  ctx.lineWidth = Math.max(1.4, Math.min(width, height) * 0.003) * lineScale;
   ctx.stroke();
 
   ctx.shadowBlur = 0;
-  strokeFlowPath(ctx, segments, mouse, time);
+  strokeFlowPath(ctx, segments, mouse, time, motionScale);
   ctx.strokeStyle = `rgba(255,255,255,${0.45 + pulse * 0.1})`;
-  ctx.lineWidth = Math.max(0.7, Math.min(width, height) * 0.0012);
+  ctx.lineWidth = Math.max(0.7, Math.min(width, height) * 0.0012) * lineScale;
   ctx.stroke();
 
   const nodes = [
