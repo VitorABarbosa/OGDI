@@ -52,7 +52,7 @@ export function EmpInfo({ p }: { p: Projeto }) {
 
             {p.intro.map((paragraph, i) => (
               <p
-                key={i}
+                key={`${p.slug}-intro-${i}`}
                 className="text-[clamp(15px,1.15vw,17.5px)] leading-[1.72] text-ink-2 mb-5 max-w-[620px]"
               >
                 {paragraph}

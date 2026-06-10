@@ -26,7 +26,7 @@ export function ProjetosFiltros({
       <div className="wrap">
         <div className="flex items-center justify-between flex-wrap" style={{ gap: "24px", padding: "16px 0" }}>
           {/* Tab buttons */}
-          <div className="flex flex-wrap" style={{ gap: "26px" }}>
+          <div className="flex flex-wrap" role="group" aria-label="Filtrar projetos" style={{ gap: "26px" }}>
             {tabs.map((tab) => {
               const isActive = active === tab.cat;
               return (

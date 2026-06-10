@@ -30,7 +30,7 @@ export const projetos: Projeto[] = [
     tone: "t2", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/CUPECE/Cupece.png",
     segmento: "Residencial", local: "São Paulo · SP", regiao: "Cupecê",
-    modelo: "Estruturação da operação",
+    modelo: "Parceria estratégica",
     intro: [
       "[PROVISÓRIO] A oportunidade no Cupecê foi lida antes de qualquer comprometimento de capital. A OGDI conduziu a análise do ativo, avaliou o potencial da região e estruturou a operação desde a origem.",
       "[PROVISÓRIO] O desenvolvimento do produto partiu da inteligência de mercado local: tipologia, mix e posicionamento definidos com base em demanda real, não em premissas genéricas.",
@@ -74,7 +74,7 @@ export const projetos: Projeto[] = [
     tone: "t1", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/OH_FREGUESIA/Oh_freguesia.png",
     segmento: "Residencial", local: "São Paulo · SP",
-    modelo: "Estruturação da operação",
+    modelo: "Parceria estratégica",
     intro: [
       "[PROVISÓRIO] O Oh Freguesia nasceu de uma leitura cuidadosa da oportunidade: ativo avaliado, potencial mapeado e tese de produto construída com base em inteligência de mercado da região.",
       "[PROVISÓRIO] A OGDI conduziu a conceituação do produto e a estruturação da operação, conectando os parceiros necessários e preparando o empreendimento para lançamento.",
@@ -95,7 +95,7 @@ export const projetos: Projeto[] = [
     tag: "Oportunidade originada e operação em estruturação.",
     tone: "t3", ctaLabel: "Falar sobre o projeto",
     segmento: "Residencial", local: "Guarulhos · SP",
-    modelo: "Estruturação da operação",
+    modelo: "Parceria estratégica",
     intro: [
       "[PROVISÓRIO] A oportunidade em Guarulhos foi originada pela OGDI com base em leitura de mercado local e avaliação criteriosa do potencial de desenvolvimento da área.",
       "[PROVISÓRIO] A operação está em estruturação: viabilidade em análise, parceiros sendo articulados e modelagem financeira em curso para alinhar capital e execução.",
@@ -135,7 +135,7 @@ export const projetos: Projeto[] = [
     tag: "Da concepção ao lançamento — operação entregue.",
     tone: "t1", ctaLabel: "Conheça o empreendimento",
     segmento: "Residencial", local: "Localização a confirmar", localTbd: true,
-    modelo: "Estruturação da operação",
+    modelo: "Parceria estratégica",
     intro: [
       "[PROVISÓRIO] O Hits Santa Catarina representa uma operação conduzida pela OGDI da concepção ao lançamento. A oportunidade foi lida na origem, o produto conceituado com base em inteligência de mercado.",
       "[PROVISÓRIO] A estruturação reuniu viabilidade, parceiros e execução na mesma direção — permitindo que o empreendimento chegasse ao lançamento com a operação consolidada.",

@@ -13,7 +13,7 @@ const cellLayout: { span: string; aspect: string }[] = [
 
 export function EmpGaleria({ p }: { p: Projeto }) {
   return (
-    <section className="pb-section">
+    <section className="pb-section" aria-label="Galeria de imagens">
       <div className="wrap">
         <div className="grid grid-cols-12 gap-[clamp(14px,1.6vw,24px)]">
           {p.gallery.map((slot, i) => {
