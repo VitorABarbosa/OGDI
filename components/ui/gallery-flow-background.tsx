@@ -9,7 +9,7 @@ type Point = {
 
 const pathControl = {
   // Entry point for the extra lead-in segment. Values are percentages of the full canvas.
-  entryPoint: { x: 0.5, y: 0.02 },
+  entryPoint: { x: 0.5, y: 0.001 },
   originalPathStart: { x: -0.06, y: 0.06 },
 };
 
