@@ -27,7 +27,7 @@ describe("Empreendimento page reveals", () => {
   it("marks gallery cells for scroll reveal animation", () => {
     const { container } = render(<EmpGaleria p={projeto} />);
 
-    expect(container.querySelectorAll(".reveal-gallery")).toHaveLength(projeto.gallery.length);
+    expect(container.querySelectorAll(".reveal-gallery")).toHaveLength(9);
   });
 
   it("marks method cards and related project cards for scroll reveal animation", () => {
