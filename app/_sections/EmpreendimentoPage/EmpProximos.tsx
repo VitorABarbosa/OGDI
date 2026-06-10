@@ -8,16 +8,10 @@ export function EmpProximos({ others }: { others: Projeto[] }) {
     <section className="py-section">
       <div className="wrap">
         {/* Head */}
-        <div
-          className="flex items-end justify-between flex-wrap mb-[clamp(36px,4vw,56px)]"
-          style={{ gap: "30px" }}
-        >
+        <div className="flex items-end justify-between gap-[30px] flex-wrap mb-[clamp(36px,4vw,56px)]">
           <div>
             <Kicker>Continue explorando</Kicker>
-            <h2
-              className="font-sans font-semibold mt-[14px]"
-              style={{ fontSize: "clamp(24px, 2.6vw, 36px)", letterSpacing: "-.025em" }}
-            >
+            <h2 className="font-sans font-semibold text-[clamp(24px,2.6vw,36px)] tracking-[-.025em] mt-[14px]">
               Outros empreendimentos.
             </h2>
           </div>
@@ -25,10 +19,7 @@ export function EmpProximos({ others }: { others: Projeto[] }) {
         </div>
 
         {/* Grid — 3 columns, each CaseCard fills one cell (no span prop) */}
-        <div
-          className="grid grid-cols-3 max-[860px]:grid-cols-2 max-[560px]:grid-cols-1"
-          style={{ gap: "clamp(20px, 2vw, 32px)" }}
-        >
+        <div className="grid grid-cols-3 gap-[clamp(20px,2vw,32px)] max-[860px]:grid-cols-2 max-[560px]:grid-cols-1">
           {others.map((p) => (
             <CaseCard key={p.slug} p={p} />
           ))}

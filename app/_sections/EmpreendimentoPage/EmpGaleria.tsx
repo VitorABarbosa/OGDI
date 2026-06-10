@@ -15,10 +15,7 @@ export function EmpGaleria({ p }: { p: Projeto }) {
   return (
     <section className="pb-section">
       <div className="wrap">
-        <div
-          className="grid grid-cols-12"
-          style={{ gap: "clamp(14px, 1.6vw, 24px)" }}
-        >
+        <div className="grid grid-cols-12 gap-[clamp(14px,1.6vw,24px)]">
           {p.gallery.map((slot, i) => {
             const cell = cellLayout[i];
             if (!cell) return null;

@@ -8,45 +8,25 @@ export function EmpAtuacao() {
         {/* Head */}
         <div className="max-w-[620px] mb-[clamp(40px,5vw,64px)]">
           <Kicker>A atuação da Open Group</Kicker>
-          <h2
-            className="font-sans font-semibold mt-4"
-            style={{
-              fontSize: "clamp(24px, 2.6vw, 36px)",
-              letterSpacing: "-.025em",
-              lineHeight: 1.1,
-            }}
-          >
+          <h2 className="font-sans font-semibold text-[clamp(24px,2.6vw,36px)] tracking-[-.025em] leading-[1.1] mt-4">
             Como estruturamos esta operação.
           </h2>
         </div>
 
         {/* Steps grid */}
-        <div
-          className="grid grid-cols-4 gap-px border max-[900px]:grid-cols-2 max-[480px]:grid-cols-1"
-          style={{ background: "var(--line)", borderColor: "var(--line)" }}
-        >
+        <div className="grid grid-cols-4 gap-px bg-[color:var(--line)] border border-[color:var(--line)] max-[900px]:grid-cols-2 max-[480px]:grid-cols-1">
           {atuacaoSteps.map((step) => (
             <div
               key={step.n}
-              className="bg-bg-soft flex flex-col gap-3 transition-colors duration-[350ms] hover:bg-white"
-              style={{ padding: "30px 26px" }}
+              className="bg-bg-soft p-[30px_26px] flex flex-col gap-3 transition-colors duration-[350ms] hover:bg-white"
             >
-              <span
-                className="font-sans font-semibold text-teal"
-                style={{ fontSize: "13px", letterSpacing: ".04em" }}
-              >
+              <span className="font-sans text-[13px] font-semibold text-teal tracking-[.04em]">
                 {step.n}
               </span>
-              <h4
-                className="font-sans font-semibold"
-                style={{ fontSize: "16.5px", letterSpacing: "-.01em" }}
-              >
+              <h4 className="font-sans font-semibold text-[16.5px] tracking-[-.01em]">
                 {step.title}
               </h4>
-              <p
-                className="text-ink-2"
-                style={{ fontSize: "13.5px", lineHeight: 1.55 }}
-              >
+              <p className="text-[13.5px] leading-[1.55] text-ink-2">
                 {step.desc}
               </p>
             </div>
