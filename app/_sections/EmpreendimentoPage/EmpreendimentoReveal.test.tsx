@@ -6,6 +6,8 @@ import { EmpInfo } from "./EmpInfo";
 import { EmpGaleria } from "./EmpGaleria";
 import { EmpAtuacao } from "./EmpAtuacao";
 import { EmpProximos } from "./EmpProximos";
+import { EmpLocationStory } from "./EmpLocationStory";
+import { EmpProductStory } from "./EmpProductStory";
 
 const projeto = projetos[0];
 
@@ -38,5 +40,15 @@ describe("Empreendimento page reveals", () => {
     const { container: proximos } = render(<EmpProximos others={related} />);
     expect(proximos.querySelectorAll(".reveal-card")).toHaveLength(related.length);
     expect(screen.getByRole("heading", { name: /Outros empreendimentos/i })).toHaveClass("reveal", "reveal-2");
+  });
+
+  it("marks narrative V2 sections for layered reveal animation", () => {
+    const { container: location } = render(<EmpLocationStory p={projeto} />);
+    expect(location.querySelectorAll(".reveal-step")).toHaveLength(3);
+    expect(screen.getByRole("heading", { name: /leitura do territorio/i })).toHaveClass("reveal", "reveal-2");
+
+    const { container: product } = render(<EmpProductStory p={projeto} />);
+    expect(product.querySelectorAll(".reveal-step")).toHaveLength(4);
+    expect(screen.getByRole("heading", { name: /Tipologias pensadas/i })).toHaveClass("reveal", "reveal-2");
   });
 });

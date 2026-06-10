@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "./EmpHero";
+import { EmpLocationStory } from "./EmpLocationStory";
+import { EmpProductStory } from "./EmpProductStory";
 
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
 const startPark = projetos.find((p) => p.slug === "start-park-jabaquara");
@@ -47,5 +49,32 @@ describe("Empreendimento V2 data", () => {
     expect(screen.getByText("1 e 2 dormitorios")).toBeInTheDocument();
     expect(screen.getByText("Terraco com churrasqueira")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Tenho interesse/i })).toHaveAttribute("href", "/#contato");
+  });
+
+  it("renders the Cupece location thesis section", () => {
+    expect(hitsCupece).toBeDefined();
+
+    render(<EmpLocationStory p={hitsCupece!} />);
+
+    expect(screen.getByText("A tese do lugar")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Antes da obra, existe a leitura do territorio/i })).toHaveClass(
+      "reveal",
+      "reveal-2",
+    );
+    expect(screen.getByText(/A proximidade com a Avenida Cupece amplia essa leitura/i)).toBeInTheDocument();
+    expect(screen.getByText("Regiao em ascensao")).toBeInTheDocument();
+    expect(screen.getByText("Conexoes urbanas")).toBeInTheDocument();
+    expect(screen.getByText("Cotidiano conveniente")).toBeInTheDocument();
+  });
+
+  it("renders the Cupece product response section", () => {
+    expect(hitsCupece).toBeDefined();
+
+    render(<EmpProductStory p={hitsCupece!} />);
+
+    expect(screen.getByText("O produto como resposta")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Tipologias pensadas/i })).toHaveClass("reveal", "reveal-2");
+    expect(screen.getByText("Rua Dom Joao Soares Coelho")).toBeInTheDocument();
+    expect(screen.getByText("Terraco com churrasqueira")).toBeInTheDocument();
   });
 });

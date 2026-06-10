@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "@/app/_sections/EmpreendimentoPage/EmpHero";
 import { EmpInfo } from "@/app/_sections/EmpreendimentoPage/EmpInfo";
+import { EmpLocationStory } from "@/app/_sections/EmpreendimentoPage/EmpLocationStory";
+import { EmpProductStory } from "@/app/_sections/EmpreendimentoPage/EmpProductStory";
 import { EmpGaleria } from "@/app/_sections/EmpreendimentoPage/EmpGaleria";
 import { EmpAtuacao } from "@/app/_sections/EmpreendimentoPage/EmpAtuacao";
 import { EmpProximos } from "@/app/_sections/EmpreendimentoPage/EmpProximos";
@@ -42,6 +44,8 @@ export default async function Page({
       <RevealController />
       <EmpHero p={p} />
       <EmpInfo p={p} />
+      <EmpLocationStory p={p} />
+      <EmpProductStory p={p} />
       <EmpGaleria p={p} />
       <EmpAtuacao />
       <EmpProximos others={others} />
