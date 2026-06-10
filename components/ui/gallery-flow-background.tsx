@@ -11,7 +11,7 @@ type FlowSegment = [Point, Point, Point, Point];
 
 const pathControl = {
   // Entry point for the extra lead-in segment. Values are percentages of the full canvas.
-  entryPoint: { x: 0.6, y: 0.0001 },
+  entryPoint: { x: 0.6, y: -0.001 },
   originalPathStart: { x: -0.08, y: 0.15 },
 };
 
@@ -58,7 +58,7 @@ function applyMouseRipple(point: Point, mouse: Point, time: number): Point {
   const dx = point.x - mouse.x;
   const dy = point.y - mouse.y;
   const distance = Math.sqrt(dx * dx + dy * dy);
-  const influenceRadius = 320;
+  const influenceRadius = 180;
   const mouseInfluence = 70;
   const influence = Math.max(0, 1 - distance / influenceRadius);
   const mouseEffect = influence * mouseInfluence * Math.sin(time * 0.001 + point.x * 0.01);
