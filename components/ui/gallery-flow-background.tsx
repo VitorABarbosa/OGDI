@@ -7,6 +7,12 @@ type Point = {
   y: number;
 };
 
+const pathControl = {
+  // Entry point for the extra lead-in segment. Values are percentages of the full canvas.
+  entryPoint: { x: 0.5, y: 0.02 },
+  originalPathStart: { x: -0.06, y: 0.06 },
+};
+
 function resolveCssColor(variable: string, fallback: string) {
   const value = getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
   return value || fallback;
@@ -21,8 +27,10 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   const drift = Math.sin(time * 0.0014) * 12;
   const pulse = (Math.sin(time * 0.002) + 1) / 2;
 
-  const startX = width * -0.04;
-  const startY = height * 0.28;
+  const startX = width * pathControl.entryPoint.x;
+  const startY = height * pathControl.entryPoint.y;
+  const originalStartX = width * pathControl.originalPathStart.x;
+  const originalStartY = height * pathControl.originalPathStart.y;
   const endX = width * 1.05;
   const endY = height * 0.94;
 
@@ -38,12 +46,12 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ctx.beginPath();
   ctx.moveTo(startX, startY);
   ctx.bezierCurveTo(
-    width * 0.02,
-    height * 0.2 + drift,
-    width * 0.03,
-    height * 0.1,
-    width * -0.06,
-    height * 0.06,
+    width * 0.42,
+    height * 0.02 + drift * 0.25,
+    width * 0.12,
+    height * 0.03 + drift * 0.2,
+    originalStartX,
+    originalStartY,
   );
   ctx.bezierCurveTo(
     width * 0.05,
