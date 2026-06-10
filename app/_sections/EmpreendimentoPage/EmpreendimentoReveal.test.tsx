@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "./EmpHero";
+import { EmpInfo } from "./EmpInfo";
 import { EmpGaleria } from "./EmpGaleria";
 import { EmpAtuacao } from "./EmpAtuacao";
 import { EmpProximos } from "./EmpProximos";
@@ -17,6 +18,13 @@ describe("Empreendimento page reveals", () => {
 
     expect(screen.getByLabelText("Breadcrumb")).toHaveClass("reveal");
     expect(screen.getByRole("heading", { name: projeto.name, level: 1 })).toHaveClass("reveal", "reveal-3");
+  });
+
+  it("marks project info layers for reveal animation", () => {
+    render(<EmpInfo p={projeto} />);
+
+    expect(screen.getByText("Status").closest("div")).toHaveClass("reveal");
+    expect(screen.getByRole("heading", { name: /Da leitura/i, level: 2 })).toHaveClass("reveal", "reveal-2");
   });
 
   it("marks gallery cells for scroll reveal animation", () => {
