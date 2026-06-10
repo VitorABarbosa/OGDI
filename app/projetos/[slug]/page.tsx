@@ -7,7 +7,6 @@ import { EmpLocationStory } from "@/app/_sections/EmpreendimentoPage/EmpLocation
 import { EmpProductStory } from "@/app/_sections/EmpreendimentoPage/EmpProductStory";
 import { EmpGaleria } from "@/app/_sections/EmpreendimentoPage/EmpGaleria";
 import { EmpAtuacao } from "@/app/_sections/EmpreendimentoPage/EmpAtuacao";
-import { EmpClosing } from "@/app/_sections/EmpreendimentoPage/EmpClosing";
 import { EmpNeighborhoodMap } from "@/app/_sections/EmpreendimentoPage/EmpNeighborhoodMap";
 import { EmpProximos } from "@/app/_sections/EmpreendimentoPage/EmpProximos";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -50,7 +49,7 @@ export default async function Page({
       <EmpProductStory p={p} />
       <EmpGaleria p={p} />
       <EmpAtuacao p={p} />
-      {p.map ? <EmpNeighborhoodMap p={p} /> : <EmpClosing p={p} />}
+      <EmpNeighborhoodMap p={p} />
       <EmpProximos others={others} />
       <CtaBand
         title={`Interesse no ${p.name}?`}

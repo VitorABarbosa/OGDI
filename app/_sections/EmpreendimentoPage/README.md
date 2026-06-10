@@ -13,7 +13,7 @@ Mantenha a composição da página nesta ordem:
 5. `EmpProductStory`
 6. `EmpGaleria`
 7. `EmpAtuacao`
-8. `EmpNeighborhoodMap` com Google Maps quando o projeto tiver `map`, ou `EmpClosing` como fallback
+8. `EmpNeighborhoodMap` com Google Maps quando o projeto tiver `map`, ou placeholder quando a localização ainda não estiver definida
 9. `EmpProximos`
 10. `CtaBand`
 
@@ -41,7 +41,7 @@ A narrativa pretendida é:
 3. Mostrar como o produto responde a essa leitura em `EmpProductStory`.
 4. Usar a galeria como prova visual do conceito.
 5. Explicar a estrutura da Open Group por trás da operação em `EmpAtuacao`.
-6. Mostrar a localização do empreendimento via Google Maps em `EmpNeighborhoodMap`, quando houver mapa configurado.
+6. Mostrar a localização do empreendimento em `EmpNeighborhoodMap`; quando ainda não houver endereço, manter o placeholder padronizado.
 7. Fechar com uma síntese objetiva e CTA em `EmpClosing` quando o mapa ainda não estiver configurado.
 
 ## Testes

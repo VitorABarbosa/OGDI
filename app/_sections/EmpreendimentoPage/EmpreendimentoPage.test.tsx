@@ -128,4 +128,15 @@ describe("Empreendimento page data", () => {
     expect(screen.getByTitle("Google Maps - Hits Cupecê")).toHaveAttribute("src", expect.stringContaining("Hits%20Cupec"));
     expect(screen.queryByRole("button", { name: "Mobilidade" })).not.toBeInTheDocument();
   });
+
+  it("renders the standard map placeholder when the project location is not configured", () => {
+    expect(startPark).toBeDefined();
+
+    render(<EmpNeighborhoodMap p={startPark!} />);
+
+    expect(screen.getByRole("heading", { name: /Localização em definição/i })).toBeInTheDocument();
+    expect(screen.getByText("Endereço em definição")).toBeInTheDocument();
+    expect(screen.getByText(/será ativado com Google Maps/i)).toBeInTheDocument();
+    expect(screen.queryByTitle("Google Maps - Start Park Jabaquara")).not.toBeInTheDocument();
+  });
 });
