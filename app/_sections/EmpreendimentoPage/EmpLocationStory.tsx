@@ -1,6 +1,7 @@
 import { Kicker } from "@/components/ui/Kicker";
 import { cn } from "@/lib/cn";
 import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
+import manifestoStyles from "@/app/_sections/Manifesto/Manifesto.module.css";
 
 export function EmpLocationStory({ p }: { p: Projeto }) {
   if (!p.locationStory) return null;
@@ -8,8 +9,9 @@ export function EmpLocationStory({ p }: { p: Projeto }) {
   const { locationStory } = p;
 
   return (
-    <section className="bg-manifesto py-section text-white">
-      <div className="wrap">
+    <section className="relative overflow-clip bg-manifesto py-section text-white">
+      <div className={manifestoStyles.arcs} aria-hidden />
+      <div className="wrap relative z-[2]">
         <div className="grid grid-cols-1 gap-[clamp(38px,6vw,92px)] lg:grid-cols-[1.05fr_.95fr]">
           <div>
             <Kicker tone="on-dark-green" className="reveal">
