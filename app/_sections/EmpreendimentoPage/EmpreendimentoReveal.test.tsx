@@ -2,7 +2,6 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "./EmpHero";
-import { EmpInfo } from "./EmpInfo";
 import { EmpGaleria } from "./EmpGaleria";
 import { EmpAtuacao } from "./EmpAtuacao";
 import { EmpProximos } from "./EmpProximos";
@@ -20,13 +19,6 @@ describe("Empreendimento page reveals", () => {
     expect(screen.getByRole("heading", { name: projeto.name, level: 1 })).toHaveClass("reveal", "reveal-3");
   });
 
-  it("marks project info layers for reveal animation", () => {
-    render(<EmpInfo p={projeto} />);
-
-    expect(screen.getByText("Status").closest("div")).toHaveClass("reveal");
-    expect(screen.getByRole("heading", { name: /Da leitura/i, level: 2 })).toHaveClass("reveal", "reveal-2");
-  });
-
   it("marks gallery cells for scroll reveal animation", () => {
     const { container } = render(<EmpGaleria p={projeto} />);
 
@@ -37,9 +29,9 @@ describe("Empreendimento page reveals", () => {
     const { container: atuacao } = render(<EmpAtuacao />);
     expect(atuacao.querySelectorAll(".reveal-step")).toHaveLength(8);
 
-    const { container: atuacaoV2 } = render(<EmpAtuacao p={projeto} />);
-    expect(atuacaoV2.querySelectorAll(".reveal-step")).toHaveLength(8);
-    expect(screen.getByRole("heading", { name: /operacao foi pensada antes da obra/i })).toHaveClass("reveal", "reveal-2");
+    const { container: atuacaoNarrativa } = render(<EmpAtuacao p={projeto} />);
+    expect(atuacaoNarrativa.querySelectorAll(".reveal-step")).toHaveLength(8);
+    expect(screen.getByRole("heading", { name: /operação foi pensada antes de a obra/i })).toHaveClass("reveal", "reveal-2");
 
     const related = projetos.slice(1, 4);
     const { container: proximos } = render(<EmpProximos others={related} />);
@@ -47,10 +39,10 @@ describe("Empreendimento page reveals", () => {
     expect(screen.getByRole("heading", { name: /Outros empreendimentos/i })).toHaveClass("reveal", "reveal-2");
   });
 
-  it("marks narrative V2 sections for layered reveal animation", () => {
+  it("marks narrative sections for layered reveal animation", () => {
     const { container: location } = render(<EmpLocationStory p={projeto} />);
     expect(location.querySelectorAll(".reveal-step")).toHaveLength(3);
-    expect(screen.getByRole("heading", { name: /leitura do territorio/i })).toHaveClass("reveal", "reveal-2");
+    expect(screen.getByRole("heading", { name: /leitura do território/i })).toHaveClass("reveal", "reveal-2");
 
     const { container: product } = render(<EmpProductStory p={projeto} />);
     expect(product.querySelectorAll(".reveal-step")).toHaveLength(4);
@@ -60,7 +52,7 @@ describe("Empreendimento page reveals", () => {
   it("marks the closing synthesis for reveal animation", () => {
     render(<EmpClosing p={projeto} />);
 
-    expect(screen.getByRole("heading", { name: /Cupece nao e apenas um endereco/i })).toHaveClass("reveal");
+    expect(screen.getByRole("heading", { name: /Cupecê não é apenas um endereço/i })).toHaveClass("reveal");
     expect(screen.getByRole("link", { name: /Tenho interesse no empreendimento/i }).closest("div")).toHaveClass(
       "reveal",
       "reveal-3",

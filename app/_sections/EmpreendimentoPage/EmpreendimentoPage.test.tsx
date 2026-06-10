@@ -10,7 +10,7 @@ import { EmpClosing } from "./EmpClosing";
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
 const startPark = projetos.find((p) => p.slug === "start-park-jabaquara");
 
-describe("Empreendimento V2 data", () => {
+describe("Empreendimento page data", () => {
   it("provides the narrative content for Hits Cupece", () => {
     expect(hitsCupece).toBeDefined();
 
@@ -37,7 +37,7 @@ describe("Empreendimento V2 data", () => {
     expect(hitsCupece?.closingStatement?.ctaHref).toBe("https://www.tsengenharia.com/imovel/hits-cupece/");
   });
 
-  it("keeps non-V2 projects valid during the transition", () => {
+  it("keeps projects without narrative fields valid during the transition", () => {
     expect(startPark).toBeDefined();
     expect(startPark?.name).toBe("Start Park Jabaquara");
     expect(startPark?.facts).toBeUndefined();

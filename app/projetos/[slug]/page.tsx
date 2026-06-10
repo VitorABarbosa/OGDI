@@ -2,14 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "@/app/_sections/EmpreendimentoPage/EmpHero";
-import { EmpInfo } from "@/app/_sections/EmpreendimentoPage/EmpInfo";
 import { EmpLocationStory } from "@/app/_sections/EmpreendimentoPage/EmpLocationStory";
 import { EmpProductStory } from "@/app/_sections/EmpreendimentoPage/EmpProductStory";
 import { EmpGaleria } from "@/app/_sections/EmpreendimentoPage/EmpGaleria";
 import { EmpAtuacao } from "@/app/_sections/EmpreendimentoPage/EmpAtuacao";
 import { EmpClosing } from "@/app/_sections/EmpreendimentoPage/EmpClosing";
 import { EmpProximos } from "@/app/_sections/EmpreendimentoPage/EmpProximos";
-import { CtaBand } from "@/components/ui/CtaBand";
 import { RevealController } from "@/components/Reveal/RevealController";
 
 export const dynamicParams = false;
@@ -44,19 +42,12 @@ export default async function Page({
     <main>
       <RevealController />
       <EmpHero p={p} />
-      <EmpInfo p={p} />
       <EmpLocationStory p={p} />
       <EmpProductStory p={p} />
       <EmpGaleria p={p} />
       <EmpAtuacao p={p} />
       <EmpClosing p={p} />
       <EmpProximos others={others} />
-      <CtaBand
-        title={`Interesse no ${p.name}?`}
-        text="Fale com a equipe da Open Group e receba mais informações sobre o empreendimento e a operação."
-        ctaLabel="Falar com a equipe"
-        href="/#contato"
-      />
     </main>
   );
 }
