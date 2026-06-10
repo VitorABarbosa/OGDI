@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "./EmpHero";
 import { EmpLocationStory } from "./EmpLocationStory";
 import { EmpProductStory } from "./EmpProductStory";
 import { EmpAtuacao } from "./EmpAtuacao";
 import { EmpClosing } from "./EmpClosing";
+import { EmpNeighborhoodMap } from "./EmpNeighborhoodMap";
 
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
 const startPark = projetos.find((p) => p.slug === "start-park-jabaquara");
@@ -36,6 +37,9 @@ describe("Empreendimento page data", () => {
     expect(hitsCupece?.galleryIntro?.title).toBe("A narrativa também aparece nos espaços.");
     expect(hitsCupece?.closingStatement?.title).toMatch(/não é apenas um endereço/i);
     expect(hitsCupece?.closingStatement?.ctaHref).toBe("https://www.tsengenharia.com/imovel/hits-cupece/");
+    expect(hitsCupece?.map?.center).toEqual({ lat: -23.6730382, lng: -46.6513232 });
+    expect(hitsCupece?.map?.categories).toHaveLength(5);
+    expect(hitsCupece?.map?.points.length).toBeGreaterThanOrEqual(10);
   });
 
   it("provides the narrative page standard for current projects in progress", () => {
@@ -113,5 +117,21 @@ describe("Empreendimento page data", () => {
       "href",
       "https://www.tsengenharia.com/imovel/hits-cupece/",
     );
+  });
+
+  it("renders the Cupece controlled neighborhood map filters", () => {
+    expect(hitsCupece).toBeDefined();
+
+    render(<EmpNeighborhoodMap p={hitsCupece!} />);
+
+    expect(screen.getByRole("heading", { name: /Localização e entorno/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Educação" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText("Escolas no entorno residencial")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "Mobilidade" }));
+
+    expect(screen.getByRole("button", { name: "Mobilidade" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText("Eixo Avenida Cupecê")).toBeInTheDocument();
+    expect(screen.queryByText("Escolas no entorno residencial")).not.toBeInTheDocument();
   });
 });

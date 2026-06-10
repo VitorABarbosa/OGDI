@@ -13,7 +13,7 @@ Mantenha a composição da página nesta ordem:
 5. `EmpProductStory`
 6. `EmpGaleria`
 7. `EmpAtuacao`
-8. `EmpClosing`
+8. `EmpNeighborhoodMap` quando o projeto tiver `map`, ou `EmpClosing` como fallback
 9. `EmpProximos`
 10. `CtaBand`
 
@@ -30,6 +30,7 @@ Novos projetos ativos devem incluir estes campos de `Projeto` em `app/_sections/
 - `productStory` com `kicker`, `title`, `body` e 4 `cards`
 - `galleryIntro`
 - `strategyStory`
+- `map` quando houver coordenadas e pontos de entorno
 - `closingStatement`
 - `gallery`
 
@@ -40,7 +41,8 @@ A narrativa pretendida é:
 3. Mostrar como o produto responde a essa leitura em `EmpProductStory`.
 4. Usar a galeria como prova visual do conceito.
 5. Explicar a estrutura da Open Group por trás da operação em `EmpAtuacao`.
-6. Fechar com uma síntese objetiva e CTA em `EmpClosing`.
+6. Mostrar localização e entorno filtrável em `EmpNeighborhoodMap`, quando houver mapa configurado.
+7. Fechar com uma síntese objetiva e CTA em `EmpClosing` quando o mapa ainda não estiver configurado.
 
 ## Testes
 

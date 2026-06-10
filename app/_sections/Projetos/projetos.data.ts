@@ -34,6 +34,26 @@ export type ProjetoClosingStatement = {
   ctaHref?: string;
 };
 
+export type ProjetoMapCategoryId = "educacao" | "mobilidade" | "comercio" | "saude" | "lazer";
+
+export type ProjetoMapPoint = {
+  title: string;
+  category: ProjetoMapCategoryId;
+  distance: string;
+  lat: number;
+  lng: number;
+};
+
+export type ProjetoMap = {
+  title: string;
+  text: string;
+  address: string;
+  zoom: number;
+  center: { lat: number; lng: number };
+  categories: { id: ProjetoMapCategoryId; label: string }[];
+  points: ProjetoMapPoint[];
+};
+
 // Individual project page contract:
 // active projects should follow app/_sections/EmpreendimentoPage/README.md.
 export type Projeto = {
@@ -62,6 +82,7 @@ export type Projeto = {
   strategyStory?: ProjetoStory;
   galleryIntro?: ProjetoStory;
   closingStatement?: ProjetoClosingStatement;
+  map?: ProjetoMap;
 };
 
 export const projetoTabs: { cat: ProjetoCat; label: string }[] = [
@@ -162,6 +183,32 @@ export const projetos: Projeto[] = [
       text: "É uma operação estruturada a partir de localização, demanda e visão de produto.",
       ctaLabel: "Tenho interesse no empreendimento",
       ctaHref: "https://www.tsengenharia.com/imovel/hits-cupece/",
+    },
+    map: {
+      title: "Localização e entorno",
+      text: "Explore a região do Hits Cupecê por camadas. O mapa mantém o empreendimento como ponto central e revela apenas os pontos selecionados.",
+      address: "Rua Dom João Soares Coelho, Jardim Miriam, São Paulo - SP",
+      zoom: 15,
+      center: { lat: -23.6730382, lng: -46.6513232 },
+      categories: [
+        { id: "educacao", label: "Educação" },
+        { id: "mobilidade", label: "Mobilidade" },
+        { id: "comercio", label: "Comércio" },
+        { id: "saude", label: "Saúde" },
+        { id: "lazer", label: "Lazer" },
+      ],
+      points: [
+        { title: "Escolas no entorno residencial", category: "educacao", distance: "raio próximo", lat: -23.67092, lng: -46.64978 },
+        { title: "Cursos e serviços educacionais", category: "educacao", distance: "raio próximo", lat: -23.67512, lng: -46.65318 },
+        { title: "Eixo Avenida Cupecê", category: "mobilidade", distance: "conexão principal", lat: -23.67122, lng: -46.64682 },
+        { title: "Acesso Rodovia dos Imigrantes", category: "mobilidade", distance: "acesso regional", lat: -23.66882, lng: -46.65582 },
+        { title: "Comércio de bairro", category: "comercio", distance: "raio próximo", lat: -23.67478, lng: -46.64866 },
+        { title: "Serviços e conveniências", category: "comercio", distance: "raio próximo", lat: -23.67192, lng: -46.65382 },
+        { title: "Farmácias e apoio à saúde", category: "saude", distance: "raio próximo", lat: -23.67628, lng: -46.65042 },
+        { title: "Clínicas e atendimento local", category: "saude", distance: "raio próximo", lat: -23.67024, lng: -46.65224 },
+        { title: "Praças e áreas de convivência", category: "lazer", distance: "raio próximo", lat: -23.67672, lng: -46.65422 },
+        { title: "Rotas para parques da região", category: "lazer", distance: "acesso local", lat: -23.66898, lng: -46.64892 },
+      ],
     },
     gallery: [
       { id: "hits-cupece-g1", alt: "Fachada / render principal" },
