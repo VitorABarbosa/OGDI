@@ -58,16 +58,14 @@ function applyMouseRipple(point: Point, mouse: Point, time: number): Point {
   const dx = point.x - mouse.x;
   const dy = point.y - mouse.y;
   const distance = Math.sqrt(dx * dx + dy * dy);
-  const influence = Math.max(0, 1 - distance / 120) ** 2.4;
-
-  if (influence === 0) return point;
-
-  const ripple = influence * 58 * Math.sin(time * 0.0018 + point.x * 0.018);
-  const pull = influence * 20;
+  const influenceRadius = 320;
+  const mouseInfluence = 70;
+  const influence = Math.max(0, 1 - distance / influenceRadius);
+  const mouseEffect = influence * mouseInfluence * Math.sin(time * 0.001 + point.x * 0.01);
 
   return {
-    x: point.x + (dx / Math.max(distance, 1)) * pull,
-    y: point.y + ripple,
+    x: point.x,
+    y: point.y + mouseEffect,
   };
 }
 
