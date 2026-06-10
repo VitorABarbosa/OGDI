@@ -34,6 +34,8 @@ export type ProjetoClosingStatement = {
   ctaHref?: string;
 };
 
+// Individual project page contract:
+// active projects should follow app/_sections/EmpreendimentoPage/README.md.
 export type Projeto = {
   cat: ProjetoCat;
   status: string;
