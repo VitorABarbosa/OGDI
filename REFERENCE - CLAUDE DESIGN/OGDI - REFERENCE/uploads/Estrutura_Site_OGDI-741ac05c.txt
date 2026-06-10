@@ -1,0 +1,310 @@
+# Site OGDI
+
+## HEADER
+
+**Logo OGDI + nome completo**
+
+Menu:
+
+**Institucional**
+**Atuação**
+**Projetos**
+**Parceiros**
+**Investidores**
+**Insights**
+**Contato**
+
+CTA opcional no canto:
+
+**Apresentar oportunidade**
+
+---
+
+# HOME
+
+## 1. HERO
+
+**Carrossel com empreendimentos feitos com a participação da OGDI**
+
+Conceito:
+
+**Empreendimentos, oportunidades ou operações em destaque.**
+
+Cada slide pode conter:
+
+Imagem grande
+Nome do empreendimento
+Localização
+Status
+Categoria
+Pequena assinatura da atuação da OGDI
+
+Mensagem principal:
+
+**O valor nasce antes da obra.**
+
+Essa frase conversa diretamente com o posicionamento do material institucional da OGDI/OpenGroup, que reforça a atuação “antes da obra”, da leitura da oportunidade ao lançamento. 
+
+---
+
+## 2. PROJETOS EM DESTAQUE
+
+Inspirado na Cyrela, mas com linguagem mais institucional.
+
+Categorias:
+
+**Em obra**
+**Futuro lançamento**
+**Pronto**
+**Em estruturação**, se quiser deixar mais OGDI
+
+Cada categoria com 2 ou 3 projetos.
+
+Cards com:
+
+Imagem
+Nome do projeto
+Cidade
+Status
+Tipo de produto
+Atuação da OGDI
+
+CTA:
+
+**Ver todos os projetos**
+
+---
+
+## 3. NOSSA ATUAÇÃO
+
+Nome da seção:
+
+**Nossa atuação**
+
+ou
+
+**Da origem ao lançamento**
+
+Blocos curtos:
+
+**Leitura da oportunidade**
+**Inteligência de mercado**
+**Conceituação do empreendimento**
+**Viabilidade**
+**Estruturação da operação**
+**Conexão com parceiros**
+**Preparação para lançamento**
+
+Essa seção é importante porque explica rapidamente que a OGDI não é apenas uma empresa que “participa de projetos”, mas que atua na estruturação da oportunidade imobiliária.
+
+---
+
+## 4. INSTITUCIONAL CURTO
+
+Título:
+
+**Estruturação e desenvolvimento de empreendimentos imobiliários.**
+
+Texto breve explicando quem é a OGDI.
+
+CTA:
+
+**Conheça a OGDI**
+
+Essa seção não precisa ser longa, porque a página **Institucional** vai aprofundar história, posicionamento, essência e atuação.
+
+---
+
+## 5. PARCEIROS
+
+Seção breve para mostrar o ecossistema da OGDI.
+
+Pode ter logos ou categorias:
+
+Arquitetura
+Construção
+Incorporação
+Investidores
+Bancos
+Jurídico
+Comercialização
+Marketing imobiliário
+
+CTA:
+
+**Conheça nossos parceiros**
+
+---
+
+## 6. CONHEÇA NOSSO GRUPO
+
+Aqui eu colocaria como uma seção mais visual, com 3 cards.
+
+### Flying Studio
+
+Perspectivas de imagens, tour virtual e experiências visuais para empreendimentos.
+
+### Rinno Films
+
+Animações cinematográficas, vídeos virais, conceituais e filmes de produto para empreendimentos.
+
+### NID
+
+Criação de PDV, projetos, decorados e experiências físicas de venda.
+
+Essa seção ajuda a mostrar que a OGDI tem um grupo com capacidade de entregar mais do que estratégia: também possui força criativa, visual, comercial e experiencial.
+
+---
+
+## 7. CONTATO
+
+Formulário objetivo.
+
+Campos:
+
+Nome
+Empresa
+E-mail
+WhatsApp
+Tipo de contato
+Mensagem
+
+Opções de tipo de contato:
+
+Apresentar oportunidade
+Falar sobre projeto
+Parceria
+Investimento
+Imprensa
+Outro
+
+CTA:
+
+**Enviar mensagem**
+
+---
+
+# FOOTER
+
+Logo OGDI
+Frase institucional:
+
+**O valor nasce antes da obra.**
+
+Menu resumido:
+
+Institucional
+Atuação
+Projetos
+Parceiros
+Investidores
+Insights
+Contato
+
+Contato:
+
+E-mail
+Telefone / WhatsApp
+Endereço, se houver
+Redes sociais
+
+Legal:
+
+Política de Privacidade
+
+---
+
+# Estrutura das páginas internas
+
+## Institucional
+
+Quem é a OGDI
+História
+Posicionamento
+Essência
+Grupo
+Liderança
+Mensagem institucional
+
+---
+
+## Atuação
+
+O que a OGDI faz
+Etapas da atuação
+Modelos de atuação
+Consultoria contratada
+Parceira estratégica
+Sócia do empreendimento
+Quando a OGDI entra no projeto
+
+---
+
+## Projetos
+
+Lista completa de projetos
+Filtros por status
+Filtros por cidade
+Filtros por tipo de produto
+Cards dos projetos
+Cases completos
+
+---
+
+## Página individual do projeto
+
+Hero do projeto
+Resumo
+Localização
+Status
+Tipo de produto
+Atuação da OGDI
+Galeria
+Ficha técnica
+Parceiros envolvidos
+Diferenciais
+Contato relacionado
+
+---
+
+## Parceiros
+
+Ecossistema de parceiros
+Categorias
+Logos
+Como funciona a relação
+Seja parceiro
+
+---
+
+## Investidores
+
+Oportunidades estruturadas
+Como a OGDI avalia operações
+Tipos de participação
+Governança
+Cadastro de interesse
+
+---
+
+## Insights
+
+Artigos
+Análises de mercado
+Guias
+Tendências
+Materiais institucionais
+
+---
+
+# Ordem final da Home
+
+1. Header
+2. Hero com carrossel de empreendimentos
+3. Projetos em destaque
+4. Nossa atuação
+5. Institucional curto
+6. Parceiros
+7. Conheça nosso grupo
+8. Contato
+9. Footer

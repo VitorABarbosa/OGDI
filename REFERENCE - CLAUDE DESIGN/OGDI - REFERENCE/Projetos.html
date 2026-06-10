@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projetos — Open Group</title>
+<link rel="icon" type="image/png" href="assets/og-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body class="page">
+
+<!-- ============ HEADER ============ -->
+<header class="header on-dark scrolled" id="header">
+  <a href="Open Group - Home.html" class="brand" aria-label="Open Group — início">
+    <img class="brand-logo color" src="assets/og-logo.png" alt="Open Group" />
+    <img class="brand-logo light" src="assets/og-logo-light.png" alt="" aria-hidden="true" />
+    <div class="brand-name">Open Group<small>Desenvolvimento Imobiliário</small></div>
+  </a>
+  <nav class="nav" aria-label="Principal">
+    <a href="Open Group - Home.html#institucional">Manifesto</a>
+    <a href="Open Group - Home.html#atuacao">Atuação</a>
+    <a href="Open Group - Home.html#modelos">Modelos</a>
+    <a href="Projetos.html" aria-current="page">Projetos</a>
+    <a href="Open Group - Home.html#parceiros">Clientes</a>
+    <a href="Open Group - Home.html#contato">Contato</a>
+  </nav>
+  <div class="header-right">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><span class="bars"></span></button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="Open Group - Home.html#institucional" class="m-link">Manifesto</a>
+    <a href="Open Group - Home.html#atuacao" class="m-link">Atuação</a>
+    <a href="Open Group - Home.html#modelos" class="m-link">Modelos</a>
+    <a href="Projetos.html" class="m-link">Projetos</a>
+    <a href="Open Group - Home.html#parceiros" class="m-link">Clientes</a>
+    <a href="Open Group - Home.html#contato" class="m-link">Contato</a>
+  </nav>
+  <div class="mobile-foot">
+    <a href="Open Group - Home.html#contato" class="btn btn-light" style="align-self:flex-start; margin-bottom:18px;">Apresentar oportunidade</a>
+    <span>contato@opengroup.com.br</span>
+    <span>São Paulo · SP</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="ihero">
+  <div class="wrap">
+    <div class="crumb"><a href="Open Group - Home.html">Início</a><span class="sep"></span><span>Projetos</span></div>
+    <div class="ihero-top">
+      <div>
+        <span class="kicker"><span class="dot"></span> Projetos · Cases</span>
+        <h1>Empreendimentos<br>estruturados na origem.</h1>
+      </div>
+      <div class="ihero-count"><b>07</b><span>empreendimentos<br>em portfólio</span></div>
+    </div>
+    <p class="ih-sub" style="margin-top:28px;">Da leitura da oportunidade ao lançamento — cada projeto reflete a atuação da Open Group na estruturação da operação imobiliária.</p>
+  </div>
+</section>
+
+<!-- ============ FILTROS ============ -->
+<div class="filters" id="filters">
+  <div class="wrap">
+    <div class="filters-inner">
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-cat="all">Todos<span class="n">07</span></button>
+        <button class="filter-tab" data-cat="obra">Em obra<span class="n">03</span></button>
+        <button class="filter-tab" data-cat="futuro">Futuro lançamento<span class="n">02</span></button>
+        <button class="filter-tab" data-cat="entregue">Entregue<span class="n">01</span></button>
+        <button class="filter-tab" data-cat="investimento">Investimento<span class="n">01</span></button>
+      </div>
+      <span class="filter-note" id="filterNote">Mostrando todos os projetos</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ GRID ============ -->
+<section class="cases">
+  <div class="wrap">
+    <div class="case-grid" id="caseGrid">
+
+      <a class="case reveal" data-cat="obra" href="Empreendimento.html">
+        <div class="case-media"><image-slot id="case-cupece" fit="cover" placeholder="Render — Hits Cupecê"></image-slot>
+          <div class="case-scrim"></div>
+          <span class="case-chip obra">Em obra</span>
+          <span class="case-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Hits Cupecê</div>
+          <div class="case-meta"><span>Residencial</span><span class="sep"></span><span>São Paulo · SP</span></div>
+        </div>
+      </a>
+
+      <a class="case reveal reveal-2" data-cat="obra" href="Empreendimento.html">
+        <div class="case-media"><image-slot id="case-jabaquara" fit="cover" placeholder="Render — Start Park Jabaquara"></image-slot>
+          <div class="case-scrim"></div>
+          <span class="case-chip obra">Em obra</span>
+          <span class="case-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Start Park Jabaquara</div>
+          <div class="case-meta"><span>Residencial</span><span class="sep"></span><span>São Paulo · SP</span></div>
+        </div>
+      </a>
+
+      <a class="case span-4 tall reveal" data-cat="obra" href="Empreendimento.html">
+        <div class="case-media"><image-slot id="case-freguesia" fit="cover" placeholder="Render — Oh Freguesia"></image-slot>
+          <div class="case-scrim"></div>
+          <span class="case-chip obra">Em obra</span>
+          <span class="case-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Oh Freguesia</div>
+          <div class="case-meta"><span>Residencial</span><span class="sep"></span><span>São Paulo · SP</span></div>
+        </div>
+      </a>
+
+      <a class="case span-8 wide reveal reveal-2" data-cat="entregue" href="Empreendimento.html">
+        <div class="case-media"><image-slot id="case-santacatarina" fit="cover" placeholder="Foto — Hits Santa Catarina"></image-slot>
+          <div class="case-scrim"></div>
+          <span class="case-chip entregue">Entregue</span>
+          <span class="case-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Hits Santa Catarina</div>
+          <div class="case-meta"><span>Residencial</span><span class="sep"></span><span class="tbd">Localização a confirmar</span></div>
+        </div>
+      </a>
+
+      <a class="case reveal" data-cat="futuro" href="Empreendimento.html">
+        <div class="case-media"><div class="ph t3"></div>
+          <div class="case-scrim"></div>
+          <span class="case-chip futuro">Futuro lançamento</span>
+          <span class="case-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Guarulhos</div>
+          <div class="case-meta"><span>Guarulhos · SP</span><span class="sep"></span><span class="tbd">Em estudo</span></div>
+        </div>
+      </a>
+
+      <a class="case reveal reveal-2" data-cat="futuro" href="Empreendimento.html">
+        <div class="case-media"><div class="ph t2"></div>
+          <div class="case-scrim"></div>
+          <span class="case-chip futuro">Futuro lançamento</span>
+          <span class="case-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Cupecê</div>
+          <div class="case-meta"><span>São Paulo · SP</span><span class="sep"></span><span class="tbd">Em estudo</span></div>
+        </div>
+      </a>
+
+      <a class="case wide reveal" data-cat="investimento" href="Empreendimento.html">
+        <div class="case-media"><image-slot id="case-immensita" fit="cover" placeholder="Render — Immensità"></image-slot>
+          <div class="case-scrim"></div>
+          <span class="case-chip futuro">Investimento · SCP</span>
+          <span class="case-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Immensità</div>
+          <div class="case-meta"><span>SCP · Operação</span><span class="sep"></span><span class="tbd">Localização a confirmar</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="ecta">
+  <div class="wrap">
+    <div>
+      <h2>Tem uma área ou projeto com potencial?</h2>
+      <p>Apresente a oportunidade. Fazemos a primeira leitura e indicamos os próximos passos da operação.</p>
+    </div>
+    <a href="Open Group - Home.html#contato" class="btn">Apresentar oportunidade <span class="ar">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="Open Group - Home.html" class="brand">
+        <img class="brand-logo light" src="assets/og-logo-light.png" alt="Open Group" style="display:block;" />
+        <div class="brand-name">Open Group<small>Desenvolvimento Imobiliário</small></div>
+      </a>
+      <p class="footer-tag">O valor nasce antes da obra.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="Open Group - Home.html#institucional">Manifesto</a></li>
+        <li><a href="Open Group - Home.html#atuacao">Atuação</a></li>
+        <li><a href="Open Group - Home.html#modelos">Modelos de atuação</a></li>
+        <li><a href="Projetos.html">Projetos</a></li>
+        <li><a href="Open Group - Home.html#parceiros">Clientes</a></li>
+        <li><a href="Open Group - Home.html#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Atuação</h5>
+      <ul>
+        <li><a href="Open Group - Home.html#atuacao">Leitura da oportunidade</a></li>
+        <li><a href="Open Group - Home.html#atuacao">Inteligência de mercado</a></li>
+        <li><a href="Open Group - Home.html#atuacao">Viabilidade</a></li>
+        <li><a href="Open Group - Home.html#atuacao">Estruturação da operação</a></li>
+        <li><a href="Open Group - Home.html#atuacao">Preparação para lançamento</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <ul>
+        <li><a href="mailto:contato@opengroup.com.br">contato@opengroup.com.br</a></li>
+        <li><a href="Open Group - Home.html#contato">+55 11 0000-0000</a></li>
+        <li style="color: var(--on-dark-2);">São Paulo · SP</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="copy">© 2026 Open Group — Desenvolvimento Imobiliário. Todos os direitos reservados. · <a href="#">Política de Privacidade</a></div>
+    <div class="social">
+      <a href="#" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.83v2.18h.06c.53-1 1.84-2.18 3.78-2.18 4.04 0 4.79 2.66 4.79 6.12V24h-4v-7.06c0-1.68-.03-3.85-2.35-3.85-2.35 0-2.71 1.83-2.71 3.72V24h-4V8z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ---------- Header scroll ---------- */
+  const header = document.getElementById('header');
+  function onScroll(){ header.classList.toggle('scrolled', true); }
+  /* página interna: header sempre claro/sólido */
+  header.classList.add('scrolled'); header.classList.remove('on-dark');
+
+  /* ---------- Mobile menu ---------- */
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('menu-open');
+    menu.setAttribute('aria-hidden', !document.body.classList.contains('menu-open'));
+  });
+  document.querySelectorAll('.m-link').forEach(a => a.addEventListener('click', () => {
+    document.body.classList.remove('menu-open');
+    menu.setAttribute('aria-hidden', 'true');
+  }));
+
+  /* ---------- Reveal ---------- */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ---------- Filtros ---------- */
+  (function(){
+    const tabs = Array.from(document.querySelectorAll('.filter-tab'));
+    const cases = Array.from(document.querySelectorAll('.case'));
+    const note = document.getElementById('filterNote');
+    const labels = { all:'Mostrando todos os projetos', obra:'Em obra', futuro:'Futuro lançamento', entregue:'Entregue', investimento:'Investimento' };
+    tabs.forEach(t => t.addEventListener('click', () => {
+      tabs.forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      const cat = t.dataset.cat;
+      let n = 0;
+      cases.forEach(c => {
+        const show = (cat === 'all' || c.dataset.cat === cat);
+        c.classList.toggle('hide', !show);
+        if (show) n++;
+      });
+      note.textContent = cat === 'all' ? labels.all : (n + (n === 1 ? ' projeto · ' : ' projetos · ') + labels[cat]);
+    }));
+  })();
+</script>
+<script src="assets/image-slot.js"></script>
+</body>
+</html>
