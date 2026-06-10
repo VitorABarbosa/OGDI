@@ -19,16 +19,16 @@ const cupeceImages: GalleryItem[] = [
   { id: "hits-cupece-varanda", alt: "Varanda", src: "/assets/projetos/CUPECE/IMAGES/Varanda.png" },
 ];
 
-const cellLayout: { span: string; aspect: string }[] = [
-  { span: "col-span-8", aspect: "aspect-[16/10]" },
-  { span: "col-span-4", aspect: "aspect-[4/5]" },
-  { span: "col-span-4", aspect: "aspect-[4/5]" },
-  { span: "col-span-4", aspect: "aspect-[4/5]" },
-  { span: "col-span-4", aspect: "aspect-[4/5]" },
-  { span: "col-span-6", aspect: "aspect-[4/3]" },
-  { span: "col-span-6", aspect: "aspect-[4/3]" },
-  { span: "col-span-4", aspect: "aspect-[4/5]" },
-  { span: "col-span-8", aspect: "aspect-[16/10]" },
+const cellLayout: { span: string; height: string }[] = [
+  { span: "col-span-8", height: "h-[clamp(340px,36vw,540px)]" },
+  { span: "col-span-4", height: "h-[clamp(340px,36vw,540px)]" },
+  { span: "col-span-4", height: "h-[clamp(280px,30vw,440px)]" },
+  { span: "col-span-4", height: "h-[clamp(280px,30vw,440px)]" },
+  { span: "col-span-4", height: "h-[clamp(280px,30vw,440px)]" },
+  { span: "col-span-6", height: "h-[clamp(300px,30vw,460px)]" },
+  { span: "col-span-6", height: "h-[clamp(300px,30vw,460px)]" },
+  { span: "col-span-4", height: "h-[clamp(300px,32vw,480px)]" },
+  { span: "col-span-8", height: "h-[clamp(300px,32vw,480px)]" },
 ];
 
 export function EmpGaleria({ p }: { p: Projeto }) {
@@ -63,8 +63,8 @@ export function EmpGaleria({ p }: { p: Projeto }) {
               "reveal reveal-gallery",
               `reveal-gallery-${Math.min(i, 5)}`,
               cell.span,
-              cell.aspect,
-              "max-md:col-span-12 max-md:aspect-[4/3]",
+              cell.height,
+              "max-md:col-span-12 max-md:h-[clamp(240px,70vw,420px)]",
             );
 
             if (!slot.src) {

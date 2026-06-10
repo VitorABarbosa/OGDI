@@ -22,4 +22,18 @@ describe("EmpGaleria", () => {
 
     await waitFor(() => expect(screen.queryByRole("dialog")).not.toBeInTheDocument());
   });
+
+  it("keeps gallery items in the same row at the same height", () => {
+    expect(hitsCupece).toBeDefined();
+
+    render(<EmpGaleria p={hitsCupece!} />);
+
+    const imageButtons = screen.getAllByRole("button", { name: /Abrir imagem/i });
+
+    expect(imageButtons[0]).toHaveClass("h-[clamp(340px,36vw,540px)]");
+    expect(imageButtons[1]).toHaveClass("h-[clamp(340px,36vw,540px)]");
+    expect(imageButtons[2]).toHaveClass("h-[clamp(280px,30vw,440px)]");
+    expect(imageButtons[3]).toHaveClass("h-[clamp(280px,30vw,440px)]");
+    expect(imageButtons[4]).toHaveClass("h-[clamp(280px,30vw,440px)]");
+  });
 });
