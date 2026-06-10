@@ -21,8 +21,8 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   const drift = Math.sin(time * 0.0014) * 12;
   const pulse = (Math.sin(time * 0.002) + 1) / 2;
 
-  const startX = width * -0.06;
-  const startY = height * 0.06;
+  const startX = width * -0.04;
+  const startY = height * 0.28;
   const endX = width * 1.05;
   const endY = height * 0.94;
 
@@ -38,10 +38,18 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ctx.beginPath();
   ctx.moveTo(startX, startY);
   ctx.bezierCurveTo(
-    width * 0.05,
-    height * 0.28 + drift,
-    width * 0.27 + influenceX,
+    width * 0.02,
+    height * 0.18 + drift,
+    width * 0.22 + influenceX,
     height * 0.22 + influenceY,
+    width * 0.31,
+    height * 0.05,
+  );
+  ctx.bezierCurveTo(
+    width * 0.37,
+    height * -0.06,
+    width * 0.27,
+    height * 0.24,
     width * 0.52,
     height * 0.3,
   );
@@ -90,7 +98,8 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   ctx.stroke();
 
   const nodes = [
-    { x: width * 0.28, y: height * 0.25 },
+    { x: width * 0.21, y: height * 0.2 },
+    { x: width * 0.32, y: height * 0.08 },
     { x: width * 0.59, y: height * 0.33 },
     { x: width * 0.83, y: height * 0.56 },
     { x: width * 0.43, y: height * 0.66 },
