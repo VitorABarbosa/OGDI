@@ -125,13 +125,15 @@ describe("Empreendimento page data", () => {
     render(<EmpNeighborhoodMap p={hitsCupece!} />);
 
     expect(screen.getByRole("heading", { name: /Localização e entorno/i })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Educação" })).toHaveAttribute("aria-pressed", "true");
-    expect(screen.getByText("Escolas no entorno residencial")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Empreendimento" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByTitle("Google Maps - Hits Cupecê")).toHaveAttribute("src", expect.stringContaining("Hits%20Cupec"));
 
     fireEvent.click(screen.getByRole("button", { name: "Mobilidade" }));
 
     expect(screen.getByRole("button", { name: "Mobilidade" })).toHaveAttribute("aria-pressed", "true");
-    expect(screen.getByText("Eixo Avenida Cupecê")).toBeInTheDocument();
-    expect(screen.queryByText("Escolas no entorno residencial")).not.toBeInTheDocument();
+    expect(screen.getByTitle("Google Maps - Hits Cupecê")).toHaveAttribute(
+      "src",
+      expect.stringContaining("transporte%20publico%20perto%20de"),
+    );
   });
 });

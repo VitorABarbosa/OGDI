@@ -186,7 +186,7 @@ export const projetos: Projeto[] = [
     },
     map: {
       title: "Localização e entorno",
-      text: "Explore a região do Hits Cupecê por camadas. O mapa mantém o empreendimento como ponto central e revela apenas os pontos selecionados.",
+      text: "Explore a região do Hits Cupecê no Google Maps. Use os filtros para alternar entre o ponto do empreendimento e buscas úteis no entorno.",
       address: "Rua Dom João Soares Coelho, Jardim Miriam, São Paulo - SP",
       zoom: 15,
       center: { lat: -23.6730382, lng: -46.6513232 },
