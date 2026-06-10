@@ -11,6 +11,7 @@ import { ProjetoCard } from "./ProjetoCard";
 
 // useLayoutEffect on the server warns; alias to useEffect when there's no window.
 const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
+const interactiveSelector = "a, button, input, textarea, select, label";
 
 export function Projetos() {
   const [cat, setCat] = useState<ProjetoCat>("obra");
@@ -42,6 +43,7 @@ export function Projetos() {
 
   // Drag: follow the finger live, then snap to the nearest card past the threshold.
   const onDragStart = (e: PointerEvent<HTMLDivElement>) => {
+    if (e.target instanceof Element && e.target.closest(interactiveSelector)) return;
     e.currentTarget.setPointerCapture?.(e.pointerId);
     drag.current = { x: e.clientX, dx: 0 };
     setDragging(true);
