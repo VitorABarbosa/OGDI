@@ -60,13 +60,19 @@ function strokeFlowPath(
   mouse: Point,
   time: number,
 ) {
+  const stepsPerSegment = 96;
+
   ctx.beginPath();
 
   segments.forEach((segment, segmentIndex) => {
-    for (let step = 0; step <= 28; step += 1) {
+    for (let step = 0; step <= stepsPerSegment; step += 1) {
       if (segmentIndex > 0 && step === 0) continue;
 
-      const point = applyMouseRipple(cubicPoint(segment[0], segment[1], segment[2], segment[3], step / 28), mouse, time);
+      const point = applyMouseRipple(
+        cubicPoint(segment[0], segment[1], segment[2], segment[3], step / stepsPerSegment),
+        mouse,
+        time,
+      );
 
       if (segmentIndex === 0 && step === 0) {
         ctx.moveTo(point.x, point.y);
