@@ -42,7 +42,7 @@ export const institucional = {
         label: "OGDI",
         role: "Estratégia e estruturação",
         text:
-          "O ponto de partida estratégico. Atuamos com inteligência de mercado, desenvolvimento de produtos e estruturação completa de novos lançamentos desde a concepção.",
+          "O ponto de partida estratégico. Atuamos com consultoria focada na inteligência de mercado, no desenvolvimento de produtos e na estruturação completa de novos lançamentos desde a sua concepção.",
         tags: ["Mercado", "Produto", "Lançamento"],
       },
       {
@@ -51,7 +51,7 @@ export const institucional = {
         label: "NID",
         role: "Arquitetura, interiores e desejo",
         text:
-          "Onde a inteligência arquitetônica ganha forma e emoção. Projetamos interiores, fachadas e PDVs para criar aconchego, segurança e personalidade.",
+          "Onde a inteligência arquitetônica ganha forma e emoção. O lar como um verdadeiro ninho: projetos de interiores, design de fachadas e PDVs concebidos como espaços de aconchego, segurança e forte personalidade.",
         tags: ["Interiores", "Fachadas", "PDV"],
       },
       {
@@ -60,8 +60,8 @@ export const institucional = {
         label: "Flying",
         role: "Futuros visuais e experiências imersivas",
         text:
-          "A máquina de antecipar futuros. Apps, D.Brave, salas imersivas e soluções visuais transformam tijolo e cimento em desejo antes da primeira pedra.",
-        tags: ["Apps", "D.Brave", "Imersão"],
+          "A máquina de antecipar futuros. Imagens e perspectivas 3D, apps, o D.Brave e salas imersivas transportam o cliente para dentro da sua futura realidade — mais de 12 anos traduzindo tijolo e cimento em pura poesia visual.",
+        tags: ["Perspectivas 3D", "Apps", "D.Brave", "Salas Imersivas"],
       },
       {
         id: "rinno",
@@ -69,8 +69,8 @@ export const institucional = {
         label: "Rinno",
         role: "Filmes, movimento e conexão emocional",
         text:
-          "A produtora audiovisual do grupo. Criamos filmes conceito, produto, materiais virais e institucionais para dar movimento às histórias dos empreendimentos.",
-        tags: ["Filmes", "Produto", "Institucional"],
+          "A produtora audiovisual do grupo. De filmes conceito e de produto a materiais virais e institucionais — dando movimento às histórias e criando a conexão emocional entre o projeto e o seu público.",
+        tags: ["Filmes", "Viral", "Institucional"],
       },
     ] as InstGroupCompany[],
   },

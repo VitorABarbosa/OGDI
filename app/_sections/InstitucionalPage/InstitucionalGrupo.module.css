@@ -2,137 +2,441 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 18% 18%, rgba(95, 168, 60, .18), transparent 30%),
-    radial-gradient(circle at 84% 18%, rgba(31, 90, 99, .34), transparent 32%),
-    linear-gradient(135deg, #080c0d 0%, #11191a 52%, #060808 100%);
+    radial-gradient(circle at 50% -12%, rgba(95, 168, 60, .16), transparent 34%),
+    linear-gradient(180deg, #f6f4ee 0%, #ffffff 42%, #f4f6f3 100%);
+  /* easing mais pronunciado que o --ease-brand para o "pop" da expansão */
+  --ease-pop: cubic-bezier(.7, 0, .2, 1);
 }
 
 .section::before {
   content: "";
   position: absolute;
-  inset: -18%;
-  pointer-events: none;
-  opacity: .56;
-  background:
-    linear-gradient(115deg, transparent 0 23%, rgba(255, 255, 255, .055) 23.08% 23.18%, transparent 23.26% 100%),
-    linear-gradient(64deg, transparent 0 36%, rgba(95, 168, 60, .18) 36.08% 36.18%, transparent 36.28% 100%),
-    linear-gradient(144deg, transparent 0 58%, rgba(31, 90, 99, .24) 58.08% 58.18%, transparent 58.28% 100%);
-  transform: rotate(-7deg);
-}
-
-.section::after {
-  content: "";
-  position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: .22;
+  opacity: .52;
   background-image:
-    linear-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(circle at center, black, transparent 68%);
+    linear-gradient(rgba(8, 12, 13, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8, 12, 13, .035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, transparent, black 18%, black 78%, transparent);
 }
 
-.system {
-  position: relative;
-  isolation: isolate;
-}
-
-.system::before {
-  content: "";
-  position: absolute;
-  inset: 9% 7%;
-  z-index: -1;
-  border: 1px solid rgba(255, 255, 255, .12);
-  border-radius: 999px;
-  transform: rotate(-8deg);
-}
-
-.system::after {
-  content: "";
-  position: absolute;
-  inset: 18% 20%;
-  z-index: -1;
-  border: 1px solid rgba(95, 168, 60, .24);
-  border-radius: 999px;
-  transform: rotate(12deg);
-  box-shadow: 0 0 72px rgba(95, 168, 60, .12);
+/* ============================================================
+   Palco: 4 cards; hover em um colapsa os demais em réguas
+============================================================ */
+.stage {
+  display: flex;
+  gap: clamp(8px, .8vw, 12px);
+  width: 100%;
+  height: clamp(380px, 46vh, 520px);
 }
 
 .card {
   position: relative;
-  min-height: 318px;
-  border: 1px solid rgba(255, 255, 255, .13);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .035)),
-    rgba(8, 12, 13, .72);
-  backdrop-filter: blur(18px);
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: #121617;
+  color: #f2f1ed;
+  border: 1px solid rgba(8, 12, 13, .2);
+  isolation: isolate;
   transition:
-    transform .55s var(--ease-brand),
-    border-color .55s var(--ease-brand),
-    background-color .55s var(--ease-brand),
-    box-shadow .55s var(--ease-brand);
+    flex .85s var(--ease-pop),
+    border-color .6s var(--ease-brand),
+    background .6s var(--ease-brand);
 }
 
-.card::before {
+/* sheen: varredura de brilho atravessa o card quando ele expande */
+.card::after {
   content: "";
   position: absolute;
-  left: 28px;
-  right: 28px;
-  top: -1px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(95, 168, 60, .8), transparent);
-  opacity: .34;
-  transition: opacity .45s var(--ease-brand);
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 32%,
+    rgba(255, 255, 255, .05) 45%,
+    rgba(95, 168, 60, .09) 52%,
+    transparent 66%
+  );
+  transform: translateX(-130%);
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  border-color: rgba(95, 168, 60, .44);
-  background:
-    linear-gradient(180deg, rgba(95, 168, 60, .13), rgba(255, 255, 255, .045)),
-    rgba(8, 12, 13, .82);
-  box-shadow: 0 30px 86px rgba(0, 0, 0, .34);
+.stage:hover .card:not(:hover),
+.stage:focus-within .card:not(:focus-within) {
+  flex: 0 0 clamp(58px, 5.4vw, 84px);
 }
 
-.card:hover::before {
+.stage:hover .card:hover,
+.stage:focus-within .card:focus-within {
+  flex: 5 1 0;
+  border-color: rgba(95, 168, 60, .5);
+  background: #14191a;
+}
+
+.stage:hover .card:hover::after,
+.stage:focus-within .card:focus-within::after {
+  transform: translateX(130%);
+  transition: transform 1.15s var(--ease-pop) .15s;
+}
+
+/* ============================================================
+   Wordmarks provisórios (até as logos reais chegarem)
+============================================================ */
+.wm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.wmSub {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  margin-right: -.4em;
+  opacity: .55;
+}
+
+.wmOgdi {
+  font-weight: 700;
+  font-size: clamp(24px, 1.8vw, 32px);
+  letter-spacing: .3em;
+  margin-right: -.3em;
+  line-height: 1;
+}
+
+.wmNid {
+  font-family: var(--font-news);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(34px, 2.6vw, 48px);
+  letter-spacing: -.02em;
+  line-height: 1;
+}
+
+.wmFlying {
+  font-weight: 300;
+  font-size: clamp(22px, 1.7vw, 30px);
+  letter-spacing: .42em;
+  margin-right: -.42em;
+  line-height: 1;
+}
+
+.wmRinno {
+  font-weight: 700;
+  font-size: clamp(26px, 2vw, 36px);
+  letter-spacing: .06em;
+  line-height: 1;
+  transform: scaleY(1.15);
+}
+
+/* ============================================================
+   Estado idle: wordmark + role centralizados
+============================================================ */
+.idle {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px;
+  transition: opacity .4s var(--ease-brand), transform .45s var(--ease-brand);
+}
+
+.idleRole {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: rgba(242, 241, 237, .42);
+  text-align: center;
+}
+
+.stage:hover .idle,
+.stage:focus-within .idle {
+  opacity: 0;
+  transform: scale(.94);
+}
+
+/* ============================================================
+   Estado régua: número no topo, nome na vertical na base
+============================================================ */
+.mini {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(18px, 2vw, 28px) 0;
+  opacity: 0;
+  transition: opacity .4s var(--ease-brand);
+}
+
+.miniNum {
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: rgba(242, 241, 237, .35);
+}
+
+.miniLabel {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: .32em;
+  color: rgba(242, 241, 237, .58);
+}
+
+.stage:hover .card:not(:hover) .mini,
+.stage:focus-within .card:not(:focus-within) .mini {
   opacity: 1;
+  transition-delay: .22s;
 }
 
-.mark {
-  display: grid;
-  place-items: center;
-  width: clamp(72px, 8vw, 104px);
-  height: clamp(72px, 8vw, 104px);
-  border: 1px solid rgba(255, 255, 255, .16);
+/* ============================================================
+   Estado expandido: wordmark no topo, infos na base em cascata
+============================================================ */
+.detail {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(26px, 3.2vw, 52px);
+  /* trava a largura interna para o texto não refluir durante a expansão */
+  min-width: min(720px, 82vw);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s var(--ease-brand);
+}
+
+.detailWm {
+  position: absolute;
+  top: clamp(26px, 3.2vw, 52px);
+  left: clamp(26px, 3.2vw, 52px);
+}
+
+.detailWm .wm {
+  align-items: flex-start;
+}
+
+.stage:hover .card:hover .detail,
+.stage:focus-within .card:focus-within .detail {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: .18s;
+}
+
+.info > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .45s var(--ease-brand), transform .5s var(--ease-brand);
+}
+
+.stage:hover .card:hover .info > *,
+.stage:focus-within .card:focus-within .info > * {
+  opacity: 1;
+  transform: none;
+}
+
+.stage:hover .card:hover .info > :nth-child(1),
+.stage:focus-within .card:focus-within .info > :nth-child(1) { transition-delay: .26s; }
+.stage:hover .card:hover .info > :nth-child(2),
+.stage:focus-within .card:focus-within .info > :nth-child(2) { transition-delay: .34s; }
+.stage:hover .card:hover .info > :nth-child(3),
+.stage:focus-within .card:focus-within .info > :nth-child(3) { transition-delay: .42s; }
+.stage:hover .card:hover .info > :nth-child(4),
+.stage:focus-within .card:focus-within .info > :nth-child(4) { transition-delay: .5s; }
+
+.infoRole {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: #5fa83c;
+}
+
+.infoName {
+  margin-top: 12px;
+  max-width: 18ch;
+  font-family: var(--font-news);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3vw, 2.9rem);
+  line-height: 1.02;
+  letter-spacing: -.02em;
+  color: #fff;
+}
+
+.infoText {
+  margin-top: 14px;
+  max-width: 54ch;
+  font-size: 14px;
+  line-height: 1.66;
+  color: rgba(242, 241, 237, .66);
+}
+
+.infoTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+  list-style: none;
+}
+
+.infoTags li {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  border: 1px solid rgba(242, 241, 237, .16);
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(95, 168, 60, .2), rgba(255, 255, 255, .055) 58%, transparent);
-  box-shadow: inset 0 0 24px rgba(255, 255, 255, .045);
+  padding: 6px 12px;
+  color: rgba(242, 241, 237, .6);
 }
 
-.card:hover .mark {
-  border-color: rgba(95, 168, 60, .55);
-  box-shadow: 0 0 42px rgba(95, 168, 60, .2), inset 0 0 26px rgba(95, 168, 60, .08);
+/* ============================================================
+   Assinatura line-art: desenha quando o card expande
+============================================================ */
+.motifSvg {
+  position: absolute;
+  right: clamp(-40px, -2vw, -16px);
+  bottom: 34%;
+  z-index: 1;
+  width: min(58%, 460px);
+  height: auto;
+  opacity: 0;
+  transition: opacity .6s var(--ease-brand);
 }
 
-@media (max-width: 760px) {
-  .system::before,
-  .system::after {
+.motifSvg :global(line),
+.motifSvg :global(path),
+.motifSvg :global(rect),
+.motifSvg :global(circle),
+.motifSvg :global(polyline) {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.3s var(--ease-pop);
+}
+
+.stage:hover .card:hover .motifSvg,
+.stage:focus-within .card:focus-within .motifSvg {
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.stage:hover .card:hover .motifSvg :global(line),
+.stage:hover .card:hover .motifSvg :global(path),
+.stage:hover .card:hover .motifSvg :global(rect),
+.stage:hover .card:hover .motifSvg :global(circle),
+.stage:hover .card:hover .motifSvg :global(polyline),
+.stage:focus-within .card:focus-within .motifSvg :global(line),
+.stage:focus-within .card:focus-within .motifSvg :global(path),
+.stage:focus-within .card:focus-within .motifSvg :global(rect),
+.stage:focus-within .card:focus-within .motifSvg :global(circle),
+.stage:focus-within .card:focus-within .motifSvg :global(polyline) {
+  stroke-dashoffset: 0;
+}
+
+/* escalona o desenho dos traços para a assinatura "nascer" em partes */
+.motifSvg :global(*:nth-child(2)) { transition-delay: .3s; }
+.motifSvg :global(*:nth-child(3)) { transition-delay: .4s; }
+.motifSvg :global(*:nth-child(4)) { transition-delay: .5s; }
+.motifSvg :global(*:nth-child(5)) { transition-delay: .62s; }
+.motifSvg :global(*:nth-child(6)) { transition-delay: .74s; }
+.motifSvg :global(*:nth-child(7)) { transition-delay: .86s; }
+.motifSvg :global(*:nth-child(8)) { transition-delay: .98s; }
+
+/* ============================================================
+   Mobile: cards empilhados, todos expandidos (sem acordeão)
+============================================================ */
+@media (max-width: 900px) {
+  .stage {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .card,
+  .stage:hover .card:not(:hover),
+  .stage:focus-within .card:not(:focus-within),
+  .stage:hover .card:hover,
+  .stage:focus-within .card:focus-within {
+    flex: 1 1 auto;
+    min-height: 440px;
+  }
+
+  .idle,
+  .mini {
     display: none;
   }
 
-  .card {
-    min-height: auto;
+  .detail {
+    position: relative;
+    inset: auto;
+    min-width: 0;
+    opacity: 1;
+    pointer-events: auto;
+    padding-top: clamp(96px, 22vw, 120px);
+  }
+
+  .detailWm {
+    top: clamp(22px, 5vw, 32px);
+    left: clamp(22px, 5vw, 32px);
+  }
+
+  .info > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  .motifSvg {
+    opacity: .85;
+    right: -24px;
+    bottom: auto;
+    top: 12px;
+    width: 52%;
+  }
+
+  .motifSvg :global(line),
+  .motifSvg :global(path),
+  .motifSvg :global(rect),
+  .motifSvg :global(circle),
+  .motifSvg :global(polyline) {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .card,
-  .card::before {
+  .card::after,
+  .idle,
+  .mini,
+  .detail,
+  .info > *,
+  .motifSvg,
+  .motifSvg :global(line),
+  .motifSvg :global(path),
+  .motifSvg :global(rect),
+  .motifSvg :global(circle),
+  .motifSvg :global(polyline) {
     transition: none;
   }
 
-  .card:hover {
-    transform: none;
+  .motifSvg :global(line),
+  .motifSvg :global(path),
+  .motifSvg :global(rect),
+  .motifSvg :global(circle),
+  .motifSvg :global(polyline) {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
   }
 }
