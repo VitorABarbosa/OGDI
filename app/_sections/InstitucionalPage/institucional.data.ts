@@ -12,6 +12,8 @@ export type InstGroupCompany = {
   tags: string[];
   /** Imagem de fundo revelada quando o card expande (substitui o line-art). */
   bg?: string;
+  /** Vídeo de fundo (mp4) — tem prioridade sobre bg; toca só com o card expandido. */
+  bgVideo?: string;
   /** Site externo da empresa — torna o card inteiro clicável. */
   href?: string;
   /** Cor da marca — aplicada no título numerado, número da régua e link. */
@@ -85,6 +87,7 @@ export const institucional = {
           "A produtora audiovisual do grupo. De filmes conceito e de produto a materiais virais e institucionais — dando movimento às histórias e criando a conexão emocional entre o projeto e o seu público.",
         tags: ["Filmes", "Viral", "Institucional"],
         accent: "#4D7CC9", // azul escuro
+        bgVideo: "/Nosso_Grupo/RINNO/Talon_Atlantis_Filme.mp4",
       },
     ] as InstGroupCompany[],
   },

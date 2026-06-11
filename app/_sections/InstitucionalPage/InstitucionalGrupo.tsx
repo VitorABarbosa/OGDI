@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Kicker } from "@/components/ui/Kicker";
 import { cn } from "@/lib/cn";
 import { institucional } from "./institucional.data";
+import { CardVideo } from "./InstitucionalGrupoVideo";
 import styles from "./InstitucionalGrupo.module.css";
 
 // Logos brancas (com pontos de cor) sobre os cards escuros.
@@ -106,7 +107,11 @@ export function InstitucionalGrupo() {
             const cardStyle = { "--accent": company.accent } as React.CSSProperties;
             const content = (
               <>
-              {company.bg ? (
+              {company.bgVideo ? (
+                <div className={styles.bg} aria-hidden>
+                  <CardVideo src={company.bgVideo} className={styles.bgImg} />
+                </div>
+              ) : company.bg ? (
                 <div className={styles.bg} aria-hidden>
                   <Image
                     src={company.bg}
@@ -165,11 +170,12 @@ export function InstitucionalGrupo() {
                 aria-label={`${company.name} — visitar site`}
                 className={cardClass}
                 style={cardStyle}
+                data-card
               >
                 {content}
               </a>
             ) : (
-              <article key={company.id} tabIndex={0} className={cardClass} style={cardStyle}>
+              <article key={company.id} tabIndex={0} className={cardClass} style={cardStyle} data-card>
                 {content}
               </article>
             );
