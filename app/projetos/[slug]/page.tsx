@@ -45,12 +45,14 @@ export default async function Page({
     <main>
       <RevealController />
       <EmpHero p={p} />
-      <EmpInfo p={p} />
-      <EmpLocationStory p={p} />
       <EmpExperienceFlow>
-        <EmpProductStory p={p} />
-        <EmpGaleria p={p} />
-        <EmpAtuacao p={p} />
+        <EmpInfo p={p} />
+        <EmpLocationStory p={p} />
+        <div data-flow-base>
+          <EmpProductStory p={p} />
+          <EmpGaleria p={p} />
+          <EmpAtuacao p={p} />
+        </div>
       </EmpExperienceFlow>
       <EmpNeighborhoodMap p={p} />
       <EmpProximos others={others} />

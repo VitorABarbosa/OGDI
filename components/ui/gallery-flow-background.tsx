@@ -8,6 +8,12 @@ type Point = {
 };
 
 type FlowSegment = [Point, Point, Point, Point];
+type FlowBounds = {
+  top: number;
+  height: number;
+};
+
+const SHOW_SEGMENT_LABELS = false;
 
 const pathControl = {
   // Entry point for the extra lead-in segment. Values are percentages of the full canvas.
@@ -99,7 +105,8 @@ function strokeFlowPath(
       if (segmentIndex > 0 && step === 0) continue;
 
       const localProgress = step / stepsPerSegment;
-      const pathProgress = (segmentIndex + localProgress) / segments.length;
+      const pathProgress =
+        segmentIndex <= 1 ? 0 : (segmentIndex - 2 + localProgress) / (segments.length - 2);
       const basePoint = cubicPoint(segment[0], segment[1], segment[2], segment[3], localProgress);
       const tangent = cubicTangent(segment[0], segment[1], segment[2], segment[3], localProgress);
       const point = applyMouseRipple(applyTravelingWaves(basePoint, tangent, pathProgress, time), mouse, time);
@@ -113,7 +120,40 @@ function strokeFlowPath(
   });
 }
 
-function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, time: number, mouse: Point) {
+function drawSegmentLabels(ctx: CanvasRenderingContext2D, segments: FlowSegment[]) {
+  if (!SHOW_SEGMENT_LABELS) return;
+
+  ctx.save();
+  ctx.font = "600 12px Arial, sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+
+  segments.forEach((segment, index) => {
+    const labelPoint = cubicPoint(segment[0], segment[1], segment[2], segment[3], 0.5);
+
+    ctx.beginPath();
+    ctx.arc(labelPoint.x, labelPoint.y, 12, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(247,246,244,0.86)";
+    ctx.fill();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "rgba(31,90,99,0.45)";
+    ctx.stroke();
+
+    ctx.fillStyle = "rgba(6,43,60,0.88)";
+    ctx.fillText(String(index + 1), labelPoint.x, labelPoint.y + 0.5);
+  });
+
+  ctx.restore();
+}
+
+function drawPath(
+  ctx: CanvasRenderingContext2D,
+  width: number,
+  height: number,
+  time: number,
+  mouse: Point,
+  bounds: FlowBounds,
+) {
   const teal = resolveCssColor("--color-teal", "#1F5A63");
   const green = resolveCssColor("--color-green", "#5FA83C");
   const manifesto = resolveCssColor("--color-manifesto", "#062B3C");
@@ -122,52 +162,78 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
   const drift = Math.sin(time * 0.0014) * 12;
   const pulse = (Math.sin(time * 0.002) + 1) / 2;
 
+  const flowTop = bounds.top;
+  const flowHeight = bounds.height;
   const startX = width * pathControl.entryPoint.x;
-  const startY = height * pathControl.entryPoint.y;
+  const startY = flowTop + flowHeight * pathControl.entryPoint.y;
   const originalStartX = width * pathControl.originalPathStart.x;
-  const originalStartY = height * pathControl.originalPathStart.y;
+  const originalStartY = flowTop + flowHeight * pathControl.originalPathStart.y;
+  const preLeadStartX = width * 0.22;
+  const preLeadStartY = height * 0.02;
+  const leadStartX = width * 0.86;
+  const leadStartY = height * 0.1;
   const endX = width * 1.05;
-  const endY = height * 0.94;
+  const endY = flowTop + flowHeight * 0.94;
   const segments: FlowSegment[] = [
+    // Trecho 1 - novo ponto inicial, subindo ate o final da secao O Empreendimento.
+    [
+      { x: preLeadStartX, y: preLeadStartY },
+      { x: width * 0.34, y: height * 0.08 + drift * 0.08 },
+      { x: width * 0.62, y: height * 0.08 + drift * 0.1 },
+      { x: leadStartX, y: leadStartY },
+    ],
+    // Trecho 2 - trecho de conexao ja aprovado para subir ate o fluxo original.
+    [
+      { x: leadStartX, y: leadStartY },
+      { x: width * 0.78, y: height * 0.18 + drift * 0.12 },
+      { x: width * 0.68, y: flowTop - flowHeight * 0.04 + drift * 0.16 },
+      { x: startX, y: startY },
+    ],
+    // Trecho 3 - inicio original aprovado.
     [
       { x: startX, y: startY },
-      { x: width * 0.42, y: height * 0.02 + drift * 0.25 },
-      { x: width * 0.12, y: height * 0.03 + drift * 0.2 },
+      { x: width * 0.42, y: flowTop + flowHeight * 0.02 + drift * 0.25 },
+      { x: width * 0.12, y: flowTop + flowHeight * 0.03 + drift * 0.2 },
       { x: originalStartX, y: originalStartY },
     ],
+    // Trecho 4 - descida inicial original.
     [
       { x: originalStartX, y: originalStartY },
-      { x: width * 0.05, y: height * 0.28 + drift },
-      { x: width * 0.27 + influenceX, y: height * 0.22 + influenceY },
-      { x: width * 0.52, y: height * 0.3 },
+      { x: width * 0.05, y: flowTop + flowHeight * 0.28 + drift },
+      { x: width * 0.27 + influenceX, y: flowTop + flowHeight * 0.22 + influenceY },
+      { x: width * 0.52, y: flowTop + flowHeight * 0.3 },
     ],
+    // Trecho 5 - passagem para a direita.
     [
-      { x: width * 0.52, y: height * 0.3 },
-      { x: width * 0.78, y: height * 0.38 - influenceY },
-      { x: width * 1.06, y: height * 0.3 + drift },
-      { x: width * 1.01, y: height * 0.48 },
+      { x: width * 0.52, y: flowTop + flowHeight * 0.3 },
+      { x: width * 0.78, y: flowTop + flowHeight * 0.38 - influenceY },
+      { x: width * 1.06, y: flowTop + flowHeight * 0.3 + drift },
+      { x: width * 1.01, y: flowTop + flowHeight * 0.48 },
     ],
+    // Trecho 6 - retorno para o centro.
     [
-      { x: width * 1.01, y: height * 0.48 },
-      { x: width * 0.96, y: height * 0.68 },
-      { x: width * 0.72 + influenceX, y: height * 0.58 },
-      { x: width * 0.51, y: height * 0.64 },
+      { x: width * 1.01, y: flowTop + flowHeight * 0.48 },
+      { x: width * 0.96, y: flowTop + flowHeight * 0.68 },
+      { x: width * 0.72 + influenceX, y: flowTop + flowHeight * 0.58 },
+      { x: width * 0.51, y: flowTop + flowHeight * 0.64 },
     ],
+    // Trecho 7 - curva para a esquerda.
     [
-      { x: width * 0.51, y: height * 0.64 },
-      { x: width * 0.32, y: height * 0.7 },
-      { x: width * 0.14 - influenceX, y: height * 0.72 },
-      { x: width * 0.19, y: height * 0.82 },
+      { x: width * 0.51, y: flowTop + flowHeight * 0.64 },
+      { x: width * 0.32, y: flowTop + flowHeight * 0.7 },
+      { x: width * 0.14 - influenceX, y: flowTop + flowHeight * 0.72 },
+      { x: width * 0.19, y: flowTop + flowHeight * 0.82 },
     ],
+    // Trecho 8 - fechamento inferior.
     [
-      { x: width * 0.19, y: height * 0.82 },
-      { x: width * 0.25, y: height * 0.94 },
-      { x: width * 0.66, y: height * 0.84 - drift },
+      { x: width * 0.19, y: flowTop + flowHeight * 0.82 },
+      { x: width * 0.25, y: flowTop + flowHeight * 0.94 },
+      { x: width * 0.66, y: flowTop + flowHeight * 0.84 - drift },
       { x: endX, y: endY },
     ],
   ];
 
-  const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
+  const gradient = ctx.createLinearGradient(preLeadStartX, preLeadStartY, endX, endY);
   gradient.addColorStop(0, `rgba(31, 90, 99, ${0.1 + pulse * 0.08})`);
   gradient.addColorStop(0.42, `rgba(95, 168, 60, ${0.18 + pulse * 0.08})`);
   gradient.addColorStop(1, `rgba(6, 43, 60, ${0.12 + pulse * 0.08})`);
@@ -207,6 +273,8 @@ function drawPath(ctx: CanvasRenderingContext2D, width: number, height: number, 
     ctx.globalAlpha = 0.2 + nodePulse * 0.18;
     ctx.fill();
   });
+
+  drawSegmentLabels(ctx, segments);
 
   ctx.globalAlpha = 1;
   ctx.strokeStyle = manifesto;
@@ -255,6 +323,17 @@ export function GalleryFlowBackground() {
     const animate = () => {
       const width = canvas.clientWidth;
       const height = canvas.clientHeight;
+      const parentRect = canvas.parentElement?.getBoundingClientRect();
+      const baseRect = canvas.parentElement
+        ?.querySelector<HTMLElement>("[data-flow-base]")
+        ?.getBoundingClientRect();
+      const bounds =
+        parentRect && baseRect
+          ? {
+              top: Math.max(0, baseRect.top - parentRect.top),
+              height: Math.max(1, baseRect.height),
+            }
+          : { top: 0, height };
       time += reduceMotion ? 0.25 : 1;
 
       mouseRef.current.x += (targetMouseRef.current.x - mouseRef.current.x) * 0.08;
@@ -263,7 +342,7 @@ export function GalleryFlowBackground() {
       ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = "rgba(247,246,244,0.92)";
       ctx.fillRect(0, 0, width, height);
-      drawPath(ctx, width, height, time, mouseRef.current);
+      drawPath(ctx, width, height, time, mouseRef.current, bounds);
 
       animationId = window.requestAnimationFrame(animate);
     };
