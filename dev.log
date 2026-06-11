@@ -1,0 +1,19 @@
+
+> ogdi@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use by process 87720, using available port 3001 instead.
+   ▲ Next.js 15.5.19
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.0.25:3001
+
+ ✓ Starting...
+ ✓ Ready in 1619ms
+ ○ Compiling /projetos/[slug] ...
+ ✓ Compiled /projetos/[slug] in 1551ms (1572 modules)
+ GET /projetos/hits-cupece 200 in 2487ms
+ ✓ Compiled in 665ms (1572 modules)
+ ✓ Compiled in 260ms (691 modules)
+ ✓ Compiled in 175ms (691 modules)
+ ✓ Compiled in 162ms (691 modules)
+ ✓ Compiled in 230ms (691 modules)
