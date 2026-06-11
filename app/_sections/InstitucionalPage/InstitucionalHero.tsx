@@ -1,15 +1,17 @@
 import Link from "next/link";
 import { Kicker } from "@/components/ui/Kicker";
 import { institucional } from "./institucional.data";
+import { InstitucionalHeroWaves } from "./InstitucionalHeroWaves";
 import styles from "./InstitucionalHero.module.css";
 
 export function InstitucionalHero() {
   const { hero } = institucional;
   return (
     <section className="relative flex min-h-svh items-center overflow-hidden bg-dark">
+      <InstitucionalHeroWaves />
       <div
         aria-hidden
-        className="absolute inset-0 z-0 opacity-[.62] [background:radial-gradient(92%_72%_at_84%_-8%,rgba(31,90,99,.5),transparent_56%),radial-gradient(82%_70%_at_6%_110%,rgba(95,168,60,.17),transparent_60%)]"
+        className="absolute inset-0 z-[1] opacity-[.62] [background:radial-gradient(92%_72%_at_84%_-8%,rgba(31,90,99,.46),transparent_56%),radial-gradient(82%_70%_at_6%_110%,rgba(95,168,60,.17),transparent_60%)]"
       />
       <div className="wrap relative z-[2] w-full">
         <div className="pt-[clamp(130px,18vh,200px)] pb-[clamp(96px,14vh,160px)]">
