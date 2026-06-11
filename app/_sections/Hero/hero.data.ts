@@ -8,10 +8,10 @@ export type HeroSlide = {
 };
 
 export const heroSlides: HeroSlide[] = [
-  // OFF por hora (sem imagem/conteúdo) — reativar quando tiver foto:
-  // { kick: "Entregue · Empreendimento", name: "Hits Santa Catarina",
-  //   meta: ["Entregue", "Residencial", "@Localização a confirmar"],
-  //   sign: "Atuação OGDI — estruturação e desenvolvimento, da concepção ao lançamento.", tone: "t1" },
+  { kick: "Entregue · Empreendimento", name: "Hits Santa Catarina",
+    meta: ["Entregue", "Residencial", "@Localização a confirmar"],
+    sign: "Atuação OGDI — estruturação e desenvolvimento, da concepção ao lançamento.", tone: "t1",
+    image: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.png" },
   { kick: "Em obra · Empreendimento", name: "Hits Cupecê",
     meta: ["Em obra", "Residencial", "São Paulo · SP"],
     sign: "Atuação OGDI — leitura da oportunidade, produto e estruturação da operação.", tone: "t2",
