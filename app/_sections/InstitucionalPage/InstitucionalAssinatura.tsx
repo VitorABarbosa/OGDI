@@ -1,20 +1,13 @@
-import Image from "next/image";
 import { Kicker } from "@/components/ui/Kicker";
 import { Button } from "@/components/ui/Button";
 import { institucional } from "./institucional.data";
+import { AssinaturaWatermark } from "./AssinaturaWatermark";
 
 export function InstitucionalAssinatura() {
   const { assinatura } = institucional;
   return (
     <section className="relative overflow-hidden bg-dark py-[clamp(96px,13vw,184px)] text-white">
-      <Image
-        src="/assets/logos/og-logo-light.png"
-        alt=""
-        aria-hidden
-        width={1480}
-        height={1480}
-        className="pointer-events-none absolute left-1/2 top-[47%] z-0 h-auto w-[min(128vw,1480px)] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[.055]"
-      />
+      <AssinaturaWatermark />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-[1] [background:radial-gradient(70%_60%_at_50%_50%,transparent_40%,rgba(18,22,23,.6)_100%)]"
