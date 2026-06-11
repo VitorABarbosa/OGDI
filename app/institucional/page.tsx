@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { RevealController } from "@/components/Reveal/RevealController";
 import { InstitucionalHero } from "@/app/_sections/InstitucionalPage/InstitucionalHero";
 import { InstitucionalSobre } from "@/app/_sections/InstitucionalPage/InstitucionalSobre";
+import { InstitucionalGrupo } from "@/app/_sections/InstitucionalPage/InstitucionalGrupo";
 import { InstitucionalManifesto } from "@/app/_sections/InstitucionalPage/InstitucionalManifesto";
 import { InstitucionalOrigem } from "@/app/_sections/InstitucionalPage/InstitucionalOrigem";
 import { InstitucionalLideranca } from "@/app/_sections/InstitucionalPage/InstitucionalLideranca";
@@ -19,6 +20,7 @@ export default function InstitucionalPage() {
       <RevealController />
       <InstitucionalHero />
       <InstitucionalSobre />
+      <InstitucionalGrupo />
       <InstitucionalManifesto />
       <InstitucionalOrigem />
       <InstitucionalLideranca />

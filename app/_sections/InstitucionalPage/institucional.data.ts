@@ -3,6 +3,14 @@ export type InstFact = { v: string; k: string };
 export type InstStratum = { n: string; name: string; desc: string; bed?: boolean };
 export type InstLeader = { name: string; role: string; bio: string };
 export type InstWordSeg = { text: string; em?: boolean };
+export type InstGroupCompany = {
+  id: string;
+  name: string;
+  label: string;
+  role: string;
+  text: string;
+  tags: string[];
+};
 
 export const institucional = {
   hero: {
@@ -21,6 +29,50 @@ export const institucional = {
       { v: "Clientes atendidos", k: "Operações conduzidas com construtoras, incorporadoras e investidores." },
       { v: "Projetos realizados", k: "Como sócia da operação e como consultoria contratada." },
     ] as InstFact[],
+  },
+  grupo: {
+    kicker: "Nosso Grupo",
+    title: "Um ecossistema para fazer o empreendimento nascer antes da obra.",
+    intro:
+      "Estratégia, arquitetura, visualização e audiovisual operam como forças complementares. Cada empresa aprofunda uma etapa da jornada: estruturar, desenhar, antecipar e comunicar.",
+    companies: [
+      {
+        id: "ogdi",
+        name: "Open Group Desenvolvimento Imobiliário",
+        label: "OGDI",
+        role: "Estratégia e estruturação",
+        text:
+          "O ponto de partida estratégico. Atuamos com inteligência de mercado, desenvolvimento de produtos e estruturação completa de novos lançamentos desde a concepção.",
+        tags: ["Mercado", "Produto", "Lançamento"],
+      },
+      {
+        id: "nid",
+        name: "NID Studio",
+        label: "NID",
+        role: "Arquitetura, interiores e desejo",
+        text:
+          "Onde a inteligência arquitetônica ganha forma e emoção. Projetamos interiores, fachadas e PDVs para criar aconchego, segurança e personalidade.",
+        tags: ["Interiores", "Fachadas", "PDV"],
+      },
+      {
+        id: "flying",
+        name: "Flying Studio",
+        label: "Flying",
+        role: "Futuros visuais e experiências imersivas",
+        text:
+          "A máquina de antecipar futuros. Apps, D.Brave, salas imersivas e soluções visuais transformam tijolo e cimento em desejo antes da primeira pedra.",
+        tags: ["Apps", "D.Brave", "Imersão"],
+      },
+      {
+        id: "rinno",
+        name: "Rinno Films",
+        label: "Rinno",
+        role: "Filmes, movimento e conexão emocional",
+        text:
+          "A produtora audiovisual do grupo. Criamos filmes conceito, produto, materiais virais e institucionais para dar movimento às histórias dos empreendimentos.",
+        tags: ["Filmes", "Produto", "Institucional"],
+      },
+    ] as InstGroupCompany[],
   },
   manifesto: {
     eyebrow: "Nosso manifesto",
