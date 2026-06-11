@@ -179,7 +179,7 @@ function drawPath(
     [
       { x: preLeadStartX, y: preLeadStartY },
       { x: width * 0.34, y: height * 0.04 + drift * 0.08 },
-      { x: width * 0.7, y: height * 0.075 + drift * 0.1 },
+      { x: width * 0.5, y: height * 0.05 + drift * 0.1 },
       { x: leadStartX, y: leadStartY },
     ],
     // Trecho 2 - trecho de conexao ja aprovado para subir ate o fluxo original.
