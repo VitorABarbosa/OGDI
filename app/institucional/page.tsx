@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RevealController } from "@/components/Reveal/RevealController";
+import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 import { InstitucionalHero } from "@/app/_sections/InstitucionalPage/InstitucionalHero";
 import { InstitucionalSobre } from "@/app/_sections/InstitucionalPage/InstitucionalSobre";
 import { InstitucionalGrupo } from "@/app/_sections/InstitucionalPage/InstitucionalGrupo";
@@ -22,8 +23,14 @@ export default function InstitucionalPage() {
       <InstitucionalSobre />
       <InstitucionalManifesto />
       <InstitucionalOrigem />
-      <InstitucionalLideranca />
-      <InstitucionalGrupo />
+      {/* Linhas fluidas (igual à página de projeto) de Quem conduz ao fim do Nosso Grupo */}
+      <div className="relative overflow-hidden bg-bg-soft">
+        <GalleryFlowBackground />
+        <div className="relative z-[2]">
+          <InstitucionalLideranca />
+          <InstitucionalGrupo />
+        </div>
+      </div>
       <InstitucionalAssinatura />
     </main>
   );

@@ -1,24 +1,10 @@
+/* Fundo transparente: as linhas do GalleryFlowBackground (aplicado na
+   página) atravessam a seção, como na página individual de projeto. */
 .section {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 50% -12%, rgba(95, 168, 60, .16), transparent 34%),
-    linear-gradient(180deg, #f6f4ee 0%, #ffffff 42%, #f4f6f3 100%);
   /* easing mais pronunciado que o --ease-brand para o "pop" da expansão */
   --ease-pop: cubic-bezier(.7, 0, .2, 1);
-}
-
-.section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: .52;
-  background-image:
-    linear-gradient(rgba(8, 12, 13, .05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(8, 12, 13, .035) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(180deg, transparent, black 18%, black 78%, transparent);
 }
 
 /* ============================================================

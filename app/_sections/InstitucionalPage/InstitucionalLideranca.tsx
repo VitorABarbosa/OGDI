@@ -8,7 +8,7 @@ const tones = ["t1", "t2", "t3"] as const;
 export function InstitucionalLideranca() {
   const { lideranca } = institucional;
   return (
-    <section className="bg-bg-soft py-section text-ink">
+    <section className="py-section text-ink">
       <div className="wrap">
         <div className="reveal mb-[clamp(40px,5vw,68px)] max-w-[660px]">
           <Kicker>{lideranca.kicker}</Kicker>
