@@ -168,8 +168,8 @@ function drawPath(
   const startY = flowTop + flowHeight * pathControl.entryPoint.y;
   const originalStartX = width * pathControl.originalPathStart.x;
   const originalStartY = flowTop + flowHeight * pathControl.originalPathStart.y;
-  const preLeadStartX = width * 0.22;
-  const preLeadStartY = height * 0.02;
+  const preLeadStartX = width * 0.2;
+  const preLeadStartY = height * -0.05;
   const leadStartX = width * 0.86;
   const leadStartY = height * 0.1;
   const endX = width * 1.05;
@@ -178,15 +178,15 @@ function drawPath(
     // Trecho 1 - novo ponto inicial, subindo ate o final da secao O Empreendimento.
     [
       { x: preLeadStartX, y: preLeadStartY },
-      { x: width * 0.34, y: height * 0.08 + drift * 0.08 },
-      { x: width * 0.62, y: height * 0.08 + drift * 0.1 },
+      { x: width * 0.34, y: height * 0.04 + drift * 0.08 },
+      { x: width * 0.7, y: height * 0.075 + drift * 0.1 },
       { x: leadStartX, y: leadStartY },
     ],
     // Trecho 2 - trecho de conexao ja aprovado para subir ate o fluxo original.
     [
       { x: leadStartX, y: leadStartY },
-      { x: width * 0.78, y: height * 0.18 + drift * 0.12 },
-      { x: width * 0.68, y: flowTop - flowHeight * 0.04 + drift * 0.16 },
+      { x: width * 1.02, y: height * 0.125 + drift * 0.12 },
+      { x: width * 0.84, y: flowTop - flowHeight * 0.055 + drift * 0.16 },
       { x: startX, y: startY },
     ],
     // Trecho 3 - inicio original aprovado.
