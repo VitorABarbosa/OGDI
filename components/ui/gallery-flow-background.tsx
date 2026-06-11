@@ -98,7 +98,7 @@ function strokeFlowPath(
   indexOffset = 0,
   totalSegments = segments.length,
 ) {
-  const stepsPerSegment = 252;
+  const stepsPerSegment = 128;
 
   ctx.beginPath();
 
@@ -250,15 +250,24 @@ function drawPath(
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
 
+  // Caminho construído UMA vez e traçado em 3 passes — o halo usa traços
+  // largos translúcidos no lugar de shadowBlur (caríssimo em canvas grande).
   strokeFlowPath(ctx, drawnSegments, mouse, time, skipSegments, segments.length);
-  ctx.shadowBlur = 32;
-  ctx.shadowColor = green;
+  const baseWidth = Math.max(1.4, Math.min(width, height) * 0.003);
+
   ctx.strokeStyle = gradient;
-  ctx.lineWidth = Math.max(1.4, Math.min(width, height) * 0.003);
+  ctx.globalAlpha = 0.16;
+  ctx.lineWidth = baseWidth * 7;
   ctx.stroke();
 
-  ctx.shadowBlur = 0;
-  strokeFlowPath(ctx, drawnSegments, mouse, time, skipSegments, segments.length);
+  ctx.globalAlpha = 0.3;
+  ctx.lineWidth = baseWidth * 3.2;
+  ctx.stroke();
+
+  ctx.globalAlpha = 1;
+  ctx.lineWidth = baseWidth;
+  ctx.stroke();
+
   ctx.strokeStyle = `rgba(255,255,255,${0.45 + pulse * 0.1})`;
   ctx.lineWidth = Math.max(0.7, Math.min(width, height) * 0.0012);
   ctx.stroke();
@@ -314,6 +323,7 @@ export function GalleryFlowBackground({
 
     let animationId = 0;
     let time = 0;
+    let isVisible = true;
     const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
 
     const resize = () => {
@@ -321,7 +331,9 @@ export function GalleryFlowBackground({
       const rect = parent?.getBoundingClientRect();
       const width = Math.max(1, Math.floor(rect?.width ?? window.innerWidth));
       const height = Math.max(1, Math.floor(rect?.height ?? window.innerHeight));
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      // Cap em 1.5: a linha é suave/difusa, não precisa de retina cheio —
+      // em dpr 2 o buffer do canvas (que cobre várias seções) fica ~66MB.
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
 
       canvas.width = Math.floor(width * dpr);
       canvas.height = Math.floor(height * dpr);
@@ -338,6 +350,10 @@ export function GalleryFlowBackground({
     };
 
     const animate = () => {
+      if (!isVisible) {
+        animationId = 0;
+        return;
+      }
       const width = canvas.clientWidth;
       const height = canvas.clientHeight;
       const parentRect = canvas.parentElement?.getBoundingClientRect();
@@ -367,12 +383,33 @@ export function GalleryFlowBackground({
     resize();
     const observer = typeof ResizeObserver !== "undefined" ? new ResizeObserver(resize) : null;
     if (canvas.parentElement) observer?.observe(canvas.parentElement);
+
+    // Só anima com o canvas perto do viewport — fora dele o RAF para por
+    // completo (a margem pré-aquece a textura antes da seção entrar).
+    const intersection =
+      typeof IntersectionObserver !== "undefined"
+        ? new IntersectionObserver(
+            ([entry]) => {
+              const nowVisible = entry.isIntersecting;
+              if (nowVisible && !isVisible) {
+                isVisible = true;
+                if (!animationId) animationId = window.requestAnimationFrame(animate);
+              } else if (!nowVisible) {
+                isVisible = false;
+              }
+            },
+            { rootMargin: "600px 0px" },
+          )
+        : null;
+    if (canvas.parentElement) intersection?.observe(canvas.parentElement);
+
     window.addEventListener("pointermove", onPointerMove);
     window.addEventListener("resize", resize);
     animationId = window.requestAnimationFrame(animate);
 
     return () => {
       observer?.disconnect();
+      intersection?.disconnect();
       window.removeEventListener("pointermove", onPointerMove);
       window.removeEventListener("resize", resize);
       window.cancelAnimationFrame(animationId);
