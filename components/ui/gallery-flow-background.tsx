@@ -13,6 +13,12 @@ type FlowBounds = {
   height: number;
 };
 
+type FlowColors = {
+  teal: string;
+  green: string;
+  manifesto: string;
+};
+
 const SHOW_SEGMENT_LABELS = false;
 
 const pathControl = {
@@ -45,51 +51,6 @@ function cubicPoint(p0: Point, p1: Point, p2: Point, p3: Point, t: number): Poin
   };
 }
 
-function cubicTangent(p0: Point, p1: Point, p2: Point, p3: Point, t: number): Point {
-  const inverse = 1 - t;
-
-  return {
-    x:
-      3 * inverse * inverse * (p1.x - p0.x) +
-      6 * inverse * t * (p2.x - p1.x) +
-      3 * t * t * (p3.x - p2.x),
-    y:
-      3 * inverse * inverse * (p1.y - p0.y) +
-      6 * inverse * t * (p2.y - p1.y) +
-      3 * t * t * (p3.y - p2.y),
-  };
-}
-
-function applyMouseRipple(point: Point, mouse: Point, time: number): Point {
-  const dx = point.x - mouse.x;
-  const dy = point.y - mouse.y;
-  const distance = Math.sqrt(dx * dx + dy * dy);
-  const influenceRadius = 180;
-  const mouseInfluence = 70;
-  const influence = Math.max(0, 1 - distance / influenceRadius);
-  const mouseEffect = influence * mouseInfluence * Math.sin(time * 0.001 + point.x * 0.01);
-
-  return {
-    x: point.x,
-    y: point.y + mouseEffect,
-  };
-}
-
-function applyTravelingWaves(point: Point, tangent: Point, progress: number, time: number): Point {
-  const length = Math.max(1, Math.sqrt(tangent.x * tangent.x + tangent.y * tangent.y));
-  const normal = { x: -tangent.y / length, y: tangent.x / length };
-  const edgeFade = Math.sin(Math.PI * progress) ** 0.75;
-  const wave =
-    Math.sin(progress * Math.PI * 18 - time * 0.035) * 8 +
-    Math.sin(progress * Math.PI * 31 + time * 0.024) * 4.5 +
-    Math.sin(progress * Math.PI * 9 - time * 0.018) * 6;
-
-  return {
-    x: point.x + normal.x * wave * edgeFade,
-    y: point.y + normal.y * wave * edgeFade,
-  };
-}
-
 function strokeFlowPath(
   ctx: CanvasRenderingContext2D,
   segments: FlowSegment[],
@@ -102,25 +63,74 @@ function strokeFlowPath(
 
   ctx.beginPath();
 
-  segments.forEach((segment, segmentIndex) => {
+  // Loop em escalares (sem objetos intermediários) — as fórmulas são as
+  // mesmas de cubicPoint/cubicTangent/applyTravelingWaves/applyMouseRipple,
+  // inlined para eliminar ~5k alocações por frame.
+  for (let segmentIndex = 0; segmentIndex < segments.length; segmentIndex += 1) {
+    const [p0, p1, p2, p3] = segments[segmentIndex];
+
     for (let step = 0; step <= stepsPerSegment; step += 1) {
       if (segmentIndex > 0 && step === 0) continue;
 
-      const localProgress = step / stepsPerSegment;
+      const t = step / stepsPerSegment;
       const globalIndex = segmentIndex + indexOffset;
-      const pathProgress =
-        globalIndex <= 1 ? 0 : (globalIndex - 2 + localProgress) / (totalSegments - 2);
-      const basePoint = cubicPoint(segment[0], segment[1], segment[2], segment[3], localProgress);
-      const tangent = cubicTangent(segment[0], segment[1], segment[2], segment[3], localProgress);
-      const point = applyMouseRipple(applyTravelingWaves(basePoint, tangent, pathProgress, time), mouse, time);
+      const progress =
+        globalIndex <= 1 ? 0 : (globalIndex - 2 + t) / (totalSegments - 2);
+
+      // cubicPoint
+      const inverse = 1 - t;
+      const inverseSquared = inverse * inverse;
+      const tSquared = t * t;
+      const baseX =
+        inverseSquared * inverse * p0.x +
+        3 * inverseSquared * t * p1.x +
+        3 * inverse * tSquared * p2.x +
+        tSquared * t * p3.x;
+      const baseY =
+        inverseSquared * inverse * p0.y +
+        3 * inverseSquared * t * p1.y +
+        3 * inverse * tSquared * p2.y +
+        tSquared * t * p3.y;
+
+      // cubicTangent
+      const tangentX =
+        3 * inverse * inverse * (p1.x - p0.x) +
+        6 * inverse * t * (p2.x - p1.x) +
+        3 * t * t * (p3.x - p2.x);
+      const tangentY =
+        3 * inverse * inverse * (p1.y - p0.y) +
+        6 * inverse * t * (p2.y - p1.y) +
+        3 * t * t * (p3.y - p2.y);
+
+      // applyTravelingWaves
+      const length = Math.max(1, Math.sqrt(tangentX * tangentX + tangentY * tangentY));
+      const normalX = -tangentY / length;
+      const normalY = tangentX / length;
+      const edgeFade = Math.sin(Math.PI * progress) ** 0.75;
+      const wave =
+        Math.sin(progress * Math.PI * 18 - time * 0.035) * 8 +
+        Math.sin(progress * Math.PI * 31 + time * 0.024) * 4.5 +
+        Math.sin(progress * Math.PI * 9 - time * 0.018) * 6;
+      const wavedX = baseX + normalX * wave * edgeFade;
+      const wavedY = baseY + normalY * wave * edgeFade;
+
+      // applyMouseRipple
+      const dx = wavedX - mouse.x;
+      const dy = wavedY - mouse.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const influence = Math.max(0, 1 - distance / 180);
+      const mouseEffect = influence * 70 * Math.sin(time * 0.001 + wavedX * 0.01);
+
+      const x = wavedX;
+      const y = wavedY + mouseEffect;
 
       if (segmentIndex === 0 && step === 0) {
-        ctx.moveTo(point.x, point.y);
+        ctx.moveTo(x, y);
       } else {
-        ctx.lineTo(point.x, point.y);
+        ctx.lineTo(x, y);
       }
     }
-  });
+  }
 }
 
 function drawSegmentLabels(ctx: CanvasRenderingContext2D, segments: FlowSegment[]) {
@@ -158,10 +168,9 @@ function drawPath(
   bounds: FlowBounds,
   hiddenNodes: number[],
   skipSegments: number,
+  colors: FlowColors,
 ) {
-  const teal = resolveCssColor("--color-teal", "#1F5A63");
-  const green = resolveCssColor("--color-green", "#5FA83C");
-  const manifesto = resolveCssColor("--color-manifesto", "#062B3C");
+  const { teal, green, manifesto } = colors;
   const influenceX = ((mouse.x / Math.max(width, 1)) - 0.5) * 24;
   const influenceY = ((mouse.y / Math.max(height, 1)) - 0.5) * 18;
   const drift = Math.sin(time * 0.0014) * 12;
@@ -316,37 +325,78 @@ export function GalleryFlowBackground({
     if (process.env.NODE_ENV === "test") return;
 
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    const wrapper = canvas?.parentElement;
+    // O container das seções (onde a cena virtual é calculada).
+    const host = wrapper?.parentElement;
+    if (!canvas || !wrapper || !host) return;
 
-    const ctx = canvas.getContext("2d");
+    // alpha:false — o veu rgba(247,246,244,.92) sobre o bg-soft do container
+    // resulta exatamente em #F7F6F4, então o fill opaco é pixel-idêntico e o
+    // navegador pula a composição com transparência (e o clearRect).
+    const ctx = canvas.getContext("2d", { alpha: false });
     if (!ctx) return;
 
     let animationId = 0;
     let time = 0;
     let isVisible = true;
+    let dpr = 1;
+    // Dimensões da cena virtual (container inteiro) — o canvas sticky é só a
+    // janela do viewport sobre ela.
+    let sceneWidth = 1;
+    let sceneHeight = 1;
+    let windowHeight = 1;
     const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
 
-    const resize = () => {
-      const parent = canvas.parentElement;
-      const rect = parent?.getBoundingClientRect();
-      const width = Math.max(1, Math.floor(rect?.width ?? window.innerWidth));
-      const height = Math.max(1, Math.floor(rect?.height ?? window.innerHeight));
-      // Cap em 1.5: a linha é suave/difusa, não precisa de retina cheio —
-      // em dpr 2 o buffer do canvas (que cobre várias seções) fica ~66MB.
-      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    // Tokens estáticos do design system — resolvidos uma vez fora do loop
+    // (getComputedStyle por frame força recálculo de estilo).
+    const colors: FlowColors = {
+      teal: resolveCssColor("--color-teal", "#1F5A63"),
+      green: resolveCssColor("--color-green", "#5FA83C"),
+      manifesto: resolveCssColor("--color-manifesto", "#062B3C"),
+    };
 
-      canvas.width = Math.floor(width * dpr);
-      canvas.height = Math.floor(height * dpr);
-      canvas.style.width = `${width}px`;
-      canvas.style.height = `${height}px`;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      mouseRef.current = { x: width / 2, y: height / 2 };
-      targetMouseRef.current = { x: width / 2, y: height / 2 };
+    // bounds do [data-flow-base] são estáticos em relação ao host —
+    // recalculados só no resize, nunca por frame.
+    const bounds: FlowBounds = { top: 0, height: 1 };
+    const lastPointer = { x: Number.NaN, y: Number.NaN };
+
+    const measureBounds = () => {
+      const base = host.querySelector<HTMLElement>("[data-flow-base]");
+      const hostRect = host.getBoundingClientRect();
+      const baseRect = base?.getBoundingClientRect();
+      if (baseRect) {
+        bounds.top = Math.max(0, baseRect.top - hostRect.top);
+        bounds.height = Math.max(1, baseRect.height);
+      } else {
+        bounds.top = 0;
+        bounds.height = sceneHeight;
+      }
+    };
+
+    const resize = () => {
+      const rect = host.getBoundingClientRect();
+      sceneWidth = Math.max(1, Math.floor(rect.width));
+      sceneHeight = Math.max(1, Math.floor(rect.height));
+      // O buffer cobre apenas a janela visível (viewport), não o container
+      // inteiro — rasterizar o container todo por frame era o custo dominante.
+      windowHeight = Math.min(sceneHeight, Math.ceil(window.innerHeight));
+      // Cap em 1.5: a linha é suave/difusa, não precisa de retina cheio.
+      dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+
+      canvas.width = Math.floor(sceneWidth * dpr);
+      canvas.height = Math.floor(windowHeight * dpr);
+      canvas.style.width = `${sceneWidth}px`;
+      canvas.style.height = `${windowHeight}px`;
+      mouseRef.current = { x: sceneWidth / 2, y: sceneHeight / 2 };
+      targetMouseRef.current = { x: sceneWidth / 2, y: sceneHeight / 2 };
+      measureBounds();
     };
 
     const onPointerMove = (event: PointerEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      targetMouseRef.current = { x: event.clientX - rect.left, y: event.clientY - rect.top };
+      // Só guarda a posição bruta — a conversão para coordenadas da cena
+      // acontece uma vez por frame (getBoundingClientRect por evento força layout).
+      lastPointer.x = event.clientX;
+      lastPointer.y = event.clientY;
     };
 
     const animate = () => {
@@ -354,35 +404,44 @@ export function GalleryFlowBackground({
         animationId = 0;
         return;
       }
-      const width = canvas.clientWidth;
-      const height = canvas.clientHeight;
-      const parentRect = canvas.parentElement?.getBoundingClientRect();
-      const baseRect = canvas.parentElement
-        ?.querySelector<HTMLElement>("[data-flow-base]")
-        ?.getBoundingClientRect();
-      const bounds =
-        parentRect && baseRect
-          ? {
-              top: Math.max(0, baseRect.top - parentRect.top),
-              height: Math.max(1, baseRect.height),
-            }
-          : { top: 0, height };
+      const hostRect = host.getBoundingClientRect();
+      // Posição da janela dentro da cena (deriva do scroll). O canvas é
+      // movido por transform — sticky não funciona sob overflow:hidden.
+      const offsetY = Math.min(Math.max(0, -hostRect.top), sceneHeight - windowHeight);
+      canvas.style.transform = `translate3d(0, ${offsetY}px, 0)`;
+      if (!Number.isNaN(lastPointer.x)) {
+        targetMouseRef.current.x = lastPointer.x - hostRect.left;
+        targetMouseRef.current.y = lastPointer.y - hostRect.top;
+      }
       time += reduceMotion ? 0.25 : 1;
 
       mouseRef.current.x += (targetMouseRef.current.x - mouseRef.current.x) * 0.08;
       mouseRef.current.y += (targetMouseRef.current.y - mouseRef.current.y) * 0.08;
 
-      ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = "rgba(247,246,244,0.92)";
-      ctx.fillRect(0, 0, width, height);
-      drawPath(ctx, width, height, time, mouseRef.current, bounds, hiddenNodesRef.current, skipSegmentsRef.current);
+      // Desenha a cena em coordenadas virtuais, transladada para a janela.
+      ctx.setTransform(dpr, 0, 0, dpr, 0, -offsetY * dpr);
+      ctx.fillStyle = "#F7F6F4";
+      ctx.fillRect(0, offsetY, sceneWidth, windowHeight);
+      drawPath(
+        ctx,
+        sceneWidth,
+        sceneHeight,
+        time,
+        mouseRef.current,
+        bounds,
+        hiddenNodesRef.current,
+        skipSegmentsRef.current,
+        colors,
+      );
 
       animationId = window.requestAnimationFrame(animate);
     };
 
     resize();
     const observer = typeof ResizeObserver !== "undefined" ? new ResizeObserver(resize) : null;
-    if (canvas.parentElement) observer?.observe(canvas.parentElement);
+    observer?.observe(host);
+    const baseEl = host.querySelector<HTMLElement>("[data-flow-base]");
+    if (baseEl) observer?.observe(baseEl);
 
     // Só anima com o canvas perto do viewport — fora dele o RAF para por
     // completo (a margem pré-aquece a textura antes da seção entrar).
@@ -401,7 +460,7 @@ export function GalleryFlowBackground({
             { rootMargin: "600px 0px" },
           )
         : null;
-    if (canvas.parentElement) intersection?.observe(canvas.parentElement);
+    intersection?.observe(host);
 
     window.addEventListener("pointermove", onPointerMove);
     window.addEventListener("resize", resize);
@@ -416,5 +475,12 @@ export function GalleryFlowBackground({
     };
   }, []);
 
-  return <canvas ref={canvasRef} aria-hidden className="absolute inset-0 h-full w-full" />;
+  return (
+    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+      {/* Janela do tamanho do viewport movida via transform no RAF: o buffer
+          rasterizado por frame é constante, em vez de crescer com a altura
+          do container. */}
+      <canvas ref={canvasRef} className="absolute left-0 top-0 w-full will-change-transform" />
+    </div>
+  );
 }
