@@ -10,6 +10,8 @@ export type InstGroupCompany = {
   role: string;
   text: string;
   tags: string[];
+  /** Imagem de fundo revelada quando o card expande (substitui o line-art). */
+  bg?: string;
 };
 
 export const institucional = {
@@ -44,6 +46,7 @@ export const institucional = {
         text:
           "A máquina de antecipar futuros. Imagens e perspectivas 3D, apps, o D.Brave e salas imersivas transportam o cliente para dentro da sua futura realidade — mais de 12 anos traduzindo tijolo e cimento em pura poesia visual.",
         tags: ["Perspectivas 3D", "Apps", "D.Brave", "Salas Imersivas"],
+        bg: "/Nosso_Grupo/FlyingStudio/geral-11.png",
       },
       {
         id: "ogdi",

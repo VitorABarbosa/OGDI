@@ -268,6 +268,45 @@
 }
 
 /* ============================================================
+   Imagem de fundo: revelada com zoom-out quando o card expande
+============================================================ */
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .7s var(--ease-brand);
+}
+
+/* gradiente para manter logo e texto legíveis sobre a foto */
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(18, 22, 23, .9), rgba(18, 22, 23, .52) 46%, rgba(18, 22, 23, .22)),
+    linear-gradient(180deg, rgba(18, 22, 23, .42), transparent 38%, rgba(18, 22, 23, .82));
+}
+
+.bgImg {
+  object-fit: cover;
+  transform: scale(1.12);
+  transition: transform 1.5s var(--ease-pop);
+}
+
+.stage:hover .card:hover .bg,
+.stage:focus-within .card:focus-within .bg {
+  opacity: 1;
+  transition-delay: .12s;
+}
+
+.stage:hover .card:hover .bgImg,
+.stage:focus-within .card:focus-within .bgImg {
+  transform: scale(1);
+}
+
+/* ============================================================
    Assinatura line-art: desenha quando o card expande
 ============================================================ */
 .motifSvg {
@@ -369,6 +408,14 @@
     width: 52%;
   }
 
+  .bg {
+    opacity: 1;
+  }
+
+  .bgImg {
+    transform: none;
+  }
+
   .motifSvg :global(line),
   .motifSvg :global(path),
   .motifSvg :global(rect),
@@ -386,6 +433,8 @@
   .mini,
   .detail,
   .info > *,
+  .bg,
+  .bgImg,
   .motifSvg,
   .motifSvg :global(line),
   .motifSvg :global(path),

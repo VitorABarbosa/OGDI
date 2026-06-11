@@ -106,7 +106,19 @@ export function InstitucionalGrupo() {
               tabIndex={0}
               className={cn(styles.card, "outline-none focus-visible:ring-2 focus-visible:ring-green")}
             >
-              <Motif id={company.id} />
+              {company.bg ? (
+                <div className={styles.bg} aria-hidden>
+                  <Image
+                    src={company.bg}
+                    alt=""
+                    fill
+                    sizes="(max-width: 900px) 100vw, 72vw"
+                    className={styles.bgImg}
+                  />
+                </div>
+              ) : (
+                <Motif id={company.id} />
+              )}
 
               {/* Estado idle: logo centralizada */}
               <div className={styles.idle}>
