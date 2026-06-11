@@ -7,6 +7,7 @@ export function EmpLocationStory({ p }: { p: Projeto }) {
   if (!p.locationStory) return null;
 
   const { locationStory } = p;
+  const visibleBody = locationStory.body.slice(0, 1);
 
   return (
     <section className="relative overflow-clip bg-manifesto py-section text-white">
@@ -23,7 +24,7 @@ export function EmpLocationStory({ p }: { p: Projeto }) {
           </div>
 
           <div className="space-y-5 self-end text-[clamp(15px,1.16vw,18px)] leading-[1.75] text-white/76">
-            {locationStory.body.map((paragraph, index) => (
+            {visibleBody.map((paragraph, index) => (
               <p key={`${p.slug}-location-${index}`} className={cn("reveal", `reveal-info-${Math.min(index + 1, 5)}`)}>
                 {paragraph}
               </p>

@@ -82,7 +82,8 @@ describe("Empreendimento page data", () => {
       "reveal",
       "reveal-2",
     );
-    expect(screen.getByText(/A proximidade com a Avenida Cupecê amplia essa leitura/i)).toBeInTheDocument();
+    expect(screen.getByText(/Localizado na Rua Dom João Soares Coelho/i)).toBeInTheDocument();
+    expect(screen.queryByText(/A proximidade com a Avenida Cupecê amplia essa leitura/i)).not.toBeInTheDocument();
     expect(screen.getByText("Região em ascensão")).toBeInTheDocument();
     expect(screen.getByText("Conexões urbanas")).toBeInTheDocument();
     expect(screen.getByText("Cotidiano conveniente")).toBeInTheDocument();

@@ -5,6 +5,8 @@ import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 
 // Seção de método OGDI — conteúdo igual para todos os empreendimentos (não recebe prop do projeto).
 export function EmpAtuacao({ p }: { p?: Projeto }) {
+  const visibleStrategyBody = p?.strategyStory?.body.slice(0, 1);
+
   return (
     <section className="py-section">
       <div className="wrap">
@@ -17,7 +19,7 @@ export function EmpAtuacao({ p }: { p?: Projeto }) {
               </h2>
             </div>
             <div className="space-y-5 self-end text-[clamp(15px,1.12vw,18px)] leading-[1.72] text-ink-2">
-              {p.strategyStory.body.map((paragraph, index) => (
+              {visibleStrategyBody?.map((paragraph, index) => (
                 <p key={`${p.slug}-strategy-${index}`} className={cn("reveal", `reveal-info-${Math.min(index + 1, 5)}`)}>
                   {paragraph}
                 </p>

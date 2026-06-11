@@ -6,6 +6,7 @@ export function EmpProductStory({ p }: { p: Projeto }) {
   if (!p.productStory) return null;
 
   const { productStory } = p;
+  const visibleBody = productStory.body.slice(0, 1);
 
   return (
     <section className="py-section">
@@ -20,7 +21,7 @@ export function EmpProductStory({ p }: { p: Projeto }) {
 
           <div>
             <div className="max-w-[680px] space-y-5 text-[clamp(15px,1.12vw,18px)] leading-[1.72] text-ink-2">
-              {productStory.body.map((paragraph, index) => (
+              {visibleBody.map((paragraph, index) => (
                 <p key={`${p.slug}-product-${index}`} className={cn("reveal", `reveal-info-${Math.min(index + 1, 5)}`)}>
                   {paragraph}
                 </p>
@@ -40,7 +41,6 @@ export function EmpProductStory({ p }: { p: Projeto }) {
                   <h3 className="mt-3 text-[clamp(18px,1.55vw,24px)] font-semibold tracking-[-.02em] text-ink">
                     {card.value}
                   </h3>
-                  {card.text && <p className="mt-4 text-[13.5px] leading-[1.6] text-ink-2">{card.text}</p>}
                 </article>
               ))}
             </div>
