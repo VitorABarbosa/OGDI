@@ -14,7 +14,7 @@ describe("Header", () => {
 
     render(<Header />);
 
-    expect(screen.getByRole("link", { name: "Sobre" })).toHaveClass("text-white");
+    expect(screen.getByRole("link", { name: "Institucional" })).toHaveClass("text-white");
   });
 
   it("usa navegacao escura quando o header ganha fundo claro no scroll", () => {
@@ -22,6 +22,6 @@ describe("Header", () => {
 
     render(<Header />);
 
-    expect(screen.getByRole("link", { name: "Sobre" })).toHaveClass("text-ink-2");
+    expect(screen.getByRole("link", { name: "Institucional" })).toHaveClass("text-ink-2");
   });
 });

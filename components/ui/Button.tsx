@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
-type Variant = "default" | "light" | "solid";
+type Variant = "default" | "light" | "solid" | "on-dark";
 type Props = {
   children: React.ReactNode;
   href?: string;
@@ -19,6 +19,7 @@ const variants: Record<Variant, string> = {
   default: "border-ink text-ink hover:bg-ink hover:text-white",
   light: "border-white/50 text-white hover:bg-white hover:text-ink hover:border-white",
   solid: "bg-ink text-white border-ink hover:bg-teal hover:border-teal",
+  "on-dark": "bg-white text-ink border-white hover:bg-green hover:text-white hover:border-green",
 };
 
 export function Button({ children, href, variant = "default", sm, arrow, type = "button", className }: Props) {

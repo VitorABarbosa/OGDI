@@ -1,0 +1,19 @@
+.word {
+  color: rgba(242, 241, 237, 0.17);
+  transition: color 0.4s var(--ease-brand);
+}
+.word.lit {
+  color: #fff;
+}
+.word.em {
+  color: rgba(95, 168, 60, 0.32);
+}
+.word.em.lit {
+  color: var(--color-green);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .word {
+    transition: none;
+  }
+}
