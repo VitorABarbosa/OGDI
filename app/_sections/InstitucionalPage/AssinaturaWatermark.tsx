@@ -129,16 +129,18 @@ export function AssinaturaWatermark() {
         height={logoSize}
         className={`${logoClassName} opacity-[.055] [filter:brightness(0)_invert(1)]`}
       />
+      {/* A logo original é petróleo escuro — sobre o bg-dark precisa de um
+          empurrão de brilho (mantendo o matiz) para a revelação aparecer. */}
       <div
         ref={colorRef}
-        className="absolute inset-0 opacity-0 blur-[1px] contrast-[1.7] transition-opacity duration-150 ease-brand"
+        className="absolute inset-0 opacity-0 blur-[1px] transition-opacity duration-150 ease-brand"
       >
         <Image
           src={logoSrc}
           alt=""
           width={logoSize}
           height={logoSize}
-          className={`${logoClassName} opacity-[.85]`}
+          className={`${logoClassName} opacity-[.9] [filter:brightness(1.9)_saturate(1.25)]`}
         />
       </div>
     </div>
