@@ -292,7 +292,15 @@
   inset: 0;
   z-index: 1;
   overflow: hidden;
-  opacity: 0;
+}
+
+/* véu escuro do repouso: mantém a logo dominante; abre ao expandir */
+.bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(18, 22, 23, .68);
   transition: opacity .7s var(--ease-brand);
 }
 
@@ -314,10 +322,9 @@
   transition: transform 1.5s var(--ease-pop);
 }
 
-.stage:hover .card:hover .bg,
-.stage:focus-within .card:focus-within .bg {
-  opacity: 1;
-  transition-delay: .12s;
+.stage:hover .card:hover .bg::before,
+.stage:focus-within .card:focus-within .bg::before {
+  opacity: 0;
 }
 
 .stage:hover .card:hover .bgImg,
@@ -427,8 +434,8 @@
     width: 52%;
   }
 
-  .bg {
-    opacity: 1;
+  .bg::before {
+    opacity: 0;
   }
 
   .bgImg {
@@ -453,6 +460,7 @@
   .detail,
   .info > *,
   .bg,
+  .bg::before,
   .bgImg,
   .motifSvg,
   .motifSvg :global(line),
