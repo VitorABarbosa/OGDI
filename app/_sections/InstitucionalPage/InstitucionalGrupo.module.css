@@ -83,57 +83,19 @@
 }
 
 /* ============================================================
-   Wordmarks provisórios (até as logos reais chegarem)
+   Logos (brancas, sobre os cards escuros)
+   Larguras calibradas pela proporção de cada arquivo para
+   equalizar a massa visual entre as quatro marcas.
 ============================================================ */
-.wm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
+.logo {
+  height: auto;
   user-select: none;
-  white-space: nowrap;
 }
 
-.wmSub {
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: .4em;
-  margin-right: -.4em;
-  opacity: .55;
-}
-
-.wmOgdi {
-  font-weight: 700;
-  font-size: clamp(24px, 1.8vw, 32px);
-  letter-spacing: .3em;
-  margin-right: -.3em;
-  line-height: 1;
-}
-
-.wmNid {
-  font-family: var(--font-news);
-  font-style: italic;
-  font-weight: 500;
-  font-size: clamp(34px, 2.6vw, 48px);
-  letter-spacing: -.02em;
-  line-height: 1;
-}
-
-.wmFlying {
-  font-weight: 300;
-  font-size: clamp(22px, 1.7vw, 30px);
-  letter-spacing: .42em;
-  margin-right: -.42em;
-  line-height: 1;
-}
-
-.wmRinno {
-  font-weight: 700;
-  font-size: clamp(26px, 2vw, 36px);
-  letter-spacing: .06em;
-  line-height: 1;
-  transform: scaleY(1.15);
-}
+.logoOgdi { width: clamp(160px, 13vw, 240px); }   /* 4.97:1 */
+.logoNid { width: clamp(104px, 8.5vw, 156px); }   /* 3.51:1 */
+.logoFlying { width: clamp(170px, 14vw, 260px); } /* 8.20:1 */
+.logoRinno { width: clamp(140px, 11.5vw, 210px); } /* 5.15:1 */
 
 /* ============================================================
    Estado idle: wordmark + role centralizados
@@ -226,8 +188,10 @@
   left: clamp(26px, 3.2vw, 52px);
 }
 
-.detailWm .wm {
-  align-items: flex-start;
+/* no card expandido a logo fica um degrau menor que no idle */
+.detailWm .logo {
+  transform-origin: top left;
+  transform: scale(.82);
 }
 
 .stage:hover .card:hover .detail,

@@ -1,41 +1,29 @@
+import Image from "next/image";
 import { Kicker } from "@/components/ui/Kicker";
 import { cn } from "@/lib/cn";
 import { institucional } from "./institucional.data";
 import styles from "./InstitucionalGrupo.module.css";
 
-// Wordmarks tipográficos provisórios — substituir pelas logos reais
-// quando os arquivos das empresas forem fornecidos (só temos a da OGDI).
-function Wordmark({ id }: { id: string }) {
-  switch (id) {
-    case "ogdi":
-      return (
-        <span className={styles.wm}>
-          <span className={styles.wmOgdi}>OGDI</span>
-          <span className={styles.wmSub}>Open Group · Desenv. Imobiliário</span>
-        </span>
-      );
-    case "nid":
-      return (
-        <span className={styles.wm}>
-          <span className={styles.wmNid}>nid</span>
-          <span className={styles.wmSub}>studio</span>
-        </span>
-      );
-    case "flying":
-      return (
-        <span className={styles.wm}>
-          <span className={styles.wmFlying}>FLYING</span>
-          <span className={styles.wmSub}>studio</span>
-        </span>
-      );
-    default:
-      return (
-        <span className={styles.wm}>
-          <span className={styles.wmRinno}>RINNO</span>
-          <span className={styles.wmSub}>films</span>
-        </span>
-      );
-  }
+// Logos brancas (com pontos de cor) sobre os cards escuros.
+// Dimensões = bounding box real do conteúdo de cada PNG aparado.
+const LOGOS: Record<string, { src: string; width: number; height: number; sizeClass: string }> = {
+  ogdi: { src: "/Nosso_Grupo/LOGOS/ogdi.png", width: 1810, height: 364, sizeClass: "logoOgdi" },
+  nid: { src: "/Nosso_Grupo/LOGOS/nid.png", width: 291, height: 83, sizeClass: "logoNid" },
+  flying: { src: "/Nosso_Grupo/LOGOS/flying.png", width: 1771, height: 216, sizeClass: "logoFlying" },
+  rinno: { src: "/Nosso_Grupo/LOGOS/rinno.png", width: 1920, height: 373, sizeClass: "logoRinno" },
+};
+
+function Logo({ id, alt }: { id: string; alt: string }) {
+  const logo = LOGOS[id];
+  return (
+    <Image
+      src={logo.src}
+      alt={alt}
+      width={logo.width}
+      height={logo.height}
+      className={cn(styles.logo, styles[logo.sizeClass as keyof typeof styles])}
+    />
+  );
 }
 
 // Assinaturas em line-art que se desenham quando o card expande.
@@ -120,9 +108,9 @@ export function InstitucionalGrupo() {
             >
               <Motif id={company.id} />
 
-              {/* Estado idle: wordmark centralizado */}
+              {/* Estado idle: logo centralizada */}
               <div className={styles.idle}>
-                <Wordmark id={company.id} />
+                <Logo id={company.id} alt={company.name} />
                 <span className={styles.idleRole}>{company.role}</span>
               </div>
 
@@ -135,7 +123,7 @@ export function InstitucionalGrupo() {
               {/* Estado expandido */}
               <div className={styles.detail}>
                 <div className={styles.detailWm}>
-                  <Wordmark id={company.id} />
+                  <Logo id={company.id} alt="" />
                 </div>
                 <div className={styles.info}>
                   <span className={styles.infoRole}>
