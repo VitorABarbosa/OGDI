@@ -95,6 +95,8 @@ function strokeFlowPath(
   segments: FlowSegment[],
   mouse: Point,
   time: number,
+  indexOffset = 0,
+  totalSegments = segments.length,
 ) {
   const stepsPerSegment = 252;
 
@@ -105,8 +107,9 @@ function strokeFlowPath(
       if (segmentIndex > 0 && step === 0) continue;
 
       const localProgress = step / stepsPerSegment;
+      const globalIndex = segmentIndex + indexOffset;
       const pathProgress =
-        segmentIndex <= 1 ? 0 : (segmentIndex - 2 + localProgress) / (segments.length - 2);
+        globalIndex <= 1 ? 0 : (globalIndex - 2 + localProgress) / (totalSegments - 2);
       const basePoint = cubicPoint(segment[0], segment[1], segment[2], segment[3], localProgress);
       const tangent = cubicTangent(segment[0], segment[1], segment[2], segment[3], localProgress);
       const point = applyMouseRipple(applyTravelingWaves(basePoint, tangent, pathProgress, time), mouse, time);
@@ -154,6 +157,7 @@ function drawPath(
   mouse: Point,
   bounds: FlowBounds,
   hiddenNodes: number[],
+  skipSegments: number,
 ) {
   const teal = resolveCssColor("--color-teal", "#1F5A63");
   const green = resolveCssColor("--color-green", "#5FA83C");
@@ -239,11 +243,14 @@ function drawPath(
   gradient.addColorStop(0.42, `rgba(95, 168, 60, ${0.18 + pulse * 0.08})`);
   gradient.addColorStop(1, `rgba(6, 43, 60, ${0.12 + pulse * 0.08})`);
 
+  // Permite pular os trechos iniciais (lead-in) que se cruzam no topo.
+  const drawnSegments = segments.slice(skipSegments);
+
   ctx.save();
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
 
-  strokeFlowPath(ctx, segments, mouse, time);
+  strokeFlowPath(ctx, drawnSegments, mouse, time, skipSegments, segments.length);
   ctx.shadowBlur = 32;
   ctx.shadowColor = green;
   ctx.strokeStyle = gradient;
@@ -251,7 +258,7 @@ function drawPath(
   ctx.stroke();
 
   ctx.shadowBlur = 0;
-  strokeFlowPath(ctx, segments, mouse, time);
+  strokeFlowPath(ctx, drawnSegments, mouse, time, skipSegments, segments.length);
   ctx.strokeStyle = `rgba(255,255,255,${0.45 + pulse * 0.1})`;
   ctx.lineWidth = Math.max(0.7, Math.min(width, height) * 0.0012);
   ctx.stroke();
@@ -283,11 +290,16 @@ function drawPath(
   ctx.restore();
 }
 
-export function GalleryFlowBackground({ hiddenNodes = [] }: { hiddenNodes?: number[] } = {}) {
+export function GalleryFlowBackground({
+  hiddenNodes = [],
+  skipSegments = 0,
+}: { hiddenNodes?: number[]; skipSegments?: number } = {}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  // Ref para a animação ler o valor atual da prop (o efeito só roda na montagem).
+  // Refs para a animação ler o valor atual das props (o efeito só roda na montagem).
   const hiddenNodesRef = useRef(hiddenNodes);
   hiddenNodesRef.current = hiddenNodes;
+  const skipSegmentsRef = useRef(skipSegments);
+  skipSegmentsRef.current = skipSegments;
   const mouseRef = useRef<Point>({ x: 0, y: 0 });
   const targetMouseRef = useRef<Point>({ x: 0, y: 0 });
 
@@ -347,7 +359,7 @@ export function GalleryFlowBackground({ hiddenNodes = [] }: { hiddenNodes?: numb
       ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = "rgba(247,246,244,0.92)";
       ctx.fillRect(0, 0, width, height);
-      drawPath(ctx, width, height, time, mouseRef.current, bounds, hiddenNodesRef.current);
+      drawPath(ctx, width, height, time, mouseRef.current, bounds, hiddenNodesRef.current, skipSegmentsRef.current);
 
       animationId = window.requestAnimationFrame(animate);
     };
