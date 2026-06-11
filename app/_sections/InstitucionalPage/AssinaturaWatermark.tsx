@@ -129,11 +129,11 @@ export function AssinaturaWatermark() {
         width={logoSize}
         height={logoSize}
         quality={100}
-        className={`${logoClassName} opacity-[.35] [filter:brightness(0)_invert(1)] max-md:opacity-[.3]`}
+        className={`${logoClassName} opacity-[0.02] [filter:brightness(0)_invert(1)] max-md:opacity-[.3]`}
       />
       <div
         ref={colorRef}
-        className="absolute inset-0 opacity-0 blur-[1px] contrast-[1.7] transition-opacity duration-150 ease-brand"
+        className="absolute inset-0 opacity-0 transition-opacity duration-150 ease-brand"
       >
         <Image
           src={logoSrc}
@@ -141,7 +141,7 @@ export function AssinaturaWatermark() {
           width={logoSize}
           height={logoSize}
           quality={100}
-          className={`${logoClassName} opacity-[.82]`}
+          className={`${logoClassName} opacity-[.85]`}
         />
       </div>
     </div>
