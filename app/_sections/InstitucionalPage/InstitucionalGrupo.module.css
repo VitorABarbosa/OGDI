@@ -148,7 +148,7 @@
 .miniNum {
   font-size: 10px;
   letter-spacing: .16em;
-  color: rgba(242, 241, 237, .35);
+  color: var(--accent, rgba(242, 241, 237, .35));
 }
 
 .miniLabel {
@@ -236,7 +236,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .16em;
-  color: #5fa83c;
+  color: var(--accent, #5fa83c);
 }
 
 .infoRole {
@@ -244,7 +244,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .2em;
-  color: #5fa83c;
+  color: var(--accent, #5fa83c);
 }
 
 .infoName {

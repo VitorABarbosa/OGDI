@@ -102,6 +102,8 @@ export function InstitucionalGrupo() {
       <div className={cn(styles.stage, "reveal reveal-2 relative z-[2]")}>
           {grupo.companies.map((company, index) => {
             const cardClass = cn(styles.card, "outline-none focus-visible:ring-2 focus-visible:ring-green");
+            // Cor da marca de cada empresa, consumida via var(--accent) no CSS
+            const cardStyle = { "--accent": company.accent } as React.CSSProperties;
             const content = (
               <>
               {company.bg ? (
@@ -162,11 +164,12 @@ export function InstitucionalGrupo() {
                 rel="noopener noreferrer"
                 aria-label={`${company.name} — visitar site`}
                 className={cardClass}
+                style={cardStyle}
               >
                 {content}
               </a>
             ) : (
-              <article key={company.id} tabIndex={0} className={cardClass}>
+              <article key={company.id} tabIndex={0} className={cardClass} style={cardStyle}>
                 {content}
               </article>
             );

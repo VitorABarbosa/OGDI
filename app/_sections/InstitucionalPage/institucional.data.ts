@@ -14,6 +14,8 @@ export type InstGroupCompany = {
   bg?: string;
   /** Site externo da empresa — torna o card inteiro clicável. */
   href?: string;
+  /** Cor da marca — aplicada no título numerado, número da régua e link. */
+  accent?: string;
 };
 
 export const institucional = {
@@ -50,6 +52,7 @@ export const institucional = {
         tags: ["Perspectivas 3D", "Apps", "D.Brave", "Salas Imersivas"],
         bg: "/Nosso_Grupo/FlyingStudio/geral-11.png",
         href: "https://flyingstudio.com.br/",
+        accent: "#A78BFA", // roxo
       },
       {
         id: "ogdi",
@@ -60,16 +63,18 @@ export const institucional = {
           "O ponto de partida estratégico. Atuamos com consultoria focada na inteligência de mercado, no desenvolvimento de produtos e na estruturação completa de novos lançamentos desde a sua concepção.",
         tags: ["Mercado", "Produto", "Lançamento"],
         bg: "/Nosso_Grupo/OGDI/Cidade.png",
+        accent: "#4FA3AD", // azul petróleo
       },
       {
         id: "nid",
         name: "NID Studio",
         label: "NID",
-        role: "Arquitetura, interiores e desejo",
+        role: "Arquitetura, interiores e PDV",
         text:
           "Onde a inteligência arquitetônica ganha forma e emoção. O lar como um verdadeiro ninho: projetos de interiores, design de fachadas e PDVs concebidos como espaços de aconchego, segurança e forte personalidade.",
         tags: ["Interiores", "Fachadas", "PDV"],
         bg: "/Nosso_Grupo/NID/TAVARES_LIVIGNO_MOOD_DECORADO_02.png",
+        accent: "#F08A24", // laranja
       },
       {
         id: "rinno",
@@ -79,6 +84,7 @@ export const institucional = {
         text:
           "A produtora audiovisual do grupo. De filmes conceito e de produto a materiais virais e institucionais — dando movimento às histórias e criando a conexão emocional entre o projeto e o seu público.",
         tags: ["Filmes", "Viral", "Institucional"],
+        accent: "#4D7CC9", // azul escuro
       },
     ] as InstGroupCompany[],
   },
