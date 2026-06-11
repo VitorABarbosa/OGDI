@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -88,14 +89,16 @@ export function GalleryImage({
         className,
       )}
     >
+      {/* Zoom para DENTRO (scale > 1): encolher revelava o bg-dark do
+          container como uma borda preta ao redor da imagem. */}
       <motion.img
         layoutId={`gallery-image-${id}`}
         src={src}
         alt={alt ?? "Imagem da galeria"}
         className={cn("h-full w-full object-cover", imageClassName)}
         variants={{
-          hover: { scale: 0.985 },
-          tap: { scale: 0.955 },
+          hover: { scale: 1.04 },
+          tap: { scale: 1.015 },
         }}
         transition={spring}
         draggable={false}
@@ -117,11 +120,16 @@ export function GalleryImage({
 
 function GalleryModal() {
   const context = React.useContext(GalleryContext);
-  if (!context) return null;
+  // Portal só após montar (createPortal não existe no SSR).
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+  if (!context || !mounted) return null;
 
   const { selectedImage, setSelectedImage } = context;
 
-  return (
+  // Portal no body: a galeria vive dentro de um wrapper `relative z-[2]`
+  // (stacking context), onde o z-[400] do modal perdia da header z-[100].
+  return createPortal(
     <AnimatePresence>
       {selectedImage && (
         <div className="fixed inset-0 z-[400] flex items-center justify-center" role="dialog" aria-modal="true" aria-label={selectedImage.alt}>
@@ -144,11 +152,13 @@ function GalleryModal() {
             }}
             onClick={() => setSelectedImage(null)}
           >
+            {/* max-h deixa folga maior que a altura da header (~90px) para a
+                imagem ampliada nunca encostar nela. */}
             <motion.img
               layoutId={`gallery-image-${selectedImage.id}`}
               src={selectedImage.src}
               alt={selectedImage.alt ?? "Imagem selecionada da galeria"}
-              className="max-h-[90vh] max-w-[95vw] object-contain shadow-[0_32px_96px_rgba(0,0,0,.48)] will-change-transform"
+              className="max-h-[calc(100vh-2*clamp(64px,9vh,108px))] max-w-[92vw] object-contain shadow-[0_32px_96px_rgba(0,0,0,.48)] will-change-transform"
               draggable={false}
               transition={spring}
             />
@@ -168,6 +178,7 @@ function GalleryModal() {
           </motion.button>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }
