@@ -69,6 +69,7 @@ export const institucional = {
         text:
           "Onde a inteligência arquitetônica ganha forma e emoção. O lar como um verdadeiro ninho: projetos de interiores, design de fachadas e PDVs concebidos como espaços de aconchego, segurança e forte personalidade.",
         tags: ["Interiores", "Fachadas", "PDV"],
+        bg: "/Nosso_Grupo/NID/TAVARES_LIVIGNO_MOOD_DECORADO_02.png",
       },
       {
         id: "rinno",
