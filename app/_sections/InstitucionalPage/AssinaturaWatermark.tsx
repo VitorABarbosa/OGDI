@@ -129,7 +129,7 @@ export function AssinaturaWatermark() {
         width={logoSize}
         height={logoSize}
         quality={100}
-        className={`${logoClassName} opacity-[.5] [filter:brightness(0)_invert(1)] max-md:opacity-[.4]`}
+        className={`${logoClassName} opacity-[.35] [filter:brightness(0)_invert(1)] max-md:opacity-[.3]`}
       />
       <div
         ref={colorRef}
