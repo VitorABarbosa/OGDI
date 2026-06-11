@@ -100,12 +100,10 @@ export function InstitucionalGrupo() {
 
       {/* Palco full-bleed: ocupa a largura inteira da tela */}
       <div className={cn(styles.stage, "reveal reveal-2 relative z-[2]")}>
-          {grupo.companies.map((company, index) => (
-            <article
-              key={company.id}
-              tabIndex={0}
-              className={cn(styles.card, "outline-none focus-visible:ring-2 focus-visible:ring-green")}
-            >
+          {grupo.companies.map((company, index) => {
+            const cardClass = cn(styles.card, "outline-none focus-visible:ring-2 focus-visible:ring-green");
+            const content = (
+              <>
               {company.bg ? (
                 <div className={styles.bg} aria-hidden>
                   <Image
@@ -148,10 +146,31 @@ export function InstitucionalGrupo() {
                       <li key={tag}>{tag}</li>
                     ))}
                   </ul>
+                  {company.href && (
+                    <span className={styles.infoLink}>Visitar site ↗</span>
+                  )}
                 </div>
               </div>
-            </article>
-          ))}
+              </>
+            );
+
+            return company.href ? (
+              <a
+                key={company.id}
+                href={company.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${company.name} — visitar site`}
+                className={cardClass}
+              >
+                {content}
+              </a>
+            ) : (
+              <article key={company.id} tabIndex={0} className={cardClass}>
+                {content}
+              </article>
+            );
+          })}
       </div>
     </section>
   );

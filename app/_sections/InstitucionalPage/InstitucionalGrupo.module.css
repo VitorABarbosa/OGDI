@@ -33,12 +33,14 @@
 
 .card {
   position: relative;
+  display: block;
   flex: 1 1 0;
   min-width: 0;
   overflow: hidden;
   cursor: pointer;
   background: #121617;
   color: #f2f1ed;
+  text-decoration: none; /* o card pode ser um <a> */
   border: 1px solid rgba(8, 12, 13, .2);
   isolation: isolate;
   transition:
@@ -221,6 +223,21 @@
 .stage:focus-within .card:focus-within .info > :nth-child(3) { transition-delay: .42s; }
 .stage:hover .card:hover .info > :nth-child(4),
 .stage:focus-within .card:focus-within .info > :nth-child(4) { transition-delay: .5s; }
+.stage:hover .card:hover .info > :nth-child(5),
+.stage:focus-within .card:focus-within .info > :nth-child(5) { transition-delay: .58s; }
+
+.infoLink {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  margin-top: 18px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: #5fa83c;
+}
 
 .infoRole {
   font-size: 11px;
