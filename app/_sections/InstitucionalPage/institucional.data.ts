@@ -59,6 +59,7 @@ export const institucional = {
         text:
           "O ponto de partida estratégico. Atuamos com consultoria focada na inteligência de mercado, no desenvolvimento de produtos e na estruturação completa de novos lançamentos desde a sua concepção.",
         tags: ["Mercado", "Produto", "Lançamento"],
+        bg: "/Nosso_Grupo/OGDI/Cidade.png",
       },
       {
         id: "nid",
