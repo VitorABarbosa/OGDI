@@ -128,21 +128,24 @@ export function AssinaturaWatermark() {
         alt=""
         width={logoSize}
         height={logoSize}
+        quality={100}
         className={`${logoClassName} opacity-[.055] [filter:brightness(0)_invert(1)]`}
       />
       {/* Revelação: cores originais com brilho elevado — a logo petróleo é
           escura demais para aparecer crua sobre o bg-dark (na home o fundo
-          é claro, por isso lá não precisa). */}
+          é claro, por isso lá não precisa). Sem blur nem saturação para
+          preservar a nitidez do arquivo 2048px. */}
       <div
         ref={colorRef}
-        className="absolute inset-0 opacity-0 blur-[1px] transition-opacity duration-150 ease-brand"
+        className="absolute inset-0 opacity-0 transition-opacity duration-150 ease-brand"
       >
         <Image
           src={logoSrc}
           alt=""
           width={logoSize}
           height={logoSize}
-          className={`${logoClassName} opacity-[.95] [filter:brightness(2.1)_saturate(1.3)]`}
+          quality={100}
+          className={`${logoClassName} opacity-[.95] [filter:brightness(2.1)]`}
         />
       </div>
     </div>
