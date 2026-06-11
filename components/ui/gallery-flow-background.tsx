@@ -153,6 +153,7 @@ function drawPath(
   time: number,
   mouse: Point,
   bounds: FlowBounds,
+  hiddenNodes: number[],
 ) {
   const teal = resolveCssColor("--color-teal", "#1F5A63");
   const green = resolveCssColor("--color-green", "#5FA83C");
@@ -266,6 +267,7 @@ function drawPath(
   ];
 
   nodes.forEach((node, index) => {
+    if (hiddenNodes.includes(index)) return;
     const nodePulse = (Math.sin(time * 0.0022 + index * 0.9) + 1) / 2;
     ctx.beginPath();
     ctx.arc(node.x + Math.sin(time * 0.001 + index) * 4, node.y, 2.5 + nodePulse * 2, 0, Math.PI * 2);
@@ -281,7 +283,7 @@ function drawPath(
   ctx.restore();
 }
 
-export function GalleryFlowBackground() {
+export function GalleryFlowBackground({ hiddenNodes = [] }: { hiddenNodes?: number[] } = {}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const mouseRef = useRef<Point>({ x: 0, y: 0 });
   const targetMouseRef = useRef<Point>({ x: 0, y: 0 });
@@ -342,7 +344,7 @@ export function GalleryFlowBackground() {
       ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = "rgba(247,246,244,0.92)";
       ctx.fillRect(0, 0, width, height);
-      drawPath(ctx, width, height, time, mouseRef.current, bounds);
+      drawPath(ctx, width, height, time, mouseRef.current, bounds, hiddenNodes);
 
       animationId = window.requestAnimationFrame(animate);
     };
