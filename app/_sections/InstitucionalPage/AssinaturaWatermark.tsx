@@ -122,22 +122,18 @@ export function AssinaturaWatermark() {
 
   return (
     <div ref={layerRef} aria-hidden className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-      {/* Base: o branco sutil original da marca d'água. */}
+      {/* Base: mesma leitura da marca d'água da seção Nossa atuação. */}
       <Image
         src={logoSrc}
         alt=""
         width={logoSize}
         height={logoSize}
         quality={100}
-        className={`${logoClassName} opacity-[.055] [filter:brightness(0)_invert(1)]`}
+        className={`${logoClassName} opacity-[.5] [filter:brightness(0)_invert(1)] max-md:opacity-[.4]`}
       />
-      {/* Revelação: cores originais com brilho elevado — a logo petróleo é
-          escura demais para aparecer crua sobre o bg-dark (na home o fundo
-          é claro, por isso lá não precisa). Sem blur nem saturação para
-          preservar a nitidez do arquivo 2048px. */}
       <div
         ref={colorRef}
-        className="absolute inset-0 opacity-0 transition-opacity duration-150 ease-brand"
+        className="absolute inset-0 opacity-0 blur-[1px] contrast-[1.7] transition-opacity duration-150 ease-brand"
       >
         <Image
           src={logoSrc}
@@ -145,7 +141,7 @@ export function AssinaturaWatermark() {
           width={logoSize}
           height={logoSize}
           quality={100}
-          className={`${logoClassName} opacity-[.95] [filter:brightness(2.1)]`}
+          className={`${logoClassName} opacity-[.82]`}
         />
       </div>
     </div>
