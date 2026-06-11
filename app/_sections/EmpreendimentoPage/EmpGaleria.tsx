@@ -9,17 +9,52 @@ import type { GaleriaSlot, Projeto } from "@/app/_sections/Projetos/projetos.dat
 
 type GalleryItem = GaleriaSlot & { src?: string };
 
-const cupeceImages: GalleryItem[] = [
-  { id: "hits-cupece-cine-open", alt: "Cine Open", src: "/assets/projetos/CUPECE/IMAGES/Cine_Open.png" },
-  { id: "hits-cupece-fitness", alt: "Fitness externo", src: "/assets/projetos/CUPECE/IMAGES/Fitness_Externo.png" },
-  { id: "hits-cupece-living", alt: "Living", src: "/assets/projetos/CUPECE/IMAGES/Living.png" },
-  { id: "hits-cupece-pet-place", alt: "Pet place", src: "/assets/projetos/CUPECE/IMAGES/Pet_place.png" },
-  { id: "hits-cupece-piscina", alt: "Piscina", src: "/assets/projetos/CUPECE/IMAGES/Piscina.png" },
-  { id: "hits-cupece-playground", alt: "Playground", src: "/assets/projetos/CUPECE/IMAGES/Playground.png" },
-  { id: "hits-cupece-portaria", alt: "Portaria", src: "/assets/projetos/CUPECE/IMAGES/Portaria.png" },
-  { id: "hits-cupece-solarium", alt: "Solarium", src: "/assets/projetos/CUPECE/IMAGES/Solarium.png" },
-  { id: "hits-cupece-varanda", alt: "Varanda", src: "/assets/projetos/CUPECE/IMAGES/Varanda.png" },
-];
+const projectGalleryImages: Record<string, GalleryItem[]> = {
+  "hits-cupece": [
+    { id: "hits-cupece-cine-open", alt: "Cine Open", src: "/assets/projetos/CUPECE/IMAGES/Cine_Open.png" },
+    { id: "hits-cupece-fitness", alt: "Fitness externo", src: "/assets/projetos/CUPECE/IMAGES/Fitness_Externo.png" },
+    { id: "hits-cupece-living", alt: "Living", src: "/assets/projetos/CUPECE/IMAGES/Living.png" },
+    { id: "hits-cupece-pet-place", alt: "Pet place", src: "/assets/projetos/CUPECE/IMAGES/Pet_place.png" },
+    { id: "hits-cupece-piscina", alt: "Piscina", src: "/assets/projetos/CUPECE/IMAGES/Piscina.png" },
+    { id: "hits-cupece-playground", alt: "Playground", src: "/assets/projetos/CUPECE/IMAGES/Playground.png" },
+    { id: "hits-cupece-portaria", alt: "Portaria", src: "/assets/projetos/CUPECE/IMAGES/Portaria.png" },
+    { id: "hits-cupece-solarium", alt: "Solarium", src: "/assets/projetos/CUPECE/IMAGES/Solarium.png" },
+    { id: "hits-cupece-varanda", alt: "Varanda", src: "/assets/projetos/CUPECE/IMAGES/Varanda.png" },
+  ],
+  "start-park-jabaquara": [
+    { id: "start-park-portaria", alt: "Portaria", src: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Engenharia_Hits_Park_Portaria_HR.jpg" },
+    { id: "start-park-piscina", alt: "Piscina", src: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Engenharia_Hits_Piscina_HR.jpg" },
+    { id: "start-park-churrasqueira", alt: "Churrasqueira", src: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Engenharia_Hits_Park_Churrasqueira_HR.jpg" },
+    { id: "start-park-cine-open", alt: "Cine Open", src: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Engenharia_Hits_Park_CineOpen_HR.jpg" },
+    { id: "start-park-crossfit", alt: "CrossFit", src: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Engenharia_Hits_Park_CrossFit_HR.jpg" },
+    { id: "start-park-play-aventura", alt: "Play aventura", src: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Engenharia_Hits_Park_PlayAventura_HR.jpg" },
+    { id: "start-park-salao-gourmet", alt: "Salao de festas gourmet", src: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Engenharia_Hits_Park_Salao_Festas_Gourmet_HR.jpg" },
+    { id: "start-park-bike-station", alt: "Bike station", src: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Hits_Park_Bike_Station_HR.jpg" },
+    { id: "start-park-fitness", alt: "Fitness", src: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Hits_Park_Fitness_HR.jpg" },
+  ],
+  "oh-freguesia": [
+    { id: "oh-freguesia-fachada", alt: "Fachada ativa", src: "/assets/projetos/OH_FREGUESIA/IMAGES/TS_OH_FREGUESIA_FACHADA_ATIVA_HR.jpg" },
+    { id: "oh-freguesia-aqua-play", alt: "Aqua play", src: "/assets/projetos/OH_FREGUESIA/IMAGES/Ts_Engenharia_Oh_Freguesia_Aqua_Play_HR.jpg" },
+    { id: "oh-freguesia-beach", alt: "Beach", src: "/assets/projetos/OH_FREGUESIA/IMAGES/Ts_Engenharia_Oh_Freguesia_Beach_HR.jpg" },
+    { id: "oh-freguesia-gourmet", alt: "Gourmet", src: "/assets/projetos/OH_FREGUESIA/IMAGES/Ts_Engenharia_Oh_Freguesia_Gourmet_HR.jpg" },
+    { id: "oh-freguesia-fitness", alt: "Fitness", src: "/assets/projetos/OH_FREGUESIA/IMAGES/Ts_Engenharia_Oh_Freguesia_Fitness_HR.jpg" },
+    { id: "oh-freguesia-hall", alt: "Hall", src: "/assets/projetos/OH_FREGUESIA/IMAGES/Ts_Engenharia_Oh_Freguesia_Hall_HR.jpg" },
+    { id: "oh-freguesia-living", alt: "Living", src: "/assets/projetos/OH_FREGUESIA/IMAGES/Ts_Engenharia_Oh_Freguesia_Living_02_HR.jpg" },
+    { id: "oh-freguesia-quarto-casal", alt: "Quarto casal", src: "/assets/projetos/OH_FREGUESIA/IMAGES/TS_OH_Freguesia_Quarto_Casal_HR.jpg" },
+    { id: "oh-freguesia-sky-lounge", alt: "Sky Lounge", src: "/assets/projetos/OH_FREGUESIA/IMAGES/Ts_Engenharia_Oh_Freguesia_Sky_Louge_HR.jpg" },
+  ],
+  "hits-santa-catarina": [
+    { id: "hits-santa-catarina-favorita", alt: "Imagem principal do empreendimento", src: "/assets/projetos/HITS_SANTA_CATARINA/IMAGES/favorita.png" },
+    { id: "hits-santa-catarina-fachada", alt: "Fachada", src: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.png" },
+    { id: "hits-santa-catarina-lou", alt: "Ambiente do empreendimento", src: "/assets/projetos/HITS_SANTA_CATARINA/IMAGES/LOU02326.png" },
+    { id: "hits-santa-catarina-1", alt: "Area comum", src: "/assets/projetos/HITS_SANTA_CATARINA/IMAGES/1-1-scaled.jpeg" },
+    { id: "hits-santa-catarina-20", alt: "Area externa", src: "/assets/projetos/HITS_SANTA_CATARINA/IMAGES/20-scaled.jpeg" },
+    { id: "hits-santa-catarina-3", alt: "Detalhe do projeto", src: "/assets/projetos/HITS_SANTA_CATARINA/IMAGES/3-scaled.jpeg" },
+    { id: "hits-santa-catarina-30", alt: "Ambiente de convivencia", src: "/assets/projetos/HITS_SANTA_CATARINA/IMAGES/30-scaled.jpeg" },
+    { id: "hits-santa-catarina-2-13", alt: "Area interna", src: "/assets/projetos/HITS_SANTA_CATARINA/IMAGES/2-13.png" },
+    { id: "hits-santa-catarina-2-14", alt: "Perspectiva do empreendimento", src: "/assets/projetos/HITS_SANTA_CATARINA/IMAGES/2-14.png" },
+  ],
+};
 
 const cellLayout: { span: string; height: string }[] = [
   { span: "col-span-8", height: "h-[clamp(340px,36vw,540px)]" },
@@ -35,7 +70,7 @@ const cellLayout: { span: string; height: string }[] = [
 
 export function EmpGaleria({ p }: { p: Projeto }) {
   const gallery = useMemo<GalleryItem[]>(
-    () => (p.slug === "hits-cupece" ? cupeceImages : p.gallery),
+    () => projectGalleryImages[p.slug] ?? p.gallery,
     [p.gallery, p.slug],
   );
 

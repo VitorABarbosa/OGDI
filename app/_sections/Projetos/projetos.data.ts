@@ -441,6 +441,7 @@ export const projetos: Projeto[] = [
     slug: "hits-santa-catarina",
     tag: "Da concepção ao lançamento — operação entregue.",
     tone: "t1", ctaLabel: "Conheça o empreendimento",
+    image: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.png",
     segmento: "Residencial", local: "Localização a confirmar", localTbd: true,
     modelo: "Parceria estratégica",
     intro: [
