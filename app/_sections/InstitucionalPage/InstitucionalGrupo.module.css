@@ -285,8 +285,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(18, 22, 23, .9), rgba(18, 22, 23, .52) 46%, rgba(18, 22, 23, .22)),
-    linear-gradient(180deg, rgba(18, 22, 23, .42), transparent 38%, rgba(18, 22, 23, .82));
+    linear-gradient(90deg, rgba(18, 22, 23, .68), rgba(18, 22, 23, .26) 46%, transparent),
+    linear-gradient(180deg, rgba(18, 22, 23, .22), transparent 34%, rgba(18, 22, 23, .58));
 }
 
 .bgImg {
