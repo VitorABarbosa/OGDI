@@ -20,10 +20,10 @@ export default function InstitucionalPage() {
       <RevealController />
       <InstitucionalHero />
       <InstitucionalSobre />
-      <InstitucionalGrupo />
       <InstitucionalManifesto />
       <InstitucionalOrigem />
       <InstitucionalLideranca />
+      <InstitucionalGrupo />
       <InstitucionalAssinatura />
     </main>
   );
