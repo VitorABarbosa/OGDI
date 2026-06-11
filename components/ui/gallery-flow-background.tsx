@@ -285,6 +285,9 @@ function drawPath(
 
 export function GalleryFlowBackground({ hiddenNodes = [] }: { hiddenNodes?: number[] } = {}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  // Ref para a animação ler o valor atual da prop (o efeito só roda na montagem).
+  const hiddenNodesRef = useRef(hiddenNodes);
+  hiddenNodesRef.current = hiddenNodes;
   const mouseRef = useRef<Point>({ x: 0, y: 0 });
   const targetMouseRef = useRef<Point>({ x: 0, y: 0 });
 
@@ -344,7 +347,7 @@ export function GalleryFlowBackground({ hiddenNodes = [] }: { hiddenNodes?: numb
       ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = "rgba(247,246,244,0.92)";
       ctx.fillRect(0, 0, width, height);
-      drawPath(ctx, width, height, time, mouseRef.current, bounds, hiddenNodes);
+      drawPath(ctx, width, height, time, mouseRef.current, bounds, hiddenNodesRef.current);
 
       animationId = window.requestAnimationFrame(animate);
     };

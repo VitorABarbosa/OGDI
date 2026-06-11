@@ -25,7 +25,7 @@ export default function InstitucionalPage() {
       <InstitucionalOrigem />
       {/* Linhas fluidas (igual à página de projeto) de Quem conduz ao fim do Nosso Grupo */}
       <div className="relative overflow-hidden bg-bg-soft">
-        <GalleryFlowBackground hiddenNodes={[0, 1, 2, 3]} />
+        <GalleryFlowBackground hiddenNodes={[0, 1, 2, 3, 4, 5, 6]} />
         <div className="relative z-[2]">
           <InstitucionalLideranca />
           <InstitucionalGrupo />
