@@ -37,6 +37,15 @@ export const institucional = {
       "Estratégia, arquitetura, visualização e audiovisual operam como forças complementares. Cada empresa aprofunda uma etapa da jornada: estruturar, desenhar, antecipar e comunicar.",
     companies: [
       {
+        id: "flying",
+        name: "Flying Studio",
+        label: "Flying",
+        role: "Futuros visuais e experiências imersivas",
+        text:
+          "A máquina de antecipar futuros. Imagens e perspectivas 3D, apps, o D.Brave e salas imersivas transportam o cliente para dentro da sua futura realidade — mais de 12 anos traduzindo tijolo e cimento em pura poesia visual.",
+        tags: ["Perspectivas 3D", "Apps", "D.Brave", "Salas Imersivas"],
+      },
+      {
         id: "ogdi",
         name: "Open Group Desenvolvimento Imobiliário",
         label: "OGDI",
@@ -53,15 +62,6 @@ export const institucional = {
         text:
           "Onde a inteligência arquitetônica ganha forma e emoção. O lar como um verdadeiro ninho: projetos de interiores, design de fachadas e PDVs concebidos como espaços de aconchego, segurança e forte personalidade.",
         tags: ["Interiores", "Fachadas", "PDV"],
-      },
-      {
-        id: "flying",
-        name: "Flying Studio",
-        label: "Flying",
-        role: "Futuros visuais e experiências imersivas",
-        text:
-          "A máquina de antecipar futuros. Imagens e perspectivas 3D, apps, o D.Brave e salas imersivas transportam o cliente para dentro da sua futura realidade — mais de 12 anos traduzindo tijolo e cimento em pura poesia visual.",
-        tags: ["Perspectivas 3D", "Apps", "D.Brave", "Salas Imersivas"],
       },
       {
         id: "rinno",
