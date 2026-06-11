@@ -29,6 +29,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+dev.log
+*.log
+
+# reference design (assets locais pesados — nao versionar)
+REFERENCE - CLAUDE DESIGN/OGDI_R02/
 
 # env files (can opt-in for committing if needed)
 .env*
