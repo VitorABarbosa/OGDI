@@ -23,7 +23,7 @@ export function Footer() {
           <h5 className="text-[11px] tracking-[.16em] uppercase text-on-dark-2 mb-5 font-medium">Contato</h5>
           <ul className="list-none p-0 m-0 flex flex-col gap-3 text-[14px]">
             <li><a href={`mailto:${site.email}`} className="text-on-dark/80 hover:text-green transition-colors">{site.email}</a></li>
-            <li><Link href="/#contato" className="text-on-dark/80 hover:text-green transition-colors">{site.phone}</Link></li>
+            <li><Link href="/contato" className="text-on-dark/80 hover:text-green transition-colors">{site.phone}</Link></li>
             <li className="text-on-dark-2">{site.location}</li>
           </ul>
         </div>

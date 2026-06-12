@@ -17,7 +17,7 @@ export function EmpClosing({ p }: { p: Projeto }) {
             </p>
           </div>
           <div className="reveal reveal-3 flex lg:justify-end">
-            <Button href={p.closingStatement.ctaHref ?? "/#contato"} variant="light" arrow>
+            <Button href={p.closingStatement.ctaHref ?? "/contato"} variant="light" arrow>
               {p.closingStatement.ctaLabel}
             </Button>
           </div>

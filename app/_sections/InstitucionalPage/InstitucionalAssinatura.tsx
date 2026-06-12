@@ -24,7 +24,7 @@ export function InstitucionalAssinatura() {
           <Button href="/projetos" variant="light" arrow>
             Ver os projetos
           </Button>
-          <Button href="/#contato" variant="on-dark" arrow>
+          <Button href="/contato" variant="on-dark" arrow>
             Fale com a Open Group
           </Button>
         </div>

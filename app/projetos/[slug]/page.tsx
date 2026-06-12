@@ -60,7 +60,7 @@ export default async function Page({
         title={`Interesse no ${p.name}?`}
         text="Fale com a equipe da Open Group e receba mais informações sobre o empreendimento e a operação."
         ctaLabel="Falar com a equipe"
-        href="/#contato"
+        href="/contato"
       />
     </main>
   );

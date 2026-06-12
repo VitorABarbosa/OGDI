@@ -6,7 +6,7 @@ export const navItems: NavItem[] = [
   { label: "Clientes", href: "/#parceiros" },
   { label: "Investidores", href: "/investidores" },
   { label: "Insights", href: "/insights" },
-  { label: "Contato", href: "/#contato" },
+  { label: "Contato", href: "/contato" },
 ];
 
 export const footerAtuacao: NavItem[] = [

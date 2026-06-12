@@ -16,7 +16,7 @@ export default function Page() {
         title="Tem uma área ou projeto com potencial?"
         text="Apresente a oportunidade. Fazemos a primeira leitura e indicamos os próximos passos da operação."
         ctaLabel="Apresentar oportunidade"
-        href="/#contato"
+        href="/contato"
       />
     </main>
   );

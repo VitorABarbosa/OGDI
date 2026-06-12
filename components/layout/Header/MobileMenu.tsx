@@ -20,7 +20,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
         ))}
       </nav>
       <div className="flex flex-col gap-[6px] text-on-dark-2 text-[14px]">
-        <Button href="/#contato" variant="light" className="self-start mb-[18px]">Apresentar oportunidade</Button>
+        <Button href="/contato" variant="light" className="self-start mb-[18px]">Apresentar oportunidade</Button>
         <span>{site.email}</span>
         <span>{site.location}</span>
       </div>

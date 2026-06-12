@@ -36,7 +36,7 @@ export function EmpInfo({ p }: { p: Projeto }) {
             <MetaRow label="Modelo" value={p.modelo} className="reveal-info-4" />
             <MetaRow label="Tipologia · metragem" value="A confirmar" tbd />
 
-            <Button href="/#contato" arrow className="reveal reveal-info-5 mt-[28px] self-start">
+            <Button href="/contato" arrow className="reveal reveal-info-5 mt-[28px] self-start">
               Tenho interesse
             </Button>
           </div>
