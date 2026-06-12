@@ -13,21 +13,18 @@ export function useHeaderScroll() {
       requestAnimationFrame(() => {
         const sy = window.scrollY, vh = window.innerHeight;
         setScrolled(sy > 20);
-        const stage = document.getElementById("top");
+        // Mesma lógica da home em todas as páginas: sobre o topo escuro
+        // (hero #top ou seção marcada com data-header-dark) a header fica
+        // transparente; ao rolar para baixo, vira a barra branca.
+        // Sem marcador (topo claro), o texto já começa escuro.
+        const stage =
+          document.getElementById("top") ?? document.querySelector("[data-header-dark]");
         if (stage) {
           const scrolledPast = Math.max(0, -stage.getBoundingClientRect().top);
           const p = Math.min(1, Math.max(0, scrolledPast / (vh * 0.65)));
           setOnDark(p < 0.1);
         } else {
-          // Páginas sem #top: heroes escuros se marcam com data-header-dark.
-          // Sem o marcador (topo claro), o texto da header fica escuro.
-          const dark = document.querySelector("[data-header-dark]");
-          if (dark) {
-            const rect = dark.getBoundingClientRect();
-            setOnDark(rect.top <= 0 && rect.bottom > 120);
-          } else {
-            setOnDark(false);
-          }
+          setOnDark(false);
         }
         ticking = false;
       });
