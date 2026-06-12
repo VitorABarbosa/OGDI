@@ -121,6 +121,7 @@ export const institucional = {
       {
         name: "Max Barbosa",
         role: "CEO and Founder",
+        image: "/assets/MAX_DONO.jpeg",
         bio: "Conduz a estruturação das operações, da leitura da oportunidade ao desenho estratégico do empreendimento.",
         statement: "Antes de desenvolver um empreendimento, é preciso enxergar o valor que ainda não foi revelado.",
         quote: [
