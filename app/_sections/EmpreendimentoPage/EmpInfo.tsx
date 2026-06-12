@@ -32,7 +32,7 @@ export function EmpInfo({ p }: { p: Projeto }) {
             <MetaRow label="Segmento" value={p.segmento} className="reveal-info-1" />
             <MetaRow label="Localização" value={p.local} tbd={p.localTbd} />
             {p.regiao && <MetaRow label="Região" value={p.regiao} />}
-            <MetaRow label="Atuação Open Group" value="Estruturação da operação" />
+            <MetaRow label="Atuação Open Group" value="Sócia da operação" />
             <MetaRow label="Modelo" value={p.modelo} className="reveal-info-4" />
             <MetaRow label="Tipologia · metragem" value="A confirmar" tbd />
 

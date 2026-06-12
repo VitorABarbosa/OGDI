@@ -85,7 +85,7 @@ export function EmpHero({ p }: { p: Projeto }) {
               aria-hidden
               className="w-1 h-1 rounded-full shrink-0 bg-white/50"
             />
-            <span>Estruturação OGDI</span>
+            <span>OGDI sócia da operação</span>
           </div>
 
           {p.heroSummary && (

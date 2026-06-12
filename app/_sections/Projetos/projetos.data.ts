@@ -99,7 +99,7 @@ export const projetos: Projeto[] = [
     tone: "t2", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/CUPECE/Cupece.png",
     segmento: "Residencial", local: "São Paulo · SP", regiao: "Cupecê",
-    modelo: "Parceria estratégica",
+    modelo: "Sócia da operação",
     address: "Rua Dom João Soares Coelho",
     units: "1 e 2 dormitórios",
     unitFeature: "Terraço com churrasqueira",
@@ -226,7 +226,7 @@ export const projetos: Projeto[] = [
     tone: "t3", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/HITS_START_PARK_JABAQUARA/HITS_PARK.png",
     segmento: "Residencial", local: "São Paulo · SP",
-    modelo: "Parceria estratégica",
+    modelo: "Sócia da operação",
     intro: [
       "[PROVISÓRIO] No Jabaquara, a leitura da oportunidade precedeu a estruturação. A OGDI identificou o potencial do ativo e construiu a tese com base em contexto de praça e leitura concorrencial consistente.",
       "[PROVISÓRIO] A conceituação do produto e a modelagem da operação alinharam capital, parceiros e execução na mesma direção — condição para que o lançamento fosse viável e sustentável.",
@@ -234,7 +234,7 @@ export const projetos: Projeto[] = [
     ],
     heroSummary:
       "Um empreendimento residencial em obra no Jabaquara, estruturado a partir de leitura de mercado, produto e viabilidade.",
-    facts: ["Em obra", "Residencial", "Jabaquara - São Paulo", "Parceria estratégica"],
+    facts: ["Em obra", "Residencial", "Jabaquara - São Paulo", "Sócia da operação"],
     locationStory: {
       kicker: "A tese do lugar",
       title: "No Jabaquara, a oportunidade nasce da leitura da praça.",
@@ -260,7 +260,7 @@ export const projetos: Projeto[] = [
         { label: "Status", value: "Em obra", text: "A operação já avançou da estruturação para a execução." },
         { label: "Segmento", value: "Residencial", text: "Produto orientado para demanda urbana de moradia." },
         { label: "Localização", value: "Jabaquara", text: "Praça avaliada a partir de contexto, acesso e leitura concorrencial." },
-        { label: "Modelo", value: "Parceria estratégica", text: "Capital, parceiros e execução alinhados desde a origem." },
+        { label: "Modelo", value: "Sócia da operação", text: "Capital, parceiros e execução alinhados desde a origem." },
       ],
     },
     galleryIntro: {
@@ -299,7 +299,7 @@ export const projetos: Projeto[] = [
     tone: "t1", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/OH_FREGUESIA/Oh_freguesia.png",
     segmento: "Residencial", local: "São Paulo · SP",
-    modelo: "Parceria estratégica",
+    modelo: "Sócia da operação",
     intro: [
       "[PROVISÓRIO] O Oh Freguesia nasceu de uma leitura cuidadosa da oportunidade: ativo avaliado, potencial mapeado e tese de produto construída com base em inteligência de mercado da região.",
       "[PROVISÓRIO] A OGDI conduziu a conceituação do produto e a estruturação da operação, conectando os parceiros necessários e preparando o empreendimento para lançamento.",
@@ -307,7 +307,7 @@ export const projetos: Projeto[] = [
     ],
     heroSummary:
       "Um empreendimento residencial em obra na Freguesia, com produto conceituado e operação estruturada pela Open Group.",
-    facts: ["Em obra", "Residencial", "Freguesia - São Paulo", "Parceria estratégica"],
+    facts: ["Em obra", "Residencial", "Freguesia - São Paulo", "Sócia da operação"],
     locationStory: {
       kicker: "A tese do lugar",
       title: "A Freguesia entra na narrativa como território de oportunidade.",
@@ -333,7 +333,7 @@ export const projetos: Projeto[] = [
         { label: "Status", value: "Em obra", text: "A operação avançou para execução após a consolidação da tese." },
         { label: "Segmento", value: "Residencial", text: "Empreendimento voltado à demanda urbana da região." },
         { label: "Localização", value: "Freguesia", text: "Região trabalhada como parte central da estratégia do produto." },
-        { label: "Modelo", value: "Parceria estratégica", text: "Estruturação com parceiros e operação preparados pela Open Group." },
+        { label: "Modelo", value: "Sócia da operação", text: "Estruturação com parceiros e operação preparados pela Open Group." },
       ],
     },
     galleryIntro: {
@@ -371,14 +371,14 @@ export const projetos: Projeto[] = [
     tag: "Oportunidade originada e operação em estruturação.",
     tone: "t3", ctaLabel: "Falar sobre o projeto",
     segmento: "Residencial", local: "Guarulhos · SP",
-    modelo: "Parceria estratégica",
+    modelo: "Sócia da operação",
     intro: [
       "[PROVISÓRIO] A oportunidade em Guarulhos foi originada pela OGDI com base em leitura de mercado local e avaliação criteriosa do potencial de desenvolvimento da área.",
       "[PROVISÓRIO] A operação está em estruturação: viabilidade em análise, parceiros sendo articulados e modelagem financeira em curso para alinhar capital e execução.",
     ],
     heroSummary:
       "Um futuro lançamento residencial em Guarulhos, em fase de estruturação de oportunidade, produto e viabilidade.",
-    facts: ["Futuro lançamento", "Residencial", "Guarulhos - SP", "Parceria estratégica"],
+    facts: ["Futuro lançamento", "Residencial", "Guarulhos - SP", "Sócia da operação"],
     locationStory: {
       kicker: "A tese do lugar",
       title: "Em Guarulhos, a leitura da oportunidade vem antes do lançamento.",
@@ -404,7 +404,7 @@ export const projetos: Projeto[] = [
         { label: "Status", value: "Futuro lançamento", text: "Projeto em estruturação, ainda antes da comunicação final de mercado." },
         { label: "Segmento", value: "Residencial", text: "Direção de produto voltada à moradia e ao potencial local." },
         { label: "Localização", value: "Guarulhos", text: "Praça em análise para definição de posicionamento e viabilidade." },
-        { label: "Modelo", value: "Parceria estratégica", text: "Operação construída com alinhamento entre capital, parceiros e execução." },
+        { label: "Modelo", value: "Sócia da operação", text: "Operação construída com alinhamento entre capital, parceiros e execução." },
       ],
     },
     galleryIntro: {
@@ -443,7 +443,7 @@ export const projetos: Projeto[] = [
     tone: "t1", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.png",
     segmento: "Residencial", local: "Localização a confirmar", localTbd: true,
-    modelo: "Parceria estratégica",
+    modelo: "Sócia da operação",
     intro: [
       "[PROVISÓRIO] O Hits Santa Catarina representa uma operação conduzida pela OGDI da concepção ao lançamento. A oportunidade foi lida na origem, o produto conceituado com base em inteligência de mercado.",
       "[PROVISÓRIO] A estruturação reuniu viabilidade, parceiros e execução na mesma direção — permitindo que o empreendimento chegasse ao lançamento com a operação consolidada.",
@@ -451,7 +451,7 @@ export const projetos: Projeto[] = [
     ],
     heroSummary:
       "Uma operação residencial entregue, conduzida da concepção ao lançamento com produto, parceiros e execução alinhados.",
-    facts: ["Entregue", "Residencial", "Localização a confirmar", "Parceria estratégica"],
+    facts: ["Entregue", "Residencial", "Localização a confirmar", "Sócia da operação"],
     locationStory: {
       kicker: "A tese do lugar",
       title: "A entrega começa antes da obra: na leitura da oportunidade.",
@@ -477,7 +477,7 @@ export const projetos: Projeto[] = [
         { label: "Status", value: "Entregue", text: "Operação concluída e validada pelo avanço até o lançamento." },
         { label: "Segmento", value: "Residencial", text: "Produto orientado para moradia e posicionamento de mercado." },
         { label: "Localização", value: "A confirmar", text: "Campo preparado para receber o endereço definitivo quando informado." },
-        { label: "Modelo", value: "Parceria estratégica", text: "Estruturação com parceiros, viabilidade e execução conectados." },
+        { label: "Modelo", value: "Sócia da operação", text: "Estruturação com parceiros, viabilidade e execução conectados." },
       ],
     },
     galleryIntro: {
