@@ -29,7 +29,7 @@ export function Footer() {
         </div>
       </div>
       <div className="mt-8 flex items-center justify-between flex-wrap gap-4">
-        <div className="text-[12.5px] text-on-dark-2">{site.copyright} · <a href="#" className="text-on-dark/70">Política de Privacidade</a></div>
+        <div className="text-[12.5px] text-on-dark-2">{site.copyright} · <Link href="/politica-de-privacidade" className="text-on-dark/70 transition-colors hover:text-green">Política de Privacidade</Link></div>
         <div className="flex gap-2">
           <a href={site.social.linkedin} aria-label="LinkedIn" className="w-10 h-10 border border-[color:var(--line-dark)] inline-flex items-center justify-center text-on-dark hover:bg-white hover:text-dark hover:border-white transition-colors"><Icon name="linkedin" /></a>
           <a href={site.social.instagram} aria-label="Instagram" className="w-10 h-10 border border-[color:var(--line-dark)] inline-flex items-center justify-center text-on-dark hover:bg-white hover:text-dark hover:border-white transition-colors"><Icon name="instagram" /></a>
