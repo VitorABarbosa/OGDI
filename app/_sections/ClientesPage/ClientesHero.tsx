@@ -1,28 +1,53 @@
 import { Kicker } from "@/components/ui/Kicker";
+import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 
+const indice = [
+  { idx: "01", title: "Incorporadoras", hint: "Estruturação e condução de operações" },
+  { idx: "02", title: "Construtoras", hint: "Originação e previsibilidade" },
+  { idx: "03", title: "Fundos e investidores", hint: "Capital antes do lançamento" },
+  { idx: "04", title: "Proprietários de área", hint: "O terreno como capital" },
+];
+
+// O único hero claro do site: statement em tinta sobre papel e os quatro
+// perfis como índice tipográfico clicável — o visitante se reconhece no
+// primeiro segundo e desce direto para a sua seção.
 export function ClientesHero() {
   return (
     <section
       id="clientes-inicio"
-      data-header-dark
-      className="relative overflow-hidden bg-dark pt-[clamp(150px,20vh,230px)] pb-[clamp(72px,9vw,128px)] text-white"
+      className="relative overflow-hidden bg-paper pt-[clamp(140px,19vh,220px)] pb-[clamp(56px,7vw,100px)]"
     >
-      {/* Glow radial — mesma família dos heroes de Projetos e Contato */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 z-0 opacity-60 [background:radial-gradient(105%_85%_at_15%_-8%,rgba(31,90,99,.42),transparent_56%),radial-gradient(85%_75%_at_92%_112%,rgba(95,168,60,.15),transparent_60%)]"
-      />
-      <div className="wrap relative z-[1]">
-        <Kicker tone="on-dark-green" className="reveal">Clientes</Kicker>
-        <h1 className="reveal reveal-2 mt-6 max-w-[20ch] font-news font-normal text-[clamp(2.2rem,5.4vw,4.6rem)] leading-[1.06] tracking-[-.018em]">
+      {/* Linha fluida em variante serena: três trechos visíveis, bem suaves */}
+      <GalleryFlowBackground background="#FFFFFF" variant="clientes" />
+      <div className="wrap relative z-[2]">
+        <Kicker className="reveal">Clientes</Kicker>
+        <h1 className="reveal reveal-2 mt-6 max-w-[24ch] font-news font-normal text-[clamp(2.1rem,5vw,4.2rem)] leading-[1.06] tracking-[-.018em] text-ink">
           Cada operação nasce de
           <br />
           <span className="italic text-green">uma relação de confiança</span>.
         </h1>
-        <p className="reveal reveal-3 mt-7 max-w-[54ch] text-[clamp(15px,1.15vw,18px)] leading-[1.65] text-white/70">
-          Incorporadoras, construtoras, fundos e proprietários de área que
-          estruturam suas operações com a Open Group — da origem ao lançamento.
-        </p>
+
+        {/* Índice de perfis — âncoras para os blocos da seção seguinte */}
+        <div className="reveal reveal-3 mt-[clamp(44px,5.5vw,76px)]">
+          {indice.map((p, i) => (
+            <a
+              key={p.idx}
+              href={`#clientes-perfil-${p.idx}`}
+              className={`group grid grid-cols-[52px_1fr] items-baseline gap-3 border-t border-[color:var(--line)] py-[clamp(16px,2.1vw,26px)] transition-[padding-left] duration-[400ms] ease-brand hover:pl-3 md:grid-cols-[64px_1fr_auto] md:gap-[clamp(18px,2.6vw,40px)] ${i === indice.length - 1 ? "border-b" : ""}`}
+            >
+              <span className="font-sans text-[12px] font-semibold tracking-[.2em] text-green tabular-nums">{p.idx}</span>
+              <span className="font-news text-[clamp(1.45rem,2.9vw,2.6rem)] leading-[1.08] tracking-[-.015em] text-ink transition-colors duration-300 group-hover:text-teal">
+                {p.title}
+              </span>
+              <span className="hidden items-baseline gap-4 text-[12.5px] text-ink-3 md:flex">
+                {p.hint}
+                <span aria-hidden className="text-[16px] text-green opacity-0 transition-[opacity,transform] duration-300 ease-brand group-hover:translate-y-[2px] group-hover:opacity-100">
+                  ↓
+                </span>
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -373,11 +373,138 @@ function buildInvestidoresGeometry({
   };
 }
 
-export type FlowVariant = "default" | "investidores";
+// Geometria da página de clientes — uma única varredura serena: dois
+// lead-ins fora da tela (para a distribuição das ondas) e três trechos
+// visíveis de curvas bem abertas. Três nós, movimento bem reduzido.
+function buildClientesGeometry({
+  width,
+  height,
+  flowTop,
+  flowHeight,
+  drift,
+  influenceX,
+  influenceY,
+}: FlowGeomInput): FlowGeometry {
+  const y = (f: number) => flowTop + flowHeight * f;
+  const segments: FlowSegment[] = [
+    // Lead-ins fora da tela, à esquerda.
+    [
+      { x: width * -0.3, y: y(0.05) },
+      { x: width * -0.22, y: y(0.07) },
+      { x: width * -0.16, y: y(0.09) },
+      { x: width * -0.1, y: y(0.11) },
+    ],
+    [
+      { x: width * -0.1, y: y(0.11) },
+      { x: width * -0.06, y: y(0.13) },
+      { x: width * -0.04, y: y(0.15) },
+      { x: width * -0.02, y: y(0.17) },
+    ],
+    // Varredura suave para a direita.
+    [
+      { x: width * -0.02, y: y(0.17) },
+      { x: width * 0.25, y: y(0.22) + drift * 0.3 },
+      { x: width * 0.5, y: y(0.3) },
+      { x: width * 0.68, y: y(0.38) },
+    ],
+    // Retorno bem aberto.
+    [
+      { x: width * 0.68, y: y(0.38) },
+      { x: width * 0.84, y: y(0.45) + influenceY * 0.5 },
+      { x: width * 0.86, y: y(0.55) },
+      { x: width * 0.66, y: y(0.64) },
+    ],
+    // Saída serena pela esquerda, embaixo.
+    [
+      { x: width * 0.66, y: y(0.64) },
+      { x: width * 0.4, y: y(0.73) + drift * 0.4 },
+      { x: width * 0.15, y: y(0.8) },
+      { x: width * -0.06, y: y(0.9) },
+    ],
+  ];
+
+  return {
+    segments,
+    gradientFrom: { x: width * -0.02, y: y(0.17) },
+    gradientTo: { x: width * -0.06, y: y(0.9) },
+    motionScale: 0.4,
+    nodes: [
+      { x: width * 0.68, y: y(0.38) },
+      { x: width * 0.66, y: y(0.64) },
+      { x: width * 0.15, y: y(0.8) },
+    ],
+  };
+}
+
+// Espelho da variante clientes para a seção de compromissos: entra pela
+// direita, contorna o título à esquerda e sai pelo canto inferior direito.
+function buildClientesCompromissosGeometry({
+  width,
+  height,
+  flowTop,
+  flowHeight,
+  drift,
+  influenceX,
+  influenceY,
+}: FlowGeomInput): FlowGeometry {
+  const y = (f: number) => flowTop + flowHeight * f;
+  const segments: FlowSegment[] = [
+    // Lead-ins fora da tela, à direita.
+    [
+      { x: width * 1.3, y: y(0.05) },
+      { x: width * 1.22, y: y(0.07) },
+      { x: width * 1.16, y: y(0.09) },
+      { x: width * 1.1, y: y(0.11) },
+    ],
+    [
+      { x: width * 1.1, y: y(0.11) },
+      { x: width * 1.06, y: y(0.13) },
+      { x: width * 1.04, y: y(0.15) },
+      { x: width * 1.02, y: y(0.17) },
+    ],
+    // Varredura suave para a esquerda.
+    [
+      { x: width * 1.02, y: y(0.17) },
+      { x: width * 0.75, y: y(0.22) + drift * 0.3 },
+      { x: width * 0.5, y: y(0.3) },
+      { x: width * 0.32, y: y(0.38) },
+    ],
+    // Retorno bem aberto, contornando o título.
+    [
+      { x: width * 0.32, y: y(0.38) },
+      { x: width * 0.16, y: y(0.45) + influenceY * 0.5 },
+      { x: width * 0.14, y: y(0.55) },
+      { x: width * 0.34, y: y(0.64) },
+    ],
+    // Saída serena pela direita, embaixo.
+    [
+      { x: width * 0.34, y: y(0.64) },
+      { x: width * 0.6, y: y(0.73) + drift * 0.4 },
+      { x: width * 0.85, y: y(0.8) },
+      { x: width * 1.06, y: y(0.9) },
+    ],
+  ];
+
+  return {
+    segments,
+    gradientFrom: { x: width * 1.02, y: y(0.17) },
+    gradientTo: { x: width * 1.06, y: y(0.9) },
+    motionScale: 0.4,
+    nodes: [
+      { x: width * 0.32, y: y(0.38) },
+      { x: width * 0.34, y: y(0.64) },
+      { x: width * 0.85, y: y(0.8) },
+    ],
+  };
+}
+
+export type FlowVariant = "default" | "investidores" | "clientes" | "clientes-compromissos";
 
 const flowGeometries: Record<FlowVariant, (g: FlowGeomInput) => FlowGeometry> = {
   default: buildDefaultGeometry,
   investidores: buildInvestidoresGeometry,
+  clientes: buildClientesGeometry,
+  "clientes-compromissos": buildClientesCompromissosGeometry,
 };
 
 function drawPath(

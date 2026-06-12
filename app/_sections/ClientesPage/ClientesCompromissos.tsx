@@ -1,4 +1,5 @@
 import { Kicker } from "@/components/ui/Kicker";
+import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 
 const compromissos = [
   {
@@ -27,8 +28,10 @@ const compromissos = [
 // desenho das réguas de Atuação da home.
 export function ClientesCompromissos() {
   return (
-    <section id="clientes-compromissos" className="bg-paper py-[clamp(88px,11vw,160px)]">
-      <div className="wrap">
+    <section id="clientes-compromissos" className="relative overflow-hidden bg-paper py-[clamp(88px,11vw,160px)]">
+      {/* Linha fluida serena, espelhada em relação à do hero */}
+      <GalleryFlowBackground background="#FFFFFF" variant="clientes-compromissos" />
+      <div className="wrap relative z-[2]">
         <div className="grid grid-cols-1 items-start gap-[clamp(40px,6vw,96px)] lg:grid-cols-[0.9fr_1.1fr]">
           <div className="reveal lg:sticky lg:top-[120px]">
             <Kicker>O que sustenta a relação</Kicker>

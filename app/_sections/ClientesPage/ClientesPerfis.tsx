@@ -40,7 +40,7 @@ const perfis = [
 // para o caminho certo do site.
 export function ClientesPerfis() {
   return (
-    <section id="clientes-perfis" className="bg-paper py-[clamp(88px,11vw,160px)]">
+    <section id="clientes-perfis" className="bg-bg-soft py-[clamp(88px,11vw,160px)]">
       <div className="wrap">
         <div className="reveal max-w-[640px]">
           <Kicker>Para quem trabalhamos</Kicker>
@@ -55,7 +55,8 @@ export function ClientesPerfis() {
           {perfis.map((p, i) => (
             <div
               key={p.idx}
-              className={`reveal reveal-${Math.min(i + 1, 4)} group border-t border-[color:var(--line)] py-[clamp(28px,3.4vw,44px)]`}
+              id={`clientes-perfil-${p.idx}`}
+              className={`reveal reveal-${Math.min(i + 1, 4)} group scroll-mt-[110px] border-t border-[color:var(--line)] py-[clamp(28px,3.4vw,44px)]`}
             >
               <span className="font-sans text-[12px] font-semibold tracking-[.2em] text-green tabular-nums">{p.idx}</span>
               <h3 className="mt-3 font-sans font-semibold text-[clamp(20px,1.9vw,28px)] tracking-[-.02em] text-ink">
