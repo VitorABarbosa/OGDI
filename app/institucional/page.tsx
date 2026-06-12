@@ -8,6 +8,17 @@ import { InstitucionalManifesto } from "@/app/_sections/InstitucionalPage/Instit
 import { InstitucionalOrigem } from "@/app/_sections/InstitucionalPage/InstitucionalOrigem";
 import { InstitucionalLideranca } from "@/app/_sections/InstitucionalPage/InstitucionalLideranca";
 import { InstitucionalAssinatura } from "@/app/_sections/InstitucionalPage/InstitucionalAssinatura";
+import { PageSectionRail } from "@/app/_sections/PageSectionRail";
+
+const institucionalRailItems = [
+  { id: "institucional-inicio", label: "Início" },
+  { id: "institucional-sobre", label: "Sobre" },
+  { id: "institucional-manifesto", label: "Manifesto" },
+  { id: "institucional-origem", label: "Origem" },
+  { id: "institucional-lideranca", label: "Quem conduz" },
+  { id: "institucional-grupo", label: "Nosso Grupo" },
+  { id: "institucional-assinatura", label: "Mensagem final" },
+] as const;
 
 export const metadata: Metadata = {
   title: "Quem somos",
@@ -19,6 +30,7 @@ export default function InstitucionalPage() {
   return (
     <main>
       <RevealController />
+      <PageSectionRail items={institucionalRailItems} ariaLabel="Navegação visual da página institucional" />
       <InstitucionalHero />
       <InstitucionalSobre />
       <InstitucionalManifesto />

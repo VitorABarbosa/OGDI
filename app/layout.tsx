@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { serif, sans, news } from "@/lib/fonts";
 import { Header } from "@/components/layout/Header/Header";
 import { Footer } from "@/components/layout/Footer/Footer";
+import { LenisProvider } from "@/components/Lenis/LenisProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -21,9 +22,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR" className={`${serif.variable} ${sans.variable} ${news.variable}`}>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <LenisProvider>
+          <Header />
+          {children}
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );

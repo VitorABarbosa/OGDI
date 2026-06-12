@@ -6,7 +6,10 @@ import { AssinaturaWatermark } from "./AssinaturaWatermark";
 export function InstitucionalAssinatura() {
   const { assinatura } = institucional;
   return (
-    <section className="relative overflow-hidden bg-dark py-[clamp(96px,13vw,184px)] text-white">
+    <section
+      id="institucional-assinatura"
+      className="relative overflow-hidden bg-dark py-[clamp(96px,13vw,184px)] text-white"
+    >
       <AssinaturaWatermark />
       <div
         aria-hidden

@@ -4,7 +4,7 @@ import { institucional } from "./institucional.data";
 export function InstitucionalSobre() {
   const { about } = institucional;
   return (
-    <section className="bg-white py-section text-ink">
+    <section id="institucional-sobre" className="bg-white py-section text-ink">
       <div className="wrap">
         <div className="grid grid-cols-1 items-start gap-[clamp(40px,6vw,100px)] lg:grid-cols-[0.82fr_1.18fr]">
           <div className="reveal">
@@ -49,14 +49,18 @@ export function InstitucionalSobre() {
           </div>
         </div>
 
-        <div className="reveal mt-[clamp(40px,5vw,64px)] grid grid-cols-1 gap-px border border-[color:var(--line)] bg-[color:var(--line)] sm:grid-cols-3">
-          {about.facts.map((f) => (
-            <div key={f.v} className="bg-white px-[26px] py-7">
-              <div className="font-news font-normal text-[clamp(1.5rem,2.2vw,2.1rem)] leading-none text-ink">{f.v}</div>
-              <div className="mt-[9px] text-[12px] leading-[1.45] tracking-[.03em] text-ink-3">{f.k}</div>
-            </div>
-          ))}
-        </div>
+        {about.facts.length > 0 ? (
+          <div className="reveal mt-[clamp(40px,5vw,64px)] grid grid-cols-1 gap-px border border-[color:var(--line)] bg-[color:var(--line)] sm:grid-cols-3">
+            {about.facts.map((f) => (
+              <div key={f.v} className="bg-white px-[26px] py-7">
+                <div className="font-news font-normal text-[clamp(1.5rem,2.2vw,2.1rem)] leading-none text-ink">
+                  {f.v}
+                </div>
+                <div className="mt-[9px] text-[12px] leading-[1.45] tracking-[.03em] text-ink-3">{f.k}</div>
+              </div>
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );

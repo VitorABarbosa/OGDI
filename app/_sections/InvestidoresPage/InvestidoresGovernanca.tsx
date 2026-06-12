@@ -22,7 +22,7 @@ const pilares = [
 // statement; à direita, os três pilares em réguas.
 export function InvestidoresGovernanca() {
   return (
-    <section className="bg-paper py-[clamp(88px,11vw,160px)]">
+    <section id="investidores-governanca" className="bg-paper py-[clamp(88px,11vw,160px)]">
       <div className="wrap">
         <div className="grid grid-cols-1 items-start gap-[clamp(40px,6vw,96px)] lg:grid-cols-[0.95fr_1.05fr]">
           <div className="reveal lg:sticky lg:top-[120px]">

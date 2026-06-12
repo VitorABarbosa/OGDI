@@ -6,7 +6,7 @@ import { projetos } from "@/app/_sections/Projetos/projetos.data";
 // visual — sem cards, hover desloca e revela a seta.
 export function InvestidoresOperacoes() {
   return (
-    <section className="bg-bg-soft py-[clamp(88px,11vw,160px)]">
+    <section id="investidores-operacoes" className="bg-bg-soft py-[clamp(88px,11vw,160px)]">
       <div className="wrap">
         <Kicker className="reveal">A tese, na prática</Kicker>
         <div className="reveal reveal-2 mt-[clamp(28px,4vw,52px)]">

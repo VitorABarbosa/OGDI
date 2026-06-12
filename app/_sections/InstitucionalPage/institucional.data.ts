@@ -1,7 +1,14 @@
 export type InstModel = { strong: string; rest: string };
 export type InstFact = { v: string; k: string };
 export type InstStratum = { n: string; name: string; desc: string; bed?: boolean };
-export type InstLeader = { name: string; role: string; bio: string };
+export type InstLeader = {
+  name: string;
+  role: string;
+  bio: string;
+  statement: string;
+  quote: string[];
+  image?: string;
+};
 export type InstWordSeg = { text: string; em?: boolean };
 export type InstGroupCompany = {
   id: string;
@@ -32,11 +39,7 @@ export const institucional = {
       { strong: "Parceria", rest: "estratégica" },
       { strong: "Sócia", rest: "da operação" },
     ] as InstModel[],
-    facts: [
-      { v: "Empresa já lançada", k: "Atuação prática no mercado — não uma ideia em validação." },
-      { v: "Clientes atendidos", k: "Operações conduzidas com construtoras, incorporadoras e investidores." },
-      { v: "Projetos realizados", k: "Como sócia da operação e como consultoria contratada." },
-    ] as InstFact[],
+    facts: [] as InstFact[],
   },
   grupo: {
     kicker: "Nosso Grupo",
@@ -115,9 +118,16 @@ export const institucional = {
   lideranca: {
     kicker: "Quem conduz",
     leaders: [
-      { name: "[ Nome ]", role: "Sócio · Estruturação & Desenvolvimento", bio: "Conduz a estruturação das operações, da leitura da oportunidade ao desenho estratégico do empreendimento." },
-      { name: "[ Nome ]", role: "Sócio · Viabilidade & Relações Institucionais", bio: "Responsável pela viabilidade financeira e institucional e pelo relacionamento com bancos e parceiros." },
-      { name: "[ Nome ]", role: "Sócio · Estratégia Comercial & Parcerias", bio: "Articula parceiros estratégicos e a direção comercial até o caminho do lançamento." },
+      {
+        name: "Max Barbosa",
+        role: "CEO and Founder",
+        bio: "Conduz a estruturação das operações, da leitura da oportunidade ao desenho estratégico do empreendimento.",
+        statement: "Antes de desenvolver um empreendimento, é preciso enxergar o valor que ainda não foi revelado.",
+        quote: [
+          "À frente da Open Group, Flying Studio, NID Studio e Rinno Films, conduzo um ecossistema criado para transformar oportunidades imobiliárias em operações mais claras, viáveis e preparadas para avançar.",
+          "Cada empresa atua em uma etapa da jornada, da estratégia à comunicação, sempre com a mesma visão: desenvolver com estrutura desde a origem.",
+        ],
+      },
     ] as InstLeader[],
   },
   assinatura: {

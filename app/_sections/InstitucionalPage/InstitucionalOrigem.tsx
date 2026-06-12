@@ -5,7 +5,7 @@ import { cn } from "@/lib/cn";
 export function InstitucionalOrigem() {
   const { origem } = institucional;
   return (
-    <section className="border-t border-[color:var(--line-dark)] bg-dark-2 py-section">
+    <section id="institucional-origem" className="border-t border-[color:var(--line-dark)] bg-dark-2 py-section">
       <div className="wrap">
         <div className="reveal mx-auto mb-[clamp(44px,5.5vw,76px)] max-w-[680px] text-center">
           <Kicker tone="on-dark-green" className="justify-center">{origem.kicker}</Kicker>

@@ -69,7 +69,7 @@ export function InstitucionalManifesto() {
   }, []);
 
   return (
-    <section className="relative bg-dark">
+    <section id="institucional-manifesto" className="relative bg-dark">
       <div ref={trackRef} className="h-[240vh]">
         <div className="sticky top-0 flex min-h-svh flex-col justify-center">
           <div className="wrap">

@@ -6,6 +6,7 @@ import { InvestidoresCurva } from "./InvestidoresCurva";
 export function InvestidoresHero() {
   return (
     <section
+      id="investidores-inicio"
       data-header-dark
       className="relative flex min-h-svh items-center overflow-hidden bg-dark text-white"
     >

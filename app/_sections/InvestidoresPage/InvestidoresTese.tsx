@@ -30,7 +30,7 @@ const statements = [
 // A linha fluida costura os três statements em serpentina suave.
 export function InvestidoresTese() {
   return (
-    <section className="relative overflow-hidden bg-paper py-[clamp(96px,13vw,200px)]">
+    <section id="investidores-tese" className="relative overflow-hidden bg-paper py-[clamp(96px,13vw,200px)]">
       <GalleryFlowBackground background="#FFFFFF" variant="investidores" />
       <div className="wrap relative z-[2] flex flex-col gap-[clamp(88px,12vw,176px)]">
         {statements.map((s) => (

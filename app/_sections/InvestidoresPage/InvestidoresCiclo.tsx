@@ -9,7 +9,7 @@ const CAPITAL_IDX = "05";
 // como o único acento da seção.
 export function InvestidoresCiclo() {
   return (
-    <section className="bg-dark py-[clamp(80px,10vw,148px)] text-white">
+    <section id="investidores-ciclo" className="bg-dark py-[clamp(80px,10vw,148px)] text-white">
       <div className="wrap">
         <div className="reveal flex flex-wrap items-end justify-between gap-6">
           <Kicker tone="on-dark-green">O ciclo da operação</Kicker>

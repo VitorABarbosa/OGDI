@@ -20,6 +20,8 @@
 .halo {
   transform-box: fill-box;
   transform-origin: center;
+  opacity: 0.18;
+  transform: scale(1);
   animation: pulse 2.6s var(--ease-brand) 2.6s infinite;
 }
 

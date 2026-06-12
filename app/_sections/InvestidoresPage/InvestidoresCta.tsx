@@ -15,7 +15,7 @@ const caminhos = [
 // clicável; o formulário de contato segmenta pelo tipo.
 export function InvestidoresCta() {
   return (
-    <section className="bg-dark text-white">
+    <section id="investidores-contato" className="bg-dark text-white">
       <div className="grid grid-cols-1 md:grid-cols-2">
         {caminhos.map((c, i) => (
           <Link

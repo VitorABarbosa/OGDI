@@ -22,7 +22,7 @@ const modelos = [
 // sem caixas: hierarquia por escala e espaço.
 export function InvestidoresModelos() {
   return (
-    <section className="bg-bg-soft py-[clamp(96px,12vw,180px)]">
+    <section id="investidores-modelos" className="bg-bg-soft py-[clamp(96px,12vw,180px)]">
       <div className="wrap">
         <div className="reveal max-w-[640px]">
           <Kicker>Modelos de participação</Kicker>

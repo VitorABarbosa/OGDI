@@ -7,6 +7,17 @@ import { InvestidoresModelos } from "@/app/_sections/InvestidoresPage/Investidor
 import { InvestidoresGovernanca } from "@/app/_sections/InvestidoresPage/InvestidoresGovernanca";
 import { InvestidoresOperacoes } from "@/app/_sections/InvestidoresPage/InvestidoresOperacoes";
 import { InvestidoresCta } from "@/app/_sections/InvestidoresPage/InvestidoresCta";
+import { PageSectionRail } from "@/app/_sections/PageSectionRail";
+
+const investidoresRailItems = [
+  { id: "investidores-inicio", label: "Início" },
+  { id: "investidores-tese", label: "Tese" },
+  { id: "investidores-ciclo", label: "Ciclo" },
+  { id: "investidores-modelos", label: "Modelos" },
+  { id: "investidores-governanca", label: "Governança" },
+  { id: "investidores-operacoes", label: "Operações" },
+  { id: "investidores-contato", label: "Contato" },
+] as const;
 
 export const metadata: Metadata = {
   title: "Investidores",
@@ -18,6 +29,7 @@ export default function InvestidoresPage() {
   return (
     <main>
       <RevealController />
+      <PageSectionRail items={investidoresRailItems} ariaLabel="Navegação visual da página investidores" />
       <InvestidoresHero />
       <InvestidoresTese />
       <InvestidoresCiclo />

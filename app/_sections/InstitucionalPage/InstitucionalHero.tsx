@@ -7,7 +7,11 @@ import styles from "./InstitucionalHero.module.css";
 export function InstitucionalHero() {
   const { hero } = institucional;
   return (
-    <section data-header-dark className="relative flex min-h-svh items-center overflow-hidden bg-dark">
+    <section
+      id="institucional-inicio"
+      data-header-dark
+      className="relative flex min-h-svh items-center overflow-hidden bg-dark"
+    >
       <InstitucionalHeroWaves />
       <div
         aria-hidden
