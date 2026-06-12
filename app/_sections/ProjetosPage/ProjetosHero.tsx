@@ -7,6 +7,7 @@ const count = String(projetos.length).padStart(2, "0");
 export function ProjetosHero() {
   return (
     <section
+      data-header-dark
       className="relative bg-dark text-white overflow-hidden pt-[clamp(150px,20vh,230px)] pb-[clamp(56px,7vw,96px)]"
     >
       {/* Decorative radial-gradient glow — aria-hidden, z-0 */}

@@ -19,7 +19,15 @@ export function useHeaderScroll() {
           const p = Math.min(1, Math.max(0, scrolledPast / (vh * 0.65)));
           setOnDark(p < 0.1);
         } else {
-          setOnDark(false);
+          // Páginas sem #top: heroes escuros se marcam com data-header-dark.
+          // Sem o marcador (topo claro), o texto da header fica escuro.
+          const dark = document.querySelector("[data-header-dark]");
+          if (dark) {
+            const rect = dark.getBoundingClientRect();
+            setOnDark(rect.top <= 0 && rect.bottom > 120);
+          } else {
+            setOnDark(false);
+          }
         }
         ticking = false;
       });

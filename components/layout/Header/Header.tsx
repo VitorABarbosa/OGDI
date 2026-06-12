@@ -11,7 +11,9 @@ import { cn } from "@/lib/cn";
 export function Header() {
   const { scrolled, onDark } = useHeaderScroll();
   const menu = useMobileMenu();
-  const lightForeground = !scrolled || onDark;
+  // Branco só sobre hero escuro — `!scrolled` deixava a header invisível
+  // no topo de páginas claras (Investidores, Insights).
+  const lightForeground = onDark;
   return (
     <>
       <header className={cn(
@@ -30,7 +32,25 @@ export function Header() {
               lightForeground ? "text-white/80" : "text-ink-3")}>{site.subtitle}</small>
           </span>
         </Link>
-        <Nav onDark={lightForeground} />
+        {/* Nav no centro geométrico da barra (xl+; em lg fica no fluxo para
+            não colidir com logo/CTA); CTA dedicado preenche a direita */}
+        <div className="xl:absolute xl:left-1/2 xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2">
+          <Nav onDark={lightForeground} />
+        </div>
+        {/* CTA tipográfico: sublinhado fino permanente + varredura no hover,
+            na mesma linguagem dos links da nav */}
+        <Link
+          href="/contato"
+          className={cn(
+            "group relative hidden lg:inline-flex items-center gap-[10px] pb-[6px] font-sans text-[11px] tracking-[.18em] uppercase font-medium transition-colors duration-200",
+            lightForeground ? "text-white" : "text-ink",
+          )}
+        >
+          Fale com a Open Group
+          <span aria-hidden className="text-[14px] leading-none transition-transform duration-300 ease-brand group-hover:translate-x-1">→</span>
+          <span aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-current opacity-35" />
+          <span aria-hidden className="absolute left-0 bottom-0 h-px w-0 bg-current transition-[width] duration-300 ease-brand group-hover:w-full" />
+        </Link>
         <button onClick={menu.toggle} aria-label={menu.open ? "Fechar menu" : "Abrir menu"} aria-expanded={menu.open}
           className="lg:hidden relative w-11 h-11 flex items-center justify-center">
           <span aria-hidden className={cn("absolute block h-px w-[22px]", (menu.open || lightForeground) ? "bg-white" : "bg-ink")}

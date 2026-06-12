@@ -6,6 +6,7 @@ import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 export function EmpHero({ p }: { p: Projeto }) {
   return (
     <section
+      data-header-dark
       className="relative overflow-hidden bg-dark h-[clamp(560px,86vh,880px)]"
     >
       {/* Full-bleed image / gradient */}
@@ -108,7 +109,7 @@ export function EmpHero({ p }: { p: Projeto }) {
 
           {p.closingStatement && (
             <div className="reveal reveal-4 mt-[clamp(24px,2.8vw,38px)]">
-              <Button href={p.closingStatement.ctaHref ?? "/#contato"} variant="light" arrow>
+              <Button href={p.closingStatement.ctaHref ?? "/contato"} variant="light" arrow>
                 {p.closingStatement.ctaLabel}
               </Button>
             </div>
