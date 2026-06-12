@@ -1,0 +1,36 @@
+import { Kicker } from "@/components/ui/Kicker";
+import { InvestidoresCurva } from "./InvestidoresCurva";
+
+// Minimalismo exagerado: um único statement gigante, espaço negativo
+// extremo, verde como único acento — e a curva de valor ao fundo.
+export function InvestidoresHero() {
+  return (
+    <section
+      data-header-dark
+      className="relative flex min-h-svh items-center overflow-hidden bg-dark text-white"
+    >
+      <InvestidoresCurva />
+      <div className="wrap relative z-[1] w-full py-[clamp(150px,18vh,220px)]">
+        <Kicker tone="on-dark-green" className="reveal">Investidores</Kicker>
+        <h1 className="reveal reveal-2 mt-[clamp(22px,3vh,38px)] font-news font-normal text-[clamp(1.9rem,4.4vw,4.4rem)] leading-[1.08] tracking-[-.018em]">
+          O valor nasce antes da obra.
+          <br />
+          A oportunidade de investir, <span className="italic text-green">também</span>.
+        </h1>
+        <p className="reveal reveal-3 mt-[clamp(36px,6vh,64px)] max-w-[44ch] text-[clamp(15px,1.15vw,18px)] leading-[1.65] text-white/70">
+          A Open Group estrutura operações imobiliárias e abre espaço para
+          capital qualificado entrar antes do lançamento — na fase em que o
+          valor é criado.
+        </p>
+      </div>
+      {/* Marcador de scroll no canto inferior direito — área livre da curva */}
+      <span
+        aria-hidden
+        className="reveal reveal-4 absolute bottom-[clamp(30px,5vh,56px)] right-pad-x z-[1] hidden items-center gap-3 text-[11px] uppercase tracking-[.22em] text-white/40 md:flex"
+      >
+        A tese
+        <span className="inline-block h-10 w-px bg-white/25" />
+      </span>
+    </section>
+  );
+}
