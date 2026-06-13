@@ -258,5 +258,40 @@
       "ctaProjetos": "Ver los proyectos",
       "ctaContato": "Hablar con Open Group"
     }
+  },
+  "projetos": {
+    "meta": { "title": "Proyectos" },
+    "hero": {
+      "breadcrumbHome": "Inicio",
+      "breadcrumbCurrent": "Proyectos",
+      "kicker": "Proyectos · Cases",
+      "title": "Emprendimientos<br></br>estructurados en el origen.",
+      "countLabel": "emprendimientos<br></br>en portafolio",
+      "sub": "De la lectura de la oportunidad al lanzamiento — cada proyecto refleja la actuación de Open Group en la estructuración de la operación inmobiliaria."
+    },
+    "filtros": {
+      "aria": "Filtrar proyectos",
+      "all": "Todos",
+      "obra": "En construcción",
+      "futuro": "Próximos",
+      "entregue": "Entregado"
+    },
+    "grid": {
+      "noteAll": "Mostrando todos los proyectos",
+      "noteOne": "{count} proyecto · {label}",
+      "noteMany": "{count} proyectos · {label}"
+    },
+    "cards": {
+      "hits-cupece": { "status": "En construcción", "segmento": "Residencial", "local": "São Paulo · SP" },
+      "start-park-jabaquara": { "status": "En construcción", "segmento": "Residencial", "local": "São Paulo · SP" },
+      "oh-freguesia": { "status": "En construcción", "segmento": "Residencial", "local": "São Paulo · SP" },
+      "guarulhos": { "status": "Próximos", "segmento": "Residencial", "local": "Guarulhos · SP" },
+      "hits-santa-catarina": { "status": "Entregado", "segmento": "Residencial", "local": "Ubicación por confirmar" }
+    },
+    "cta": {
+      "title": "¿Tiene un terreno o proyecto con potencial?",
+      "text": "Presente la oportunidad. Hacemos la primera lectura e indicamos los próximos pasos de la operación.",
+      "ctaLabel": "Presentar oportunidad"
+    }
   }
 }

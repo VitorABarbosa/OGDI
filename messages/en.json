@@ -258,5 +258,40 @@
       "ctaProjetos": "See the projects",
       "ctaContato": "Talk to Open Group"
     }
+  },
+  "projetos": {
+    "meta": { "title": "Projects" },
+    "hero": {
+      "breadcrumbHome": "Home",
+      "breadcrumbCurrent": "Projects",
+      "kicker": "Projects · Cases",
+      "title": "Developments<br></br>structured at the origin.",
+      "countLabel": "developments<br></br>in portfolio",
+      "sub": "From reading the opportunity to launch — each project reflects Open Group's work in structuring the real estate venture."
+    },
+    "filtros": {
+      "aria": "Filter projects",
+      "all": "All",
+      "obra": "Under construction",
+      "futuro": "Upcoming",
+      "entregue": "Delivered"
+    },
+    "grid": {
+      "noteAll": "Showing all projects",
+      "noteOne": "{count} project · {label}",
+      "noteMany": "{count} projects · {label}"
+    },
+    "cards": {
+      "hits-cupece": { "status": "Under construction", "segmento": "Residential", "local": "São Paulo · SP" },
+      "start-park-jabaquara": { "status": "Under construction", "segmento": "Residential", "local": "São Paulo · SP" },
+      "oh-freguesia": { "status": "Under construction", "segmento": "Residential", "local": "São Paulo · SP" },
+      "guarulhos": { "status": "Upcoming", "segmento": "Residential", "local": "Guarulhos · SP" },
+      "hits-santa-catarina": { "status": "Delivered", "segmento": "Residential", "local": "Location TBC" }
+    },
+    "cta": {
+      "title": "Have a site or project with potential?",
+      "text": "Bring us the opportunity. We do the first reading and outline the next steps of the venture.",
+      "ctaLabel": "Present an opportunity"
+    }
   }
 }

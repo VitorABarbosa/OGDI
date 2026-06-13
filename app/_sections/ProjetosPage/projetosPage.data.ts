@@ -24,14 +24,15 @@ export const orderedProjetos: Projeto[] = order
   .map((slug) => projetos.find((p) => p.slug === slug))
   .filter((p): p is Projeto => Boolean(p));
 
-// filter tabs: "all" + the 3 categories, with live counts derived from projetos
+// filter tabs: "all" + the 3 categories, with live counts derived from projetos.
+// Labels are resolved at render time via the `projetos.filtros.*` namespace
+// (key = "all" | the ProjetoCat), so no copy lives here.
 export type FilterCat = "all" | ProjetoCat;
 
-export const filterTabs: { cat: FilterCat; label: string; count: number }[] = [
-  { cat: "all", label: "Todos", count: projetos.length },
+export const filterTabs: { cat: FilterCat; count: number }[] = [
+  { cat: "all", count: projetos.length },
   ...projetoTabs.map((t) => ({
     cat: t.cat as FilterCat,
-    label: t.label,
     count: projetos.filter((p) => p.cat === t.cat).length,
   })),
 ];

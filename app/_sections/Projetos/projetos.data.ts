@@ -85,10 +85,13 @@ export type Projeto = {
   map?: ProjetoMap;
 };
 
-export const projetoTabs: { cat: ProjetoCat; label: string }[] = [
-  { cat: "obra", label: "Em obra" },
-  { cat: "futuro", label: "Futuro lançamento" },
-  { cat: "entregue", label: "Entregue" },
+// Tab labels are resolved at render time via i18n namespaces (key === cat):
+// the home carousel uses `home.projetos.tabs.*`, the /projetos listing uses
+// `projetos.filtros.*`. Only the category identity lives here.
+export const projetoTabs: { cat: ProjetoCat }[] = [
+  { cat: "obra" },
+  { cat: "futuro" },
+  { cat: "entregue" },
 ];
 
 export const projetos: Projeto[] = [

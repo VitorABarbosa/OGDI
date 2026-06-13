@@ -258,5 +258,40 @@
       "ctaProjetos": "Ver os projetos",
       "ctaContato": "Fale com a Open Group"
     }
+  },
+  "projetos": {
+    "meta": { "title": "Projetos" },
+    "hero": {
+      "breadcrumbHome": "Início",
+      "breadcrumbCurrent": "Projetos",
+      "kicker": "Projetos · Cases",
+      "title": "Empreendimentos<br></br>estruturados na origem.",
+      "countLabel": "empreendimentos<br></br>em portfólio",
+      "sub": "Da leitura da oportunidade ao lançamento — cada projeto reflete a atuação da Open Group na estruturação da operação imobiliária."
+    },
+    "filtros": {
+      "aria": "Filtrar projetos",
+      "all": "Todos",
+      "obra": "Em obra",
+      "futuro": "Futuro lançamento",
+      "entregue": "Entregue"
+    },
+    "grid": {
+      "noteAll": "Mostrando todos os projetos",
+      "noteOne": "{count} projeto · {label}",
+      "noteMany": "{count} projetos · {label}"
+    },
+    "cards": {
+      "hits-cupece": { "status": "Em obra", "segmento": "Residencial", "local": "São Paulo · SP" },
+      "start-park-jabaquara": { "status": "Em obra", "segmento": "Residencial", "local": "São Paulo · SP" },
+      "oh-freguesia": { "status": "Em obra", "segmento": "Residencial", "local": "São Paulo · SP" },
+      "guarulhos": { "status": "Futuro lançamento", "segmento": "Residencial", "local": "Guarulhos · SP" },
+      "hits-santa-catarina": { "status": "Entregue", "segmento": "Residencial", "local": "Localização a confirmar" }
+    },
+    "cta": {
+      "title": "Tem uma área ou projeto com potencial?",
+      "text": "Apresente a oportunidade. Fazemos a primeira leitura e indicamos os próximos passos da operação.",
+      "ctaLabel": "Apresentar oportunidade"
+    }
   }
 }

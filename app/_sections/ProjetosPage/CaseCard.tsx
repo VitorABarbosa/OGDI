@@ -26,14 +26,25 @@ export function CaseCard({
   index = 0,
   span,
   shape,
+  status,
+  segmento,
+  local,
 }: {
   p: Projeto;
   index?: number;
   span?: "6" | "4" | "8";
   shape?: "tall" | "wide";
+  // Listing strings. When omitted (e.g. other pages that still render the PT
+  // data file directly), they fall back to the project's PT fields.
+  status?: string;
+  segmento?: string;
+  local?: string;
 }) {
   const aspectKey = shape ?? "default";
   const revealDelay = `reveal-card-${Math.min(index, 5)}`;
+  const statusText = status ?? p.status;
+  const segmentoText = segmento ?? p.segmento;
+  const localText = local ?? p.local;
 
   return (
     <Link
@@ -70,7 +81,7 @@ export function CaseCard({
             chipColor[p.cat],
           )}
         >
-          {p.status}
+          {statusText}
         </span>
 
         {/* Go button — arrow circle, revealed on hover */}
@@ -106,16 +117,16 @@ export function CaseCard({
 
         {/* Meta row */}
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[12px] tracking-[.1em] uppercase text-ink-3">
-          <span>{p.segmento}</span>
+          <span>{segmentoText}</span>
           {/* Separator dot */}
           <span
             aria-hidden
             className="w-1 h-1 rounded-full bg-[color:var(--line-2)] shrink-0"
           />
           {p.localTbd ? (
-            <span className="italic normal-case tracking-[.01em]">{p.local}</span>
+            <span className="italic normal-case tracking-[.01em]">{localText}</span>
           ) : (
-            <span>{p.local}</span>
+            <span>{localText}</span>
           )}
         </div>
       </div>
