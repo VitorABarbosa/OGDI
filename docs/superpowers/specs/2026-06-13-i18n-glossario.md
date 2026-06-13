@@ -90,7 +90,7 @@ PT proibido → equivalentes a NÃO usar em EN / ES:
 
 | PT | EN | ES |
 |---|---|---|
-| Quem somos | About | Nosotros |
+| Quem somos (título de página) | About | Nosotros |
 | Sobre a Open Group | About Open Group | Sobre Open Group |
 | Quem conduz | Who leads | Quién lidera |
 | A origem | Origin | El origen |
@@ -99,7 +99,7 @@ PT proibido → equivalentes a NÃO usar em EN / ES:
 | Mensagem final | Closing message | Mensaje final |
 | Role para conhecer a Open Group | Scroll to discover Open Group | Desliza para conocer Open Group |
 
-> **Decisão de chrome:** a nav ES de `institucional` foi entregue como "Institucional" no Plano 1; para alinhar com EN "About" (= Quem somos), atualizar `messages/es.json` → `nav.institucional` para **"Nosotros"** no Plano 2.
+> **Decisão de chrome (usuário, 2026-06-13):** a **nav ES de `institucional` PERMANECE "Institucional"** (não mudar `messages/es.json` → `nav.institucional`). "Nosotros" é usado apenas como **título/heading da página** institucional em ES (tradução de "Quem somos"), não no item de menu. ES = **neutro LatAm, formal**. "operação" → **venture** (EN).
 
 ## Frases-âncora (traduções fixas)
 
