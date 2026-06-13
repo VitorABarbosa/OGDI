@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "institucional": "About",
+    "projetos": "Projects",
+    "clientes": "Clients",
+    "investidores": "Investors",
+    "insights": "Insights",
+    "contato": "Contact"
+  },
+  "common": {
+    "ctaHeader": "Talk to Open Group",
+    "ctaMobile": "Present an opportunity",
+    "langLabel": "Language: English. View other languages"
+  },
+  "footer": {
+    "tagline": "Value is created before ground is broken.",
+    "atuacaoTitle": "What we do",
+    "navTitle": "Navigation",
+    "privacy": "Privacy Policy"
+  }
+}

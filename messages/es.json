@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "institucional": "Institucional",
+    "projetos": "Proyectos",
+    "clientes": "Clientes",
+    "investidores": "Inversores",
+    "insights": "Insights",
+    "contato": "Contacto"
+  },
+  "common": {
+    "ctaHeader": "Habla con Open Group",
+    "ctaMobile": "Presentar una oportunidad",
+    "langLabel": "Idioma: Español. Ver otros idiomas"
+  },
+  "footer": {
+    "tagline": "El valor nace antes de la obra.",
+    "atuacaoTitle": "Qué hacemos",
+    "navTitle": "Navegación",
+    "privacy": "Política de Privacidad"
+  }
+}
