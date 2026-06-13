@@ -32,7 +32,7 @@ export function LangSwitcher({ light, locale }: { light: boolean; locale: string
           <span aria-hidden className="mr-[14px] h-[11px] w-px shrink-0 bg-current opacity-30" />
         </div>
       </div>
-      <button type="button" aria-haspopup="true" aria-label={t("langLabel")}
+      <button type="button" aria-label={t("langLabel")}
         className={cn(type, "flex cursor-default items-center gap-[9px]")}>
         {active.label}
       </button>
