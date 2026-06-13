@@ -25,5 +25,130 @@
     "atuacaoTitle": "What we do",
     "navTitle": "Navigation",
     "privacy": "Privacy Policy"
+  },
+  "home": {
+    "rail": {
+      "ariaLabel": "Visual navigation of the home page",
+      "top": "Start",
+      "projetos": "Projects",
+      "atuacao": "What we do",
+      "modelos": "Models",
+      "institucional": "Manifesto",
+      "parceiros": "Partners",
+      "contato": "Contact"
+    },
+    "hero": {
+      "srTitle": "Open Group — Real estate development. Value is born before ground is broken.",
+      "phrase": "Value is born before ground is broken.",
+      "prev": "Previous",
+      "next": "Next",
+      "slides": {
+        "hits-santa-catarina": {
+          "kick": "Delivered · Development",
+          "meta": { "status": "Delivered", "segmento": "Residential", "local": "Location TBC" },
+          "sign": "OGDI partner in the venture — from concept to launch."
+        },
+        "hits-cupece": {
+          "kick": "Under construction · Development",
+          "meta": { "status": "Under construction", "segmento": "Residential", "local": "São Paulo · SP" },
+          "sign": "OGDI partner in the venture — reading the opportunity, product, and structuring."
+        },
+        "start-park-jabaquara": {
+          "kick": "Under construction · Development",
+          "meta": { "status": "Under construction", "segmento": "Residential", "local": "São Paulo · SP" },
+          "sign": "OGDI partner in the venture — market intelligence, feasibility, and guidance through to launch."
+        },
+        "oh-freguesia": {
+          "kick": "Under construction · Development",
+          "meta": { "status": "Under construction", "segmento": "Residential", "local": "São Paulo · SP" },
+          "sign": "OGDI partner in the venture — product concept and structuring."
+        }
+      }
+    },
+    "projetos": {
+      "kicker": "Projects",
+      "heading": "Structured before construction.<br></br>Developments that move forward.",
+      "prev": "Previous",
+      "next": "Next",
+      "goTo": "Go to {n}",
+      "seeAll": "See all projects",
+      "tabs": {
+        "obra": "Under construction",
+        "futuro": "Upcoming",
+        "entregue": "Delivered"
+      },
+      "cards": {
+        "hits-cupece": {
+          "status": "Under construction",
+          "tag": "A venture structured at the origin, from product to launch.",
+          "ctaLabel": "Explore the development"
+        },
+        "start-park-jabaquara": {
+          "status": "Under construction",
+          "tag": "From market intelligence to guidance through to launch.",
+          "ctaLabel": "Explore the development"
+        },
+        "oh-freguesia": {
+          "status": "Under construction",
+          "tag": "Product concept and venture structured by OGDI.",
+          "ctaLabel": "Explore the development"
+        },
+        "guarulhos": {
+          "status": "Upcoming",
+          "tag": "Opportunity originated and venture under structuring.",
+          "ctaLabel": "Discuss the project"
+        },
+        "hits-santa-catarina": {
+          "status": "Delivered",
+          "tag": "From concept to launch — venture delivered.",
+          "ctaLabel": "Explore the development"
+        }
+      }
+    },
+    "atuacao": {
+      "kicker": "What we do",
+      "heading": "From the origin<br></br>to the launch.",
+      "intro": "Open Group does not merely take part in projects — it structures the real estate opportunity, aligning potential, capital, partners, and execution in the same direction.",
+      "tags": {
+        "consultoria": "Contracted consulting",
+        "parceria": "Strategic partnership",
+        "societaria": "Partner in the venture"
+      },
+      "steps": {
+        "01": { "title": "Reading the opportunity", "desc": "Understanding the asset, its stage, and its real development potential." },
+        "02": { "title": "Market intelligence", "desc": "Local market context, demand, and competitive analysis that underpin the thesis." },
+        "03": { "title": "Development concept", "desc": "Defining the logic of the real estate product: unit mix, typology, and positioning." },
+        "04": { "title": "Feasibility", "desc": "Financial and institutional analysis that unlocks the path of the venture." },
+        "05": { "title": "Structuring the venture", "desc": "Modeling so that potential, capital, and execution move in the same direction." },
+        "06": { "title": "Connecting with partners", "desc": "Bringing partners together and managing the bank relationship, including CEF (Brazil's federal bank) when applicable." },
+        "07": { "title": "Launch readiness", "desc": "Commercial strategy and guidance of the venture until it is ready to move forward." }
+      }
+    },
+    "modelos": {
+      "kicker": "Engagement models",
+      "heading": "Flexible engagement based on<br></br>the profile of the opportunity.",
+      "intro": "Each opportunity calls for its own logic. Open Group assesses the stage, the potential, and the complexity of the venture to define the most suitable engagement model.",
+      "cards": {
+        "consultoria": { "idx": "i.", "title": "Contracted consulting", "desc": "We support the structuring of the venture with strategic reading and technical guidance, within a defined scope." },
+        "parceria": { "idx": "ii.", "title": "Strategic partnership", "desc": "We work side by side on building the development, sharing vision, structure, and direction." },
+        "societaria": { "idx": "iii.", "title": "Equity participation", "desc": "We come in as partners in the venture, committed to the result of the development from end to end." }
+      }
+    },
+    "manifesto": {
+      "kicker": "About Open Group",
+      "line1": "Before construction, there is the <em>decision</em>.",
+      "line2": "Before the launch, there is the <em>structure</em>.",
+      "line3": "Before value, there is <em>vision</em>.",
+      "whatTitle": "What we do",
+      "body1": "Open Group Real Estate Development works on the structuring and development of real estate ventures, guiding opportunities from concept to launch.",
+      "body2": "Our work begins before construction: in reading the opportunity, in feasibility analysis, in the strategic design of the venture, and in bringing together the partners needed for the project to move forward with consistency.",
+      "body3": "We work alongside builders, developers, companies holding real estate assets, and investors, combining strategic vision, financial and institutional structuring, connection with partners, and guidance through the critical market stages.",
+      "cta": "Get to know the company"
+    },
+    "clientes": {
+      "kicker": "Clients",
+      "heading": "Who trusts<br></br>Open Group.",
+      "intro": "Developers, builders, funds, and landowners who structured their ventures with Open Group, from origin to launch."
+    }
   }
 }

@@ -1,3 +1,7 @@
+// NOTA: title/desc/atuacaoTags continuam aqui em PT porque a página de
+// Investidores (InvestidoresCiclo/Curva) ainda consome estes campos. A home
+// renderiza via messages (namespace home.atuacao). Migrar quando Investidores
+// (Plano 2 / Task 6) for traduzido.
 export type AtuacaoStep = { idx: string; title: string; desc: string };
 export const atuacaoSteps: AtuacaoStep[] = [
   { idx: "01", title: "Leitura da oportunidade", desc: "Entendimento do ativo, do estágio e do potencial real de desenvolvimento." },
@@ -8,4 +12,5 @@ export const atuacaoSteps: AtuacaoStep[] = [
   { idx: "06", title: "Conexão com parceiros", desc: "Articulação de parceiros e relacionamento com banco, incluindo a CEF quando aplicável." },
   { idx: "07", title: "Preparação para lançamento", desc: "Estratégia comercial e condução da operação até estar pronta para avançar." },
 ];
-export const atuacaoTags = ["Consultoria contratada", "Parceira estratégica", "Sócia da operação"];
+// chaves de tag → home.atuacao.tags.* (consumidas pela home)
+export const atuacaoTagKeys = ["consultoria", "parceria", "societaria"] as const;

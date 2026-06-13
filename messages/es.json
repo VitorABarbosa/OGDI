@@ -25,5 +25,130 @@
     "atuacaoTitle": "Qué hacemos",
     "navTitle": "Navegación",
     "privacy": "Política de Privacidad"
+  },
+  "home": {
+    "rail": {
+      "ariaLabel": "Navegación visual de la página de inicio",
+      "top": "Inicio",
+      "projetos": "Proyectos",
+      "atuacao": "Qué hacemos",
+      "modelos": "Modelos",
+      "institucional": "Manifiesto",
+      "parceiros": "Socios",
+      "contato": "Contacto"
+    },
+    "hero": {
+      "srTitle": "Open Group — Desarrollo inmobiliario. El valor nace antes de la obra.",
+      "phrase": "El valor nace antes de la obra.",
+      "prev": "Anterior",
+      "next": "Siguiente",
+      "slides": {
+        "hits-santa-catarina": {
+          "kick": "Entregado · Emprendimiento",
+          "meta": { "status": "Entregado", "segmento": "Residencial", "local": "Ubicación por confirmar" },
+          "sign": "OGDI socia de la operación — de la concepción al lanzamiento."
+        },
+        "hits-cupece": {
+          "kick": "En construcción · Emprendimiento",
+          "meta": { "status": "En construcción", "segmento": "Residencial", "local": "São Paulo · SP" },
+          "sign": "OGDI socia de la operación — lectura de la oportunidad, producto y estructuración."
+        },
+        "start-park-jabaquara": {
+          "kick": "En construcción · Emprendimiento",
+          "meta": { "status": "En construcción", "segmento": "Residencial", "local": "São Paulo · SP" },
+          "sign": "OGDI socia de la operación — inteligencia de mercado, viabilidad y conducción hasta el lanzamiento."
+        },
+        "oh-freguesia": {
+          "kick": "En construcción · Emprendimiento",
+          "meta": { "status": "En construcción", "segmento": "Residencial", "local": "São Paulo · SP" },
+          "sign": "OGDI socia de la operación — conceptualización del producto y estructuración."
+        }
+      }
+    },
+    "projetos": {
+      "kicker": "Proyectos",
+      "heading": "Estructurados antes de la obra.<br></br>Emprendimientos que avanzan.",
+      "prev": "Anterior",
+      "next": "Siguiente",
+      "goTo": "Ir a {n}",
+      "seeAll": "Ver todos los proyectos",
+      "tabs": {
+        "obra": "En construcción",
+        "futuro": "Próximos",
+        "entregue": "Entregado"
+      },
+      "cards": {
+        "hits-cupece": {
+          "status": "En construcción",
+          "tag": "Operación estructurada en el origen, del producto al lanzamiento.",
+          "ctaLabel": "Conozca el emprendimiento"
+        },
+        "start-park-jabaquara": {
+          "status": "En construcción",
+          "tag": "De la inteligencia de mercado a la conducción hasta el lanzamiento.",
+          "ctaLabel": "Conozca el emprendimiento"
+        },
+        "oh-freguesia": {
+          "status": "En construcción",
+          "tag": "Producto conceptualizado y operación estructurada por OGDI.",
+          "ctaLabel": "Conozca el emprendimiento"
+        },
+        "guarulhos": {
+          "status": "Próximos",
+          "tag": "Oportunidad originada y operación en estructuración.",
+          "ctaLabel": "Hablar sobre el proyecto"
+        },
+        "hits-santa-catarina": {
+          "status": "Entregado",
+          "tag": "De la concepción al lanzamiento — operación entregada.",
+          "ctaLabel": "Conozca el emprendimiento"
+        }
+      }
+    },
+    "atuacao": {
+      "kicker": "Nuestra actuación",
+      "heading": "Del origen<br></br>al lanzamiento.",
+      "intro": "Open Group no solo participa en proyectos — estructura la oportunidad inmobiliaria, organizando potencial, capital, socios y ejecución en la misma dirección.",
+      "tags": {
+        "consultoria": "Consultoría contratada",
+        "parceria": "Alianza estratégica",
+        "societaria": "Socia de la operación"
+      },
+      "steps": {
+        "01": { "title": "Lectura de la oportunidad", "desc": "Comprensión del activo, su etapa y su potencial real de desarrollo." },
+        "02": { "title": "Inteligencia de mercado", "desc": "Contexto del mercado local, demanda y lectura competitiva que fundamentan la tesis." },
+        "03": { "title": "Conceptualización del emprendimiento", "desc": "Definición de la lógica del producto inmobiliario: tipología, mix y posicionamiento." },
+        "04": { "title": "Viabilidad", "desc": "Análisis financiero e institucional que destraba el camino de la operación." },
+        "05": { "title": "Estructuración de la operación", "desc": "Modelado para que potencial, capital y ejecución avancen en la misma dirección." },
+        "06": { "title": "Conexión con socios", "desc": "Articulación de socios y relación con el banco, incluida la CEF cuando corresponda." },
+        "07": { "title": "Preparación para el lanzamiento", "desc": "Estrategia comercial y conducción de la operación hasta estar lista para avanzar." }
+      }
+    },
+    "modelos": {
+      "kicker": "Modelos de actuación",
+      "heading": "Actuación flexible según<br></br>el perfil de la oportunidad.",
+      "intro": "Cada oportunidad exige una lógica propia. Open Group evalúa la etapa, el potencial y la complejidad de la operación para definir el modelo de actuación más adecuado.",
+      "cards": {
+        "consultoria": { "idx": "i.", "title": "Consultoría contratada", "desc": "Apoyamos la estructuración de la operación con lectura estratégica y conducción técnica, dentro de un alcance definido." },
+        "parceria": { "idx": "ii.", "title": "Alianza estratégica", "desc": "Actuamos lado a lado en la construcción del emprendimiento, compartiendo visión, estructura y dirección." },
+        "societaria": { "idx": "iii.", "title": "Participación societaria", "desc": "Entramos como socios de la operación, comprometidos con el resultado del emprendimiento de principio a fin." }
+      }
+    },
+    "manifesto": {
+      "kicker": "Sobre Open Group",
+      "line1": "Antes de la obra, existe la <em>decisión</em>.",
+      "line2": "Antes del lanzamiento, existe la <em>estructura</em>.",
+      "line3": "Antes del valor, existe la <em>visión</em>.",
+      "whatTitle": "Qué hacemos",
+      "body1": "Open Group Desarrollo Inmobiliario actúa en la estructuración y el desarrollo de emprendimientos inmobiliarios, conduciendo oportunidades de la conceptualización al lanzamiento.",
+      "body2": "Nuestro trabajo comienza antes de la obra: en la lectura de la oportunidad, en el análisis de viabilidad, en el diseño estratégico de la operación y en la articulación de los socios necesarios para que el proyecto avance con consistencia.",
+      "body3": "Actuamos junto a constructoras, desarrolladoras, empresas con activos inmobiliarios e inversores, combinando visión estratégica, estructuración financiera e institucional, conexión con socios y conducción hasta las etapas críticas de mercado.",
+      "cta": "Conocer la empresa"
+    },
+    "clientes": {
+      "kicker": "Clientes",
+      "heading": "Quiénes confían en<br></br>Open Group.",
+      "intro": "Desarrolladoras, constructoras, fondos y propietarios de terrenos que estructuraron sus operaciones con Open Group, del origen al lanzamiento."
+    }
   }
 }

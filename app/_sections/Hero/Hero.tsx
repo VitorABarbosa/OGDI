@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useCarousel } from "@/hooks/useCarousel";
 import { onIntroDone } from "@/components/Intro/introSignal";
 import { heroSlides } from "./hero.data";
@@ -12,6 +13,7 @@ const START_SLIDE = "Start Park Jabaquara";
 const startIndex = Math.max(0, heroSlides.findIndex((sl) => sl.name === START_SLIDE));
 
 export function Hero() {
+  const t = useTranslations("home.hero");
   const [introDone, setIntroDone] = useState(false);
   useEffect(() => onIntroDone(() => setIntroDone(true)), []);
 
@@ -68,7 +70,7 @@ export function Hero() {
 
   return (
     <section ref={stageRef} id="top" className="relative h-[168vh] bg-white">
-      <h1 className="sr-only">Open Group — Desenvolvimento imobiliário. O valor nasce antes da obra.</h1>
+      <h1 className="sr-only">{t("srTitle")}</h1>
       <div className="sticky top-0 h-screen min-h-[620px] overflow-hidden">
         <div ref={frameRef} className="absolute top-[var(--ht,0px)] right-[var(--hs,0px)] bottom-[var(--hb,0px)] left-[var(--hs,0px)] rounded-[var(--hr,0px)] overflow-hidden bg-dark [will-change:top,right,bottom,left,border-radius]">
           {/* camada de slides fixada ao viewport: offsets negativos cancelam os recuos
@@ -87,30 +89,34 @@ export function Hero() {
           <div ref={textRef} className="absolute inset-0 z-[3] pointer-events-none [transition:opacity_.15s_linear]">
             {/* frase fixa */}
             <p className="absolute left-pad-x top-[clamp(120px,17vh,168px)] font-serif italic font-light text-[clamp(17px,1.7vw,24px)] text-white/90 before:content-[''] before:block before:w-[38px] before:h-px before:bg-green before:mb-[18px] max-md:hidden">
-              O valor nasce antes da obra.
+              {t("phrase")}
             </p>
             {/* info */}
             <div className="absolute inset-x-0 bottom-[clamp(36px,6vh,64px)] px-pad-x">
               <div className="text-white max-w-[640px]">
                 <div className="font-serif text-[clamp(28px,3.6vw,52px)] leading-[1.04] mt-[14px] mb-[16px]">{s.name}</div>
                 <div className="flex flex-wrap items-center gap-[10px_16px] text-[12px] tracking-[.12em] uppercase text-white/85">
-                  {s.meta.map((m, i) => (
+                  {[
+                    { v: t(`slides.${s.key}.meta.status`), tbd: false },
+                    { v: t(`slides.${s.key}.meta.segmento`), tbd: false },
+                    { v: t(`slides.${s.key}.meta.local`), tbd: Boolean(s.localTbd) },
+                  ].map((m, i) => (
                     <span key={i} className="flex items-center gap-[10px_16px]">
                       {i > 0 && <span className="w-1 h-1 rounded-full bg-white/50" />}
-                      {m.startsWith("@")
-                        ? <span className="text-white/50 italic normal-case tracking-[.02em]">{m.slice(1)}</span>
-                        : <span>{m}</span>}
+                      {m.tbd
+                        ? <span className="text-white/50 italic normal-case tracking-[.02em]">{m.v}</span>
+                        : <span>{m.v}</span>}
                     </span>
                   ))}
                 </div>
-                <p className="text-[13.5px] text-white/70 mt-4 max-w-[480px] leading-[1.5]">{s.sign}</p>
+                <p className="text-[13.5px] text-white/70 mt-4 max-w-[480px] leading-[1.5]">{t(`slides.${s.key}.sign`)}</p>
               </div>
             </div>
           </div>
           {/* setas (com nudge no hover — §hero-arrow-hover da referência) — só após a abertura */}
           {introDone && (<>
-          <button onClick={prev} aria-label="Anterior" className="absolute z-[4] top-1/2 -translate-y-1/2 left-[clamp(10px,2vw,28px)] w-[clamp(44px,4vw,60px)] h-[clamp(44px,4vw,60px)] flex items-center justify-center text-white opacity-75 hover:opacity-100 transition-[opacity,transform] duration-300 ease-brand hover:-translate-x-[3px]"><Icon name="chevron-left" className="w-[30px] h-[30px]" /></button>
-          <button onClick={next} aria-label="Próximo" className="absolute z-[4] top-1/2 -translate-y-1/2 right-[clamp(10px,2vw,28px)] w-[clamp(44px,4vw,60px)] h-[clamp(44px,4vw,60px)] flex items-center justify-center text-white opacity-75 hover:opacity-100 transition-[opacity,transform] duration-300 ease-brand hover:translate-x-[3px]"><Icon name="chevron-right" className="w-[30px] h-[30px]" /></button>
+          <button onClick={prev} aria-label={t("prev")} className="absolute z-[4] top-1/2 -translate-y-1/2 left-[clamp(10px,2vw,28px)] w-[clamp(44px,4vw,60px)] h-[clamp(44px,4vw,60px)] flex items-center justify-center text-white opacity-75 hover:opacity-100 transition-[opacity,transform] duration-300 ease-brand hover:-translate-x-[3px]"><Icon name="chevron-left" className="w-[30px] h-[30px]" /></button>
+          <button onClick={next} aria-label={t("next")} className="absolute z-[4] top-1/2 -translate-y-1/2 right-[clamp(10px,2vw,28px)] w-[clamp(44px,4vw,60px)] h-[clamp(44px,4vw,60px)] flex items-center justify-center text-white opacity-75 hover:opacity-100 transition-[opacity,transform] duration-300 ease-brand hover:translate-x-[3px]"><Icon name="chevron-right" className="w-[30px] h-[30px]" /></button>
           </>)}
         </div>
       </div>

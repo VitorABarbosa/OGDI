@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type PointerEvent } from "react";
+import { useTranslations } from "next-intl";
 import { Kicker } from "@/components/ui/Kicker";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TextLink } from "@/components/ui/TextLink";
@@ -14,6 +15,7 @@ const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : use
 const interactiveSelector = "a, button, input, textarea, select, label";
 
 export function Projetos() {
+  const t = useTranslations("home.projetos");
   const [cat, setCat] = useState<ProjetoCat>("obra");
   const list = useMemo(() => projetos.filter((p) => p.cat === cat), [cat]);
   const { index, goTo, next, prev, dragEnd } = useCarousel({ length: list.length });
@@ -86,8 +88,8 @@ export function Projetos() {
       <div className="wrap">
         <div className="flex items-end justify-between gap-[24px_40px] flex-wrap mb-10">
           <div className="max-w-[520px] reveal">
-            <Kicker>Projetos</Kicker>
-            <SectionHeading className="mt-[14px]">Estruturados antes da obra.<br />Empreendimentos que avançam.</SectionHeading>
+            <Kicker>{t("kicker")}</Kicker>
+            <SectionHeading className="mt-[14px]">{t.rich("heading", { br: () => <br /> })}</SectionHeading>
           </div>
           <div className="reveal reveal-2"><ProjetoTabs active={cat} onChange={onTab} /></div>
         </div>
@@ -103,18 +105,27 @@ export function Projetos() {
             onPointerUp={onDragEnd}
             onPointerCancel={onDragCancel}
           >
-            {list.map((p, i) => <ProjetoCard key={p.name} p={p} active={i === index} />)}
+            {list.map((p, i) => (
+              <ProjetoCard
+                key={p.name}
+                p={p}
+                active={i === index}
+                status={t(`cards.${p.slug}.status`)}
+                tag={t(`cards.${p.slug}.tag`)}
+                ctaLabel={t(`cards.${p.slug}.ctaLabel`)}
+              />
+            ))}
           </div>
-          <button onClick={prev} aria-label="Anterior" className="absolute z-[5] top-1/2 -translate-y-1/2 left-[18px] w-[clamp(40px,3.4vw,54px)] h-[clamp(40px,3.4vw,54px)] flex items-center justify-center text-white opacity-75 hover:opacity-100"><Icon name="chevron-left" className="w-[26px] h-[26px]" /></button>
-          <button onClick={next} aria-label="Próximo" className="absolute z-[5] top-1/2 -translate-y-1/2 right-[18px] w-[clamp(40px,3.4vw,54px)] h-[clamp(40px,3.4vw,54px)] flex items-center justify-center text-white opacity-75 hover:opacity-100"><Icon name="chevron-right" className="w-[26px] h-[26px]" /></button>
+          <button onClick={prev} aria-label={t("prev")} className="absolute z-[5] top-1/2 -translate-y-1/2 left-[18px] w-[clamp(40px,3.4vw,54px)] h-[clamp(40px,3.4vw,54px)] flex items-center justify-center text-white opacity-75 hover:opacity-100"><Icon name="chevron-left" className="w-[26px] h-[26px]" /></button>
+          <button onClick={next} aria-label={t("next")} className="absolute z-[5] top-1/2 -translate-y-1/2 right-[18px] w-[clamp(40px,3.4vw,54px)] h-[clamp(40px,3.4vw,54px)] flex items-center justify-center text-white opacity-75 hover:opacity-100"><Icon name="chevron-right" className="w-[26px] h-[26px]" /></button>
           <div className="absolute inset-x-0 bottom-[clamp(18px,2.4vw,30px)] z-[5] flex justify-center gap-[9px]">
             {list.map((_, i) => (
-              <button key={i} onClick={() => goTo(i)} aria-label={`Ir para ${i + 1}`}
+              <button key={i} onClick={() => goTo(i)} aria-label={t("goTo", { n: i + 1 })}
                 className={`w-9 h-[2px] ${i === index ? "bg-white" : "bg-white/30 hover:bg-white/60"} transition-colors`} />
             ))}
           </div>
         </div>
-        <div className="mt-[34px] flex justify-center"><TextLink href="/projetos">Ver todos os projetos</TextLink></div>
+        <div className="mt-[34px] flex justify-center"><TextLink href="/projetos">{t("seeAll")}</TextLink></div>
       </div>
     </section>
   );
