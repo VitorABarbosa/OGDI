@@ -150,5 +150,113 @@
       "heading": "Quem confia na<br></br>Open Group.",
       "intro": "Incorporadoras, construtoras, fundos e proprietários de área que estruturaram suas operações com a Open Group, da origem ao lançamento."
     }
+  },
+  "institucional": {
+    "rail": {
+      "ariaLabel": "Navegação visual da página institucional",
+      "inicio": "Início",
+      "sobre": "Sobre",
+      "manifesto": "Manifesto",
+      "origem": "Origem",
+      "lideranca": "Quem conduz",
+      "grupo": "Nosso Grupo",
+      "assinatura": "Mensagem final"
+    },
+    "meta": {
+      "title": "Quem somos",
+      "description": "A Open Group estrutura e desenvolve empreendimentos imobiliários, conduzindo oportunidades da conceituação ao lançamento. O valor nasce antes da obra."
+    },
+    "hero": {
+      "breadcrumbHome": "Início",
+      "breadcrumbCurrent": "Quem somos",
+      "kicker": "Quem somos",
+      "title1": "Revelamos o valor <em>extraordinário</em>",
+      "title2": "de ativos imobiliários.",
+      "cue": "Role para conhecer a Open Group"
+    },
+    "about": {
+      "kicker": "Sobre a Open Group",
+      "heading": "Nosso trabalho começa <em>antes da obra</em>.",
+      "models": {
+        "consultoria": { "strong": "Consultoria", "rest": "contratada" },
+        "parceria": { "strong": "Parceria", "rest": "estratégica" },
+        "societaria": { "strong": "Sócia", "rest": "da operação" }
+      },
+      "body1": "A Open Group Desenvolvimento Imobiliário atua na <em>estruturação e desenvolvimento de empreendimentos imobiliários</em>, conduzindo oportunidades da conceituação ao lançamento.",
+      "body2": "Nosso trabalho começa antes da obra: na leitura da oportunidade, na análise de viabilidade, no desenho estratégico da operação e na articulação dos parceiros necessários para o projeto avançar com consistência.",
+      "body3": "Atuamos junto a construtoras, incorporadoras, empresas com ativos imobiliários e investidores — combinando visão estratégica, estruturação financeira e institucional, conexão com parceiros e condução até as etapas críticas de mercado.",
+      "body4": "Mais do que desenvolver empreendimentos, <em>estruturamos operações imobiliárias para que potencial, capital e execução avancem na mesma direção.</em>"
+    },
+    "manifesto": {
+      "eyebrow": "Nosso manifesto",
+      "segments": {
+        "s1": "Muitas oportunidades não fracassam por falta de ",
+        "s2": "potencial",
+        "s3": ". Fracassam porque avançam sem ",
+        "s4": "estrutura",
+        "s5": "."
+      }
+    },
+    "origem": {
+      "kicker": "A origem",
+      "heading": "O valor de um empreendimento nasce <em>antes da obra</em>.",
+      "intro": "Uma área promissora ou um projeto bem localizado não se sustentam sozinhos. Sem visão, viabilidade, parceiros e condução, o potencial se dispersa antes de virar empreendimento. Ele nasce antes — e nasce aqui:",
+      "strata": {
+        "01": { "name": "A leitura da oportunidade", "desc": "Interpretar o ativo e o potencial real, antes que ele seja óbvio." },
+        "02": { "name": "A concepção do produto", "desc": "Definir o empreendimento certo para aquela oportunidade." },
+        "03": { "name": "A estruturação da operação", "desc": "Alinhar potencial, capital e execução na mesma direção." },
+        "04": { "name": "A escolha dos parceiros", "desc": "Articular parceiros, banco e relacionamento institucional." },
+        "05": { "name": "O caminho até o lançamento", "desc": "Conduzir com clareza até o projeto estar pronto para avançar." }
+      }
+    },
+    "lideranca": {
+      "kicker": "Quem conduz",
+      "heading": "A liderança por trás de cada <em>operação estruturada</em>.",
+      "intro": "A Open Group é conduzida por profissionais que unem visão estratégica, domínio da operação imobiliária e relacionamento institucional — para transformar oportunidades em empreendimentos prontos para avançar.",
+      "leaders": {
+        "max": {
+          "role": "CEO and Founder",
+          "statement": "Antes de desenvolver um empreendimento, é preciso enxergar o valor que ainda não foi revelado.",
+          "quote1": "À frente da Open Group, Flying Studio, NID Studio e Rinno Films, conduzo um ecossistema criado para transformar oportunidades imobiliárias em operações mais claras, viáveis e preparadas para avançar.",
+          "quote2": "Cada empresa atua em uma etapa da jornada, da estratégia à comunicação, sempre com a mesma visão: desenvolver com estrutura desde a origem."
+        }
+      }
+    },
+    "grupo": {
+      "kicker": "Nosso Grupo",
+      "heading": "Nosso Grupo",
+      "intro": "Estratégia, arquitetura, visualização e audiovisual operam como forças complementares. Cada empresa aprofunda uma etapa da jornada: estruturar, desenhar, antecipar e comunicar.",
+      "visitLink": "Visitar site ↗",
+      "visitAria": "{name} — visitar site",
+      "companies": {
+        "flying": {
+          "role": "Futuros visuais e experiências imersivas",
+          "text": "A máquina de antecipar futuros. Imagens e perspectivas 3D, apps, o D.Brave e salas imersivas transportam o cliente para dentro da sua futura realidade — mais de 12 anos traduzindo tijolo e cimento em pura poesia visual.",
+          "tags": { "t1": "Perspectivas 3D", "t2": "Apps", "t3": "D.Brave", "t4": "Salas Imersivas" }
+        },
+        "ogdi": {
+          "role": "Estratégia e estruturação",
+          "text": "O ponto de partida estratégico. Atuamos com consultoria focada na inteligência de mercado, no desenvolvimento de produtos e na estruturação completa de novos lançamentos desde a sua concepção.",
+          "tags": { "t1": "Mercado", "t2": "Produto", "t3": "Lançamento" }
+        },
+        "nid": {
+          "role": "Arquitetura, interiores e PDV",
+          "text": "Onde a inteligência arquitetônica ganha forma e emoção. O lar como um verdadeiro ninho: projetos de interiores, design de fachadas e PDVs concebidos como espaços de aconchego, segurança e forte personalidade.",
+          "tags": { "t1": "Interiores", "t2": "Fachadas", "t3": "PDV" }
+        },
+        "rinno": {
+          "role": "Filmes, movimento e conexão emocional",
+          "text": "A produtora audiovisual do grupo. De filmes conceito e de produto a materiais virais e institucionais — dando movimento às histórias e criando a conexão emocional entre o projeto e o seu público.",
+          "tags": { "t1": "Filmes", "t2": "Viral", "t3": "Institucional" }
+        }
+      }
+    },
+    "assinatura": {
+      "kicker": "Mensagem central",
+      "heading": "Transformamos oportunidades em<br></br><em>empreendimentos prontos para avançar</em>.",
+      "sub": "Conduzindo estruturação, viabilidade, parceiros e caminho até o lançamento, com visão estratégica. Desenvolva com visão desde a origem.",
+      "ctaProjetos": "Ver os projetos",
+      "ctaContato": "Fale com a Open Group"
+    }
   }
 }

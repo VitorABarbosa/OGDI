@@ -1,11 +1,11 @@
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
-import { institucional } from "./institucional.data";
 import { InstitucionalHeroWaves } from "./InstitucionalHeroWaves";
 import styles from "./InstitucionalHero.module.css";
 
-export function InstitucionalHero() {
-  const { hero } = institucional;
+export async function InstitucionalHero() {
+  const t = await getTranslations("institucional.hero");
   return (
     <section
       id="institucional-inicio"
@@ -24,22 +24,22 @@ export function InstitucionalHero() {
             className="mb-[30px] flex items-center gap-[10px] text-[12px] uppercase tracking-[.08em] text-white/50"
           >
             <Link href="/" className="text-white/55 transition-colors duration-200 hover:text-white">
-              Início
+              {t("breadcrumbHome")}
             </Link>
             <span aria-hidden className="inline-block h-px w-[14px] shrink-0 bg-white/30" />
             <span aria-current="page" className="text-white/85">
-              Quem somos
+              {t("breadcrumbCurrent")}
             </span>
           </nav>
 
-          <Kicker tone="on-dark-green">{hero.kicker}</Kicker>
+          <Kicker tone="on-dark-green">{t("kicker")}</Kicker>
 
           <h1 className="mt-[clamp(22px,3vw,34px)] max-w-[17ch] font-news font-normal text-white text-[clamp(2.1rem,6.4vw,5.6rem)] leading-[1.07] tracking-[-.018em]">
             <span className="reveal block" style={{ transitionDelay: "0s" }}>
-              Revelamos o valor <span className="italic text-green">extraordinário</span>
+              {t.rich("title1", { em: (c) => <span className="italic text-green">{c}</span> })}
             </span>
             <span className="reveal block" style={{ transitionDelay: ".2s" }}>
-              de ativos imobiliários.
+              {t("title2")}
             </span>
           </h1>
         </div>
@@ -47,7 +47,7 @@ export function InstitucionalHero() {
 
       <div className="absolute bottom-8 left-pad-x z-[2] flex items-center gap-[14px] text-[10.5px] uppercase tracking-[.22em] text-white/50">
         <span aria-hidden className={`${styles.cueLine} h-[50px] w-px bg-white/50`} />
-        {hero.cue}
+        {t("cue")}
       </div>
     </section>
   );

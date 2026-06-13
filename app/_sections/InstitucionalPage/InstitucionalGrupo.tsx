@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
 import { cn } from "@/lib/cn";
 import { institucional } from "./institucional.data";
@@ -82,19 +83,20 @@ function Motif({ id }: { id: string }) {
   }
 }
 
-export function InstitucionalGrupo() {
+export async function InstitucionalGrupo() {
+  const t = await getTranslations("institucional.grupo");
   const { grupo } = institucional;
 
   return (
     <section id="institucional-grupo" className={cn(styles.section, "py-[clamp(72px,8vw,112px)] text-ink")}>
       <div className="wrap relative z-[2]">
         <div className="reveal mx-auto mb-[clamp(28px,3.8vw,54px)] max-w-[980px] text-center">
-          <Kicker className="justify-center">{grupo.kicker}</Kicker>
+          <Kicker className="justify-center">{t("kicker")}</Kicker>
           <h2 className="mt-5 font-news text-[clamp(3rem,8vw,8.4rem)] font-normal leading-[.9] tracking-[-.045em]">
-            Nosso Grupo
+            {t("heading")}
           </h2>
           <p className="mx-auto mt-7 max-w-[760px] text-[clamp(16px,1.35vw,21px)] leading-[1.62] text-ink-2">
-            {grupo.intro}
+            {t("intro")}
           </p>
         </div>
       </div>
@@ -105,6 +107,8 @@ export function InstitucionalGrupo() {
             const cardClass = cn(styles.card, "outline-none focus-visible:ring-2 focus-visible:ring-green");
             // Cor da marca de cada empresa, consumida via var(--accent) no CSS
             const cardStyle = { "--accent": company.accent } as React.CSSProperties;
+            const ck = `companies.${company.id}`;
+            const tags = Array.from({ length: company.tagCount }, (_, i) => t(`${ck}.tags.t${i + 1}`));
             const content = (
               <>
               {company.bgVideo ? (
@@ -128,7 +132,7 @@ export function InstitucionalGrupo() {
               {/* Estado idle: logo centralizada */}
               <div className={styles.idle}>
                 <Logo id={company.id} alt={company.name} />
-                <span className={styles.idleRole}>{company.role}</span>
+                <span className={styles.idleRole}>{t(`${ck}.role`)}</span>
               </div>
 
               {/* Estado régua: nome na vertical, como lombada de livro */}
@@ -144,17 +148,17 @@ export function InstitucionalGrupo() {
                 </div>
                 <div className={styles.info}>
                   <span className={styles.infoRole}>
-                    {String(index + 1).padStart(2, "0")} — {company.role}
+                    {String(index + 1).padStart(2, "0")} — {t(`${ck}.role`)}
                   </span>
                   <h3 className={styles.infoName}>{company.name}</h3>
-                  <p className={styles.infoText}>{company.text}</p>
+                  <p className={styles.infoText}>{t(`${ck}.text`)}</p>
                   <ul className={styles.infoTags}>
-                    {company.tags.map((tag) => (
+                    {tags.map((tag) => (
                       <li key={tag}>{tag}</li>
                     ))}
                   </ul>
                   {company.href && (
-                    <span className={styles.infoLink}>Visitar site ↗</span>
+                    <span className={styles.infoLink}>{t("visitLink")}</span>
                   )}
                 </div>
               </div>
@@ -167,7 +171,7 @@ export function InstitucionalGrupo() {
                 href={company.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${company.name} — visitar site`}
+                aria-label={t("visitAria", { name: company.name })}
                 className={cardClass}
                 style={cardStyle}
                 data-card

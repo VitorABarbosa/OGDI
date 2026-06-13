@@ -150,5 +150,113 @@
       "heading": "Who trusts<br></br>Open Group.",
       "intro": "Developers, builders, funds, and landowners who structured their ventures with Open Group, from origin to launch."
     }
+  },
+  "institucional": {
+    "rail": {
+      "ariaLabel": "Visual navigation of the About page",
+      "inicio": "Start",
+      "sobre": "About",
+      "manifesto": "Manifesto",
+      "origem": "Origin",
+      "lideranca": "Who leads",
+      "grupo": "Our Group",
+      "assinatura": "Closing message"
+    },
+    "meta": {
+      "title": "About",
+      "description": "Open Group structures and develops real estate ventures, guiding opportunities from concept to launch. Value is born before ground is broken."
+    },
+    "hero": {
+      "breadcrumbHome": "Start",
+      "breadcrumbCurrent": "About",
+      "kicker": "About",
+      "title1": "We reveal the <em>extraordinary</em> value",
+      "title2": "of real estate assets.",
+      "cue": "Scroll to discover Open Group"
+    },
+    "about": {
+      "kicker": "About Open Group",
+      "heading": "Our work begins <em>before ground is broken</em>.",
+      "models": {
+        "consultoria": { "strong": "Contracted", "rest": "consulting" },
+        "parceria": { "strong": "Strategic", "rest": "partnership" },
+        "societaria": { "strong": "Partner", "rest": "in the venture" }
+      },
+      "body1": "Open Group Real Estate Development works on the <em>structuring and development of real estate ventures</em>, guiding opportunities from concept to launch.",
+      "body2": "Our work begins before construction: in reading the opportunity, in feasibility analysis, in the strategic design of the venture, and in bringing together the partners needed for the project to move forward with consistency.",
+      "body3": "We work alongside builders, developers, companies holding real estate assets, and investors — combining strategic vision, financial and institutional structuring, connection with partners, and guidance through the critical market stages.",
+      "body4": "More than developing projects, <em>we structure real estate ventures so that potential, capital, and execution move in the same direction.</em>"
+    },
+    "manifesto": {
+      "eyebrow": "Our manifesto",
+      "segments": {
+        "s1": "Many opportunities don't fail for lack of ",
+        "s2": "potential",
+        "s3": ". They fail because they move forward without ",
+        "s4": "structure",
+        "s5": "."
+      }
+    },
+    "origem": {
+      "kicker": "Origin",
+      "heading": "The value of a development is born <em>before ground is broken</em>.",
+      "intro": "A promising site or a well-located project does not stand on its own. Without vision, feasibility, partners, and guidance, potential disperses before it becomes a development. It is born earlier — and it is born here:",
+      "strata": {
+        "01": { "name": "Reading the opportunity", "desc": "Interpreting the asset and its real potential, before it becomes obvious." },
+        "02": { "name": "Product conception", "desc": "Defining the right development for that opportunity." },
+        "03": { "name": "Structuring the venture", "desc": "Aligning potential, capital, and execution in the same direction." },
+        "04": { "name": "Choosing the partners", "desc": "Bringing together partners, the bank, and institutional relationships." },
+        "05": { "name": "The path to launch", "desc": "Guiding with clarity until the project is ready to move forward." }
+      }
+    },
+    "lideranca": {
+      "kicker": "Who leads",
+      "heading": "The leadership behind every <em>structured venture</em>.",
+      "intro": "Open Group is led by professionals who combine strategic vision, command of the real estate venture, and institutional relationships — to turn opportunities into developments ready to move forward.",
+      "leaders": {
+        "max": {
+          "role": "CEO and Founder",
+          "statement": "Before developing a project, you must see the value that hasn't yet been revealed.",
+          "quote1": "At the helm of Open Group, Flying Studio, NID Studio, and Rinno Films, I lead an ecosystem created to turn real estate opportunities into clearer, more feasible ventures, ready to move forward.",
+          "quote2": "Each company works on one stage of the journey, from strategy to communication, always with the same vision: to develop with structure from the very origin."
+        }
+      }
+    },
+    "grupo": {
+      "kicker": "Our Group",
+      "heading": "Our Group",
+      "intro": "Strategy, architecture, visualization, and audiovisual work as complementary forces. Each company deepens one stage of the journey: to structure, to design, to anticipate, and to communicate.",
+      "visitLink": "Visit site ↗",
+      "visitAria": "{name} — visit site",
+      "companies": {
+        "flying": {
+          "role": "Visual futures and immersive experiences",
+          "text": "The machine for anticipating futures. Images and 3D renders, apps, D.Brave, and immersive rooms transport the client into their future reality — over 12 years translating brick and concrete into pure visual poetry.",
+          "tags": { "t1": "3D Renders", "t2": "Apps", "t3": "D.Brave", "t4": "Immersive Rooms" }
+        },
+        "ogdi": {
+          "role": "Strategy and structuring",
+          "text": "The strategic starting point. We provide consulting focused on market intelligence, product development, and the complete structuring of new launches from their very conception.",
+          "tags": { "t1": "Market", "t2": "Product", "t3": "Launch" }
+        },
+        "nid": {
+          "role": "Architecture, interiors, and point of sale",
+          "text": "Where architectural intelligence takes shape and emotion. The home as a true nest: interior projects, facade design, and points of sale conceived as spaces of comfort, security, and strong personality.",
+          "tags": { "t1": "Interiors", "t2": "Facades", "t3": "Point of Sale" }
+        },
+        "rinno": {
+          "role": "Films, motion, and emotional connection",
+          "text": "The group's audiovisual studio. From concept and product films to viral and institutional pieces — bringing motion to stories and creating the emotional connection between the project and its audience.",
+          "tags": { "t1": "Films", "t2": "Viral", "t3": "Institutional" }
+        }
+      }
+    },
+    "assinatura": {
+      "kicker": "Closing message",
+      "heading": "We turn opportunities into<br></br><em>developments ready to move forward</em>.",
+      "sub": "Guiding structuring, feasibility, partners, and the path to launch, with strategic vision. Develop with vision from the very origin.",
+      "ctaProjetos": "See the projects",
+      "ctaContato": "Talk to Open Group"
+    }
   }
 }
