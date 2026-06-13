@@ -10,7 +10,15 @@
   "common": {
     "ctaHeader": "Fale com a Open Group",
     "ctaMobile": "Apresentar oportunidade",
-    "langLabel": "Idioma: Português (Brasil). Ver outros idiomas"
+    "langLabel": "Idioma: Português (Brasil). Ver outros idiomas",
+    "placeholder": {
+      "body": "Conteúdo em preparação. Esta página faz parte da arquitetura do site e receberá conteúdo em breve.",
+      "back": "Voltar para a home"
+    },
+    "rail": {
+      "goTo": "Ir para {label}",
+      "defaultAria": "Navegação visual da página"
+    }
   },
   "footer": {
     "tagline": "O valor nasce antes da obra.",

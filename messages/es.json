@@ -10,7 +10,15 @@
   "common": {
     "ctaHeader": "Habla con Open Group",
     "ctaMobile": "Presentar una oportunidad",
-    "langLabel": "Idioma: Español. Ver otros idiomas"
+    "langLabel": "Idioma: Español. Ver otros idiomas",
+    "placeholder": {
+      "body": "Contenido en preparación. Esta página forma parte de la arquitectura del sitio y recibirá contenido pronto.",
+      "back": "Volver al inicio"
+    },
+    "rail": {
+      "goTo": "Ir a {label}",
+      "defaultAria": "Navegación visual de la página"
+    }
   },
   "footer": {
     "tagline": "El valor nace antes de la obra.",

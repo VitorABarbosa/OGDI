@@ -10,7 +10,15 @@
   "common": {
     "ctaHeader": "Talk to Open Group",
     "ctaMobile": "Present an opportunity",
-    "langLabel": "Language: English. View other languages"
+    "langLabel": "Language: English. View other languages",
+    "placeholder": {
+      "body": "Content in preparation. This page is part of the site architecture and will receive content soon.",
+      "back": "Back to home"
+    },
+    "rail": {
+      "goTo": "Go to {label}",
+      "defaultAria": "Visual page navigation"
+    }
   },
   "footer": {
     "tagline": "Value is created before ground is broken.",
