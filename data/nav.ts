@@ -1,15 +1,16 @@
-export type NavItem = { label: string; href: string };
+export type NavItem = { key: string; href: string };
 
 export const navItems: NavItem[] = [
-  { label: "Institucional", href: "/institucional" },
-  { label: "Projetos", href: "/projetos" },
-  { label: "Clientes", href: "/clientes" },
-  { label: "Investidores", href: "/investidores" },
-  { label: "Insights", href: "/insights" },
-  { label: "Contato", href: "/contato" },
+  { key: "institucional", href: "/institucional" },
+  { key: "projetos", href: "/projetos" },
+  { key: "clientes", href: "/clientes" },
+  { key: "investidores", href: "/investidores" },
+  { key: "insights", href: "/insights" },
+  { key: "contato", href: "/contato" },
 ];
 
-export const footerAtuacao: NavItem[] = [
+// footerAtuacao permanece como está por enquanto (traduzido no Plano 2).
+export const footerAtuacao: { label: string; href: string }[] = [
   { label: "Leitura da oportunidade", href: "/#atuacao" },
   { label: "Inteligência de mercado", href: "/#atuacao" },
   { label: "Viabilidade", href: "/#atuacao" },
