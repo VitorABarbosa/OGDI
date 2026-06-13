@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { site } from "@/data/site";
 
@@ -111,7 +112,13 @@ const secoes: Secao[] = [
   },
 ];
 
-export default function PoliticaDePrivacidadePage() {
+export default async function PoliticaDePrivacidadePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <main className="bg-paper">
       <div className="wrap pt-[clamp(140px,18vh,200px)] pb-[clamp(80px,10vw,140px)]">

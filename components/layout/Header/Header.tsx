@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { useHeaderScroll } from "@/hooks/useHeaderScroll";
 import { useMobileMenu } from "@/hooks/useMobileMenu";
@@ -7,10 +7,14 @@ import { Nav } from "./Nav";
 import { MobileMenu } from "./MobileMenu";
 import { site } from "@/data/site";
 import { cn } from "@/lib/cn";
+import { useLocale, useTranslations } from "next-intl";
+import { LangSwitcher } from "./LangSwitcher";
 
 export function Header() {
   const { scrolled, onDark } = useHeaderScroll();
   const menu = useMobileMenu();
+  const locale = useLocale();
+  const tc = useTranslations("common");
   // Branco só sobre hero escuro — `!scrolled` deixava a header invisível
   // no topo de páginas claras (Investidores, Insights).
   const lightForeground = onDark;
@@ -38,7 +42,7 @@ export function Header() {
           <Nav onDark={lightForeground} />
         </div>
         <div className="hidden lg:flex items-center gap-[clamp(18px,1.6vw,28px)]">
-          <LangSwitcher light={lightForeground} />
+          <LangSwitcher light={lightForeground} locale={locale} />
           <span aria-hidden className={cn("h-[14px] w-px", lightForeground ? "bg-white/25" : "bg-ink/15")} />
           {/* CTA tipográfico: sublinhado fino permanente + varredura no hover,
               na mesma linguagem dos links da nav */}
@@ -49,7 +53,7 @@ export function Header() {
               lightForeground ? "text-white" : "text-ink",
             )}
           >
-            Fale com a Open Group
+            {tc("ctaHeader")}
             <span aria-hidden className="text-[14px] leading-none transition-transform duration-300 ease-brand group-hover:translate-x-1">→</span>
             <span aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-current opacity-35" />
             <span aria-hidden className="absolute left-0 bottom-0 h-px w-0 bg-current transition-[width] duration-300 ease-brand group-hover:w-full" />
@@ -65,35 +69,5 @@ export function Header() {
       </header>
       <MobileMenu open={menu.open} onClose={menu.close} />
     </>
-  );
-}
-
-// Seletor de idioma — somente apresentação por enquanto; a troca real de
-// conteúdo (EN/ES) será ligada quando houver i18n no projeto. No hover,
-// EN e ES deslizam inline ao lado do PT | BR — sem painel, só tipografia.
-const otherLangs = ["EN", "ES"];
-
-function LangSwitcher({ light }: { light: boolean }) {
-  const type = "font-sans text-[11px] tracking-[.18em] uppercase font-medium";
-  return (
-    <div className={cn("group/lang flex items-center py-[6px]", light ? "text-white" : "text-ink")}>
-      <div className="grid grid-cols-[0fr] transition-[grid-template-columns] duration-[420ms] ease-brand group-hover/lang:grid-cols-[1fr] group-focus-within/lang:grid-cols-[1fr]">
-        <div className="flex min-w-0 items-center gap-[14px] overflow-hidden opacity-0 transition-opacity duration-300 ease-brand group-hover/lang:opacity-100 group-focus-within/lang:opacity-100">
-          {otherLangs.map((code) => (
-            <button key={code} type="button"
-              className={cn(type, "cursor-pointer opacity-50 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100")}>
-              {code}
-            </button>
-          ))}
-          <span aria-hidden className="mr-[14px] h-[11px] w-px shrink-0 bg-current opacity-30" />
-        </div>
-      </div>
-      <button type="button" aria-haspopup="true" aria-label="Idioma: Português (Brasil). Ver outros idiomas"
-        className={cn(type, "flex cursor-default items-center gap-[9px]")}>
-        PT
-        <span aria-hidden className="h-[11px] w-px bg-current opacity-40" />
-        BR
-      </button>
-    </div>
   );
 }

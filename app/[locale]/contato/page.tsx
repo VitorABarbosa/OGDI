@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { RevealController } from "@/components/Reveal/RevealController";
 import { ContatoHero } from "@/app/_sections/ContatoPage/ContatoHero";
 import { ContatoConversa } from "@/app/_sections/ContatoPage/ContatoConversa";
@@ -9,7 +10,13 @@ export const metadata: Metadata = {
     "Apresente o ativo, o terreno ou o projeto. A Open Group faz a primeira leitura da oportunidade e retorna com os próximos passos.",
 };
 
-export default function ContatoPage() {
+export default async function ContatoPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <main>
       <RevealController />

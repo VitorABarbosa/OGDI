@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "@/app/_sections/EmpreendimentoPage/EmpHero";
 import { EmpInfo } from "@/app/_sections/EmpreendimentoPage/EmpInfo";
@@ -22,7 +23,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
   const p = projetos.find((x) => x.slug === slug);
@@ -32,9 +33,10 @@ export async function generateMetadata({
 export default async function Page({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const p = projetos.find((x) => x.slug === slug);
   if (!p) notFound();
 

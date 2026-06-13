@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { RevealController } from "@/components/Reveal/RevealController";
 import { InvestidoresHero } from "@/app/_sections/InvestidoresPage/InvestidoresHero";
 import { InvestidoresTese } from "@/app/_sections/InvestidoresPage/InvestidoresTese";
@@ -25,7 +26,13 @@ export const metadata: Metadata = {
     "Capital qualificado entra antes do lançamento — na fase em que o valor é criado. Conheça a tese, o ciclo da operação e os modelos de participação da Open Group.",
 };
 
-export default function InvestidoresPage() {
+export default async function InvestidoresPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <main>
       <RevealController />

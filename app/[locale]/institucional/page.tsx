@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { RevealController } from "@/components/Reveal/RevealController";
 import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 import { InstitucionalHero } from "@/app/_sections/InstitucionalPage/InstitucionalHero";
@@ -26,7 +27,13 @@ export const metadata: Metadata = {
     "A Open Group estrutura e desenvolve empreendimentos imobiliários, conduzindo oportunidades da conceituação ao lançamento. O valor nasce antes da obra.",
 };
 
-export default function InstitucionalPage() {
+export default async function InstitucionalPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <main>
       <RevealController />
