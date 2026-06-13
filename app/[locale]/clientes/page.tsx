@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { RevealController } from "@/components/Reveal/RevealController";
 import { PageSectionRail } from "@/app/_sections/PageSectionRail";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -25,7 +26,13 @@ export const metadata: Metadata = {
     "Incorporadoras, construtoras, fundos e proprietários de área que estruturam suas operações com a Open Group — da origem ao lançamento.",
 };
 
-export default function ClientesPage() {
+export default async function ClientesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <main>
       <RevealController />
