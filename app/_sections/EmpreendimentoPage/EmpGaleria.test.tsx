@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
+import { renderWithIntl as render } from "@/test/intl";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpGaleria } from "./EmpGaleria";
 

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Kicker } from "@/components/ui/Kicker";
 import { atuacaoSteps } from "@/data/empreendimento";
 import { cn } from "@/lib/cn";
@@ -5,6 +6,7 @@ import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 
 // Seção de método OGDI — conteúdo igual para todos os empreendimentos (não recebe prop do projeto).
 export function EmpAtuacao({ p }: { p?: Projeto }) {
+  const t = useTranslations("empreendimento.atuacao");
   const visibleStrategyBody = p?.strategyStory?.body.slice(0, 1);
 
   return (
@@ -30,9 +32,9 @@ export function EmpAtuacao({ p }: { p?: Projeto }) {
 
         {/* Head */}
         <div className="reveal max-w-[620px] mb-[clamp(40px,5vw,64px)]">
-          <Kicker>A atuação da Open Group</Kicker>
+          <Kicker>{t("kicker")}</Kicker>
           <h2 className="reveal reveal-2 font-sans font-semibold text-[clamp(24px,2.6vw,36px)] tracking-[-.025em] leading-[1.1] mt-4">
-            Como estruturamos esta operação.
+            {t("heading")}
           </h2>
         </div>
 
@@ -47,10 +49,10 @@ export function EmpAtuacao({ p }: { p?: Projeto }) {
                 {step.n}
               </span>
               <h3 className="font-sans font-semibold text-[16.5px] tracking-[-.01em]">
-                {step.title}
+                {t(`steps.${step.key}.title`)}
               </h3>
               <p className="text-[13.5px] leading-[1.55] text-ink-2">
-                {step.desc}
+                {t(`steps.${step.key}.desc`)}
               </p>
             </div>
           ))}

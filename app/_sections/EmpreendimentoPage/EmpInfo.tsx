@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Kicker } from "@/components/ui/Kicker";
 import { Button } from "@/components/ui/Button";
 import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
@@ -22,30 +23,45 @@ function MetaRow({ label, value, tbd, className }: { label: string; value: strin
   );
 }
 
-export function EmpInfo({ p }: { p: Projeto }) {
+export function EmpInfo({
+  p,
+  status,
+  segmento,
+  local,
+}: {
+  p: Projeto;
+  // Listing strings translated upstream (projetos.cards). Fall back to PT data.
+  status?: string;
+  segmento?: string;
+  local?: string;
+}) {
+  const t = useTranslations("empreendimento.info");
+  const statusText = status ?? p.status;
+  const segmentoText = segmento ?? p.segmento;
+  const localText = local ?? p.local;
   return (
     <section className="py-section">
       <div className="wrap">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-[clamp(40px,6vw,100px)] items-start">
           <div className="flex flex-col border-t border-[color:var(--line)] lg:sticky lg:top-[110px]">
-            <MetaRow label="Status" value={p.status} />
-            <MetaRow label="Segmento" value={p.segmento} className="reveal-info-1" />
-            <MetaRow label="Localização" value={p.local} tbd={p.localTbd} />
-            {p.regiao && <MetaRow label="Região" value={p.regiao} />}
-            <MetaRow label="Atuação Open Group" value="Sócia da operação" />
-            <MetaRow label="Modelo" value={p.modelo} className="reveal-info-4" />
-            <MetaRow label="Tipologia · metragem" value="A confirmar" tbd />
+            <MetaRow label={t("labels.status")} value={statusText} />
+            <MetaRow label={t("labels.segmento")} value={segmentoText} className="reveal-info-1" />
+            <MetaRow label={t("labels.localizacao")} value={localText} tbd={p.localTbd} />
+            {p.regiao && <MetaRow label={t("labels.regiao")} value={p.regiao} />}
+            <MetaRow label={t("labels.atuacao")} value={t("venturePartner")} />
+            <MetaRow label={t("labels.modelo")} value={t("venturePartner")} className="reveal-info-4" />
+            <MetaRow label={t("labels.tipologia")} value={t("tbc")} tbd />
 
             <Button href="/contato" arrow className="reveal reveal-info-5 mt-[28px] self-start">
-              Tenho interesse
+              {t("cta")}
             </Button>
           </div>
 
           <div>
-            <Kicker className="reveal mb-5">O empreendimento</Kicker>
+            <Kicker className="reveal mb-5">{t("kicker")}</Kicker>
 
             <h2 className="reveal reveal-2 font-sans font-semibold text-[clamp(26px,3vw,42px)] leading-[1.1] tracking-[-.025em] mb-[26px]">
-              Da leitura da oportunidade à condução até o lançamento.
+              {t("heading")}
             </h2>
 
             {p.intro.map((paragraph, i) => (

@@ -886,5 +886,91 @@
     "contact": {
       "text": "Dúvidas sobre esta política? Escreva para <email></email> ou acesse a <link>página de contato</link>."
     }
+  },
+  "empreendimento": {
+    "hero": {
+      "breadcrumbAria": "Trilha de navegação",
+      "home": "Início",
+      "projetos": "Projetos",
+      "badgeSuffix": "Empreendimento",
+      "venturePartner": "OGDI sócia da operação"
+    },
+    "info": {
+      "kicker": "O empreendimento",
+      "heading": "Da leitura da oportunidade à condução até o lançamento.",
+      "labels": {
+        "status": "Status",
+        "segmento": "Segmento",
+        "localizacao": "Localização",
+        "regiao": "Região",
+        "atuacao": "Atuação Open Group",
+        "modelo": "Modelo",
+        "tipologia": "Tipologia · metragem"
+      },
+      "venturePartner": "Sócia da operação",
+      "tbc": "A confirmar",
+      "cta": "Tenho interesse"
+    },
+    "gallery": {
+      "aria": "Galeria de imagens"
+    },
+    "atuacao": {
+      "kicker": "A atuação da Open Group",
+      "heading": "Como estruturamos esta operação.",
+      "steps": {
+        "01": {
+          "title": "Leitura da oportunidade",
+          "desc": "Entendimento do ativo, do estágio e do potencial real de desenvolvimento na região."
+        },
+        "02": {
+          "title": "Inteligência de mercado",
+          "desc": "Contexto de praça, demanda e leitura concorrencial que fundamentou a tese."
+        },
+        "03": {
+          "title": "Conceituação do produto",
+          "desc": "Definição da lógica do empreendimento: tipologia, mix e posicionamento."
+        },
+        "04": {
+          "title": "Viabilidade",
+          "desc": "Análise financeira e institucional que destravou o caminho da operação."
+        },
+        "05": {
+          "title": "Estruturação da operação",
+          "desc": "Modelagem para alinhar potencial, capital e execução na mesma direção."
+        },
+        "06": {
+          "title": "Conexão com parceiros",
+          "desc": "Articulação de parceiros e relacionamento com banco, incluindo a CEF quando aplicável."
+        },
+        "07": {
+          "title": "Preparação para lançamento",
+          "desc": "Estratégia comercial e condução da operação até estar pronta para avançar."
+        },
+        "em-obra": {
+          "title": "Em obra",
+          "desc": "O empreendimento avança na fase de execução, conduzido com a estrutura definida na origem."
+        }
+      }
+    },
+    "neighborhood": {
+      "kicker": "Entorno do empreendimento",
+      "fallbackTitle": "Localização em definição",
+      "fallbackText": "A localização deste empreendimento ainda será detalhada. Quando o endereço for confirmado, este bloco passa a exibir o mapa interativo do Google Maps.",
+      "fallbackAddress": "Endereço em definição",
+      "mapUnavailable": "Mapa indisponível",
+      "addressTbd": "Endereço em definição.",
+      "placeholderText": "Este espaço já segue o padrão da página e será ativado com Google Maps assim que a localização for informada.",
+      "mapTitle": "Google Maps - {name}"
+    },
+    "proximos": {
+      "kicker": "Continue explorando",
+      "heading": "Outros empreendimentos.",
+      "link": "Ver todos os projetos"
+    },
+    "cta": {
+      "title": "Interesse no {name}?",
+      "text": "Fale com a equipe da Open Group e receba mais informações sobre o empreendimento e a operação.",
+      "ctaLabel": "Falar com a equipe"
+    }
   }
 }

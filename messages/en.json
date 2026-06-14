@@ -886,5 +886,91 @@
     "contact": {
       "text": "Questions about this policy? Write to <email></email> or visit the <link>contact page</link>."
     }
+  },
+  "empreendimento": {
+    "hero": {
+      "breadcrumbAria": "Breadcrumb",
+      "home": "Home",
+      "projetos": "Projects",
+      "badgeSuffix": "Development",
+      "venturePartner": "OGDI partner in the venture"
+    },
+    "info": {
+      "kicker": "The development",
+      "heading": "From reading the opportunity to guiding it through to launch.",
+      "labels": {
+        "status": "Status",
+        "segmento": "Segment",
+        "localizacao": "Location",
+        "regiao": "Region",
+        "atuacao": "Open Group role",
+        "modelo": "Model",
+        "tipologia": "Layout · area"
+      },
+      "venturePartner": "Partner in the venture",
+      "tbc": "TBC",
+      "cta": "I'm interested"
+    },
+    "gallery": {
+      "aria": "Image gallery"
+    },
+    "atuacao": {
+      "kicker": "Open Group's role",
+      "heading": "How we structured this venture.",
+      "steps": {
+        "01": {
+          "title": "Reading the opportunity",
+          "desc": "Understanding the asset, its stage, and the real development potential in the area."
+        },
+        "02": {
+          "title": "Market intelligence",
+          "desc": "Local market context, demand, and competitive reading that grounded the thesis."
+        },
+        "03": {
+          "title": "Product conception",
+          "desc": "Defining the development's logic: layout, mix, and positioning."
+        },
+        "04": {
+          "title": "Feasibility",
+          "desc": "Financial and institutional analysis that unlocked the venture's path."
+        },
+        "05": {
+          "title": "Structuring the venture",
+          "desc": "Modeling to align potential, capital, and execution in the same direction."
+        },
+        "06": {
+          "title": "Connecting with partners",
+          "desc": "Coordinating partners and bank relationships, including CEF (Brazil's federal bank) where applicable."
+        },
+        "07": {
+          "title": "Launch readiness",
+          "desc": "Commercial strategy and guidance of the venture until it is ready to move forward."
+        },
+        "em-obra": {
+          "title": "Under construction",
+          "desc": "The development advances into the execution phase, guided by the structure defined at the origin."
+        }
+      }
+    },
+    "neighborhood": {
+      "kicker": "Development surroundings",
+      "fallbackTitle": "Location to be defined",
+      "fallbackText": "The location of this development is still to be detailed. Once the address is confirmed, this block will display the interactive Google Maps view.",
+      "fallbackAddress": "Address to be defined",
+      "mapUnavailable": "Map unavailable",
+      "addressTbd": "Address to be defined.",
+      "placeholderText": "This space already follows the page standard and will be activated with Google Maps as soon as the location is provided.",
+      "mapTitle": "Google Maps - {name}"
+    },
+    "proximos": {
+      "kicker": "Keep exploring",
+      "heading": "Other developments.",
+      "link": "View all projects"
+    },
+    "cta": {
+      "title": "Interested in {name}?",
+      "text": "Talk to the Open Group team and get more information about the development and the venture.",
+      "ctaLabel": "Talk to the team"
+    }
   }
 }

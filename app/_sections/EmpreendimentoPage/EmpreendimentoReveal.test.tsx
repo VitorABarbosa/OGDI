@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import { renderWithIntl as render } from "@/test/intl";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "./EmpHero";
 import { EmpInfo } from "./EmpInfo";
@@ -16,7 +17,7 @@ describe("Empreendimento page reveals", () => {
   it("marks the hero copy layers for reveal animation", () => {
     render(<EmpHero p={projeto} />);
 
-    expect(screen.getByLabelText("Breadcrumb")).toHaveClass("reveal");
+    expect(screen.getByLabelText("Trilha de navegação")).toHaveClass("reveal");
     expect(screen.getByRole("heading", { name: projeto.name, level: 1 })).toHaveClass("reveal", "reveal-3");
   });
 

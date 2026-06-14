@@ -1,9 +1,25 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { Button } from "@/components/ui/Button";
 import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 
-export function EmpHero({ p }: { p: Projeto }) {
+export function EmpHero({
+  p,
+  status,
+  segmento,
+  local,
+}: {
+  p: Projeto;
+  // Listing strings translated upstream (projetos.cards). Fall back to PT data.
+  status?: string;
+  segmento?: string;
+  local?: string;
+}) {
+  const t = useTranslations("empreendimento.hero");
+  const statusText = status ?? p.status;
+  const segmentoText = segmento ?? p.segmento;
+  const localText = local ?? p.local;
   return (
     <section
       data-header-dark
@@ -25,14 +41,14 @@ export function EmpHero({ p }: { p: Projeto }) {
         <div className="max-w-[1440px] mx-auto">
           {/* Breadcrumb */}
           <nav
-            aria-label="Breadcrumb"
+            aria-label={t("breadcrumbAria")}
             className="reveal flex items-center gap-[10px] mb-[22px] text-[12px] tracking-[.08em] uppercase"
           >
             <Link
               href="/"
               className="text-white/60 transition-colors duration-200 hover:text-white"
             >
-              Início
+              {t("home")}
             </Link>
             <span
               aria-hidden
@@ -42,7 +58,7 @@ export function EmpHero({ p }: { p: Projeto }) {
               href="/projetos"
               className="text-white/60 transition-colors duration-200 hover:text-white"
             >
-              Projetos
+              {t("projetos")}
             </Link>
             <span
               aria-hidden
@@ -55,7 +71,7 @@ export function EmpHero({ p }: { p: Projeto }) {
 
           {/* Status badge */}
           <span className="reveal reveal-2 inline-block text-green text-[11px] tracking-[.2em] uppercase">
-            {p.status} · Empreendimento
+            {statusText} · {t("badgeSuffix")}
           </span>
 
           {/* Heading */}
@@ -69,23 +85,23 @@ export function EmpHero({ p }: { p: Projeto }) {
           <div
             className="reveal reveal-4 flex flex-wrap items-center mt-[18px] gap-[10px_16px] text-[12.5px] tracking-[.12em] uppercase text-white/85"
           >
-            <span>{p.segmento}</span>
+            <span>{segmentoText}</span>
             <span
               aria-hidden
               className="w-1 h-1 rounded-full shrink-0 bg-white/50"
             />
             {p.localTbd ? (
               <span className="italic normal-case text-white/55">
-                {p.local}
+                {localText}
               </span>
             ) : (
-              <span>{p.local}</span>
+              <span>{localText}</span>
             )}
             <span
               aria-hidden
               className="w-1 h-1 rounded-full shrink-0 bg-white/50"
             />
-            <span>OGDI sócia da operação</span>
+            <span>{t("venturePartner")}</span>
           </div>
 
           {p.heroSummary && (
