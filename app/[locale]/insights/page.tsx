@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PagePlaceholder } from "@/components/layout/PagePlaceholder";
 
 export const metadata: Metadata = { title: "Insights" };
@@ -11,5 +11,6 @@ export default async function Page({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <PagePlaceholder kicker="Insights" title="Análises e inteligência de mercado." />;
+  const t = await getTranslations("insights");
+  return <PagePlaceholder kicker={t("kicker")} title={t("title")} />;
 }

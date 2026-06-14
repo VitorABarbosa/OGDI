@@ -760,5 +760,13 @@
         "body": "A equipe da Open Group faz a primeira leitura e retorna com os próximos passos."
       }
     }
+  },
+  "insights": {
+    "kicker": "Insights",
+    "title": "Análises e inteligência de mercado."
+  },
+  "parceiros": {
+    "kicker": "Parceiros",
+    "title": "Ecossistema de parceiros."
   }
 }
