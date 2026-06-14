@@ -457,7 +457,9 @@
           "title": "Landowners",
           "hint": "The land as capital"
         }
-      }
+      },
+      "breadcrumbHome": "Start",
+      "breadcrumbCurrent": "Clients"
     },
     "perfis": {
       "kicker": "Who we work for",
@@ -610,7 +612,9 @@
       "kicker": "Investors",
       "title": "Value is born before ground is broken.<br></br>So is the chance to invest, <em>too</em>.",
       "intro": "Open Group structures real estate ventures and opens room for qualified capital to enter before the launch — at the stage where value is created.",
-      "scrollHint": "The thesis"
+      "scrollHint": "The thesis",
+      "breadcrumbHome": "Start",
+      "breadcrumbCurrent": "Investors"
     },
     "tese": {
       "items": {
@@ -719,7 +723,9 @@
           "label": "Location",
           "hint": "Active in real estate development"
         }
-      }
+      },
+      "breadcrumbHome": "Start",
+      "breadcrumbCurrent": "Contact"
     },
     "conversa": {
       "kicker": "How we guide it",

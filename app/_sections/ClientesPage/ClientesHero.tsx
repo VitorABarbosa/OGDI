@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Kicker } from "@/components/ui/Kicker";
 import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 
@@ -18,6 +19,13 @@ export async function ClientesHero() {
       {/* Linha fluida em variante serena: três trechos visíveis, bem suaves */}
       <GalleryFlowBackground background="#FFFFFF" variant="clientes" />
       <div className="wrap relative z-[2]">
+        <nav aria-label="Breadcrumb" className="reveal mb-[26px] flex items-center gap-[10px] text-[12px] uppercase tracking-[.08em] text-ink-3">
+          <Link href="/" className="text-ink-2 transition-colors duration-200 hover:text-ink">
+            {t("breadcrumbHome")}
+          </Link>
+          <span aria-hidden className="inline-block h-px w-[14px] shrink-0 bg-ink/20" />
+          <span aria-current="page" className="text-ink">{t("breadcrumbCurrent")}</span>
+        </nav>
         <Kicker className="reveal">{t("kicker")}</Kicker>
         <h1 className="reveal reveal-2 mt-6 max-w-[24ch] font-news font-normal text-[clamp(2.1rem,5vw,4.2rem)] leading-[1.06] tracking-[-.018em] text-ink">
           {t.rich("title", {

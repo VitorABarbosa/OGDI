@@ -457,7 +457,9 @@
           "title": "Propietarios de terreno",
           "hint": "El terreno como capital"
         }
-      }
+      },
+      "breadcrumbHome": "Inicio",
+      "breadcrumbCurrent": "Clientes"
     },
     "perfis": {
       "kicker": "Para quién trabajamos",
@@ -610,7 +612,9 @@
       "kicker": "Inversores",
       "title": "El valor nace antes de la obra.<br></br>La oportunidad de invertir, <em>también</em>.",
       "intro": "Open Group estructura operaciones inmobiliarias y abre espacio para que el capital cualificado entre antes del lanzamiento — en la fase en que se crea el valor.",
-      "scrollHint": "La tesis"
+      "scrollHint": "La tesis",
+      "breadcrumbHome": "Inicio",
+      "breadcrumbCurrent": "Inversores"
     },
     "tese": {
       "items": {
@@ -719,7 +723,9 @@
           "label": "Ubicación",
           "hint": "Actuación en desarrollo inmobiliario"
         }
-      }
+      },
+      "breadcrumbHome": "Inicio",
+      "breadcrumbCurrent": "Contacto"
     },
     "conversa": {
       "kicker": "Cómo conducimos",
