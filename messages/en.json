@@ -507,7 +507,7 @@
     },
     "relacao": {
       "kicker": "Forms of relationship",
-      "intro": "Three depths of involvement — the relationship can begin within one scope and grow with the venture.",
+      "intro": "Depths of involvement that grow with the venture — plus direct investment via SCP.",
       "quandoLabel": "When it makes sense:",
       "footer": "Growing involvement →",
       "items": {
@@ -525,6 +525,11 @@
           "title": "Partner in the venture",
           "desc": "Participation in the venture itself — potential, capital and execution in the same direction, with shared outcomes.",
           "quando": "To share risk and outcome in ventures of greater potential."
+        },
+        "04": {
+          "title": "Investment SCP",
+          "desc": "Direct capital in the venture through an SCP (silent partnership) — capital that shares in the result, without taking on management.",
+          "quando": "To invest in a structured venture without running it."
         }
       }
     },

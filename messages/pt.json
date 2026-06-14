@@ -507,7 +507,7 @@
     },
     "relacao": {
       "kicker": "Formas de relação",
-      "intro": "Três profundidades de envolvimento — a relação pode começar em um escopo e crescer com a operação.",
+      "intro": "Profundidades de envolvimento que crescem com a operação — e o investimento direto via SCP.",
       "quandoLabel": "Quando faz sentido:",
       "footer": "Envolvimento crescente →",
       "items": {
@@ -517,7 +517,7 @@
           "quando": "Para validar uma oportunidade ou destravar uma decisão específica."
         },
         "02": {
-          "title": "Parceira estratégica",
+          "title": "Parceria estratégica",
           "desc": "A Open Group permanece na condução: estruturação da operação, conexão com parceiros e preparação para lançamento.",
           "quando": "Para levar a operação inteira adiante com uma condução única."
         },
@@ -525,6 +525,11 @@
           "title": "Sócia da operação",
           "desc": "Participação na própria operação — potencial, capital e execução na mesma direção, com resultado compartilhado.",
           "quando": "Para dividir risco e resultado em operações de maior potencial."
+        },
+        "04": {
+          "title": "Investimento SCP",
+          "desc": "Aporte direto na operação por meio de uma SCP — capital que participa do resultado, sem assumir a gestão.",
+          "quando": "Para investir em uma operação estruturada, sem conduzi-la."
         }
       }
     },

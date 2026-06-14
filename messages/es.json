@@ -507,7 +507,7 @@
     },
     "relacao": {
       "kicker": "Formas de relación",
-      "intro": "Tres profundidades de involucramiento — la relación puede comenzar en un alcance y crecer con la operación.",
+      "intro": "Profundidades de involucramiento que crecen con la operación — y la inversión directa vía SCP.",
       "quandoLabel": "Cuándo tiene sentido:",
       "footer": "Involucramiento creciente →",
       "items": {
@@ -525,6 +525,11 @@
           "title": "Socia de la operación",
           "desc": "Participación en la propia operación — potencial, capital y ejecución en la misma dirección, con resultado compartido.",
           "quando": "Para compartir riesgo y resultado en operaciones de mayor potencial."
+        },
+        "04": {
+          "title": "Inversión SCP",
+          "desc": "Aporte directo en la operación mediante una SCP — capital que participa del resultado, sin asumir la gestión.",
+          "quando": "Para invertir en una operación estructurada, sin conducirla."
         }
       }
     },
