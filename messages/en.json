@@ -569,5 +569,111 @@
       "text": "Present the opportunity — we make the first reading and indicate the next steps.",
       "ctaLabel": "Talk to Open Group"
     }
+  },
+  "investidores": {
+    "meta": {
+      "title": "Investors",
+      "description": "Qualified capital enters before the launch — at the stage where value is created. Discover Open Group's thesis, the venture cycle, and the participation models."
+    },
+    "rail": {
+      "ariaLabel": "Visual navigation for the investors page",
+      "inicio": "Start",
+      "tese": "Thesis",
+      "ciclo": "Cycle",
+      "modelos": "Models",
+      "governanca": "Governance",
+      "operacoes": "Ventures",
+      "contato": "Contact"
+    },
+    "hero": {
+      "kicker": "Investors",
+      "title": "Value is born before ground is broken.<br></br>So is the chance to invest, <em>too</em>.",
+      "intro": "Open Group structures real estate ventures and opens room for qualified capital to enter before the launch — at the stage where value is created.",
+      "scrollHint": "The thesis"
+    },
+    "tese": {
+      "items": {
+        "01": {
+          "title": "We enter <em>early</em>.",
+          "desc": "A development's value is created during structuring — reading the opportunity, the product, and the venture — before construction begins."
+        },
+        "02": {
+          "title": "We read the market.",
+          "desc": "Every venture is born from market intelligence and a feasibility study, not from a bet."
+        },
+        "03": {
+          "title": "We guide it to the end.",
+          "desc": "From origination to launch, the same guidance — and the investor follows every milestone of the venture."
+        }
+      }
+    },
+    "ciclo": {
+      "kicker": "The venture cycle",
+      "intro": "Capital enters during structuring — and takes part in the creation of value, not just in the result.",
+      "capitalLabel": "Capital enters here"
+    },
+    "modelos": {
+      "kicker": "Participation models",
+      "heading": "Structures defined<br></br>by the venture — not the other way around.",
+      "footer": "Each structure is defined case by case, according to the venture — with no promise of results.",
+      "items": {
+        "scp": {
+          "sigla": "SCP",
+          "nome": "Silent partnership",
+          "desc": "Capital takes part in a specific venture, with scope, roles, and milestones defined by contract."
+        },
+        "permuta": {
+          "sigla": "Land swap",
+          "nome": "Land as capital",
+          "desc": "The land enters as capital in the venture — the owner shares in the development's result."
+        },
+        "coinvest": {
+          "sigla": "Co-invest.",
+          "nome": "Capital alongside the venture",
+          "desc": "Investment together with Open Group and strategic partners in structuring the venture."
+        }
+      }
+    },
+    "governanca": {
+      "kicker": "Governance and follow-up",
+      "heading": "The entire venture,<br></br>under a single lead.",
+      "intro": "Investing before construction requires seeing the venture. That's why Open Group guides with order: defined milestones, step-by-step reporting, and a single lead from start to launch.",
+      "items": {
+        "01": {
+          "title": "Defined milestones",
+          "desc": "Every venture advances through clear milestones, defined during structuring — from unlocking feasibility to launch readiness."
+        },
+        "02": {
+          "title": "Step-by-step reporting",
+          "desc": "The investor receives the state of the venture at each completed stage: what advanced, what comes next, and what changed along the way."
+        },
+        "03": {
+          "title": "A single lead",
+          "desc": "The guidance is Open Group's — from coordinating partners and the bank to the commercial strategy. One lead for the entire venture."
+        }
+      }
+    },
+    "operacoes": {
+      "kicker": "The thesis in practice",
+      "heading": "Ventures under guidance.",
+      "intro": "In all of them, Open Group is the <strong>partner in the venture</strong> — capital enters where value is born.",
+      "cta": "See all ventures"
+    },
+    "curva": {
+      "capitalLabel": "Capital enters here",
+      "stepAria": "Stage {idx} — {title}"
+    },
+    "cta": {
+      "items": {
+        "capital": {
+          "title": "I have capital to invest",
+          "desc": "Talk with the team about the ventures under structuring."
+        },
+        "terreno": {
+          "title": "I have land or an asset",
+          "desc": "Present the area — we make the first reading of the opportunity."
+        }
+      }
+    }
   }
 }

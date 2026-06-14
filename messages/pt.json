@@ -569,5 +569,111 @@
       "text": "Apresente a oportunidade — fazemos a primeira leitura e indicamos os próximos passos.",
       "ctaLabel": "Falar com a Open Group"
     }
+  },
+  "investidores": {
+    "meta": {
+      "title": "Investidores",
+      "description": "Capital qualificado entra antes do lançamento — na fase em que o valor é criado. Conheça a tese, o ciclo da operação e os modelos de participação da Open Group."
+    },
+    "rail": {
+      "ariaLabel": "Navegação visual da página investidores",
+      "inicio": "Início",
+      "tese": "Tese",
+      "ciclo": "Ciclo",
+      "modelos": "Modelos",
+      "governanca": "Governança",
+      "operacoes": "Operações",
+      "contato": "Contato"
+    },
+    "hero": {
+      "kicker": "Investidores",
+      "title": "O valor nasce antes da obra.<br></br>A oportunidade de investir, <em>também</em>.",
+      "intro": "A Open Group estrutura operações imobiliárias e abre espaço para capital qualificado entrar antes do lançamento — na fase em que o valor é criado.",
+      "scrollHint": "A tese"
+    },
+    "tese": {
+      "items": {
+        "01": {
+          "title": "Entramos <em>antes</em>.",
+          "desc": "O valor de um empreendimento é criado na estruturação — leitura da oportunidade, produto e operação — antes de a obra começar."
+        },
+        "02": {
+          "title": "Lemos o mercado.",
+          "desc": "Cada operação nasce de inteligência de mercado e estudo de viabilidade, não de aposta."
+        },
+        "03": {
+          "title": "Conduzimos até o fim.",
+          "desc": "Da originação ao lançamento, a mesma condução — e o investidor acompanha cada marco da operação."
+        }
+      }
+    },
+    "ciclo": {
+      "kicker": "O ciclo da operação",
+      "intro": "O capital entra na estruturação — e participa da criação de valor, não apenas do resultado.",
+      "capitalLabel": "O capital entra aqui"
+    },
+    "modelos": {
+      "kicker": "Modelos de participação",
+      "heading": "Estruturas definidas<br></br>pela operação — não o contrário.",
+      "footer": "Cada estrutura é definida caso a caso, conforme a operação — sem promessa de resultado.",
+      "items": {
+        "scp": {
+          "sigla": "SCP",
+          "nome": "Sociedade em Conta de Participação",
+          "desc": "O capital participa de uma operação específica, com escopo, papéis e marcos definidos em contrato."
+        },
+        "permuta": {
+          "sigla": "Permuta",
+          "nome": "Terreno como capital",
+          "desc": "A área entra como capital na operação — o proprietário participa do resultado do empreendimento."
+        },
+        "coinvest": {
+          "sigla": "Coinvest.",
+          "nome": "Capital ao lado da operação",
+          "desc": "Investimento junto à Open Group e a parceiros estratégicos na estruturação da operação."
+        }
+      }
+    },
+    "governanca": {
+      "kicker": "Governança e acompanhamento",
+      "heading": "A operação inteira,<br></br>sob condução única.",
+      "intro": "Investir antes da obra exige enxergar a operação. Por isso a Open Group conduz com ordem: marcos definidos, reporte por etapa e uma única responsável do início ao lançamento.",
+      "items": {
+        "01": {
+          "title": "Marcos definidos",
+          "desc": "Cada operação avança por marcos claros, definidos na estruturação — do destravamento da viabilidade à preparação para lançamento."
+        },
+        "02": {
+          "title": "Reporte por etapa",
+          "desc": "O investidor recebe o estado da operação a cada etapa vencida: o que avançou, o que vem a seguir e o que mudou no caminho."
+        },
+        "03": {
+          "title": "Condução única",
+          "desc": "A condução é da Open Group — da articulação com parceiros e banco à estratégia comercial. Uma só responsável pela operação inteira."
+        }
+      }
+    },
+    "operacoes": {
+      "kicker": "A tese, na prática",
+      "heading": "Operações em condução.",
+      "intro": "Em todas, a Open Group é <strong>sócia da operação</strong> — o capital entra onde o valor nasce.",
+      "cta": "Ver todas as operações"
+    },
+    "curva": {
+      "capitalLabel": "O capital entra aqui",
+      "stepAria": "Etapa {idx} — {title}"
+    },
+    "cta": {
+      "items": {
+        "capital": {
+          "title": "Tenho capital para investir",
+          "desc": "Converse com a equipe sobre as operações em estruturação."
+        },
+        "terreno": {
+          "title": "Tenho um terreno ou ativo",
+          "desc": "Apresente a área — fazemos a primeira leitura da oportunidade."
+        }
+      }
+    }
   }
 }

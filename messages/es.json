@@ -569,5 +569,111 @@
       "text": "Presente la oportunidad — realizamos la primera lectura e indicamos los próximos pasos.",
       "ctaLabel": "Hablar con Open Group"
     }
+  },
+  "investidores": {
+    "meta": {
+      "title": "Inversores",
+      "description": "El capital cualificado entra antes del lanzamiento — en la fase en que se crea el valor. Conozca la tesis, el ciclo de la operación y los modelos de participación de Open Group."
+    },
+    "rail": {
+      "ariaLabel": "Navegación visual de la página inversores",
+      "inicio": "Inicio",
+      "tese": "Tesis",
+      "ciclo": "Ciclo",
+      "modelos": "Modelos",
+      "governanca": "Gobernanza",
+      "operacoes": "Operaciones",
+      "contato": "Contacto"
+    },
+    "hero": {
+      "kicker": "Inversores",
+      "title": "El valor nace antes de la obra.<br></br>La oportunidad de invertir, <em>también</em>.",
+      "intro": "Open Group estructura operaciones inmobiliarias y abre espacio para que el capital cualificado entre antes del lanzamiento — en la fase en que se crea el valor.",
+      "scrollHint": "La tesis"
+    },
+    "tese": {
+      "items": {
+        "01": {
+          "title": "Entramos <em>antes</em>.",
+          "desc": "El valor de un emprendimiento se crea en la estructuración — lectura de la oportunidad, producto y operación — antes de que comience la obra."
+        },
+        "02": {
+          "title": "Leemos el mercado.",
+          "desc": "Cada operación nace de inteligencia de mercado y estudio de viabilidad, no de una apuesta."
+        },
+        "03": {
+          "title": "Conducimos hasta el final.",
+          "desc": "De la originación al lanzamiento, la misma conducción — y el inversor acompaña cada hito de la operación."
+        }
+      }
+    },
+    "ciclo": {
+      "kicker": "El ciclo de la operación",
+      "intro": "El capital entra en la estructuración — y participa de la creación de valor, no solo del resultado.",
+      "capitalLabel": "El capital entra aquí"
+    },
+    "modelos": {
+      "kicker": "Modelos de participación",
+      "heading": "Estructuras definidas<br></br>por la operación — no al revés.",
+      "footer": "Cada estructura se define caso por caso, según la operación — sin promesa de resultado.",
+      "items": {
+        "scp": {
+          "sigla": "SCP",
+          "nome": "Sociedad en cuenta de participación",
+          "desc": "El capital participa de una operación específica, con alcance, roles e hitos definidos en contrato."
+        },
+        "permuta": {
+          "sigla": "Permuta",
+          "nome": "Terreno como capital",
+          "desc": "El terreno entra como capital en la operación — el propietario participa del resultado del emprendimiento."
+        },
+        "coinvest": {
+          "sigla": "Coinvers.",
+          "nome": "Capital junto a la operación",
+          "desc": "Inversión junto a Open Group y a socios estratégicos en la estructuración de la operación."
+        }
+      }
+    },
+    "governanca": {
+      "kicker": "Gobernanza y seguimiento",
+      "heading": "La operación entera,<br></br>bajo una conducción única.",
+      "intro": "Invertir antes de la obra exige ver la operación. Por eso Open Group conduce con orden: hitos definidos, reporte por etapa y una única responsable desde el inicio hasta el lanzamiento.",
+      "items": {
+        "01": {
+          "title": "Hitos definidos",
+          "desc": "Cada operación avanza por hitos claros, definidos en la estructuración — del desbloqueo de la viabilidad a la preparación para el lanzamiento."
+        },
+        "02": {
+          "title": "Reporte por etapa",
+          "desc": "El inversor recibe el estado de la operación en cada etapa cumplida: lo que avanzó, lo que viene a continuación y lo que cambió en el camino."
+        },
+        "03": {
+          "title": "Conducción única",
+          "desc": "La conducción es de Open Group — de la articulación con socios y banco a la estrategia comercial. Una sola responsable por la operación entera."
+        }
+      }
+    },
+    "operacoes": {
+      "kicker": "La tesis, en la práctica",
+      "heading": "Operaciones en conducción.",
+      "intro": "En todas, Open Group es <strong>socia de la operación</strong> — el capital entra donde nace el valor.",
+      "cta": "Ver todas las operaciones"
+    },
+    "curva": {
+      "capitalLabel": "El capital entra aquí",
+      "stepAria": "Etapa {idx} — {title}"
+    },
+    "cta": {
+      "items": {
+        "capital": {
+          "title": "Tengo capital para invertir",
+          "desc": "Converse con el equipo sobre las operaciones en estructuración."
+        },
+        "terreno": {
+          "title": "Tengo un terreno o activo",
+          "desc": "Presente el área — realizamos la primera lectura de la oportunidad."
+        }
+      }
+    }
   }
 }
