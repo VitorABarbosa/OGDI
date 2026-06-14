@@ -45,22 +45,38 @@
       "slides": {
         "hits-santa-catarina": {
           "kick": "Entregue · Empreendimento",
-          "meta": { "status": "Entregue", "segmento": "Residencial", "local": "Localização a confirmar" },
+          "meta": {
+            "status": "Entregue",
+            "segmento": "Residencial",
+            "local": "Localização a confirmar"
+          },
           "sign": "OGDI sócia da operação — da concepção ao lançamento."
         },
         "hits-cupece": {
           "kick": "Em obra · Empreendimento",
-          "meta": { "status": "Em obra", "segmento": "Residencial", "local": "São Paulo · SP" },
+          "meta": {
+            "status": "Em obra",
+            "segmento": "Residencial",
+            "local": "São Paulo · SP"
+          },
           "sign": "OGDI sócia da operação — leitura da oportunidade, produto e estruturação."
         },
         "start-park-jabaquara": {
           "kick": "Em obra · Empreendimento",
-          "meta": { "status": "Em obra", "segmento": "Residencial", "local": "São Paulo · SP" },
+          "meta": {
+            "status": "Em obra",
+            "segmento": "Residencial",
+            "local": "São Paulo · SP"
+          },
           "sign": "OGDI sócia da operação — inteligência de mercado, viabilidade e condução até o lançamento."
         },
         "oh-freguesia": {
           "kick": "Em obra · Empreendimento",
-          "meta": { "status": "Em obra", "segmento": "Residencial", "local": "São Paulo · SP" },
+          "meta": {
+            "status": "Em obra",
+            "segmento": "Residencial",
+            "local": "São Paulo · SP"
+          },
           "sign": "OGDI sócia da operação — conceituação do produto e estruturação."
         }
       }
@@ -115,13 +131,34 @@
         "societaria": "Sócia da operação"
       },
       "steps": {
-        "01": { "title": "Leitura da oportunidade", "desc": "Entendimento do ativo, do estágio e do potencial real de desenvolvimento." },
-        "02": { "title": "Inteligência de mercado", "desc": "Contexto de praça, demanda e leitura concorrencial que fundamenta a tese." },
-        "03": { "title": "Conceituação do empreendimento", "desc": "Definição da lógica do produto imobiliário: tipologia, mix e posicionamento." },
-        "04": { "title": "Viabilidade", "desc": "Análise financeira e institucional que destrava o caminho da operação." },
-        "05": { "title": "Estruturação da operação", "desc": "Modelagem para que potencial, capital e execução avancem na mesma direção." },
-        "06": { "title": "Conexão com parceiros", "desc": "Articulação de parceiros e relacionamento com banco, incluindo a CEF quando aplicável." },
-        "07": { "title": "Preparação para lançamento", "desc": "Estratégia comercial e condução da operação até estar pronta para avançar." }
+        "01": {
+          "title": "Leitura da oportunidade",
+          "desc": "Entendimento do ativo, do estágio e do potencial real de desenvolvimento."
+        },
+        "02": {
+          "title": "Inteligência de mercado",
+          "desc": "Contexto de praça, demanda e leitura concorrencial que fundamenta a tese."
+        },
+        "03": {
+          "title": "Conceituação do empreendimento",
+          "desc": "Definição da lógica do produto imobiliário: tipologia, mix e posicionamento."
+        },
+        "04": {
+          "title": "Viabilidade",
+          "desc": "Análise financeira e institucional que destrava o caminho da operação."
+        },
+        "05": {
+          "title": "Estruturação da operação",
+          "desc": "Modelagem para que potencial, capital e execução avancem na mesma direção."
+        },
+        "06": {
+          "title": "Conexão com parceiros",
+          "desc": "Articulação de parceiros e relacionamento com banco, incluindo a CEF quando aplicável."
+        },
+        "07": {
+          "title": "Preparação para lançamento",
+          "desc": "Estratégia comercial e condução da operação até estar pronta para avançar."
+        }
       }
     },
     "modelos": {
@@ -129,9 +166,21 @@
       "heading": "Atuação flexível conforme<br></br>o perfil da oportunidade.",
       "intro": "Cada oportunidade exige uma lógica própria. A Open Group avalia o estágio, o potencial e a complexidade da operação para definir o modelo de atuação mais adequado.",
       "cards": {
-        "consultoria": { "idx": "i.", "title": "Consultoria contratada", "desc": "Apoiamos a estruturação da operação com leitura estratégica e condução técnica, dentro de um escopo definido." },
-        "parceria": { "idx": "ii.", "title": "Parceria estratégica", "desc": "Atuamos lado a lado na construção do empreendimento, compartilhando visão, estrutura e direção." },
-        "societaria": { "idx": "iii.", "title": "Participação societária", "desc": "Entramos como sócios da operação, comprometidos com o resultado do empreendimento de ponta a ponta." }
+        "consultoria": {
+          "idx": "i.",
+          "title": "Consultoria contratada",
+          "desc": "Apoiamos a estruturação da operação com leitura estratégica e condução técnica, dentro de um escopo definido."
+        },
+        "parceria": {
+          "idx": "ii.",
+          "title": "Parceria estratégica",
+          "desc": "Atuamos lado a lado na construção do empreendimento, compartilhando visão, estrutura e direção."
+        },
+        "societaria": {
+          "idx": "iii.",
+          "title": "Participação societária",
+          "desc": "Entramos como sócios da operação, comprometidos com o resultado do empreendimento de ponta a ponta."
+        }
       }
     },
     "manifesto": {
@@ -178,9 +227,18 @@
       "kicker": "Sobre a Open Group",
       "heading": "Nosso trabalho começa <em>antes da obra</em>.",
       "models": {
-        "consultoria": { "strong": "Consultoria", "rest": "contratada" },
-        "parceria": { "strong": "Parceria", "rest": "estratégica" },
-        "societaria": { "strong": "Sócia", "rest": "da operação" }
+        "consultoria": {
+          "strong": "Consultoria",
+          "rest": "contratada"
+        },
+        "parceria": {
+          "strong": "Parceria",
+          "rest": "estratégica"
+        },
+        "societaria": {
+          "strong": "Sócia",
+          "rest": "da operação"
+        }
       },
       "body1": "A Open Group Desenvolvimento Imobiliário atua na <em>estruturação e desenvolvimento de empreendimentos imobiliários</em>, conduzindo oportunidades da conceituação ao lançamento.",
       "body2": "Nosso trabalho começa antes da obra: na leitura da oportunidade, na análise de viabilidade, no desenho estratégico da operação e na articulação dos parceiros necessários para o projeto avançar com consistência.",
@@ -202,11 +260,26 @@
       "heading": "O valor de um empreendimento nasce <em>antes da obra</em>.",
       "intro": "Uma área promissora ou um projeto bem localizado não se sustentam sozinhos. Sem visão, viabilidade, parceiros e condução, o potencial se dispersa antes de virar empreendimento. Ele nasce antes — e nasce aqui:",
       "strata": {
-        "01": { "name": "A leitura da oportunidade", "desc": "Interpretar o ativo e o potencial real, antes que ele seja óbvio." },
-        "02": { "name": "A concepção do produto", "desc": "Definir o empreendimento certo para aquela oportunidade." },
-        "03": { "name": "A estruturação da operação", "desc": "Alinhar potencial, capital e execução na mesma direção." },
-        "04": { "name": "A escolha dos parceiros", "desc": "Articular parceiros, banco e relacionamento institucional." },
-        "05": { "name": "O caminho até o lançamento", "desc": "Conduzir com clareza até o projeto estar pronto para avançar." }
+        "01": {
+          "name": "A leitura da oportunidade",
+          "desc": "Interpretar o ativo e o potencial real, antes que ele seja óbvio."
+        },
+        "02": {
+          "name": "A concepção do produto",
+          "desc": "Definir o empreendimento certo para aquela oportunidade."
+        },
+        "03": {
+          "name": "A estruturação da operação",
+          "desc": "Alinhar potencial, capital e execução na mesma direção."
+        },
+        "04": {
+          "name": "A escolha dos parceiros",
+          "desc": "Articular parceiros, banco e relacionamento institucional."
+        },
+        "05": {
+          "name": "O caminho até o lançamento",
+          "desc": "Conduzir com clareza até o projeto estar pronto para avançar."
+        }
       }
     },
     "lideranca": {
@@ -232,22 +305,39 @@
         "flying": {
           "role": "Futuros visuais e experiências imersivas",
           "text": "A máquina de antecipar futuros. Imagens e perspectivas 3D, apps, o D.Brave e salas imersivas transportam o cliente para dentro da sua futura realidade — mais de 12 anos traduzindo tijolo e cimento em pura poesia visual.",
-          "tags": { "t1": "Perspectivas 3D", "t2": "Apps", "t3": "D.Brave", "t4": "Salas Imersivas" }
+          "tags": {
+            "t1": "Perspectivas 3D",
+            "t2": "Apps",
+            "t3": "D.Brave",
+            "t4": "Salas Imersivas"
+          }
         },
         "ogdi": {
           "role": "Estratégia e estruturação",
           "text": "O ponto de partida estratégico. Atuamos com consultoria focada na inteligência de mercado, no desenvolvimento de produtos e na estruturação completa de novos lançamentos desde a sua concepção.",
-          "tags": { "t1": "Mercado", "t2": "Produto", "t3": "Lançamento" }
+          "tags": {
+            "t1": "Mercado",
+            "t2": "Produto",
+            "t3": "Lançamento"
+          }
         },
         "nid": {
           "role": "Arquitetura, interiores e PDV",
           "text": "Onde a inteligência arquitetônica ganha forma e emoção. O lar como um verdadeiro ninho: projetos de interiores, design de fachadas e PDVs concebidos como espaços de aconchego, segurança e forte personalidade.",
-          "tags": { "t1": "Interiores", "t2": "Fachadas", "t3": "PDV" }
+          "tags": {
+            "t1": "Interiores",
+            "t2": "Fachadas",
+            "t3": "PDV"
+          }
         },
         "rinno": {
           "role": "Filmes, movimento e conexão emocional",
           "text": "A produtora audiovisual do grupo. De filmes conceito e de produto a materiais virais e institucionais — dando movimento às histórias e criando a conexão emocional entre o projeto e o seu público.",
-          "tags": { "t1": "Filmes", "t2": "Viral", "t3": "Institucional" }
+          "tags": {
+            "t1": "Filmes",
+            "t2": "Viral",
+            "t3": "Institucional"
+          }
         }
       }
     },
@@ -260,7 +350,9 @@
     }
   },
   "projetos": {
-    "meta": { "title": "Projetos" },
+    "meta": {
+      "title": "Projetos"
+    },
     "hero": {
       "breadcrumbHome": "Início",
       "breadcrumbCurrent": "Projetos",
@@ -282,16 +374,200 @@
       "noteMany": "{count} projetos · {label}"
     },
     "cards": {
-      "hits-cupece": { "status": "Em obra", "segmento": "Residencial", "local": "São Paulo · SP" },
-      "start-park-jabaquara": { "status": "Em obra", "segmento": "Residencial", "local": "São Paulo · SP" },
-      "oh-freguesia": { "status": "Em obra", "segmento": "Residencial", "local": "São Paulo · SP" },
-      "guarulhos": { "status": "Futuro lançamento", "segmento": "Residencial", "local": "Guarulhos · SP" },
-      "hits-santa-catarina": { "status": "Entregue", "segmento": "Residencial", "local": "Localização a confirmar" }
+      "hits-cupece": {
+        "status": "Em obra",
+        "segmento": "Residencial",
+        "local": "São Paulo · SP"
+      },
+      "start-park-jabaquara": {
+        "status": "Em obra",
+        "segmento": "Residencial",
+        "local": "São Paulo · SP"
+      },
+      "oh-freguesia": {
+        "status": "Em obra",
+        "segmento": "Residencial",
+        "local": "São Paulo · SP"
+      },
+      "guarulhos": {
+        "status": "Futuro lançamento",
+        "segmento": "Residencial",
+        "local": "Guarulhos · SP"
+      },
+      "hits-santa-catarina": {
+        "status": "Entregue",
+        "segmento": "Residencial",
+        "local": "Localização a confirmar"
+      }
     },
     "cta": {
       "title": "Tem uma área ou projeto com potencial?",
       "text": "Apresente a oportunidade. Fazemos a primeira leitura e indicamos os próximos passos da operação.",
       "ctaLabel": "Apresentar oportunidade"
+    }
+  },
+  "clientes": {
+    "meta": {
+      "title": "Clientes",
+      "description": "Incorporadoras, construtoras, fundos e proprietários de área que estruturam suas operações com a Open Group — da origem ao lançamento."
+    },
+    "rail": {
+      "ariaLabel": "Navegação visual da página clientes",
+      "inicio": "Início",
+      "perfis": "Perfis",
+      "relacao": "Formas de relação",
+      "compromissos": "Compromissos",
+      "operacoes": "Operações",
+      "perguntas": "Perguntas",
+      "contato": "Contato"
+    },
+    "hero": {
+      "kicker": "Clientes",
+      "title": "Cada operação nasce de<br></br><em>uma relação de confiança</em>.",
+      "indice": {
+        "01": {
+          "title": "Incorporadoras",
+          "hint": "Estruturação e condução de operações"
+        },
+        "02": {
+          "title": "Construtoras",
+          "hint": "Originação e previsibilidade"
+        },
+        "03": {
+          "title": "Fundos e investidores",
+          "hint": "Capital antes do lançamento"
+        },
+        "04": {
+          "title": "Proprietários de área",
+          "hint": "O terreno como capital"
+        }
+      }
+    },
+    "perfis": {
+      "kicker": "Para quem trabalhamos",
+      "heading": "Quatro perfis,<br></br>a mesma condução.",
+      "items": {
+        "01": {
+          "title": "Incorporadoras",
+          "desc": "Estruturação e condução de operações — da leitura da oportunidade e viabilidade à preparação para lançamento.",
+          "entregas": [
+            "Leitura da oportunidade e viabilidade",
+            "Estruturação da operação",
+            "Condução até o lançamento"
+          ],
+          "cta": "Operações conduzidas"
+        },
+        "02": {
+          "title": "Construtoras",
+          "desc": "Originação qualificada e operações estruturadas, com papéis e marcos definidos, para construir com previsibilidade.",
+          "entregas": [
+            "Originação qualificada",
+            "Papéis e marcos em contrato",
+            "Conexão com parceiros e banco"
+          ],
+          "cta": "Conheça o grupo"
+        },
+        "03": {
+          "title": "Fundos e investidores",
+          "desc": "Capital qualificado entra antes do lançamento, em estruturas definidas pela operação — SCP, permuta ou coinvestimento.",
+          "entregas": [
+            "Tese e ciclo da operação",
+            "SCP, permuta ou coinvestimento",
+            "Reporte por etapa"
+          ],
+          "cta": "Conheça a tese"
+        },
+        "04": {
+          "title": "Proprietários de área",
+          "desc": "O terreno entra como capital na operação — e o proprietário participa do resultado do empreendimento.",
+          "entregas": [
+            "Primeira leitura da área",
+            "Terreno como capital, via permuta",
+            "Participação no resultado"
+          ],
+          "cta": "Apresente sua área"
+        }
+      }
+    },
+    "relacao": {
+      "kicker": "Formas de relação",
+      "intro": "Três profundidades de envolvimento — a relação pode começar em um escopo e crescer com a operação.",
+      "quandoLabel": "Quando faz sentido:",
+      "footer": "Envolvimento crescente →",
+      "items": {
+        "01": {
+          "title": "Consultoria contratada",
+          "desc": "Escopo definido: leitura da oportunidade, inteligência de mercado ou viabilidade — entregues como projeto.",
+          "quando": "Para validar uma oportunidade ou destravar uma decisão específica."
+        },
+        "02": {
+          "title": "Parceira estratégica",
+          "desc": "A Open Group permanece na condução: estruturação da operação, conexão com parceiros e preparação para lançamento.",
+          "quando": "Para levar a operação inteira adiante com uma condução única."
+        },
+        "03": {
+          "title": "Sócia da operação",
+          "desc": "Participação na própria operação — potencial, capital e execução na mesma direção, com resultado compartilhado.",
+          "quando": "Para dividir risco e resultado em operações de maior potencial."
+        }
+      }
+    },
+    "compromissos": {
+      "kicker": "O que sustenta a relação",
+      "heading": "Confiança se constrói<br></br>com método.",
+      "intro": "Quatro compromissos valem para qualquer perfil de cliente e qualquer forma de relação — do primeiro escopo à sociedade na operação.",
+      "items": {
+        "01": {
+          "title": "Inteligência própria",
+          "desc": "Mercado, praça e leitura concorrencial feitos pela equipe — cada recomendação nasce de dado, não de tese genérica."
+        },
+        "02": {
+          "title": "Papéis e marcos definidos",
+          "desc": "Escopo, responsabilidades e marcos estabelecidos em contrato, definidos na estruturação da operação."
+        },
+        "03": {
+          "title": "Condução única",
+          "desc": "Uma só responsável da originação ao lançamento — incluindo a articulação com parceiros e o relacionamento com banco, com a CEF quando aplicável."
+        },
+        "04": {
+          "title": "Transparência por etapa",
+          "desc": "O cliente acompanha o estado da operação a cada etapa vencida: o que avançou, o que vem a seguir e o que mudou no caminho."
+        }
+      }
+    },
+    "operacoes": {
+      "kicker": "Relações em operação",
+      "heading": "A confiança, na prática.",
+      "intro": "Nas operações do portfólio atual, a Open Group é <strong>sócia da operação</strong> — potencial, capital e execução na mesma direção.",
+      "cta": "Ver todas as operações"
+    },
+    "perguntas": {
+      "kicker": "Perguntas frequentes",
+      "heading": "O que quem chega<br></br>costuma perguntar.",
+      "asideText": "Não achou a sua pergunta? <link>Fale com a equipe</link>.",
+      "items": {
+        "01": {
+          "q": "Como começa uma relação com a Open Group?",
+          "a": "Com a apresentação da oportunidade — o ativo, o terreno ou o projeto. A equipe faz a primeira leitura e retorna com os próximos passos possíveis."
+        },
+        "02": {
+          "q": "A Open Group executa a obra?",
+          "a": "Não. A execução é dos parceiros construtores — a Open Group estrutura e conduz a operação, conectando os papéis certos em cada etapa."
+        },
+        "03": {
+          "q": "Em que momento o capital entra na operação?",
+          "a": "Na estruturação, antes do lançamento — a fase em que o valor é criado. Os modelos de participação estão detalhados na página de investidores."
+        },
+        "04": {
+          "q": "O escopo pode crescer ao longo da operação?",
+          "a": "Sim. A relação pode começar como consultoria contratada e evoluir para parceria estratégica ou sociedade na operação, conforme fizer sentido para os dois lados."
+        }
+      }
+    },
+    "cta": {
+      "title": "Tem uma operação para estruturar?",
+      "text": "Apresente a oportunidade — fazemos a primeira leitura e indicamos os próximos passos.",
+      "ctaLabel": "Falar com a Open Group"
     }
   }
 }

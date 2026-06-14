@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RevealController } from "@/components/Reveal/RevealController";
 import { PageSectionRail } from "@/app/_sections/PageSectionRail";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -11,13 +11,13 @@ import { ClientesOperacoes } from "@/app/_sections/ClientesPage/ClientesOperacoe
 import { ClientesPerguntas } from "@/app/_sections/ClientesPage/ClientesPerguntas";
 
 const clientesRailItems = [
-  { id: "clientes-inicio", label: "Início" },
-  { id: "clientes-perfis", label: "Perfis" },
-  { id: "clientes-relacao", label: "Formas de relação" },
-  { id: "clientes-compromissos", label: "Compromissos" },
-  { id: "clientes-operacoes", label: "Operações" },
-  { id: "clientes-perguntas", label: "Perguntas" },
-  { id: "clientes-contato", label: "Contato" },
+  { id: "clientes-inicio", key: "inicio" },
+  { id: "clientes-perfis", key: "perfis" },
+  { id: "clientes-relacao", key: "relacao" },
+  { id: "clientes-compromissos", key: "compromissos" },
+  { id: "clientes-operacoes", key: "operacoes" },
+  { id: "clientes-perguntas", key: "perguntas" },
+  { id: "clientes-contato", key: "contato" },
 ] as const;
 
 export const metadata: Metadata = {
@@ -33,10 +33,12 @@ export default async function ClientesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("clientes");
+  const railItems = clientesRailItems.map((it) => ({ id: it.id, label: t(`rail.${it.key}`) }));
   return (
     <main>
       <RevealController />
-      <PageSectionRail items={clientesRailItems} ariaLabel="Navegação visual da página clientes" />
+      <PageSectionRail items={railItems} ariaLabel={t("rail.ariaLabel")} />
       <ClientesHero />
       <ClientesPerfis />
       <ClientesRelacao />
@@ -45,9 +47,9 @@ export default async function ClientesPage({
       <ClientesPerguntas />
       <div id="clientes-contato">
         <CtaBand
-          title="Tem uma operação para estruturar?"
-          text="Apresente a oportunidade — fazemos a primeira leitura e indicamos os próximos passos."
-          ctaLabel="Falar com a Open Group"
+          title={t("cta.title")}
+          text={t("cta.text")}
+          ctaLabel={t("cta.ctaLabel")}
           href="/contato"
         />
       </div>

@@ -1,17 +1,15 @@
+import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
 import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 
-const indice = [
-  { idx: "01", title: "Incorporadoras", hint: "Estruturação e condução de operações" },
-  { idx: "02", title: "Construtoras", hint: "Originação e previsibilidade" },
-  { idx: "03", title: "Fundos e investidores", hint: "Capital antes do lançamento" },
-  { idx: "04", title: "Proprietários de área", hint: "O terreno como capital" },
-];
+const indiceIds = ["01", "02", "03", "04"] as const;
 
 // O único hero claro do site: statement em tinta sobre papel e os quatro
 // perfis como índice tipográfico clicável — o visitante se reconhece no
 // primeiro segundo e desce direto para a sua seção.
-export function ClientesHero() {
+export async function ClientesHero() {
+  const t = await getTranslations("clientes.hero");
+
   return (
     <section
       id="clientes-inicio"
@@ -20,27 +18,28 @@ export function ClientesHero() {
       {/* Linha fluida em variante serena: três trechos visíveis, bem suaves */}
       <GalleryFlowBackground background="#FFFFFF" variant="clientes" />
       <div className="wrap relative z-[2]">
-        <Kicker className="reveal">Clientes</Kicker>
+        <Kicker className="reveal">{t("kicker")}</Kicker>
         <h1 className="reveal reveal-2 mt-6 max-w-[24ch] font-news font-normal text-[clamp(2.1rem,5vw,4.2rem)] leading-[1.06] tracking-[-.018em] text-ink">
-          Cada operação nasce de
-          <br />
-          <span className="italic text-green">uma relação de confiança</span>.
+          {t.rich("title", {
+            br: () => <br />,
+            em: (chunks) => <span className="italic text-green">{chunks}</span>,
+          })}
         </h1>
 
         {/* Índice de perfis — âncoras para os blocos da seção seguinte */}
         <div className="reveal reveal-3 mt-[clamp(44px,5.5vw,76px)]">
-          {indice.map((p, i) => (
+          {indiceIds.map((idx, i) => (
             <a
-              key={p.idx}
-              href={`#clientes-perfil-${p.idx}`}
-              className={`group grid grid-cols-[52px_1fr] items-baseline gap-3 border-t border-[color:var(--line)] py-[clamp(16px,2.1vw,26px)] transition-[padding-left] duration-[400ms] ease-brand hover:pl-3 md:grid-cols-[64px_1fr_auto] md:gap-[clamp(18px,2.6vw,40px)] ${i === indice.length - 1 ? "border-b" : ""}`}
+              key={idx}
+              href={`#clientes-perfil-${idx}`}
+              className={`group grid grid-cols-[52px_1fr] items-baseline gap-3 border-t border-[color:var(--line)] py-[clamp(16px,2.1vw,26px)] transition-[padding-left] duration-[400ms] ease-brand hover:pl-3 md:grid-cols-[64px_1fr_auto] md:gap-[clamp(18px,2.6vw,40px)] ${i === indiceIds.length - 1 ? "border-b" : ""}`}
             >
-              <span className="font-sans text-[12px] font-semibold tracking-[.2em] text-green tabular-nums">{p.idx}</span>
+              <span className="font-sans text-[12px] font-semibold tracking-[.2em] text-green tabular-nums">{idx}</span>
               <span className="font-news text-[clamp(1.45rem,2.9vw,2.6rem)] leading-[1.08] tracking-[-.015em] text-ink transition-colors duration-300 group-hover:text-teal">
-                {p.title}
+                {t(`indice.${idx}.title`)}
               </span>
               <span className="hidden items-baseline gap-4 text-[12.5px] text-ink-3 md:flex">
-                {p.hint}
+                {t(`indice.${idx}.hint`)}
                 <span aria-hidden className="text-[16px] text-green opacity-0 transition-[opacity,transform] duration-300 ease-brand group-hover:translate-y-[2px] group-hover:opacity-100">
                   ↓
                 </span>
