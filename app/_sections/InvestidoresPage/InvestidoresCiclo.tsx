@@ -1,13 +1,13 @@
 import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
-import { atuacaoSteps } from "@/app/_sections/Atuacao/atuacao.data";
+import { investidoresSteps } from "@/app/_sections/Atuacao/atuacao.data";
 
 // Etapa em que o capital entra na operação.
 const CAPITAL_IDX = "05";
 
-// Faixa dark de alto contraste: as 7 etapas da atuação (mesma fonte de
-// dados da home) em uma única linha, com o ponto de entrada do capital
-// como o único acento da seção.
+// Faixa dark de alto contraste: as 7 etapas de estruturação (fase pré-obra,
+// compartilhada com a home) em uma única linha, com o ponto de entrada do
+// capital como o único acento da seção.
 export async function InvestidoresCiclo() {
   const t = await getTranslations("investidores.ciclo");
   const ts = await getTranslations("home.atuacao.steps");
@@ -23,7 +23,7 @@ export async function InvestidoresCiclo() {
 
         <div className="reveal reveal-2 mt-[clamp(48px,6vw,84px)]">
           <ol className="grid grid-cols-1 xl:grid-cols-7">
-            {atuacaoSteps.map((s) => {
+            {investidoresSteps.map((s) => {
               const capital = s.idx === CAPITAL_IDX;
               return (
                 <li key={s.idx} className="relative border-[color:var(--line-dark)] py-6 max-xl:border-t max-xl:pl-9 xl:border-l xl:px-4 xl:py-0">

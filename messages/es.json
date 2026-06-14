@@ -131,6 +131,10 @@
         "societaria": "Socia de la operación"
       },
       "steps": {
+        "10": {
+          "title": "Posentrega de llaves",
+          "desc": "Seguimiento posterior a la entrega, consolidando el valor generado por la operación."
+        },
         "01": {
           "title": "Lectura de la oportunidad",
           "desc": "Comprensión del activo, su etapa y su potencial real de desarrollo."
@@ -140,24 +144,32 @@
           "desc": "Contexto del mercado local, demanda y lectura competitiva que fundamentan la tesis."
         },
         "03": {
-          "title": "Conceptualización del emprendimiento",
-          "desc": "Definición de la lógica del producto inmobiliario: tipología, mix y posicionamiento."
-        },
-        "04": {
           "title": "Viabilidad",
           "desc": "Análisis financiero e institucional que destraba el camino de la operación."
         },
+        "04": {
+          "title": "Desarrollo inmobiliario",
+          "desc": "Definición de la lógica del producto inmobiliario: tipología, mix y posicionamiento."
+        },
         "05": {
-          "title": "Estructuración de la operación",
-          "desc": "Modelado para que potencial, capital y ejecución avancen en la misma dirección."
+          "title": "Estructuración financiera",
+          "desc": "Modelado de capital, fuentes de recursos y retorno alineados al potencial de la operación."
         },
         "06": {
-          "title": "Conexión con socios",
-          "desc": "Articulación de socios y relación con el banco, incluida la CEF cuando corresponda."
-        },
-        "07": {
           "title": "Preparación para el lanzamiento",
           "desc": "Estrategia comercial y conducción de la operación hasta estar lista para avanzar."
+        },
+        "07": {
+          "title": "Inicio de obras",
+          "desc": "Arranque de la ejecución, con la operación estructurada y los socios en campo."
+        },
+        "08": {
+          "title": "Lanzamiento",
+          "desc": "Entrada al mercado, con producto, narrativa y estrategia comercial listos."
+        },
+        "09": {
+          "title": "Entrega de llaves",
+          "desc": "Conclusión de la obra y entrega del emprendimiento terminado."
         }
       }
     },

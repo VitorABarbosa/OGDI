@@ -131,6 +131,10 @@
         "societaria": "Partner in the venture"
       },
       "steps": {
+        "10": {
+          "title": "Post-handover",
+          "desc": "Follow-up after handover, consolidating the value the venture created."
+        },
         "01": {
           "title": "Reading the opportunity",
           "desc": "Understanding the asset, its stage, and its real development potential."
@@ -140,24 +144,32 @@
           "desc": "Local market context, demand, and competitive analysis that underpin the thesis."
         },
         "03": {
-          "title": "Development concept",
-          "desc": "Defining the logic of the real estate product: unit mix, typology, and positioning."
-        },
-        "04": {
           "title": "Feasibility",
           "desc": "Financial and institutional analysis that unlocks the path of the venture."
         },
+        "04": {
+          "title": "Real estate development",
+          "desc": "Defining the logic of the real estate product: unit mix, typology, and positioning."
+        },
         "05": {
-          "title": "Structuring the venture",
-          "desc": "Modeling so that potential, capital, and execution move in the same direction."
+          "title": "Financial structuring",
+          "desc": "Modeling capital, funding sources, and returns aligned with the venture potential."
         },
         "06": {
-          "title": "Connecting with partners",
-          "desc": "Bringing partners together and managing the bank relationship, including CEF (Brazil's federal bank) when applicable."
+          "title": "Launch preparation",
+          "desc": "Commercial strategy and guidance of the venture until it is ready to move forward."
         },
         "07": {
-          "title": "Launch readiness",
-          "desc": "Commercial strategy and guidance of the venture until it is ready to move forward."
+          "title": "Construction start",
+          "desc": "Execution begins, with the venture structured and partners on the ground."
+        },
+        "08": {
+          "title": "Launch",
+          "desc": "Market entry, with product, narrative, and commercial strategy ready."
+        },
+        "09": {
+          "title": "Key handover",
+          "desc": "Completion of construction and handover of the finished development."
         }
       }
     },
