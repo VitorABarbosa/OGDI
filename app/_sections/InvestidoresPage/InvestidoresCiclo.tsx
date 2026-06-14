@@ -21,9 +21,12 @@ export async function InvestidoresCiclo() {
             {t("intro")}
           </p>
         </div>
+      </div>
 
-        <div className="reveal reveal-2 mt-[clamp(40px,5vw,68px)]">
-          <ol className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-10">
+      {/* Timeline fora do .wrap (max-width 1440) — usa o gutter de borda do
+          site (px-pad-x) para aproveitar a largura e dar respiro aos 10 itens. */}
+      <div className="reveal reveal-2 mt-[clamp(40px,5vw,68px)] px-pad-x">
+        <ol className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-10">
             {atuacaoSteps.map((s) => {
               const capital = s.idx === CAPITAL_IDX;
               return (
@@ -53,7 +56,6 @@ export async function InvestidoresCiclo() {
               );
             })}
           </ol>
-        </div>
       </div>
     </section>
   );
