@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { atuacaoSteps } from "@/app/_sections/Atuacao/atuacao.data";
 import styles from "./InvestidoresCurva.module.css";
 
@@ -36,6 +37,8 @@ const svgProps = {
 
 export function InvestidoresCurva() {
   const [active, setActive] = useState<number | null>(null);
+  const ts = useTranslations("home.atuacao.steps");
+  const tc = useTranslations("investidores.curva");
 
   return (
     <>
@@ -93,7 +96,7 @@ export function InvestidoresCurva() {
                   letterSpacing="1.8"
                   style={{ textTransform: "uppercase", fontFamily: "var(--font-sans)" }}
                 >
-                  O capital entra aqui
+                  {tc("capitalLabel")}
                 </text>
               </>
             ) : (
@@ -135,7 +138,7 @@ export function InvestidoresCurva() {
                 role="button"
                 tabIndex={0}
                 aria-expanded={isActive}
-                aria-label={`Etapa ${step.idx} — ${step.title}`}
+                aria-label={tc("stepAria", { idx: step.idx, title: ts(`${step.idx}.title`) })}
                 onMouseEnter={() => setActive(i)}
                 onMouseLeave={() => setActive((a) => (a === i ? null : a))}
                 onFocus={() => setActive(i)}
@@ -168,10 +171,10 @@ export function InvestidoresCurva() {
                     <div className="flex items-baseline gap-2">
                       <span className="font-sans text-[9.5px] font-semibold tracking-[.22em] text-green tabular-nums">{step.idx}</span>
                       <h3 className="font-sans text-[13px] font-semibold leading-[1.3] tracking-[-.01em] text-white">
-                        {step.title}
+                        {ts(`${step.idx}.title`)}
                       </h3>
                     </div>
-                    <p className="mt-[7px] text-[11.5px] leading-[1.5] text-white/55">{step.desc}</p>
+                    <p className="mt-[7px] text-[11.5px] leading-[1.5] text-white/55">{ts(`${step.idx}.desc`)}</p>
                   </div>
                 </div>
               </foreignObject>

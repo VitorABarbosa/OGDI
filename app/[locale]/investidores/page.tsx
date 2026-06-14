@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RevealController } from "@/components/Reveal/RevealController";
 import { InvestidoresHero } from "@/app/_sections/InvestidoresPage/InvestidoresHero";
 import { InvestidoresTese } from "@/app/_sections/InvestidoresPage/InvestidoresTese";
@@ -10,21 +10,29 @@ import { InvestidoresOperacoes } from "@/app/_sections/InvestidoresPage/Investid
 import { InvestidoresCta } from "@/app/_sections/InvestidoresPage/InvestidoresCta";
 import { PageSectionRail } from "@/app/_sections/PageSectionRail";
 
+// Itens da régua de navegação: id da seção + chave de rótulo i18n.
 const investidoresRailItems = [
-  { id: "investidores-inicio", label: "Início" },
-  { id: "investidores-tese", label: "Tese" },
-  { id: "investidores-ciclo", label: "Ciclo" },
-  { id: "investidores-modelos", label: "Modelos" },
-  { id: "investidores-governanca", label: "Governança" },
-  { id: "investidores-operacoes", label: "Operações" },
-  { id: "investidores-contato", label: "Contato" },
+  { id: "investidores-inicio", labelKey: "inicio" },
+  { id: "investidores-tese", labelKey: "tese" },
+  { id: "investidores-ciclo", labelKey: "ciclo" },
+  { id: "investidores-modelos", labelKey: "modelos" },
+  { id: "investidores-governanca", labelKey: "governanca" },
+  { id: "investidores-operacoes", labelKey: "operacoes" },
+  { id: "investidores-contato", labelKey: "contato" },
 ] as const;
 
-export const metadata: Metadata = {
-  title: "Investidores",
-  description:
-    "Capital qualificado entra antes do lançamento — na fase em que o valor é criado. Conheça a tese, o ciclo da operação e os modelos de participação da Open Group.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "investidores.meta" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default async function InvestidoresPage({
   params,
@@ -33,10 +41,12 @@ export default async function InvestidoresPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("investidores.rail");
+  const railItems = investidoresRailItems.map((it) => ({ id: it.id, label: t(it.labelKey) }));
   return (
     <main>
       <RevealController />
-      <PageSectionRail items={investidoresRailItems} ariaLabel="Navegação visual da página investidores" />
+      <PageSectionRail items={railItems} ariaLabel={t("ariaLabel")} />
       <InvestidoresHero />
       <InvestidoresTese />
       <InvestidoresCiclo />

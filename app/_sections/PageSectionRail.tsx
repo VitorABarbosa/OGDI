@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useLenis } from "lenis/react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
 
 export type SectionRailItem = {
@@ -11,13 +12,15 @@ export type SectionRailItem = {
 
 export function PageSectionRail({
   items,
-  ariaLabel = "Navegação visual da página",
+  ariaLabel,
   revealAfter,
 }: {
   items: readonly SectionRailItem[];
   ariaLabel?: string;
   revealAfter?: { id: string; viewportRatio: number };
 }) {
+  const t = useTranslations("common.rail");
+  const resolvedAria = ariaLabel ?? t("defaultAria");
   const lenis = useLenis();
   const [activeId, setActiveId] = useState(items[0]?.id ?? "");
   const [isRevealed, setIsRevealed] = useState(!revealAfter);
@@ -90,7 +93,7 @@ export function PageSectionRail({
 
   return (
     <nav
-      aria-label={ariaLabel}
+      aria-label={resolvedAria}
       className={cn(
         "fixed right-[clamp(18px,2.8vw,48px)] top-1/2 z-40 hidden -translate-y-1/2 transition-opacity duration-500 lg:block",
         isRevealed ? "opacity-100" : "pointer-events-none opacity-0",
@@ -111,7 +114,7 @@ export function PageSectionRail({
             <button
               key={item.id}
               type="button"
-              aria-label={`Ir para ${item.label}`}
+              aria-label={t("goTo", { label: item.label })}
               aria-current={isActive ? "location" : undefined}
               onClick={() => scrollToSection(item.id)}
               className={cn(

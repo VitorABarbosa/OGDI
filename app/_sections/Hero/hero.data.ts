@@ -1,31 +1,20 @@
 export type HeroSlide = {
-  kick: string;
-  name: string;
-  meta: string[];   // prefixo "@" = "a confirmar" (renderiza em itálico esmaecido)
-  sign: string;
+  key: string;        // chave de tradução → home.hero.slides.{key}.*
+  name: string;       // nome próprio do empreendimento (não traduzir)
+  localTbd?: boolean; // local "a confirmar" → renderiza em itálico esmaecido
   tone: "t1" | "t2" | "t3";
-  image?: string;   // foto do empreendimento; sem imagem cai no gradiente (tone)
+  image?: string;     // foto do empreendimento; sem imagem cai no gradiente (tone)
 };
 
 export const heroSlides: HeroSlide[] = [
-  { kick: "Entregue · Empreendimento", name: "Hits Santa Catarina",
-    meta: ["Entregue", "Residencial", "@Localização a confirmar"],
-    sign: "OGDI sócia da operação — da concepção ao lançamento.", tone: "t1",
+  { key: "hits-santa-catarina", name: "Hits Santa Catarina", localTbd: true, tone: "t1",
     image: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.png" },
-  { kick: "Em obra · Empreendimento", name: "Hits Cupecê",
-    meta: ["Em obra", "Residencial", "São Paulo · SP"],
-    sign: "OGDI sócia da operação — leitura da oportunidade, produto e estruturação.", tone: "t2",
+  { key: "hits-cupece", name: "Hits Cupecê", tone: "t2",
     image: "/assets/projetos/CUPECE/Cupece.png" },
-  { kick: "Em obra · Empreendimento", name: "Start Park Jabaquara",
-    meta: ["Em obra", "Residencial", "São Paulo · SP"],
-    sign: "OGDI sócia da operação — inteligência de mercado, viabilidade e condução até o lançamento.", tone: "t3",
+  { key: "start-park-jabaquara", name: "Start Park Jabaquara", tone: "t3",
     image: "/assets/projetos/HITS_START_PARK_JABAQUARA/HITS_PARK.png" },
-  { kick: "Em obra · Empreendimento", name: "Oh Freguesia",
-    meta: ["Em obra", "Residencial", "São Paulo · SP"],
-    sign: "OGDI sócia da operação — conceituação do produto e estruturação.", tone: "t2",
+  { key: "oh-freguesia", name: "Oh Freguesia", tone: "t2",
     image: "/assets/projetos/OH_FREGUESIA/Oh_freguesia.png" },
   // OFF por hora (sem imagem/conteúdo) — reativar quando tiver foto:
-  // { kick: "Investimento · SCP", name: "Immensità",
-  //   meta: ["Investimento", "SCP · Operação", "@Localização a confirmar"],
-  //   sign: "Atuação OGDI — estruturação da operação e conexão com investidores.", tone: "t1" },
+  // { key: "immensita", name: "Immensità", localTbd: true, tone: "t1" },
 ];

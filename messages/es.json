@@ -10,12 +10,980 @@
   "common": {
     "ctaHeader": "Habla con Open Group",
     "ctaMobile": "Presentar una oportunidad",
-    "langLabel": "Idioma: Español. Ver otros idiomas"
+    "langLabel": "Idioma: Español. Ver otros idiomas",
+    "placeholder": {
+      "body": "Contenido en preparación. Esta página forma parte de la arquitectura del sitio y recibirá contenido pronto.",
+      "back": "Volver al inicio"
+    },
+    "rail": {
+      "goTo": "Ir a {label}",
+      "defaultAria": "Navegación visual de la página"
+    }
   },
   "footer": {
     "tagline": "El valor nace antes de la obra.",
     "atuacaoTitle": "Qué hacemos",
     "navTitle": "Navegación",
     "privacy": "Política de Privacidad"
+  },
+  "home": {
+    "rail": {
+      "ariaLabel": "Navegación visual de la página de inicio",
+      "top": "Inicio",
+      "projetos": "Proyectos",
+      "atuacao": "Qué hacemos",
+      "modelos": "Modelos",
+      "institucional": "Manifiesto",
+      "parceiros": "Socios",
+      "contato": "Contacto"
+    },
+    "hero": {
+      "srTitle": "Open Group — Desarrollo inmobiliario. El valor nace antes de la obra.",
+      "phrase": "El valor nace antes de la obra.",
+      "prev": "Anterior",
+      "next": "Siguiente",
+      "slides": {
+        "hits-santa-catarina": {
+          "kick": "Entregado · Emprendimiento",
+          "meta": {
+            "status": "Entregado",
+            "segmento": "Residencial",
+            "local": "Ubicación por confirmar"
+          },
+          "sign": "OGDI socia de la operación — de la concepción al lanzamiento."
+        },
+        "hits-cupece": {
+          "kick": "En construcción · Emprendimiento",
+          "meta": {
+            "status": "En construcción",
+            "segmento": "Residencial",
+            "local": "São Paulo · SP"
+          },
+          "sign": "OGDI socia de la operación — lectura de la oportunidad, producto y estructuración."
+        },
+        "start-park-jabaquara": {
+          "kick": "En construcción · Emprendimiento",
+          "meta": {
+            "status": "En construcción",
+            "segmento": "Residencial",
+            "local": "São Paulo · SP"
+          },
+          "sign": "OGDI socia de la operación — inteligencia de mercado, viabilidad y conducción hasta el lanzamiento."
+        },
+        "oh-freguesia": {
+          "kick": "En construcción · Emprendimiento",
+          "meta": {
+            "status": "En construcción",
+            "segmento": "Residencial",
+            "local": "São Paulo · SP"
+          },
+          "sign": "OGDI socia de la operación — conceptualización del producto y estructuración."
+        }
+      }
+    },
+    "projetos": {
+      "kicker": "Proyectos",
+      "heading": "Estructurados antes de la obra.<br></br>Emprendimientos que avanzan.",
+      "prev": "Anterior",
+      "next": "Siguiente",
+      "goTo": "Ir a {n}",
+      "seeAll": "Ver todos los proyectos",
+      "tabs": {
+        "obra": "En construcción",
+        "futuro": "Próximos",
+        "entregue": "Entregado"
+      },
+      "cards": {
+        "hits-cupece": {
+          "status": "En construcción",
+          "tag": "Operación estructurada en el origen, del producto al lanzamiento.",
+          "ctaLabel": "Conozca el emprendimiento"
+        },
+        "start-park-jabaquara": {
+          "status": "En construcción",
+          "tag": "De la inteligencia de mercado a la conducción hasta el lanzamiento.",
+          "ctaLabel": "Conozca el emprendimiento"
+        },
+        "oh-freguesia": {
+          "status": "En construcción",
+          "tag": "Producto conceptualizado y operación estructurada por OGDI.",
+          "ctaLabel": "Conozca el emprendimiento"
+        },
+        "guarulhos": {
+          "status": "Próximos",
+          "tag": "Oportunidad originada y operación en estructuración.",
+          "ctaLabel": "Hablar sobre el proyecto"
+        },
+        "hits-santa-catarina": {
+          "status": "Entregado",
+          "tag": "De la concepción al lanzamiento — operación entregada.",
+          "ctaLabel": "Conozca el emprendimiento"
+        }
+      }
+    },
+    "atuacao": {
+      "kicker": "Nuestra actuación",
+      "heading": "Del origen<br></br>al lanzamiento.",
+      "intro": "Open Group no solo participa en proyectos — estructura la oportunidad inmobiliaria, organizando potencial, capital, socios y ejecución en la misma dirección.",
+      "tags": {
+        "consultoria": "Consultoría contratada",
+        "parceria": "Alianza estratégica",
+        "societaria": "Socia de la operación"
+      },
+      "steps": {
+        "01": {
+          "title": "Lectura de la oportunidad",
+          "desc": "Comprensión del activo, su etapa y su potencial real de desarrollo."
+        },
+        "02": {
+          "title": "Inteligencia de mercado",
+          "desc": "Contexto del mercado local, demanda y lectura competitiva que fundamentan la tesis."
+        },
+        "03": {
+          "title": "Conceptualización del emprendimiento",
+          "desc": "Definición de la lógica del producto inmobiliario: tipología, mix y posicionamiento."
+        },
+        "04": {
+          "title": "Viabilidad",
+          "desc": "Análisis financiero e institucional que destraba el camino de la operación."
+        },
+        "05": {
+          "title": "Estructuración de la operación",
+          "desc": "Modelado para que potencial, capital y ejecución avancen en la misma dirección."
+        },
+        "06": {
+          "title": "Conexión con socios",
+          "desc": "Articulación de socios y relación con el banco, incluida la CEF cuando corresponda."
+        },
+        "07": {
+          "title": "Preparación para el lanzamiento",
+          "desc": "Estrategia comercial y conducción de la operación hasta estar lista para avanzar."
+        }
+      }
+    },
+    "modelos": {
+      "kicker": "Modelos de actuación",
+      "heading": "Actuación flexible según<br></br>el perfil de la oportunidad.",
+      "intro": "Cada oportunidad exige una lógica propia. Open Group evalúa la etapa, el potencial y la complejidad de la operación para definir el modelo de actuación más adecuado.",
+      "cards": {
+        "consultoria": {
+          "idx": "i.",
+          "title": "Consultoría contratada",
+          "desc": "Apoyamos la estructuración de la operación con lectura estratégica y conducción técnica, dentro de un alcance definido."
+        },
+        "parceria": {
+          "idx": "ii.",
+          "title": "Alianza estratégica",
+          "desc": "Actuamos lado a lado en la construcción del emprendimiento, compartiendo visión, estructura y dirección."
+        },
+        "societaria": {
+          "idx": "iii.",
+          "title": "Participación societaria",
+          "desc": "Entramos como socios de la operación, comprometidos con el resultado del emprendimiento de principio a fin."
+        }
+      }
+    },
+    "manifesto": {
+      "kicker": "Sobre Open Group",
+      "line1": "Antes de la obra, existe la <em>decisión</em>.",
+      "line2": "Antes del lanzamiento, existe la <em>estructura</em>.",
+      "line3": "Antes del valor, existe la <em>visión</em>.",
+      "whatTitle": "Qué hacemos",
+      "body1": "Open Group Desarrollo Inmobiliario actúa en la estructuración y el desarrollo de emprendimientos inmobiliarios, conduciendo oportunidades de la conceptualización al lanzamiento.",
+      "body2": "Nuestro trabajo comienza antes de la obra: en la lectura de la oportunidad, en el análisis de viabilidad, en el diseño estratégico de la operación y en la articulación de los socios necesarios para que el proyecto avance con consistencia.",
+      "body3": "Actuamos junto a constructoras, desarrolladoras, empresas con activos inmobiliarios e inversores, combinando visión estratégica, estructuración financiera e institucional, conexión con socios y conducción hasta las etapas críticas de mercado.",
+      "cta": "Conocer la empresa"
+    },
+    "clientes": {
+      "kicker": "Clientes",
+      "heading": "Quiénes confían en<br></br>Open Group.",
+      "intro": "Desarrolladoras, constructoras, fondos y propietarios de terrenos que estructuraron sus operaciones con Open Group, del origen al lanzamiento."
+    }
+  },
+  "institucional": {
+    "rail": {
+      "ariaLabel": "Navegación visual de la página institucional",
+      "inicio": "Inicio",
+      "sobre": "Nosotros",
+      "manifesto": "Manifiesto",
+      "origem": "Origen",
+      "lideranca": "Quién lidera",
+      "grupo": "Nuestro Grupo",
+      "assinatura": "Mensaje final"
+    },
+    "meta": {
+      "title": "Nosotros",
+      "description": "Open Group estructura y desarrolla emprendimientos inmobiliarios, conduciendo oportunidades de la conceptualización al lanzamiento. El valor nace antes de la obra."
+    },
+    "hero": {
+      "breadcrumbHome": "Inicio",
+      "breadcrumbCurrent": "Nosotros",
+      "kicker": "Nosotros",
+      "title1": "Revelamos el valor <em>extraordinario</em>",
+      "title2": "de activos inmobiliarios.",
+      "cue": "Desliza para conocer Open Group"
+    },
+    "about": {
+      "kicker": "Sobre Open Group",
+      "heading": "Nuestro trabajo comienza <em>antes de la obra</em>.",
+      "models": {
+        "consultoria": {
+          "strong": "Consultoría",
+          "rest": "contratada"
+        },
+        "parceria": {
+          "strong": "Alianza",
+          "rest": "estratégica"
+        },
+        "societaria": {
+          "strong": "Socia",
+          "rest": "de la operación"
+        }
+      },
+      "body1": "Open Group Desarrollo Inmobiliario trabaja en la <em>estructuración y desarrollo de emprendimientos inmobiliarios</em>, conduciendo oportunidades de la conceptualización al lanzamiento.",
+      "body2": "Nuestro trabajo comienza antes de la obra: en la lectura de la oportunidad, en el análisis de viabilidad, en el diseño estratégico de la operación y en la articulación de los socios necesarios para que el proyecto avance con consistencia.",
+      "body3": "Trabajamos junto a constructoras, desarrolladoras, empresas con activos inmobiliarios e inversores — combinando visión estratégica, estructuración financiera e institucional, conexión con socios y conducción hasta las etapas críticas de mercado.",
+      "body4": "Más que desarrollar emprendimientos, <em>estructuramos operaciones inmobiliarias para que potencial, capital y ejecución avancen en la misma dirección.</em>"
+    },
+    "manifesto": {
+      "eyebrow": "Nuestro manifiesto",
+      "segments": {
+        "s1": "Muchas oportunidades no fracasan por falta de ",
+        "s2": "potencial",
+        "s3": ". Fracasan porque avanzan sin ",
+        "s4": "estructura",
+        "s5": "."
+      }
+    },
+    "origem": {
+      "kicker": "El origen",
+      "heading": "El valor de un emprendimiento nace <em>antes de la obra</em>.",
+      "intro": "Un área prometedora o un proyecto bien ubicado no se sostienen por sí solos. Sin visión, viabilidad, socios y conducción, el potencial se dispersa antes de convertirse en emprendimiento. Nace antes — y nace aquí:",
+      "strata": {
+        "01": {
+          "name": "La lectura de la oportunidad",
+          "desc": "Interpretar el activo y su potencial real, antes de que sea evidente."
+        },
+        "02": {
+          "name": "La concepción del producto",
+          "desc": "Definir el emprendimiento adecuado para esa oportunidad."
+        },
+        "03": {
+          "name": "La estructuración de la operación",
+          "desc": "Alinear potencial, capital y ejecución en la misma dirección."
+        },
+        "04": {
+          "name": "La elección de los socios",
+          "desc": "Articular socios, banco y relaciones institucionales."
+        },
+        "05": {
+          "name": "El camino hasta el lanzamiento",
+          "desc": "Conducir con claridad hasta que el proyecto esté listo para avanzar."
+        }
+      }
+    },
+    "lideranca": {
+      "kicker": "Quién lidera",
+      "heading": "El liderazgo detrás de cada <em>operación estructurada</em>.",
+      "intro": "Open Group es conducida por profesionales que unen visión estratégica, dominio de la operación inmobiliaria y relaciones institucionales — para transformar oportunidades en emprendimientos listos para avanzar.",
+      "leaders": {
+        "max": {
+          "role": "CEO y Fundador",
+          "statement": "Antes de desarrollar un emprendimiento, hay que ver el valor que aún no se ha revelado.",
+          "quote1": "Al frente de Open Group, Flying Studio, NID Studio y Rinno Films, conduzco un ecosistema creado para transformar oportunidades inmobiliarias en operaciones más claras, viables y preparadas para avanzar.",
+          "quote2": "Cada empresa actúa en una etapa de la jornada, de la estrategia a la comunicación, siempre con la misma visión: desarrollar con estructura desde el origen."
+        }
+      }
+    },
+    "grupo": {
+      "kicker": "Nuestro Grupo",
+      "heading": "Nuestro Grupo",
+      "intro": "Estrategia, arquitectura, visualización y audiovisual operan como fuerzas complementarias. Cada empresa profundiza una etapa de la jornada: estructurar, diseñar, anticipar y comunicar.",
+      "visitLink": "Visitar sitio ↗",
+      "visitAria": "{name} — visitar sitio",
+      "companies": {
+        "flying": {
+          "role": "Futuros visuales y experiencias inmersivas",
+          "text": "La máquina de anticipar futuros. Imágenes y renders 3D, apps, D.Brave y salas inmersivas transportan al cliente al interior de su futura realidad — más de 12 años traduciendo ladrillo y cemento en pura poesía visual.",
+          "tags": {
+            "t1": "Renders 3D",
+            "t2": "Apps",
+            "t3": "D.Brave",
+            "t4": "Salas Inmersivas"
+          }
+        },
+        "ogdi": {
+          "role": "Estrategia y estructuración",
+          "text": "El punto de partida estratégico. Brindamos consultoría enfocada en la inteligencia de mercado, en el desarrollo de productos y en la estructuración completa de nuevos lanzamientos desde su concepción.",
+          "tags": {
+            "t1": "Mercado",
+            "t2": "Producto",
+            "t3": "Lanzamiento"
+          }
+        },
+        "nid": {
+          "role": "Arquitectura, interiores y punto de venta",
+          "text": "Donde la inteligencia arquitectónica adquiere forma y emoción. El hogar como un verdadero nido: proyectos de interiores, diseño de fachadas y puntos de venta concebidos como espacios de calidez, seguridad y fuerte personalidad.",
+          "tags": {
+            "t1": "Interiores",
+            "t2": "Fachadas",
+            "t3": "Punto de Venta"
+          }
+        },
+        "rinno": {
+          "role": "Películas, movimiento y conexión emocional",
+          "text": "La productora audiovisual del grupo. De películas concepto y de producto a materiales virales e institucionales — dando movimiento a las historias y creando la conexión emocional entre el proyecto y su público.",
+          "tags": {
+            "t1": "Películas",
+            "t2": "Viral",
+            "t3": "Institucional"
+          }
+        }
+      }
+    },
+    "assinatura": {
+      "kicker": "Mensaje central",
+      "heading": "Transformamos oportunidades en<br></br><em>emprendimientos listos para avanzar</em>.",
+      "sub": "Conduciendo estructuración, viabilidad, socios y camino hasta el lanzamiento, con visión estratégica. Desarrolle con visión desde el origen.",
+      "ctaProjetos": "Ver los proyectos",
+      "ctaContato": "Hablar con Open Group"
+    }
+  },
+  "projetos": {
+    "meta": {
+      "title": "Proyectos"
+    },
+    "hero": {
+      "breadcrumbHome": "Inicio",
+      "breadcrumbCurrent": "Proyectos",
+      "kicker": "Proyectos · Cases",
+      "title": "Emprendimientos<br></br>estructurados en el origen.",
+      "countLabel": "emprendimientos<br></br>en portafolio",
+      "sub": "De la lectura de la oportunidad al lanzamiento — cada proyecto refleja la actuación de Open Group en la estructuración de la operación inmobiliaria."
+    },
+    "filtros": {
+      "aria": "Filtrar proyectos",
+      "all": "Todos",
+      "obra": "En construcción",
+      "futuro": "Próximos",
+      "entregue": "Entregado"
+    },
+    "grid": {
+      "noteAll": "Mostrando todos los proyectos",
+      "noteOne": "{count} proyecto · {label}",
+      "noteMany": "{count} proyectos · {label}"
+    },
+    "cards": {
+      "hits-cupece": {
+        "status": "En construcción",
+        "segmento": "Residencial",
+        "local": "São Paulo · SP"
+      },
+      "start-park-jabaquara": {
+        "status": "En construcción",
+        "segmento": "Residencial",
+        "local": "São Paulo · SP"
+      },
+      "oh-freguesia": {
+        "status": "En construcción",
+        "segmento": "Residencial",
+        "local": "São Paulo · SP"
+      },
+      "guarulhos": {
+        "status": "Próximos",
+        "segmento": "Residencial",
+        "local": "Guarulhos · SP"
+      },
+      "hits-santa-catarina": {
+        "status": "Entregado",
+        "segmento": "Residencial",
+        "local": "Ubicación por confirmar"
+      }
+    },
+    "cta": {
+      "title": "¿Tiene un terreno o proyecto con potencial?",
+      "text": "Presente la oportunidad. Hacemos la primera lectura e indicamos los próximos pasos de la operación.",
+      "ctaLabel": "Presentar oportunidad"
+    }
+  },
+  "clientes": {
+    "meta": {
+      "title": "Clientes",
+      "description": "Desarrolladores, constructoras, fondos y propietarios de terreno que estructuran sus operaciones con Open Group — del origen al lanzamiento."
+    },
+    "rail": {
+      "ariaLabel": "Navegación visual de la página de clientes",
+      "inicio": "Inicio",
+      "perfis": "Perfiles",
+      "relacao": "Formas de relación",
+      "compromissos": "Compromisos",
+      "operacoes": "Operaciones",
+      "perguntas": "Preguntas",
+      "contato": "Contacto"
+    },
+    "hero": {
+      "kicker": "Clientes",
+      "title": "Cada operación nace de<br></br><em>una relación de confianza</em>.",
+      "indice": {
+        "01": {
+          "title": "Desarrolladores",
+          "hint": "Estructuración y conducción de operaciones"
+        },
+        "02": {
+          "title": "Constructoras",
+          "hint": "Originación y previsibilidad"
+        },
+        "03": {
+          "title": "Fondos e inversores",
+          "hint": "Capital antes del lanzamiento"
+        },
+        "04": {
+          "title": "Propietarios de terreno",
+          "hint": "El terreno como capital"
+        }
+      }
+    },
+    "perfis": {
+      "kicker": "Para quién trabajamos",
+      "heading": "Cuatro perfiles,<br></br>la misma conducción.",
+      "items": {
+        "01": {
+          "title": "Desarrolladores",
+          "desc": "Estructuración y conducción de operaciones — de la lectura de la oportunidad y la viabilidad a la preparación para el lanzamiento.",
+          "entregas": [
+            "Lectura de la oportunidad y viabilidad",
+            "Estructuración de la operación",
+            "Conducción hasta el lanzamiento"
+          ],
+          "cta": "Operaciones conducidas"
+        },
+        "02": {
+          "title": "Constructoras",
+          "desc": "Originación calificada y operaciones estructuradas, con roles e hitos definidos, para construir con previsibilidad.",
+          "entregas": [
+            "Originación calificada",
+            "Roles e hitos en contrato",
+            "Conexión con socios y banco"
+          ],
+          "cta": "Conozca el grupo"
+        },
+        "03": {
+          "title": "Fondos e inversores",
+          "desc": "El capital calificado entra antes del lanzamiento, en estructuras definidas por la operación — SCP, permuta o coinversión.",
+          "entregas": [
+            "Tesis y ciclo de la operación",
+            "SCP, permuta o coinversión",
+            "Reporte por etapa"
+          ],
+          "cta": "Conozca la tesis"
+        },
+        "04": {
+          "title": "Propietarios de terreno",
+          "desc": "El terreno entra como capital en la operación — y el propietario participa del resultado del emprendimiento.",
+          "entregas": [
+            "Primera lectura del terreno",
+            "Terreno como capital, vía permuta",
+            "Participación en el resultado"
+          ],
+          "cta": "Presente su terreno"
+        }
+      }
+    },
+    "relacao": {
+      "kicker": "Formas de relación",
+      "intro": "Tres profundidades de involucramiento — la relación puede comenzar en un alcance y crecer con la operación.",
+      "quandoLabel": "Cuándo tiene sentido:",
+      "footer": "Involucramiento creciente →",
+      "items": {
+        "01": {
+          "title": "Consultoría contratada",
+          "desc": "Alcance definido: lectura de la oportunidad, inteligencia de mercado o viabilidad — entregados como proyecto.",
+          "quando": "Para validar una oportunidad o destrabar una decisión específica."
+        },
+        "02": {
+          "title": "Alianza estratégica",
+          "desc": "Open Group permanece en la conducción: estructuración de la operación, conexión con socios y preparación para el lanzamiento.",
+          "quando": "Para llevar la operación completa adelante con una conducción única."
+        },
+        "03": {
+          "title": "Socia de la operación",
+          "desc": "Participación en la propia operación — potencial, capital y ejecución en la misma dirección, con resultado compartido.",
+          "quando": "Para compartir riesgo y resultado en operaciones de mayor potencial."
+        }
+      }
+    },
+    "compromissos": {
+      "kicker": "Lo que sostiene la relación",
+      "heading": "La confianza se construye<br></br>con método.",
+      "intro": "Cuatro compromisos valen para cualquier perfil de cliente y cualquier forma de relación — del primer alcance a la sociedad en la operación.",
+      "items": {
+        "01": {
+          "title": "Inteligencia propia",
+          "desc": "Mercado, mercado local y lectura competitiva realizados por el equipo — cada recomendación nace de un dato, no de una tesis genérica."
+        },
+        "02": {
+          "title": "Roles e hitos definidos",
+          "desc": "Alcance, responsabilidades e hitos establecidos en contrato, definidos en la estructuración de la operación."
+        },
+        "03": {
+          "title": "Conducción única",
+          "desc": "Una sola responsable de la originación al lanzamiento — incluyendo la articulación con socios y la relación con el banco, con la CEF cuando corresponda."
+        },
+        "04": {
+          "title": "Transparencia por etapa",
+          "desc": "El cliente acompaña el estado de la operación en cada etapa cumplida: lo que avanzó, lo que viene a continuación y lo que cambió en el camino."
+        }
+      }
+    },
+    "operacoes": {
+      "kicker": "Relaciones en operación",
+      "heading": "La confianza, en la práctica.",
+      "intro": "En las operaciones del portafolio actual, Open Group es <strong>socia de la operación</strong> — potencial, capital y ejecución en la misma dirección.",
+      "cta": "Ver todas las operaciones"
+    },
+    "perguntas": {
+      "kicker": "Preguntas frecuentes",
+      "heading": "Lo que quienes llegan<br></br>suelen preguntar.",
+      "asideText": "¿No encontró su pregunta? <link>Hable con el equipo</link>.",
+      "items": {
+        "01": {
+          "q": "¿Cómo comienza una relación con Open Group?",
+          "a": "Con la presentación de la oportunidad — el activo, el terreno o el proyecto. El equipo realiza la primera lectura y responde con los próximos pasos posibles."
+        },
+        "02": {
+          "q": "¿Open Group ejecuta la obra?",
+          "a": "No. La ejecución es de los socios constructores — Open Group estructura y conduce la operación, conectando los roles adecuados en cada etapa."
+        },
+        "03": {
+          "q": "¿En qué momento el capital entra en la operación?",
+          "a": "En la estructuración, antes del lanzamiento — la fase en que se crea el valor. Los modelos de participación están detallados en la página de inversores."
+        },
+        "04": {
+          "q": "¿El alcance puede crecer a lo largo de la operación?",
+          "a": "Sí. La relación puede comenzar como consultoría contratada y evolucionar hacia una alianza estratégica o sociedad en la operación, según tenga sentido para ambas partes."
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Tiene una operación para estructurar?",
+      "text": "Presente la oportunidad — realizamos la primera lectura e indicamos los próximos pasos.",
+      "ctaLabel": "Hablar con Open Group"
+    }
+  },
+  "investidores": {
+    "meta": {
+      "title": "Inversores",
+      "description": "El capital cualificado entra antes del lanzamiento — en la fase en que se crea el valor. Conozca la tesis, el ciclo de la operación y los modelos de participación de Open Group."
+    },
+    "rail": {
+      "ariaLabel": "Navegación visual de la página inversores",
+      "inicio": "Inicio",
+      "tese": "Tesis",
+      "ciclo": "Ciclo",
+      "modelos": "Modelos",
+      "governanca": "Gobernanza",
+      "operacoes": "Operaciones",
+      "contato": "Contacto"
+    },
+    "hero": {
+      "kicker": "Inversores",
+      "title": "El valor nace antes de la obra.<br></br>La oportunidad de invertir, <em>también</em>.",
+      "intro": "Open Group estructura operaciones inmobiliarias y abre espacio para que el capital cualificado entre antes del lanzamiento — en la fase en que se crea el valor.",
+      "scrollHint": "La tesis"
+    },
+    "tese": {
+      "items": {
+        "01": {
+          "title": "Entramos <em>antes</em>.",
+          "desc": "El valor de un emprendimiento se crea en la estructuración — lectura de la oportunidad, producto y operación — antes de que comience la obra."
+        },
+        "02": {
+          "title": "Leemos el mercado.",
+          "desc": "Cada operación nace de inteligencia de mercado y estudio de viabilidad, no de una apuesta."
+        },
+        "03": {
+          "title": "Conducimos hasta el final.",
+          "desc": "De la originación al lanzamiento, la misma conducción — y el inversor acompaña cada hito de la operación."
+        }
+      }
+    },
+    "ciclo": {
+      "kicker": "El ciclo de la operación",
+      "intro": "El capital entra en la estructuración — y participa de la creación de valor, no solo del resultado.",
+      "capitalLabel": "El capital entra aquí"
+    },
+    "modelos": {
+      "kicker": "Modelos de participación",
+      "heading": "Estructuras definidas<br></br>por la operación — no al revés.",
+      "footer": "Cada estructura se define caso por caso, según la operación — sin promesa de resultado.",
+      "items": {
+        "scp": {
+          "sigla": "SCP",
+          "nome": "Sociedad en cuenta de participación",
+          "desc": "El capital participa de una operación específica, con alcance, roles e hitos definidos en contrato."
+        },
+        "permuta": {
+          "sigla": "Permuta",
+          "nome": "Terreno como capital",
+          "desc": "El terreno entra como capital en la operación — el propietario participa del resultado del emprendimiento."
+        },
+        "coinvest": {
+          "sigla": "Coinvers.",
+          "nome": "Capital junto a la operación",
+          "desc": "Inversión junto a Open Group y a socios estratégicos en la estructuración de la operación."
+        }
+      }
+    },
+    "governanca": {
+      "kicker": "Gobernanza y seguimiento",
+      "heading": "La operación entera,<br></br>bajo una conducción única.",
+      "intro": "Invertir antes de la obra exige ver la operación. Por eso Open Group conduce con orden: hitos definidos, reporte por etapa y una única responsable desde el inicio hasta el lanzamiento.",
+      "items": {
+        "01": {
+          "title": "Hitos definidos",
+          "desc": "Cada operación avanza por hitos claros, definidos en la estructuración — del desbloqueo de la viabilidad a la preparación para el lanzamiento."
+        },
+        "02": {
+          "title": "Reporte por etapa",
+          "desc": "El inversor recibe el estado de la operación en cada etapa cumplida: lo que avanzó, lo que viene a continuación y lo que cambió en el camino."
+        },
+        "03": {
+          "title": "Conducción única",
+          "desc": "La conducción es de Open Group — de la articulación con socios y banco a la estrategia comercial. Una sola responsable por la operación entera."
+        }
+      }
+    },
+    "operacoes": {
+      "kicker": "La tesis, en la práctica",
+      "heading": "Operaciones en conducción.",
+      "intro": "En todas, Open Group es <strong>socia de la operación</strong> — el capital entra donde nace el valor.",
+      "cta": "Ver todas las operaciones"
+    },
+    "curva": {
+      "capitalLabel": "El capital entra aquí",
+      "stepAria": "Etapa {idx} — {title}"
+    },
+    "cta": {
+      "items": {
+        "capital": {
+          "title": "Tengo capital para invertir",
+          "desc": "Converse con el equipo sobre las operaciones en estructuración."
+        },
+        "terreno": {
+          "title": "Tengo un terreno o activo",
+          "desc": "Presente el área — realizamos la primera lectura de la oportunidad."
+        }
+      }
+    }
+  },
+  "contato": {
+    "meta": {
+      "title": "Contacto",
+      "description": "Presente el activo, el terreno o el proyecto. Open Group realiza la primera lectura de la oportunidad y vuelve con los próximos pasos."
+    },
+    "hero": {
+      "kicker": "Contacto",
+      "title": "Toda oportunidad empieza con <em>una conversación</em>.",
+      "intro": "Presente el activo, el terreno o el proyecto. Open Group realiza la primera lectura de la oportunidad y vuelve con los próximos pasos.",
+      "canais": {
+        "email": {
+          "label": "Correo electrónico",
+          "hint": "Para presentaciones de oportunidad y material de proyecto"
+        },
+        "whatsapp": {
+          "label": "WhatsApp / Teléfono",
+          "hint": "Conversación directa con el equipo"
+        },
+        "localizacao": {
+          "label": "Ubicación",
+          "hint": "Actuación en desarrollo inmobiliario"
+        }
+      }
+    },
+    "conversa": {
+      "kicker": "Cómo conducimos",
+      "heading": "Del primer contacto<br></br>a los próximos pasos.",
+      "etapas": {
+        "01": {
+          "title": "Primera lectura",
+          "desc": "El equipo evalúa el material recibido — potencial, ubicación y adecuación a la estrategia de desarrollo."
+        },
+        "02": {
+          "title": "Conversación estratégica",
+          "desc": "Una conversación directa para entender objetivos, plazos y la etapa del proyecto o del activo."
+        },
+        "03": {
+          "title": "Camino de estructuración",
+          "desc": "Indicamos la forma posible de actuación — de la viabilidad a la conducción hasta el lanzamiento."
+        }
+      }
+    },
+    "info": {
+      "kicker": "Conversemos",
+      "heading": "Presente su oportunidad.",
+      "body": "Cuéntenos sobre el activo, el terreno o el proyecto. Realizamos la primera lectura de la oportunidad e indicamos los próximos pasos posibles.",
+      "itens": {
+        "email": "Correo electrónico",
+        "whatsapp": "WhatsApp / Teléfono",
+        "localizacao": "Ubicación"
+      }
+    },
+    "form": {
+      "aria": "Formulario de contacto",
+      "labels": {
+        "nome": "Nombre",
+        "empresa": "Empresa",
+        "email": "Correo electrónico",
+        "whatsapp": "WhatsApp",
+        "tipo": "Tipo de contacto",
+        "mensagem": "Mensaje"
+      },
+      "placeholders": {
+        "nome": "Su nombre completo",
+        "empresa": "Empresa o fondo",
+        "email": "usted@empresa.com",
+        "whatsapp": "+55 11 90000-0000",
+        "mensagem": "Tipo de activo, ubicación, etapa del proyecto…"
+      },
+      "tipos": {
+        "oportunidade": "Presentar oportunidad",
+        "projeto": "Hablar sobre un proyecto",
+        "parceria": "Alianza",
+        "investimento": "Inversión",
+        "imprensa": "Prensa",
+        "outro": "Otro"
+      },
+      "submit": "Enviar mensaje",
+      "consent": "Al enviar, usted acepta ser contactado por el equipo de Open Group.",
+      "sucesso": {
+        "title": "Mensaje recibido.",
+        "body": "El equipo de Open Group realiza la primera lectura y vuelve con los próximos pasos."
+      }
+    }
+  },
+  "insights": {
+    "kicker": "Insights",
+    "title": "Análisis e inteligencia de mercado.",
+    "meta": {
+      "title": "Insights"
+    }
+  },
+  "parceiros": {
+    "kicker": "Socios",
+    "title": "Ecosistema de socios.",
+    "meta": {
+      "title": "Socios"
+    }
+  },
+  "privacidade": {
+    "meta": {
+      "title": "Política de Privacidad",
+      "description": "Cómo Open Group recopila, utiliza, almacena y protege los datos personales, en cumplimiento de la ley brasileña de protección de datos, la LGPD (Ley n.º 13.709/2018)."
+    },
+    "kicker": "Documento institucional",
+    "title": "Política de Privacidad",
+    "updatedLabel": "Última actualización",
+    "updated": "Junio de 2026",
+    "intro": "La privacidad y la protección de los datos personales forman parte del compromiso de conducción responsable de Open Group. Este documento explica, de forma transparente, cómo tratamos los datos de quienes navegan en este sitio y de quienes se relacionan con nuestro equipo.",
+    "sections": {
+      "s1": {
+        "heading": "Objetivo y alcance",
+        "paras": [
+          "Esta Política de Privacidad describe cómo Open Group — Desarrollo Inmobiliario (“Open Group”) recopila, utiliza, almacena, comparte y protege los datos personales de los visitantes de este sitio y de las personas que se ponen en contacto con el equipo, en cumplimiento de la ley brasileña de protección de datos, la Ley General de Protección de Datos Personales — LGPD (Ley n.º 13.709/2018).",
+          "Se aplica exclusivamente a este sitio institucional y a los canales de contacto aquí disponibles. Los sitios de terceros que eventualmente estén vinculados (como páginas de socios y plataformas de mapas) poseen sus propias políticas, que recomendamos consultar."
+        ]
+      },
+      "s2": {
+        "heading": "Datos que recopilamos",
+        "paras": [
+          "Tratamos dos categorías de datos personales:"
+        ],
+        "list": [
+          "Datos proporcionados por usted — al utilizar el formulario de contacto o los canales directos (correo electrónico y teléfono), recopilamos la información que usted decide compartir: nombre, empresa o fondo, correo electrónico, WhatsApp/teléfono, tipo de contacto y el contenido del mensaje, que puede incluir información sobre activos, terrenos o proyectos.",
+          "Datos recopilados automáticamente — información técnica de navegación, como dirección IP, tipo de navegador, dispositivo, páginas visitadas y tiempo de permanencia, recopilada mediante cookies y tecnologías similares."
+        ],
+        "parasAfter": [
+          "En este sitio no recopilamos datos personales sensibles (como datos de salud, biometría o convicciones), y nuestros servicios no están destinados a menores de 18 años."
+        ]
+      },
+      "s3": {
+        "heading": "Finalidades y bases legales",
+        "paras": [
+          "Utilizamos los datos personales para las siguientes finalidades, siempre amparadas en una base legal de la LGPD:"
+        ],
+        "list": [
+          "Responder a su contacto y conducir la primera lectura de la oportunidad presentada — base legal: procedimientos preliminares a un contrato (art. 7, V) e interés legítimo (art. 7, IX);",
+          "Mantener la relación institucional y comercial derivada del contacto — base legal: interés legítimo;",
+          "Cumplir obligaciones legales o regulatorias y ejercer derechos en procesos — base legal: cumplimiento de una obligación legal (art. 7, II) y ejercicio regular de derechos (art. 7, VI);",
+          "Analizar el uso del sitio y mejorar la experiencia de navegación — base legal: consentimiento (art. 7, I) e interés legítimo."
+        ]
+      },
+      "s4": {
+        "heading": "Cookies y tecnologías de navegación",
+        "paras": [
+          "Las cookies son pequeños archivos almacenados en su navegador. Utilizamos cookies estrictamente necesarias para el funcionamiento del sitio y, cuando corresponda, cookies analíticas para entender cómo se utiliza el sitio.",
+          "Usted puede gestionar o desactivar las cookies en la configuración de su navegador. La desactivación de las cookies necesarias puede afectar el funcionamiento de partes del sitio."
+        ]
+      },
+      "s5": {
+        "heading": "Compartición de datos",
+        "paras": [
+          "Open Group no vende datos personales. La compartición ocurre únicamente en los siguientes supuestos:"
+        ],
+        "list": [
+          "Con prestadores de servicios que operan el sitio y los canales de comunicación (alojamiento, correo electrónico, herramientas de análisis), limitado a lo necesario para la prestación del servicio;",
+          "Con socios de la operación inmobiliaria, cuando su contacto tenga por objeto una oportunidad que requiera dicha articulación — siempre en el contexto de la finalidad original;",
+          "Con autoridades públicas, en virtud de una obligación legal, regulatoria u orden judicial;",
+          "En operaciones societarias (como fusión o adquisición), en cuyo caso el titular será informado sobre el cambio de controlador."
+        ]
+      },
+      "s6": {
+        "heading": "Almacenamiento y plazo de conservación",
+        "paras": [
+          "Los datos se almacenan en entornos controlados, pudiendo estar alojados en servidores ubicados fuera de Brasil — en cuyo caso la transferencia internacional observa lo dispuesto en los arts. 33 y siguientes de la LGPD.",
+          "Conservamos los datos durante el tiempo necesario para el cumplimiento de las finalidades de esta política: los datos de contacto se conservan mientras dure la relación o la gestión, y posteriormente durante el plazo necesario para el cumplimiento de obligaciones legales y el ejercicio regular de derechos. Concluidos los plazos, los datos se eliminan o se anonimizan."
+        ]
+      },
+      "s7": {
+        "heading": "Seguridad de la información",
+        "paras": [
+          "Adoptamos medidas técnicas y administrativas razonables para proteger los datos personales contra accesos no autorizados, pérdida, alteración o divulgación indebida — incluyendo cifrado en tránsito (HTTPS), control de acceso y minimización de la recopilación.",
+          "Ningún sistema es absolutamente seguro. En caso de que identifiquemos un incidente de seguridad que pueda acarrear riesgo o daño relevante a los titulares, comunicaremos a los afectados y a la Autoridad Nacional de Protección de Datos (ANPD), en la forma de la ley."
+        ]
+      },
+      "s8": {
+        "heading": "Derechos de los titulares",
+        "paras": [
+          "En los términos del art. 18 de la LGPD, usted puede solicitar, en cualquier momento:"
+        ],
+        "list": [
+          "Confirmación de la existencia de tratamiento de sus datos;",
+          "Acceso a los datos que mantenemos sobre usted;",
+          "Corrección de datos incompletos, inexactos o desactualizados;",
+          "Anonimización, bloqueo o eliminación de datos innecesarios, excesivos o tratados en disconformidad con la ley;",
+          "Portabilidad de los datos a otro proveedor, observados los reglamentos de la ANPD;",
+          "Eliminación de los datos tratados con base en su consentimiento;",
+          "Información sobre las entidades con las cuales compartimos sus datos;",
+          "Revocación del consentimiento, cuando esta sea la base legal del tratamiento."
+        ],
+        "parasAfter": [
+          "Las solicitudes son gratuitas y serán respondidas en los plazos previstos en la legislación. Para ejercerlas, utilice el canal indicado en la sección siguiente."
+        ]
+      },
+      "s9": {
+        "heading": "Encargado y canal de contacto",
+        "paras": [
+          "Las solicitudes relativas a datos personales deben dirigirse al encargado del tratamiento de datos personales de Open Group por el correo electrónico {email}, con el asunto “Privacidad de datos”. Si lo prefiere, utilice la página de contacto de este sitio."
+        ]
+      },
+      "s10": {
+        "heading": "Legislación aplicable",
+        "paras": [
+          "Esta política se rige por las leyes de la República Federativa de Brasil, en especial la Ley n.º 13.709/2018 (LGPD) y el Marco Civil de Internet (Ley n.º 12.965/2014). Se elige el fuero de la comarca de São Paulo/SP para dirimir eventuales controversias."
+        ]
+      },
+      "s11": {
+        "heading": "Actualizaciones de esta política",
+        "paras": [
+          "Esta política puede ser actualizada en cualquier momento para reflejar cambios legales, regulatorios u operativos. La versión vigente estará siempre disponible en esta página, con la fecha de actualización indicada en la parte superior. Los cambios relevantes podrán ser comunicados por los canales de contacto informados."
+        ]
+      }
+    },
+    "contact": {
+      "text": "¿Dudas sobre esta política? Escriba a <email></email> o acceda a la <link>página de contacto</link>."
+    }
+  },
+  "empreendimento": {
+    "hero": {
+      "breadcrumbAria": "Ruta de navegación",
+      "home": "Inicio",
+      "projetos": "Proyectos",
+      "badgeSuffix": "Emprendimiento",
+      "venturePartner": "OGDI socia de la operación"
+    },
+    "info": {
+      "kicker": "El emprendimiento",
+      "heading": "De la lectura de la oportunidad a la conducción hasta el lanzamiento.",
+      "labels": {
+        "status": "Estado",
+        "segmento": "Segmento",
+        "localizacao": "Ubicación",
+        "regiao": "Región",
+        "atuacao": "Rol de Open Group",
+        "modelo": "Modelo",
+        "tipologia": "Tipología · metraje"
+      },
+      "venturePartner": "Socia de la operación",
+      "tbc": "Por confirmar",
+      "cta": "Tengo interés"
+    },
+    "gallery": {
+      "aria": "Galería de imágenes"
+    },
+    "atuacao": {
+      "kicker": "El rol de Open Group",
+      "heading": "Cómo estructuramos esta operación.",
+      "steps": {
+        "01": {
+          "title": "Lectura de la oportunidad",
+          "desc": "Comprensión del activo, de la etapa y del potencial real de desarrollo en la región."
+        },
+        "02": {
+          "title": "Inteligencia de mercado",
+          "desc": "Contexto del mercado local, demanda y lectura competitiva que fundamentó la tesis."
+        },
+        "03": {
+          "title": "Concepción del producto",
+          "desc": "Definición de la lógica del emprendimiento: tipología, mix y posicionamiento."
+        },
+        "04": {
+          "title": "Viabilidad",
+          "desc": "Análisis financiero e institucional que destrabó el camino de la operación."
+        },
+        "05": {
+          "title": "Estructuración de la operación",
+          "desc": "Modelado para alinear potencial, capital y ejecución en la misma dirección."
+        },
+        "06": {
+          "title": "Conexión con socios",
+          "desc": "Articulación de socios y relación con el banco, incluida la CEF cuando corresponde."
+        },
+        "07": {
+          "title": "Preparación para el lanzamiento",
+          "desc": "Estrategia comercial y conducción de la operación hasta estar lista para avanzar."
+        },
+        "em-obra": {
+          "title": "En construcción",
+          "desc": "El emprendimiento avanza en la fase de ejecución, conducido con la estructura definida en el origen."
+        }
+      }
+    },
+    "neighborhood": {
+      "kicker": "Entorno del emprendimiento",
+      "fallbackTitle": "Ubicación por definir",
+      "fallbackText": "La ubicación de este emprendimiento aún está por detallar. Cuando se confirme la dirección, este bloque pasará a mostrar el mapa interactivo de Google Maps.",
+      "fallbackAddress": "Dirección por definir",
+      "mapUnavailable": "Mapa no disponible",
+      "addressTbd": "Dirección por definir.",
+      "placeholderText": "Este espacio ya sigue el estándar de la página y se activará con Google Maps en cuanto se informe la ubicación.",
+      "mapTitle": "Google Maps - {name}"
+    },
+    "proximos": {
+      "kicker": "Continúe explorando",
+      "heading": "Otros emprendimientos.",
+      "link": "Ver todos los proyectos"
+    },
+    "cta": {
+      "title": "¿Interés en {name}?",
+      "text": "Hable con el equipo de Open Group y reciba más información sobre el emprendimiento y la operación.",
+      "ctaLabel": "Hablar con el equipo"
+    }
+  },
+  "atuacao": {
+    "kicker": "Actuación",
+    "title": "Lo que hace Open Group.",
+    "meta": {
+      "title": "Actuación"
+    }
   }
 }

@@ -10,12 +10,980 @@
   "common": {
     "ctaHeader": "Talk to Open Group",
     "ctaMobile": "Present an opportunity",
-    "langLabel": "Language: English. View other languages"
+    "langLabel": "Language: English. View other languages",
+    "placeholder": {
+      "body": "Content in preparation. This page is part of the site architecture and will receive content soon.",
+      "back": "Back to home"
+    },
+    "rail": {
+      "goTo": "Go to {label}",
+      "defaultAria": "Visual page navigation"
+    }
   },
   "footer": {
-    "tagline": "Value is created before ground is broken.",
+    "tagline": "Value is born before ground is broken.",
     "atuacaoTitle": "What we do",
     "navTitle": "Navigation",
     "privacy": "Privacy Policy"
+  },
+  "home": {
+    "rail": {
+      "ariaLabel": "Visual navigation of the home page",
+      "top": "Start",
+      "projetos": "Projects",
+      "atuacao": "What we do",
+      "modelos": "Models",
+      "institucional": "Manifesto",
+      "parceiros": "Partners",
+      "contato": "Contact"
+    },
+    "hero": {
+      "srTitle": "Open Group — Real estate development. Value is born before ground is broken.",
+      "phrase": "Value is born before ground is broken.",
+      "prev": "Previous",
+      "next": "Next",
+      "slides": {
+        "hits-santa-catarina": {
+          "kick": "Delivered · Development",
+          "meta": {
+            "status": "Delivered",
+            "segmento": "Residential",
+            "local": "Location TBC"
+          },
+          "sign": "OGDI partner in the venture — from concept to launch."
+        },
+        "hits-cupece": {
+          "kick": "Under construction · Development",
+          "meta": {
+            "status": "Under construction",
+            "segmento": "Residential",
+            "local": "São Paulo · SP"
+          },
+          "sign": "OGDI partner in the venture — reading the opportunity, product, and structuring."
+        },
+        "start-park-jabaquara": {
+          "kick": "Under construction · Development",
+          "meta": {
+            "status": "Under construction",
+            "segmento": "Residential",
+            "local": "São Paulo · SP"
+          },
+          "sign": "OGDI partner in the venture — market intelligence, feasibility, and guidance through to launch."
+        },
+        "oh-freguesia": {
+          "kick": "Under construction · Development",
+          "meta": {
+            "status": "Under construction",
+            "segmento": "Residential",
+            "local": "São Paulo · SP"
+          },
+          "sign": "OGDI partner in the venture — product concept and structuring."
+        }
+      }
+    },
+    "projetos": {
+      "kicker": "Projects",
+      "heading": "Structured before construction.<br></br>Developments that move forward.",
+      "prev": "Previous",
+      "next": "Next",
+      "goTo": "Go to {n}",
+      "seeAll": "See all projects",
+      "tabs": {
+        "obra": "Under construction",
+        "futuro": "Upcoming",
+        "entregue": "Delivered"
+      },
+      "cards": {
+        "hits-cupece": {
+          "status": "Under construction",
+          "tag": "A venture structured at the origin, from product to launch.",
+          "ctaLabel": "Explore the development"
+        },
+        "start-park-jabaquara": {
+          "status": "Under construction",
+          "tag": "From market intelligence to guidance through to launch.",
+          "ctaLabel": "Explore the development"
+        },
+        "oh-freguesia": {
+          "status": "Under construction",
+          "tag": "Product concept and venture structured by OGDI.",
+          "ctaLabel": "Explore the development"
+        },
+        "guarulhos": {
+          "status": "Upcoming",
+          "tag": "Opportunity originated and venture under structuring.",
+          "ctaLabel": "Discuss the project"
+        },
+        "hits-santa-catarina": {
+          "status": "Delivered",
+          "tag": "From concept to launch — venture delivered.",
+          "ctaLabel": "Explore the development"
+        }
+      }
+    },
+    "atuacao": {
+      "kicker": "What we do",
+      "heading": "From the origin<br></br>to the launch.",
+      "intro": "Open Group does not merely take part in projects — it structures the real estate opportunity, aligning potential, capital, partners, and execution in the same direction.",
+      "tags": {
+        "consultoria": "Contracted consulting",
+        "parceria": "Strategic partnership",
+        "societaria": "Partner in the venture"
+      },
+      "steps": {
+        "01": {
+          "title": "Reading the opportunity",
+          "desc": "Understanding the asset, its stage, and its real development potential."
+        },
+        "02": {
+          "title": "Market intelligence",
+          "desc": "Local market context, demand, and competitive analysis that underpin the thesis."
+        },
+        "03": {
+          "title": "Development concept",
+          "desc": "Defining the logic of the real estate product: unit mix, typology, and positioning."
+        },
+        "04": {
+          "title": "Feasibility",
+          "desc": "Financial and institutional analysis that unlocks the path of the venture."
+        },
+        "05": {
+          "title": "Structuring the venture",
+          "desc": "Modeling so that potential, capital, and execution move in the same direction."
+        },
+        "06": {
+          "title": "Connecting with partners",
+          "desc": "Bringing partners together and managing the bank relationship, including CEF (Brazil's federal bank) when applicable."
+        },
+        "07": {
+          "title": "Launch readiness",
+          "desc": "Commercial strategy and guidance of the venture until it is ready to move forward."
+        }
+      }
+    },
+    "modelos": {
+      "kicker": "Engagement models",
+      "heading": "Flexible engagement based on<br></br>the profile of the opportunity.",
+      "intro": "Each opportunity calls for its own logic. Open Group assesses the stage, the potential, and the complexity of the venture to define the most suitable engagement model.",
+      "cards": {
+        "consultoria": {
+          "idx": "i.",
+          "title": "Contracted consulting",
+          "desc": "We support the structuring of the venture with strategic reading and technical guidance, within a defined scope."
+        },
+        "parceria": {
+          "idx": "ii.",
+          "title": "Strategic partnership",
+          "desc": "We work side by side on building the development, sharing vision, structure, and direction."
+        },
+        "societaria": {
+          "idx": "iii.",
+          "title": "Equity participation",
+          "desc": "We come in as partners in the venture, committed to the result of the development from end to end."
+        }
+      }
+    },
+    "manifesto": {
+      "kicker": "About Open Group",
+      "line1": "Before construction, there is the <em>decision</em>.",
+      "line2": "Before the launch, there is the <em>structure</em>.",
+      "line3": "Before value, there is <em>vision</em>.",
+      "whatTitle": "What we do",
+      "body1": "Open Group Real Estate Development works on the structuring and development of real estate ventures, guiding opportunities from concept to launch.",
+      "body2": "Our work begins before construction: in reading the opportunity, in feasibility analysis, in the strategic design of the venture, and in bringing together the partners needed for the project to move forward with consistency.",
+      "body3": "We work alongside builders, developers, companies holding real estate assets, and investors, combining strategic vision, financial and institutional structuring, connection with partners, and guidance through the critical market stages.",
+      "cta": "Get to know the company"
+    },
+    "clientes": {
+      "kicker": "Clients",
+      "heading": "Who trusts<br></br>Open Group.",
+      "intro": "Developers, builders, funds, and landowners who structured their ventures with Open Group, from origin to launch."
+    }
+  },
+  "institucional": {
+    "rail": {
+      "ariaLabel": "Visual navigation of the About page",
+      "inicio": "Start",
+      "sobre": "About",
+      "manifesto": "Manifesto",
+      "origem": "Origin",
+      "lideranca": "Who leads",
+      "grupo": "Our Group",
+      "assinatura": "Closing message"
+    },
+    "meta": {
+      "title": "About",
+      "description": "Open Group structures and develops real estate ventures, guiding opportunities from concept to launch. Value is born before ground is broken."
+    },
+    "hero": {
+      "breadcrumbHome": "Start",
+      "breadcrumbCurrent": "About",
+      "kicker": "About",
+      "title1": "We reveal the <em>extraordinary</em> value",
+      "title2": "of real estate assets.",
+      "cue": "Scroll to discover Open Group"
+    },
+    "about": {
+      "kicker": "About Open Group",
+      "heading": "Our work begins <em>before ground is broken</em>.",
+      "models": {
+        "consultoria": {
+          "strong": "Contracted",
+          "rest": "consulting"
+        },
+        "parceria": {
+          "strong": "Strategic",
+          "rest": "partnership"
+        },
+        "societaria": {
+          "strong": "Partner",
+          "rest": "in the venture"
+        }
+      },
+      "body1": "Open Group Real Estate Development works on the <em>structuring and development of real estate ventures</em>, guiding opportunities from concept to launch.",
+      "body2": "Our work begins before construction: in reading the opportunity, in feasibility analysis, in the strategic design of the venture, and in bringing together the partners needed for the project to move forward with consistency.",
+      "body3": "We work alongside builders, developers, companies holding real estate assets, and investors — combining strategic vision, financial and institutional structuring, connection with partners, and guidance through the critical market stages.",
+      "body4": "More than developing projects, <em>we structure real estate ventures so that potential, capital, and execution move in the same direction.</em>"
+    },
+    "manifesto": {
+      "eyebrow": "Our manifesto",
+      "segments": {
+        "s1": "Many opportunities don't fail for lack of ",
+        "s2": "potential",
+        "s3": ". They fail because they move forward without ",
+        "s4": "structure",
+        "s5": "."
+      }
+    },
+    "origem": {
+      "kicker": "Origin",
+      "heading": "The value of a development is born <em>before ground is broken</em>.",
+      "intro": "A promising site or a well-located project does not stand on its own. Without vision, feasibility, partners, and guidance, potential disperses before it becomes a development. It is born earlier — and it is born here:",
+      "strata": {
+        "01": {
+          "name": "Reading the opportunity",
+          "desc": "Interpreting the asset and its real potential, before it becomes obvious."
+        },
+        "02": {
+          "name": "Product conception",
+          "desc": "Defining the right development for that opportunity."
+        },
+        "03": {
+          "name": "Structuring the venture",
+          "desc": "Aligning potential, capital, and execution in the same direction."
+        },
+        "04": {
+          "name": "Choosing the partners",
+          "desc": "Bringing together partners, the bank, and institutional relationships."
+        },
+        "05": {
+          "name": "The path to launch",
+          "desc": "Guiding with clarity until the project is ready to move forward."
+        }
+      }
+    },
+    "lideranca": {
+      "kicker": "Who leads",
+      "heading": "The leadership behind every <em>structured venture</em>.",
+      "intro": "Open Group is led by professionals who combine strategic vision, command of the real estate venture, and institutional relationships — to turn opportunities into developments ready to move forward.",
+      "leaders": {
+        "max": {
+          "role": "CEO and Founder",
+          "statement": "Before developing a project, you must see the value that hasn't yet been revealed.",
+          "quote1": "At the helm of Open Group, Flying Studio, NID Studio, and Rinno Films, I lead an ecosystem created to turn real estate opportunities into clearer, more feasible ventures, ready to move forward.",
+          "quote2": "Each company works on one stage of the journey, from strategy to communication, always with the same vision: to develop with structure from the very origin."
+        }
+      }
+    },
+    "grupo": {
+      "kicker": "Our Group",
+      "heading": "Our Group",
+      "intro": "Strategy, architecture, visualization, and audiovisual work as complementary forces. Each company deepens one stage of the journey: to structure, to design, to anticipate, and to communicate.",
+      "visitLink": "Visit site ↗",
+      "visitAria": "{name} — visit site",
+      "companies": {
+        "flying": {
+          "role": "Visual futures and immersive experiences",
+          "text": "The machine for anticipating futures. Images and 3D renders, apps, D.Brave, and immersive rooms transport the client into their future reality — over 12 years translating brick and concrete into pure visual poetry.",
+          "tags": {
+            "t1": "3D Renders",
+            "t2": "Apps",
+            "t3": "D.Brave",
+            "t4": "Immersive Rooms"
+          }
+        },
+        "ogdi": {
+          "role": "Strategy and structuring",
+          "text": "The strategic starting point. We provide consulting focused on market intelligence, product development, and the complete structuring of new launches from their very conception.",
+          "tags": {
+            "t1": "Market",
+            "t2": "Product",
+            "t3": "Launch"
+          }
+        },
+        "nid": {
+          "role": "Architecture, interiors, and point of sale",
+          "text": "Where architectural intelligence takes shape and emotion. The home as a true nest: interior projects, facade design, and points of sale conceived as spaces of comfort, security, and strong personality.",
+          "tags": {
+            "t1": "Interiors",
+            "t2": "Facades",
+            "t3": "Point of Sale"
+          }
+        },
+        "rinno": {
+          "role": "Films, motion, and emotional connection",
+          "text": "The group's audiovisual studio. From concept and product films to viral and institutional pieces — bringing motion to stories and creating the emotional connection between the project and its audience.",
+          "tags": {
+            "t1": "Films",
+            "t2": "Viral",
+            "t3": "Institutional"
+          }
+        }
+      }
+    },
+    "assinatura": {
+      "kicker": "Closing message",
+      "heading": "We turn opportunities into<br></br><em>developments ready to move forward</em>.",
+      "sub": "Guiding structuring, feasibility, partners, and the path to launch, with strategic vision. Develop with vision from the very origin.",
+      "ctaProjetos": "See the projects",
+      "ctaContato": "Talk to Open Group"
+    }
+  },
+  "projetos": {
+    "meta": {
+      "title": "Projects"
+    },
+    "hero": {
+      "breadcrumbHome": "Home",
+      "breadcrumbCurrent": "Projects",
+      "kicker": "Projects · Cases",
+      "title": "Developments<br></br>structured at the origin.",
+      "countLabel": "developments<br></br>in portfolio",
+      "sub": "From reading the opportunity to launch — each project reflects Open Group's work in structuring the real estate venture."
+    },
+    "filtros": {
+      "aria": "Filter projects",
+      "all": "All",
+      "obra": "Under construction",
+      "futuro": "Upcoming",
+      "entregue": "Delivered"
+    },
+    "grid": {
+      "noteAll": "Showing all projects",
+      "noteOne": "{count} project · {label}",
+      "noteMany": "{count} projects · {label}"
+    },
+    "cards": {
+      "hits-cupece": {
+        "status": "Under construction",
+        "segmento": "Residential",
+        "local": "São Paulo · SP"
+      },
+      "start-park-jabaquara": {
+        "status": "Under construction",
+        "segmento": "Residential",
+        "local": "São Paulo · SP"
+      },
+      "oh-freguesia": {
+        "status": "Under construction",
+        "segmento": "Residential",
+        "local": "São Paulo · SP"
+      },
+      "guarulhos": {
+        "status": "Upcoming",
+        "segmento": "Residential",
+        "local": "Guarulhos · SP"
+      },
+      "hits-santa-catarina": {
+        "status": "Delivered",
+        "segmento": "Residential",
+        "local": "Location TBC"
+      }
+    },
+    "cta": {
+      "title": "Have a site or project with potential?",
+      "text": "Bring us the opportunity. We do the first reading and outline the next steps of the venture.",
+      "ctaLabel": "Present an opportunity"
+    }
+  },
+  "clientes": {
+    "meta": {
+      "title": "Clients",
+      "description": "Developers, builders, funds and landowners who structure their ventures with Open Group — from origin to launch."
+    },
+    "rail": {
+      "ariaLabel": "Visual navigation of the clients page",
+      "inicio": "Start",
+      "perfis": "Profiles",
+      "relacao": "Forms of relationship",
+      "compromissos": "Commitments",
+      "operacoes": "Ventures",
+      "perguntas": "Questions",
+      "contato": "Contact"
+    },
+    "hero": {
+      "kicker": "Clients",
+      "title": "Every venture is born from<br></br><em>a relationship of trust</em>.",
+      "indice": {
+        "01": {
+          "title": "Developers",
+          "hint": "Structuring and guidance of ventures"
+        },
+        "02": {
+          "title": "Builders",
+          "hint": "Origination and predictability"
+        },
+        "03": {
+          "title": "Funds and investors",
+          "hint": "Capital before launch"
+        },
+        "04": {
+          "title": "Landowners",
+          "hint": "The land as capital"
+        }
+      }
+    },
+    "perfis": {
+      "kicker": "Who we work for",
+      "heading": "Four profiles,<br></br>the same guidance.",
+      "items": {
+        "01": {
+          "title": "Developers",
+          "desc": "Structuring and guidance of ventures — from reading the opportunity and feasibility to launch readiness.",
+          "entregas": [
+            "Reading the opportunity and feasibility",
+            "Structuring the venture",
+            "Guidance through to launch"
+          ],
+          "cta": "Ventures guided"
+        },
+        "02": {
+          "title": "Builders",
+          "desc": "Qualified origination and structured ventures, with defined roles and milestones, to build with predictability.",
+          "entregas": [
+            "Qualified origination",
+            "Roles and milestones under contract",
+            "Connecting with partners and the bank"
+          ],
+          "cta": "About the group"
+        },
+        "03": {
+          "title": "Funds and investors",
+          "desc": "Qualified capital enters before launch, within structures defined by the venture — SCP, asset swap or co-investment.",
+          "entregas": [
+            "Thesis and venture cycle",
+            "SCP, asset swap or co-investment",
+            "Reporting by stage"
+          ],
+          "cta": "About the thesis"
+        },
+        "04": {
+          "title": "Landowners",
+          "desc": "The land enters as capital in the venture — and the owner shares in the development's outcome.",
+          "entregas": [
+            "First reading of the area",
+            "Land as capital, via asset swap",
+            "Sharing in the outcome"
+          ],
+          "cta": "Present your area"
+        }
+      }
+    },
+    "relacao": {
+      "kicker": "Forms of relationship",
+      "intro": "Three depths of involvement — the relationship can begin within one scope and grow with the venture.",
+      "quandoLabel": "When it makes sense:",
+      "footer": "Growing involvement →",
+      "items": {
+        "01": {
+          "title": "Contracted consulting",
+          "desc": "Defined scope: reading the opportunity, market intelligence or feasibility — delivered as a project.",
+          "quando": "To validate an opportunity or unlock a specific decision."
+        },
+        "02": {
+          "title": "Strategic partnership",
+          "desc": "Open Group stays in the guidance role: structuring the venture, connecting with partners and launch readiness.",
+          "quando": "To carry the entire venture forward under a single guidance."
+        },
+        "03": {
+          "title": "Partner in the venture",
+          "desc": "Participation in the venture itself — potential, capital and execution in the same direction, with shared outcomes.",
+          "quando": "To share risk and outcome in ventures of greater potential."
+        }
+      }
+    },
+    "compromissos": {
+      "kicker": "What sustains the relationship",
+      "heading": "Trust is built<br></br>with method.",
+      "intro": "Four commitments hold for any client profile and any form of relationship — from the first scope to partnership in the venture.",
+      "items": {
+        "01": {
+          "title": "Our own intelligence",
+          "desc": "Market, local market and competitive reading done by the team — every recommendation is born from data, not from a generic thesis."
+        },
+        "02": {
+          "title": "Defined roles and milestones",
+          "desc": "Scope, responsibilities and milestones set under contract, defined when structuring the venture."
+        },
+        "03": {
+          "title": "Single guidance",
+          "desc": "One party responsible from origination to launch — including coordination with partners and the relationship with the bank, with CEF (Brazil's federal bank) where applicable."
+        },
+        "04": {
+          "title": "Transparency at every stage",
+          "desc": "The client follows the state of the venture at each stage completed: what advanced, what comes next and what changed along the way."
+        }
+      }
+    },
+    "operacoes": {
+      "kicker": "Relationships in venture",
+      "heading": "Trust, in practice.",
+      "intro": "In the ventures of the current portfolio, Open Group is a <strong>partner in the venture</strong> — potential, capital and execution in the same direction.",
+      "cta": "See all ventures"
+    },
+    "perguntas": {
+      "kicker": "Frequent questions",
+      "heading": "What those who arrive<br></br>usually ask.",
+      "asideText": "Didn't find your question? <link>Talk to the team</link>.",
+      "items": {
+        "01": {
+          "q": "How does a relationship with Open Group begin?",
+          "a": "With the presentation of the opportunity — the asset, the land or the project. The team makes the first reading and returns with the possible next steps."
+        },
+        "02": {
+          "q": "Does Open Group carry out construction?",
+          "a": "No. Execution belongs to the building partners — Open Group structures and guides the venture, connecting the right roles at each stage."
+        },
+        "03": {
+          "q": "At what point does capital enter the venture?",
+          "a": "At structuring, before launch — the phase in which value is created. The participation models are detailed on the investors page."
+        },
+        "04": {
+          "q": "Can the scope grow over the course of the venture?",
+          "a": "Yes. The relationship can begin as contracted consulting and evolve into a strategic partnership or partnership in the venture, as it makes sense for both sides."
+        }
+      }
+    },
+    "cta": {
+      "title": "Have a venture to structure?",
+      "text": "Present the opportunity — we make the first reading and indicate the next steps.",
+      "ctaLabel": "Talk to Open Group"
+    }
+  },
+  "investidores": {
+    "meta": {
+      "title": "Investors",
+      "description": "Qualified capital enters before the launch — at the stage where value is created. Discover Open Group's thesis, the venture cycle, and the participation models."
+    },
+    "rail": {
+      "ariaLabel": "Visual navigation for the investors page",
+      "inicio": "Start",
+      "tese": "Thesis",
+      "ciclo": "Cycle",
+      "modelos": "Models",
+      "governanca": "Governance",
+      "operacoes": "Ventures",
+      "contato": "Contact"
+    },
+    "hero": {
+      "kicker": "Investors",
+      "title": "Value is born before ground is broken.<br></br>So is the chance to invest, <em>too</em>.",
+      "intro": "Open Group structures real estate ventures and opens room for qualified capital to enter before the launch — at the stage where value is created.",
+      "scrollHint": "The thesis"
+    },
+    "tese": {
+      "items": {
+        "01": {
+          "title": "We enter <em>early</em>.",
+          "desc": "A development's value is created during structuring — reading the opportunity, the product, and the venture — before construction begins."
+        },
+        "02": {
+          "title": "We read the market.",
+          "desc": "Every venture is born from market intelligence and a feasibility study, not from a bet."
+        },
+        "03": {
+          "title": "We guide it to the end.",
+          "desc": "From origination to launch, the same guidance — and the investor follows every milestone of the venture."
+        }
+      }
+    },
+    "ciclo": {
+      "kicker": "The venture cycle",
+      "intro": "Capital enters during structuring — and takes part in the creation of value, not just in the result.",
+      "capitalLabel": "Capital enters here"
+    },
+    "modelos": {
+      "kicker": "Participation models",
+      "heading": "Structures defined<br></br>by the venture — not the other way around.",
+      "footer": "Each structure is defined case by case, according to the venture — with no promise of results.",
+      "items": {
+        "scp": {
+          "sigla": "SCP",
+          "nome": "Silent partnership",
+          "desc": "Capital takes part in a specific venture, with scope, roles, and milestones defined by contract."
+        },
+        "permuta": {
+          "sigla": "Land swap",
+          "nome": "Land as capital",
+          "desc": "The land enters as capital in the venture — the owner shares in the development's result."
+        },
+        "coinvest": {
+          "sigla": "Co-invest.",
+          "nome": "Capital alongside the venture",
+          "desc": "Investment together with Open Group and strategic partners in structuring the venture."
+        }
+      }
+    },
+    "governanca": {
+      "kicker": "Governance and follow-up",
+      "heading": "The entire venture,<br></br>under a single lead.",
+      "intro": "Investing before construction requires seeing the venture. That's why Open Group guides with order: defined milestones, step-by-step reporting, and a single lead from start to launch.",
+      "items": {
+        "01": {
+          "title": "Defined milestones",
+          "desc": "Every venture advances through clear milestones, defined during structuring — from unlocking feasibility to launch readiness."
+        },
+        "02": {
+          "title": "Step-by-step reporting",
+          "desc": "The investor receives the state of the venture at each completed stage: what advanced, what comes next, and what changed along the way."
+        },
+        "03": {
+          "title": "A single lead",
+          "desc": "The guidance is Open Group's — from coordinating partners and the bank to the commercial strategy. One lead for the entire venture."
+        }
+      }
+    },
+    "operacoes": {
+      "kicker": "The thesis in practice",
+      "heading": "Ventures under guidance.",
+      "intro": "In all of them, Open Group is the <strong>partner in the venture</strong> — capital enters where value is born.",
+      "cta": "See all ventures"
+    },
+    "curva": {
+      "capitalLabel": "Capital enters here",
+      "stepAria": "Stage {idx} — {title}"
+    },
+    "cta": {
+      "items": {
+        "capital": {
+          "title": "I have capital to invest",
+          "desc": "Talk with the team about the ventures under structuring."
+        },
+        "terreno": {
+          "title": "I have land or an asset",
+          "desc": "Present the area — we make the first reading of the opportunity."
+        }
+      }
+    }
+  },
+  "contato": {
+    "meta": {
+      "title": "Contact",
+      "description": "Present the asset, the land or the project. Open Group makes the first reading of the opportunity and comes back with the next steps."
+    },
+    "hero": {
+      "kicker": "Contact",
+      "title": "Every opportunity begins with <em>a conversation</em>.",
+      "intro": "Present the asset, the land or the project. Open Group makes the first reading of the opportunity and comes back with the next steps.",
+      "canais": {
+        "email": {
+          "label": "Email",
+          "hint": "For opportunity presentations and project material"
+        },
+        "whatsapp": {
+          "label": "WhatsApp / Phone",
+          "hint": "Direct conversation with the team"
+        },
+        "localizacao": {
+          "label": "Location",
+          "hint": "Active in real estate development"
+        }
+      }
+    },
+    "conversa": {
+      "kicker": "How we guide it",
+      "heading": "From the first contact<br></br>to the next steps.",
+      "etapas": {
+        "01": {
+          "title": "First reading",
+          "desc": "The team assesses the material received — potential, location and fit with the development strategy."
+        },
+        "02": {
+          "title": "Strategic conversation",
+          "desc": "A direct conversation to understand objectives, timelines and the stage of the project or asset."
+        },
+        "03": {
+          "title": "Structuring path",
+          "desc": "We indicate the possible form of engagement — from feasibility to guidance through to launch."
+        }
+      }
+    },
+    "info": {
+      "kicker": "Let's talk",
+      "heading": "Present your opportunity.",
+      "body": "Tell us about the asset, the land or the project. We make the first reading of the opportunity and indicate the possible next steps.",
+      "itens": {
+        "email": "Email",
+        "whatsapp": "WhatsApp / Phone",
+        "localizacao": "Location"
+      }
+    },
+    "form": {
+      "aria": "Contact form",
+      "labels": {
+        "nome": "Name",
+        "empresa": "Company",
+        "email": "Email",
+        "whatsapp": "WhatsApp",
+        "tipo": "Type of contact",
+        "mensagem": "Message"
+      },
+      "placeholders": {
+        "nome": "Your full name",
+        "empresa": "Company or fund",
+        "email": "you@company.com",
+        "whatsapp": "+55 11 90000-0000",
+        "mensagem": "Type of asset, location, stage of the project…"
+      },
+      "tipos": {
+        "oportunidade": "Present an opportunity",
+        "projeto": "Talk about a project",
+        "parceria": "Partnership",
+        "investimento": "Investment",
+        "imprensa": "Press",
+        "outro": "Other"
+      },
+      "submit": "Send message",
+      "consent": "By sending, you agree to be contacted by the Open Group team.",
+      "sucesso": {
+        "title": "Message received.",
+        "body": "The Open Group team makes the first reading and comes back with the next steps."
+      }
+    }
+  },
+  "insights": {
+    "kicker": "Insights",
+    "title": "Analysis and market intelligence.",
+    "meta": {
+      "title": "Insights"
+    }
+  },
+  "parceiros": {
+    "kicker": "Partners",
+    "title": "Partner ecosystem.",
+    "meta": {
+      "title": "Partners"
+    }
+  },
+  "privacidade": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "How Open Group collects, uses, stores, and protects personal data, in compliance with Brazil's data protection law, the LGPD (Law No. 13,709/2018)."
+    },
+    "kicker": "Institutional document",
+    "title": "Privacy Policy",
+    "updatedLabel": "Last updated",
+    "updated": "June 2026",
+    "intro": "Privacy and the protection of personal data are part of Open Group's commitment to responsible guidance. This document explains, transparently, how we handle the data of those who browse this site and of those who engage with our team.",
+    "sections": {
+      "s1": {
+        "heading": "Purpose and scope",
+        "paras": [
+          "This Privacy Policy describes how Open Group — Real Estate Development (“Open Group”) collects, uses, stores, shares, and protects the personal data of visitors to this site and of people who contact the team, in compliance with Brazil's data protection law, the General Personal Data Protection Law — LGPD (Law No. 13,709/2018).",
+          "It applies exclusively to this institutional site and to the contact channels made available here. Any third-party sites that may be linked (such as partner pages and map platforms) have their own policies, which we recommend consulting."
+        ]
+      },
+      "s2": {
+        "heading": "Data we collect",
+        "paras": [
+          "We process two categories of personal data:"
+        ],
+        "list": [
+          "Data you provide — when you use the contact form or the direct channels (email and phone), we collect the information you choose to share: name, company or fund, email, WhatsApp/phone, type of contact, and the content of the message, which may include information about assets, land, or projects.",
+          "Data collected automatically — technical browsing information, such as IP address, browser type, device, pages visited, and time spent, collected through cookies and similar technologies."
+        ],
+        "parasAfter": [
+          "On this site we do not collect sensitive personal data (such as health data, biometrics, or convictions), and our services are not directed to persons under 18 years of age."
+        ]
+      },
+      "s3": {
+        "heading": "Purposes and legal bases",
+        "paras": [
+          "We use personal data for the following purposes, always supported by a legal basis under the LGPD:"
+        ],
+        "list": [
+          "To respond to your contact and carry out the first reading of the opportunity presented — legal basis: preliminary procedures prior to a contract (art. 7, V) and legitimate interest (art. 7, IX);",
+          "To maintain the institutional and commercial relationship arising from the contact — legal basis: legitimate interest;",
+          "To comply with legal or regulatory obligations and to exercise rights in proceedings — legal basis: compliance with a legal obligation (art. 7, II) and the regular exercise of rights (art. 7, VI);",
+          "To analyze the use of the site and improve the browsing experience — legal basis: consent (art. 7, I) and legitimate interest."
+        ]
+      },
+      "s4": {
+        "heading": "Cookies and browsing technologies",
+        "paras": [
+          "Cookies are small files stored in your browser. We use cookies strictly necessary for the functioning of the site and, where applicable, analytical cookies to understand how the site is used.",
+          "You can manage or disable cookies in your browser settings. Disabling necessary cookies may affect the functioning of parts of the site."
+        ]
+      },
+      "s5": {
+        "heading": "Data sharing",
+        "paras": [
+          "Open Group does not sell personal data. Sharing occurs only in the following cases:"
+        ],
+        "list": [
+          "With service providers that operate the site and the communication channels (hosting, email, analytics tools), limited to what is necessary to provide the service;",
+          "With partners in the real estate venture, when the purpose of your contact is an opportunity that requires such coordination — always within the context of the original purpose;",
+          "With public authorities, by virtue of a legal or regulatory obligation or a court order;",
+          "In corporate transactions (such as a merger or acquisition), in which case the data subject will be informed of the change of controller."
+        ]
+      },
+      "s6": {
+        "heading": "Storage and retention period",
+        "paras": [
+          "Data is stored in controlled environments and may be hosted on servers located outside Brazil — in which case the international transfer observes the provisions of arts. 33 et seq. of the LGPD.",
+          "We retain the data for as long as necessary to fulfill the purposes of this policy: contact data is retained for the duration of the relationship or the dealing, and thereafter for the period necessary to comply with legal obligations and to exercise rights regularly. Once these periods end, the data is deleted or anonymized."
+        ]
+      },
+      "s7": {
+        "heading": "Information security",
+        "paras": [
+          "We adopt reasonable technical and administrative measures to protect personal data against unauthorized access, loss, alteration, or improper disclosure — including encryption in transit (HTTPS), access control, and minimization of collection.",
+          "No system is absolutely secure. Should we identify a security incident that may entail relevant risk or harm to data subjects, we will notify those affected and the National Data Protection Authority (ANPD), as provided by law."
+        ]
+      },
+      "s8": {
+        "heading": "Data subject rights",
+        "paras": [
+          "Under art. 18 of the LGPD, you may request, at any time:"
+        ],
+        "list": [
+          "Confirmation that your data is being processed;",
+          "Access to the data we hold about you;",
+          "Correction of incomplete, inaccurate, or outdated data;",
+          "Anonymization, blocking, or deletion of data that is unnecessary, excessive, or processed in non-compliance with the law;",
+          "Portability of the data to another provider, subject to the regulations of the ANPD;",
+          "Deletion of data processed on the basis of your consent;",
+          "Information about the entities with which we share your data;",
+          "Withdrawal of consent, where this is the legal basis for the processing."
+        ],
+        "parasAfter": [
+          "Requests are free of charge and will be answered within the periods provided by law. To exercise them, use the channel indicated in the following section."
+        ]
+      },
+      "s9": {
+        "heading": "Data protection officer and contact channel",
+        "paras": [
+          "Requests relating to personal data should be directed to Open Group's data protection officer at the email {email}, with the subject “Data privacy”. If you prefer, use the contact page of this site."
+        ]
+      },
+      "s10": {
+        "heading": "Applicable law",
+        "paras": [
+          "This policy is governed by the laws of the Federative Republic of Brazil, in particular Law No. 13,709/2018 (LGPD) and the Brazilian Civil Rights Framework for the Internet (Law No. 12,965/2014). The courts of the judicial district of São Paulo/SP are elected to settle any disputes."
+        ]
+      },
+      "s11": {
+        "heading": "Updates to this policy",
+        "paras": [
+          "This policy may be updated at any time to reflect legal, regulatory, or operational changes. The current version will always be available on this page, with the date of update indicated at the top. Relevant changes may be communicated through the contact channels provided."
+        ]
+      }
+    },
+    "contact": {
+      "text": "Questions about this policy? Write to <email></email> or visit the <link>contact page</link>."
+    }
+  },
+  "empreendimento": {
+    "hero": {
+      "breadcrumbAria": "Breadcrumb",
+      "home": "Home",
+      "projetos": "Projects",
+      "badgeSuffix": "Development",
+      "venturePartner": "OGDI partner in the venture"
+    },
+    "info": {
+      "kicker": "The development",
+      "heading": "From reading the opportunity to guiding it through to launch.",
+      "labels": {
+        "status": "Status",
+        "segmento": "Segment",
+        "localizacao": "Location",
+        "regiao": "Region",
+        "atuacao": "Open Group role",
+        "modelo": "Model",
+        "tipologia": "Layout · area"
+      },
+      "venturePartner": "Partner in the venture",
+      "tbc": "TBC",
+      "cta": "I'm interested"
+    },
+    "gallery": {
+      "aria": "Image gallery"
+    },
+    "atuacao": {
+      "kicker": "Open Group's role",
+      "heading": "How we structured this venture.",
+      "steps": {
+        "01": {
+          "title": "Reading the opportunity",
+          "desc": "Understanding the asset, its stage, and the real development potential in the area."
+        },
+        "02": {
+          "title": "Market intelligence",
+          "desc": "Local market context, demand, and competitive reading that grounded the thesis."
+        },
+        "03": {
+          "title": "Product conception",
+          "desc": "Defining the development's logic: layout, mix, and positioning."
+        },
+        "04": {
+          "title": "Feasibility",
+          "desc": "Financial and institutional analysis that unlocked the venture's path."
+        },
+        "05": {
+          "title": "Structuring the venture",
+          "desc": "Modeling to align potential, capital, and execution in the same direction."
+        },
+        "06": {
+          "title": "Connecting with partners",
+          "desc": "Coordinating partners and bank relationships, including CEF (Brazil's federal bank) where applicable."
+        },
+        "07": {
+          "title": "Launch readiness",
+          "desc": "Commercial strategy and guidance of the venture until it is ready to move forward."
+        },
+        "em-obra": {
+          "title": "Under construction",
+          "desc": "The development advances into the execution phase, guided by the structure defined at the origin."
+        }
+      }
+    },
+    "neighborhood": {
+      "kicker": "Development surroundings",
+      "fallbackTitle": "Location to be defined",
+      "fallbackText": "The location of this development is still to be detailed. Once the address is confirmed, this block will display the interactive Google Maps view.",
+      "fallbackAddress": "Address to be defined",
+      "mapUnavailable": "Map unavailable",
+      "addressTbd": "Address to be defined.",
+      "placeholderText": "This space already follows the page standard and will be activated with Google Maps as soon as the location is provided.",
+      "mapTitle": "Google Maps - {name}"
+    },
+    "proximos": {
+      "kicker": "Keep exploring",
+      "heading": "Other developments.",
+      "link": "View all projects"
+    },
+    "cta": {
+      "title": "Interested in {name}?",
+      "text": "Talk to the Open Group team and get more information about the development and the venture.",
+      "ctaLabel": "Talk to the team"
+    }
+  },
+  "atuacao": {
+    "kicker": "What we do",
+    "title": "What Open Group does.",
+    "meta": {
+      "title": "What we do"
+    }
   }
 }

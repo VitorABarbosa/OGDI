@@ -1,10 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
+import { renderWithIntl } from "@/test/intl";
 import { CaseGrid } from "./CaseGrid";
 
 describe("CaseGrid", () => {
   it("renders all 5 projects by default", () => {
-    render(<CaseGrid />);
+    renderWithIntl(<CaseGrid />);
 
     expect(screen.getByText("Hits Cupecê")).toBeInTheDocument();
     expect(screen.getByText("Start Park Jabaquara")).toBeInTheDocument();
@@ -15,7 +16,7 @@ describe("CaseGrid", () => {
   });
 
   it("marks project cards for scroll reveal animation", () => {
-    render(<CaseGrid />);
+    renderWithIntl(<CaseGrid />);
 
     const card = screen.getByText("Start Park Jabaquara").closest("a");
 
@@ -23,7 +24,7 @@ describe("CaseGrid", () => {
   });
 
   it('filters to 3 obra projects when "Em obra" tab is clicked', () => {
-    render(<CaseGrid />);
+    renderWithIntl(<CaseGrid />);
 
     fireEvent.click(screen.getByRole("button", { name: /Em obra/i }));
 
@@ -36,7 +37,7 @@ describe("CaseGrid", () => {
   });
 
   it('returns to 5 projects when "Todos" tab is clicked after filtering', () => {
-    render(<CaseGrid />);
+    renderWithIntl(<CaseGrid />);
 
     fireEvent.click(screen.getByRole("button", { name: /Em obra/i }));
     fireEvent.click(screen.getByRole("button", { name: /Todos/i }));

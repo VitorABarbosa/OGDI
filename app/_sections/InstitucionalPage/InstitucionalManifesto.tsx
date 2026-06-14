@@ -1,14 +1,15 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
-import { institucional } from "./institucional.data";
 import styles from "./InstitucionalManifesto.module.css";
 
+type Segment = { text: string; em?: boolean };
 type Token = { kind: "word"; text: string; em: boolean } | { kind: "space"; text: string };
 
 // Quebra os segmentos em palavras e espaços, preservando a pontuação colada
 // (ex.: "potencial." mantém o ponto sem espaço antes), igual à referência.
-function tokenize(segments: typeof institucional.manifesto.segments): Token[] {
+function tokenize(segments: Segment[]): Token[] {
   const tokens: Token[] = [];
   segments.forEach((seg) => {
     if (seg.em) {
@@ -25,8 +26,16 @@ function tokenize(segments: typeof institucional.manifesto.segments): Token[] {
 }
 
 export function InstitucionalManifesto() {
-  const { manifesto } = institucional;
-  const tokens = tokenize(manifesto.segments);
+  const t = useTranslations("institucional.manifesto");
+  // Segmentos do manifesto: s2/s4 recebem a ênfase (potencial/estrutura).
+  const segments: Segment[] = [
+    { text: t("segments.s1") },
+    { text: t("segments.s2"), em: true },
+    { text: t("segments.s3") },
+    { text: t("segments.s4"), em: true },
+    { text: t("segments.s5") },
+  ];
+  const tokens = tokenize(segments);
 
   const trackRef = useRef<HTMLDivElement | null>(null);
   const wordsRef = useRef<HTMLSpanElement[]>([]);
@@ -75,7 +84,7 @@ export function InstitucionalManifesto() {
           <div className="wrap">
             <div className="mb-[clamp(24px,3vw,40px)] flex items-center gap-[14px] text-[11px] uppercase tracking-[.24em] text-white/40">
               <span aria-hidden className="h-px w-[30px] bg-green" />
-              {manifesto.eyebrow}
+              {t("eyebrow")}
             </div>
             <p className="max-w-[19ch] font-news font-normal text-[clamp(1.7rem,4.5vw,3.7rem)] leading-[1.34] tracking-[-.01em]">
               {tokens.map((tok, i) =>

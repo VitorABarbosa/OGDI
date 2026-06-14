@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
 import { atuacaoSteps } from "@/app/_sections/Atuacao/atuacao.data";
 
@@ -7,15 +8,16 @@ const CAPITAL_IDX = "05";
 // Faixa dark de alto contraste: as 7 etapas da atuação (mesma fonte de
 // dados da home) em uma única linha, com o ponto de entrada do capital
 // como o único acento da seção.
-export function InvestidoresCiclo() {
+export async function InvestidoresCiclo() {
+  const t = await getTranslations("investidores.ciclo");
+  const ts = await getTranslations("home.atuacao.steps");
   return (
     <section id="investidores-ciclo" className="bg-dark py-[clamp(80px,10vw,148px)] text-white">
       <div className="wrap">
         <div className="reveal flex flex-wrap items-end justify-between gap-6">
-          <Kicker tone="on-dark-green">O ciclo da operação</Kicker>
+          <Kicker tone="on-dark-green">{t("kicker")}</Kicker>
           <p className="max-w-[38ch] text-right text-[13px] leading-[1.6] text-white/55 max-md:text-left">
-            O capital entra na estruturação — e participa da criação de valor,
-            não apenas do resultado.
+            {t("intro")}
           </p>
         </div>
 
@@ -35,15 +37,15 @@ export function InvestidoresCiclo() {
                       {s.idx}
                     </span>
                     <span className={`mt-2 block font-sans font-semibold text-[clamp(15px,1.05vw,18px)] leading-[1.25] tracking-[-.015em] ${capital ? "text-green" : "text-white"}`}>
-                      {s.title}
+                      {ts(`${s.idx}.title`)}
                     </span>
                     {capital && (
                       <span className="mt-2 block text-[11px] uppercase tracking-[.16em] text-green/80">
-                        O capital entra aqui
+                        {t("capitalLabel")}
                       </span>
                     )}
                     <p className="mt-3 max-w-[46ch] text-[12.5px] leading-[1.55] text-white/50">
-                      {s.desc}
+                      {ts(`${s.idx}.desc`)}
                     </p>
                   </div>
                 </li>

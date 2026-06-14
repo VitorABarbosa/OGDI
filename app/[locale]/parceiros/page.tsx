@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PagePlaceholder } from "@/components/layout/PagePlaceholder";
 
-export const metadata: Metadata = { title: "Parceiros" };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "parceiros.meta" });
+  return { title: t("title") };
+}
 
 export default async function Page({
   params,
@@ -11,5 +20,6 @@ export default async function Page({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <PagePlaceholder kicker="Parceiros" title="Ecossistema de parceiros." />;
+  const t = await getTranslations("parceiros");
+  return <PagePlaceholder kicker={t("kicker")} title={t("title")} />;
 }

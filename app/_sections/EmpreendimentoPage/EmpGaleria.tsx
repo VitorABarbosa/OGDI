@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { Kicker } from "@/components/ui/Kicker";
 import { Gallery, GalleryGrid, GalleryImage } from "@/components/ui/shared-element-gallery";
@@ -69,13 +70,14 @@ const cellLayout: { span: string; height: string }[] = [
 ];
 
 export function EmpGaleria({ p }: { p: Projeto }) {
+  const t = useTranslations("empreendimento.gallery");
   const gallery = useMemo<GalleryItem[]>(
     () => projectGalleryImages[p.slug] ?? p.gallery,
     [p.gallery, p.slug],
   );
 
   return (
-    <section className="pb-section pt-[clamp(68px,8vw,112px)]" aria-label="Galeria de imagens">
+    <section className="pb-section pt-[clamp(68px,8vw,112px)]" aria-label={t("aria")}>
       <div className="wrap">
         {p.galleryIntro && (
           <div className="mb-[clamp(34px,4.5vw,62px)] max-w-[760px]">

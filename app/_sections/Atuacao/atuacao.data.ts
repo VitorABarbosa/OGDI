@@ -1,11 +1,16 @@
-export type AtuacaoStep = { idx: string; title: string; desc: string };
+// As 7 etapas da atuação. Apenas a identidade (idx) vive aqui; os textos
+// (title/desc) são resolvidos via i18n no namespace home.atuacao.steps.<idx>,
+// reutilizado tanto pela home (Atuacao) quanto pela página de Investidores
+// (InvestidoresCiclo/Curva).
+export type AtuacaoStep = { idx: string };
 export const atuacaoSteps: AtuacaoStep[] = [
-  { idx: "01", title: "Leitura da oportunidade", desc: "Entendimento do ativo, do estágio e do potencial real de desenvolvimento." },
-  { idx: "02", title: "Inteligência de mercado", desc: "Contexto de praça, demanda e leitura concorrencial que fundamenta a tese." },
-  { idx: "03", title: "Conceituação do empreendimento", desc: "Definição da lógica do produto imobiliário: tipologia, mix e posicionamento." },
-  { idx: "04", title: "Viabilidade", desc: "Análise financeira e institucional que destrava o caminho da operação." },
-  { idx: "05", title: "Estruturação da operação", desc: "Modelagem para que potencial, capital e execução avancem na mesma direção." },
-  { idx: "06", title: "Conexão com parceiros", desc: "Articulação de parceiros e relacionamento com banco, incluindo a CEF quando aplicável." },
-  { idx: "07", title: "Preparação para lançamento", desc: "Estratégia comercial e condução da operação até estar pronta para avançar." },
+  { idx: "01" },
+  { idx: "02" },
+  { idx: "03" },
+  { idx: "04" },
+  { idx: "05" },
+  { idx: "06" },
+  { idx: "07" },
 ];
-export const atuacaoTags = ["Consultoria contratada", "Parceira estratégica", "Sócia da operação"];
+// chaves de tag → home.atuacao.tags.* (consumidas pela home)
+export const atuacaoTagKeys = ["consultoria", "parceria", "societaria"] as const;

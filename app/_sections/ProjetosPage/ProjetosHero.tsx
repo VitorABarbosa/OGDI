@@ -1,10 +1,13 @@
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 
 const count = String(projetos.length).padStart(2, "0");
 
-export function ProjetosHero() {
+export async function ProjetosHero() {
+  const t = await getTranslations("projetos.hero");
+
   return (
     <section
       data-header-dark
@@ -26,24 +29,24 @@ export function ProjetosHero() {
             href="/"
             className="transition-colors duration-200 text-white/55 hover:text-white"
           >
-            Início
+            {t("breadcrumbHome")}
           </Link>
           {/* Separator bar */}
           <span
             aria-hidden
             className="inline-block w-[14px] h-px bg-white/30 shrink-0"
           />
-          <span aria-current="page">Projetos</span>
+          <span aria-current="page">{t("breadcrumbCurrent")}</span>
         </nav>
 
         {/* Top row: heading + count */}
         <div className="flex items-end justify-between flex-wrap gap-[40px]">
           <div className="reveal reveal-2">
-            <Kicker tone="on-dark-green">Projetos · Cases</Kicker>
+            <Kicker tone="on-dark-green">{t("kicker")}</Kicker>
             <h1
               className="font-sans font-semibold text-white text-[clamp(34px,5.4vw,76px)] tracking-[-.03em] leading-[1.04] max-w-[14ch] mt-[20px]"
             >
-              Empreendimentos<br />estruturados na origem.
+              {t.rich("title", { br: () => <br /> })}
             </h1>
           </div>
 
@@ -57,7 +60,7 @@ export function ProjetosHero() {
             <span
               className="uppercase text-[12px] tracking-[.16em] text-white/55 leading-[1.4]"
             >
-              empreendimentos<br />em portfólio
+              {t.rich("countLabel", { br: () => <br /> })}
             </span>
           </div>
         </div>
@@ -66,8 +69,7 @@ export function ProjetosHero() {
         <p
           className="reveal reveal-4 leading-[1.6] text-[clamp(15px,1.2vw,18px)] text-[rgba(242,241,237,.72)] max-w-[440px] mt-[28px]"
         >
-          Da leitura da oportunidade ao lançamento — cada projeto reflete a atuação da Open Group na
-          estruturação da operação imobiliária.
+          {t("sub")}
         </p>
       </div>
     </section>

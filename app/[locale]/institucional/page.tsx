@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RevealController } from "@/components/Reveal/RevealController";
 import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 import { InstitucionalHero } from "@/app/_sections/InstitucionalPage/InstitucionalHero";
@@ -11,21 +11,29 @@ import { InstitucionalLideranca } from "@/app/_sections/InstitucionalPage/Instit
 import { InstitucionalAssinatura } from "@/app/_sections/InstitucionalPage/InstitucionalAssinatura";
 import { PageSectionRail } from "@/app/_sections/PageSectionRail";
 
+// Itens da régua de navegação: id da seção + chave de rótulo i18n.
 const institucionalRailItems = [
-  { id: "institucional-inicio", label: "Início" },
-  { id: "institucional-sobre", label: "Sobre" },
-  { id: "institucional-manifesto", label: "Manifesto" },
-  { id: "institucional-origem", label: "Origem" },
-  { id: "institucional-lideranca", label: "Quem conduz" },
-  { id: "institucional-grupo", label: "Nosso Grupo" },
-  { id: "institucional-assinatura", label: "Mensagem final" },
+  { id: "institucional-inicio", labelKey: "inicio" },
+  { id: "institucional-sobre", labelKey: "sobre" },
+  { id: "institucional-manifesto", labelKey: "manifesto" },
+  { id: "institucional-origem", labelKey: "origem" },
+  { id: "institucional-lideranca", labelKey: "lideranca" },
+  { id: "institucional-grupo", labelKey: "grupo" },
+  { id: "institucional-assinatura", labelKey: "assinatura" },
 ] as const;
 
-export const metadata: Metadata = {
-  title: "Quem somos",
-  description:
-    "A Open Group estrutura e desenvolve empreendimentos imobiliários, conduzindo oportunidades da conceituação ao lançamento. O valor nasce antes da obra.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "institucional.meta" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default async function InstitucionalPage({
   params,
@@ -34,10 +42,15 @@ export default async function InstitucionalPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("institucional.rail");
+  const railItems = institucionalRailItems.map((item) => ({
+    id: item.id,
+    label: t(item.labelKey),
+  }));
   return (
     <main>
       <RevealController />
-      <PageSectionRail items={institucionalRailItems} ariaLabel="Navegação visual da página institucional" />
+      <PageSectionRail items={railItems} ariaLabel={t("ariaLabel")} />
       <InstitucionalHero />
       <InstitucionalSobre />
       <InstitucionalManifesto />

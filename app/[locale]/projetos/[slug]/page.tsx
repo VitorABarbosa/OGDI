@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "@/app/_sections/EmpreendimentoPage/EmpHero";
 import { EmpInfo } from "@/app/_sections/EmpreendimentoPage/EmpInfo";
@@ -43,12 +43,20 @@ export default async function Page({
   const idx = projetos.findIndex((x) => x.slug === p.slug);
   const others = [...projetos.slice(idx + 1), ...projetos.slice(0, idx)].slice(0, 3);
 
+  const t = await getTranslations("empreendimento.cta");
+  const tc = await getTranslations("projetos.cards");
+  const listing = {
+    status: tc(`${p.slug}.status`),
+    segmento: tc(`${p.slug}.segmento`),
+    local: tc(`${p.slug}.local`),
+  };
+
   return (
     <main>
       <RevealController />
-      <EmpHero p={p} />
+      <EmpHero p={p} {...listing} />
       <EmpExperienceFlow>
-        <EmpInfo p={p} />
+        <EmpInfo p={p} {...listing} />
         <EmpLocationStory p={p} />
         <div data-flow-base>
           <EmpProductStory p={p} />
@@ -59,9 +67,9 @@ export default async function Page({
       <EmpNeighborhoodMap p={p} />
       <EmpProximos others={others} />
       <CtaBand
-        title={`Interesse no ${p.name}?`}
-        text="Fale com a equipe da Open Group e receba mais informações sobre o empreendimento e a operação."
-        ctaLabel="Falar com a equipe"
+        title={t("title", { name: p.name })}
+        text={t("text")}
+        ctaLabel={t("ctaLabel")}
         href="/contato"
       />
     </main>

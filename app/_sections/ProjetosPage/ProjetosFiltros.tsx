@@ -7,11 +7,13 @@ export function ProjetosFiltros({
   tabs,
   active,
   note,
+  ariaLabel,
   onChange,
 }: {
   tabs: Tab[];
   active: FilterCat;
   note: string;
+  ariaLabel: string;
   onChange: (c: FilterCat) => void;
 }) {
   return (
@@ -26,7 +28,7 @@ export function ProjetosFiltros({
       <div className="wrap">
         <div className="flex items-center justify-between flex-wrap" style={{ gap: "24px", padding: "16px 0" }}>
           {/* Tab buttons */}
-          <div className="flex flex-wrap" role="group" aria-label="Filtrar projetos" style={{ gap: "26px" }}>
+          <div className="flex flex-wrap" role="group" aria-label={ariaLabel} style={{ gap: "26px" }}>
             {tabs.map((tab) => {
               const isActive = active === tab.cat;
               return (
