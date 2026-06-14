@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { atuacaoSteps } from "@/app/_sections/Atuacao/atuacao.data";
+import { investidoresSteps } from "@/app/_sections/Atuacao/atuacao.data";
 import styles from "./InvestidoresCurva.module.css";
 
 // A curva de valor: linha ascendente que nasce embaixo à esquerda e cruza
@@ -116,7 +116,7 @@ export function InvestidoresCurva() {
       {/* Camada interativa — acima do texto: áreas de toque e popups */}
       <svg className="pointer-events-none absolute inset-0 z-[2] h-full w-full" {...svgProps}>
         {nodes.map((n, i) => {
-          const step = atuacaoSteps[i];
+          const step = investidoresSteps[i];
           const isActive = active === i;
           const popX = Math.min(Math.max(n.x - POP_W / 2, 24), VIEW_W - POP_W - 24);
           // abre para baixo sempre que couber (área livre da curva);

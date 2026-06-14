@@ -3,7 +3,7 @@
 // "institucional"); aqui ficam apenas a estrutura, ids estáveis e atributos
 // técnicos (nomes próprios, cores de marca, mídia, hrefs).
 
-export type InstModelKey = "consultoria" | "parceria" | "societaria";
+export type InstModelKey = "consultoria" | "parceria" | "societaria" | "investimento";
 
 export type InstStratum = {
   /** Chave estável p/ i18n (institucional.origem.strata.<key>). */
@@ -43,7 +43,7 @@ export type InstGroupCompany = {
 
 export const institucional = {
   about: {
-    models: ["consultoria", "parceria", "societaria"] as InstModelKey[],
+    models: ["consultoria", "parceria", "societaria", "investimento"] as InstModelKey[],
   },
   grupo: {
     companies: [

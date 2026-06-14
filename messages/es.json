@@ -131,6 +131,10 @@
         "societaria": "Socia de la operación"
       },
       "steps": {
+        "10": {
+          "title": "Posentrega de llaves",
+          "desc": "Seguimiento posterior a la entrega, consolidando el valor generado por la operación."
+        },
         "01": {
           "title": "Lectura de la oportunidad",
           "desc": "Comprensión del activo, su etapa y su potencial real de desarrollo."
@@ -140,24 +144,32 @@
           "desc": "Contexto del mercado local, demanda y lectura competitiva que fundamentan la tesis."
         },
         "03": {
-          "title": "Conceptualización del emprendimiento",
-          "desc": "Definición de la lógica del producto inmobiliario: tipología, mix y posicionamiento."
-        },
-        "04": {
           "title": "Viabilidad",
           "desc": "Análisis financiero e institucional que destraba el camino de la operación."
         },
+        "04": {
+          "title": "Desarrollo inmobiliario",
+          "desc": "Definición de la lógica del producto inmobiliario: tipología, mix y posicionamiento."
+        },
         "05": {
-          "title": "Estructuración de la operación",
-          "desc": "Modelado para que potencial, capital y ejecución avancen en la misma dirección."
+          "title": "Estructuración financiera",
+          "desc": "Modelado de capital, fuentes de recursos y retorno alineados al potencial de la operación."
         },
         "06": {
-          "title": "Conexión con socios",
+          "title": "Preparación para el lanzamiento",
           "desc": "Articulación de socios y relación con el banco, incluida la CEF cuando corresponda."
         },
         "07": {
-          "title": "Preparación para el lanzamiento",
-          "desc": "Estrategia comercial y conducción de la operación hasta estar lista para avanzar."
+          "title": "Inicio de obras",
+          "desc": "Arranque de la ejecución, con la operación estructurada y los socios en campo."
+        },
+        "08": {
+          "title": "Lanzamiento",
+          "desc": "Entrada al mercado, con producto, narrativa y estrategia comercial listos."
+        },
+        "09": {
+          "title": "Entrega de llaves",
+          "desc": "Conclusión de la obra y entrega del emprendimiento terminado."
         }
       }
     },
@@ -221,7 +233,7 @@
       "kicker": "Nosotros",
       "title1": "Revelamos el valor <em>extraordinario</em>",
       "title2": "de activos inmobiliarios.",
-      "cue": "Desliza para conocer Open Group"
+      "cue": "Conozca Open Group"
     },
     "about": {
       "kicker": "Sobre Open Group",
@@ -238,12 +250,16 @@
         "societaria": {
           "strong": "Socia",
           "rest": "de la operación"
+        },
+        "investimento": {
+          "strong": "Inversión",
+          "rest": "SCP"
         }
       },
       "body1": "Open Group Desarrollo Inmobiliario trabaja en la <em>estructuración y desarrollo de emprendimientos inmobiliarios</em>, conduciendo oportunidades de la conceptualización al lanzamiento.",
-      "body2": "Nuestro trabajo comienza antes de la obra: en la lectura de la oportunidad, en el análisis de viabilidad, en el diseño estratégico de la operación y en la articulación de los socios necesarios para que el proyecto avance con consistencia.",
-      "body3": "Trabajamos junto a constructoras, desarrolladoras, empresas con activos inmobiliarios e inversores — combinando visión estratégica, estructuración financiera e institucional, conexión con socios y conducción hasta las etapas críticas de mercado.",
-      "body4": "Más que desarrollar emprendimientos, <em>estructuramos operaciones inmobiliarias para que potencial, capital y ejecución avancen en la misma dirección.</em>"
+      "body2": "Nuestro trabajo comienza antes de la obra: en la lectura de la oportunidad, en el análisis de viabilidad, en el diseño estratégico de la operación y en la articulación junto a los socios necesarios para la consistencia del lanzamiento.",
+      "body3": "Trabajamos junto a constructoras, desarrolladoras, dueños de terrenos, empresas con activos inmobiliarios e inversores — combinando visión estratégica, estructuración financiera e institucional, conexión con socios y conducción hasta las etapas decisivas de mercado.",
+      "body4": "Más que desarrollar emprendimientos, <em>estructuramos operaciones inmobiliarias para que potencial, capital y ejecución avancen en la misma dirección, desde el inicio hasta la entrega de llaves.</em>"
     },
     "manifesto": {
       "eyebrow": "Nuestro manifiesto",
@@ -441,7 +457,9 @@
           "title": "Propietarios de terreno",
           "hint": "El terreno como capital"
         }
-      }
+      },
+      "breadcrumbHome": "Inicio",
+      "breadcrumbCurrent": "Clientes"
     },
     "perfis": {
       "kicker": "Para quién trabajamos",
@@ -491,7 +509,7 @@
     },
     "relacao": {
       "kicker": "Formas de relación",
-      "intro": "Tres profundidades de involucramiento — la relación puede comenzar en un alcance y crecer con la operación.",
+      "intro": "Profundidades de involucramiento que crecen con la operación — y la inversión directa vía SCP.",
       "quandoLabel": "Cuándo tiene sentido:",
       "footer": "Involucramiento creciente →",
       "items": {
@@ -509,6 +527,11 @@
           "title": "Socia de la operación",
           "desc": "Participación en la propia operación — potencial, capital y ejecución en la misma dirección, con resultado compartido.",
           "quando": "Para compartir riesgo y resultado en operaciones de mayor potencial."
+        },
+        "04": {
+          "title": "Inversión SCP",
+          "desc": "Aporte directo en la operación mediante una SCP — capital que participa del resultado, sin asumir la gestión.",
+          "quando": "Para invertir en una operación estructurada, sin conducirla."
         }
       }
     },
@@ -589,7 +612,9 @@
       "kicker": "Inversores",
       "title": "El valor nace antes de la obra.<br></br>La oportunidad de invertir, <em>también</em>.",
       "intro": "Open Group estructura operaciones inmobiliarias y abre espacio para que el capital cualificado entre antes del lanzamiento — en la fase en que se crea el valor.",
-      "scrollHint": "La tesis"
+      "scrollHint": "La tesis",
+      "breadcrumbHome": "Inicio",
+      "breadcrumbCurrent": "Inversores"
     },
     "tese": {
       "items": {
@@ -698,7 +723,9 @@
           "label": "Ubicación",
           "hint": "Actuación en desarrollo inmobiliario"
         }
-      }
+      },
+      "breadcrumbHome": "Inicio",
+      "breadcrumbCurrent": "Contacto"
     },
     "conversa": {
       "kicker": "Cómo conducimos",

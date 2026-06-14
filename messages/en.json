@@ -131,6 +131,10 @@
         "societaria": "Partner in the venture"
       },
       "steps": {
+        "10": {
+          "title": "Post-handover",
+          "desc": "Follow-up after handover, consolidating the value the venture created."
+        },
         "01": {
           "title": "Reading the opportunity",
           "desc": "Understanding the asset, its stage, and its real development potential."
@@ -140,24 +144,32 @@
           "desc": "Local market context, demand, and competitive analysis that underpin the thesis."
         },
         "03": {
-          "title": "Development concept",
-          "desc": "Defining the logic of the real estate product: unit mix, typology, and positioning."
-        },
-        "04": {
           "title": "Feasibility",
           "desc": "Financial and institutional analysis that unlocks the path of the venture."
         },
+        "04": {
+          "title": "Real estate development",
+          "desc": "Defining the logic of the real estate product: unit mix, typology, and positioning."
+        },
         "05": {
-          "title": "Structuring the venture",
-          "desc": "Modeling so that potential, capital, and execution move in the same direction."
+          "title": "Financial structuring",
+          "desc": "Modeling capital, funding sources, and returns aligned with the venture potential."
         },
         "06": {
-          "title": "Connecting with partners",
+          "title": "Launch preparation",
           "desc": "Bringing partners together and managing the bank relationship, including CEF (Brazil's federal bank) when applicable."
         },
         "07": {
-          "title": "Launch readiness",
-          "desc": "Commercial strategy and guidance of the venture until it is ready to move forward."
+          "title": "Construction start",
+          "desc": "Execution begins, with the venture structured and partners on the ground."
+        },
+        "08": {
+          "title": "Launch",
+          "desc": "Market entry, with product, narrative, and commercial strategy ready."
+        },
+        "09": {
+          "title": "Key handover",
+          "desc": "Completion of construction and handover of the finished development."
         }
       }
     },
@@ -221,7 +233,7 @@
       "kicker": "About",
       "title1": "We reveal the <em>extraordinary</em> value",
       "title2": "of real estate assets.",
-      "cue": "Scroll to discover Open Group"
+      "cue": "Discover Open Group"
     },
     "about": {
       "kicker": "About Open Group",
@@ -238,12 +250,16 @@
         "societaria": {
           "strong": "Partner",
           "rest": "in the venture"
+        },
+        "investimento": {
+          "strong": "Investment",
+          "rest": "SCP"
         }
       },
       "body1": "Open Group Real Estate Development works on the <em>structuring and development of real estate ventures</em>, guiding opportunities from concept to launch.",
-      "body2": "Our work begins before construction: in reading the opportunity, in feasibility analysis, in the strategic design of the venture, and in bringing together the partners needed for the project to move forward with consistency.",
-      "body3": "We work alongside builders, developers, companies holding real estate assets, and investors — combining strategic vision, financial and institutional structuring, connection with partners, and guidance through the critical market stages.",
-      "body4": "More than developing projects, <em>we structure real estate ventures so that potential, capital, and execution move in the same direction.</em>"
+      "body2": "Our work begins before construction: in reading the opportunity, in feasibility analysis, in the strategic design of the venture, and in bringing together the partners needed for a consistent launch.",
+      "body3": "We work alongside builders, developers, landowners, companies holding real estate assets, and investors — combining strategic vision, financial and institutional structuring, connection with partners, and guidance through the decisive market stages.",
+      "body4": "More than developing projects, <em>we structure real estate ventures so that potential, capital, and execution move in the same direction — from the start to the handover of keys.</em>"
     },
     "manifesto": {
       "eyebrow": "Our manifesto",
@@ -441,7 +457,9 @@
           "title": "Landowners",
           "hint": "The land as capital"
         }
-      }
+      },
+      "breadcrumbHome": "Start",
+      "breadcrumbCurrent": "Clients"
     },
     "perfis": {
       "kicker": "Who we work for",
@@ -491,7 +509,7 @@
     },
     "relacao": {
       "kicker": "Forms of relationship",
-      "intro": "Three depths of involvement — the relationship can begin within one scope and grow with the venture.",
+      "intro": "Depths of involvement that grow with the venture — plus direct investment via SCP.",
       "quandoLabel": "When it makes sense:",
       "footer": "Growing involvement →",
       "items": {
@@ -509,6 +527,11 @@
           "title": "Partner in the venture",
           "desc": "Participation in the venture itself — potential, capital and execution in the same direction, with shared outcomes.",
           "quando": "To share risk and outcome in ventures of greater potential."
+        },
+        "04": {
+          "title": "Investment SCP",
+          "desc": "Direct capital in the venture through an SCP (silent partnership) — capital that shares in the result, without taking on management.",
+          "quando": "To invest in a structured venture without running it."
         }
       }
     },
@@ -589,7 +612,9 @@
       "kicker": "Investors",
       "title": "Value is born before ground is broken.<br></br>So is the chance to invest, <em>too</em>.",
       "intro": "Open Group structures real estate ventures and opens room for qualified capital to enter before the launch — at the stage where value is created.",
-      "scrollHint": "The thesis"
+      "scrollHint": "The thesis",
+      "breadcrumbHome": "Start",
+      "breadcrumbCurrent": "Investors"
     },
     "tese": {
       "items": {
@@ -698,7 +723,9 @@
           "label": "Location",
           "hint": "Active in real estate development"
         }
-      }
+      },
+      "breadcrumbHome": "Start",
+      "breadcrumbCurrent": "Contact"
     },
     "conversa": {
       "kicker": "How we guide it",

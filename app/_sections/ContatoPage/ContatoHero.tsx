@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Kicker } from "@/components/ui/Kicker";
 import { site } from "@/data/site";
 
@@ -31,6 +32,13 @@ export async function ContatoHero() {
         className="pointer-events-none absolute inset-0 z-0 opacity-60 [background:radial-gradient(110%_85%_at_82%_-6%,rgba(31,90,99,.42),transparent_56%),radial-gradient(85%_75%_at_8%_112%,rgba(95,168,60,.15),transparent_60%)]"
       />
       <div className="wrap relative z-[1]">
+        <nav aria-label="Breadcrumb" className="reveal mb-[26px] flex items-center gap-[10px] text-[12px] uppercase tracking-[.08em] text-white/50">
+          <Link href="/" className="text-white/55 transition-colors duration-200 hover:text-white">
+            {t("breadcrumbHome")}
+          </Link>
+          <span aria-hidden className="inline-block h-px w-[14px] shrink-0 bg-white/30" />
+          <span aria-current="page" className="text-white/85">{t("breadcrumbCurrent")}</span>
+        </nav>
         <Kicker tone="on-dark-green" className="reveal">{t("kicker")}</Kicker>
         <h1 className="reveal reveal-2 mt-6 max-w-[18ch] font-news font-normal text-[clamp(2.3rem,5.8vw,4.8rem)] leading-[1.05] tracking-[-.018em] text-white">
           {t.rich("title", {

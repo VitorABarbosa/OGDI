@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Kicker } from "@/components/ui/Kicker";
 import { InvestidoresCurva } from "./InvestidoresCurva";
 
@@ -14,6 +15,13 @@ export async function InvestidoresHero() {
     >
       <InvestidoresCurva />
       <div className="wrap relative z-[1] w-full py-[clamp(150px,18vh,220px)]">
+        <nav aria-label="Breadcrumb" className="reveal mb-[26px] flex items-center gap-[10px] text-[12px] uppercase tracking-[.08em] text-white/50">
+          <Link href="/" className="text-white/55 transition-colors duration-200 hover:text-white">
+            {t("breadcrumbHome")}
+          </Link>
+          <span aria-hidden className="inline-block h-px w-[14px] shrink-0 bg-white/30" />
+          <span aria-current="page" className="text-white/85">{t("breadcrumbCurrent")}</span>
+        </nav>
         <Kicker tone="on-dark-green" className="reveal">{t("kicker")}</Kicker>
         <h1 className="reveal reveal-2 mt-[clamp(22px,3vh,38px)] font-news font-normal text-[clamp(1.9rem,4.4vw,4.4rem)] leading-[1.08] tracking-[-.018em]">
           {t.rich("title", {
