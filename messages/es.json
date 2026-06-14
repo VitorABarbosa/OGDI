@@ -250,6 +250,10 @@
         "societaria": {
           "strong": "Socia",
           "rest": "de la operación"
+        },
+        "investimento": {
+          "strong": "Inversión",
+          "rest": "SCP"
         }
       },
       "body1": "Open Group Desarrollo Inmobiliario trabaja en la <em>estructuración y desarrollo de emprendimientos inmobiliarios</em>, conduciendo oportunidades de la conceptualización al lanzamiento.",

@@ -250,6 +250,10 @@
         "societaria": {
           "strong": "Partner",
           "rest": "in the venture"
+        },
+        "investimento": {
+          "strong": "Investment",
+          "rest": "SCP"
         }
       },
       "body1": "Open Group Real Estate Development works on the <em>structuring and development of real estate ventures</em>, guiding opportunities from concept to launch.",
