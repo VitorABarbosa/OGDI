@@ -675,5 +675,90 @@
         }
       }
     }
+  },
+  "contato": {
+    "meta": {
+      "title": "Contact",
+      "description": "Present the asset, the land or the project. Open Group makes the first reading of the opportunity and comes back with the next steps."
+    },
+    "hero": {
+      "kicker": "Contact",
+      "title": "Every opportunity begins with <em>a conversation</em>.",
+      "intro": "Present the asset, the land or the project. Open Group makes the first reading of the opportunity and comes back with the next steps.",
+      "canais": {
+        "email": {
+          "label": "Email",
+          "hint": "For opportunity presentations and project material"
+        },
+        "whatsapp": {
+          "label": "WhatsApp / Phone",
+          "hint": "Direct conversation with the team"
+        },
+        "localizacao": {
+          "label": "Location",
+          "hint": "Active in real estate development"
+        }
+      }
+    },
+    "conversa": {
+      "kicker": "How we guide it",
+      "heading": "From the first contact<br></br>to the next steps.",
+      "etapas": {
+        "01": {
+          "title": "First reading",
+          "desc": "The team assesses the material received — potential, location and fit with the development strategy."
+        },
+        "02": {
+          "title": "Strategic conversation",
+          "desc": "A direct conversation to understand objectives, timelines and the stage of the project or asset."
+        },
+        "03": {
+          "title": "Structuring path",
+          "desc": "We indicate the possible form of engagement — from feasibility to guidance through to launch."
+        }
+      }
+    },
+    "info": {
+      "kicker": "Let's talk",
+      "heading": "Present your opportunity.",
+      "body": "Tell us about the asset, the land or the project. We make the first reading of the opportunity and indicate the possible next steps.",
+      "itens": {
+        "email": "Email",
+        "whatsapp": "WhatsApp / Phone",
+        "localizacao": "Location"
+      }
+    },
+    "form": {
+      "aria": "Contact form",
+      "labels": {
+        "nome": "Name",
+        "empresa": "Company",
+        "email": "Email",
+        "whatsapp": "WhatsApp",
+        "tipo": "Type of contact",
+        "mensagem": "Message"
+      },
+      "placeholders": {
+        "nome": "Your full name",
+        "empresa": "Company or fund",
+        "email": "you@company.com",
+        "whatsapp": "+55 11 90000-0000",
+        "mensagem": "Type of asset, location, stage of the project…"
+      },
+      "tipos": {
+        "oportunidade": "Present an opportunity",
+        "projeto": "Talk about a project",
+        "parceria": "Partnership",
+        "investimento": "Investment",
+        "imprensa": "Press",
+        "outro": "Other"
+      },
+      "submit": "Send message",
+      "consent": "By sending, you agree to be contacted by the Open Group team.",
+      "sucesso": {
+        "title": "Message received.",
+        "body": "The Open Group team makes the first reading and comes back with the next steps."
+      }
+    }
   }
 }

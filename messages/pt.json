@@ -675,5 +675,90 @@
         }
       }
     }
+  },
+  "contato": {
+    "meta": {
+      "title": "Contato",
+      "description": "Apresente o ativo, o terreno ou o projeto. A Open Group faz a primeira leitura da oportunidade e retorna com os próximos passos."
+    },
+    "hero": {
+      "kicker": "Contato",
+      "title": "Toda oportunidade começa com <em>uma conversa</em>.",
+      "intro": "Apresente o ativo, o terreno ou o projeto. A Open Group faz a primeira leitura da oportunidade e retorna com os próximos passos.",
+      "canais": {
+        "email": {
+          "label": "E-mail",
+          "hint": "Para apresentações de oportunidade e material de projeto"
+        },
+        "whatsapp": {
+          "label": "WhatsApp / Telefone",
+          "hint": "Conversa direta com a equipe"
+        },
+        "localizacao": {
+          "label": "Localização",
+          "hint": "Atuação em desenvolvimento imobiliário"
+        }
+      }
+    },
+    "conversa": {
+      "kicker": "Como conduzimos",
+      "heading": "Do primeiro contato<br></br>aos próximos passos.",
+      "etapas": {
+        "01": {
+          "title": "Primeira leitura",
+          "desc": "A equipe avalia o material recebido — potencial, localização e aderência à estratégia de desenvolvimento."
+        },
+        "02": {
+          "title": "Conversa estratégica",
+          "desc": "Uma conversa direta para entender objetivos, prazos e o estágio do projeto ou do ativo."
+        },
+        "03": {
+          "title": "Caminho de estruturação",
+          "desc": "Indicamos o formato possível de atuação — da viabilidade à condução até o lançamento."
+        }
+      }
+    },
+    "info": {
+      "kicker": "Vamos conversar",
+      "heading": "Apresente sua oportunidade.",
+      "body": "Conte sobre o ativo, o terreno ou o projeto. Fazemos a primeira leitura da oportunidade e indicamos os próximos passos possíveis.",
+      "itens": {
+        "email": "E-mail",
+        "whatsapp": "WhatsApp / Telefone",
+        "localizacao": "Localização"
+      }
+    },
+    "form": {
+      "aria": "Formulário de contato",
+      "labels": {
+        "nome": "Nome",
+        "empresa": "Empresa",
+        "email": "E-mail",
+        "whatsapp": "WhatsApp",
+        "tipo": "Tipo de contato",
+        "mensagem": "Mensagem"
+      },
+      "placeholders": {
+        "nome": "Seu nome completo",
+        "empresa": "Empresa ou fundo",
+        "email": "voce@empresa.com",
+        "whatsapp": "+55 11 90000-0000",
+        "mensagem": "Tipo de ativo, localização, estágio do projeto…"
+      },
+      "tipos": {
+        "oportunidade": "Apresentar oportunidade",
+        "projeto": "Falar sobre projeto",
+        "parceria": "Parceria",
+        "investimento": "Investimento",
+        "imprensa": "Imprensa",
+        "outro": "Outro"
+      },
+      "submit": "Enviar mensagem",
+      "consent": "Ao enviar, você concorda em ser contatado pela equipe da Open Group.",
+      "sucesso": {
+        "title": "Mensagem recebida.",
+        "body": "A equipe da Open Group faz a primeira leitura e retorna com os próximos passos."
+      }
+    }
   }
 }

@@ -1,34 +1,28 @@
+import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
 import { site } from "@/data/site";
 
-type Canal = {
-  label: string;
-  value: string;
-  href?: string;
-  hint: string;
-};
+type Canal = { key: string; value: string; href?: string };
 
 const canais: Canal[] = [
   {
-    label: "E-mail",
+    key: "email",
     value: site.email,
     href: `mailto:${site.email}`,
-    hint: "Para apresentações de oportunidade e material de projeto",
   },
   {
-    label: "WhatsApp / Telefone",
+    key: "whatsapp",
     value: site.phone,
     href: `tel:${site.phone.replace(/[^+\d]/g, "")}`,
-    hint: "Conversa direta com a equipe",
   },
   {
-    label: "Localização",
+    key: "localizacao",
     value: site.location,
-    hint: "Atuação em desenvolvimento imobiliário",
   },
 ];
 
-export function ContatoHero() {
+export async function ContatoHero() {
+  const t = await getTranslations("contato.hero");
   return (
     <section className="relative overflow-hidden pt-[clamp(150px,20vh,230px)] pb-[clamp(48px,6vw,84px)]">
       {/* Glow radial — mesma linguagem dos heroes de Projetos e Institucional */}
@@ -37,13 +31,14 @@ export function ContatoHero() {
         className="pointer-events-none absolute inset-0 z-0 opacity-60 [background:radial-gradient(110%_85%_at_82%_-6%,rgba(31,90,99,.42),transparent_56%),radial-gradient(85%_75%_at_8%_112%,rgba(95,168,60,.15),transparent_60%)]"
       />
       <div className="wrap relative z-[1]">
-        <Kicker tone="on-dark-green" className="reveal">Contato</Kicker>
+        <Kicker tone="on-dark-green" className="reveal">{t("kicker")}</Kicker>
         <h1 className="reveal reveal-2 mt-6 max-w-[18ch] font-news font-normal text-[clamp(2.3rem,5.8vw,4.8rem)] leading-[1.05] tracking-[-.018em] text-white">
-          Toda oportunidade começa com <span className="italic text-green">uma conversa</span>.
+          {t.rich("title", {
+            em: (chunks) => <span className="italic text-green">{chunks}</span>,
+          })}
         </h1>
         <p className="reveal reveal-3 mt-7 max-w-[52ch] text-[clamp(15px,1.15vw,18px)] leading-[1.65] text-white/70">
-          Apresente o ativo, o terreno ou o projeto. A Open Group faz a primeira
-          leitura da oportunidade e retorna com os próximos passos.
+          {t("intro")}
         </p>
 
         {/* Canais diretos em réguas editoriais */}
@@ -51,12 +46,12 @@ export function ContatoHero() {
           {canais.map((c, i) => {
             const inner = (
               <div className="grid grid-cols-1 items-baseline gap-2 py-[clamp(20px,2.4vw,30px)] md:grid-cols-[220px_1fr_auto] md:gap-[clamp(20px,3vw,48px)]">
-                <span className="text-[11px] tracking-[.18em] uppercase text-on-dark-2">{c.label}</span>
+                <span className="text-[11px] tracking-[.18em] uppercase text-on-dark-2">{t(`canais.${c.key}.label`)}</span>
                 <span className="font-sans font-medium text-[clamp(19px,2vw,28px)] tracking-[-.015em] text-white">
                   {c.value}
                 </span>
                 <span className="hidden items-baseline gap-4 text-[12.5px] text-white/45 md:flex">
-                  {c.hint}
+                  {t(`canais.${c.key}.hint`)}
                   {c.href && (
                     <span aria-hidden className="text-[16px] text-white/60 transition-transform duration-300 ease-brand group-hover:translate-x-1">
                       →
@@ -67,11 +62,11 @@ export function ContatoHero() {
             );
             const rowCls = `block border-t border-[color:var(--line-dark)] ${i === canais.length - 1 ? "border-b" : ""} transition-[padding-left] duration-[400ms] ease-brand`;
             return c.href ? (
-              <a key={c.label} href={c.href} className={`group ${rowCls} hover:pl-3`}>
+              <a key={c.key} href={c.href} className={`group ${rowCls} hover:pl-3`}>
                 {inner}
               </a>
             ) : (
-              <div key={c.label} className={rowCls}>
+              <div key={c.key} className={rowCls}>
                 {inner}
               </div>
             );
