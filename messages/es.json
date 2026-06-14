@@ -768,5 +768,123 @@
   "parceiros": {
     "kicker": "Socios",
     "title": "Ecosistema de socios."
+  },
+  "privacidade": {
+    "meta": {
+      "title": "Política de Privacidad",
+      "description": "Cómo Open Group recopila, utiliza, almacena y protege los datos personales, en cumplimiento de la ley brasileña de protección de datos, la LGPD (Ley n.º 13.709/2018)."
+    },
+    "kicker": "Documento institucional",
+    "title": "Política de Privacidad",
+    "updatedLabel": "Última actualización",
+    "updated": "Junio de 2026",
+    "intro": "La privacidad y la protección de los datos personales forman parte del compromiso de conducción responsable de Open Group. Este documento explica, de forma transparente, cómo tratamos los datos de quienes navegan en este sitio y de quienes se relacionan con nuestro equipo.",
+    "sections": {
+      "s1": {
+        "heading": "Objetivo y alcance",
+        "paras": [
+          "Esta Política de Privacidad describe cómo Open Group — Desarrollo Inmobiliario (“Open Group”) recopila, utiliza, almacena, comparte y protege los datos personales de los visitantes de este sitio y de las personas que se ponen en contacto con el equipo, en cumplimiento de la ley brasileña de protección de datos, la Ley General de Protección de Datos Personales — LGPD (Ley n.º 13.709/2018).",
+          "Se aplica exclusivamente a este sitio institucional y a los canales de contacto aquí disponibles. Los sitios de terceros que eventualmente estén vinculados (como páginas de socios y plataformas de mapas) poseen sus propias políticas, que recomendamos consultar."
+        ]
+      },
+      "s2": {
+        "heading": "Datos que recopilamos",
+        "paras": [
+          "Tratamos dos categorías de datos personales:"
+        ],
+        "list": [
+          "Datos proporcionados por usted — al utilizar el formulario de contacto o los canales directos (correo electrónico y teléfono), recopilamos la información que usted decide compartir: nombre, empresa o fondo, correo electrónico, WhatsApp/teléfono, tipo de contacto y el contenido del mensaje, que puede incluir información sobre activos, terrenos o proyectos.",
+          "Datos recopilados automáticamente — información técnica de navegación, como dirección IP, tipo de navegador, dispositivo, páginas visitadas y tiempo de permanencia, recopilada mediante cookies y tecnologías similares."
+        ],
+        "parasAfter": [
+          "En este sitio no recopilamos datos personales sensibles (como datos de salud, biometría o convicciones), y nuestros servicios no están destinados a menores de 18 años."
+        ]
+      },
+      "s3": {
+        "heading": "Finalidades y bases legales",
+        "paras": [
+          "Utilizamos los datos personales para las siguientes finalidades, siempre amparadas en una base legal de la LGPD:"
+        ],
+        "list": [
+          "Responder a su contacto y conducir la primera lectura de la oportunidad presentada — base legal: procedimientos preliminares a un contrato (art. 7, V) e interés legítimo (art. 7, IX);",
+          "Mantener la relación institucional y comercial derivada del contacto — base legal: interés legítimo;",
+          "Cumplir obligaciones legales o regulatorias y ejercer derechos en procesos — base legal: cumplimiento de una obligación legal (art. 7, II) y ejercicio regular de derechos (art. 7, VI);",
+          "Analizar el uso del sitio y mejorar la experiencia de navegación — base legal: consentimiento (art. 7, I) e interés legítimo."
+        ]
+      },
+      "s4": {
+        "heading": "Cookies y tecnologías de navegación",
+        "paras": [
+          "Las cookies son pequeños archivos almacenados en su navegador. Utilizamos cookies estrictamente necesarias para el funcionamiento del sitio y, cuando corresponda, cookies analíticas para entender cómo se utiliza el sitio.",
+          "Usted puede gestionar o desactivar las cookies en la configuración de su navegador. La desactivación de las cookies necesarias puede afectar el funcionamiento de partes del sitio."
+        ]
+      },
+      "s5": {
+        "heading": "Compartición de datos",
+        "paras": [
+          "Open Group no vende datos personales. La compartición ocurre únicamente en los siguientes supuestos:"
+        ],
+        "list": [
+          "Con prestadores de servicios que operan el sitio y los canales de comunicación (alojamiento, correo electrónico, herramientas de análisis), limitado a lo necesario para la prestación del servicio;",
+          "Con socios de la operación inmobiliaria, cuando su contacto tenga por objeto una oportunidad que requiera dicha articulación — siempre en el contexto de la finalidad original;",
+          "Con autoridades públicas, en virtud de una obligación legal, regulatoria u orden judicial;",
+          "En operaciones societarias (como fusión o adquisición), en cuyo caso el titular será informado sobre el cambio de controlador."
+        ]
+      },
+      "s6": {
+        "heading": "Almacenamiento y plazo de conservación",
+        "paras": [
+          "Los datos se almacenan en entornos controlados, pudiendo estar alojados en servidores ubicados fuera de Brasil — en cuyo caso la transferencia internacional observa lo dispuesto en los arts. 33 y siguientes de la LGPD.",
+          "Conservamos los datos durante el tiempo necesario para el cumplimiento de las finalidades de esta política: los datos de contacto se conservan mientras dure la relación o la gestión, y posteriormente durante el plazo necesario para el cumplimiento de obligaciones legales y el ejercicio regular de derechos. Concluidos los plazos, los datos se eliminan o se anonimizan."
+        ]
+      },
+      "s7": {
+        "heading": "Seguridad de la información",
+        "paras": [
+          "Adoptamos medidas técnicas y administrativas razonables para proteger los datos personales contra accesos no autorizados, pérdida, alteración o divulgación indebida — incluyendo cifrado en tránsito (HTTPS), control de acceso y minimización de la recopilación.",
+          "Ningún sistema es absolutamente seguro. En caso de que identifiquemos un incidente de seguridad que pueda acarrear riesgo o daño relevante a los titulares, comunicaremos a los afectados y a la Autoridad Nacional de Protección de Datos (ANPD), en la forma de la ley."
+        ]
+      },
+      "s8": {
+        "heading": "Derechos de los titulares",
+        "paras": [
+          "En los términos del art. 18 de la LGPD, usted puede solicitar, en cualquier momento:"
+        ],
+        "list": [
+          "Confirmación de la existencia de tratamiento de sus datos;",
+          "Acceso a los datos que mantenemos sobre usted;",
+          "Corrección de datos incompletos, inexactos o desactualizados;",
+          "Anonimización, bloqueo o eliminación de datos innecesarios, excesivos o tratados en disconformidad con la ley;",
+          "Portabilidad de los datos a otro proveedor, observados los reglamentos de la ANPD;",
+          "Eliminación de los datos tratados con base en su consentimiento;",
+          "Información sobre las entidades con las cuales compartimos sus datos;",
+          "Revocación del consentimiento, cuando esta sea la base legal del tratamiento."
+        ],
+        "parasAfter": [
+          "Las solicitudes son gratuitas y serán respondidas en los plazos previstos en la legislación. Para ejercerlas, utilice el canal indicado en la sección siguiente."
+        ]
+      },
+      "s9": {
+        "heading": "Encargado y canal de contacto",
+        "paras": [
+          "Las solicitudes relativas a datos personales deben dirigirse al encargado del tratamiento de datos personales de Open Group por el correo electrónico {email}, con el asunto “Privacidad de datos”. Si lo prefiere, utilice la página de contacto de este sitio."
+        ]
+      },
+      "s10": {
+        "heading": "Legislación aplicable",
+        "paras": [
+          "Esta política se rige por las leyes de la República Federativa de Brasil, en especial la Ley n.º 13.709/2018 (LGPD) y el Marco Civil de Internet (Ley n.º 12.965/2014). Se elige el fuero de la comarca de São Paulo/SP para dirimir eventuales controversias."
+        ]
+      },
+      "s11": {
+        "heading": "Actualizaciones de esta política",
+        "paras": [
+          "Esta política puede ser actualizada en cualquier momento para reflejar cambios legales, regulatorios u operativos. La versión vigente estará siempre disponible en esta página, con la fecha de actualización indicada en la parte superior. Los cambios relevantes podrán ser comunicados por los canales de contacto informados."
+        ]
+      }
+    },
+    "contact": {
+      "text": "¿Dudas sobre esta política? Escriba a <email></email> o acceda a la <link>página de contacto</link>."
+    }
   }
 }

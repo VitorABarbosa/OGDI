@@ -768,5 +768,123 @@
   "parceiros": {
     "kicker": "Partners",
     "title": "Partner ecosystem."
+  },
+  "privacidade": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "How Open Group collects, uses, stores, and protects personal data, in compliance with Brazil's data protection law, the LGPD (Law No. 13,709/2018)."
+    },
+    "kicker": "Institutional document",
+    "title": "Privacy Policy",
+    "updatedLabel": "Last updated",
+    "updated": "June 2026",
+    "intro": "Privacy and the protection of personal data are part of Open Group's commitment to responsible guidance. This document explains, transparently, how we handle the data of those who browse this site and of those who engage with our team.",
+    "sections": {
+      "s1": {
+        "heading": "Purpose and scope",
+        "paras": [
+          "This Privacy Policy describes how Open Group — Real Estate Development (“Open Group”) collects, uses, stores, shares, and protects the personal data of visitors to this site and of people who contact the team, in compliance with Brazil's data protection law, the General Personal Data Protection Law — LGPD (Law No. 13,709/2018).",
+          "It applies exclusively to this institutional site and to the contact channels made available here. Any third-party sites that may be linked (such as partner pages and map platforms) have their own policies, which we recommend consulting."
+        ]
+      },
+      "s2": {
+        "heading": "Data we collect",
+        "paras": [
+          "We process two categories of personal data:"
+        ],
+        "list": [
+          "Data you provide — when you use the contact form or the direct channels (email and phone), we collect the information you choose to share: name, company or fund, email, WhatsApp/phone, type of contact, and the content of the message, which may include information about assets, land, or projects.",
+          "Data collected automatically — technical browsing information, such as IP address, browser type, device, pages visited, and time spent, collected through cookies and similar technologies."
+        ],
+        "parasAfter": [
+          "On this site we do not collect sensitive personal data (such as health data, biometrics, or convictions), and our services are not directed to persons under 18 years of age."
+        ]
+      },
+      "s3": {
+        "heading": "Purposes and legal bases",
+        "paras": [
+          "We use personal data for the following purposes, always supported by a legal basis under the LGPD:"
+        ],
+        "list": [
+          "To respond to your contact and carry out the first reading of the opportunity presented — legal basis: preliminary procedures prior to a contract (art. 7, V) and legitimate interest (art. 7, IX);",
+          "To maintain the institutional and commercial relationship arising from the contact — legal basis: legitimate interest;",
+          "To comply with legal or regulatory obligations and to exercise rights in proceedings — legal basis: compliance with a legal obligation (art. 7, II) and the regular exercise of rights (art. 7, VI);",
+          "To analyze the use of the site and improve the browsing experience — legal basis: consent (art. 7, I) and legitimate interest."
+        ]
+      },
+      "s4": {
+        "heading": "Cookies and browsing technologies",
+        "paras": [
+          "Cookies are small files stored in your browser. We use cookies strictly necessary for the functioning of the site and, where applicable, analytical cookies to understand how the site is used.",
+          "You can manage or disable cookies in your browser settings. Disabling necessary cookies may affect the functioning of parts of the site."
+        ]
+      },
+      "s5": {
+        "heading": "Data sharing",
+        "paras": [
+          "Open Group does not sell personal data. Sharing occurs only in the following cases:"
+        ],
+        "list": [
+          "With service providers that operate the site and the communication channels (hosting, email, analytics tools), limited to what is necessary to provide the service;",
+          "With partners in the real estate venture, when the purpose of your contact is an opportunity that requires such coordination — always within the context of the original purpose;",
+          "With public authorities, by virtue of a legal or regulatory obligation or a court order;",
+          "In corporate transactions (such as a merger or acquisition), in which case the data subject will be informed of the change of controller."
+        ]
+      },
+      "s6": {
+        "heading": "Storage and retention period",
+        "paras": [
+          "Data is stored in controlled environments and may be hosted on servers located outside Brazil — in which case the international transfer observes the provisions of arts. 33 et seq. of the LGPD.",
+          "We retain the data for as long as necessary to fulfill the purposes of this policy: contact data is retained for the duration of the relationship or the dealing, and thereafter for the period necessary to comply with legal obligations and to exercise rights regularly. Once these periods end, the data is deleted or anonymized."
+        ]
+      },
+      "s7": {
+        "heading": "Information security",
+        "paras": [
+          "We adopt reasonable technical and administrative measures to protect personal data against unauthorized access, loss, alteration, or improper disclosure — including encryption in transit (HTTPS), access control, and minimization of collection.",
+          "No system is absolutely secure. Should we identify a security incident that may entail relevant risk or harm to data subjects, we will notify those affected and the National Data Protection Authority (ANPD), as provided by law."
+        ]
+      },
+      "s8": {
+        "heading": "Data subject rights",
+        "paras": [
+          "Under art. 18 of the LGPD, you may request, at any time:"
+        ],
+        "list": [
+          "Confirmation that your data is being processed;",
+          "Access to the data we hold about you;",
+          "Correction of incomplete, inaccurate, or outdated data;",
+          "Anonymization, blocking, or deletion of data that is unnecessary, excessive, or processed in non-compliance with the law;",
+          "Portability of the data to another provider, subject to the regulations of the ANPD;",
+          "Deletion of data processed on the basis of your consent;",
+          "Information about the entities with which we share your data;",
+          "Withdrawal of consent, where this is the legal basis for the processing."
+        ],
+        "parasAfter": [
+          "Requests are free of charge and will be answered within the periods provided by law. To exercise them, use the channel indicated in the following section."
+        ]
+      },
+      "s9": {
+        "heading": "Data protection officer and contact channel",
+        "paras": [
+          "Requests relating to personal data should be directed to Open Group's data protection officer at the email {email}, with the subject “Data privacy”. If you prefer, use the contact page of this site."
+        ]
+      },
+      "s10": {
+        "heading": "Applicable law",
+        "paras": [
+          "This policy is governed by the laws of the Federative Republic of Brazil, in particular Law No. 13,709/2018 (LGPD) and the Brazilian Civil Rights Framework for the Internet (Law No. 12,965/2014). The courts of the judicial district of São Paulo/SP are elected to settle any disputes."
+        ]
+      },
+      "s11": {
+        "heading": "Updates to this policy",
+        "paras": [
+          "This policy may be updated at any time to reflect legal, regulatory, or operational changes. The current version will always be available on this page, with the date of update indicated at the top. Relevant changes may be communicated through the contact channels provided."
+        ]
+      }
+    },
+    "contact": {
+      "text": "Questions about this policy? Write to <email></email> or visit the <link>contact page</link>."
+    }
   }
 }
