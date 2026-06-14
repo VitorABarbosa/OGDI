@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RevealController } from "@/components/Reveal/RevealController";
 import { ContatoHero } from "@/app/_sections/ContatoPage/ContatoHero";
 import { ContatoConversa } from "@/app/_sections/ContatoPage/ContatoConversa";
 
-export const metadata: Metadata = {
-  title: "Contato",
-  description:
-    "Apresente o ativo, o terreno ou o projeto. A Open Group faz a primeira leitura da oportunidade e retorna com os próximos passos.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "contato.meta" });
+  return { title: t("title"), description: t("description") };
+}
 
 export default async function ContatoPage({
   params,

@@ -763,11 +763,17 @@
   },
   "insights": {
     "kicker": "Insights",
-    "title": "Análisis e inteligencia de mercado."
+    "title": "Análisis e inteligencia de mercado.",
+    "meta": {
+      "title": "Insights"
+    }
   },
   "parceiros": {
     "kicker": "Socios",
-    "title": "Ecosistema de socios."
+    "title": "Ecosistema de socios.",
+    "meta": {
+      "title": "Socios"
+    }
   },
   "privacidade": {
     "meta": {
@@ -971,6 +977,13 @@
       "title": "¿Interés en {name}?",
       "text": "Hable con el equipo de Open Group y reciba más información sobre el emprendimiento y la operación.",
       "ctaLabel": "Hablar con el equipo"
+    }
+  },
+  "atuacao": {
+    "kicker": "Actuación",
+    "title": "Lo que hace Open Group.",
+    "meta": {
+      "title": "Actuación"
     }
   }
 }

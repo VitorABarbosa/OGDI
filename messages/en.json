@@ -763,11 +763,17 @@
   },
   "insights": {
     "kicker": "Insights",
-    "title": "Analysis and market intelligence."
+    "title": "Analysis and market intelligence.",
+    "meta": {
+      "title": "Insights"
+    }
   },
   "parceiros": {
     "kicker": "Partners",
-    "title": "Partner ecosystem."
+    "title": "Partner ecosystem.",
+    "meta": {
+      "title": "Partners"
+    }
   },
   "privacidade": {
     "meta": {
@@ -971,6 +977,13 @@
       "title": "Interested in {name}?",
       "text": "Talk to the Open Group team and get more information about the development and the venture.",
       "ctaLabel": "Talk to the team"
+    }
+  },
+  "atuacao": {
+    "kicker": "What we do",
+    "title": "What Open Group does.",
+    "meta": {
+      "title": "What we do"
     }
   }
 }

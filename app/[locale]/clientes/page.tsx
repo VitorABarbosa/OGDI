@@ -20,11 +20,16 @@ const clientesRailItems = [
   { id: "clientes-contato", key: "contato" },
 ] as const;
 
-export const metadata: Metadata = {
-  title: "Clientes",
-  description:
-    "Incorporadoras, construtoras, fundos e proprietários de área que estruturam suas operações com a Open Group — da origem ao lançamento.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "clientes.meta" });
+  return { title: t("title"), description: t("description") };
+}
 
 export default async function ClientesPage({
   params,

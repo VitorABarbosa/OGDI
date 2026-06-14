@@ -3,11 +3,16 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { site } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "Política de Privacidade",
-  description:
-    "Como a Open Group coleta, utiliza, armazena e protege dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018).",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "privacidade.meta" });
+  return { title: t("title"), description: t("description") };
+}
 
 // Página densa, em estilo de documento: sem efeitos visuais, sem
 // animações — apenas tipografia e hierarquia.

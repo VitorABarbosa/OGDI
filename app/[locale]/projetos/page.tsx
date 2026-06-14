@@ -5,7 +5,16 @@ import { CaseGrid } from "@/app/_sections/ProjetosPage/CaseGrid";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { RevealController } from "@/components/Reveal/RevealController";
 
-export const metadata: Metadata = { title: "Projetos" };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "projetos.meta" });
+  return { title: t("title") };
+}
 
 export default async function Page({
   params,
