@@ -1,6 +1,15 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
+import { renderWithIntl } from "@/test/intl";
 import { Projetos } from "./Projetos";
+
+vi.mock("@/i18n/navigation", () => ({
+  Link: ({ children, href, ...props }: { children: React.ReactNode; href: string }) => (
+    <a href={href} {...props}>{children}</a>
+  ),
+  usePathname: () => "/",
+  useRouter: () => ({ replace: vi.fn() }),
+}));
 
 describe("Projetos", () => {
   afterEach(() => {
@@ -14,7 +23,7 @@ describe("Projetos", () => {
       value: setPointerCapture,
     });
 
-    render(<Projetos />);
+    renderWithIntl(<Projetos />);
 
     fireEvent.pointerDown(screen.getAllByRole("link", { name: /Conhe/i })[0], {
       pointerId: 1,
