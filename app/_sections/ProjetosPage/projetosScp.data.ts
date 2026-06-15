@@ -68,4 +68,13 @@ export const projetosScp: ProjetoScp[] = [
     tone: "t2",
     href: "https://www.bcanton.com.br/immensitta-jardim/",
   },
+  {
+    slug: "pina-1875",
+    name: "PINA 1875",
+    segmentoKey: "residencial",
+    local: "Perdizes · São Paulo",
+    image: "/assets/SCPistas/PINA_1875/FACHADA.jpg",
+    tone: "t3",
+    href: "https://chaincorp.com.br/empreendimento/pina1875/",
+  },
 ];
