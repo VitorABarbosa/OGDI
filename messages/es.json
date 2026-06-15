@@ -386,12 +386,22 @@
       "all": "Todos",
       "obra": "En construcción",
       "futuro": "Próximos",
-      "entregue": "Entregado"
+      "entregue": "Entregado",
+      "scp": "Inversión SCP"
     },
     "grid": {
       "noteAll": "Mostrando todos los proyectos",
       "noteOne": "{count} proyecto · {label}",
       "noteMany": "{count} proyectos · {label}"
+    },
+    "scp": {
+      "chip": "Inversión SCP",
+      "cta": "Tengo interés",
+      "desc": "Aporte directo en la operación mediante una SCP — capital que participa del resultado, sin asumir la gestión.",
+      "note": "Participación directa en el resultado de operaciones estructuradas, mediante una SCP — capital asignado junto a Open Group.",
+      "segmento": {
+        "residencial": "Residencial"
+      }
     },
     "cards": {
       "hits-cupece": {
