@@ -222,7 +222,6 @@
       "ariaLabel": "Navegación visual de la página institucional",
       "inicio": "Inicio",
       "sobre": "Nosotros",
-      "manifesto": "Manifiesto",
       "origem": "Origen",
       "lideranca": "Quién lidera",
       "grupo": "Nuestro Grupo",
@@ -267,38 +266,35 @@
       "body4": "Más que desarrollar emprendimientos, <em>estructuramos operaciones inmobiliarias para que potencial, capital y ejecución avancen en la misma dirección, desde el inicio hasta la entrega de llaves.</em>"
     },
     "manifesto": {
-      "eyebrow": "Nuestro manifiesto",
-      "segments": {
-        "s1": "Muchas oportunidades no fracasan por falta de ",
-        "s2": "potencial",
-        "s3": ". Fracasan porque avanzan sin ",
-        "s4": "estructura",
-        "s5": "."
-      }
+      "eyebrow": "Manifiesto",
+      "thesis": "Muchas oportunidades inmobiliarias no fracasan por falta de <em>potencial</em>. Fracasan porque avanzan sin <em>estructura</em>.",
+      "elaboration": "Un área prometedora, un proyecto bien ubicado o una oportunidad de mercado no se sostienen por sí solos. Sin visión estratégica, viabilidad clara, los socios correctos y una conducción precisa, el potencial se dispersa antes de convertirse en emprendimiento.",
+      "bridgeLabel": "El valor nace antes de la obra",
+      "bridge": "Open Group cree que el valor de un emprendimiento nace <em>antes de la obra</em>.",
+      "positioning": "Por eso no tratamos el desarrollo inmobiliario como una ejecución aislada. Lo tratamos como <em>construcción estratégica de valor</em>.",
+      "institutional": "Estructuramos y desarrollamos emprendimientos inmobiliarios de principio a fin, conectando visión, viabilidad, socios y operación para transformar oportunidades en proyectos listos para avanzar.",
+      "closing": "Porque desarrollar bien es decidir mejor desde el origen."
     },
     "origem": {
-      "kicker": "El origen",
-      "heading": "El valor de un emprendimiento nace <em>antes de la obra</em>.",
-      "intro": "Un área prometedora o un proyecto bien ubicado no se sostienen por sí solos. Sin visión, viabilidad, socios y conducción, el potencial se dispersa antes de convertirse en emprendimiento. Nace antes — y nace aquí:",
       "strata": {
         "01": {
-          "name": "La lectura de la oportunidad",
+          "name": "En la lectura correcta de la oportunidad",
           "desc": "Interpretar el activo y su potencial real, antes de que sea evidente."
         },
         "02": {
-          "name": "La concepción del producto",
+          "name": "En la concepción del producto",
           "desc": "Definir el emprendimiento adecuado para esa oportunidad."
         },
         "03": {
-          "name": "La estructuración de la operación",
+          "name": "En la estructuración de la operación",
           "desc": "Alinear potencial, capital y ejecución en la misma dirección."
         },
         "04": {
-          "name": "La elección de los socios",
+          "name": "En la elección de los socios",
           "desc": "Articular socios, banco y relaciones institucionales."
         },
         "05": {
-          "name": "El camino hasta el lanzamiento",
+          "name": "En la claridad del camino hasta el lanzamiento",
           "desc": "Conducir con claridad hasta que el proyecto esté listo para avanzar."
         }
       }
