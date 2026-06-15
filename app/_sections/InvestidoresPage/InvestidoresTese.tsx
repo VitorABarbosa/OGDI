@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
+import { TeseNumeral } from "./TeseNumeral";
 
 const statements = [
   { idx: "01", align: "left" as const },
@@ -21,12 +22,7 @@ export async function InvestidoresTese() {
             key={s.idx}
             className={`reveal relative max-w-[820px] ${s.align === "right" ? "self-end text-right" : ""}`}
           >
-            <span
-              aria-hidden
-              className={`pointer-events-none absolute -top-[.62em] select-none font-news text-[clamp(7rem,18vw,17rem)] leading-none tracking-[-.04em] text-transparent [-webkit-text-stroke:1px_rgba(23,26,27,.13)] ${s.align === "right" ? "-right-[.08em]" : "-left-[.08em]"}`}
-            >
-              {s.idx}
-            </span>
+            <TeseNumeral idx={s.idx} align={s.align} />
             <h2 className="relative font-sans font-semibold text-[clamp(2rem,4.6vw,4.2rem)] leading-[1.04] tracking-[-.03em] text-ink">
               {t.rich(`items.${s.idx}.title`, {
                 em: (chunks) => <em className="not-italic text-green">{chunks}</em>,
