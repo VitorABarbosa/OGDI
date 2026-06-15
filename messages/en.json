@@ -386,12 +386,22 @@
       "all": "All",
       "obra": "Under construction",
       "futuro": "Upcoming",
-      "entregue": "Delivered"
+      "entregue": "Delivered",
+      "scp": "Investment SCP"
     },
     "grid": {
       "noteAll": "Showing all projects",
       "noteOne": "{count} project · {label}",
       "noteMany": "{count} projects · {label}"
+    },
+    "scp": {
+      "chip": "Investment SCP",
+      "cta": "I'm interested",
+      "desc": "Direct capital in the operation through an SCP (silent partnership) — capital that shares in the result, without taking on management.",
+      "note": "Direct participation in the result of structured operations, through an SCP — capital allocated alongside Open Group.",
+      "segmento": {
+        "residencial": "Residential"
+      }
     },
     "cards": {
       "hits-cupece": {

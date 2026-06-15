@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
@@ -10,11 +11,43 @@ export async function ProjetosHero() {
       data-header-dark
       className="relative bg-dark text-white overflow-hidden pt-[clamp(150px,20vh,230px)] pb-[clamp(56px,7vw,96px)]"
     >
-      {/* Decorative radial-gradient glow — aria-hidden, z-0 */}
+      {/* Imagem de fundo (canteiro) — evita o sólido puro */}
+      <Image
+        src="/assets/CONSTRUCAO.png"
+        alt=""
+        aria-hidden
+        fill
+        priority
+        sizes="100vw"
+        className="z-0 object-cover"
+      />
+      {/* Camada preta leve (~25%) para legibilidade sobre a imagem */}
+      <div aria-hidden className="absolute inset-0 z-[1] pointer-events-none bg-black/80" />
+
+      {/* Decorative radial-gradient glow — aria-hidden */}
       <div
         aria-hidden
-        className="absolute inset-0 z-0 pointer-events-none opacity-50 [background:radial-gradient(120%_90%_at_80%_0%,rgba(31,90,99,.45),transparent_55%),radial-gradient(90%_80%_at_12%_110%,rgba(95,168,60,.16),transparent_60%)]"
+        className="absolute inset-0 z-[1] pointer-events-none opacity-50 [background:radial-gradient(120%_90%_at_80%_0%,rgba(31,90,99,.45),transparent_55%),radial-gradient(90%_80%_at_12%_110%,rgba(95,168,60,.16),transparent_60%)]"
       />
+
+      {/* Logo como máscara: através do recorte da logo (canto inferior direito)
+          aparece a imagem completa, sem o escurecimento da camada preta. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{
+          WebkitMaskImage: "url(/assets/logos/LOGO_SEM_FUNDO.png)",
+          maskImage: "url(/assets/logos/LOGO_SEM_FUNDO.png)",
+          WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
+          WebkitMaskPosition: "right 4vw bottom 3vw",
+          maskPosition: "right 4vw bottom 3vw",
+          WebkitMaskSize: "clamp(160px,22vw,340px)",
+          maskSize: "clamp(160px,22vw,340px)",
+        }}
+      >
+        <Image src="/assets/CONSTRUCAO.png" alt="" fill sizes="100vw" className="object-cover" />
+      </div>
 
       <div className="wrap-wide relative z-[2]">
         {/* Breadcrumb */}

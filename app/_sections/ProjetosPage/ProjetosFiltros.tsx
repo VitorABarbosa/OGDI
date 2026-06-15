@@ -31,6 +31,8 @@ export function ProjetosFiltros({
           <div className="flex flex-wrap" role="group" aria-label={ariaLabel} style={{ gap: "26px" }}>
             {tabs.map((tab) => {
               const isActive = active === tab.cat;
+              // SCP é categoria distinta → realce em azul-petróleo (texto + sublinhado).
+              const isScp = tab.cat === "scp";
               return (
                 <button
                   key={tab.cat}
@@ -39,11 +41,12 @@ export function ProjetosFiltros({
                   className={cn(
                     "relative pb-[6px] transition-colors duration-300",
                     "text-[13px] tracking-[.03em]",
-                    "after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:origin-left after:transition-transform after:duration-[350ms]",
-                    isActive
-                      ? "text-ink after:scale-x-100"
-                      : "text-ink-3 hover:text-ink-2 after:scale-x-0",
+                    "after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:transition-transform after:duration-[350ms]",
+                    isScp ? "after:bg-[#4FA3AD]" : "after:bg-ink",
+                    isActive ? "after:scale-x-100" : "after:scale-x-0",
+                    !isScp && (isActive ? "text-ink" : "text-ink-3 hover:text-ink-2"),
                   )}
+                  style={isScp ? { color: isActive ? "#4FA3AD" : "#7FB9C0" } : undefined}
                 >
                   {tab.label}
                   <span
