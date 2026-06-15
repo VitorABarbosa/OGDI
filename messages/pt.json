@@ -192,6 +192,11 @@
           "idx": "iii.",
           "title": "Participação societária",
           "desc": "Entramos como sócios da operação, comprometidos com o resultado do empreendimento de ponta a ponta."
+        },
+        "investimento": {
+          "idx": "iv.",
+          "title": "Investimento SCP",
+          "desc": "Aporte direto na operação por meio de uma SCP — capital que participa do resultado, sem assumir a gestão."
         }
       }
     },
@@ -374,7 +379,6 @@
       "breadcrumbCurrent": "Projetos",
       "kicker": "Projetos · Cases",
       "title": "Empreendimentos<br></br>estruturados na origem.",
-      "countLabel": "empreendimentos<br></br>em portfólio",
       "sub": "Da leitura da oportunidade ao lançamento — cada projeto reflete a atuação da Open Group na estruturação da operação imobiliária."
     },
     "filtros": {
@@ -949,41 +953,7 @@
     },
     "atuacao": {
       "kicker": "A atuação da Open Group",
-      "heading": "Como estruturamos esta operação.",
-      "steps": {
-        "01": {
-          "title": "Leitura da oportunidade",
-          "desc": "Entendimento do ativo, do estágio e do potencial real de desenvolvimento na região."
-        },
-        "02": {
-          "title": "Inteligência de mercado",
-          "desc": "Contexto de praça, demanda e leitura concorrencial que fundamentou a tese."
-        },
-        "03": {
-          "title": "Conceituação do produto",
-          "desc": "Definição da lógica do empreendimento: tipologia, mix e posicionamento."
-        },
-        "04": {
-          "title": "Viabilidade",
-          "desc": "Análise financeira e institucional que destravou o caminho da operação."
-        },
-        "05": {
-          "title": "Estruturação da operação",
-          "desc": "Modelagem para alinhar potencial, capital e execução na mesma direção."
-        },
-        "06": {
-          "title": "Conexão com parceiros",
-          "desc": "Articulação de parceiros e relacionamento com banco, incluindo a CEF quando aplicável."
-        },
-        "07": {
-          "title": "Preparação para lançamento",
-          "desc": "Estratégia comercial e condução da operação até estar pronta para avançar."
-        },
-        "em-obra": {
-          "title": "Em obra",
-          "desc": "O empreendimento avança na fase de execução, conduzido com a estrutura definida na origem."
-        }
-      }
+      "heading": "Como estruturamos esta operação."
     },
     "neighborhood": {
       "kicker": "Entorno do empreendimento",

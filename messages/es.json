@@ -192,6 +192,11 @@
           "idx": "iii.",
           "title": "Participación societaria",
           "desc": "Entramos como socios de la operación, comprometidos con el resultado del emprendimiento de principio a fin."
+        },
+        "investimento": {
+          "idx": "iv.",
+          "title": "Inversión SCP",
+          "desc": "Aporte directo en la operación mediante una SCP — capital que participa del resultado, sin asumir la gestión."
         }
       }
     },
@@ -374,7 +379,6 @@
       "breadcrumbCurrent": "Proyectos",
       "kicker": "Proyectos · Cases",
       "title": "Emprendimientos<br></br>estructurados en el origen.",
-      "countLabel": "emprendimientos<br></br>en portafolio",
       "sub": "De la lectura de la oportunidad al lanzamiento — cada proyecto refleja la actuación de Open Group en la estructuración de la operación inmobiliaria."
     },
     "filtros": {
@@ -949,41 +953,7 @@
     },
     "atuacao": {
       "kicker": "El rol de Open Group",
-      "heading": "Cómo estructuramos esta operación.",
-      "steps": {
-        "01": {
-          "title": "Lectura de la oportunidad",
-          "desc": "Comprensión del activo, de la etapa y del potencial real de desarrollo en la región."
-        },
-        "02": {
-          "title": "Inteligencia de mercado",
-          "desc": "Contexto del mercado local, demanda y lectura competitiva que fundamentó la tesis."
-        },
-        "03": {
-          "title": "Concepción del producto",
-          "desc": "Definición de la lógica del emprendimiento: tipología, mix y posicionamiento."
-        },
-        "04": {
-          "title": "Viabilidad",
-          "desc": "Análisis financiero e institucional que destrabó el camino de la operación."
-        },
-        "05": {
-          "title": "Estructuración de la operación",
-          "desc": "Modelado para alinear potencial, capital y ejecución en la misma dirección."
-        },
-        "06": {
-          "title": "Conexión con socios",
-          "desc": "Articulación de socios y relación con el banco, incluida la CEF cuando corresponde."
-        },
-        "07": {
-          "title": "Preparación para el lanzamiento",
-          "desc": "Estrategia comercial y conducción de la operación hasta estar lista para avanzar."
-        },
-        "em-obra": {
-          "title": "En construcción",
-          "desc": "El emprendimiento avanza en la fase de ejecución, conducido con la estructura definida en el origen."
-        }
-      }
+      "heading": "Cómo estructuramos esta operación."
     },
     "neighborhood": {
       "kicker": "Entorno del emprendimiento",

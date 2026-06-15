@@ -28,19 +28,29 @@ export function EmpProductStory({ p }: { p: Projeto }) {
               ))}
             </div>
 
-            <div className="mt-[clamp(34px,4vw,54px)] grid grid-cols-2 gap-px border border-[color:var(--line)] bg-[color:var(--line)] max-[680px]:grid-cols-1">
+            {/* Lista editorial: label à esquerda, valor + texto à direita,
+                divisória fina entre itens. No mobile empilha (label sobre valor). */}
+            <div className="mt-[clamp(34px,4vw,54px)] border-t border-[color:var(--line)]">
               {productStory.cards.map((card, index) => (
                 <article
                   key={`${card.label}-${card.value}`}
                   className={cn(
-                    "reveal reveal-step bg-bg-soft p-[clamp(22px,2.8vw,34px)] transition-colors duration-300 hover:bg-white",
+                    "reveal reveal-step grid grid-cols-[140px_1fr] gap-x-6 border-b border-[color:var(--line)] py-6",
+                    "max-[680px]:grid-cols-1 max-[680px]:gap-y-1",
                     `reveal-step-${Math.min(index, 5)}`,
                   )}
                 >
-                  <span className="text-[11px] font-medium uppercase tracking-[.14em] text-ink-3">{card.label}</span>
-                  <h3 className="mt-3 text-[clamp(18px,1.55vw,24px)] font-semibold tracking-[-.02em] text-ink">
-                    {card.value}
-                  </h3>
+                  <span className="pt-1 text-[11px] font-medium uppercase tracking-[.14em] text-ink-3">{card.label}</span>
+                  <div>
+                    <h3 className="text-[clamp(18px,1.55vw,24px)] font-semibold tracking-[-.02em] text-ink">
+                      {card.value}
+                    </h3>
+                    {card.text && (
+                      <p className="mt-2 max-w-[52ch] text-[clamp(14px,1.05vw,15.5px)] leading-[1.6] text-ink-2">
+                        {card.text}
+                      </p>
+                    )}
+                  </div>
                 </article>
               ))}
             </div>

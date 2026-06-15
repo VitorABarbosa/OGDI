@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { orderedProjetos, caseLayout, filterTabs, type FilterCat } from "./projetosPage.data";
-import { CaseCard } from "./CaseCard";
+import { orderedProjetos, filterTabs, type FilterCat } from "./projetosPage.data";
+import { ProjetoTile } from "./ProjetoTile";
 import { ProjetosFiltros } from "./ProjetosFiltros";
 
 export function CaseGrid() {
@@ -39,22 +39,18 @@ export function CaseGrid() {
         onChange={setCat}
       />
 
-      <section className="py-section">
-        <div className="wrap">
+      <section className="pt-[clamp(28px,3.5vw,52px)] pb-[clamp(48px,6vw,88px)]">
+        <div className="wrap-wide">
           {/*
-            12-column grid. CaseCard applies its own col-span-* which works on md+ screens.
-            On mobile (max-md) we switch to a single-column grid so all cards stack full-width,
-            regardless of their span prop. This matches the reference's ≤560px collapse behaviour
-            without modifying CaseCard itself.
+            Grade uniforme (referência Vitacon): 4 cards por fileira no desktop,
+            2 em tablet, 1 empilhado no mobile. Todos com o mesmo formato retrato.
           */}
-          <div className="grid grid-cols-12 max-md:grid-cols-1 gap-x-[clamp(20px,2vw,32px)] gap-y-[clamp(20px,2.4vw,38px)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[clamp(14px,1.4vw,22px)]">
             {visible.map((p, index) => (
-              <CaseCard
+              <ProjetoTile
                 key={p.slug}
                 p={p}
                 index={index}
-                span={caseLayout[p.slug]?.span ?? "6"}
-                shape={caseLayout[p.slug]?.shape}
                 status={t(`cards.${p.slug}.status`)}
                 segmento={t(`cards.${p.slug}.segmento`)}
                 local={t(`cards.${p.slug}.local`)}

@@ -1,9 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
-import { projetos } from "@/app/_sections/Projetos/projetos.data";
-
-const count = String(projetos.length).padStart(2, "0");
 
 export async function ProjetosHero() {
   const t = await getTranslations("projetos.hero");
@@ -19,7 +16,7 @@ export async function ProjetosHero() {
         className="absolute inset-0 z-0 pointer-events-none opacity-50 [background:radial-gradient(120%_90%_at_80%_0%,rgba(31,90,99,.45),transparent_55%),radial-gradient(90%_80%_at_12%_110%,rgba(95,168,60,.16),transparent_60%)]"
       />
 
-      <div className="wrap relative z-[2]">
+      <div className="wrap-wide relative z-[2]">
         {/* Breadcrumb */}
         <nav
           aria-label="Breadcrumb"
@@ -39,30 +36,14 @@ export async function ProjetosHero() {
           <span aria-current="page">{t("breadcrumbCurrent")}</span>
         </nav>
 
-        {/* Top row: heading + count */}
-        <div className="flex items-end justify-between flex-wrap gap-[40px]">
-          <div className="reveal reveal-2">
-            <Kicker tone="on-dark-green">{t("kicker")}</Kicker>
-            <h1
-              className="font-sans font-semibold text-white text-[clamp(34px,5.4vw,76px)] tracking-[-.03em] leading-[1.04] max-w-[14ch] mt-[20px]"
-            >
-              {t.rich("title", { br: () => <br /> })}
-            </h1>
-          </div>
-
-          {/* Counter */}
-          <div className="reveal reveal-3 flex items-baseline gap-[10px]">
-            <b
-              className="font-serif font-normal text-white text-[clamp(40px,5vw,68px)] leading-none [font-variant-numeric:tabular-nums]"
-            >
-              {count}
-            </b>
-            <span
-              className="uppercase text-[12px] tracking-[.16em] text-white/55 leading-[1.4]"
-            >
-              {t.rich("countLabel", { br: () => <br /> })}
-            </span>
-          </div>
+        {/* Heading */}
+        <div className="reveal reveal-2">
+          <Kicker tone="on-dark-green">{t("kicker")}</Kicker>
+          <h1
+            className="font-sans font-semibold text-white text-[clamp(34px,5.4vw,76px)] tracking-[-.03em] leading-[1.04] max-w-[14ch] mt-[20px]"
+          >
+            {t.rich("title", { br: () => <br /> })}
+          </h1>
         </div>
 
         {/* Sub-line */}
