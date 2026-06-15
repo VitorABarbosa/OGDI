@@ -14,7 +14,7 @@ export async function Modelos() {
           <SectionHeading className="mt-[14px] mb-[18px]">{t.rich("heading", { br: () => <br /> })}</SectionHeading>
           <p className="text-[clamp(15px,1.15vw,18px)] leading-[1.65] text-ink-2">{t("intro")}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[22px] mt-[clamp(48px,6vw,72px)]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[22px] mt-[clamp(48px,6vw,72px)]">
           {modelos.map((m) => (
             <ModeloCard key={m.ring} m={m} idx={t(`cards.${m.ring}.idx`)} title={t(`cards.${m.ring}.title`)} desc={t(`cards.${m.ring}.desc`)} />
           ))}

@@ -192,6 +192,11 @@
           "idx": "iii.",
           "title": "Equity participation",
           "desc": "We come in as partners in the venture, committed to the result of the development from end to end."
+        },
+        "investimento": {
+          "idx": "iv.",
+          "title": "Investment SCP",
+          "desc": "Direct capital in the venture through an SCP (silent partnership) — capital that shares in the result, without taking on management."
         }
       }
     },
@@ -374,7 +379,6 @@
       "breadcrumbCurrent": "Projects",
       "kicker": "Projects · Cases",
       "title": "Developments<br></br>structured at the origin.",
-      "countLabel": "developments<br></br>in portfolio",
       "sub": "From reading the opportunity to launch — each project reflects Open Group's work in structuring the real estate venture."
     },
     "filtros": {
@@ -949,41 +953,7 @@
     },
     "atuacao": {
       "kicker": "Open Group's role",
-      "heading": "How we structured this venture.",
-      "steps": {
-        "01": {
-          "title": "Reading the opportunity",
-          "desc": "Understanding the asset, its stage, and the real development potential in the area."
-        },
-        "02": {
-          "title": "Market intelligence",
-          "desc": "Local market context, demand, and competitive reading that grounded the thesis."
-        },
-        "03": {
-          "title": "Product conception",
-          "desc": "Defining the development's logic: layout, mix, and positioning."
-        },
-        "04": {
-          "title": "Feasibility",
-          "desc": "Financial and institutional analysis that unlocked the venture's path."
-        },
-        "05": {
-          "title": "Structuring the venture",
-          "desc": "Modeling to align potential, capital, and execution in the same direction."
-        },
-        "06": {
-          "title": "Connecting with partners",
-          "desc": "Coordinating partners and bank relationships, including CEF (Brazil's federal bank) where applicable."
-        },
-        "07": {
-          "title": "Launch readiness",
-          "desc": "Commercial strategy and guidance of the venture until it is ready to move forward."
-        },
-        "em-obra": {
-          "title": "Under construction",
-          "desc": "The development advances into the execution phase, guided by the structure defined at the origin."
-        }
-      }
+      "heading": "How we structured this venture."
     },
     "neighborhood": {
       "kicker": "Development surroundings",

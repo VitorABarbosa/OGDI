@@ -25,7 +25,7 @@ export function ProjetosFiltros({
         WebkitBackdropFilter: "saturate(180%) blur(16px)",
       }}
     >
-      <div className="wrap">
+      <div className="wrap-wide">
         <div className="flex items-center justify-between flex-wrap" style={{ gap: "24px", padding: "16px 0" }}>
           {/* Tab buttons */}
           <div className="flex flex-wrap" role="group" aria-label={ariaLabel} style={{ gap: "26px" }}>

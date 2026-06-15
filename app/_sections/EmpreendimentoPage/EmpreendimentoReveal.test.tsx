@@ -35,12 +35,20 @@ describe("Empreendimento page reveals", () => {
   });
 
   it("marks method cards and related project cards for scroll reveal animation", () => {
+    // Etapas recortadas pelo estágio (cat). Sem projeto, cai no padrão: até o início de obras (7).
     const { container: atuacao } = render(<EmpAtuacao />);
-    expect(atuacao.querySelectorAll(".reveal-step")).toHaveLength(8);
+    expect(atuacao.querySelectorAll(".reveal-step")).toHaveLength(7);
 
+    // hits-cupece está "em obra" → até o início de obras (7 etapas).
     const { container: atuacaoNarrativa } = render(<EmpAtuacao p={projeto} />);
-    expect(atuacaoNarrativa.querySelectorAll(".reveal-step")).toHaveLength(8);
+    expect(atuacaoNarrativa.querySelectorAll(".reveal-step")).toHaveLength(7);
     expect(screen.getByRole("heading", { name: /operação foi pensada antes de a obra/i })).toHaveClass("reveal", "reveal-2");
+
+    // "futuro" → estruturação inicial (3); "entregue" → jornada completa (10).
+    const futuro = projetos.find((p) => p.cat === "futuro")!;
+    expect(render(<EmpAtuacao p={futuro} />).container.querySelectorAll(".reveal-step")).toHaveLength(3);
+    const entregue = projetos.find((p) => p.cat === "entregue")!;
+    expect(render(<EmpAtuacao p={entregue} />).container.querySelectorAll(".reveal-step")).toHaveLength(10);
 
     const related = projetos.slice(1, 4);
     const { container: proximos } = render(<EmpProximos others={related} />);

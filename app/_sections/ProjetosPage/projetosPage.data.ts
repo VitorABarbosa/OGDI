@@ -1,16 +1,6 @@
 import { projetos, projetoTabs, type Projeto, type ProjetoCat } from "@/app/_sections/Projetos/projetos.data";
 
-export type CaseLayout = { span: "6" | "4" | "8"; shape?: "tall" | "wide" };
-
-// keyed by slug
-export const caseLayout: Record<string, CaseLayout> = {
-  "hits-cupece":          { span: "6" },
-  "start-park-jabaquara": { span: "6" },
-  "oh-freguesia":         { span: "4", shape: "tall" },
-  "hits-santa-catarina":  { span: "8", shape: "wide" },
-  "guarulhos":            { span: "6" },
-};
-
+// Ordem de exibição na grade (todos os cards têm o mesmo formato — retrato).
 const order = [
   "hits-cupece",
   "start-park-jabaquara",

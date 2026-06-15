@@ -1,13 +1,27 @@
 import { useTranslations } from "next-intl";
 import { Kicker } from "@/components/ui/Kicker";
-import { atuacaoSteps } from "@/data/empreendimento";
+import { atuacaoSteps } from "@/app/_sections/Atuacao/atuacao.data";
 import { cn } from "@/lib/cn";
-import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
+import type { Projeto, ProjetoCat } from "@/app/_sections/Projetos/projetos.data";
 
-// Seção de método OGDI — conteúdo igual para todos os empreendimentos (não recebe prop do projeto).
+// Quantas etapas da jornada (fonte única: home.atuacao.steps) mostrar, conforme
+// o estágio do empreendimento:
+//   futuro   → estruturação inicial (até Viabilidade)
+//   obra     → até o Início de obras
+//   entregue → jornada completa, até o Pós-entrega
+const stepCountByCat: Record<ProjetoCat, number> = {
+  futuro: 3,
+  obra: 7,
+  entregue: 10,
+};
+
+// Seção de método OGDI — etapas vêm do namespace compartilhado home.atuacao.steps
+// (mesmo conteúdo da home/Investidores), recortadas pelo estágio do projeto.
 export function EmpAtuacao({ p }: { p?: Projeto }) {
   const t = useTranslations("empreendimento.atuacao");
+  const ts = useTranslations("home.atuacao.steps");
   const visibleStrategyBody = p?.strategyStory?.body.slice(0, 1);
+  const steps = atuacaoSteps.slice(0, p ? stepCountByCat[p.cat] : 7);
 
   return (
     <section className="py-section">
@@ -40,19 +54,19 @@ export function EmpAtuacao({ p }: { p?: Projeto }) {
 
         {/* Steps grid */}
         <div className="grid grid-cols-4 gap-px bg-[color:var(--line)] border border-[color:var(--line)] max-[900px]:grid-cols-2 max-[480px]:grid-cols-1">
-          {atuacaoSteps.map((step, index) => (
+          {steps.map((step, index) => (
             <div
-              key={step.n}
+              key={step.idx}
               className={cn("reveal reveal-step bg-bg-soft/92 p-[30px_26px] flex flex-col gap-3 transition-colors duration-[350ms] hover:bg-white", `reveal-step-${Math.min(index, 5)}`)}
             >
               <span className="font-sans text-[13px] font-semibold text-teal tracking-[.04em]">
-                {step.n}
+                {step.idx}
               </span>
               <h3 className="font-sans font-semibold text-[16.5px] tracking-[-.01em]">
-                {t(`steps.${step.key}.title`)}
+                {ts(`${step.idx}.title`)}
               </h3>
               <p className="text-[13.5px] leading-[1.55] text-ink-2">
-                {t(`steps.${step.key}.desc`)}
+                {ts(`${step.idx}.desc`)}
               </p>
             </div>
           ))}

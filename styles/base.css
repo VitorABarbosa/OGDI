@@ -17,3 +17,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 input, textarea, select { font: inherit; color: inherit; }
 ::selection { background: var(--color-teal); color: #fff; }
 .wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 var(--spacing-pad-x); }
+/* Container mais largo para grades densas (ex.: portfólio de Projetos) —
+   mesmo padding lateral, teto maior para preencher mais as laterais. */
+.wrap-wide { width: 100%; max-width: 1760px; margin: 0 auto; padding: 0 var(--spacing-pad-x); }
