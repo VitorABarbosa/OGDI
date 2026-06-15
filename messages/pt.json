@@ -222,7 +222,6 @@
       "ariaLabel": "Navegação visual da página institucional",
       "inicio": "Início",
       "sobre": "Sobre",
-      "manifesto": "Manifesto",
       "origem": "Origem",
       "lideranca": "Quem conduz",
       "grupo": "Nosso Grupo",
@@ -267,38 +266,35 @@
       "body4": "Mais do que desenvolver empreendimentos, <em>estruturamos operações imobiliárias para que potencial, capital e execução avancem na mesma direção, do início à entrega de chaves.</em>"
     },
     "manifesto": {
-      "eyebrow": "Nosso manifesto",
-      "segments": {
-        "s1": "Muitas oportunidades não fracassam por falta de ",
-        "s2": "potencial",
-        "s3": ". Fracassam porque avançam sem ",
-        "s4": "estrutura",
-        "s5": "."
-      }
+      "eyebrow": "Manifesto",
+      "thesis": "Muitas oportunidades imobiliárias não fracassam por falta de <em>potencial</em>. Fracassam porque avançam sem <em>estrutura</em>.",
+      "elaboration": "Uma área promissora, um projeto bem localizado ou uma oportunidade de mercado não se sustentam sozinhos. Sem visão estratégica, viabilidade clara, parceiros certos e condução precisa, o potencial se dispersa antes de virar empreendimento.",
+      "bridgeLabel": "O valor nasce antes da obra",
+      "bridge": "A Open Group acredita que o valor de um empreendimento nasce <em>antes da obra</em>.",
+      "positioning": "Por isso, não tratamos desenvolvimento imobiliário como execução isolada. Tratamos como <em>construção estratégica de valor</em>.",
+      "institutional": "Estruturamos e desenvolvemos empreendimentos imobiliários de ponta a ponta, conectando visão, viabilidade, parceiros e operação para transformar oportunidades em projetos prontos para avançar.",
+      "closing": "Porque desenvolver bem é decidir melhor desde a origem."
     },
     "origem": {
-      "kicker": "A origem",
-      "heading": "O valor de um empreendimento nasce <em>antes da obra</em>.",
-      "intro": "Uma área promissora ou um projeto bem localizado não se sustentam sozinhos. Sem visão, viabilidade, parceiros e condução, o potencial se dispersa antes de virar empreendimento. Ele nasce antes — e nasce aqui:",
       "strata": {
         "01": {
-          "name": "A leitura da oportunidade",
+          "name": "Na leitura correta da oportunidade",
           "desc": "Interpretar o ativo e o potencial real, antes que ele seja óbvio."
         },
         "02": {
-          "name": "A concepção do produto",
+          "name": "Na concepção do produto",
           "desc": "Definir o empreendimento certo para aquela oportunidade."
         },
         "03": {
-          "name": "A estruturação da operação",
+          "name": "Na estruturação da operação",
           "desc": "Alinhar potencial, capital e execução na mesma direção."
         },
         "04": {
-          "name": "A escolha dos parceiros",
+          "name": "Na escolha dos parceiros",
           "desc": "Articular parceiros, banco e relacionamento institucional."
         },
         "05": {
-          "name": "O caminho até o lançamento",
+          "name": "Na clareza do caminho até o lançamento",
           "desc": "Conduzir com clareza até o projeto estar pronto para avançar."
         }
       }

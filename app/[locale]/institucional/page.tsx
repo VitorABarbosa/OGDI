@@ -5,7 +5,6 @@ import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 import { InstitucionalHero } from "@/app/_sections/InstitucionalPage/InstitucionalHero";
 import { InstitucionalSobre } from "@/app/_sections/InstitucionalPage/InstitucionalSobre";
 import { InstitucionalGrupo } from "@/app/_sections/InstitucionalPage/InstitucionalGrupo";
-import { InstitucionalManifesto } from "@/app/_sections/InstitucionalPage/InstitucionalManifesto";
 import { InstitucionalOrigem } from "@/app/_sections/InstitucionalPage/InstitucionalOrigem";
 import { InstitucionalLideranca } from "@/app/_sections/InstitucionalPage/InstitucionalLideranca";
 import { InstitucionalAssinatura } from "@/app/_sections/InstitucionalPage/InstitucionalAssinatura";
@@ -15,7 +14,6 @@ import { PageSectionRail } from "@/app/_sections/PageSectionRail";
 const institucionalRailItems = [
   { id: "institucional-inicio", labelKey: "inicio" },
   { id: "institucional-sobre", labelKey: "sobre" },
-  { id: "institucional-manifesto", labelKey: "manifesto" },
   { id: "institucional-origem", labelKey: "origem" },
   { id: "institucional-lideranca", labelKey: "lideranca" },
   { id: "institucional-grupo", labelKey: "grupo" },
@@ -53,7 +51,6 @@ export default async function InstitucionalPage({
       <PageSectionRail items={railItems} ariaLabel={t("ariaLabel")} />
       <InstitucionalHero />
       <InstitucionalSobre />
-      <InstitucionalManifesto />
       <InstitucionalOrigem />
       {/* Linhas fluidas (igual à página de projeto) de Quem conduz ao fim do Nosso Grupo */}
       <div className="relative overflow-hidden bg-bg-soft">

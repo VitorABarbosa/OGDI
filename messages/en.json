@@ -222,7 +222,6 @@
       "ariaLabel": "Visual navigation of the About page",
       "inicio": "Start",
       "sobre": "About",
-      "manifesto": "Manifesto",
       "origem": "Origin",
       "lideranca": "Who leads",
       "grupo": "Our Group",
@@ -267,38 +266,35 @@
       "body4": "More than developing projects, <em>we structure real estate ventures so that potential, capital, and execution move in the same direction — from the start to the handover of keys.</em>"
     },
     "manifesto": {
-      "eyebrow": "Our manifesto",
-      "segments": {
-        "s1": "Many opportunities don't fail for lack of ",
-        "s2": "potential",
-        "s3": ". They fail because they move forward without ",
-        "s4": "structure",
-        "s5": "."
-      }
+      "eyebrow": "Manifesto",
+      "thesis": "Many real estate opportunities don't fail for lack of <em>potential</em>. They fail because they move forward without <em>structure</em>.",
+      "elaboration": "A promising site, a well-located project, or a market opportunity do not hold up on their own. Without strategic vision, clear feasibility, the right partners, and precise guidance, potential dissipates before it becomes a development.",
+      "bridgeLabel": "Value is born before the works",
+      "bridge": "Open Group believes that a development's value is born <em>before the works</em>.",
+      "positioning": "That is why we do not treat real estate development as isolated execution. We treat it as the <em>strategic construction of value</em>.",
+      "institutional": "We structure and develop real estate projects end to end, connecting vision, feasibility, partners, and operation to turn opportunities into projects ready to move forward.",
+      "closing": "Because developing well means deciding better from the origin."
     },
     "origem": {
-      "kicker": "Origin",
-      "heading": "The value of a development is born <em>before ground is broken</em>.",
-      "intro": "A promising site or a well-located project does not stand on its own. Without vision, feasibility, partners, and guidance, potential disperses before it becomes a development. It is born earlier — and it is born here:",
       "strata": {
         "01": {
-          "name": "Reading the opportunity",
+          "name": "In the right reading of the opportunity",
           "desc": "Interpreting the asset and its real potential, before it becomes obvious."
         },
         "02": {
-          "name": "Product conception",
+          "name": "In the conception of the product",
           "desc": "Defining the right development for that opportunity."
         },
         "03": {
-          "name": "Structuring the venture",
+          "name": "In the structuring of the venture",
           "desc": "Aligning potential, capital, and execution in the same direction."
         },
         "04": {
-          "name": "Choosing the partners",
+          "name": "In the choice of partners",
           "desc": "Bringing together partners, the bank, and institutional relationships."
         },
         "05": {
-          "name": "The path to launch",
+          "name": "In the clarity of the path to launch",
           "desc": "Guiding with clarity until the project is ready to move forward."
         }
       }

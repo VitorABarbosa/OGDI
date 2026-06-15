@@ -1,62 +1,135 @@
-import { getTranslations } from "next-intl/server";
-import { Kicker } from "@/components/ui/Kicker";
-import { institucional } from "./institucional.data";
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
+import { institucional } from "./institucional.data";
+import styles from "./InstitucionalOrigem.module.css";
 
-export async function InstitucionalOrigem() {
-  const t = await getTranslations("institucional.origem");
-  const { origem } = institucional;
+// Seção fundida: o Manifesto abre (frase-tese) e encadeia em "A origem" — os 5
+// estratos viram a "escada do valor", destacados um a um conforme o scroll passa.
+export function InstitucionalOrigem() {
+  const tm = useTranslations("institucional.manifesto");
+  const t = useTranslations("institucional.origem");
+  const strata = institucional.origem.strata;
+
+  const rowsRef = useRef<HTMLDivElement[]>([]);
+  const [active, setActive] = useState(0);
+  const [fill, setFill] = useState(0);
+
+  useEffect(() => {
+    const rows = rowsRef.current.filter(Boolean);
+    if (rows.length === 0) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setActive(rows.length);
+      setFill(1);
+      return;
+    }
+
+    let pending = false;
+    const update = () => {
+      pending = false;
+      const live = rowsRef.current.filter(Boolean);
+      if (live.length === 0) return;
+      // Linha de destaque um pouco abaixo do meio da tela.
+      const threshold = window.innerHeight * 0.6;
+      const centers = live.map((r) => {
+        const b = r.getBoundingClientRect();
+        return b.top + b.height / 2;
+      });
+      let last = -1;
+      centers.forEach((c, i) => {
+        if (c <= threshold) last = i;
+      });
+      setActive(last + 1);
+
+      const first = centers[0];
+      const lastC = centers[centers.length - 1];
+      const f = lastC > first ? (threshold - first) / (lastC - first) : last >= 0 ? 1 : 0;
+      setFill(Math.max(0, Math.min(1, f)));
+    };
+    const onScroll = () => {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(update);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  const green = (c: React.ReactNode) => <span className="text-green">{c}</span>;
+
   return (
-    <section id="institucional-origem" className="border-t border-[color:var(--line-dark)] bg-dark-2 py-section">
+    <section id="institucional-origem" className="bg-dark py-section text-white">
       <div className="wrap">
-        <div className="reveal mx-auto mb-[clamp(44px,5.5vw,76px)] max-w-[680px] text-center">
-          <Kicker tone="on-dark-green" className="justify-center">{t("kicker")}</Kicker>
-          <h2 className="mt-4 font-news font-normal text-white text-[clamp(1.8rem,3.6vw,3rem)] leading-[1.16] tracking-[-.01em]">
-            {t.rich("heading", { em: (c) => <span className="italic text-green">{c}</span> })}
-          </h2>
-          <p className="mx-auto mt-5 max-w-[58ch] text-[clamp(15px,1.3vw,18px)] leading-[1.62] text-white/[.62]">
-            {t("intro")}
-          </p>
+        {/* — Ato 1: tese + elaboração — */}
+        <div className="reveal mb-[clamp(22px,2.6vw,36px)] flex items-center gap-[14px] text-[11px] uppercase tracking-[.24em] text-white/40">
+          <span aria-hidden className="h-px w-[30px] bg-green" />
+          {tm("eyebrow")}
         </div>
+        <p className="reveal reveal-2 max-w-[26ch] font-news font-normal text-[clamp(1.5rem,3.2vw,2.8rem)] leading-[1.3] tracking-[-.01em]">
+          {tm.rich("thesis", { em: green })}
+        </p>
+        <p className="reveal reveal-2 mt-[clamp(22px,3vw,34px)] max-w-[60ch] text-[clamp(14px,1.1vw,16.5px)] leading-[1.66] text-white/[.6]">
+          {tm("elaboration")}
+        </p>
 
-        <div className="mx-auto max-w-[1060px]">
-          {origem.strata.map((s) => (
+        {/* — Ato 2: ponte + escada do valor — */}
+        <div
+          aria-hidden
+          className="reveal reveal-2 my-[clamp(34px,4.5vw,58px)] h-px max-w-[680px] bg-gradient-to-r from-[color:var(--line-dark)] to-transparent"
+        />
+        <div className="reveal reveal-3 mb-[14px] text-[10.5px] uppercase tracking-[.22em] text-green">
+          {tm("bridgeLabel")}
+        </div>
+        <h2 className="reveal reveal-3 max-w-[22ch] font-news font-normal text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.16] tracking-[-.01em]">
+          {tm.rich("bridge", { em: (c) => <span className="italic text-green">{c}</span> })}
+        </h2>
+
+        <div className={styles.ladder}>
+          <div className={styles.rail}>
+            <span className={styles.railFill} style={{ height: `${fill * 100}%` }} />
+          </div>
+          {strata.map((s, i) => (
             <div
               key={s.key}
-              className={cn(
-                "reveal grid grid-cols-1 items-center gap-[8px] px-[clamp(12px,2vw,28px)] py-[clamp(17px,2.1vw,28px)] md:grid-cols-[88px_1fr_minmax(0,30ch)] md:gap-[clamp(16px,2.4vw,44px)]",
-                s.bed
-                  ? "border-l-2 border-green pl-[clamp(14px,2vw,30px)] [background:linear-gradient(90deg,rgba(95,168,60,.12),transparent_72%)]"
-                  : "border-b border-[color:var(--line-dark)]",
-              )}
+              ref={(el) => {
+                if (el) rowsRef.current[i] = el;
+              }}
+              className={cn(styles.row, s.bed && styles.bed, i < active && styles.active)}
             >
-              <span
-                className={cn(
-                  "font-serif text-[13.5px] tabular-nums tracking-[.14em]",
-                  s.bed ? "text-green" : "text-white/[.38]",
-                )}
-              >
-                {s.n}
-              </span>
-              <span
-                className={cn(
-                  "font-news font-normal leading-[1.02] tracking-[-.01em]",
-                  s.bed ? "text-white text-[clamp(1.9rem,4.6vw,3.5rem)]" : "text-white/90 text-[clamp(1.5rem,3.1vw,2.5rem)]",
-                )}
-              >
-                {t(`strata.${s.key}.name`)}
-              </span>
-              <span
-                className={cn(
-                  "text-[12.5px] leading-[1.45] tracking-[.03em] md:text-right",
-                  s.bed ? "text-white/[.72]" : "text-white/[.46]",
-                )}
-              >
-                {t(`strata.${s.key}.desc`)}
-              </span>
+              <span aria-hidden className={styles.node} />
+              <div>
+                <span className={styles.nx}>{s.n}</span>
+                <span className={styles.nm}>{t(`strata.${s.key}.name`)}</span>
+              </div>
+              <span className={styles.ds}>{t(`strata.${s.key}.desc`)}</span>
             </div>
           ))}
         </div>
+
+        {/* — Ato 3: fecho — */}
+        <div
+          aria-hidden
+          className="reveal my-[clamp(34px,4.5vw,58px)] h-px max-w-[680px] bg-gradient-to-r from-[color:var(--line-dark)] to-transparent"
+        />
+        <div className="grid grid-cols-1 gap-[clamp(24px,3.5vw,56px)] lg:grid-cols-2 lg:items-start">
+          <p className="reveal font-news font-normal text-[clamp(1.25rem,2vw,1.7rem)] leading-[1.24] tracking-[-.01em] max-w-[26ch]">
+            {tm.rich("positioning", { em: green })}
+          </p>
+          <p className="reveal reveal-2 max-w-[58ch] text-[clamp(14px,1.1vw,16.5px)] leading-[1.66] text-white/[.6]">
+            {tm("institutional")}
+          </p>
+        </div>
+        <p className="reveal mt-[clamp(28px,3.5vw,44px)] font-news italic text-green text-[clamp(1.2rem,2vw,1.7rem)] leading-[1.2]">
+          {tm("closing")}
+        </p>
       </div>
     </section>
   );
