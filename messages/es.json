@@ -128,7 +128,8 @@
       "tags": {
         "consultoria": "Consultoría contratada",
         "parceria": "Alianza estratégica",
-        "societaria": "Socia de la operación"
+        "societaria": "Socia de la operación",
+        "investimento": "Inversión SCP"
       },
       "steps": {
         "10": {
