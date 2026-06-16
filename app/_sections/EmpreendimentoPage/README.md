@@ -8,14 +8,13 @@ Mantenha a composição da página nesta ordem:
 
 1. `RevealController`
 2. `EmpHero`
-3. `EmpInfo`
+3. `EmpInfo` (seção unificada: ficha da operação + intro + "O produto como resposta" na mesma seção)
 4. `EmpLocationStory`
-5. `EmpProductStory`
-6. `EmpGaleria`
-7. `EmpAtuacao`
-8. `EmpNeighborhoodMap` com Google Maps quando o projeto tiver `map`, ou placeholder quando a localização ainda não estiver definida
-9. `EmpProximos`
-10. `CtaBand`
+5. `EmpGaleria`
+6. `EmpAtuacao`
+7. `EmpNeighborhoodMap` com Google Maps quando o projeto tiver `map`, ou placeholder quando a localização ainda não estiver definida
+8. `EmpProximos`
+9. `CtaBand`
 
 Não crie uma rota paralela `V2` nem uma versão duplicada da página. Melhorias devem evoluir estes componentes e o contrato de dados do projeto.
 
@@ -37,8 +36,8 @@ Novos projetos ativos devem incluir estes campos de `Projeto` em `app/_sections/
 A narrativa pretendida é:
 
 1. Apresentar o projeto e os fatos principais no hero.
-2. Explicar a oportunidade e o território em `EmpInfo` e `EmpLocationStory`.
-3. Mostrar como o produto responde a essa leitura em `EmpProductStory`.
+2. Explicar a oportunidade, o produto e o território em `EmpInfo` e `EmpLocationStory`.
+3. Em `EmpInfo`, mostrar como o produto responde a essa leitura ("O produto como resposta").
 4. Usar a galeria como prova visual do conceito.
 5. Explicar a estrutura da Open Group por trás da operação em `EmpAtuacao`.
 6. Mostrar a localização do empreendimento em `EmpNeighborhoodMap`; quando ainda não houver endereço, manter o placeholder padronizado.

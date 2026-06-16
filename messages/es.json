@@ -48,7 +48,7 @@
           "meta": {
             "status": "Entregado",
             "segmento": "Residencial",
-            "local": "Ubicación por confirmar"
+            "local": "São Paulo · SP"
           },
           "sign": "OGDI socia de la operación — de la concepción al lanzamiento."
         },
@@ -424,7 +424,7 @@
       "hits-santa-catarina": {
         "status": "Entregado",
         "segmento": "Residencial",
-        "local": "Ubicación por confirmar"
+        "local": "São Paulo · SP"
       }
     },
     "cta": {
@@ -972,7 +972,9 @@
       "cta": "Tengo interés"
     },
     "gallery": {
-      "aria": "Galería de imágenes"
+      "aria": "Galería de imágenes",
+      "showMore": "Mostrar más imágenes",
+      "showLess": "Mostrar menos"
     },
     "atuacao": {
       "kicker": "El rol de Open Group",

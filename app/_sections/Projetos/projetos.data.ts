@@ -48,10 +48,12 @@ export type ProjetoMap = {
   title: string;
   text: string;
   address: string;
-  zoom: number;
-  center: { lat: number; lng: number };
-  categories: { id: ProjetoMapCategoryId; label: string }[];
-  points: ProjetoMapPoint[];
+  // O embed do Google Maps usa apenas a query de endereço; os campos abaixo são
+  // metadados opcionais (ex.: para um mapa de POIs mais rico no futuro).
+  zoom?: number;
+  center?: { lat: number; lng: number };
+  categories?: { id: ProjetoMapCategoryId; label: string }[];
+  points?: ProjetoMapPoint[];
 };
 
 // Individual project page contract:
@@ -231,39 +233,43 @@ export const projetos: Projeto[] = [
     segmento: "Residencial", local: "São Paulo · SP",
     modelo: "Sócia da operação",
     intro: [
-      "[PROVISÓRIO] No Jabaquara, a leitura da oportunidade precedeu a estruturação. A OGDI identificou o potencial do ativo e construiu a tese com base em contexto de praça e leitura concorrencial consistente.",
-      "[PROVISÓRIO] A conceituação do produto e a modelagem da operação alinharam capital, parceiros e execução na mesma direção — condição para que o lançamento fosse viável e sustentável.",
-      "[PROVISÓRIO] O empreendimento avança hoje em obra, resultado de uma operação preparada com rigor desde a origem.",
+      "O Start Park Jabaquara nasce de uma leitura objetiva do Parque Jabaquara, na zona sul de São Paulo — uma região conectada e em valorização, a poucos minutos do Aeroporto de Congonhas e na rota do futuro monotrilho.",
+      "A Open Group estruturou a oportunidade alinhando produto, viabilidade e operação: unidades de 1 e 2 dormitórios, com terraço com churrasqueira, e um conjunto de lazer pensado para a vida urbana cotidiana.",
+      "Hoje o empreendimento avança em obra, resultado de uma operação organizada desde a origem, com produto, parceiros e execução na mesma direção.",
     ],
     heroSummary:
-      "Um empreendimento residencial em obra no Jabaquara, estruturado a partir de leitura de mercado, produto e viabilidade.",
-    facts: ["Em obra", "Residencial", "Jabaquara - São Paulo", "Sócia da operação"],
+      "Um empreendimento residencial em obra no Parque Jabaquara, na zona sul de São Paulo, conectado a Congonhas e ao futuro monotrilho.",
+    facts: ["Em obra", "1 e 2 dormitórios", "Terraço com churrasqueira", "Parque Jabaquara - SP"],
+    regiao: "Parque Jabaquara",
+    address: "Rua Alba, 570",
+    units: "1 e 2 dormitórios",
+    unitFeature: "Terraço com churrasqueira",
     locationStory: {
       kicker: "A tese do lugar",
       title: "No Jabaquara, a oportunidade nasce da leitura da praça.",
       body: [
-        "O Start Park Jabaquara parte de uma leitura objetiva do território: demanda residencial, conexão urbana e um contexto de bairro capaz de sustentar produto e operação.",
-        "Antes da obra, a Open Group avaliou o ativo, o entorno e a dinâmica competitiva para entender onde estava o valor real da oportunidade.",
-        "Essa leitura orientou a tese do empreendimento e definiu as bases para transformar potencial de mercado em desenvolvimento estruturado.",
+        "Na Rua Alba, no Parque Jabaquara, o Start Park está inserido em uma região conectada e em valorização, com comércio, serviços e forte oferta de transporte na zona sul de São Paulo.",
+        "O endereço fica a poucos minutos do Aeroporto de Congonhas e na rota do futuro monotrilho, com acesso às avenidas Santa Catarina, Cupecê, Roberto Marinho, Washington Luís, Bandeirantes e Imigrantes.",
+        "Para a Open Group, essa combinação de mobilidade, vida cotidiana e valorização transforma a localização em tese de produto.",
       ],
       highlights: [
-        { title: "Leitura de praça", text: "Análise do contexto local, concorrência e aderência do produto ao território." },
-        { title: "Potencial urbano", text: "Um projeto residencial pensado para responder à vida cotidiana da região." },
+        { title: "Mobilidade ampla", text: "Próximo a Congonhas e ao futuro monotrilho, com acesso a Imigrantes, Bandeirantes e Washington Luís." },
+        { title: "Região em valorização", text: "Entorno com comércio e serviços que sustentam a demanda residencial." },
         { title: "Origem estruturada", text: "A oportunidade foi organizada antes da execução, com produto e operação alinhados." },
       ],
     },
     productStory: {
       kicker: "O produto como resposta",
-      title: "A estruturação conecta mercado, produto e execução.",
+      title: "Tipologias compactas para uma vida urbana conectada.",
       body: [
-        "A conceituação do Start Park Jabaquara foi conduzida para aproximar inteligência de mercado e viabilidade prática.",
-        "O produto nasce da combinação entre leitura territorial, posicionamento residencial e uma operação preparada para avançar com consistência.",
+        "As unidades de 1 e 2 dormitórios respondem a um público que busca morar bem, com eficiência e conexão com a cidade.",
+        "O terraço com churrasqueira e um lazer completo ampliam o uso do empreendimento no dia a dia.",
       ],
       cards: [
-        { label: "Status", value: "Em obra", text: "A operação já avançou da estruturação para a execução." },
-        { label: "Segmento", value: "Residencial", text: "Produto orientado para demanda urbana de moradia." },
-        { label: "Localização", value: "Jabaquara", text: "Praça avaliada a partir de contexto, acesso e leitura concorrencial." },
-        { label: "Modelo", value: "Sócia da operação", text: "Capital, parceiros e execução alinhados desde a origem." },
+        { label: "Tipologia", value: "1 e 2 dormitórios", text: "Plantas eficientes, alinhadas a diferentes perfis de moradia urbana." },
+        { label: "Endereço", value: "Rua Alba, 570", text: "Parque Jabaquara, zona sul de São Paulo, próximo a Congonhas e ao futuro monotrilho." },
+        { label: "Mobilidade", value: "Eixo Santa Catarina · Cupecê", text: "Acesso a Roberto Marinho, Washington Luís, Bandeirantes e Imigrantes." },
+        { label: "Experiência", value: "Lazer completo", text: "Piscina, fitness, crossfit, cine aberto, bike station e salão de festas gourmet." },
       ],
     },
     galleryIntro: {
@@ -285,6 +291,12 @@ export const projetos: Projeto[] = [
       title: "Start Park Jabaquara é resultado de estruturação.",
       text: "Uma operação que saiu da leitura de mercado para a obra com produto, parceiros e execução alinhados.",
       ctaLabel: "Tenho interesse no empreendimento",
+      ctaHref: "https://www.tsengenharia.com/imovel/start-park-jabaquara/",
+    },
+    map: {
+      title: "Localização e entorno",
+      text: "Explore a localização do Start Park Jabaquara no Google Maps, com o empreendimento como ponto de referência.",
+      address: "R. Alba, 570 - Parque Jabaquara, São Paulo - SP",
     },
     gallery: [
       { id: "start-park-jabaquara-g1", alt: "Fachada / render principal" },
@@ -304,39 +316,43 @@ export const projetos: Projeto[] = [
     segmento: "Residencial", local: "São Paulo · SP",
     modelo: "Sócia da operação",
     intro: [
-      "[PROVISÓRIO] O Oh Freguesia nasceu de uma leitura cuidadosa da oportunidade: ativo avaliado, potencial mapeado e tese de produto construída com base em inteligência de mercado da região.",
-      "[PROVISÓRIO] A OGDI conduziu a conceituação do produto e a estruturação da operação, conectando os parceiros necessários e preparando o empreendimento para lançamento.",
-      "[PROVISÓRIO] Com a operação consolidada, o empreendimento avança em obra — evidência de que o valor foi construído antes mesmo do início da execução.",
+      "O Oh Freguesia nasce na Freguesia do Ó, na zona norte de São Paulo — um dos bairros mais antigos da capital, com vida de bairro consolidada, comércio e serviços no entorno.",
+      "A Open Group estruturou a oportunidade conectando produto, viabilidade e operação: unidades de 1 e 2 dormitórios, com terraço com churrasqueira, e um lazer completo, de beach club e sky lounge a cinema open e praça do fogo.",
+      "Hoje o empreendimento avança em obra, evidência de uma operação consolidada antes do início da execução.",
     ],
     heroSummary:
-      "Um empreendimento residencial em obra na Freguesia, com produto conceituado e operação estruturada pela Open Group.",
-    facts: ["Em obra", "Residencial", "Freguesia - São Paulo", "Sócia da operação"],
+      "Um empreendimento residencial em obra na Freguesia do Ó, na zona norte de São Paulo, com lazer completo e terraço com churrasqueira.",
+    facts: ["Em obra", "1 e 2 dormitórios", "Terraço com churrasqueira", "Freguesia do Ó - SP"],
+    regiao: "Freguesia do Ó",
+    address: "Rua Homero Francisco Terra",
+    units: "1 e 2 dormitórios",
+    unitFeature: "Terraço com churrasqueira",
     locationStory: {
       kicker: "A tese do lugar",
-      title: "A Freguesia entra na narrativa como território de oportunidade.",
+      title: "Na Freguesia do Ó, um bairro consolidado vira tese.",
       body: [
-        "O Oh Freguesia foi estruturado a partir de uma leitura cuidadosa do ativo e do potencial da região.",
-        "A Open Group avaliou o contexto de mercado, o posicionamento possível e a aderência do produto antes de consolidar a operação.",
-        "Essa leitura transforma localização em estratégia: o lugar orienta o produto, e o produto dá clareza à execução.",
+        "Na Rua Homero Francisco Terra, o Oh Freguesia está inserido em um dos bairros mais antigos de São Paulo, com vida de bairro consolidada, comércio e serviços no entorno.",
+        "A Freguesia do Ó combina identidade urbana estabelecida e demanda residencial constante na zona norte da capital.",
+        "Para a Open Group, esse contexto de bairro consolidado sustenta produto e operação, transformando a localização em tese.",
       ],
       highlights: [
-        { title: "Potencial mapeado", text: "O ativo foi analisado antes da definição do produto e da operação." },
-        { title: "Inteligência de mercado", text: "A tese foi construída com base em leitura da região e oportunidade real." },
-        { title: "Operação consolidada", text: "Produto, parceiros e execução foram conectados para viabilizar o avanço da obra." },
+        { title: "Bairro consolidado", text: "Um dos endereços mais tradicionais da zona norte, com vida de bairro estabelecida." },
+        { title: "Demanda constante", text: "Comércio, serviços e infraestrutura urbana que sustentam a procura por moradia." },
+        { title: "Operação consolidada", text: "Produto, parceiros e execução conectados para viabilizar o avanço da obra." },
       ],
     },
     productStory: {
       kicker: "O produto como resposta",
-      title: "A conceituação organiza o potencial em empreendimento.",
+      title: "Tipologias compactas com lazer de bairro completo.",
       body: [
-        "No Oh Freguesia, o produto foi pensado como consequência da leitura da oportunidade, não como decisão isolada.",
-        "A estruturação conduzida pela Open Group conectou potencial de mercado, parceria e execução para preparar o projeto para lançamento e obra.",
+        "As unidades de 1 e 2 dormitórios respondem à demanda urbana da Freguesia do Ó, com eficiência e conexão com a cidade.",
+        "O terraço com churrasqueira e um conjunto de lazer amplo ampliam a experiência do morar no dia a dia.",
       ],
       cards: [
-        { label: "Status", value: "Em obra", text: "A operação avançou para execução após a consolidação da tese." },
-        { label: "Segmento", value: "Residencial", text: "Empreendimento voltado à demanda urbana da região." },
-        { label: "Localização", value: "Freguesia", text: "Região trabalhada como parte central da estratégia do produto." },
-        { label: "Modelo", value: "Sócia da operação", text: "Estruturação com parceiros e operação preparados pela Open Group." },
+        { label: "Tipologia", value: "1 e 2 dormitórios", text: "Plantas eficientes para diferentes perfis de moradia urbana." },
+        { label: "Endereço", value: "Rua Homero Francisco Terra", text: "Freguesia do Ó, zona norte de São Paulo." },
+        { label: "Lazer", value: "Beach club e sky lounge", text: "Aqua play, crossfit, cinema open, praça do fogo, pet place e playground." },
+        { label: "Experiência", value: "Terraço com churrasqueira", text: "A área privativa vira espaço de uso e convívio." },
       ],
     },
     galleryIntro: {
@@ -358,6 +374,12 @@ export const projetos: Projeto[] = [
       title: "Oh Freguesia traduz potencial em operação.",
       text: "Um empreendimento que nasce da inteligência de mercado e avança com produto e execução conectados.",
       ctaLabel: "Tenho interesse no empreendimento",
+      ctaHref: "https://www.tsengenharia.com/imovel/oh-freguesia/",
+    },
+    map: {
+      title: "Localização e entorno",
+      text: "Explore a localização do Oh Freguesia no Google Maps, com o empreendimento como ponto de referência.",
+      address: "Rua Homero Francisco Terra, Freguesia do Ó, São Paulo - SP",
     },
     gallery: [
       { id: "oh-freguesia-g1", alt: "Fachada / render principal" },
@@ -376,8 +398,8 @@ export const projetos: Projeto[] = [
     segmento: "Residencial", local: "Guarulhos · SP",
     modelo: "Sócia da operação",
     intro: [
-      "[PROVISÓRIO] A oportunidade em Guarulhos foi originada pela OGDI com base em leitura de mercado local e avaliação criteriosa do potencial de desenvolvimento da área.",
-      "[PROVISÓRIO] A operação está em estruturação: viabilidade em análise, parceiros sendo articulados e modelagem financeira em curso para alinhar capital e execução.",
+      "A oportunidade em Guarulhos foi originada pela Open Group com base em leitura de mercado local e avaliação criteriosa do potencial de desenvolvimento da área.",
+      "A operação está em estruturação: viabilidade em análise, parceiros sendo articulados e modelagem financeira em curso para alinhar capital e execução.",
     ],
     heroSummary:
       "Um futuro lançamento residencial em Guarulhos, em fase de estruturação de oportunidade, produto e viabilidade.",
@@ -444,50 +466,54 @@ export const projetos: Projeto[] = [
     slug: "hits-santa-catarina",
     tag: "Da concepção ao lançamento — operação entregue.",
     tone: "t1", ctaLabel: "Conheça o empreendimento",
-    image: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.png",
-    segmento: "Residencial", local: "Localização a confirmar", localTbd: true,
+    image: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.jpg",
+    segmento: "Residencial", local: "São Paulo · SP",
     modelo: "Sócia da operação",
     intro: [
-      "[PROVISÓRIO] O Hits Santa Catarina representa uma operação conduzida pela OGDI da concepção ao lançamento. A oportunidade foi lida na origem, o produto conceituado com base em inteligência de mercado.",
-      "[PROVISÓRIO] A estruturação reuniu viabilidade, parceiros e execução na mesma direção — permitindo que o empreendimento chegasse ao lançamento com a operação consolidada.",
-      "[PROVISÓRIO] O resultado é uma entrega que reflete o valor construído antes da obra: produto posicionado, operação estruturada, lançamento bem-sucedido.",
+      "O Hits Santa Catarina nasceu na Vila Santa Catarina, na zona sul de São Paulo — uma região em valorização contínua, com fácil acesso à Berrini e a importantes avenidas da capital.",
+      "A Open Group conduziu a operação da concepção ao lançamento: leitura da oportunidade, conceituação do produto — unidades de 1 e 2 dormitórios com terraço com churrasqueira — e estruturação com parceiros e viabilidade alinhados.",
+      "Entregue, o empreendimento traduz o valor construído antes da obra: produto posicionado, operação estruturada e execução concluída.",
     ],
     heroSummary:
-      "Uma operação residencial entregue, conduzida da concepção ao lançamento com produto, parceiros e execução alinhados.",
-    facts: ["Entregue", "Residencial", "Localização a confirmar", "Sócia da operação"],
+      "Um empreendimento residencial entregue na Vila Santa Catarina, na zona sul de São Paulo, com fácil acesso à Berrini e ao Morumbi.",
+    facts: ["Entregue", "1 e 2 dormitórios", "Terraço com churrasqueira", "Vila Santa Catarina - SP"],
+    regiao: "Vila Santa Catarina",
+    address: "Rua Oito de Março, 65",
+    units: "1 e 2 dormitórios",
+    unitFeature: "Terraço com churrasqueira",
     locationStory: {
       kicker: "A tese do lugar",
-      title: "A entrega começa antes da obra: na leitura da oportunidade.",
+      title: "Na Vila Santa Catarina, a leitura do lugar precedeu a obra.",
       body: [
-        "O Hits Santa Catarina representa uma operação já concluída, construída a partir da leitura inicial da oportunidade e da definição estratégica do produto.",
-        "Mesmo com a localização ainda pendente de detalhamento público neste cadastro, a narrativa do projeto segue o mesmo padrão: tese, produto, estruturação e entrega.",
-        "A página preserva a arquitetura completa para receber os dados finais sem alterar o modelo visual dos empreendimentos.",
+        "Na Rua Oito de Março, o Hits Santa Catarina está inserido em uma região em valorização contínua na zona sul de São Paulo, com fácil acesso à Berrini.",
+        "O endereço fica a cerca de 10 minutos do Morumbi Shopping, com diversas linhas de ônibus nas avenidas Santa Catarina, Cupecê e Washington Luís.",
+        "Essa combinação de localização e mobilidade orientou a tese do produto e sustentou a operação até a entrega.",
       ],
       highlights: [
-        { title: "Operação entregue", text: "Projeto conduzido da concepção ao lançamento, com ciclo estratégico completo." },
-        { title: "Produto posicionado", text: "A conceituação foi orientada por inteligência de mercado e viabilidade." },
-        { title: "Estrutura consolidada", text: "Parceiros, execução e lançamento foram organizados em uma mesma direção." },
+        { title: "Acesso à Berrini", text: "Conexão com um dos principais polos corporativos da cidade." },
+        { title: "Mobilidade consolidada", text: "Linhas de ônibus nas avenidas Santa Catarina, Cupecê e Washington Luís." },
+        { title: "Região em valorização", text: "Entorno com infraestrutura completa e valorização contínua." },
       ],
     },
     productStory: {
       kicker: "O produto como resposta",
-      title: "Um projeto entregue valida a estruturação feita na origem.",
+      title: "Um produto entregue valida a estruturação feita na origem.",
       body: [
-        "No Hits Santa Catarina, o valor foi construído antes da obra: na concepção do produto, na leitura da demanda e no alinhamento da operação.",
-        "A entrega evidencia o papel da Open Group em transformar oportunidade imobiliária em empreendimento lançado e consolidado.",
+        "As unidades de 1 e 2 dormitórios, com terraço com churrasqueira, responderam à demanda da zona sul com eficiência e localização conectada.",
+        "A entrega evidencia o papel da Open Group em transformar oportunidade em empreendimento lançado e concluído.",
       ],
       cards: [
-        { label: "Status", value: "Entregue", text: "Operação concluída e validada pelo avanço até o lançamento." },
-        { label: "Segmento", value: "Residencial", text: "Produto orientado para moradia e posicionamento de mercado." },
-        { label: "Localização", value: "A confirmar", text: "Campo preparado para receber o endereço definitivo quando informado." },
-        { label: "Modelo", value: "Sócia da operação", text: "Estruturação com parceiros, viabilidade e execução conectados." },
+        { label: "Tipologia", value: "1 e 2 dormitórios", text: "Plantas eficientes com terraço com churrasqueira." },
+        { label: "Endereço", value: "Rua Oito de Março, 65", text: "Vila Santa Catarina, zona sul de São Paulo." },
+        { label: "Mobilidade", value: "Eixo Santa Catarina", text: "Fácil acesso à Berrini e a cerca de 10 min do Morumbi Shopping." },
+        { label: "Entrega", value: "Obra concluída", text: "Operação 100% entregue, do conceito ao lançamento." },
       ],
     },
     galleryIntro: {
       kicker: "Da concepção à entrega",
       title: "A galeria organiza a memória visual da operação.",
       body: [
-        "A seção mantém o espaço para apresentar materiais oficiais do empreendimento e reforçar o percurso entre concepção, lançamento e entrega.",
+        "As imagens apresentam o empreendimento entregue — fachada, áreas comuns e ambientes que materializam o produto conduzido pela Open Group da concepção ao lançamento.",
       ],
     },
     strategyStory: {
@@ -502,6 +528,12 @@ export const projetos: Projeto[] = [
       title: "Hits Santa Catarina é uma operação entregue.",
       text: "Um empreendimento que reflete o valor construído antes da obra: produto posicionado, operação estruturada e lançamento conduzido.",
       ctaLabel: "Tenho interesse no empreendimento",
+      ctaHref: "https://www.tsengenharia.com/imovel/hits-vila-santa-catarina/",
+    },
+    map: {
+      title: "Localização e entorno",
+      text: "Explore a localização do Hits Santa Catarina no Google Maps, com o empreendimento como ponto de referência.",
+      address: "Rua Oito de Março, 65, Vila Santa Catarina, São Paulo - SP",
     },
     gallery: [
       { id: "hits-santa-catarina-g1", alt: "Fachada / render principal" },

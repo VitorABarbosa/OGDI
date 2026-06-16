@@ -24,18 +24,17 @@ describe("EmpGaleria", () => {
     expect(screen.getByRole("dialog", { name: /Cine Open/i }).firstChild).toHaveStyle({ opacity: "0" });
   });
 
-  it("keeps gallery items in the same row at the same height", () => {
+  it("lays the gallery out as a 4-column grid mosaic with varied widths", () => {
     expect(hitsCupece).toBeDefined();
 
     render(<EmpGaleria p={hitsCupece!} />);
 
     const imageButtons = screen.getAllByRole("button", { name: /Abrir imagem/i });
 
-    expect(imageButtons[0]).toHaveClass("h-[clamp(340px,36vw,540px)]");
-    expect(imageButtons[1]).toHaveClass("h-[clamp(340px,36vw,540px)]");
-    expect(imageButtons[2]).toHaveClass("h-[clamp(280px,30vw,440px)]");
-    expect(imageButtons[3]).toHaveClass("h-[clamp(280px,30vw,440px)]");
-    expect(imageButtons[4]).toHaveClass("h-[clamp(280px,30vw,440px)]");
+    // Grade de 4 colunas (md+): larguras variam por linha via col-span do padrão.
+    expect(imageButtons[0]).toHaveClass("md:col-span-2");
+    expect(imageButtons[1]).toHaveClass("md:col-span-1");
+    expect(imageButtons[5]).toHaveClass("md:col-span-2");
   });
 
   it("renders the Cupece gallery narrative header", () => {

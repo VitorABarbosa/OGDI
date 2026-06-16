@@ -8,7 +8,6 @@ import { EmpGaleria } from "./EmpGaleria";
 import { EmpAtuacao } from "./EmpAtuacao";
 import { EmpProximos } from "./EmpProximos";
 import { EmpLocationStory } from "./EmpLocationStory";
-import { EmpProductStory } from "./EmpProductStory";
 import { EmpClosing } from "./EmpClosing";
 
 const projeto = projetos[0];
@@ -21,11 +20,14 @@ describe("Empreendimento page reveals", () => {
     expect(screen.getByRole("heading", { name: projeto.name, level: 1 })).toHaveClass("reveal", "reveal-3");
   });
 
-  it("marks project info layers for reveal animation", () => {
-    render(<EmpInfo p={projeto} />);
+  it("marks project info and merged product layers for reveal animation", () => {
+    const { container } = render(<EmpInfo p={projeto} />);
 
     expect(screen.getByText("Status").closest("div")).toHaveClass("reveal");
     expect(screen.getByRole("heading", { name: /Da leitura/i, level: 2 })).toHaveClass("reveal", "reveal-2");
+    // "O produto como resposta" vive na mesma seção como coda: rótulo + 4 facetas marcadas para reveal.
+    expect(screen.getByText("O produto como resposta")).toBeInTheDocument();
+    expect(container.querySelectorAll(".reveal-step")).toHaveLength(4);
   });
 
   it("marks gallery cells for scroll reveal animation", () => {
@@ -56,14 +58,10 @@ describe("Empreendimento page reveals", () => {
     expect(screen.getByRole("heading", { name: /Outros empreendimentos/i })).toHaveClass("reveal", "reveal-2");
   });
 
-  it("marks narrative sections for layered reveal animation", () => {
+  it("marks the location narrative for layered reveal animation", () => {
     const { container: location } = render(<EmpLocationStory p={projeto} />);
     expect(location.querySelectorAll(".reveal-step")).toHaveLength(3);
     expect(screen.getByRole("heading", { name: /leitura do território/i })).toHaveClass("reveal", "reveal-2");
-
-    const { container: product } = render(<EmpProductStory p={projeto} />);
-    expect(product.querySelectorAll(".reveal-step")).toHaveLength(4);
-    expect(screen.getByRole("heading", { name: /Tipologias pensadas/i })).toHaveClass("reveal", "reveal-2");
   });
 
   it("marks the closing synthesis for reveal animation", () => {
