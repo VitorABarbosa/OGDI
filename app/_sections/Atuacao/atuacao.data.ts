@@ -19,4 +19,4 @@ export const atuacaoSteps: AtuacaoStep[] = [
 // Investidores mostra só a fase pré-obra (1–7): Leitura → Início de obras.
 export const investidoresSteps: AtuacaoStep[] = atuacaoSteps.slice(0, 7);
 // chaves de tag → home.atuacao.tags.* (consumidas pela home)
-export const atuacaoTagKeys = ["consultoria", "parceria", "societaria"] as const;
+export const atuacaoTagKeys = ["consultoria", "parceria", "societaria", "investimento"] as const;
