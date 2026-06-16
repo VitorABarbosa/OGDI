@@ -48,7 +48,7 @@
           "meta": {
             "status": "Delivered",
             "segmento": "Residential",
-            "local": "Location TBC"
+            "local": "São Paulo · SP"
           },
           "sign": "OGDI partner in the venture — from concept to launch."
         },
@@ -424,7 +424,7 @@
       "hits-santa-catarina": {
         "status": "Delivered",
         "segmento": "Residential",
-        "local": "Location TBC"
+        "local": "São Paulo · SP"
       }
     },
     "cta": {
@@ -972,7 +972,9 @@
       "cta": "I'm interested"
     },
     "gallery": {
-      "aria": "Image gallery"
+      "aria": "Image gallery",
+      "showMore": "Show more images",
+      "showLess": "Show less"
     },
     "atuacao": {
       "kicker": "Open Group's role",

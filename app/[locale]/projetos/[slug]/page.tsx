@@ -6,7 +6,6 @@ import { EmpHero } from "@/app/_sections/EmpreendimentoPage/EmpHero";
 import { EmpInfo } from "@/app/_sections/EmpreendimentoPage/EmpInfo";
 import { EmpLocationStory } from "@/app/_sections/EmpreendimentoPage/EmpLocationStory";
 import { EmpExperienceFlow } from "@/app/_sections/EmpreendimentoPage/EmpExperienceFlow";
-import { EmpProductStory } from "@/app/_sections/EmpreendimentoPage/EmpProductStory";
 import { EmpGaleria } from "@/app/_sections/EmpreendimentoPage/EmpGaleria";
 import { EmpAtuacao } from "@/app/_sections/EmpreendimentoPage/EmpAtuacao";
 import { EmpNeighborhoodMap } from "@/app/_sections/EmpreendimentoPage/EmpNeighborhoodMap";
@@ -59,7 +58,6 @@ export default async function Page({
         <EmpInfo p={p} {...listing} />
         <EmpLocationStory p={p} />
         <div data-flow-base>
-          <EmpProductStory p={p} />
           <EmpGaleria p={p} />
           <EmpAtuacao p={p} />
         </div>

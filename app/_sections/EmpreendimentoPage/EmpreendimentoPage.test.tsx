@@ -3,14 +3,15 @@ import { screen } from "@testing-library/react";
 import { renderWithIntl as render } from "@/test/intl";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
 import { EmpHero } from "./EmpHero";
+import { EmpInfo } from "./EmpInfo";
 import { EmpLocationStory } from "./EmpLocationStory";
-import { EmpProductStory } from "./EmpProductStory";
 import { EmpAtuacao } from "./EmpAtuacao";
 import { EmpClosing } from "./EmpClosing";
 import { EmpNeighborhoodMap } from "./EmpNeighborhoodMap";
 
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
-const startPark = projetos.find((p) => p.slug === "start-park-jabaquara");
+// Guarulhos (futuro lançamento) é o caso sem `map` — usado p/ testar o placeholder.
+const semMapa = projetos.find((p) => p.slug === "guarulhos");
 
 describe("Empreendimento page data", () => {
   it("does not keep the duplicate standalone Cupece project", () => {
@@ -43,7 +44,7 @@ describe("Empreendimento page data", () => {
     expect(hitsCupece?.closingStatement?.ctaHref).toBe("https://www.tsengenharia.com/imovel/hits-cupece/");
     expect(hitsCupece?.map?.center).toEqual({ lat: -23.6730382, lng: -46.6513232 });
     expect(hitsCupece?.map?.categories).toHaveLength(5);
-    expect(hitsCupece?.map?.points.length).toBeGreaterThanOrEqual(10);
+    expect(hitsCupece?.map?.points?.length).toBeGreaterThanOrEqual(10);
   });
 
   it("provides the narrative page standard for every registered project", () => {
@@ -90,13 +91,14 @@ describe("Empreendimento page data", () => {
     expect(screen.getByText("Cotidiano conveniente")).toBeInTheDocument();
   });
 
-  it("renders the Cupece product response section", () => {
+  it("renders the Cupece product response merged into the empreendimento section", () => {
     expect(hitsCupece).toBeDefined();
 
-    render(<EmpProductStory p={hitsCupece!} />);
+    render(<EmpInfo p={hitsCupece!} />);
 
+    // Cabeçalho da seção unificada + coda do produto (rótulo + facetas).
+    expect(screen.getByRole("heading", { name: /Da leitura/i, level: 2 })).toBeInTheDocument();
     expect(screen.getByText("O produto como resposta")).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /Tipologias pensadas/i })).toHaveClass("reveal", "reveal-2");
     expect(screen.getByText("Rua Dom João Soares Coelho")).toBeInTheDocument();
     expect(screen.getByText("Terraço com churrasqueira")).toBeInTheDocument();
   });
@@ -135,13 +137,13 @@ describe("Empreendimento page data", () => {
   });
 
   it("renders the standard map placeholder when the project location is not configured", () => {
-    expect(startPark).toBeDefined();
+    expect(semMapa).toBeDefined();
 
-    render(<EmpNeighborhoodMap p={startPark!} />);
+    render(<EmpNeighborhoodMap p={semMapa!} />);
 
     expect(screen.getByRole("heading", { name: /Localização em definição/i })).toBeInTheDocument();
     expect(screen.getByText("Endereço em definição")).toBeInTheDocument();
     expect(screen.getByText(/será ativado com Google Maps/i)).toBeInTheDocument();
-    expect(screen.queryByTitle("Google Maps - Start Park Jabaquara")).not.toBeInTheDocument();
+    expect(screen.queryByTitle("Google Maps - Guarulhos")).not.toBeInTheDocument();
   });
 });

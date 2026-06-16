@@ -48,7 +48,7 @@
           "meta": {
             "status": "Entregue",
             "segmento": "Residencial",
-            "local": "Localização a confirmar"
+            "local": "São Paulo · SP"
           },
           "sign": "OGDI sócia da operação — da concepção ao lançamento."
         },
@@ -424,7 +424,7 @@
       "hits-santa-catarina": {
         "status": "Entregue",
         "segmento": "Residencial",
-        "local": "Localização a confirmar"
+        "local": "São Paulo · SP"
       }
     },
     "cta": {
@@ -972,7 +972,9 @@
       "cta": "Tenho interesse"
     },
     "gallery": {
-      "aria": "Galeria de imagens"
+      "aria": "Galeria de imagens",
+      "showMore": "Mostrar mais imagens",
+      "showLess": "Mostrar menos"
     },
     "atuacao": {
       "kicker": "A atuação da Open Group",
