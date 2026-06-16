@@ -1,13 +1,22 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Kicker } from "@/components/ui/Kicker";
+import { cn } from "@/lib/cn";
+import styles from "./ClientesPerguntas.module.css";
 
-const ids = ["01", "02", "03", "04"] as const;
+// 8 perguntas em duas colunas de accordion (4 + 4). Uma resposta aberta por vez;
+// fechadas por padrão para manter a seção compacta.
+const columns = [
+  ["01", "02", "03", "04"],
+  ["05", "06", "07", "08"],
+] as const;
 
-// Perguntas de quem chega — respostas curtas e diretas, sem acordeão:
-// tudo visível, no espírito editorial do site.
-export async function ClientesPerguntas() {
-  const t = await getTranslations("clientes.perguntas");
+export function ClientesPerguntas() {
+  const t = useTranslations("clientes.perguntas");
+  const [open, setOpen] = useState<string | null>(null);
+
   return (
     <section id="clientes-perguntas" className="bg-bg-soft-2 py-[clamp(80px,10vw,148px)]">
       <div className="wrap">
@@ -29,13 +38,31 @@ export async function ClientesPerguntas() {
           </p>
         </div>
 
-        <div className="reveal reveal-2 mt-[clamp(40px,5vw,64px)] grid grid-cols-1 gap-x-[clamp(40px,5vw,88px)] gap-y-[clamp(28px,3.4vw,44px)] md:grid-cols-2">
-          {ids.map((id) => (
-            <div key={id} className="border-t border-[color:var(--line)] pt-[clamp(20px,2.4vw,28px)]">
-              <h3 className="font-sans font-semibold text-[clamp(16.5px,1.3vw,20px)] leading-[1.3] tracking-[-.015em] text-ink">
-                {t(`items.${id}.q`)}
-              </h3>
-              <p className="mt-3 max-w-[52ch] text-[14px] leading-[1.62] text-ink-2">{t(`items.${id}.a`)}</p>
+        <div className="reveal reveal-2 mt-[clamp(40px,5vw,64px)] grid grid-cols-1 items-start gap-x-[clamp(40px,5vw,80px)] md:grid-cols-2">
+          {columns.map((col, ci) => (
+            <div key={ci}>
+              {col.map((id) => {
+                const isOpen = open === id;
+                return (
+                  <div key={id} className={cn(styles.item, isOpen && styles.open)}>
+                    <button
+                      type="button"
+                      className={styles.q}
+                      aria-expanded={isOpen}
+                      aria-controls={`faq-${id}`}
+                      onClick={() => setOpen(isOpen ? null : id)}
+                    >
+                      <span>{t(`items.${id}.q`)}</span>
+                      <i aria-hidden className={styles.chev} />
+                    </button>
+                    <div id={`faq-${id}`} role="region" className={styles.panel}>
+                      <div>
+                        <p>{t(`items.${id}.a`)}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           ))}
         </div>

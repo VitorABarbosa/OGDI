@@ -1,0 +1,94 @@
+/* Accordion do FAQ — clique expande a resposta; transição fluida via grid-rows. */
+.item {
+  border-top: 1px solid var(--line);
+}
+.item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: clamp(15px, 1.8vw, 21px) 2px;
+  background: none;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  color: var(--color-ink);
+}
+.q span {
+  font-weight: 600;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.32;
+  letter-spacing: -0.015em;
+  transition: color 0.35s var(--ease-brand);
+}
+.open .q span {
+  color: var(--color-teal);
+}
+
+/* chevron (V que gira para ^) */
+.chev {
+  position: relative;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.42s var(--ease-brand);
+}
+.chev::before,
+.chev::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 1.5px;
+  background: var(--color-ink-2);
+  transition: background-color 0.35s var(--ease-brand);
+}
+.chev::before {
+  left: 1px;
+  transform: rotate(45deg);
+}
+.chev::after {
+  right: 1px;
+  transform: rotate(-45deg);
+}
+.open .chev {
+  transform: rotate(180deg);
+}
+.open .chev::before,
+.open .chev::after {
+  background: var(--color-teal);
+}
+
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.42s var(--ease-brand);
+}
+.open .panel {
+  grid-template-rows: 1fr;
+}
+.panel > div {
+  overflow: hidden;
+}
+.panel p {
+  max-width: 58ch;
+  padding: 0 2px clamp(16px, 1.8vw, 22px);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-ink-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .q span,
+  .chev,
+  .chev::before,
+  .chev::after,
+  .panel {
+    transition: none;
+  }
+}

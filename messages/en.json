@@ -576,24 +576,40 @@
     },
     "perguntas": {
       "kicker": "Frequent questions",
-      "heading": "What those who arrive<br></br>usually ask.",
+      "heading": "What we're<br></br>asked most.",
       "asideText": "Didn't find your question? <link>Talk to the team</link>.",
       "items": {
         "01": {
           "q": "How does a relationship with Open Group begin?",
-          "a": "With the presentation of the opportunity — the asset, the land or the project. The team makes the first reading and returns with the possible next steps."
+          "a": "With the presentation of the opportunity — an asset, a plot, or a project. Open Group makes a first reading of the potential, the stage, and the market context and, from there, points out the next steps: deepening the analysis, structuring the venture, or assessing an engagement model together."
         },
         "02": {
-          "q": "Does Open Group carry out construction?",
-          "a": "No. Execution belongs to the building partners — Open Group structures and guides the venture, connecting the right roles at each stage."
+          "q": "Who does Open Group work with?",
+          "a": "With builders, developers, landowners, companies holding real estate assets, and investors — players who have an opportunity, an asset, or capital and need to turn it into a venture. The focus is B2B: those who need to structure potential so the development moves forward with consistency, not the end buyer."
         },
         "03": {
-          "q": "At what point does capital enter the venture?",
-          "a": "At structuring, before launch — the phase in which value is created. The participation models are detailed on the investors page."
+          "q": "Is Open Group a consultancy or a developer?",
+          "a": "A real estate structuring and development company. Depending on the project, it acts as contracted consulting, a strategic partner, or a co-owner of the venture — but in every case it goes beyond advising: it takes part in building the development, connecting feasibility, partners, the bank, and commercial strategy through to launch."
         },
         "04": {
+          "q": "How far does Open Group take the development?",
+          "a": "From reading the opportunity and conceiving the product to structuring the venture, financial and institutional feasibility, bringing partners together, bank relationships, and commercial strategy — all the way to the path to launch. On applicable projects, this guidance extends to signing with Caixa Econômica Federal (Brazil's federal bank), according to scope and stage."
+        },
+        "05": {
+          "q": "How is an opportunity assessed?",
+          "a": "By reading the asset and its real potential, the market context, feasibility, the stage of the opportunity, the partners required, and the institutional path. From that diagnosis, we define whether there is structure to develop the venture and which engagement model best fits its progress."
+        },
+        "06": {
+          "q": "What kind of project does Open Group take on?",
+          "a": "Opportunities with potential for structuring and development — especially when feasibility, partners, the bank, commercial strategy, and the path to launch need to be organized. Each case is assessed by stage, complexity, and market potential, which also defines the most suitable engagement model."
+        },
+        "07": {
+          "q": "At what point does capital enter the venture?",
+          "a": "At the structuring stage, before launch — when the development's value is actually created. It is also where an investor can take part in a venture that is already organized, with a thesis, partners, and a defined path. The participation models are detailed on the investors page."
+        },
+        "08": {
           "q": "Can the scope grow over the course of the venture?",
-          "a": "Yes. The relationship can begin as contracted consulting and evolve into a strategic partnership or partnership in the venture, as it makes sense for both sides."
+          "a": "Yes. The relationship can begin as contracted consulting and evolve into a strategic partnership or partnership in the venture, according to the project's stage and what makes sense for both sides. The engagement model follows the opportunity — not the other way around."
         }
       }
     },
@@ -650,7 +666,7 @@
     "modelos": {
       "kicker": "Participation models",
       "heading": "Structures defined<br></br>by the venture — not the other way around.",
-      "footer": "Each structure is defined case by case, according to the venture — with no promise of results.",
+      "footer": "Each structure is defined case by case, according to the venture.",
       "items": {
         "scp": {
           "sigla": "SCP",

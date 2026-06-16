@@ -576,24 +576,40 @@
     },
     "perguntas": {
       "kicker": "Preguntas frecuentes",
-      "heading": "Lo que quienes llegan<br></br>suelen preguntar.",
+      "heading": "Lo que más<br></br>nos preguntan.",
       "asideText": "¿No encontró su pregunta? <link>Hable con el equipo</link>.",
       "items": {
         "01": {
           "q": "¿Cómo comienza una relación con Open Group?",
-          "a": "Con la presentación de la oportunidad — el activo, el terreno o el proyecto. El equipo realiza la primera lectura y responde con los próximos pasos posibles."
+          "a": "Con la presentación de la oportunidad — un activo, un terreno o un proyecto. Open Group hace una primera lectura del potencial, la etapa y el contexto de mercado y, a partir de ella, indica los próximos pasos: profundizar el análisis, estructurar la operación o evaluar un modelo de actuación en conjunto."
         },
         "02": {
-          "q": "¿Open Group ejecuta la obra?",
-          "a": "No. La ejecución es de los socios constructores — Open Group estructura y conduce la operación, conectando los roles adecuados en cada etapa."
+          "q": "¿Con quién trabaja Open Group?",
+          "a": "Con constructoras, desarrolladoras, dueños de terrenos, empresas con activos inmobiliarios e inversores — players que tienen una oportunidad, un activo o capital y necesitan convertirlo en operación. El foco es B2B: quienes necesitan estructurar potencial para que el emprendimiento avance con consistencia, no el comprador final."
         },
         "03": {
-          "q": "¿En qué momento el capital entra en la operación?",
-          "a": "En la estructuración, antes del lanzamiento — la fase en que se crea el valor. Los modelos de participación están detallados en la página de inversores."
+          "q": "¿Open Group es una consultoría o una desarrolladora?",
+          "a": "Una empresa de estructuración y desarrollo inmobiliario. Según el proyecto, actúa como consultoría contratada, socia estratégica o socia de la operación — pero en todos los casos va más allá de orientar: participa de la construcción del emprendimiento, conectando viabilidad, socios, banco y estrategia comercial hasta el lanzamiento."
         },
         "04": {
+          "q": "¿Hasta qué etapa Open Group conduce el emprendimiento?",
+          "a": "Desde la lectura de la oportunidad y la concepción del producto hasta la estructuración de la operación, la viabilidad financiera e institucional, la articulación de socios, la relación con el banco y la estrategia comercial — hasta el camino del lanzamiento. En proyectos aplicables, la conducción avanza hasta la firma con la Caixa Econômica Federal, según el alcance y la etapa."
+        },
+        "05": {
+          "q": "¿Cómo se evalúa una oportunidad?",
+          "a": "Por la lectura del activo y de su potencial real, del contexto de mercado, de la viabilidad, de la etapa de la oportunidad, de los socios necesarios y del camino institucional. A partir de ese diagnóstico, definimos si hay estructura para desarrollar la operación y qué modelo de actuación tiene más sentido para que avance."
+        },
+        "06": {
+          "q": "¿En qué tipo de proyecto entra Open Group?",
+          "a": "En oportunidades con potencial de estructuración y desarrollo — sobre todo cuando hay que organizar viabilidad, socios, banco, estrategia comercial y el camino hasta el lanzamiento. Cada caso se analiza por etapa, complejidad y potencial de mercado, lo que también define el modelo de actuación más adecuado."
+        },
+        "07": {
+          "q": "¿En qué momento el capital entra en la operación?",
+          "a": "En la fase de estructuración, antes del lanzamiento — cuando el valor del emprendimiento se crea efectivamente. Es también donde el inversor puede participar de una operación ya organizada, con tesis, socios y camino definidos. Los modelos de participación están detallados en la página de inversores."
+        },
+        "08": {
           "q": "¿El alcance puede crecer a lo largo de la operación?",
-          "a": "Sí. La relación puede comenzar como consultoría contratada y evolucionar hacia una alianza estratégica o sociedad en la operación, según tenga sentido para ambas partes."
+          "a": "Sí. La relación puede comenzar como consultoría contratada y evolucionar hacia una alianza estratégica o sociedad en la operación, según la etapa del proyecto y lo que tenga sentido para ambas partes. El modelo de actuación acompaña a la oportunidad — no al revés."
         }
       }
     },
@@ -650,7 +666,7 @@
     "modelos": {
       "kicker": "Modelos de participación",
       "heading": "Estructuras definidas<br></br>por la operación — no al revés.",
-      "footer": "Cada estructura se define caso por caso, según la operación — sin promesa de resultado.",
+      "footer": "Cada estructura se define caso por caso, según la operación.",
       "items": {
         "scp": {
           "sigla": "SCP",
