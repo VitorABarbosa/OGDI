@@ -116,8 +116,12 @@ export function Projetos() {
               />
             ))}
           </div>
-          <button onClick={prev} aria-label={t("prev")} className="absolute z-[5] top-1/2 -translate-y-1/2 left-[18px] w-[clamp(40px,3.4vw,54px)] h-[clamp(40px,3.4vw,54px)] flex items-center justify-center text-white opacity-75 hover:opacity-100"><Icon name="chevron-left" className="w-[26px] h-[26px]" /></button>
-          <button onClick={next} aria-label={t("next")} className="absolute z-[5] top-1/2 -translate-y-1/2 right-[18px] w-[clamp(40px,3.4vw,54px)] h-[clamp(40px,3.4vw,54px)] flex items-center justify-center text-white opacity-75 hover:opacity-100"><Icon name="chevron-right" className="w-[26px] h-[26px]" /></button>
+          {/* Setas ancoradas às bordas do card central (largura = basis do card),
+              não às bordas full-bleed da tela. */}
+          <div className="pointer-events-none absolute inset-y-0 left-1/2 z-[5] w-[78%] -translate-x-1/2 max-md:w-[86%]">
+            <button onClick={prev} aria-label={t("prev")} className="pointer-events-auto absolute top-1/2 left-[clamp(8px,1.2vw,18px)] flex h-[clamp(40px,3.4vw,54px)] w-[clamp(40px,3.4vw,54px)] -translate-y-1/2 items-center justify-center text-white opacity-100"><Icon name="chevron-left" className="w-[26px] h-[26px]" /></button>
+            <button onClick={next} aria-label={t("next")} className="pointer-events-auto absolute top-1/2 right-[clamp(8px,1.2vw,18px)] flex h-[clamp(40px,3.4vw,54px)] w-[clamp(40px,3.4vw,54px)] -translate-y-1/2 items-center justify-center text-white opacity-100"><Icon name="chevron-right" className="w-[26px] h-[26px]" /></button>
+          </div>
           <div className="absolute inset-x-0 bottom-[clamp(18px,2.4vw,30px)] z-[5] flex justify-center gap-[9px]">
             {list.map((_, i) => (
               <button key={i} onClick={() => goTo(i)} aria-label={t("goTo", { n: i + 1 })}
