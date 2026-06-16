@@ -576,24 +576,40 @@
     },
     "perguntas": {
       "kicker": "Perguntas frequentes",
-      "heading": "O que quem chega<br></br>costuma perguntar.",
+      "heading": "O que mais<br></br>nos perguntam.",
       "asideText": "Não achou a sua pergunta? <link>Fale com a equipe</link>.",
       "items": {
         "01": {
           "q": "Como começa uma relação com a Open Group?",
-          "a": "Com a apresentação da oportunidade — o ativo, o terreno ou o projeto. A equipe faz a primeira leitura e retorna com os próximos passos possíveis."
+          "a": "Com a apresentação da oportunidade — um ativo, um terreno ou um projeto. A Open Group faz uma primeira leitura do potencial, do estágio e do contexto de mercado e, a partir dela, indica os próximos passos: aprofundar a análise, estruturar a operação ou avaliar um modelo de atuação em conjunto."
         },
         "02": {
-          "q": "A Open Group executa a obra?",
-          "a": "Não. A execução é dos parceiros construtores — a Open Group estrutura e conduz a operação, conectando os papéis certos em cada etapa."
+          "q": "Com quem a Open Group trabalha?",
+          "a": "Com construtoras, incorporadoras, donos de terrenos, empresas com ativos imobiliários e investidores — players que têm uma oportunidade, um ativo ou capital e precisam transformá-los em operação. O foco é B2B: quem precisa estruturar potencial para o empreendimento avançar com consistência, não o comprador final."
         },
         "03": {
-          "q": "Em que momento o capital entra na operação?",
-          "a": "Na estruturação, antes do lançamento — a fase em que o valor é criado. Os modelos de participação estão detalhados na página de investidores."
+          "q": "A Open Group é uma consultoria ou uma desenvolvedora?",
+          "a": "Uma empresa de estruturação e desenvolvimento imobiliário. Conforme o projeto, atua como consultoria contratada, parceira estratégica ou sócia da operação — mas em todos os casos vai além de orientar: participa da construção do empreendimento, conectando viabilidade, parceiros, banco e estratégia comercial até o lançamento."
         },
         "04": {
+          "q": "Até que etapa a Open Group conduz o empreendimento?",
+          "a": "Da leitura da oportunidade e concepção do produto à estruturação da operação, viabilidade financeira e institucional, articulação de parceiros, relacionamento com banco e estratégia comercial — até o caminho do lançamento. Em projetos aplicáveis, a condução avança até a assinatura com a Caixa Econômica Federal, conforme o escopo e o estágio."
+        },
+        "05": {
+          "q": "Como uma oportunidade é avaliada?",
+          "a": "Pela leitura do ativo e do seu potencial real, do contexto de mercado, da viabilidade, do estágio da oportunidade, dos parceiros necessários e do caminho institucional. A partir desse diagnóstico, definimos se há estrutura para desenvolver a operação e qual modelo de atuação faz mais sentido para ela avançar."
+        },
+        "06": {
+          "q": "Em que tipo de projeto a Open Group entra?",
+          "a": "Em oportunidades com potencial de estruturação e desenvolvimento — sobretudo quando é preciso organizar viabilidade, parceiros, banco, estratégia comercial e o caminho até o lançamento. Cada caso é analisado por estágio, complexidade e potencial de mercado, o que também define o modelo de atuação mais adequado."
+        },
+        "07": {
+          "q": "Em que momento o capital entra na operação?",
+          "a": "Na fase de estruturação, antes do lançamento — quando o valor do empreendimento é efetivamente criado. É também aí que o investidor pode participar de uma operação já organizada, com tese, parceiros e caminho definidos. Os modelos de participação estão detalhados na página de investidores."
+        },
+        "08": {
           "q": "O escopo pode crescer ao longo da operação?",
-          "a": "Sim. A relação pode começar como consultoria contratada e evoluir para parceria estratégica ou sociedade na operação, conforme fizer sentido para os dois lados."
+          "a": "Sim. A relação pode começar como consultoria contratada e evoluir para parceria estratégica ou sociedade na operação, conforme o estágio do projeto e o que faz sentido para os dois lados. O modelo de atuação acompanha a oportunidade — não o contrário."
         }
       }
     },
@@ -650,7 +666,7 @@
     "modelos": {
       "kicker": "Modelos de participação",
       "heading": "Estruturas definidas<br></br>pela operação — não o contrário.",
-      "footer": "Cada estrutura é definida caso a caso, conforme a operação — sem promessa de resultado.",
+      "footer": "Cada estrutura é definida caso a caso, conforme a operação.",
       "items": {
         "scp": {
           "sigla": "SCP",
