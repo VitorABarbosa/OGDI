@@ -1,8 +1,8 @@
 {
   "nav": {
-    "institucional": "Institucional",
+    "home": "Home",
+    "institucional": "La OGDI",
     "projetos": "Proyectos",
-    "clientes": "Clientes",
     "investidores": "Inversores",
     "insights": "Insights",
     "contato": "Contacto"
@@ -83,7 +83,7 @@
     },
     "projetos": {
       "kicker": "Proyectos",
-      "heading": "Estructurados antes de la obra.<br></br>Emprendimientos que avanzan.",
+      "heading": "Emprendimientos que avanzan.",
       "prev": "Anterior",
       "next": "Siguiente",
       "goTo": "Ir a {n}",
@@ -123,8 +123,8 @@
     },
     "atuacao": {
       "kicker": "Nuestra actuación",
-      "heading": "Del origen<br></br>al lanzamiento.",
-      "intro": "Open Group no solo participa en proyectos — estructura la oportunidad inmobiliaria, organizando potencial, capital, socios y ejecución en la misma dirección.",
+      "heading": "Del origen<br></br>a la entrega de llaves.",
+      "intro": "Open Group actúa desde la lectura de la oportunidad hasta la entrega de llaves, estructurando cada etapa para que producto, capital, socios y ejecución avancen juntos.",
       "tags": {
         "consultoria": "Consultoría contratada",
         "parceria": "Alianza estratégica",
@@ -132,10 +132,6 @@
         "investimento": "Inversión SCP"
       },
       "steps": {
-        "10": {
-          "title": "Posentrega de llaves",
-          "desc": "Seguimiento posterior a la entrega, consolidando el valor generado por la operación."
-        },
         "01": {
           "title": "Lectura de la oportunidad",
           "desc": "Comprensión del activo, su etapa y su potencial real de desarrollo."
@@ -145,7 +141,7 @@
           "desc": "Contexto del mercado local, demanda y lectura competitiva que fundamentan la tesis."
         },
         "03": {
-          "title": "Viabilidad",
+          "title": "Estudio de viabilidad",
           "desc": "Análisis financiero e institucional que destraba el camino de la operación."
         },
         "04": {
@@ -157,18 +153,22 @@
           "desc": "Modelado de capital, fuentes de recursos y retorno alineados al potencial de la operación."
         },
         "06": {
-          "title": "Preparación para el lanzamiento",
+          "title": "Prelanzamiento",
           "desc": "Articulación de socios y relación con el banco, incluida la CEF cuando corresponda."
         },
         "07": {
-          "title": "Inicio de obras",
-          "desc": "Arranque de la ejecución, con la operación estructurada y los socios en campo."
-        },
-        "08": {
           "title": "Lanzamiento",
           "desc": "Entrada al mercado, con producto, narrativa y estrategia comercial listos."
         },
+        "08": {
+          "title": "Inicio de obras",
+          "desc": "Arranque de la ejecución, con la operación estructurada y los socios en campo."
+        },
         "09": {
+          "title": "Habite-se",
+          "desc": "Permiso que certifica la conclusión de la obra y autoriza la ocupación del emprendimiento."
+        },
+        "10": {
           "title": "Entrega de llaves",
           "desc": "Conclusión de la obra y entrega del emprendimiento terminado."
         }
@@ -178,6 +178,7 @@
       "kicker": "Modelos de actuación",
       "heading": "Actuación flexible según<br></br>el perfil de la oportunidad.",
       "intro": "Cada oportunidad exige una lógica propia. Open Group evalúa la etapa, el potencial y la complejidad de la operación para definir el modelo de actuación más adecuado.",
+      "cta": "Conozca Open Group",
       "cards": {
         "consultoria": {
           "idx": "i.",
@@ -211,11 +212,6 @@
       "body2": "Nuestro trabajo comienza antes de la obra: en la lectura de la oportunidad, en el análisis de viabilidad, en el diseño estratégico de la operación y en la articulación de los socios necesarios para que el proyecto avance con consistencia.",
       "body3": "Actuamos junto a constructoras, desarrolladoras, empresas con activos inmobiliarios e inversores, combinando visión estratégica, estructuración financiera e institucional, conexión con socios y conducción hasta las etapas críticas de mercado.",
       "cta": "Conocer la empresa"
-    },
-    "clientes": {
-      "kicker": "Clientes",
-      "heading": "Quiénes confían en<br></br>Open Group.",
-      "intro": "Desarrolladoras, constructoras, fondos y propietarios de terrenos que estructuraron sus operaciones con Open Group, del origen al lanzamiento."
     }
   },
   "institucional": {
@@ -229,15 +225,15 @@
       "assinatura": "Mensaje final"
     },
     "meta": {
-      "title": "Nosotros",
+      "title": "Qué hacemos",
       "description": "Open Group estructura y desarrolla emprendimientos inmobiliarios, conduciendo oportunidades de la conceptualización al lanzamiento. El valor nace antes de la obra."
     },
     "hero": {
       "breadcrumbHome": "Inicio",
-      "breadcrumbCurrent": "Nosotros",
-      "kicker": "Nosotros",
-      "title1": "Revelamos el valor <em>extraordinario</em>",
-      "title2": "de activos inmobiliarios.",
+      "breadcrumbCurrent": "Qué hacemos",
+      "kicker": "Qué hacemos",
+      "title1": "Revelamos el valor<br></br><em>extraordinario</em>",
+      "title2": "de oportunidades inmobiliarias.",
       "cue": "Conozca Open Group"
     },
     "about": {
@@ -268,7 +264,7 @@
     },
     "manifesto": {
       "eyebrow": "Manifiesto",
-      "thesis": "Muchas oportunidades inmobiliarias no fracasan por falta de <em>potencial</em>. Fracasan porque avanzan sin <em>estructura</em>.",
+      "thesis": "Muchas oportunidades inmobiliarias no fracasan por falta de <em>potencial</em>. Fracasan porque avanzan sin <em>estructura</em> y <keep>por falta de <em>visión</em></keep>.",
       "elaboration": "Un área prometedora, un proyecto bien ubicado o una oportunidad de mercado no se sostienen por sí solos. Sin visión estratégica, viabilidad clara, los socios correctos y una conducción precisa, el potencial se dispersa antes de convertirse en emprendimiento.",
       "bridgeLabel": "El valor nace antes de la obra",
       "bridge": "Open Group cree que el valor de un emprendimiento nace <em>antes de la obra</em>.",
@@ -307,7 +303,7 @@
       "leaders": {
         "max": {
           "role": "CEO y Fundador",
-          "statement": "Antes de desarrollar un emprendimiento, hay que ver el valor que aún no se ha revelado.",
+          "statement": "Antes de desarrollar un emprendimiento, hay que ver el <em>valor</em> que aún no se ha revelado.",
           "quote1": "Al frente de Open Group, Flying Studio, NID Studio y Rinno Films, conduzco un ecosistema creado para transformar oportunidades inmobiliarias en operaciones más claras, viables y preparadas para avanzar.",
           "quote2": "Cada empresa actúa en una etapa de la jornada, de la estrategia a la comunicación, siempre con la misma visión: desarrollar con estructura desde el origen."
         }
@@ -316,7 +312,7 @@
     "grupo": {
       "kicker": "Nuestro Grupo",
       "heading": "Nuestro Grupo",
-      "intro": "Estrategia, arquitectura, visualización y audiovisual operan como fuerzas complementarias. Cada empresa profundiza una etapa de la jornada: estructurar, diseñar, anticipar y comunicar.",
+      "intro": "Estrategia, arquitectura, tecnología y audiovisual operan como fuerzas complementarias. Cada empresa profundiza una etapa de la jornada: estructurar, diseñar, anticipar y comunicar.",
       "visitLink": "Visitar sitio ↗",
       "visitAria": "{name} — visitar sitio",
       "companies": {
@@ -362,7 +358,7 @@
     "assinatura": {
       "kicker": "Mensaje central",
       "heading": "Transformamos oportunidades en<br></br><em>emprendimientos listos para avanzar</em>.",
-      "sub": "Conduciendo estructuración, viabilidad, socios y camino hasta el lanzamiento, con visión estratégica. Desarrolle con visión desde el origen.",
+      "sub": "Avancemos juntos...?",
       "ctaProjetos": "Ver los proyectos",
       "ctaContato": "Hablar con Open Group"
     }
@@ -433,193 +429,6 @@
       "ctaLabel": "Presentar oportunidad"
     }
   },
-  "clientes": {
-    "meta": {
-      "title": "Clientes",
-      "description": "Desarrolladores, constructoras, fondos y propietarios de terreno que estructuran sus operaciones con Open Group — del origen al lanzamiento."
-    },
-    "rail": {
-      "ariaLabel": "Navegación visual de la página de clientes",
-      "inicio": "Inicio",
-      "perfis": "Perfiles",
-      "relacao": "Formas de relación",
-      "compromissos": "Compromisos",
-      "operacoes": "Operaciones",
-      "perguntas": "Preguntas",
-      "contato": "Contacto"
-    },
-    "hero": {
-      "kicker": "Clientes",
-      "title": "Cada operación nace de<br></br><em>una relación de confianza</em>.",
-      "indice": {
-        "01": {
-          "title": "Desarrolladores",
-          "hint": "Estructuración y conducción de operaciones"
-        },
-        "02": {
-          "title": "Constructoras",
-          "hint": "Originación y previsibilidad"
-        },
-        "03": {
-          "title": "Fondos e inversores",
-          "hint": "Capital antes del lanzamiento"
-        },
-        "04": {
-          "title": "Propietarios de terreno",
-          "hint": "El terreno como capital"
-        }
-      },
-      "breadcrumbHome": "Inicio",
-      "breadcrumbCurrent": "Clientes"
-    },
-    "perfis": {
-      "kicker": "Para quién trabajamos",
-      "heading": "Cuatro perfiles,<br></br>la misma conducción.",
-      "items": {
-        "01": {
-          "title": "Desarrolladores",
-          "desc": "Estructuración y conducción de operaciones — de la lectura de la oportunidad y la viabilidad a la preparación para el lanzamiento.",
-          "entregas": [
-            "Lectura de la oportunidad y viabilidad",
-            "Estructuración de la operación",
-            "Conducción hasta el lanzamiento"
-          ],
-          "cta": "Operaciones conducidas"
-        },
-        "02": {
-          "title": "Constructoras",
-          "desc": "Originación calificada y operaciones estructuradas, con roles e hitos definidos, para construir con previsibilidad.",
-          "entregas": [
-            "Originación calificada",
-            "Roles e hitos en contrato",
-            "Conexión con socios y banco"
-          ],
-          "cta": "Conozca el grupo"
-        },
-        "03": {
-          "title": "Fondos e inversores",
-          "desc": "El capital calificado entra antes del lanzamiento, en estructuras definidas por la operación — SCP, permuta o coinversión.",
-          "entregas": [
-            "Tesis y ciclo de la operación",
-            "SCP, permuta o coinversión",
-            "Reporte por etapa"
-          ],
-          "cta": "Conozca la tesis"
-        },
-        "04": {
-          "title": "Propietarios de terreno",
-          "desc": "El terreno entra como capital en la operación — y el propietario participa del resultado del emprendimiento.",
-          "entregas": [
-            "Primera lectura del terreno",
-            "Terreno como capital, vía permuta",
-            "Participación en el resultado"
-          ],
-          "cta": "Presente su terreno"
-        }
-      }
-    },
-    "relacao": {
-      "kicker": "Formas de relación",
-      "intro": "Profundidades de involucramiento que crecen con la operación — y la inversión directa vía SCP.",
-      "quandoLabel": "Cuándo tiene sentido:",
-      "footer": "Involucramiento creciente →",
-      "items": {
-        "01": {
-          "title": "Consultoría contratada",
-          "desc": "Alcance definido: lectura de la oportunidad, inteligencia de mercado o viabilidad — entregados como proyecto.",
-          "quando": "Para validar una oportunidad o destrabar una decisión específica."
-        },
-        "02": {
-          "title": "Alianza estratégica",
-          "desc": "Open Group permanece en la conducción: estructuración de la operación, conexión con socios y preparación para el lanzamiento.",
-          "quando": "Para llevar la operación completa adelante con una conducción única."
-        },
-        "03": {
-          "title": "Socia de la operación",
-          "desc": "Participación en la propia operación — potencial, capital y ejecución en la misma dirección, con resultado compartido.",
-          "quando": "Para compartir riesgo y resultado en operaciones de mayor potencial."
-        },
-        "04": {
-          "title": "Inversión SCP",
-          "desc": "Aporte directo en la operación mediante una SCP — capital que participa del resultado, sin asumir la gestión.",
-          "quando": "Para invertir en una operación estructurada, sin conducirla."
-        }
-      }
-    },
-    "compromissos": {
-      "kicker": "Lo que sostiene la relación",
-      "heading": "La confianza se construye<br></br>con método.",
-      "intro": "Cuatro compromisos valen para cualquier perfil de cliente y cualquier forma de relación — del primer alcance a la sociedad en la operación.",
-      "items": {
-        "01": {
-          "title": "Inteligencia propia",
-          "desc": "Mercado, mercado local y lectura competitiva realizados por el equipo — cada recomendación nace de un dato, no de una tesis genérica."
-        },
-        "02": {
-          "title": "Roles e hitos definidos",
-          "desc": "Alcance, responsabilidades e hitos establecidos en contrato, definidos en la estructuración de la operación."
-        },
-        "03": {
-          "title": "Conducción única",
-          "desc": "Una sola responsable de la originación al lanzamiento — incluyendo la articulación con socios y la relación con el banco, con la CEF cuando corresponda."
-        },
-        "04": {
-          "title": "Transparencia por etapa",
-          "desc": "El cliente acompaña el estado de la operación en cada etapa cumplida: lo que avanzó, lo que viene a continuación y lo que cambió en el camino."
-        }
-      }
-    },
-    "operacoes": {
-      "kicker": "Relaciones en operación",
-      "heading": "La confianza, en la práctica.",
-      "intro": "En las operaciones del portafolio actual, Open Group es <strong>socia de la operación</strong> — potencial, capital y ejecución en la misma dirección.",
-      "cta": "Ver todas las operaciones"
-    },
-    "perguntas": {
-      "kicker": "Preguntas frecuentes",
-      "heading": "Lo que más<br></br>nos preguntan.",
-      "asideText": "¿No encontró su pregunta? <link>Hable con el equipo</link>.",
-      "items": {
-        "01": {
-          "q": "¿Cómo comienza una relación con Open Group?",
-          "a": "Con la presentación de la oportunidad — un activo, un terreno o un proyecto. Open Group hace una primera lectura del potencial, la etapa y el contexto de mercado y, a partir de ella, indica los próximos pasos: profundizar el análisis, estructurar la operación o evaluar un modelo de actuación en conjunto."
-        },
-        "02": {
-          "q": "¿Con quién trabaja Open Group?",
-          "a": "Con constructoras, desarrolladoras, dueños de terrenos, empresas con activos inmobiliarios e inversores — players que tienen una oportunidad, un activo o capital y necesitan convertirlo en operación. El foco es B2B: quienes necesitan estructurar potencial para que el emprendimiento avance con consistencia, no el comprador final."
-        },
-        "03": {
-          "q": "¿Open Group es una consultoría o una desarrolladora?",
-          "a": "Una empresa de estructuración y desarrollo inmobiliario. Según el proyecto, actúa como consultoría contratada, socia estratégica o socia de la operación — pero en todos los casos va más allá de orientar: participa de la construcción del emprendimiento, conectando viabilidad, socios, banco y estrategia comercial hasta el lanzamiento."
-        },
-        "04": {
-          "q": "¿Hasta qué etapa Open Group conduce el emprendimiento?",
-          "a": "Desde la lectura de la oportunidad y la concepción del producto hasta la estructuración de la operación, la viabilidad financiera e institucional, la articulación de socios, la relación con el banco y la estrategia comercial — hasta el camino del lanzamiento. En proyectos aplicables, la conducción avanza hasta la firma con la Caixa Econômica Federal, según el alcance y la etapa."
-        },
-        "05": {
-          "q": "¿Cómo se evalúa una oportunidad?",
-          "a": "Por la lectura del activo y de su potencial real, del contexto de mercado, de la viabilidad, de la etapa de la oportunidad, de los socios necesarios y del camino institucional. A partir de ese diagnóstico, definimos si hay estructura para desarrollar la operación y qué modelo de actuación tiene más sentido para que avance."
-        },
-        "06": {
-          "q": "¿En qué tipo de proyecto entra Open Group?",
-          "a": "En oportunidades con potencial de estructuración y desarrollo — sobre todo cuando hay que organizar viabilidad, socios, banco, estrategia comercial y el camino hasta el lanzamiento. Cada caso se analiza por etapa, complejidad y potencial de mercado, lo que también define el modelo de actuación más adecuado."
-        },
-        "07": {
-          "q": "¿En qué momento el capital entra en la operación?",
-          "a": "En la fase de estructuración, antes del lanzamiento — cuando el valor del emprendimiento se crea efectivamente. Es también donde el inversor puede participar de una operación ya organizada, con tesis, socios y camino definidos. Los modelos de participación están detallados en la página de inversores."
-        },
-        "08": {
-          "q": "¿El alcance puede crecer a lo largo de la operación?",
-          "a": "Sí. La relación puede comenzar como consultoría contratada y evolucionar hacia una alianza estratégica o sociedad en la operación, según la etapa del proyecto y lo que tenga sentido para ambas partes. El modelo de actuación acompaña a la oportunidad — no al revés."
-        }
-      }
-    },
-    "cta": {
-      "title": "¿Tiene una operación para estructurar?",
-      "text": "Presente la oportunidad — realizamos la primera lectura e indicamos los próximos pasos.",
-      "ctaLabel": "Hablar con Open Group"
-    }
-  },
   "investidores": {
     "meta": {
       "title": "Inversores",
@@ -633,6 +442,7 @@
       "modelos": "Modelos",
       "governanca": "Gobernanza",
       "operacoes": "Operaciones",
+      "perguntas": "Preguntas",
       "contato": "Contacto"
     },
     "hero": {
@@ -662,27 +472,96 @@
     "ciclo": {
       "kicker": "El ciclo de la operación",
       "intro": "El capital entra en la estructuración — y participa de la creación de valor, no solo del resultado.",
-      "capitalLabel": "El capital entra aquí"
+      "capitalLabel": "El capital entra aquí",
+      "steps": {
+        "01": {
+          "title": "Lectura de la oportunidad",
+          "desc": "Comprensión del activo, su etapa y su potencial real de desarrollo."
+        },
+        "02": {
+          "title": "Inteligencia de mercado",
+          "desc": "Contexto del mercado local, demanda y lectura competitiva que fundamentan la tesis."
+        },
+        "03": {
+          "title": "EVTL",
+          "desc": "Estudio de viabilidad técnica y legal que destraba el camino de la operación."
+        },
+        "04": {
+          "title": "Estructuración financiera",
+          "desc": "Modelado de capital, fuentes de recursos y retorno alineados al potencial de la operación."
+        },
+        "05": {
+          "title": "Desarrollo inmobiliario",
+          "desc": "Definición de la lógica del producto inmobiliario: tipología, mix y posicionamiento."
+        },
+        "06": {
+          "title": "Prelanzamiento",
+          "desc": "Articulación de socios y relación con el banco, incluida la CEF cuando corresponda."
+        },
+        "07": {
+          "title": "Lanzamiento",
+          "desc": "Entrada al mercado, con producto, narrativa y estrategia comercial listos."
+        },
+        "08": {
+          "title": "Inicio de obras",
+          "desc": "Arranque de la ejecución, con la operación estructurada y los socios en campo."
+        },
+        "09": {
+          "title": "Entrega de llaves",
+          "desc": "Conclusión de la obra y entrega del emprendimiento terminado."
+        },
+        "10": {
+          "title": "Retorno del capital remunerado",
+          "desc": "Devolución del capital invertido con la remuneración acordada, cerrando el ciclo de la operación."
+        }
+      }
     },
     "modelos": {
-      "kicker": "Modelos de participación",
+      "kicker": "Modelos de participación para cada perfil de oportunidad",
       "heading": "Estructuras definidas<br></br>por la operación — no al revés.",
-      "footer": "Cada estructura se define caso por caso, según la operación.",
-      "items": {
-        "scp": {
-          "sigla": "SCP",
-          "nome": "Sociedad en cuenta de participación",
-          "desc": "El capital participa de una operación específica, con alcance, roles e hitos definidos en contrato."
+      "groupSelectorLabel": "Seleccionar perfil de oportunidad",
+      "groups": {
+        "capital": {
+          "label": "Alianzas y capital",
+          "footer": "Cada estructura se define caso por caso, según la operación.",
+          "items": {
+            "scp": {
+              "sigla": "SCP",
+              "nome": "Sociedad en cuenta de participación",
+              "desc": "El capital participa de una operación específica, con alcance, roles e hitos definidos en contrato."
+            },
+            "permuta": {
+              "sigla": "Permuta",
+              "nome": "Terreno como capital",
+              "desc": "El terreno entra como capital en la operación — el propietario participa del resultado del emprendimiento."
+            },
+            "coinvest": {
+              "sigla": "Coinvers.",
+              "nome": "Capital junto a la operación",
+              "desc": "Inversión junto a Open Group y a socios estratégicos en la estructuración de la operación."
+            }
+          }
         },
-        "permuta": {
-          "sigla": "Permuta",
-          "nome": "Terreno como capital",
-          "desc": "El terreno entra como capital en la operación — el propietario participa del resultado del emprendimiento."
-        },
-        "coinvest": {
-          "sigla": "Coinvers.",
-          "nome": "Capital junto a la operación",
-          "desc": "Inversión junto a Open Group y a socios estratégicos en la estructuración de la operación."
+        "desenvolvimento": {
+          "label": "Desarrollo e incorporación",
+          "footer": "Cada perfil entra en la operación según el papel que ocupa en el desarrollo inmobiliario.",
+          "items": {
+            "incorporadoras": {
+              "sigla": "Desarrolladoras",
+              "nome": "Oportunidades para desarrollar",
+              "desc": "Empresas que buscan nuevas áreas, composición de socios u operaciones inmobiliarias con potencial de desarrollo."
+            },
+            "construtoras": {
+              "sigla": "Constructoras",
+              "nome": "Alianza técnica y operativa",
+              "desc": "Empresas que pueden participar como socias técnicas, ejecutoras o estratégicas en operaciones estructuradas."
+            },
+            "proprietarios": {
+              "sigla": "Propietarios",
+              "nome": "Áreas con potencial inmobiliario",
+              "desc": "Dueños de terrenos o activos inmobiliarios que quieren transformar el área en operación, participación o desarrollo."
+            }
+          }
         }
       }
     },
@@ -692,28 +571,131 @@
       "intro": "Invertir antes de la obra exige ver la operación. Por eso Open Group conduce con orden: hitos definidos, reporte por etapa y una única responsable desde el inicio hasta el lanzamiento.",
       "items": {
         "01": {
-          "title": "Hitos definidos",
-          "desc": "Cada operación avanza por hitos claros, definidos en la estructuración — del desbloqueo de la viabilidad a la preparación para el lanzamiento."
+          "title": "Inteligencia propia",
+          "desc": "Mercado, mercado local y lectura competitiva realizados por el equipo — cada recomendación nace de un dato, no de una tesis genérica."
         },
         "02": {
+          "title": "Roles e hitos definidos",
+          "desc": "Alcance, responsabilidades e hitos establecidos en contrato, definidos en la estructuración de la operación."
+        },
+        "03": {
           "title": "Reporte por etapa",
           "desc": "El inversor recibe el estado de la operación en cada etapa cumplida: lo que avanzó, lo que viene a continuación y lo que cambió en el camino."
         },
-        "03": {
+        "04": {
           "title": "Conducción única",
           "desc": "La conducción es de Open Group — de la articulación con socios y banco a la estrategia comercial. Una sola responsable por la operación entera."
+        },
+        "05": {
+          "title": "Transparencia por etapa",
+          "desc": "El cliente acompaña el estado de la operación en cada etapa cumplida: lo que avanzó, lo que viene a continuación y lo que cambió en el camino."
         }
       }
     },
     "operacoes": {
-      "kicker": "La tesis, en la práctica",
+      "kicker": "La confianza, en la práctica",
       "heading": "Operaciones en conducción.",
-      "intro": "En todas, Open Group es <strong>socia de la operación</strong> — el capital entra donde nace el valor.",
+      "intro": "Nuestro potencial, capital y ejecución son guiados en la misma dirección.",
+      "prev": "Proyecto anterior",
+      "next": "Siguiente proyecto",
       "cta": "Ver todas las operaciones"
     },
     "curva": {
       "capitalLabel": "El capital entra aquí",
-      "stepAria": "Etapa {idx} — {title}"
+      "stepAria": "Etapa {idx} — {title}",
+      "habiteSe": {
+        "title": "Habite-se",
+        "desc": "Permiso que certifica la conclusión de la obra y autoriza la ocupación del emprendimiento."
+      }
+    },
+    "perguntas": {
+      "kicker": "Preguntas frecuentes",
+      "heading": "Invertir antes de la obra,<br></br>sin letra chica.",
+      "asideText": "¿No encontraste tu pregunta? <link>Habla con el equipo</link>.",
+      "prev": "Preguntas anteriores",
+      "next": "Siguientes preguntas",
+      "items": {
+        "01": {
+          "q": "¿Qué es una SCP y cuál es el papel del socio ostensivo y del participante?",
+          "a": "En la Sociedade em Conta de Participação (figura brasileña), el socio ostensivo — por lo general la desarrolladora — conduce la operación y es el único que aparece ante proveedores, banco y clientes. El socio participante (el inversor) aporta capital y comparte el resultado según su cuota, sin gestionar ni firmar contratos. La SCP no tiene personalidad jurídica: existe internamente, entre los socios, regida por contrato."
+        },
+        "02": {
+          "q": "¿Hasta dónde llega mi riesgo como socio participante?",
+          "a": "Por regla, tu responsabilidad se limita al monto aportado — no respondes ante proveedores, banco ni clientes. Pero el art. 993 del Código Civil es claro: si el participante interfiere en la gestión externa (firma contratos, negocia con terceros), pasa a responder solidariamente. La protección es real, siempre que el inversor no actúe en la administración de la operación."
+        },
+        "03": {
+          "q": "¿Cómo se tributan las ganancias que recibo de una SCP?",
+          "a": "La SCP se equipara a persona jurídica ante el fisco: los tributos corporativos (IRPJ, CSLL, PIS, COFINS) los calcula y paga el socio ostensivo. Las ganancias distribuidas al participante suelen estar exentas de impuesto a la renta en su extremo — pero solo cuando hay beneficio contable formalmente registrado; una distribución sin base puede reclasificarse como remuneración gravable. Las SCP en desarrollo pueden además usar el régimen RET (tasa unificada del 4%). Confirma siempre con asesoría contable."
+        },
+        "04": {
+          "q": "¿La SCP necesita registro fiscal? ¿Y cómo recibo el retorno?",
+          "a": "Sí — aun sin personalidad jurídica, la SCP debe inscribir un CNPJ (registro fiscal), vinculado al socio ostensivo, que responde por las obligaciones accesorias. El retorno sigue el contrato: puede distribuirse a lo largo de las ventas o al cierre, en dinero o en unidades. Los hitos y la forma de distribución se definen antes de que entre el capital."
+        },
+        "05": {
+          "q": "¿Pago impuesto al cambiar mi terreno por unidades (permuta física)?",
+          "a": "En la permuta física pura — solo unidades por unidades, por escritura pública y sin dinero de por medio —, la persona física no genera ganancia de capital; es el caso tradicionalmente exento. Sin embargo, el fisco lee esa exención de forma restrictiva: cambiar un inmueble residencial por unidades comerciales futuras, por ejemplo, fue considerado gravable (Cosit 128/2024). El encuadre depende de lo que diga la escritura."
+        },
+        "06": {
+          "q": "¿Y si hay \"torna\" (complemento en dinero)?",
+          "a": "Si hay torna, el impuesto recae solo sobre la parte en dinero, con tasas de ganancia de capital del 15% al 22,5%. La parte efectivamente cambiada por inmueble sigue sin gravamen. Es decir: lo que tributa es la torna, no la permuta en sí."
+        },
+        "07": {
+          "q": "¿Qué es la \"permuta financiera\" y por qué cambió en 2025?",
+          "a": "Es cuando el dueño del terreno, en vez de recibir unidades, pasa a tener derecho a un porcentaje de la facturación de las ventas — solo dinero. La Solución de Consulta Cosit nº 89/2025 definió que esto no es permuta, sino una venta a plazo, íntegramente sujeta a ganancia de capital (15% al 22,5%) para la persona física. Quien estructuró ese arreglo creyéndolo exento se llevó una sorpresa — de ahí la importancia de un dictamen actualizado."
+        },
+        "08": {
+          "q": "¿Cuándo pago el impuesto de la permuta?",
+          "a": "Sobre unidades a construir, el impuesto a la ganancia de capital se paga hasta el último día hábil del mes siguiente a la recepción de cada unidad — no en la fecha de la escritura. En la permuta financiera, sigue la recepción de cada cuota en dinero. Para la desarrolladora bajo el régimen RET, la tributación permanece unificada en 4% sobre los ingresos."
+        },
+        "09": {
+          "q": "¿Qué es la coinversión inmobiliaria?",
+          "a": "Es reunir el capital de varios inversores para participar de un mismo emprendimiento, dividiendo aporte, riesgo y resultado. No posees un inmueble específico, sino una participación en el proyecto. Para ser claros: \"coinversión\" describe la lógica de invertir en conjunto — el vehículo jurídico concreto suele ser una SCP, una SPE con cuotas o un fondo inmobiliario (FII)."
+        },
+        "10": {
+          "q": "¿Cuál es la diferencia entre coinvertir (vía SCP/SPE) y un fondo inmobiliario (FII)?",
+          "a": "El FII está regulado por la comisión de valores, tiene cuotas en bolsa, gestor profesional y alta liquidez — pero la cuota oscila como renta variable. La coinversión vía SCP/SPE es privada, ilíquida y ligada a un único proyecto, con pocos inversores — mayor potencial de retorno concentrado, a cambio de una salida difícil y menos regulación. Es el equilibrio entre liquidez y regulación, por un lado, y retorno concentrado, por otro."
+        },
+        "11": {
+          "q": "¿Cómo recibo el retorno en una coinversión?",
+          "a": "Según el contrato del vehículo: distribución de ganancias a lo largo de las ventas o al cierre del proyecto, en dinero o en unidades. A diferencia de un FII, no hay distribución periódica garantizada ni cuota negociable — el retorno está atado al desempeño de ese emprendimiento."
+        },
+        "12": {
+          "q": "¿Cuáles son los principales riesgos de la coinversión privada?",
+          "a": "Iliquidez (es difícil salir antes del final), dependencia de la competencia y la idoneidad de quien estructura, riesgo de ejecución del proyecto y menos transparencia que un vehículo regulado. Ninguna estructura elimina el riesgo — por eso evaluar a quien conduce la operación importa tanto como evaluar el inmueble."
+        },
+        "13": {
+          "q": "¿Por qué se dice que el valor se crea antes de la obra?",
+          "a": "Porque es en la estructuración — aprobaciones, proyecto, viabilización del terreno y apertura de ventas — donde el emprendimiento gana valor, antes de que la obra lo refleje en el precio. Quien entra temprano suele acceder a condiciones por debajo de la tabla futura, asumiendo a cambio parte del riesgo de desarrollo. Es retorno por desempeño, no renta fija."
+        },
+        "14": {
+          "q": "¿Cuáles son los principales riesgos de entrar antes de la obra?",
+          "a": "Atraso de obra, baja velocidad de ventas, rescisiones de compradores y — lo más grave en el ciclo reciente — la salud financiera de la desarrolladora: en 2024 el sector lideró los pedidos de recuperación judicial. Cualquier promesa de retorno fijo y garantizado debe encender una alerta. \"Antes de la obra\" no es ganancia garantizada."
+        },
+        "15": {
+          "q": "¿Tiene liquidez? ¿Puedo salir antes del final?",
+          "a": "La liquidez es baja. A diferencia de un FII con cuotas en bolsa, salir de una SCP o de una coinversión depende de una cláusula contractual y de alguien que asuma tu posición. Lo mejor es planificar como capital comprometido hasta el desenlace del proyecto — en general un horizonte de mediano a largo plazo (2 a 4 años o más)."
+        },
+        "16": {
+          "q": "¿Qué me protege si la desarrolladora tiene problemas?",
+          "a": "El principal instrumento es el patrimônio de afetação (afectación patrimonial, Ley 10.931/2004): segrega el terreno, la obra y los créditos del emprendimiento del resto de la desarrolladora. En caso de quiebra, esos bienes quedan fuera de la masa concursal y la obra puede concluirse. Verificar si el emprendimiento específico tiene la afectación instituida es un punto crítico de análisis."
+        },
+        "17": {
+          "q": "¿Qué garantías puedo tener en la operación?",
+          "a": "Además de la afectación patrimonial, según el contrato puede haber garantías reales (hipoteca o enajenación fiduciaria del terreno), aval o fianza de los socios, cesión fiduciaria de créditos y cláusulas de preferencia. Ninguna elimina el riesgo de ejecución del proyecto, pero todas reducen el riesgo de pérdida total."
+        },
+        "18": {
+          "q": "¿Qué revisar en la due diligence antes de invertir?",
+          "a": "La matrícula y la cadena de titularidad del terreno (embargos, hipotecas, gravámenes), la regularidad urbanística y los permisos, el memorial de incorporación, la instituición de la afectación patrimonial y — el punto más subestimado — la salud financiera y la idoneidad de la desarrolladora y de los socios. Hoy la práctica abarca análisis jurídico, de ingeniería y contable. Analiza la empresa, no solo el inmueble."
+        },
+        "19": {
+          "q": "¿Cómo acompaño la operación y la gobernanza?",
+          "a": "Por reporte periódico del avance de obra y de ventas (vendido vs. presupuestado), los estados contables del vehículo y el movimiento de la cuenta segregada del proyecto. En la SCP, el participante tiene derecho a fiscalizar, pero no a administrar — y ese derecho debe estar expreso en el contrato. La falta de transparencia es, en sí misma, una señal de alerta."
+        },
+        "20": {
+          "q": "¿Cuál es el plazo y cómo se tributa el retorno en mi extremo?",
+          "a": "El plazo sigue el ciclo del emprendimiento — en general 2 a 4 años o más, hasta concluir y liquidar las ventas; no hay fecha fija garantizada. La tributación depende de la estructura: las ganancias de SCP tienden a estar exentas en tu extremo (habiendo beneficio contable), el FII tiene su propia exención para persona física, y permuta/venta sigue la ganancia de capital. Confirma siempre con asesoría contable antes de invertir."
+        }
+      }
     },
     "cta": {
       "items": {

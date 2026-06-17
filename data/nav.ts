@@ -1,9 +1,9 @@
 export type NavItem = { key: string; href: string };
 
 export const navItems: NavItem[] = [
+  { key: "home", href: "/" },
   { key: "institucional", href: "/institucional" },
   { key: "projetos", href: "/projetos" },
-  { key: "clientes", href: "/clientes" },
   { key: "investidores", href: "/investidores" },
   { key: "insights", href: "/insights" },
   { key: "contato", href: "/contato" },

@@ -2,8 +2,8 @@ import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
 import { atuacaoSteps } from "@/app/_sections/Atuacao/atuacao.data";
 
-// Etapa em que o capital entra na operação.
-const CAPITAL_IDX = "05";
+// Etapa em que o capital entra na operação (Estruturação Financeira).
+const CAPITAL_IDX = "04";
 
 // Faixa dark de alto contraste: as 10 etapas do ciclo completo (da
 // oportunidade ao pós-entrega) em uma única linha, com o ponto de entrada
@@ -11,7 +11,8 @@ const CAPITAL_IDX = "05";
 // representando só a fase pré-obra.
 export async function InvestidoresCiclo() {
   const t = await getTranslations("investidores.ciclo");
-  const ts = await getTranslations("home.atuacao.steps");
+  // Namespace próprio do Ciclo (desacoplado da Home, que segue em home.atuacao.steps).
+  const ts = await getTranslations("investidores.ciclo.steps");
   return (
     <section id="investidores-ciclo" className="bg-dark py-[clamp(60px,7vw,108px)] text-white">
       <div className="wrap">

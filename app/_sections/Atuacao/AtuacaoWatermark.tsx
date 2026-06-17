@@ -26,7 +26,56 @@ export function AtuacaoWatermark() {
       initialized = false;
       if (frame) cancelAnimationFrame(frame);
       frame = 0;
-      if (colorRef.current) colorRef.current.style.opacity = "0";
+      if (colorRef.current) {
+        colorRef.current.style.opacity = "0";
+        colorRef.current.style.removeProperty("-webkit-mask-image");
+        colorRef.current.style.removeProperty("mask-image");
+      }
+    };
+
+    const organicMask = (radius: number) => {
+      const perp = { x: -direction.y, y: direction.x };
+      const drift = Math.sin(time * 0.9) * 14;
+      const cx = current.x;
+      const cy = current.y;
+      const fmt = (n: number) => `${n.toFixed(1)}px`;
+      const blob = (
+        x: number,
+        y: number,
+        rx: number,
+        ry: number,
+        core = 38,
+        fade = 100,
+      ) =>
+        `radial-gradient(ellipse ${fmt(rx)} ${fmt(ry)} at ${fmt(x)} ${fmt(y)}, #000 0%, #000 ${core}%, rgba(0,0,0,.72) ${Math.min(core + 18, fade - 18)}%, rgba(0,0,0,.2) ${Math.min(core + 38, fade - 8)}%, transparent ${fade}%)`;
+
+      return [
+        blob(cx, cy, radius * 1.04, radius * 0.9, 34),
+        blob(
+          cx - direction.x * radius * 0.34 + perp.x * drift,
+          cy - direction.y * radius * 0.34 + perp.y * drift,
+          radius * 0.78,
+          radius * 0.62,
+          28,
+          96,
+        ),
+        blob(
+          cx + direction.x * radius * 0.22 + perp.x * radius * 0.34,
+          cy + direction.y * radius * 0.22 + perp.y * radius * 0.34,
+          radius * 0.52,
+          radius * 0.44,
+          24,
+          92,
+        ),
+        blob(
+          cx + direction.x * radius * 0.2 - perp.x * radius * 0.3,
+          cy + direction.y * radius * 0.2 - perp.y * radius * 0.3,
+          radius * 0.5,
+          radius * 0.42,
+          24,
+          92,
+        ),
+      ].join(",");
     };
 
     const animateReveal = () => {
@@ -49,32 +98,12 @@ export function AtuacaoWatermark() {
       current.y += dy * 0.12;
       time += 0.07;
 
-      const radius = Math.min(175, 96 + velocity * 0.08);
-      const tail = Math.min(1.55, 0.75 + velocity * 0.0025);
-      const perp = { x: -direction.y, y: direction.x };
-      const points: string[] = [];
-
-      for (let i = 0; i < 72; i += 1) {
-        const angle = (Math.PI * 2 * i) / 72;
-        const forward = Math.cos(angle);
-        const side = Math.sin(angle);
-        const backPull = forward < 0 ? 0.94 + Math.abs(forward) * tail : 0.82 + forward * 0.12;
-        const shoulder =
-          Math.exp(-Math.pow(angle - Math.PI * 0.72, 2) / 0.1) * 0.22 +
-          Math.exp(-Math.pow(angle - Math.PI * 1.28, 2) / 0.1) * 0.22;
-        const bite =
-          Math.exp(-Math.pow(angle - Math.PI * 0.18, 2) / 0.05) * 0.1 +
-          Math.exp(-Math.pow(angle - Math.PI * 1.82, 2) / 0.05) * 0.08;
-        const wobble = 1 + Math.sin(angle * 3.1 + time) * 0.045 + Math.sin(angle * 5.7 - time * 0.7) * 0.03;
-        const along = forward * radius * backPull * wobble;
-        const lateral = side * radius * (1.06 + shoulder - bite) * wobble;
-        const x = current.x + direction.x * along + perp.x * lateral;
-        const y = current.y + direction.y * along + perp.y * lateral;
-
-        points.push(`${x.toFixed(1)}px ${y.toFixed(1)}px`);
-      }
-
-      color.style.clipPath = `polygon(${points.join(",")})`;
+      const radius = Math.min(400, 245 + velocity * 0.15);
+      const mask = organicMask(radius);
+      color.style.setProperty("-webkit-mask-image", mask);
+      color.style.setProperty("mask-image", mask);
+      color.style.setProperty("-webkit-mask-repeat", "no-repeat");
+      color.style.setProperty("mask-repeat", "no-repeat");
       frame = requestAnimationFrame(animateReveal);
     };
 
@@ -128,7 +157,7 @@ export function AtuacaoWatermark() {
       />
       <div
         ref={colorRef}
-        className="absolute inset-0 opacity-0 blur-[1px] contrast-[1.7] transition-opacity duration-150 ease-brand"
+        className="absolute inset-0 opacity-0 transition-opacity duration-200 ease-brand will-change-[mask-image,opacity]"
       >
         <Image
           src={logoSrc}

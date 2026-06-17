@@ -1,15 +1,17 @@
 import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
+import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 
-const pilarIds = ["01", "02", "03"] as const;
+const pilarIds = ["01", "02", "03", "04", "05"] as const;
 
 // Governança: a autoridade da condução. Coluna esquerda fixa com o
-// statement; à direita, os três pilares em réguas.
+// statement; à direita, os cinco pilares em réguas.
 export async function InvestidoresGovernanca() {
   const t = await getTranslations("investidores.governanca");
   return (
-    <section id="investidores-governanca" className="bg-paper py-[clamp(88px,11vw,160px)]">
-      <div className="wrap">
+    <section id="investidores-governanca" className="relative overflow-hidden bg-paper py-[clamp(88px,11vw,160px)]">
+      <GalleryFlowBackground background="#FFFFFF" variant="clientes-compromissos" />
+      <div className="wrap relative z-[2]">
         <div className="grid grid-cols-1 items-start gap-[clamp(40px,6vw,96px)] lg:grid-cols-[0.95fr_1.05fr]">
           <div className="reveal lg:sticky lg:top-[120px]">
             <Kicker>{t("kicker")}</Kicker>

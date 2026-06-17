@@ -3,6 +3,17 @@
   animation: inst-cue 2.6s var(--ease-brand) infinite;
 }
 
+.scrollBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollAction:hover .scrollBox,
+.scrollAction:focus-visible .scrollBox {
+  animation: inst-scroll-down 3s infinite;
+}
+
 @keyframes inst-cue {
   0% { transform: scaleY(0); opacity: 0; }
   35% { opacity: 1; }
@@ -10,6 +21,27 @@
   100% { transform: scaleY(1); opacity: 0; }
 }
 
+@keyframes inst-scroll-down {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .cueLine { animation: none; }
+  .cueLine,
+  .scrollAction:hover .scrollBox,
+  .scrollAction:focus-visible .scrollBox {
+    animation: none;
+  }
 }
