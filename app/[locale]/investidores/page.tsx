@@ -7,6 +7,7 @@ import { InvestidoresCiclo } from "@/app/_sections/InvestidoresPage/Investidores
 import { InvestidoresModelos } from "@/app/_sections/InvestidoresPage/InvestidoresModelos";
 import { InvestidoresGovernanca } from "@/app/_sections/InvestidoresPage/InvestidoresGovernanca";
 import { InvestidoresOperacoes } from "@/app/_sections/InvestidoresPage/InvestidoresOperacoes";
+import { InvestidoresPerguntas } from "@/app/_sections/InvestidoresPage/InvestidoresPerguntas";
 import { InvestidoresCta } from "@/app/_sections/InvestidoresPage/InvestidoresCta";
 import { PageSectionRail } from "@/app/_sections/PageSectionRail";
 
@@ -18,6 +19,7 @@ const investidoresRailItems = [
   { id: "investidores-modelos", labelKey: "modelos" },
   { id: "investidores-governanca", labelKey: "governanca" },
   { id: "investidores-operacoes", labelKey: "operacoes" },
+  { id: "investidores-perguntas", labelKey: "perguntas" },
   { id: "investidores-contato", labelKey: "contato" },
 ] as const;
 
@@ -53,6 +55,7 @@ export default async function InvestidoresPage({
       <InvestidoresModelos />
       <InvestidoresGovernanca />
       <InvestidoresOperacoes />
+      <InvestidoresPerguntas />
       <InvestidoresCta />
     </main>
   );

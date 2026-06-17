@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Kicker } from "@/components/ui/Kicker";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { modelos } from "./modelos.data";
@@ -18,6 +19,15 @@ export async function Modelos() {
           {modelos.map((m) => (
             <ModeloCard key={m.ring} m={m} idx={t(`cards.${m.ring}.idx`)} title={t(`cards.${m.ring}.title`)} desc={t(`cards.${m.ring}.desc`)} />
           ))}
+        </div>
+        <div className="reveal mt-[clamp(34px,4vw,54px)] flex justify-center">
+          <Link
+            href="/institucional"
+            className="group inline-flex items-center gap-3 border border-ink px-[30px] py-4 font-sans text-[12px] font-medium uppercase tracking-[.14em] text-ink transition-[background-color,color,border-color] duration-[400ms] ease-brand hover:bg-ink hover:text-white"
+          >
+            {t("cta")}
+            <span aria-hidden className="transition-transform duration-[400ms] ease-brand group-hover:translate-x-1">→</span>
+          </Link>
         </div>
       </div>
     </section>

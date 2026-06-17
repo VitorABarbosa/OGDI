@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { atuacaoSteps, atuacaoTagKeys } from "./atuacao.data";
+import { atuacaoSteps } from "./atuacao.data";
 import { AtuacaoRow } from "./AtuacaoRow";
 import { AtuacaoWatermark } from "./AtuacaoWatermark";
 
@@ -16,9 +16,6 @@ export async function Atuacao() {
             <Kicker>{t("kicker")}</Kicker>
             <SectionHeading>{t.rich("heading", { br: () => <br /> })}</SectionHeading>
             <p className="text-[clamp(15px,1.15vw,18px)] leading-[1.65] text-ink-2">{t("intro")}</p>
-            <div className="mt-[26px] flex flex-wrap gap-2 text-[13px] text-ink-3">
-              {atuacaoTagKeys.map((k) => <span key={k} className="px-[13px] py-[7px] border border-[color:var(--line-2)] text-[12px] tracking-[.02em]">{t(`tags.${k}`)}</span>)}
-            </div>
           </div>
           <div className="flex flex-col reveal reveal-2">
             {atuacaoSteps.map((s, i) => (

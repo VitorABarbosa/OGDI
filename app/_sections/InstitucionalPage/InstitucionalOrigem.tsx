@@ -64,6 +64,7 @@ export function InstitucionalOrigem() {
   }, []);
 
   const green = (c: React.ReactNode) => <span className="text-green">{c}</span>;
+  const keep = (c: React.ReactNode) => <span className="whitespace-nowrap">{c}</span>;
 
   return (
     <section id="institucional-origem" className="bg-dark py-section text-white">
@@ -73,8 +74,8 @@ export function InstitucionalOrigem() {
           <span aria-hidden className="h-px w-[30px] bg-green" />
           {tm("eyebrow")}
         </div>
-        <p className="reveal reveal-2 max-w-[26ch] font-news font-normal text-[clamp(1.5rem,3.2vw,2.8rem)] leading-[1.3] tracking-[-.01em]">
-          {tm.rich("thesis", { em: green })}
+        <p className="reveal reveal-2 max-w-[31ch] font-news font-normal text-[clamp(1.5rem,3.2vw,2.8rem)] leading-[1.3] tracking-[-.01em]">
+          {tm.rich("thesis", { em: green, keep })}
         </p>
         <p className="reveal reveal-2 mt-[clamp(22px,3vw,34px)] max-w-[60ch] text-[clamp(14px,1.1vw,16.5px)] leading-[1.66] text-white/[.6]">
           {tm("elaboration")}

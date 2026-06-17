@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
+import { ChevronDown } from "lucide-react";
 import { Kicker } from "@/components/ui/Kicker";
 import { InstitucionalHeroWaves } from "./InstitucionalHeroWaves";
 import styles from "./InstitucionalHero.module.css";
@@ -34,11 +35,14 @@ export async function InstitucionalHero() {
 
           <Kicker tone="on-dark-green">{t("kicker")}</Kicker>
 
-          <h1 className="mt-[clamp(22px,3vw,34px)] max-w-[17ch] font-news font-normal text-white text-[clamp(2.1rem,6.4vw,5.6rem)] leading-[1.07] tracking-[-.018em]">
+          <h1 className="mt-[clamp(22px,3vw,34px)] max-w-[30ch] font-news font-normal text-white text-[clamp(2.1rem,6.4vw,5.6rem)] leading-[1.07] tracking-[-.018em]">
             <span className="reveal block" style={{ transitionDelay: "0s" }}>
-              {t.rich("title1", { em: (c) => <span className="italic text-green">{c}</span> })}
+              {t.rich("title1", {
+                br: () => <br />,
+                em: (c) => <span className="italic text-green">{c}</span>,
+              })}
             </span>
-            <span className="reveal block" style={{ transitionDelay: ".2s" }}>
+            <span className="reveal block whitespace-nowrap" style={{ transitionDelay: ".2s" }}>
               {t("title2")}
             </span>
           </h1>
@@ -49,6 +53,16 @@ export async function InstitucionalHero() {
         <span aria-hidden className={`${styles.cueLine} h-[50px] w-px bg-white/50`} />
         {t("cue")}
       </div>
+
+      <a
+        href="#institucional-sobre"
+        aria-label="Ir para a próxima seção"
+        className={`${styles.scrollAction} absolute bottom-8 left-1/2 z-[3] flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border border-white/25 bg-white/[.07] text-white/80 backdrop-blur-sm transition-[background-color,border-color,color] duration-300 ease-brand hover:border-green/70 hover:bg-green/15 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 focus-visible:ring-offset-dark`}
+      >
+        <span className={styles.scrollBox} aria-hidden>
+          <ChevronDown size={24} strokeWidth={1.8} />
+        </span>
+      </a>
     </section>
   );
 }

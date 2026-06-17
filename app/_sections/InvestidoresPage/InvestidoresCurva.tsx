@@ -2,27 +2,64 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { investidoresSteps } from "@/app/_sections/Atuacao/atuacao.data";
 import styles from "./InvestidoresCurva.module.css";
 
 // A curva de valor: linha ascendente que nasce embaixo à esquerda e cruza
-// o hero — o valor sendo criado antes da obra. Sete nós interativos, um
-// por etapa do ciclo; o quinto, onde o capital entra, é o acento verde.
+// o hero — o valor sendo criado ao longo da operação. Nove nós interativos,
+// um por etapa; o quarto (Estruturação Financeira), onde o capital entra,
+// é o acento verde.
 //
 // O traçado corre baixo na metade esquerda (sob o texto do hero) e sobe
-// forte só à direita, onde o hero está livre.
-const curvePath =
-  "M -80 770 C -10 766, 50 762, 120 756 C 200 749, 260 738, 340 732 C 420 726, 480 712, 560 700 C 640 688, 700 672, 780 656 C 860 640, 930 614, 1000 580 C 1080 546, 1140 496, 1200 430 C 1260 364, 1330 288, 1400 220 C 1450 168, 1510 148, 1560 135";
+// forte só à direita, onde o hero está livre. Os dois últimos nós (Habite-se
+// e Retorno do Capital) estendem a curva até o topo.
+//
+// Cada nó referencia o título/desc por `idx` no namespace investidores.ciclo.steps,
+// exceto o Habite-se, exclusivo da curva (investidores.curva.habiteSe).
+type CurveNode = {
+  x: number;
+  y: number;
+  num: string;
+  idx?: string;
+  curvaKey?: string;
+  capital?: boolean;
+};
 
-const nodes = [
-  { x: 120, y: 756 },
-  { x: 340, y: 732 },
-  { x: 560, y: 700 },
-  { x: 780, y: 656 },
-  { x: 1000, y: 580, capital: true },
-  { x: 1200, y: 430 },
-  { x: 1400, y: 220 },
+const nodes: CurveNode[] = [
+  { x: 120, y: 760, num: "01", idx: "01" },
+  { x: 280, y: 752, num: "02", idx: "02" },
+  { x: 440, y: 731, num: "03", idx: "03" },
+  { x: 600, y: 690, num: "04", idx: "04", capital: true },
+  { x: 760, y: 630, num: "05", idx: "05" },
+  { x: 920, y: 548, num: "06", idx: "06" },
+  { x: 1080, y: 448, num: "07", idx: "07" },
+  { x: 1240, y: 330, num: "08", curvaKey: "habiteSe" },
+  { x: 1400, y: 175, num: "09", idx: "10" },
 ];
+
+// Traçado suave (Catmull-Rom → Bézier) pelos nós, com pontos virtuais para a
+// linha entrar/sair do quadro como antes.
+const buildSmoothPath = (pts: { x: number; y: number }[]) => {
+  let d = `M ${pts[0].x} ${pts[0].y}`;
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] ?? pts[i];
+    const p1 = pts[i];
+    const p2 = pts[i + 1];
+    const p3 = pts[i + 2] ?? p2;
+    const c1x = p1.x + (p2.x - p0.x) / 6;
+    const c1y = p1.y + (p2.y - p0.y) / 6;
+    const c2x = p2.x - (p3.x - p1.x) / 6;
+    const c2y = p2.y - (p3.y - p1.y) / 6;
+    d += ` C ${c1x.toFixed(1)} ${c1y.toFixed(1)}, ${c2x.toFixed(1)} ${c2y.toFixed(1)}, ${p2.x} ${p2.y}`;
+  }
+  return d;
+};
+
+const PATH_PTS = [
+  { x: -120, y: 772 },
+  ...nodes.map(({ x, y }) => ({ x, y })),
+  { x: 1600, y: 118 },
+];
+const curvePath = buildSmoothPath(PATH_PTS);
 
 const VIEW_W = 1440;
 const POP_W = 218;
@@ -37,8 +74,15 @@ const svgProps = {
 
 export function InvestidoresCurva() {
   const [active, setActive] = useState<number | null>(null);
-  const ts = useTranslations("home.atuacao.steps");
+  const tcs = useTranslations("investidores.ciclo.steps");
   const tc = useTranslations("investidores.curva");
+
+  // Resolve título/desc: nós comuns vêm do Ciclo (por idx); o Habite-se é
+  // exclusivo da curva.
+  const titleOf = (n: CurveNode) =>
+    n.curvaKey ? tc(`${n.curvaKey}.title`) : tcs(`${n.idx}.title`);
+  const descOf = (n: CurveNode) =>
+    n.curvaKey ? tc(`${n.curvaKey}.desc`) : tcs(`${n.idx}.desc`);
 
   return (
     <>
@@ -57,7 +101,7 @@ export function InvestidoresCurva() {
         </defs>
 
         {/* preenchimento de "gráfico" sob a curva */}
-        <path className={styles.area} d={`${curvePath} L 1560 800 L -80 800 Z`} fill="url(#inv-curva-area)" />
+        <path className={styles.area} d={`${curvePath} L 1600 800 L -120 800 Z`} fill="url(#inv-curva-area)" />
 
         {/* halo difuso da linha */}
         <path
@@ -79,9 +123,9 @@ export function InvestidoresCurva() {
           strokeLinecap="round"
         />
 
-        {/* nós das etapas — o quinto é o capital */}
+        {/* nós das etapas — o quarto (Estruturação Financeira) é o capital */}
         {nodes.map((n, i) => (
-          <g key={n.x} className={styles.node} style={{ animationDelay: `${0.5 + i * 0.28}s` }}>
+          <g key={n.x} className={styles.node} style={{ animationDelay: `${0.5 + i * 0.2}s` }}>
             {n.capital ? (
               <>
                 <circle className={styles.halo} cx={n.x} cy={n.y} r="16" fill="#5FA83C" />
@@ -116,7 +160,6 @@ export function InvestidoresCurva() {
       {/* Camada interativa — acima do texto: áreas de toque e popups */}
       <svg className="pointer-events-none absolute inset-0 z-[2] h-full w-full" {...svgProps}>
         {nodes.map((n, i) => {
-          const step = investidoresSteps[i];
           const isActive = active === i;
           const popX = Math.min(Math.max(n.x - POP_W / 2, 24), VIEW_W - POP_W - 24);
           // abre para baixo sempre que couber (área livre da curva);
@@ -138,7 +181,7 @@ export function InvestidoresCurva() {
                 role="button"
                 tabIndex={0}
                 aria-expanded={isActive}
-                aria-label={tc("stepAria", { idx: step.idx, title: ts(`${step.idx}.title`) })}
+                aria-label={tc("stepAria", { idx: n.num, title: titleOf(n) })}
                 onMouseEnter={() => setActive(i)}
                 onMouseLeave={() => setActive((a) => (a === i ? null : a))}
                 onFocus={() => setActive(i)}
@@ -169,12 +212,12 @@ export function InvestidoresCurva() {
                 >
                   <div className="border-l border-l-green/70 bg-[#171C1D]/[.94] px-[15px] py-[13px] shadow-[0_10px_30px_rgba(0,0,0,.32)] [border-top:1px_solid_var(--line-dark)] [border-right:1px_solid_var(--line-dark)] [border-bottom:1px_solid_var(--line-dark)]">
                     <div className="flex items-baseline gap-2">
-                      <span className="font-sans text-[9.5px] font-semibold tracking-[.22em] text-green tabular-nums">{step.idx}</span>
+                      <span className="font-sans text-[9.5px] font-semibold tracking-[.22em] text-green tabular-nums">{n.num}</span>
                       <h3 className="font-sans text-[13px] font-semibold leading-[1.3] tracking-[-.01em] text-white">
-                        {ts(`${step.idx}.title`)}
+                        {titleOf(n)}
                       </h3>
                     </div>
-                    <p className="mt-[7px] text-[11.5px] leading-[1.5] text-white/55">{ts(`${step.idx}.desc`)}</p>
+                    <p className="mt-[7px] text-[11.5px] leading-[1.5] text-white/55">{descOf(n)}</p>
                   </div>
                 </div>
               </foreignObject>
