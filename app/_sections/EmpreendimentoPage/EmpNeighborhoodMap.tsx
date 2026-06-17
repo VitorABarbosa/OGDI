@@ -14,7 +14,7 @@ export function EmpNeighborhoodMap({ p }: { p: Projeto }) {
   const iframeSrc = map ? googleMapsEmbedUrl(`${p.name}, ${map.address}`) : "";
 
   return (
-    <section className="bg-bg py-[clamp(72px,9vw,128px)]">
+    <section id="localizacao" className="scroll-mt-[120px] bg-bg py-[clamp(72px,9vw,128px)]">
       <div className="wrap">
         <div className="grid grid-cols-1 items-end gap-[clamp(28px,5vw,72px)] lg:grid-cols-[.86fr_1.14fr]">
           <div>

@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { screen } from "@testing-library/react";
 import { renderWithIntl as render } from "@/test/intl";
 import { projetos } from "@/app/_sections/Projetos/projetos.data";
+import { projetoMessages } from "@/messages/projetos/_index";
 import { EmpHero } from "./EmpHero";
 import { EmpInfo } from "./EmpInfo";
 import { EmpLocationStory } from "./EmpLocationStory";
@@ -12,6 +13,8 @@ import { EmpNeighborhoodMap } from "./EmpNeighborhoodMap";
 const hitsCupece = projetos.find((p) => p.slug === "hits-cupece");
 // Guarulhos (futuro lançamento) é o caso sem `map` — usado p/ testar o placeholder.
 const semMapa = projetos.find((p) => p.slug === "guarulhos");
+// Prosa por projeto agora vive em messages/projetos/<slug>/ (namespace proj.<slug>).
+const ptProj = projetoMessages("pt") as Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
 
 describe("Empreendimento page data", () => {
   it("does not keep the duplicate standalone Cupece project", () => {
@@ -21,57 +24,60 @@ describe("Empreendimento page data", () => {
   it("provides the narrative content for Hits Cupece", () => {
     expect(hitsCupece).toBeDefined();
 
+    // Dados estruturais seguem em projetos.data.ts
     expect(hitsCupece?.address).toBe("Rua Dom João Soares Coelho");
     expect(hitsCupece?.units).toBe("1 e 2 dormitórios");
     expect(hitsCupece?.unitFeature).toBe("Terraço com churrasqueira");
-    expect(hitsCupece?.facts).toEqual([
+    expect(hitsCupece?.closingStatement?.ctaHref).toBe("https://www.tsengenharia.com/imovel/hits-cupece/");
+    expect(hitsCupece?.map?.center).toEqual({ lat: -23.6730382, lng: -46.6513232 });
+    expect(hitsCupece?.map?.categories).toHaveLength(5);
+    expect(hitsCupece?.map?.points?.length).toBeGreaterThanOrEqual(10);
+
+    // Prosa migrada para o i18n por projeto
+    const hc = ptProj["hits-cupece"];
+    expect(hc.facts).toEqual([
       "Em obra",
       "1 e 2 dormitórios",
       "Terraço com churrasqueira",
       "Cupecê - São Paulo",
     ]);
-    expect(hitsCupece?.heroSummary).toBe(
-      "Um empreendimento residencial no Cupecê, em uma região conectada, conveniente e em valorização, na zona sul de São Paulo.",
-    );
-    expect(hitsCupece?.locationStory?.title).toMatch(/leitura do território/i);
-    expect(hitsCupece?.productStory?.cards).toHaveLength(4);
-    expect(hitsCupece?.strategyStory?.title).toBe(
-      "A operação foi pensada antes de a obra chegar ao canteiro.",
-    );
-    expect(hitsCupece?.strategyStory?.kicker).toMatch(/estrutura/i);
-    expect(hitsCupece?.galleryIntro?.title).toBe("A narrativa também aparece nos espaços.");
-    expect(hitsCupece?.closingStatement?.title).toMatch(/não é apenas um endereço/i);
-    expect(hitsCupece?.closingStatement?.ctaHref).toBe("https://www.tsengenharia.com/imovel/hits-cupece/");
-    expect(hitsCupece?.map?.center).toEqual({ lat: -23.6730382, lng: -46.6513232 });
-    expect(hitsCupece?.map?.categories).toHaveLength(5);
-    expect(hitsCupece?.map?.points?.length).toBeGreaterThanOrEqual(10);
+    expect(hc.heroSummary).toMatch(/região conectada, conveniente e em valorização/i);
+    expect(hc.locationStory.title).toMatch(/leitura do território/i);
+    expect(hc.productStory.cards).toHaveLength(4);
+    expect(hc.strategyStory.title).toBe("A operação foi pensada antes de a obra chegar ao canteiro.");
+    expect(hc.strategyStory.kicker).toMatch(/estrutura/i);
+    expect(hc.galleryIntro.title).toBe("A narrativa também aparece nos espaços.");
+    expect(hc.closingStatement.title).toMatch(/não é apenas um endereço/i);
   });
 
   it("provides the narrative page standard for every registered project", () => {
     for (const project of projetos) {
       expect(project).toBeDefined();
-      expect(project?.heroSummary).toBeTruthy();
-      expect(project?.facts).toHaveLength(4);
-      expect(project?.locationStory?.highlights).toHaveLength(3);
-      expect(project?.productStory?.cards).toHaveLength(4);
-      expect(project?.galleryIntro?.body.length).toBeGreaterThan(0);
-      expect(project?.strategyStory?.body.length).toBeGreaterThan(0);
-      expect(project?.closingStatement?.ctaLabel).toBe("Tenho interesse no empreendimento");
+      const m = ptProj[project.slug];
+      expect(m).toBeDefined();
+      expect(m.heroSummary).toBeTruthy();
+      expect(m.facts).toHaveLength(4);
+      expect(m.locationStory.highlights).toHaveLength(3);
+      expect(m.productStory.cards).toHaveLength(4);
+      expect(m.galleryIntro.body.length).toBeGreaterThan(0);
+      expect(m.strategyStory.body.length).toBeGreaterThan(0);
+      expect(m.closingStatement.ctaLabel).toBe("Tenho interesse no empreendimento");
     }
   });
 
-  it("renders the Cupece editorial hero summary, facts, and CTA", () => {
+  it("renders the editorial hero with eyebrow, wordmark, location and scroll cue", () => {
     expect(hitsCupece).toBeDefined();
 
-    render(<EmpHero p={hitsCupece!} />);
+    render(<EmpHero p={hitsCupece!} status="Em obra" segmento="Residencial" local="Cupecê - São Paulo" />);
 
-    expect(screen.getByText(/região conectada, conveniente e em valorização/i)).toBeInTheDocument();
-    expect(screen.getByText("1 e 2 dormitórios")).toBeInTheDocument();
-    expect(screen.getByText("Terraço com churrasqueira")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /Tenho interesse/i })).toHaveAttribute(
-      "href",
-      "https://www.tsengenharia.com/imovel/hits-cupece/",
-    );
+    // eyebrow (segmento · status) + wordmark + sub-localização + "Role"
+    expect(screen.getByText(/Residencial · Em obra/)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: hitsCupece!.name, level: 1 })).toBeInTheDocument();
+    expect(screen.getByText("Cupecê - São Paulo")).toBeInTheDocument();
+    expect(screen.getByText("Role")).toBeInTheDocument();
+
+    // Resumo/facts/CTA saíram do hero (padrão da referência) — voltam em Ficha/Sobre.
+    expect(screen.queryByText(/região conectada, conveniente e em valorização/i)).not.toBeInTheDocument();
   });
 
   it("renders the Cupece location thesis section", () => {

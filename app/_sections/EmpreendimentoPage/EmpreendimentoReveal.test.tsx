@@ -17,7 +17,7 @@ describe("Empreendimento page reveals", () => {
     render(<EmpHero p={projeto} />);
 
     expect(screen.getByLabelText("Trilha de navegação")).toHaveClass("reveal");
-    expect(screen.getByRole("heading", { name: projeto.name, level: 1 })).toHaveClass("reveal", "reveal-3");
+    expect(screen.getByRole("heading", { name: projeto.name, level: 1 })).toHaveClass("reveal", "reveal-2");
   });
 
   it("marks project info and merged product layers for reveal animation", () => {

@@ -43,24 +43,28 @@ export function EmpInfo({
   local?: string;
 }) {
   const t = useTranslations("empreendimento.info");
+  const tp = useTranslations("proj");
   const statusText = status ?? p.status;
   const segmentoText = segmento ?? p.segmento;
-  const localText = local ?? p.local;
-  const productStory = p.productStory;
+  const intro = tp.raw(`${p.slug}.intro`) as string[];
+  const productStory = tp.raw(`${p.slug}.productStory`) as {
+    kicker: string;
+    title: string;
+    body: string[];
+    cards: { label: string; value: string; text?: string }[];
+  };
 
   return (
-    <section className="py-section">
+    <section id="sobre" className="scroll-mt-[120px] py-section">
       <div className="wrap">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-[clamp(40px,6vw,100px)] items-start">
           <div className="flex flex-col border-t border-[color:var(--line)] lg:sticky lg:top-[110px]">
             <MetaRow label={t("labels.status")} value={statusText} />
             <MetaRow label={t("labels.segmento")} value={segmentoText} className="reveal-info-1" />
-            {/* Sem produto à direita, a ficha mantém localização e tipologia
-                (evita perder esses dados). Com produto, eles vivem na coda. */}
-            {!productStory && <MetaRow label={t("labels.localizacao")} value={localText} tbd={p.localTbd} />}
+            {/* Localização e tipologia vivem na coda do produto (todos os projetos
+                têm productStory hoje), por isso não se repetem aqui na ficha. */}
             {p.regiao && <MetaRow label={t("labels.regiao")} value={p.regiao} />}
             <MetaRow label={t("labels.atuacao")} value={t("venturePartner")} className="reveal-info-4" />
-            {!productStory && <MetaRow label={t("labels.tipologia")} value={t("tbc")} tbd />}
 
             <Button href="/contato" arrow className="reveal reveal-info-5 mt-[28px] self-start">
               {t("cta")}
@@ -75,7 +79,7 @@ export function EmpInfo({
             </h2>
 
             <div className="mt-[clamp(22px,2.4vw,30px)] max-w-[50ch] space-y-[14px]">
-              {p.intro.map((paragraph, i) => (
+              {intro.map((paragraph, i) => (
                 <p
                   key={`${p.slug}-intro-${i}`}
                   className={cn("reveal font-news text-[clamp(16px,1.2vw,18.5px)] leading-[1.72] text-ink-2", `reveal-info-${Math.min(i + 3, 5)}`)}

@@ -103,6 +103,12 @@ const projectGalleryImages: Record<string, GalleryItem[]> = {
 
 export function EmpGaleria({ p }: { p: Projeto }) {
   const t = useTranslations("empreendimento.gallery");
+  const tp = useTranslations("proj");
+  const galleryIntro = tp.raw(`${p.slug}.galleryIntro`) as {
+    kicker: string;
+    title: string;
+    body: string[];
+  };
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
 
   const gallery = useMemo<GalleryItem[]>(
@@ -115,15 +121,15 @@ export function EmpGaleria({ p }: { p: Projeto }) {
   const isExpanded = visibleCount > INITIAL_VISIBLE;
 
   return (
-    <section className="pb-section pt-[clamp(68px,8vw,112px)]" aria-label={t("aria")}>
+    <section id="galeria" className="scroll-mt-[120px] pb-section pt-[clamp(68px,8vw,112px)]" aria-label={t("aria")}>
       <div className="wrap-wide">
-        {p.galleryIntro && (
+        {galleryIntro && (
           <div className="mb-[clamp(34px,4.5vw,62px)] max-w-[760px]">
-            <Kicker className="reveal">{p.galleryIntro.kicker}</Kicker>
+            <Kicker className="reveal">{galleryIntro.kicker}</Kicker>
             <h2 className="reveal reveal-2 mt-5 font-sans text-[clamp(28px,3.4vw,48px)] font-semibold leading-[1.08] tracking-[-.025em]">
-              {p.galleryIntro.title}
+              {galleryIntro.title}
             </h2>
-            {p.galleryIntro.body.map((paragraph, index) => (
+            {galleryIntro.body.map((paragraph, index) => (
               <p
                 key={`${p.slug}-gallery-intro-${index}`}
                 className={cn(

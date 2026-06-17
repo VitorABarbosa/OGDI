@@ -396,33 +396,6 @@
         "residencial": "Residencial"
       }
     },
-    "cards": {
-      "hits-cupece": {
-        "status": "En construcción",
-        "segmento": "Residencial",
-        "local": "São Paulo · SP"
-      },
-      "start-park-jabaquara": {
-        "status": "En construcción",
-        "segmento": "Residencial",
-        "local": "São Paulo · SP"
-      },
-      "oh-freguesia": {
-        "status": "En construcción",
-        "segmento": "Residencial",
-        "local": "São Paulo · SP"
-      },
-      "guarulhos": {
-        "status": "Próximos",
-        "segmento": "Residencial",
-        "local": "Guarulhos · SP"
-      },
-      "hits-santa-catarina": {
-        "status": "Entregado",
-        "segmento": "Residencial",
-        "local": "São Paulo · SP"
-      }
-    },
     "cta": {
       "title": "¿Tiene un terreno o proyecto con potencial?",
       "text": "Presente la oportunidad. Hacemos la primera lectura e indicamos los próximos pasos de la operación.",
@@ -935,7 +908,17 @@
       "home": "Inicio",
       "projetos": "Proyectos",
       "badgeSuffix": "Emprendimiento",
-      "venturePartner": "OGDI socia de la operación"
+      "venturePartner": "OGDI socia de la operación",
+      "scrollCue": "Desliza"
+    },
+    "nav": {
+      "ariaLabel": "Secciones del emprendimiento",
+      "sobre": "Sobre el proyecto",
+      "lazer": "Amenidades",
+      "galeria": "Galería",
+      "tour": "Tour virtual",
+      "obra": "Avance de obra",
+      "localizacao": "Ubicación"
     },
     "info": {
       "kicker": "El emprendimiento",

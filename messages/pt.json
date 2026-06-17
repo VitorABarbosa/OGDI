@@ -396,33 +396,6 @@
         "residencial": "Residencial"
       }
     },
-    "cards": {
-      "hits-cupece": {
-        "status": "Em obra",
-        "segmento": "Residencial",
-        "local": "São Paulo · SP"
-      },
-      "start-park-jabaquara": {
-        "status": "Em obra",
-        "segmento": "Residencial",
-        "local": "São Paulo · SP"
-      },
-      "oh-freguesia": {
-        "status": "Em obra",
-        "segmento": "Residencial",
-        "local": "São Paulo · SP"
-      },
-      "guarulhos": {
-        "status": "Futuro lançamento",
-        "segmento": "Residencial",
-        "local": "Guarulhos · SP"
-      },
-      "hits-santa-catarina": {
-        "status": "Entregue",
-        "segmento": "Residencial",
-        "local": "São Paulo · SP"
-      }
-    },
     "cta": {
       "title": "Tem uma área ou projeto com potencial?",
       "text": "Apresente a oportunidade. Fazemos a primeira leitura e indicamos os próximos passos da operação.",
@@ -935,7 +908,17 @@
       "home": "Início",
       "projetos": "Projetos",
       "badgeSuffix": "Empreendimento",
-      "venturePartner": "OGDI sócia da operação"
+      "venturePartner": "OGDI sócia da operação",
+      "scrollCue": "Role"
+    },
+    "nav": {
+      "ariaLabel": "Seções do empreendimento",
+      "sobre": "Sobre o projeto",
+      "lazer": "Lazer",
+      "galeria": "Galeria",
+      "tour": "Tour virtual",
+      "obra": "Evolução da obra",
+      "localizacao": "Localização"
     },
     "info": {
       "kicker": "O empreendimento",

@@ -6,7 +6,7 @@ import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 
 export function EmpProximos({ others }: { others: Projeto[] }) {
   const t = useTranslations("empreendimento.proximos");
-  const tp = useTranslations("projetos.cards");
+  const tp = useTranslations("proj");
   return (
     <section className="py-section">
       <div className="wrap">
@@ -28,9 +28,9 @@ export function EmpProximos({ others }: { others: Projeto[] }) {
               key={p.slug}
               p={p}
               index={index}
-              status={tp(`${p.slug}.status`)}
-              segmento={tp(`${p.slug}.segmento`)}
-              local={tp(`${p.slug}.local`)}
+              status={tp(`${p.slug}.card.status`)}
+              segmento={tp(`${p.slug}.card.segmento`)}
+              local={tp(`${p.slug}.card.local`)}
             />
           ))}
         </div>

@@ -1,0 +1,92 @@
+{
+  "card": {
+    "status": "En construcción",
+    "segmento": "Residencial",
+    "local": "São Paulo · SP"
+  },
+  "heroSummary": "Um empreendimento residencial em obra no Parque Jabaquara, na zona sul de São Paulo, conectado a Congonhas e ao futuro monotrilho.",
+  "intro": [
+    "O Start Park Jabaquara nasce de uma leitura objetiva do Parque Jabaquara, na zona sul de São Paulo — uma região conectada e em valorização, a poucos minutos do Aeroporto de Congonhas e na rota do futuro monotrilho.",
+    "A Open Group estruturou a oportunidade alinhando produto, viabilidade e operação: unidades de 1 e 2 dormitórios, com terraço com churrasqueira, e um conjunto de lazer pensado para a vida urbana cotidiana.",
+    "Hoje o empreendimento avança em obra, resultado de uma operação organizada desde a origem, com produto, parceiros e execução na mesma direção."
+  ],
+  "facts": [
+    "Em obra",
+    "1 e 2 dormitórios",
+    "Terraço com churrasqueira",
+    "Parque Jabaquara - SP"
+  ],
+  "locationStory": {
+    "kicker": "A tese do lugar",
+    "title": "No Jabaquara, a oportunidade nasce da leitura da praça.",
+    "body": [
+      "Na Rua Alba, no Parque Jabaquara, o Start Park está inserido em uma região conectada e em valorização, com comércio, serviços e forte oferta de transporte na zona sul de São Paulo.",
+      "O endereço fica a poucos minutos do Aeroporto de Congonhas e na rota do futuro monotrilho, com acesso às avenidas Santa Catarina, Cupecê, Roberto Marinho, Washington Luís, Bandeirantes e Imigrantes.",
+      "Para a Open Group, essa combinação de mobilidade, vida cotidiana e valorização transforma a localização em tese de produto."
+    ],
+    "highlights": [
+      {
+        "title": "Mobilidade ampla",
+        "text": "Próximo a Congonhas e ao futuro monotrilho, com acesso a Imigrantes, Bandeirantes e Washington Luís."
+      },
+      {
+        "title": "Região em valorização",
+        "text": "Entorno com comércio e serviços que sustentam a demanda residencial."
+      },
+      {
+        "title": "Origem estruturada",
+        "text": "A oportunidade foi organizada antes da execução, com produto e operação alinhados."
+      }
+    ]
+  },
+  "productStory": {
+    "kicker": "O produto como resposta",
+    "title": "Tipologias compactas para uma vida urbana conectada.",
+    "body": [
+      "As unidades de 1 e 2 dormitórios respondem a um público que busca morar bem, com eficiência e conexão com a cidade.",
+      "O terraço com churrasqueira e um lazer completo ampliam o uso do empreendimento no dia a dia."
+    ],
+    "cards": [
+      {
+        "label": "Tipologia",
+        "value": "1 e 2 dormitórios",
+        "text": "Plantas eficientes, alinhadas a diferentes perfis de moradia urbana."
+      },
+      {
+        "label": "Endereço",
+        "value": "Rua Alba, 570",
+        "text": "Parque Jabaquara, zona sul de São Paulo, próximo a Congonhas e ao futuro monotrilho."
+      },
+      {
+        "label": "Mobilidade",
+        "value": "Eixo Santa Catarina · Cupecê",
+        "text": "Acesso a Roberto Marinho, Washington Luís, Bandeirantes e Imigrantes."
+      },
+      {
+        "label": "Experiência",
+        "value": "Lazer completo",
+        "text": "Piscina, fitness, crossfit, cine aberto, bike station e salão de festas gourmet."
+      }
+    ]
+  },
+  "galleryIntro": {
+    "kicker": "Do conceito à experiência",
+    "title": "A galeria apresenta a materialização da tese.",
+    "body": [
+      "As imagens do Start Park Jabaquara funcionam como continuidade da narrativa: produto, implantação e percepção de valor ganham forma visual."
+    ]
+  },
+  "strategyStory": {
+    "kicker": "Estruturação Open Group",
+    "title": "A operação foi organizada antes de chegar ao canteiro.",
+    "body": [
+      "No Start Park Jabaquara, a Open Group conectou leitura da oportunidade, conceituação do produto, modelagem da operação e articulação dos parceiros necessários.",
+      "O resultado é um empreendimento em obra com uma tese construída antes da execução, reduzindo improviso e dando clareza ao processo."
+    ]
+  },
+  "closingStatement": {
+    "title": "Start Park Jabaquara é resultado de estruturação.",
+    "text": "Uma operação que saiu da leitura de mercado para a obra com produto, parceiros e execução alinhados.",
+    "ctaLabel": "Tenho interesse no empreendimento"
+  }
+}
