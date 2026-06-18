@@ -5,6 +5,7 @@ import { setRequestLocale } from "next-intl/server";
 import { serif, sans, news } from "@/lib/fonts";
 import { Header } from "@/components/layout/Header/Header";
 import { Footer } from "@/components/layout/Footer/Footer";
+import { FloatingWhatsAppButton } from "@/components/layout/FloatingWhatsAppButton";
 import { LenisProvider } from "@/components/Lenis/LenisProvider";
 import { routing } from "@/i18n/routing";
 import "@/app/globals.css";
@@ -60,6 +61,7 @@ export default async function LocaleLayout({
             <Header />
             {children}
             <Footer />
+            <FloatingWhatsAppButton />
           </LenisProvider>
         </NextIntlClientProvider>
       </body>

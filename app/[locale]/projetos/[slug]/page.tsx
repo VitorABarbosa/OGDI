@@ -18,7 +18,7 @@ import { CtaBand } from "@/components/ui/CtaBand";
 import { RevealController } from "@/components/Reveal/RevealController";
 
 const TEAM_WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5511995166122&text&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=5511985131748&text&type=phone_number&app_absent=0";
 
 export const dynamicParams = false;
 

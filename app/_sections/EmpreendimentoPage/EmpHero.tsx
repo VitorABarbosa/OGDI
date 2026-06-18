@@ -5,7 +5,7 @@ import { HeroParallaxImage } from "./HeroParallaxImage";
 import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 
 const TEAM_WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5511995166122&text&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=5511985131748&text&type=phone_number&app_absent=0";
 
 // Hero do empreendimento — imagem full-bleed, breadcrumb no topo e, ao centro,
 // eyebrow · wordmark · resumo curto · linha de essenciais · CTAs. Já entrega o
