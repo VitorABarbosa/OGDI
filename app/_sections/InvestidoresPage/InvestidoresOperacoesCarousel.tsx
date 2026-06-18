@@ -11,7 +11,7 @@ import { cn } from "@/lib/cn";
 
 export function InvestidoresOperacoesCarousel() {
   const t = useTranslations("investidores.operacoes");
-  const tc = useTranslations("projetos.cards");
+  const tc = useTranslations("proj");
   const ts = useTranslations("projetos.scp");
   const scrollerRef = useRef<HTMLDivElement>(null);
   const drag = useRef<{
@@ -203,9 +203,9 @@ export function InvestidoresOperacoesCarousel() {
             <ProjetoTile
               p={p}
               index={index}
-              status={tc(`${p.slug}.status`)}
-              segmento={tc(`${p.slug}.segmento`)}
-              local={tc(`${p.slug}.local`)}
+              status={tc(`${p.slug}.card.status`)}
+              segmento={tc(`${p.slug}.card.segmento`)}
+              local={tc(`${p.slug}.card.local`)}
             />
           </div>
         ))}

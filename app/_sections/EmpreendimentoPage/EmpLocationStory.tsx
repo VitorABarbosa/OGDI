@@ -1,12 +1,19 @@
+import { useTranslations } from "next-intl";
 import { Kicker } from "@/components/ui/Kicker";
 import { cn } from "@/lib/cn";
 import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
 import manifestoStyles from "@/app/_sections/Manifesto/Manifesto.module.css";
 
-export function EmpLocationStory({ p }: { p: Projeto }) {
-  if (!p.locationStory) return null;
+type LocationStory = {
+  kicker: string;
+  title: string;
+  body: string[];
+  highlights?: { title: string; text: string }[];
+};
 
-  const { locationStory } = p;
+export function EmpLocationStory({ p }: { p: Projeto }) {
+  const tp = useTranslations("proj");
+  const locationStory = tp.raw(`${p.slug}.locationStory`) as LocationStory;
   const visibleBody = locationStory.body.slice(0, 1);
 
   return (

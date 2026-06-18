@@ -387,15 +387,6 @@
       "noteOne": "{count} proyecto · {label}",
       "noteMany": "{count} proyectos · {label}"
     },
-    "scp": {
-      "chip": "Inversión SCP",
-      "cta": "Tengo interés",
-      "desc": "Aporte directo en la operación mediante una SCP — capital que participa del resultado, sin asumir la gestión.",
-      "note": "Participación directa en el resultado de operaciones estructuradas, mediante una SCP — capital asignado junto a Open Group.",
-      "segmento": {
-        "residencial": "Residencial"
-      }
-    },
     "cards": {
       "hits-cupece": {
         "status": "En construcción",
@@ -412,15 +403,24 @@
         "segmento": "Residencial",
         "local": "São Paulo · SP"
       },
-      "guarulhos": {
-        "status": "Próximos",
-        "segmento": "Residencial",
-        "local": "Guarulhos · SP"
-      },
       "hits-santa-catarina": {
         "status": "Entregado",
         "segmento": "Residencial",
         "local": "São Paulo · SP"
+      },
+      "guarulhos": {
+        "status": "Próximos",
+        "segmento": "Residencial",
+        "local": "Guarulhos · SP"
+      }
+    },
+    "scp": {
+      "chip": "Inversión SCP",
+      "cta": "Tengo interés",
+      "desc": "Aporte directo en la operación mediante una SCP — capital que participa del resultado, sin asumir la gestión.",
+      "note": "Participación directa en el resultado de operaciones estructuradas, mediante una SCP — capital asignado junto a Open Group.",
+      "segmento": {
+        "residencial": "Residencial"
       }
     },
     "cta": {
@@ -935,7 +935,28 @@
       "home": "Inicio",
       "projetos": "Proyectos",
       "badgeSuffix": "Emprendimiento",
-      "venturePartner": "OGDI socia de la operación"
+      "venturePartner": "OGDI socia de la operación",
+      "scrollCue": "Desliza",
+      "cta": "Conoce el emprendimiento",
+      "ctaContato": "Hablar con el equipo"
+    },
+    "nav": {
+      "ariaLabel": "Secciones del emprendimiento",
+      "sobre": "Sobre el proyecto",
+      "ficha": "Ficha técnica",
+      "lazer": "Amenidades",
+      "galeria": "Galería",
+      "tour": "Tour virtual",
+      "obra": "Avance de obra",
+      "localizacao": "Ubicación"
+    },
+    "sobre": {
+      "kicker": "Sobre el proyecto",
+      "mediaTag": "render · fachada"
+    },
+    "lazer": {
+      "kicker": "Amenidades y diferenciales",
+      "heading": "Áreas comunes completas."
     },
     "info": {
       "kicker": "El emprendimiento",
@@ -955,8 +976,55 @@
     },
     "gallery": {
       "aria": "Galería de imágenes",
+      "kicker": "Galería",
+      "disclaimer": "Perspectiva meramente ilustrativa",
       "showMore": "Mostrar más imágenes",
-      "showLess": "Mostrar menos"
+      "showLess": "Mostrar menos",
+      "count": "{count, plural, one {# imagen} other {# imágenes}}",
+      "filters": {
+        "todas": "Todas",
+        "comuns": "Áreas comunes",
+        "decorado": "Decorado",
+        "plantas": "Planos",
+        "implant": "Implantación"
+      }
+    },
+    "quote": {
+      "text": "Una dirección pensada para <em>elevar el día a día</em> — donde ubicación, confort y el buen uso de cada metro se encuentran."
+    },
+    "tour": {
+      "kicker": "Experiencia",
+      "heading": "Conoce todos los detalles",
+      "virtual": {
+        "kind": "Tour virtual 360°",
+        "title": "Recorre el departamento modelo",
+        "text": "Recorre los ambientes del departamento modelo y las áreas comunes en 360°, a tu ritmo — desde cualquier dispositivo.",
+        "meta": ["Navegación libre", "Escritorio y móvil"],
+        "cue": "Abrir tour 360°"
+      },
+      "video": {
+        "kind": "Video del emprendimiento",
+        "title": "El concepto en movimiento",
+        "text": "Un cortometraje que presenta la propuesta, la arquitectura y la ubicación de {name}.",
+        "meta": ["Duración ~2 min", "Producción audiovisual"],
+        "cue": "Ver el video"
+      }
+    },
+    "obra": {
+      "kicker": "Avance",
+      "heading": "Sigue la evolución de la obra",
+      "overall": "Avance general de la obra",
+      "photoLabel": "Registro {n}",
+      "stages": [
+        "Movimiento de tierra",
+        "Cimientos y contenciones",
+        "Estructura",
+        "Cerramiento / albañilería",
+        "Instalaciones eléctricas / hidráulicas",
+        "Revestimientos internos",
+        "Fachada",
+        "Terminación y limpieza"
+      ]
     },
     "atuacao": {
       "kicker": "El rol de Open Group",
@@ -970,7 +1038,16 @@
       "mapUnavailable": "Mapa no disponible",
       "addressTbd": "Dirección por definir.",
       "placeholderText": "Este espacio ya sigue el estándar de la página y se activará con Google Maps en cuanto se informe la ubicación.",
-      "mapTitle": "Google Maps - {name}"
+      "mapTitle": "Google Maps - {name}",
+      "near": "cerca de",
+      "filters": [
+        { "key": "empreendimento", "label": "Emprendimiento" },
+        { "key": "educacao", "label": "Educación", "q": "escuelas" },
+        { "key": "comercio", "label": "Comercio y gastronomía", "q": "restaurantes y comercios" },
+        { "key": "saude", "label": "Salud", "q": "hospitales y farmacias" },
+        { "key": "mobilidade", "label": "Movilidad", "q": "estaciones de metro y autobús" },
+        { "key": "lazer", "label": "Ocio", "q": "parques y plazas" }
+      ]
     },
     "proximos": {
       "kicker": "Continúe explorando",

@@ -1,0 +1,209 @@
+{
+  "card": {
+    "status": "Under construction",
+    "segmento": "Residential",
+    "local": "São Paulo · SP"
+  },
+  "heroSummary": "Um empreendimento residencial no Cupecê, em uma região conectada, conveniente e em valorização, na zona sul de São Paulo.",
+  "intro": [
+    "O Hits Cupecê nasce de uma leitura objetiva do território: uma região em ascensão, com comércio, conveniências e conexões urbanas que sustentam uma demanda real por moradia.",
+    "A Open Group estruturou a oportunidade olhando, primeiro, para o lugar; depois, para o produto; e, por fim, para a operação necessária para transformar potencial em empreendimento."
+  ],
+  "facts": [
+    "Em obra",
+    "1 e 2 dormitórios",
+    "Terraço com churrasqueira",
+    "Cupecê - São Paulo"
+  ],
+  "ficha": [
+    {
+      "value": "1 e 2 dormitórios",
+      "label": "Tipologias"
+    },
+    {
+      "value": "A confirmar",
+      "label": "Metragem",
+      "tbd": true
+    },
+    {
+      "value": "A confirmar",
+      "label": "Pavimentos",
+      "tbd": true
+    },
+    {
+      "value": "A confirmar",
+      "label": "Unidades",
+      "tbd": true
+    },
+    {
+      "value": "Opcionais",
+      "label": "Vagas"
+    },
+    {
+      "value": "Terraço com churrasqueira",
+      "label": "Diferencial"
+    },
+    {
+      "value": "Caixa Econômica",
+      "label": "Financiamento"
+    },
+    {
+      "value": "MCMV",
+      "label": "Programa"
+    },
+    {
+      "value": "TS Engenharia",
+      "label": "Construtora"
+    },
+    {
+      "value": "Em obras",
+      "label": "Entrega",
+      "tbd": true
+    }
+  ],
+  "lazer": {
+    "lead": "Mais de uma dezena de itens de lazer e conveniência distribuídos do térreo à cobertura.",
+    "feat": {
+      "kicker": "Destaque",
+      "title": "CineOpen"
+    },
+    "items": [
+      {
+        "icon": "pool",
+        "label": "Piscina"
+      },
+      {
+        "icon": "gym",
+        "label": "Academia"
+      },
+      {
+        "icon": "cowork",
+        "label": "Coworking"
+      },
+      {
+        "icon": "gourmet",
+        "label": "Espaço gourmet"
+      },
+      {
+        "icon": "bbq",
+        "label": "Churrasqueira"
+      },
+      {
+        "icon": "pet",
+        "label": "Pet place"
+      },
+      {
+        "icon": "play",
+        "label": "Playground"
+      },
+      {
+        "icon": "laundry",
+        "label": "Lavanderia"
+      },
+      {
+        "icon": "bike",
+        "label": "Bicicletário"
+      },
+      {
+        "icon": "market",
+        "label": "Mini market"
+      },
+      {
+        "icon": "lounge",
+        "label": "Salão de festas"
+      },
+      {
+        "icon": "roof",
+        "label": "Rooftop"
+      }
+    ]
+  },
+  "locationStory": {
+    "kicker": "A tese do lugar",
+    "title": "Antes da obra, existe a leitura do território.",
+    "body": [
+      "Localizado na Rua Dom João Soares Coelho, o Hits Cupecê está inserido em uma região em plena ascensão e valorização, com comércio forte e conveniências que simplificam a rotina.",
+      "A proximidade com a Avenida Cupecê amplia essa leitura. Com 5,3 km de extensão, ela conecta a Ponte do Morumbi, na Marginal Pinheiros, ao centro de Diadema, criando um eixo relevante de mobilidade na zona sul.",
+      "A poucos minutos da Rodovia dos Imigrantes, o endereço também aproxima a cidade do litoral sul. Para a Open Group, essa combinação de acesso, vida cotidiana e valorização transforma a localização em tese de produto."
+    ],
+    "highlights": [
+      {
+        "title": "Região em ascensão",
+        "text": "Um entorno com valorização, comércio e serviços que reforçam a consistência da demanda."
+      },
+      {
+        "title": "Conexões urbanas",
+        "text": "Avenida Cupecê, Marginal Pinheiros, Diadema e Rodovia dos Imigrantes no raio estratégico do projeto."
+      },
+      {
+        "title": "Cotidiano conveniente",
+        "text": "Facilidade de acesso e conveniências próximas para reduzir deslocamentos e dar fluidez à rotina."
+      }
+    ]
+  },
+  "productStory": {
+    "kicker": "O produto como resposta",
+    "title": "Tipologias pensadas para uma vida urbana mais prática.",
+    "body": [
+      "As unidades de 1 e 2 dormitórios respondem a um público que busca morar bem, com eficiência e conexão com a cidade.",
+      "O terraço com churrasqueira adiciona uma camada de uso e desejo ao produto: um espaço privado para receber, respirar e ampliar a experiência do apartamento."
+    ],
+    "cards": [
+      {
+        "label": "Tipologia",
+        "value": "1 e 2 dormitórios",
+        "text": "Configurações alinhadas a diferentes momentos de vida e perfis de moradia."
+      },
+      {
+        "label": "Endereço",
+        "value": "Rua Dom João Soares Coelho",
+        "text": "Implantação em uma área de conveniência e valorização no Cupecê."
+      },
+      {
+        "label": "Mobilidade",
+        "value": "Eixo Avenida Cupecê",
+        "text": "Conexão com Marginal Pinheiros, Diadema e Rodovia dos Imigrantes."
+      },
+      {
+        "label": "Experiência",
+        "value": "Terraço com churrasqueira",
+        "text": "Um diferencial que transforma a área privativa em lugar de encontro."
+      }
+    ]
+  },
+  "galleryIntro": {
+    "kicker": "Do conceito à experiência",
+    "title": "A narrativa também aparece nos espaços.",
+    "body": [
+      "A galeria apresenta ambientes que traduzem a proposta do Hits Cupecê: morar com praticidade, áreas de uso bem definidas e uma rotina conectada ao entorno."
+    ]
+  },
+  "strategyStory": {
+    "kicker": "Estruturação Open Group",
+    "title": "A operação foi pensada antes de a obra chegar ao canteiro.",
+    "body": [
+      "No Hits Cupecê, a Open Group atua na etapa em que o valor é construído com mais precisão: leitura da oportunidade, definição de produto, análise de viabilidade, articulação de parceiros e condução até a fase de obra.",
+      "Essa inteligência transforma uma localização promissora em uma operação estruturada, com produto, mercado e execução caminhando na mesma direção."
+    ]
+  },
+  "obra": {
+    "reference": "May 2026 photos",
+    "stages": [
+      "General preliminary services",
+      "Foundations and retaining",
+      "Superstructure",
+      "Walls and panels",
+      "Roofs and protections",
+      "Finishes",
+      "Paving",
+      "Systems",
+      "Complementary works",
+      "Infrastructure and urbanization"
+    ]
+  },
+  "closingStatement": {
+    "title": "Cupecê não é apenas um endereço.",
+    "text": "É uma operação estruturada a partir de localização, demanda e visão de produto.",
+    "ctaLabel": "Tenho interesse no empreendimento"
+  }
+}

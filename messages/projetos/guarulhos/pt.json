@@ -1,0 +1,200 @@
+{
+  "card": {
+    "status": "Futuro lançamento",
+    "segmento": "Residencial",
+    "local": "Guarulhos · SP"
+  },
+  "heroSummary": "Um futuro lançamento residencial em Guarulhos, em fase de estruturação de oportunidade, produto e viabilidade.",
+  "intro": [
+    "A oportunidade em Guarulhos foi originada pela Open Group com base em leitura de mercado local e avaliação criteriosa do potencial de desenvolvimento da área.",
+    "A operação está em estruturação: viabilidade em análise, parceiros sendo articulados e modelagem financeira em curso para alinhar capital e execução."
+  ],
+  "facts": [
+    "Futuro lançamento",
+    "Residencial",
+    "Guarulhos - SP",
+    "Sócia da operação"
+  ],
+  "ficha": [
+    {
+      "value": "A definir",
+      "label": "Tipologias",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Metragem",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Pavimentos",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Unidades",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Vagas",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Diferencial",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Financiamento",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Programa",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Construtora",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Entrega",
+      "tbd": true
+    }
+  ],
+  "lazer": {
+    "lead": "Mais de uma dezena de itens de lazer e conveniência distribuídos do térreo à cobertura.",
+    "feat": {
+      "kicker": "Destaque",
+      "title": "CineOpen"
+    },
+    "items": [
+      {
+        "icon": "pool",
+        "label": "Piscina"
+      },
+      {
+        "icon": "gym",
+        "label": "Academia"
+      },
+      {
+        "icon": "cowork",
+        "label": "Coworking"
+      },
+      {
+        "icon": "gourmet",
+        "label": "Espaço gourmet"
+      },
+      {
+        "icon": "bbq",
+        "label": "Churrasqueira"
+      },
+      {
+        "icon": "pet",
+        "label": "Pet place"
+      },
+      {
+        "icon": "play",
+        "label": "Playground"
+      },
+      {
+        "icon": "laundry",
+        "label": "Lavanderia"
+      },
+      {
+        "icon": "bike",
+        "label": "Bicicletário"
+      },
+      {
+        "icon": "market",
+        "label": "Mini market"
+      },
+      {
+        "icon": "lounge",
+        "label": "Salão de festas"
+      },
+      {
+        "icon": "roof",
+        "label": "Rooftop"
+      }
+    ]
+  },
+  "locationStory": {
+    "kicker": "A tese do lugar",
+    "title": "Em Guarulhos, a leitura da oportunidade vem antes do lançamento.",
+    "body": [
+      "O projeto em Guarulhos está em fase de estruturação a partir de uma leitura de mercado local e do potencial de desenvolvimento da área.",
+      "Antes de comunicar produto ou lançamento, a Open Group organiza as variáveis que sustentam a operação: território, demanda, viabilidade e parceiros.",
+      "Essa etapa inicial é decisiva para transformar uma oportunidade imobiliária em um empreendimento com direção clara."
+    ],
+    "highlights": [
+      {
+        "title": "Mercado local",
+        "text": "Leitura da praça e do potencial de absorção antes da definição final do produto."
+      },
+      {
+        "title": "Viabilidade em curso",
+        "text": "Análise técnica, financeira e estratégica para sustentar a evolução da operação."
+      },
+      {
+        "title": "Estruturação inicial",
+        "text": "Articulação de parceiros e desenho de caminho antes do compromisso de lançamento."
+      }
+    ]
+  },
+  "productStory": {
+    "kicker": "O produto como resposta",
+    "title": "O produto será consequência da viabilidade, não ponto de partida.",
+    "body": [
+      "Em Guarulhos, a Open Group conduz a etapa em que o produto ainda está sendo calibrado a partir da oportunidade.",
+      "A definição de posicionamento, mix e estratégia comercial deve nascer da consistência entre território, demanda e execução possível."
+    ],
+    "cards": [
+      {
+        "label": "Status",
+        "value": "Futuro lançamento",
+        "text": "Projeto em estruturação, ainda antes da comunicação final de mercado."
+      },
+      {
+        "label": "Segmento",
+        "value": "Residencial",
+        "text": "Direção de produto voltada à moradia e ao potencial local."
+      },
+      {
+        "label": "Localização",
+        "value": "Guarulhos",
+        "text": "Praça em análise para definição de posicionamento e viabilidade."
+      },
+      {
+        "label": "Modelo",
+        "value": "Sócia da operação",
+        "text": "Operação construída com alinhamento entre capital, parceiros e execução."
+      }
+    ]
+  },
+  "galleryIntro": {
+    "kicker": "Do estudo à materialização",
+    "title": "A galeria marca o espaço reservado para a evolução do projeto.",
+    "body": [
+      "Enquanto o produto avança, a galeria mantém a estrutura visual da página e será atualizada com imagens, renders ou materiais oficiais do empreendimento."
+    ]
+  },
+  "strategyStory": {
+    "kicker": "Estruturação Open Group",
+    "title": "A operação está sendo desenhada antes de chegar ao mercado.",
+    "body": [
+      "No projeto Guarulhos, a Open Group atua na origem: leitura da oportunidade, análise de viabilidade, modelagem financeira e articulação dos parceiros necessários.",
+      "O objetivo é preparar a operação com clareza antes do lançamento, evitando decisões desconectadas entre produto, mercado e execução."
+    ]
+  },
+  "closingStatement": {
+    "title": "Guarulhos ainda está em estruturação.",
+    "text": "Um projeto em desenvolvimento, conduzido com método para transformar potencial em operação viável.",
+    "ctaLabel": "Tenho interesse no empreendimento"
+  }
+}

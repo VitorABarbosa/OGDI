@@ -1,0 +1,210 @@
+{
+  "card": {
+    "status": "Em obra",
+    "segmento": "Residencial",
+    "local": "São Paulo · SP"
+  },
+  "heroSummary": "Um empreendimento residencial em obra na Freguesia do Ó, na zona norte de São Paulo, com lazer completo e terraço com churrasqueira.",
+  "intro": [
+    "O Oh Freguesia nasce na Freguesia do Ó, na zona norte de São Paulo — um dos bairros mais antigos da capital, com vida de bairro consolidada, comércio e serviços no entorno.",
+    "A Open Group estruturou a oportunidade conectando produto, viabilidade e operação: unidades de 1 e 2 dormitórios, com terraço com churrasqueira, e um lazer completo, de beach club e sky lounge a cinema open e praça do fogo.",
+    "Hoje o empreendimento avança em obra, evidência de uma operação consolidada antes do início da execução."
+  ],
+  "facts": [
+    "Em obra",
+    "1 e 2 dormitórios",
+    "Terraço com churrasqueira",
+    "Freguesia do Ó - SP"
+  ],
+  "ficha": [
+    {
+      "value": "1 e 2 dormitórios",
+      "label": "Tipologias"
+    },
+    {
+      "value": "A confirmar",
+      "label": "Metragem",
+      "tbd": true
+    },
+    {
+      "value": "A confirmar",
+      "label": "Pavimentos",
+      "tbd": true
+    },
+    {
+      "value": "A confirmar",
+      "label": "Unidades",
+      "tbd": true
+    },
+    {
+      "value": "Opcionais",
+      "label": "Vagas"
+    },
+    {
+      "value": "Terraço com churrasqueira",
+      "label": "Diferencial"
+    },
+    {
+      "value": "Caixa Econômica",
+      "label": "Financiamento"
+    },
+    {
+      "value": "MCMV",
+      "label": "Programa"
+    },
+    {
+      "value": "TS Engenharia",
+      "label": "Construtora"
+    },
+    {
+      "value": "Em obras",
+      "label": "Entrega",
+      "tbd": true
+    }
+  ],
+  "lazer": {
+    "lead": "Mais de uma dezena de itens de lazer e conveniência distribuídos do térreo à cobertura.",
+    "feat": {
+      "kicker": "Destaque",
+      "title": "CineOpen"
+    },
+    "items": [
+      {
+        "icon": "pool",
+        "label": "Piscina"
+      },
+      {
+        "icon": "gym",
+        "label": "Academia"
+      },
+      {
+        "icon": "cowork",
+        "label": "Coworking"
+      },
+      {
+        "icon": "gourmet",
+        "label": "Espaço gourmet"
+      },
+      {
+        "icon": "bbq",
+        "label": "Churrasqueira"
+      },
+      {
+        "icon": "pet",
+        "label": "Pet place"
+      },
+      {
+        "icon": "play",
+        "label": "Playground"
+      },
+      {
+        "icon": "laundry",
+        "label": "Lavanderia"
+      },
+      {
+        "icon": "bike",
+        "label": "Bicicletário"
+      },
+      {
+        "icon": "market",
+        "label": "Mini market"
+      },
+      {
+        "icon": "lounge",
+        "label": "Salão de festas"
+      },
+      {
+        "icon": "roof",
+        "label": "Rooftop"
+      }
+    ]
+  },
+  "locationStory": {
+    "kicker": "A tese do lugar",
+    "title": "Na Freguesia do Ó, um bairro consolidado vira tese.",
+    "body": [
+      "Na Rua Homero Francisco Terra, o Oh Freguesia está inserido em um dos bairros mais antigos de São Paulo, com vida de bairro consolidada, comércio e serviços no entorno.",
+      "A Freguesia do Ó combina identidade urbana estabelecida e demanda residencial constante na zona norte da capital.",
+      "Para a Open Group, esse contexto de bairro consolidado sustenta produto e operação, transformando a localização em tese."
+    ],
+    "highlights": [
+      {
+        "title": "Bairro consolidado",
+        "text": "Um dos endereços mais tradicionais da zona norte, com vida de bairro estabelecida."
+      },
+      {
+        "title": "Demanda constante",
+        "text": "Comércio, serviços e infraestrutura urbana que sustentam a procura por moradia."
+      },
+      {
+        "title": "Operação consolidada",
+        "text": "Produto, parceiros e execução conectados para viabilizar o avanço da obra."
+      }
+    ]
+  },
+  "productStory": {
+    "kicker": "O produto como resposta",
+    "title": "Tipologias compactas com lazer de bairro completo.",
+    "body": [
+      "As unidades de 1 e 2 dormitórios respondem à demanda urbana da Freguesia do Ó, com eficiência e conexão com a cidade.",
+      "O terraço com churrasqueira e um conjunto de lazer amplo ampliam a experiência do morar no dia a dia."
+    ],
+    "cards": [
+      {
+        "label": "Tipologia",
+        "value": "1 e 2 dormitórios",
+        "text": "Plantas eficientes para diferentes perfis de moradia urbana."
+      },
+      {
+        "label": "Endereço",
+        "value": "Rua Homero Francisco Terra",
+        "text": "Freguesia do Ó, zona norte de São Paulo."
+      },
+      {
+        "label": "Lazer",
+        "value": "Beach club e sky lounge",
+        "text": "Aqua play, crossfit, cinema open, praça do fogo, pet place e playground."
+      },
+      {
+        "label": "Experiência",
+        "value": "Terraço com churrasqueira",
+        "text": "A área privativa vira espaço de uso e convívio."
+      }
+    ]
+  },
+  "galleryIntro": {
+    "kicker": "Do conceito à experiência",
+    "title": "As imagens mostram a passagem da tese para o produto.",
+    "body": [
+      "A galeria do Oh Freguesia apresenta a materialização da operação: conceito, produto e percepção de valor organizados em uma experiência visual."
+    ]
+  },
+  "strategyStory": {
+    "kicker": "Estruturação Open Group",
+    "title": "O valor foi construído antes do início da execução.",
+    "body": [
+      "No Oh Freguesia, a Open Group conduziu a leitura do ativo, a conceituação do produto e a articulação dos parceiros necessários para consolidar a operação.",
+      "A obra é consequência desse trabalho anterior: uma sequência de decisões que deu forma, viabilidade e direção ao empreendimento."
+    ]
+  },
+  "obra": {
+    "reference": "Posição em maio de 2026",
+    "stages": [
+      "Serviços preliminares gerais",
+      "Fundações e contenções",
+      "Supraestrutura",
+      "Paredes e painéis",
+      "Coberturas e proteções",
+      "Revestimentos",
+      "Pavimentação",
+      "Instalações",
+      "Complementações",
+      "Infraestrutura e urbanização"
+    ]
+  },
+  "closingStatement": {
+    "title": "Oh Freguesia traduz potencial em operação.",
+    "text": "Um empreendimento que nasce da inteligência de mercado e avança com produto e execução conectados.",
+    "ctaLabel": "Tenho interesse no empreendimento"
+  }
+}

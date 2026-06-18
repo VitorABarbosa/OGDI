@@ -20,23 +20,27 @@ const stepCountByCat: Record<ProjetoCat, number> = {
 export function EmpAtuacao({ p }: { p?: Projeto }) {
   const t = useTranslations("empreendimento.atuacao");
   const ts = useTranslations("home.atuacao.steps");
-  const visibleStrategyBody = p?.strategyStory?.body.slice(0, 1);
+  const tp = useTranslations("proj");
+  const strategyStory = p
+    ? (tp.raw(`${p.slug}.strategyStory`) as { kicker: string; title: string; body: string[] })
+    : undefined;
+  const visibleStrategyBody = strategyStory?.body.slice(0, 1);
   const steps = atuacaoSteps.slice(0, p ? stepCountByCat[p.cat] : 7);
 
   return (
     <section className="py-section">
       <div className="wrap">
-        {p?.strategyStory && (
+        {strategyStory && (
           <div className="mb-[clamp(52px,7vw,96px)] grid grid-cols-1 gap-[clamp(28px,5vw,76px)] lg:grid-cols-[.9fr_1.1fr]">
             <div>
-              <Kicker className="reveal">{p.strategyStory.kicker}</Kicker>
+              <Kicker className="reveal">{strategyStory.kicker}</Kicker>
               <h2 className="reveal reveal-2 mt-5 max-w-[680px] font-sans text-[clamp(28px,3.6vw,52px)] font-semibold leading-[1.06] tracking-[-.03em]">
-                {p.strategyStory.title}
+                {strategyStory.title}
               </h2>
             </div>
             <div className="space-y-5 self-end text-[clamp(15px,1.12vw,18px)] leading-[1.72] text-ink-2">
               {visibleStrategyBody?.map((paragraph, index) => (
-                <p key={`${p.slug}-strategy-${index}`} className={cn("reveal", `reveal-info-${Math.min(index + 1, 5)}`)}>
+                <p key={`strategy-${index}`} className={cn("reveal", `reveal-info-${Math.min(index + 1, 5)}`)}>
                   {paragraph}
                 </p>
               ))}
