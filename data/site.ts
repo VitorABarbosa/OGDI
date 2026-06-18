@@ -1,8 +1,8 @@
 export const site = {
   name: "Open Group",
   subtitle: "Desenvolvimento Imobiliário",
-  email: "contato@opengroup.com.br",
-  phone: "+55 11 0000-0000",
+  email: "max@ogdi.com.br",
+  phone: "+55 11 98513-1748",
   location: "São Paulo · SP",
   tagline: "O valor nasce antes da obra.",
   institutional: "Estruturação e desenvolvimento de empreendimentos imobiliários.",

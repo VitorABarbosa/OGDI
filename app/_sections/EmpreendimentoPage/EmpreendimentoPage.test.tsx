@@ -25,7 +25,7 @@ const semMapa = projetos.find((p) => p.slug === "guarulhos");
 // Prosa por projeto agora vive em messages/projetos/<slug>/ (namespace proj.<slug>).
 const ptProj = projetoMessages("pt") as Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
 const TEAM_WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5511995166122&text&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=5511985131748&text&type=phone_number&app_absent=0";
 
 describe("Empreendimento page data", () => {
   it("does not keep the duplicate standalone Cupece project", () => {
