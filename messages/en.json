@@ -387,6 +387,33 @@
       "noteOne": "{count} project · {label}",
       "noteMany": "{count} projects · {label}"
     },
+    "cards": {
+      "hits-cupece": {
+        "status": "Under construction",
+        "segmento": "Residential",
+        "local": "São Paulo · SP"
+      },
+      "start-park-jabaquara": {
+        "status": "Under construction",
+        "segmento": "Residential",
+        "local": "São Paulo · SP"
+      },
+      "oh-freguesia": {
+        "status": "Under construction",
+        "segmento": "Residential",
+        "local": "São Paulo · SP"
+      },
+      "hits-santa-catarina": {
+        "status": "Delivered",
+        "segmento": "Residential",
+        "local": "São Paulo · SP"
+      },
+      "guarulhos": {
+        "status": "Upcoming",
+        "segmento": "Residential",
+        "local": "Guarulhos · SP"
+      }
+    },
     "scp": {
       "chip": "Investment SCP",
       "cta": "I'm interested",
@@ -909,16 +936,27 @@
       "projetos": "Projects",
       "badgeSuffix": "Development",
       "venturePartner": "OGDI partner in the venture",
-      "scrollCue": "Scroll"
+      "scrollCue": "Scroll",
+      "cta": "Discover the development",
+      "ctaContato": "Talk to the team"
     },
     "nav": {
       "ariaLabel": "Development sections",
       "sobre": "About the project",
+      "ficha": "Specifications",
       "lazer": "Amenities",
       "galeria": "Gallery",
       "tour": "Virtual tour",
       "obra": "Construction progress",
       "localizacao": "Location"
+    },
+    "sobre": {
+      "kicker": "About the project",
+      "mediaTag": "render · facade"
+    },
+    "lazer": {
+      "kicker": "Amenities & features",
+      "heading": "Complete shared areas."
     },
     "info": {
       "kicker": "The development",
@@ -938,8 +976,55 @@
     },
     "gallery": {
       "aria": "Image gallery",
+      "kicker": "Gallery",
+      "disclaimer": "Artist's impression only",
       "showMore": "Show more images",
-      "showLess": "Show less"
+      "showLess": "Show less",
+      "count": "{count, plural, one {# image} other {# images}}",
+      "filters": {
+        "todas": "All",
+        "comuns": "Common areas",
+        "decorado": "Show home",
+        "plantas": "Floor plans",
+        "implant": "Site plan"
+      }
+    },
+    "quote": {
+      "text": "An address designed to <em>elevate everyday life</em> — where location, comfort and the smart use of every square metre meet."
+    },
+    "tour": {
+      "kicker": "Experience",
+      "heading": "Explore every detail",
+      "virtual": {
+        "kind": "360° virtual tour",
+        "title": "Walk through the show unit",
+        "text": "Move through the show apartment and the shared areas in 360°, at your own pace — from any device.",
+        "meta": ["Free navigation", "Desktop and mobile"],
+        "cue": "Open 360° tour"
+      },
+      "video": {
+        "kind": "Development film",
+        "title": "The concept in motion",
+        "text": "A short film presenting the concept, architecture and location of {name}.",
+        "meta": ["Approx. 2 min", "Audiovisual production"],
+        "cue": "Watch the video"
+      }
+    },
+    "obra": {
+      "kicker": "Progress",
+      "heading": "Follow the construction progress",
+      "overall": "Overall construction progress",
+      "photoLabel": "Update {n}",
+      "stages": [
+        "Earthworks",
+        "Foundations and retaining",
+        "Structure",
+        "Sealing / masonry",
+        "Electrical / plumbing systems",
+        "Internal finishes",
+        "Façade",
+        "Finishing and cleaning"
+      ]
     },
     "atuacao": {
       "kicker": "Open Group's role",
@@ -953,7 +1038,16 @@
       "mapUnavailable": "Map unavailable",
       "addressTbd": "Address to be defined.",
       "placeholderText": "This space already follows the page standard and will be activated with Google Maps as soon as the location is provided.",
-      "mapTitle": "Google Maps - {name}"
+      "mapTitle": "Google Maps - {name}",
+      "near": "near",
+      "filters": [
+        { "key": "empreendimento", "label": "Development" },
+        { "key": "educacao", "label": "Education", "q": "schools" },
+        { "key": "comercio", "label": "Shops & dining", "q": "restaurants and shops" },
+        { "key": "saude", "label": "Health", "q": "hospitals and pharmacies" },
+        { "key": "mobilidade", "label": "Mobility", "q": "subway and bus stations" },
+        { "key": "lazer", "label": "Leisure", "q": "parks and squares" }
+      ]
     },
     "proximos": {
       "kicker": "Keep exploring",

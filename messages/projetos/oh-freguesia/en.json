@@ -16,6 +16,109 @@
     "Terraço com churrasqueira",
     "Freguesia do Ó - SP"
   ],
+  "ficha": [
+    {
+      "value": "1 e 2 dormitórios",
+      "label": "Tipologias"
+    },
+    {
+      "value": "A confirmar",
+      "label": "Metragem",
+      "tbd": true
+    },
+    {
+      "value": "A confirmar",
+      "label": "Pavimentos",
+      "tbd": true
+    },
+    {
+      "value": "A confirmar",
+      "label": "Unidades",
+      "tbd": true
+    },
+    {
+      "value": "Opcionais",
+      "label": "Vagas"
+    },
+    {
+      "value": "Terraço com churrasqueira",
+      "label": "Diferencial"
+    },
+    {
+      "value": "Caixa Econômica",
+      "label": "Financiamento"
+    },
+    {
+      "value": "MCMV",
+      "label": "Programa"
+    },
+    {
+      "value": "TS Engenharia",
+      "label": "Construtora"
+    },
+    {
+      "value": "Em obras",
+      "label": "Entrega",
+      "tbd": true
+    }
+  ],
+  "lazer": {
+    "lead": "Mais de uma dezena de itens de lazer e conveniência distribuídos do térreo à cobertura.",
+    "feat": {
+      "kicker": "Destaque",
+      "title": "CineOpen"
+    },
+    "items": [
+      {
+        "icon": "pool",
+        "label": "Piscina"
+      },
+      {
+        "icon": "gym",
+        "label": "Academia"
+      },
+      {
+        "icon": "cowork",
+        "label": "Coworking"
+      },
+      {
+        "icon": "gourmet",
+        "label": "Espaço gourmet"
+      },
+      {
+        "icon": "bbq",
+        "label": "Churrasqueira"
+      },
+      {
+        "icon": "pet",
+        "label": "Pet place"
+      },
+      {
+        "icon": "play",
+        "label": "Playground"
+      },
+      {
+        "icon": "laundry",
+        "label": "Lavanderia"
+      },
+      {
+        "icon": "bike",
+        "label": "Bicicletário"
+      },
+      {
+        "icon": "market",
+        "label": "Mini market"
+      },
+      {
+        "icon": "lounge",
+        "label": "Salão de festas"
+      },
+      {
+        "icon": "roof",
+        "label": "Rooftop"
+      }
+    ]
+  },
   "locationStory": {
     "kicker": "A tese do lugar",
     "title": "Na Freguesia do Ó, um bairro consolidado vira tese.",
@@ -82,6 +185,21 @@
     "body": [
       "No Oh Freguesia, a Open Group conduziu a leitura do ativo, a conceituação do produto e a articulação dos parceiros necessários para consolidar a operação.",
       "A obra é consequência desse trabalho anterior: uma sequência de decisões que deu forma, viabilidade e direção ao empreendimento."
+    ]
+  },
+  "obra": {
+    "reference": "As of May 2026",
+    "stages": [
+      "General preliminary works",
+      "Foundations and retaining",
+      "Superstructure",
+      "Walls and panels",
+      "Roofing and waterproofing",
+      "Finishes",
+      "Paving",
+      "Building services",
+      "Complementary works",
+      "Infrastructure and landscaping"
     ]
   },
   "closingStatement": {

@@ -17,6 +17,22 @@ export type ProjetoMapPoint = {
   lng: number;
 };
 
+// Mídia real da seção "Experiência" (tour 360° + filme). Quando ausente, o
+// EmpTour mantém o placeholder. Posters são renders locais (sem imagem remota).
+export type ProjetoExperience = {
+  tourUrl?: string;
+  videoUrl?: string;
+  tourPoster?: string;
+  videoPoster?: string;
+};
+
+// Andamento de obra real por projeto. `bars[i].pct` casa por índice com os
+// rótulos traduzidos em `proj.<slug>.obra.stages`. `done` é derivado (pct ≥ 100).
+export type ProjetoObra = {
+  overall: number;
+  bars: { pct: number }[];
+};
+
 export type ProjetoMap = {
   title: string;
   text: string;
@@ -40,6 +56,9 @@ export type Projeto = {
   tone: "t1" | "t2" | "t3";
   ctaLabel: string;
   image?: string;
+  // Imagem de destaque da Hero (ex.: portaria/entrada), p/ não repetir a fachada
+  // usada na seção "Sobre o projeto". Cai em `image` quando ausente.
+  heroImage?: string;
   segmento: string;
   local: string;
   regiao?: string;
@@ -52,6 +71,8 @@ export type Projeto = {
   // Prosa migrada para i18n (`proj.<slug>.*`). Resta aqui só o href estrutural do
   // CTA de fechamento (o restante de closingStatement vive no i18n).
   closingStatement?: { ctaHref?: string };
+  experience?: ProjetoExperience;
+  obra?: ProjetoObra;
   map?: ProjetoMap;
 };
 
@@ -71,12 +92,29 @@ export const projetos: Projeto[] = [
     tag: "Operação estruturada na origem, do produto ao lançamento.",
     tone: "t2", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/CUPECE/Cupece.png",
+    heroImage: "/assets/projetos/CUPECE/IMAGES/Portaria.png",
     segmento: "Residencial", local: "São Paulo · SP", regiao: "Cupecê",
     modelo: "Sócia da operação",
     address: "Rua Dom João Soares Coelho",
     units: "1 e 2 dormitórios",
     unitFeature: "Terraço com churrasqueira",
     closingStatement: { ctaHref: "https://www.tsengenharia.com/imovel/hits-cupece/" },
+    // Andamento real (maio/2026). Ordem casa com proj.hits-cupece.obra.stages.
+    obra: {
+      overall: 85.84,
+      bars: [
+        { pct: 87.46 }, // Serviços preliminares gerais
+        { pct: 100 }, // Fundações e contenções
+        { pct: 100 }, // Supraestrutura
+        { pct: 96.44 }, // Paredes e painéis
+        { pct: 57.2 }, // Coberturas e proteções
+        { pct: 85.49 }, // Revestimentos
+        { pct: 94.13 }, // Pavimentação
+        { pct: 74.18 }, // Instalações
+        { pct: 31.91 }, // Complementações
+        { pct: 68.96 }, // Infraestrutura e urbanização
+      ],
+    },
     map: {
       title: "Localização e entorno",
       text: "Explore a localização do Hits Cupecê no Google Maps, com o empreendimento como ponto de referência.",
@@ -118,6 +156,7 @@ export const projetos: Projeto[] = [
     tag: "Da inteligência de mercado à condução até o lançamento.",
     tone: "t3", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/HITS_START_PARK_JABAQUARA/HITS_PARK.png",
+    heroImage: "/assets/projetos/HITS_START_PARK_JABAQUARA/IMAGES/TS_Engenharia_Hits_Park_Portaria_HR.jpg",
     segmento: "Residencial", local: "São Paulo · SP",
     modelo: "Sócia da operação",
     regiao: "Parque Jabaquara",
@@ -125,6 +164,22 @@ export const projetos: Projeto[] = [
     units: "1 e 2 dormitórios",
     unitFeature: "Terraço com churrasqueira",
     closingStatement: { ctaHref: "https://www.tsengenharia.com/imovel/start-park-jabaquara/" },
+    // Andamento real (maio/2026). Etapas sem percentual informado ficam como 0%.
+    obra: {
+      overall: 22.76,
+      bars: [
+        { pct: 42.57 }, // Serviços preliminares gerais
+        { pct: 91.1 }, // Fundações e contenções
+        { pct: 15.35 }, // Supraestrutura
+        { pct: 8.96 }, // Paredes e painéis
+        { pct: 1.47 }, // Coberturas e proteções
+        { pct: 0 }, // Revestimentos
+        { pct: 0 }, // Pavimentação
+        { pct: 6.53 }, // Instalações
+        { pct: 0 }, // Complementações
+        { pct: 50.95 }, // Infraestrutura e urbanização
+      ],
+    },
     map: {
       title: "Localização e entorno",
       text: "Explore a localização do Start Park Jabaquara no Google Maps, com o empreendimento como ponto de referência.",
@@ -145,6 +200,7 @@ export const projetos: Projeto[] = [
     tag: "Produto conceituado e operação estruturada pela OGDI.",
     tone: "t1", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/OH_FREGUESIA/Oh_freguesia.png",
+    heroImage: "/assets/projetos/OH_FREGUESIA/IMAGES/Ts_Engenharia_Oh_Freguesia_Hall_HR.jpg",
     segmento: "Residencial", local: "São Paulo · SP",
     modelo: "Sócia da operação",
     regiao: "Freguesia do Ó",
@@ -152,6 +208,28 @@ export const projetos: Projeto[] = [
     units: "1 e 2 dormitórios",
     unitFeature: "Terraço com churrasqueira",
     closingStatement: { ctaHref: "https://www.tsengenharia.com/imovel/oh-freguesia/" },
+    experience: {
+      tourUrl: "https://flyingstudio.com.br/vr/vr-ts-oh-freguesia/",
+      videoUrl: "https://www.youtube.com/watch?v=lUUNJzuyf4g",
+      tourPoster: "/assets/projetos/OH_FREGUESIA/IMAGES/Ts_Engenharia_Oh_Freguesia_Living_02_HR.jpg",
+      videoPoster: "/assets/projetos/OH_FREGUESIA/IMAGES/TS_OH_FREGUESIA_FACHADA_ATIVA_HR.jpg",
+    },
+    // Andamento real (abril/2025). Ordem casa com proj.oh-freguesia.obra.stages.
+    obra: {
+      overall: 84.15,
+      bars: [
+        { pct: 88.22 }, // Serviços preliminares gerais
+        { pct: 100 }, // Fundações e contenções
+        { pct: 100 }, // Supraestrutura
+        { pct: 97.11 }, // Paredes e painéis
+        { pct: 88.28 }, // Coberturas e proteções
+        { pct: 81.49 }, // Revestimentos
+        { pct: 92.44 }, // Pavimentação
+        { pct: 75.72 }, // Instalações
+        { pct: 0 }, // Complementações
+        { pct: 17.3 }, // Infraestrutura e urbanização
+      ],
+    },
     map: {
       title: "Localização e entorno",
       text: "Explore a localização do Oh Freguesia no Google Maps, com o empreendimento como ponto de referência.",
@@ -189,6 +267,7 @@ export const projetos: Projeto[] = [
     tag: "Da concepção ao lançamento — operação entregue.",
     tone: "t1", ctaLabel: "Conheça o empreendimento",
     image: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.jpg",
+    heroImage: "/assets/projetos/HITS_SANTA_CATARINA/IMAGES/favorita.jpg",
     segmento: "Residencial", local: "São Paulo · SP",
     modelo: "Sócia da operação",
     regiao: "Vila Santa Catarina",

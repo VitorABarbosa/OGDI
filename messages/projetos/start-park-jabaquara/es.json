@@ -16,6 +16,109 @@
     "Terraço com churrasqueira",
     "Parque Jabaquara - SP"
   ],
+  "ficha": [
+    {
+      "value": "1 e 2 dormitórios",
+      "label": "Tipologias"
+    },
+    {
+      "value": "A confirmar",
+      "label": "Metragem",
+      "tbd": true
+    },
+    {
+      "value": "A confirmar",
+      "label": "Pavimentos",
+      "tbd": true
+    },
+    {
+      "value": "A confirmar",
+      "label": "Unidades",
+      "tbd": true
+    },
+    {
+      "value": "Opcionais",
+      "label": "Vagas"
+    },
+    {
+      "value": "Terraço com churrasqueira",
+      "label": "Diferencial"
+    },
+    {
+      "value": "Caixa Econômica",
+      "label": "Financiamento"
+    },
+    {
+      "value": "MCMV",
+      "label": "Programa"
+    },
+    {
+      "value": "TS Engenharia",
+      "label": "Construtora"
+    },
+    {
+      "value": "Em obras",
+      "label": "Entrega",
+      "tbd": true
+    }
+  ],
+  "lazer": {
+    "lead": "Mais de uma dezena de itens de lazer e conveniência distribuídos do térreo à cobertura.",
+    "feat": {
+      "kicker": "Destaque",
+      "title": "CineOpen"
+    },
+    "items": [
+      {
+        "icon": "pool",
+        "label": "Piscina"
+      },
+      {
+        "icon": "gym",
+        "label": "Academia"
+      },
+      {
+        "icon": "cowork",
+        "label": "Coworking"
+      },
+      {
+        "icon": "gourmet",
+        "label": "Espaço gourmet"
+      },
+      {
+        "icon": "bbq",
+        "label": "Churrasqueira"
+      },
+      {
+        "icon": "pet",
+        "label": "Pet place"
+      },
+      {
+        "icon": "play",
+        "label": "Playground"
+      },
+      {
+        "icon": "laundry",
+        "label": "Lavanderia"
+      },
+      {
+        "icon": "bike",
+        "label": "Bicicletário"
+      },
+      {
+        "icon": "market",
+        "label": "Mini market"
+      },
+      {
+        "icon": "lounge",
+        "label": "Salão de festas"
+      },
+      {
+        "icon": "roof",
+        "label": "Rooftop"
+      }
+    ]
+  },
   "locationStory": {
     "kicker": "A tese do lugar",
     "title": "No Jabaquara, a oportunidade nasce da leitura da praça.",
@@ -82,6 +185,21 @@
     "body": [
       "No Start Park Jabaquara, a Open Group conectou leitura da oportunidade, conceituação do produto, modelagem da operação e articulação dos parceiros necessários.",
       "O resultado é um empreendimento em obra com uma tese construída antes da execução, reduzindo improviso e dando clareza ao processo."
+    ]
+  },
+  "obra": {
+    "reference": "Fotos de mayo de 2026",
+    "stages": [
+      "Servicios preliminares generales",
+      "Cimientos y contenciones",
+      "Superestructura",
+      "Paredes y paneles",
+      "Cubiertas y protecciones",
+      "Revestimientos",
+      "Pavimentación",
+      "Instalaciones",
+      "Complementaciones",
+      "Infraestructura y urbanización"
     ]
   },
   "closingStatement": {

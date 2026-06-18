@@ -15,6 +15,115 @@
     "Guarulhos - SP",
     "Sócia da operação"
   ],
+  "ficha": [
+    {
+      "value": "A definir",
+      "label": "Tipologias",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Metragem",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Pavimentos",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Unidades",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Vagas",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Diferencial",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Financiamento",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Programa",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Construtora",
+      "tbd": true
+    },
+    {
+      "value": "A definir",
+      "label": "Entrega",
+      "tbd": true
+    }
+  ],
+  "lazer": {
+    "lead": "Mais de uma dezena de itens de lazer e conveniência distribuídos do térreo à cobertura.",
+    "feat": {
+      "kicker": "Destaque",
+      "title": "CineOpen"
+    },
+    "items": [
+      {
+        "icon": "pool",
+        "label": "Piscina"
+      },
+      {
+        "icon": "gym",
+        "label": "Academia"
+      },
+      {
+        "icon": "cowork",
+        "label": "Coworking"
+      },
+      {
+        "icon": "gourmet",
+        "label": "Espaço gourmet"
+      },
+      {
+        "icon": "bbq",
+        "label": "Churrasqueira"
+      },
+      {
+        "icon": "pet",
+        "label": "Pet place"
+      },
+      {
+        "icon": "play",
+        "label": "Playground"
+      },
+      {
+        "icon": "laundry",
+        "label": "Lavanderia"
+      },
+      {
+        "icon": "bike",
+        "label": "Bicicletário"
+      },
+      {
+        "icon": "market",
+        "label": "Mini market"
+      },
+      {
+        "icon": "lounge",
+        "label": "Salão de festas"
+      },
+      {
+        "icon": "roof",
+        "label": "Rooftop"
+      }
+    ]
+  },
   "locationStory": {
     "kicker": "A tese do lugar",
     "title": "Em Guarulhos, a leitura da oportunidade vem antes do lançamento.",
