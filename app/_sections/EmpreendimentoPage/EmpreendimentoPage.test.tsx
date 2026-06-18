@@ -52,7 +52,7 @@ describe("Empreendimento page data", () => {
     const hc = ptProj["hits-cupece"];
     expect(hc.facts).toEqual([
       "Em obra",
-      "1 e 2 dormitórios",
+      "Studio e 2 dormitórios",
       "Terraço com churrasqueira",
       "Cupecê - São Paulo",
     ]);
@@ -62,7 +62,7 @@ describe("Empreendimento page data", () => {
     expect(hc.strategyStory.title).toBe("A operação foi pensada antes de a obra chegar ao canteiro.");
     expect(hc.strategyStory.kicker).toMatch(/estrutura/i);
     expect(hc.galleryIntro.title).toBe("A narrativa também aparece nos espaços.");
-    expect(hc.obra.reference).toBe("Fotos de maio de 2026");
+    expect(hc.obra.reference).toBe("Atualizado em maio de 2026");
     expect(hc.obra.stages).toHaveLength(10);
     expect(hc.closingStatement.title).toMatch(/não é apenas um endereço/i);
   });
@@ -78,7 +78,7 @@ describe("Empreendimento page data", () => {
     expect(startPark?.obra?.bars[9].pct).toBe(50.95);
 
     const sp = ptProj["start-park-jabaquara"];
-    expect(sp.obra.reference).toBe("Fotos de maio de 2026");
+    expect(sp.obra.reference).toBe("Atualizado em maio de 2026");
     expect(sp.obra.stages).toHaveLength(10);
   });
 
@@ -110,7 +110,7 @@ describe("Empreendimento page data", () => {
     render(<EmpFicha p={hitsCupece!} />);
 
     // Faixa só com a grade (sem cabeçalho), 1:1 com a referência .em-ficha.
-    expect(screen.getByText("1 e 2 dormitórios")).toBeInTheDocument();
+    expect(screen.getByText("Studio e 2 dormitórios")).toBeInTheDocument();
     expect(screen.getByText("Tipologias")).toBeInTheDocument();
     expect(screen.getByText("TS Engenharia")).toBeInTheDocument();
     expect(screen.getByText("Construtora")).toBeInTheDocument();
@@ -129,7 +129,7 @@ describe("Empreendimento page data", () => {
 
     // Resumo + essenciais (localização entre eles) logo de cara.
     expect(screen.getByText(/região conectada, conveniente e em valorização/i)).toBeInTheDocument();
-    expect(screen.getByText("1 e 2 dormitórios")).toBeInTheDocument();
+    expect(screen.getByText("Studio e 2 dormitórios")).toBeInTheDocument();
     expect(screen.getByText("Cupecê - São Paulo")).toBeInTheDocument();
 
     // CTAs — primária leva ao site da incorporadora (nova aba); secundária ao contato.
@@ -145,8 +145,8 @@ describe("Empreendimento page data", () => {
     render(<EmpLazer p={hitsCupece!} />);
 
     expect(screen.getByText("Áreas comuns completas.")).toBeInTheDocument();
-    expect(screen.getByText("Piscina")).toBeInTheDocument();
-    expect(screen.getByText("Rooftop")).toBeInTheDocument();
+    expect(screen.getByText("Piscina adulto")).toBeInTheDocument();
+    expect(screen.getByText("Sky lounge")).toBeInTheDocument();
     expect(screen.getByText("Destaque")).toBeInTheDocument();
     expect(screen.getByText("CineOpen")).toBeInTheDocument();
   });
@@ -207,7 +207,7 @@ describe("Empreendimento page data", () => {
     expect(screen.getByText("Serviços preliminares gerais")).toBeInTheDocument();
     expect(screen.getByText("Supraestrutura")).toBeInTheDocument();
     expect(screen.getByText("Infraestrutura e urbanização")).toBeInTheDocument();
-    expect(screen.getByText("Fotos de maio de 2026")).toBeInTheDocument();
+    expect(screen.getByText("Atualizado em maio de 2026")).toBeInTheDocument();
     expect(screen.getByText("Em obra")).toBeInTheDocument();
   });
 
@@ -220,7 +220,7 @@ describe("Empreendimento page data", () => {
     expect(screen.getByText("91.10%")).toBeInTheDocument();
     expect(screen.getByText("Revestimentos")).toBeInTheDocument();
     expect(screen.getAllByText("0%")).toHaveLength(3);
-    expect(screen.getByText("Fotos de maio de 2026")).toBeInTheDocument();
+    expect(screen.getByText("Atualizado em maio de 2026")).toBeInTheDocument();
   });
 
   it("omits the construction-progress section for a future launch (no site yet)", () => {
@@ -256,7 +256,7 @@ describe("Empreendimento page data", () => {
     // Layout da referência: kicker + título de produto + intro + imagem com etiqueta.
     expect(screen.getByText("Sobre o projeto")).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /Tipologias pensadas para uma vida urbana mais prática/i, level: 2 }),
+      screen.getByRole("heading", { name: /Plantas inteligentes pensadas para uma vida urbana mais prática/i, level: 2 }),
     ).toBeInTheDocument();
     expect(screen.getByText(/O Hits Cupecê nasce de uma leitura objetiva do território/i)).toBeInTheDocument();
   });
@@ -266,7 +266,7 @@ describe("Empreendimento page data", () => {
 
     render(<EmpAtuacao p={hitsCupece!} />);
 
-    expect(screen.getByText("Estruturação Open Group")).toBeInTheDocument();
+    expect(screen.getByText("Estruturação OGDI")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /operação foi pensada antes de a obra/i })).toBeInTheDocument();
     expect(screen.getByText(/leitura da oportunidade, definição de produto/i)).toBeInTheDocument();
   });

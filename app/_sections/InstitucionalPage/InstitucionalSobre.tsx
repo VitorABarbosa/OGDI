@@ -1,11 +1,13 @@
 import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
+import { GalleryFlowBackground } from "@/components/ui/gallery-flow-background";
 
 export async function InstitucionalSobre() {
   const t = await getTranslations("institucional.about");
   return (
-    <section id="institucional-sobre" className="bg-white py-section text-ink">
-      <div className="wrap">
+    <section id="institucional-sobre" className="relative overflow-hidden bg-white py-section text-ink">
+      <GalleryFlowBackground background="#FFFFFF" variant="institucional-sobre" />
+      <div className="wrap relative z-10">
         <div className="grid grid-cols-1 items-start gap-[clamp(40px,6vw,100px)] lg:grid-cols-[0.82fr_1.18fr]">
           <div className="reveal">
             <Kicker>{t("kicker")}</Kicker>

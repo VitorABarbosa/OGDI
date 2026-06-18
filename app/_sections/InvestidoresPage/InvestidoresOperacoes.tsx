@@ -8,7 +8,7 @@ import { InvestidoresOperacoesCarousel } from "./InvestidoresOperacoesCarousel";
 export async function InvestidoresOperacoes() {
   const t = await getTranslations("investidores.operacoes");
   return (
-    <section id="investidores-operacoes" className="bg-bg-soft py-[clamp(88px,11vw,160px)]">
+    <section id="investidores-operacoes" className="bg-bg-soft py-[clamp(40px,5vw,76px)]">
       <div className="wrap-wide">
         <div className="reveal flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-[640px]">
@@ -24,7 +24,7 @@ export async function InvestidoresOperacoes() {
 
         <InvestidoresOperacoesCarousel />
 
-        <div className="reveal mt-[clamp(40px,5vw,64px)] flex justify-center">
+        <div className="reveal mt-[clamp(16px,2vw,28px)] flex justify-center">
           <Button href="/projetos" arrow>
             {t("cta")}
           </Button>
