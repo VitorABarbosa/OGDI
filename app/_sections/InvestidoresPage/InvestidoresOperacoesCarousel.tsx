@@ -156,7 +156,7 @@ export function InvestidoresOperacoesCarousel() {
   };
 
   return (
-    <div className="reveal reveal-2 mt-[clamp(34px,4.8vw,64px)]">
+    <div className="reveal reveal-2 mt-[clamp(14px,2vw,28px)]">
       <div className="mb-5 flex justify-end gap-2">
         <button
           type="button"

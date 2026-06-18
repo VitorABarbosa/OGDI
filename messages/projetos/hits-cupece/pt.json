@@ -6,41 +6,38 @@
   },
   "heroSummary": "Um empreendimento residencial no Cupecê, em uma região conectada, conveniente e em valorização, na zona sul de São Paulo.",
   "intro": [
-    "O Hits Cupecê nasce de uma leitura objetiva do território: uma região em ascensão, com comércio, conveniências e conexões urbanas que sustentam uma demanda real por moradia.",
-    "A Open Group estruturou a oportunidade olhando, primeiro, para o lugar; depois, para o produto; e, por fim, para a operação necessária para transformar potencial em empreendimento."
+    "O Hits Cupecê nasce de uma leitura objetiva do território: na Rua Dom João Soares Coelho, 220, na Vila Império, uma região em ascensão da zona sul, com comércio forte e conveniências que sustentam demanda real por moradia.",
+    "Em um terreno de 2.090,22 m², uma única torre de 13 pavimentos reúne 196 unidades: studios de 24 m² e apartamentos de 2 dormitórios de 37 a 38 m² com terraço com churrasqueira a carvão, além de gardens maiores. São quatro elevadores, projeto arquitetônico de Danilo Penna e um lazer completo, com CineOpen, piscinas e praça da fogueira."
   ],
   "facts": [
     "Em obra",
-    "1 e 2 dormitórios",
+    "Studio e 2 dormitórios",
     "Terraço com churrasqueira",
     "Cupecê - São Paulo"
   ],
   "ficha": [
     {
-      "value": "1 e 2 dormitórios",
+      "value": "Studio e 2 dormitórios",
       "label": "Tipologias"
     },
     {
-      "value": "A confirmar",
-      "label": "Metragem",
-      "tbd": true
+      "value": "24 a 79 m²",
+      "label": "Metragem"
     },
     {
-      "value": "A confirmar",
-      "label": "Pavimentos",
-      "tbd": true
+      "value": "13 pavimentos",
+      "label": "Pavimentos"
     },
     {
-      "value": "A confirmar",
-      "label": "Unidades",
-      "tbd": true
+      "value": "196 unidades",
+      "label": "Unidades"
     },
     {
-      "value": "Opcionais",
+      "value": "0 carro\n23 moto",
       "label": "Vagas"
     },
     {
-      "value": "Terraço com churrasqueira",
+      "value": "Terraço com churrasqueira a carvão",
       "label": "Diferencial"
     },
     {
@@ -62,7 +59,7 @@
     }
   ],
   "lazer": {
-    "lead": "Mais de uma dezena de itens de lazer e conveniência distribuídos do térreo à cobertura.",
+    "lead": "Mais de duas dezenas de itens de lazer e conveniência distribuídos do subsolo ao 5º pavimento.",
     "feat": {
       "kicker": "Destaque",
       "title": "CineOpen"
@@ -70,31 +67,87 @@
     "items": [
       {
         "icon": "pool",
-        "label": "Piscina"
+        "label": "Piscina adulto"
+      },
+      {
+        "icon": "pool",
+        "label": "Piscina infantil"
       },
       {
         "icon": "gym",
-        "label": "Academia"
+        "label": "Fitness"
+      },
+      {
+        "icon": "sport",
+        "label": "Crossfit"
+      },
+      {
+        "icon": "beach",
+        "label": "Beach sports"
       },
       {
         "icon": "cowork",
-        "label": "Coworking"
+        "label": "Beach work"
       },
       {
-        "icon": "gourmet",
-        "label": "Espaço gourmet"
+        "icon": "sport",
+        "label": "Ladder sport"
       },
       {
-        "icon": "bbq",
-        "label": "Churrasqueira"
+        "icon": "basket",
+        "label": "Streetball"
+      },
+      {
+        "icon": "gym",
+        "label": "Alongamento"
+      },
+      {
+        "icon": "play",
+        "label": "Playground"
+      },
+      {
+        "icon": "toys",
+        "label": "Brinquedoteca"
+      },
+      {
+        "icon": "game",
+        "label": "Espaço teen"
+      },
+      {
+        "icon": "chess",
+        "label": "Big chess"
+      },
+      {
+        "icon": "gazebo",
+        "label": "Gazebo"
       },
       {
         "icon": "pet",
         "label": "Pet place"
       },
       {
-        "icon": "play",
-        "label": "Playground"
+        "icon": "fire",
+        "label": "Praça da fogueira"
+      },
+      {
+        "icon": "bbq",
+        "label": "Churrasqueira"
+      },
+      {
+        "icon": "herb",
+        "label": "Mini-horta"
+      },
+      {
+        "icon": "gourmet",
+        "label": "Espaço gourmet"
+      },
+      {
+        "icon": "lounge",
+        "label": "Salão de festas"
+      },
+      {
+        "icon": "cowork",
+        "label": "Coworking"
       },
       {
         "icon": "laundry",
@@ -102,19 +155,11 @@
       },
       {
         "icon": "bike",
-        "label": "Bicicletário"
-      },
-      {
-        "icon": "market",
-        "label": "Mini market"
-      },
-      {
-        "icon": "lounge",
-        "label": "Salão de festas"
+        "label": "Bike share"
       },
       {
         "icon": "roof",
-        "label": "Rooftop"
+        "label": "Sky lounge"
       }
     ]
   },
@@ -124,7 +169,7 @@
     "body": [
       "Localizado na Rua Dom João Soares Coelho, o Hits Cupecê está inserido em uma região em plena ascensão e valorização, com comércio forte e conveniências que simplificam a rotina.",
       "A proximidade com a Avenida Cupecê amplia essa leitura. Com 5,3 km de extensão, ela conecta a Ponte do Morumbi, na Marginal Pinheiros, ao centro de Diadema, criando um eixo relevante de mobilidade na zona sul.",
-      "A poucos minutos da Rodovia dos Imigrantes, o endereço também aproxima a cidade do litoral sul. Para a Open Group, essa combinação de acesso, vida cotidiana e valorização transforma a localização em tese de produto."
+      "A poucos minutos da Rodovia dos Imigrantes, o endereço também aproxima a cidade do litoral sul. Para a OGDI, essa combinação de acesso, vida cotidiana e valorização transforma a localização em tese de produto."
     ],
     "highlights": [
       {
@@ -143,15 +188,15 @@
   },
   "productStory": {
     "kicker": "O produto como resposta",
-    "title": "Tipologias pensadas para uma vida urbana mais prática.",
+    "title": "Plantas inteligentes pensadas para uma vida urbana mais prática.",
     "body": [
-      "As unidades de 1 e 2 dormitórios respondem a um público que busca morar bem, com eficiência e conexão com a cidade.",
+      "As unidades de studio e 2 dormitórios respondem a um público que busca morar bem, com eficiência e conexão com a cidade.",
       "O terraço com churrasqueira adiciona uma camada de uso e desejo ao produto: um espaço privado para receber, respirar e ampliar a experiência do apartamento."
     ],
     "cards": [
       {
         "label": "Tipologia",
-        "value": "1 e 2 dormitórios",
+        "value": "Studio e 2 dormitórios",
         "text": "Configurações alinhadas a diferentes momentos de vida e perfis de moradia."
       },
       {
@@ -179,15 +224,15 @@
     ]
   },
   "strategyStory": {
-    "kicker": "Estruturação Open Group",
+    "kicker": "Estruturação OGDI",
     "title": "A operação foi pensada antes de a obra chegar ao canteiro.",
     "body": [
-      "No Hits Cupecê, a Open Group atua na etapa em que o valor é construído com mais precisão: leitura da oportunidade, definição de produto, análise de viabilidade, articulação de parceiros e condução até a fase de obra.",
+      "No Hits Cupecê, a OGDI atua na etapa em que o valor é construído com mais precisão: leitura da oportunidade, definição de produto, análise de viabilidade, articulação de parceiros e condução até a fase de obra.",
       "Essa inteligência transforma uma localização promissora em uma operação estruturada, com produto, mercado e execução caminhando na mesma direção."
     ]
   },
   "obra": {
-    "reference": "Fotos de maio de 2026",
+    "reference": "Atualizado em maio de 2026",
     "stages": [
       "Serviços preliminares gerais",
       "Fundações e contenções",

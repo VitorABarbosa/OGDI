@@ -21,6 +21,15 @@ const ICONS: Record<string, string> = {
   lounge: "M5 12V9.5A2.5 2.5 0 0 1 7.5 7h9A2.5 2.5 0 0 1 19 9.5V12M3.5 12.5A2 2 0 0 1 5.5 14.5V17h13v-2.5a2 2 0 0 1 2-2M6 17v2.5M18 17v2.5",
   roof: "M4 9h7v11H4zM13 4h7v16h-7M6.5 12h2M6.5 15h2M15.5 7h2M15.5 11h2M15.5 15h2",
   sport: "M4 4l16 16M9 4l11 11M4 9l11 11M4 14l6 6M14 4l6 6M5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4M17 5h3v3",
+  beach: "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18M12 3c-3 4-3 11 0 18M12 3c3 4 3 11 0 18M3.5 9c5 2.5 12 2.5 17 0M3.5 15c5-2.5 12-2.5 17 0",
+  basket: "M6 4h12v7H6zM8 11l1 4h6l1-4M9.5 15l.5 3M14.5 15l-.5 3M12 15v3.2",
+  toys: "M4 14h6v6H4zM14 14h6v6h-6zM9 7h6v6H9z",
+  game: "M8 9h8a4 4 0 0 1 4 4v.5a2.5 2.5 0 0 1-4.6 1.4L15 14H9l-.4.9A2.5 2.5 0 0 1 4 13.5V13a4 4 0 0 1 4-4M7.5 11.5v2.5M6.25 12.75h2.5M15.6 12h.01M17 13.2h.01",
+  chess: "M9.5 20h5M10 20c.3-2 1.2-3 1.2-4.5M14 20c-.3-2-1.2-3-1.2-4.5M12 6.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4M10 11h4l-.5 2h-3z",
+  fire: "M12 4c1.6 2.4 3 3.1 3 5.4a3 3 0 0 1-6 0c0-1.1.5-1.8 1.1-2.4 0 .9.5 1.5 1 1.5M6 19l12-3M6 16l12 3",
+  gazebo: "M3.5 10 12 5l8.5 5M6 10v8M18 10v8M9 10v8M15 10v8M5 18h14",
+  herb: "M9 20h6l-.7-4H9.7zM12 16c0-2.5 1.6-3.8 3.6-3.8C15.6 14.7 14 16 12 16M12 16c0-2.5-1.6-3.8-3.6-3.8C8.4 14.7 10 16 12 16M12 16V9",
+  hall: "M4 20h16M5 20v-5h14v5M8 15v-1a4 4 0 0 1 8 0v1M12 9V7M10.5 7h3",
 };
 
 // Imagem do destaque (Cine Open) por projeto. Sem entrada → placeholder gradiente.
@@ -43,7 +52,7 @@ export function EmpLazer({ p }: { p: Projeto }) {
   if (!lazer?.items?.length) return null;
 
   return (
-    <section id="lazer" className="scroll-mt-[120px] py-section">
+    <section id="lazer" className="scroll-mt-[120px] pt-[var(--spacing-section)] pb-0">
       <div className="wrap">
         {/* Cabeçalho */}
         <div className="reveal mb-[clamp(36px,4.5vw,60px)] flex flex-wrap items-end justify-between gap-[30px]">
@@ -55,9 +64,11 @@ export function EmpLazer({ p }: { p: Projeto }) {
           </div>
           <p className="max-w-[42ch] text-[15px] leading-[1.6] text-ink-2">{lazer.lead}</p>
         </div>
+      </div>
 
-        {/* Grade de amenidades */}
-        <div className="reveal reveal-2 grid grid-cols-2 gap-px border border-[color:var(--line)] bg-[color:var(--line)] min-[640px]:grid-cols-4 min-[1000px]:grid-cols-6">
+      {/* Grade de amenidades — em .wrap-wide (1760) p/ ficar mais larga que o destaque */}
+      <div className="wrap-wide">
+        <div className="reveal reveal-2 grid grid-cols-2 gap-px border border-[color:var(--line)] bg-[color:var(--line)] min-[640px]:grid-cols-4 min-[1000px]:grid-cols-6 min-[1200px]:grid-cols-8">
           {lazer.items.map((item, index) => (
             <div
               key={`${item.icon}-${index}`}
@@ -79,7 +90,9 @@ export function EmpLazer({ p }: { p: Projeto }) {
             </div>
           ))}
         </div>
+      </div>
 
+      <div className="wrap">
         {/* Faixa de render destaque */}
         <div className="reveal relative mt-[clamp(28px,3vw,44px)] aspect-[21/9] overflow-hidden bg-dark max-[700px]:aspect-[4/3]">
           <MediaPlaceholder tone={p.tone} src={FEAT_IMAGE[p.slug]} alt={FEAT_IMAGE[p.slug] ? lazer.feat.title : ""} />

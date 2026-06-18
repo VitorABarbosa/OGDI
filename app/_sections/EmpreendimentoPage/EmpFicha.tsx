@@ -25,7 +25,7 @@ export function EmpFicha({ p }: { p: Projeto }) {
           >
             <span
               className={cn(
-                "font-serif font-normal leading-none tracking-[.005em]",
+                "whitespace-pre-line font-serif font-normal leading-[1.12] tracking-[.005em]",
                 cell.tbd
                   ? "text-[clamp(18px,1.8vw,24px)] italic text-white/45"
                   : "text-[clamp(26px,2.6vw,38px)] text-white",

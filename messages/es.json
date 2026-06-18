@@ -124,7 +124,7 @@
     "atuacao": {
       "kicker": "Nuestra actuación",
       "heading": "Del origen<br></br>a la entrega de llaves.",
-      "intro": "Open Group actúa desde la lectura de la oportunidad hasta la entrega de llaves, estructurando cada etapa para que producto, capital, socios y ejecución avancen juntos.",
+      "intro": "OGDI conduce la operación de punta a punta, desde la lectura de la oportunidad hasta la entrega de llaves. Producto, capital, socios y obra avanzan bajo la misma tesis.",
       "tags": {
         "consultoria": "Consultoría contratada",
         "parceria": "Alianza estratégica",
@@ -177,7 +177,7 @@
     "modelos": {
       "kicker": "Modelos de actuación",
       "heading": "Actuación flexible según<br></br>el perfil de la oportunidad.",
-      "intro": "Cada oportunidad exige una lógica propia. Open Group evalúa la etapa, el potencial y la complejidad de la operación para definir el modelo de actuación más adecuado.",
+      "intro": "Cada oportunidad pide un nivel de implicación diferente. OGDI define cómo entra en cada operación, de la consultoría contratada a la sociedad en el emprendimiento, según la etapa y el potencial del proyecto.",
       "cta": "Conozca Open Group",
       "cards": {
         "consultoria": {
@@ -237,7 +237,7 @@
       "cue": "Conozca Open Group"
     },
     "about": {
-      "kicker": "Sobre Open Group",
+      "kicker": "Sobre la OGDI",
       "heading": "Nuestro trabajo comienza <em>antes de la obra</em>.",
       "models": {
         "consultoria": {
@@ -257,10 +257,10 @@
           "rest": "SCP"
         }
       },
-      "body1": "Open Group Desarrollo Inmobiliario trabaja en la <em>estructuración y desarrollo de emprendimientos inmobiliarios</em>, conduciendo oportunidades de la conceptualización al lanzamiento.",
-      "body2": "Nuestro trabajo comienza antes de la obra: en la lectura de la oportunidad, en el análisis de viabilidad, en el diseño estratégico de la operación y en la articulación junto a los socios necesarios para la consistencia del lanzamiento.",
-      "body3": "Trabajamos junto a constructoras, desarrolladoras, dueños de terrenos, empresas con activos inmobiliarios e inversores — combinando visión estratégica, estructuración financiera e institucional, conexión con socios y conducción hasta las etapas decisivas de mercado.",
-      "body4": "Más que desarrollar emprendimientos, <em>estructuramos operaciones inmobiliarias para que potencial, capital y ejecución avancen en la misma dirección, desde el inicio hasta la entrega de llaves.</em>"
+      "body1": "OGDI (Open Group Desenvolvimento Imobiliário) estructura y desarrolla emprendimientos inmobiliarios, y conduce cada operación <em>de la conceptuación a la entrega de llaves</em>.",
+      "body2": "Nuestro trabajo empieza antes de la obra: en la lectura de la oportunidad, en la viabilidad, en el diseño de la operación y en la articulación de los socios que hacen avanzar el proyecto.",
+      "body3": "Nos sentamos a la misma mesa que constructoras, incorporadoras, dueños de terreno, empresas con activos e inversores, y conducimos la operación por dentro: capital, relación con el banco, estrategia comercial y el camino hasta el lanzamiento.",
+      "body4": "Más que desarrollar emprendimientos, <em>transformamos oportunidades en operaciones listas para avanzar</em>, con potencial, capital y ejecución alineados desde la primera decisión."
     },
     "manifesto": {
       "eyebrow": "Manifiesto",
@@ -299,13 +299,13 @@
     "lideranca": {
       "kicker": "Quién lidera",
       "heading": "El liderazgo detrás de cada <em>operación estructurada</em>.",
-      "intro": "Open Group es conducida por profesionales que unen visión estratégica, dominio de la operación inmobiliaria y relaciones institucionales — para transformar oportunidades en emprendimientos listos para avanzar.",
+      "intro": "La OGDI es conducida por Max Barbosa, que une visión estratégica, dominio de la operación y relaciones institucionales. Está al frente de cada operación, de punta a punta, para transformar oportunidades en emprendimientos listos para avanzar.",
       "leaders": {
         "max": {
           "role": "CEO y Fundador",
           "statement": "Antes de desarrollar un emprendimiento, hay que ver el <em>valor</em> que aún no se ha revelado.",
           "quote1": "Al frente de Open Group, Flying Studio, NID Studio y Rinno Films, conduzco un ecosistema creado para transformar oportunidades inmobiliarias en operaciones más claras, viables y preparadas para avanzar.",
-          "quote2": "Cada empresa actúa en una etapa de la jornada, de la estrategia a la comunicación, siempre con la misma visión: desarrollar con estructura desde el origen."
+          "quote2": "La estrategia es donde todo empieza, y de ella nacen la arquitectura, la tecnología y la comunicación. Cada empresa profundiza una de esas frentes con la misma visión: desarrollar con estructura desde el origen."
         }
       }
     },
@@ -356,8 +356,8 @@
       }
     },
     "assinatura": {
-      "kicker": "Mensaje central",
-      "heading": "Transformamos oportunidades en<br></br><em>emprendimientos listos para avanzar</em>.",
+      "kicker": "Mensaje final",
+      "heading": "Transformamos oportunidades en<br></br><em>emprendimientos listos para vivir</em>.",
       "sub": "Avancemos juntos...?",
       "ctaProjetos": "Ver los proyectos",
       "ctaContato": "Hablar con Open Group"
@@ -371,7 +371,7 @@
       "breadcrumbHome": "Inicio",
       "breadcrumbCurrent": "Proyectos",
       "kicker": "Proyectos · Cases",
-      "title": "Emprendimientos<br></br>estructurados en el origen.",
+      "title": "Emprendimientos",
       "sub": "De la lectura de la oportunidad al lanzamiento — cada proyecto refleja la actuación de Open Group en la estructuración de la operación inmobiliaria."
     },
     "filtros": {
@@ -602,11 +602,7 @@
     },
     "curva": {
       "capitalLabel": "El capital entra aquí",
-      "stepAria": "Etapa {idx} — {title}",
-      "habiteSe": {
-        "title": "Habite-se",
-        "desc": "Permiso que certifica la conclusión de la obra y autoriza la ocupación del emprendimiento."
-      }
+      "stepAria": "Etapa {idx} — {title}"
     },
     "perguntas": {
       "kicker": "Preguntas frecuentes",

@@ -24,7 +24,7 @@ describe("Empreendimento page reveals", () => {
     render(<EmpInfo p={projeto} />);
 
     expect(screen.getByText("Sobre o projeto")).toHaveClass("reveal");
-    expect(screen.getByRole("heading", { name: /Tipologias pensadas/i, level: 2 })).toHaveClass("reveal", "reveal-2");
+    expect(screen.getByRole("heading", { name: /Plantas inteligentes pensadas/i, level: 2 })).toHaveClass("reveal", "reveal-2");
   });
 
   it("renders the gallery mosaic tiles (no scroll-reveal, to keep filtering stable)", () => {

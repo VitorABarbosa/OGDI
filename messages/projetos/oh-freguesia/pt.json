@@ -4,16 +4,15 @@
     "segmento": "Residencial",
     "local": "São Paulo · SP"
   },
-  "heroSummary": "Um empreendimento residencial em obra na Freguesia do Ó, na zona norte de São Paulo, com lazer completo e terraço com churrasqueira.",
+  "heroSummary": "Um empreendimento residencial em obra na Freguesia do Ó, na zona norte de São Paulo, com lazer completo e Varanda Grill.",
   "intro": [
-    "O Oh Freguesia nasce na Freguesia do Ó, na zona norte de São Paulo — um dos bairros mais antigos da capital, com vida de bairro consolidada, comércio e serviços no entorno.",
-    "A Open Group estruturou a oportunidade conectando produto, viabilidade e operação: unidades de 1 e 2 dormitórios, com terraço com churrasqueira, e um lazer completo, de beach club e sky lounge a cinema open e praça do fogo.",
-    "Hoje o empreendimento avança em obra, evidência de uma operação consolidada antes do início da execução."
+    "O Oh Freguesia nasce na Freguesia do Ó, na zona norte de São Paulo, um dos bairros mais antigos da capital, com vida de bairro consolidada, comércio e serviços no entorno. O empreendimento ocupa um terreno de 600 m² na Rua Homero Francisco Terra, 50.",
+    "Em uma única torre de térreo + 16 pavimentos, são 90 apartamentos de 1 e 2 dormitórios de 32 a 44 m², todos com varanda grill, além de uma loja no térreo. O empreendimento tem dois elevadores, lazer de clube (Cine Open Air, Sky Lounge, Aquaplay, Crossfit, Beach Sports) e soluções sustentáveis, como recarga de bike elétrica, preparação para energia solar e elevadores inteligentes."
   ],
   "facts": [
     "Em obra",
     "1 e 2 dormitórios",
-    "Terraço com churrasqueira",
+    "Varanda Grill",
     "Freguesia do Ó - SP"
   ],
   "ficha": [
@@ -22,26 +21,23 @@
       "label": "Tipologias"
     },
     {
-      "value": "A confirmar",
-      "label": "Metragem",
-      "tbd": true
+      "value": "32 a 44 m²",
+      "label": "Metragem"
     },
     {
-      "value": "A confirmar",
-      "label": "Pavimentos",
-      "tbd": true
+      "value": "Térreo + 16",
+      "label": "Pavimentos"
     },
     {
-      "value": "A confirmar",
-      "label": "Unidades",
-      "tbd": true
+      "value": "90 unidades",
+      "label": "Unidades"
     },
     {
-      "value": "Opcionais",
+      "value": "1 vaga PNE",
       "label": "Vagas"
     },
     {
-      "value": "Terraço com churrasqueira",
+      "value": "Varanda Grill",
       "label": "Diferencial"
     },
     {
@@ -70,52 +66,60 @@
     },
     "items": [
       {
-        "icon": "pool",
-        "label": "Piscina"
-      },
-      {
-        "icon": "gym",
-        "label": "Academia"
-      },
-      {
-        "icon": "cowork",
-        "label": "Coworking"
-      },
-      {
-        "icon": "gourmet",
-        "label": "Espaço gourmet"
-      },
-      {
-        "icon": "bbq",
-        "label": "Churrasqueira"
+        "icon": "fire",
+        "label": "Praça do fogo"
       },
       {
         "icon": "pet",
         "label": "Pet place"
       },
       {
-        "icon": "play",
-        "label": "Playground"
+        "icon": "market",
+        "label": "Grab & Go"
       },
       {
-        "icon": "laundry",
-        "label": "Lavanderia"
+        "icon": "sport",
+        "label": "Ladder sport"
       },
       {
         "icon": "bike",
         "label": "Bicicletário"
       },
       {
-        "icon": "market",
-        "label": "Mini market"
+        "icon": "hall",
+        "label": "Hall social"
+      },
+      {
+        "icon": "gourmet",
+        "label": "Espaço gourmet"
+      },
+      {
+        "icon": "gym",
+        "label": "Fitness"
+      },
+      {
+        "icon": "sport",
+        "label": "Crossfit"
       },
       {
         "icon": "lounge",
-        "label": "Salão de festas"
+        "label": "Espaço família"
       },
       {
         "icon": "roof",
-        "label": "Rooftop"
+        "label": "Sky lounge"
+      },
+      {
+        "icon": "play",
+        "label": "Playground"
+      },
+      {
+        "icon": "pool",
+        "label": "Aquaplay"
+      },
+      {
+        "icon": "beach",
+        "label": "Beach sports"
       }
     ]
   },
@@ -125,7 +129,7 @@
     "body": [
       "Na Rua Homero Francisco Terra, o Oh Freguesia está inserido em um dos bairros mais antigos de São Paulo, com vida de bairro consolidada, comércio e serviços no entorno.",
       "A Freguesia do Ó combina identidade urbana estabelecida e demanda residencial constante na zona norte da capital.",
-      "Para a Open Group, esse contexto de bairro consolidado sustenta produto e operação, transformando a localização em tese."
+      "Para a OGDI, esse contexto de bairro consolidado sustenta produto e operação, transformando a localização em tese."
     ],
     "highlights": [
       {
@@ -144,10 +148,10 @@
   },
   "productStory": {
     "kicker": "O produto como resposta",
-    "title": "Tipologias compactas com lazer de bairro completo.",
+    "title": "Plantas inteligentes pensadas para uma vida urbana mais prática.",
     "body": [
       "As unidades de 1 e 2 dormitórios respondem à demanda urbana da Freguesia do Ó, com eficiência e conexão com a cidade.",
-      "O terraço com churrasqueira e um conjunto de lazer amplo ampliam a experiência do morar no dia a dia."
+      "A Varanda Grill e um conjunto de lazer amplo ampliam a experiência do morar no dia a dia."
     ],
     "cards": [
       {
@@ -167,23 +171,23 @@
       },
       {
         "label": "Experiência",
-        "value": "Terraço com churrasqueira",
+        "value": "Varanda Grill",
         "text": "A área privativa vira espaço de uso e convívio."
       }
     ]
   },
   "galleryIntro": {
     "kicker": "Do conceito à experiência",
-    "title": "As imagens mostram a passagem da tese para o produto.",
+    "title": "A narrativa também aparece nos espaços.",
     "body": [
       "A galeria do Oh Freguesia apresenta a materialização da operação: conceito, produto e percepção de valor organizados em uma experiência visual."
     ]
   },
   "strategyStory": {
-    "kicker": "Estruturação Open Group",
+    "kicker": "Estruturação OGDI",
     "title": "O valor foi construído antes do início da execução.",
     "body": [
-      "No Oh Freguesia, a Open Group conduziu a leitura do ativo, a conceituação do produto e a articulação dos parceiros necessários para consolidar a operação.",
+      "No Oh Freguesia, a OGDI conduziu a leitura do ativo, a conceituação do produto e a articulação dos parceiros necessários para consolidar a operação.",
       "A obra é consequência desse trabalho anterior: uma sequência de decisões que deu forma, viabilidade e direção ao empreendimento."
     ]
   },

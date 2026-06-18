@@ -282,6 +282,44 @@ function buildDefaultGeometry({
   };
 }
 
+// Geometria curta para a seção "Sobre a OGDI": entra pelo canto superior
+// direito e atravessa a seção até sair no canto inferior esquerdo.
+function buildInstitucionalSobreGeometry({
+  width,
+  flowTop,
+  flowHeight,
+  drift,
+  influenceX,
+  influenceY,
+}: FlowGeomInput): FlowGeometry {
+  const y = (f: number) => flowTop + flowHeight * f;
+  const segments: FlowSegment[] = [
+    [
+      { x: width * 1.08, y: y(0.06) },
+      { x: width * 0.86 + influenceX * 0.25, y: y(0.14) + drift * 0.15 },
+      { x: width * 0.65, y: y(0.34) - influenceY * 0.15 },
+      { x: width * 0.47, y: y(0.52) },
+    ],
+    [
+      { x: width * 0.47, y: y(0.52) },
+      { x: width * 0.31 + influenceX * 0.18, y: y(0.68) + drift * 0.2 },
+      { x: width * 0.14, y: y(0.84) + influenceY * 0.12 },
+      { x: width * -0.08, y: y(0.98) },
+    ],
+  ];
+
+  return {
+    segments,
+    gradientFrom: { x: width * 1.04, y: y(0.08) },
+    gradientTo: { x: width * -0.04, y: y(0.96) },
+    motionScale: 0.45,
+    nodes: [
+      { x: width * 0.7, y: y(0.3) },
+      { x: width * 0.32, y: y(0.66) },
+    ],
+  };
+}
+
 // Geometria exclusiva da tese de Investidores — serpentina calma e contida
 // (10%–88% da largura, sem encostar nas bordas) que passa pelos três
 // statements: "Entramos antes" (~19% da altura), "Lemos o mercado" (~47%)
@@ -498,10 +536,11 @@ function buildClientesCompromissosGeometry({
   };
 }
 
-export type FlowVariant = "default" | "investidores" | "clientes" | "clientes-compromissos";
+export type FlowVariant = "default" | "institucional-sobre" | "investidores" | "clientes" | "clientes-compromissos";
 
 const flowGeometries: Record<FlowVariant, (g: FlowGeomInput) => FlowGeometry> = {
   default: buildDefaultGeometry,
+  "institucional-sobre": buildInstitucionalSobreGeometry,
   investidores: buildInvestidoresGeometry,
   clientes: buildClientesGeometry,
   "clientes-compromissos": buildClientesCompromissosGeometry,

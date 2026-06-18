@@ -5,35 +5,34 @@ import { useTranslations } from "next-intl";
 import styles from "./InvestidoresCurva.module.css";
 
 // A curva de valor: linha ascendente que nasce embaixo à esquerda e cruza
-// o hero — o valor sendo criado ao longo da operação. Nove nós interativos,
+// o hero — o valor sendo criado ao longo da operação. Dez nós interativos,
 // um por etapa; o quarto (Estruturação Financeira), onde o capital entra,
 // é o acento verde.
 //
 // O traçado corre baixo na metade esquerda (sob o texto do hero) e sobe
-// forte só à direita, onde o hero está livre. Os dois últimos nós (Habite-se
-// e Retorno do Capital) estendem a curva até o topo.
+// forte só à direita, onde o hero está livre. Os últimos nós estendem a curva
+// até Entrega de Chaves e Retorno do Capital.
 //
-// Cada nó referencia o título/desc por `idx` no namespace investidores.ciclo.steps,
-// exceto o Habite-se, exclusivo da curva (investidores.curva.habiteSe).
+// Cada nó referencia o título/desc por `idx` no namespace investidores.ciclo.steps.
 type CurveNode = {
   x: number;
   y: number;
   num: string;
-  idx?: string;
-  curvaKey?: string;
+  idx: string;
   capital?: boolean;
 };
 
 const nodes: CurveNode[] = [
   { x: 120, y: 760, num: "01", idx: "01" },
-  { x: 280, y: 752, num: "02", idx: "02" },
-  { x: 440, y: 731, num: "03", idx: "03" },
-  { x: 600, y: 690, num: "04", idx: "04", capital: true },
-  { x: 760, y: 630, num: "05", idx: "05" },
-  { x: 920, y: 548, num: "06", idx: "06" },
-  { x: 1080, y: 448, num: "07", idx: "07" },
-  { x: 1240, y: 330, num: "08", curvaKey: "habiteSe" },
-  { x: 1400, y: 175, num: "09", idx: "10" },
+  { x: 260, y: 754, num: "02", idx: "02" },
+  { x: 400, y: 738, num: "03", idx: "03" },
+  { x: 540, y: 708, num: "04", idx: "04", capital: true },
+  { x: 680, y: 664, num: "05", idx: "05" },
+  { x: 820, y: 602, num: "06", idx: "06" },
+  { x: 960, y: 522, num: "07", idx: "07" },
+  { x: 1100, y: 430, num: "08", idx: "08" },
+  { x: 1250, y: 310, num: "09", idx: "09" },
+  { x: 1400, y: 160, num: "10", idx: "10" },
 ];
 
 // Traçado suave (Catmull-Rom → Bézier) pelos nós, com pontos virtuais para a
@@ -77,12 +76,8 @@ export function InvestidoresCurva() {
   const tcs = useTranslations("investidores.ciclo.steps");
   const tc = useTranslations("investidores.curva");
 
-  // Resolve título/desc: nós comuns vêm do Ciclo (por idx); o Habite-se é
-  // exclusivo da curva.
-  const titleOf = (n: CurveNode) =>
-    n.curvaKey ? tc(`${n.curvaKey}.title`) : tcs(`${n.idx}.title`);
-  const descOf = (n: CurveNode) =>
-    n.curvaKey ? tc(`${n.curvaKey}.desc`) : tcs(`${n.idx}.desc`);
+  const titleOf = (n: CurveNode) => tcs(`${n.idx}.title`);
+  const descOf = (n: CurveNode) => tcs(`${n.idx}.desc`);
 
   return (
     <>

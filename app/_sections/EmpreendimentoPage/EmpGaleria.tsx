@@ -191,7 +191,7 @@ export function EmpGaleria({ p }: { p: Projeto }) {
     cat === "todas" ? gallery.length : gallery.filter((g) => (g.cat ?? "comuns") === cat).length;
 
   return (
-    <section id="galeria" className="scroll-mt-[120px] pb-section pt-[clamp(68px,8vw,112px)]" aria-label={t("aria")}>
+    <section id="galeria" className="scroll-mt-[120px] pb-section pt-[clamp(36px,4.5vw,60px)]" aria-label={t("aria")}>
       <div className="wrap-wide">
         {/* Cabeçalho (referência .em-gal-head): kicker + h2 à esq, contagem à dir. */}
         <div className="reveal mb-[clamp(28px,3vw,44px)] flex flex-wrap items-end justify-between gap-6">

@@ -124,7 +124,7 @@
     "atuacao": {
       "kicker": "What we do",
       "heading": "From the origin<br></br>to key handover.",
-      "intro": "Open Group works from the first reading of the opportunity through handover, structuring each stage so product, capital, partners, and execution move together.",
+      "intro": "OGDI runs the operation end to end, from the first reading of the opportunity to key handover. Product, capital, partners, and construction advance on the same thesis.",
       "tags": {
         "consultoria": "Contracted consulting",
         "parceria": "Strategic partnership",
@@ -177,7 +177,7 @@
     "modelos": {
       "kicker": "Engagement models",
       "heading": "Flexible engagement based on<br></br>the profile of the opportunity.",
-      "intro": "Each opportunity calls for its own logic. Open Group assesses the stage, the potential, and the complexity of the venture to define the most suitable engagement model.",
+      "intro": "Every opportunity calls for a different level of involvement. OGDI decides how it enters each operation, from hired consultancy to partner in the venture, based on the stage and the potential of the project.",
       "cta": "Learn about Open Group",
       "cards": {
         "consultoria": {
@@ -237,7 +237,7 @@
       "cue": "Discover Open Group"
     },
     "about": {
-      "kicker": "About Open Group",
+      "kicker": "About OGDI",
       "heading": "Our work begins <em>before ground is broken</em>.",
       "models": {
         "consultoria": {
@@ -257,10 +257,10 @@
           "rest": "SCP"
         }
       },
-      "body1": "Open Group Real Estate Development works on the <em>structuring and development of real estate ventures</em>, guiding opportunities from concept to launch.",
-      "body2": "Our work begins before construction: in reading the opportunity, in feasibility analysis, in the strategic design of the venture, and in bringing together the partners needed for a consistent launch.",
-      "body3": "We work alongside builders, developers, landowners, companies holding real estate assets, and investors — combining strategic vision, financial and institutional structuring, connection with partners, and guidance through the decisive market stages.",
-      "body4": "More than developing projects, <em>we structure real estate ventures so that potential, capital, and execution move in the same direction — from the start to the handover of keys.</em>"
+      "body1": "OGDI (Open Group Desenvolvimento Imobiliário) structures and develops real estate ventures, and leads each operation <em>from concept to key handover</em>.",
+      "body2": "Our work starts before construction: reading the opportunity, testing feasibility, designing the operation, and bringing together the partners that move the project forward.",
+      "body3": "We sit at the same table as builders, developers, landowners, companies holding assets, and investors, and we run the operation from the inside: capital, bank relationships, commercial strategy, and the path to launch.",
+      "body4": "More than developing ventures, <em>we turn opportunities into operations ready to move forward</em>, with potential, capital, and execution aligned from the very first decision."
     },
     "manifesto": {
       "eyebrow": "Manifesto",
@@ -299,13 +299,13 @@
     "lideranca": {
       "kicker": "Who leads",
       "heading": "The leadership behind every <em>structured venture</em>.",
-      "intro": "Open Group is led by professionals who combine strategic vision, command of the real estate venture, and institutional relationships — to turn opportunities into developments ready to move forward.",
+      "intro": "OGDI is led by Max Barbosa, who combines strategic vision, command of the operation, and institutional relationships. He leads every operation end to end, to turn opportunities into developments ready to move forward.",
       "leaders": {
         "max": {
           "role": "CEO and Founder",
           "statement": "Before developing a project, you must see the <em>value</em> that hasn't yet been revealed.",
           "quote1": "At the helm of Open Group, Flying Studio, NID Studio, and Rinno Films, I lead an ecosystem created to turn real estate opportunities into clearer, more feasible ventures, ready to move forward.",
-          "quote2": "Each company works on one stage of the journey, from strategy to communication, always with the same vision: to develop with structure from the very origin."
+          "quote2": "Strategy is where it all begins, and from it come architecture, technology, and communication. Each company deepens one of these fronts with the same vision: to develop with structure from the very origin."
         }
       }
     },
@@ -357,7 +357,7 @@
     },
     "assinatura": {
       "kicker": "Closing message",
-      "heading": "We turn opportunities into<br></br><em>developments ready to move forward</em>.",
+      "heading": "We turn opportunities into<br></br><em>developments ready to live in</em>.",
       "sub": "Let's move together...?",
       "ctaProjetos": "See the projects",
       "ctaContato": "Talk to Open Group"
@@ -371,7 +371,7 @@
       "breadcrumbHome": "Home",
       "breadcrumbCurrent": "Projects",
       "kicker": "Projects · Cases",
-      "title": "Developments<br></br>structured at the origin.",
+      "title": "Developments",
       "sub": "From reading the opportunity to launch — each project reflects Open Group's work in structuring the real estate venture."
     },
     "filtros": {
@@ -602,11 +602,7 @@
     },
     "curva": {
       "capitalLabel": "Capital enters here",
-      "stepAria": "Stage {idx} — {title}",
-      "habiteSe": {
-        "title": "Occupancy permit",
-        "desc": "Certificate (habite-se) attesting that construction is complete and the development is cleared for occupancy."
-      }
+      "stepAria": "Stage {idx} — {title}"
     },
     "perguntas": {
       "kicker": "Frequently asked questions",
