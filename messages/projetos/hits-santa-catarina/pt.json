@@ -6,9 +6,8 @@
   },
   "heroSummary": "Um empreendimento residencial entregue na Vila Santa Catarina, na zona sul de São Paulo, com fácil acesso à Berrini e ao Morumbi.",
   "intro": [
-    "O Hits Santa Catarina nasceu na Vila Santa Catarina, na zona sul de São Paulo — uma região em valorização contínua, com fácil acesso à Berrini e a importantes avenidas da capital.",
-    "A Open Group conduziu a operação da concepção ao lançamento: leitura da oportunidade, conceituação do produto — unidades de 1 e 2 dormitórios com terraço com churrasqueira — e estruturação com parceiros e viabilidade alinhados.",
-    "Entregue, o empreendimento traduz o valor construído antes da obra: produto posicionado, operação estruturada e execução concluída."
+    "O Hits Santa Catarina nasceu na Vila Santa Catarina, na zona sul de São Paulo, uma região em valorização contínua, com fácil acesso à Berrini e a cerca de 20 minutos do Morumbi Shopping. O empreendimento ocupa um terreno de 933,60 m² na esquina da Rua Oito de Março com a Emílio de Sousa Docca.",
+    "Em uma única torre de térreo + 8 pavimentos, são 84 apartamentos de 1 e 2 dormitórios de 29 a 87 m², todos com terraço com churrasqueira, e gardens com quintal no térreo. O empreendimento tem dois elevadores e lazer completo (piscina, prainha, beach sports, crossfit, espaço gourmet), já entregue."
   ],
   "facts": [
     "Entregue",
@@ -22,22 +21,19 @@
       "label": "Tipologias"
     },
     {
-      "value": "A confirmar",
-      "label": "Metragem",
-      "tbd": true
+      "value": "29 a 87 m²",
+      "label": "Metragem"
     },
     {
-      "value": "A confirmar",
-      "label": "Pavimentos",
-      "tbd": true
+      "value": "Térreo + 8",
+      "label": "Pavimentos"
     },
     {
-      "value": "A confirmar",
-      "label": "Unidades",
-      "tbd": true
+      "value": "84 unidades",
+      "label": "Unidades"
     },
     {
-      "value": "Opcionais",
+      "value": "1 vaga PNE",
       "label": "Vagas"
     },
     {
@@ -62,10 +58,10 @@
     }
   ],
   "lazer": {
-    "lead": "Mais de uma dezena de itens de lazer e conveniência distribuídos do térreo à cobertura.",
+    "lead": "Mais de uma dezena de itens de lazer e conveniência, entregues equipados e decorados.",
     "feat": {
       "kicker": "Destaque",
-      "title": "Beach Tennis"
+      "title": "Beach Sports"
     },
     "items": [
       {
@@ -73,48 +69,64 @@
         "label": "Piscina"
       },
       {
+        "icon": "beach",
+        "label": "Prainha"
+      },
+      {
+        "icon": "sport",
+        "label": "Crossfit"
+      },
+      {
         "icon": "gym",
-        "label": "Academia"
-      },
-      {
-        "icon": "cowork",
-        "label": "Coworking"
-      },
-      {
-        "icon": "gourmet",
-        "label": "Espaço gourmet"
-      },
-      {
-        "icon": "bbq",
-        "label": "Churrasqueira"
-      },
-      {
-        "icon": "pet",
-        "label": "Pet place"
+        "label": "Fitness"
       },
       {
         "icon": "play",
         "label": "Playground"
       },
       {
-        "icon": "laundry",
-        "label": "Lavanderia"
-      },
-      {
-        "icon": "bike",
-        "label": "Bicicletário"
-      },
-      {
-        "icon": "market",
-        "label": "Mini market"
+        "icon": "bbq",
+        "label": "Churrasqueira"
       },
       {
         "icon": "lounge",
         "label": "Salão de festas"
       },
       {
+        "icon": "gourmet",
+        "label": "Espaço gourmet"
+      },
+      {
+        "icon": "pet",
+        "label": "Pet place"
+      },
+      {
+        "icon": "laundry",
+        "label": "Lavanderia"
+      },
+      {
+        "icon": "game",
+        "label": "Espaço teen"
+      },
+      {
+        "icon": "toys",
+        "label": "Brinquedoteca"
+      },
+      {
+        "icon": "cowork",
+        "label": "Coworking"
+      },
+      {
         "icon": "sport",
-        "label": "Beach Tennis"
+        "label": "Ladder sport"
+      },
+      {
+        "icon": "market",
+        "label": "Grab & Go"
+      },
+      {
+        "icon": "bike",
+        "label": "Bike Station"
       }
     ]
   },
@@ -123,7 +135,7 @@
     "title": "Na Vila Santa Catarina, a leitura do lugar precedeu a obra.",
     "body": [
       "Na Rua Oito de Março, o Hits Santa Catarina está inserido em uma região em valorização contínua na zona sul de São Paulo, com fácil acesso à Berrini.",
-      "O endereço fica a cerca de 10 minutos do Morumbi Shopping, com diversas linhas de ônibus nas avenidas Santa Catarina, Cupecê e Washington Luís.",
+      "O endereço fica a cerca de 20 minutos do Morumbi Shopping, com diversas linhas de ônibus nas avenidas Santa Catarina, Cupecê e Washington Luís.",
       "Essa combinação de localização e mobilidade orientou a tese do produto e sustentou a operação até a entrega."
     ],
     "highlights": [
@@ -146,7 +158,7 @@
     "title": "Plantas inteligentes pensadas para uma vida urbana mais prática.",
     "body": [
       "As unidades de 1 e 2 dormitórios, com terraço com churrasqueira, responderam à demanda da zona sul com eficiência e localização conectada.",
-      "A entrega evidencia o papel da Open Group em transformar oportunidade em empreendimento lançado e concluído."
+      "A entrega evidencia o papel da OGDI em transformar oportunidade em empreendimento lançado e concluído."
     ],
     "cards": [
       {
@@ -162,7 +174,7 @@
       {
         "label": "Mobilidade",
         "value": "Eixo Santa Catarina",
-        "text": "Fácil acesso à Berrini e a cerca de 10 min do Morumbi Shopping."
+        "text": "Fácil acesso à Berrini e a cerca de 20 min do Morumbi Shopping."
       },
       {
         "label": "Entrega",
@@ -175,14 +187,14 @@
     "kicker": "Da concepção à entrega",
     "title": "A narrativa também aparece nos espaços.",
     "body": [
-      "As imagens apresentam o empreendimento entregue — fachada, áreas comuns e ambientes que materializam o produto conduzido pela Open Group da concepção ao lançamento."
+      "As imagens apresentam o empreendimento entregue — fachada, áreas comuns e ambientes que materializam o produto conduzido pela OGDI da concepção ao lançamento."
     ]
   },
   "strategyStory": {
-    "kicker": "Estruturação Open Group",
+    "kicker": "Estruturação OGDI",
     "title": "A entrega é consequência de decisões tomadas antes.",
     "body": [
-      "No Hits Santa Catarina, a Open Group conduziu uma operação que reuniu leitura de oportunidade, conceituação de produto, viabilidade e articulação de parceiros.",
+      "No Hits Santa Catarina, a OGDI conduziu uma operação que reuniu leitura de oportunidade, conceituação de produto, viabilidade e articulação de parceiros.",
       "O resultado é uma entrega que demonstra a importância da estruturação anterior ao lançamento e à execução."
     ]
   },

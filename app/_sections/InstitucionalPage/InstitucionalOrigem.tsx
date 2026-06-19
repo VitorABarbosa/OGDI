@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
 import { institucional } from "./institucional.data";
+import { InstitucionalOrigemWaves } from "./InstitucionalOrigemWaves";
 import styles from "./InstitucionalOrigem.module.css";
 
 // Seção fundida: o Manifesto abre (frase-tese) e encadeia em "A origem" — os 5
@@ -67,8 +68,9 @@ export function InstitucionalOrigem() {
   const keep = (c: React.ReactNode) => <span className="whitespace-nowrap">{c}</span>;
 
   return (
-    <section id="institucional-origem" className="bg-dark py-section text-white">
-      <div className="wrap">
+    <section id="institucional-origem" className="relative overflow-hidden bg-dark py-section text-white">
+      <InstitucionalOrigemWaves />
+      <div className="wrap relative z-[1]">
         {/* — Ato 1: tese + elaboração — */}
         <div className="reveal mb-[clamp(22px,2.6vw,36px)] flex items-center gap-[14px] text-[11px] uppercase tracking-[.24em] text-white/40">
           <span aria-hidden className="h-px w-[30px] bg-green" />
