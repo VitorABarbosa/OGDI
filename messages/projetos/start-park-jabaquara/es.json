@@ -6,9 +6,8 @@
   },
   "heroSummary": "Um empreendimento residencial em obra no Parque Jabaquara, na zona sul de São Paulo, conectado a Congonhas e ao futuro monotrilho.",
   "intro": [
-    "O Start Park Jabaquara nasce de uma leitura objetiva do Parque Jabaquara, na zona sul de São Paulo — uma região conectada e em valorização, a poucos minutos do Aeroporto de Congonhas e na rota do futuro monotrilho.",
-    "A Open Group estruturou a oportunidade alinhando produto, viabilidade e operação: unidades de 1 e 2 dormitórios, com terraço com churrasqueira, e um conjunto de lazer pensado para a vida urbana cotidiana.",
-    "Hoje o empreendimento avança em obra, resultado de uma operação organizada desde a origem, com produto, parceiros e execução na mesma direção."
+    "O Start Park Jabaquara nasce no Parque Jabaquara, na zona sul de São Paulo, uma região conectada e em valorização, a poucos minutos do Aeroporto de Congonhas e na rota do futuro monotrilho. O empreendimento ocupa um terreno de 1.078,80 m² na Rua Alba, 570.",
+    "Em uma única torre de 18 pavimentos, são 153 apartamentos de 1 e 2 dormitórios de 30 a 52 m², todos com terraço com churrasqueira, incluindo opções garden. O empreendimento tem dois elevadores, lazer completo (Cine Open Air, piscina, beach sports, crossfit, praça do fogo) e soluções sustentáveis, como recarga de bike elétrica, preparação para energia solar e elevadores inteligentes."
   ],
   "facts": [
     "Em obra",
@@ -22,22 +21,19 @@
       "label": "Tipologias"
     },
     {
-      "value": "A confirmar",
-      "label": "Metragem",
-      "tbd": true
+      "value": "30 a 52 m²",
+      "label": "Metragem"
     },
     {
-      "value": "A confirmar",
-      "label": "Pavimentos",
-      "tbd": true
+      "value": "18 pavimentos",
+      "label": "Pavimentos"
     },
     {
-      "value": "A confirmar",
-      "label": "Unidades",
-      "tbd": true
+      "value": "153 unidades",
+      "label": "Unidades"
     },
     {
-      "value": "Opcionais",
+      "value": "Sem vaga de carro",
       "label": "Vagas"
     },
     {
@@ -63,7 +59,7 @@
     }
   ],
   "lazer": {
-    "lead": "Mais de uma dezena de itens de lazer e conveniência distribuídos do térreo à cobertura.",
+    "lead": "Mais de duas dezenas de itens de lazer e conveniência, distribuídos no subsolo e no térreo.",
     "feat": {
       "kicker": "Destaque",
       "title": "CineOpen"
@@ -74,48 +70,80 @@
         "label": "Piscina"
       },
       {
+        "icon": "roof",
+        "label": "Solarium"
+      },
+      {
+        "icon": "gazebo",
+        "label": "Redário"
+      },
+      {
+        "icon": "play",
+        "label": "Play aventura"
+      },
+      {
+        "icon": "toys",
+        "label": "Acampamento kids"
+      },
+      {
+        "icon": "sport",
+        "label": "Crossfit"
+      },
+      {
         "icon": "gym",
-        "label": "Academia"
+        "label": "Fitness"
       },
       {
-        "icon": "cowork",
-        "label": "Coworking"
+        "icon": "play",
+        "label": "Play baby"
       },
       {
-        "icon": "gourmet",
-        "label": "Espaço gourmet"
+        "icon": "toys",
+        "label": "Brinquedoteca"
+      },
+      {
+        "icon": "herb",
+        "label": "Horta"
       },
       {
         "icon": "bbq",
         "label": "Churrasqueira"
       },
       {
-        "icon": "pet",
-        "label": "Pet place"
+        "icon": "lounge",
+        "label": "Salão de festas"
       },
       {
-        "icon": "play",
-        "label": "Playground"
-      },
-      {
-        "icon": "laundry",
-        "label": "Lavanderia"
-      },
-      {
-        "icon": "bike",
-        "label": "Bicicletário"
+        "icon": "sport",
+        "label": "Ladder sport"
       },
       {
         "icon": "market",
         "label": "Mini market"
       },
       {
-        "icon": "lounge",
-        "label": "Salão de festas"
+        "icon": "beach",
+        "label": "Beach sports"
       },
       {
-        "icon": "roof",
-        "label": "Rooftop"
+        "icon": "beach",
+        "label": "Beach lounge"
+      },
+      {
+        "icon": "basket",
+        "label": "Basquete"
+      },
+      {
+        "icon": "bike",
+        "label": "Bike station"
+      },
+      {
+        "icon": "pet",
+        "label": "Pet place"
+      },
+      {
+        "icon": "fire",
+        "label": "Praça do fogo"
       }
     ]
   },
@@ -125,7 +153,7 @@
     "body": [
       "Na Rua Alba, no Parque Jabaquara, o Start Park está inserido em uma região conectada e em valorização, com comércio, serviços e forte oferta de transporte na zona sul de São Paulo.",
       "O endereço fica a poucos minutos do Aeroporto de Congonhas e na rota do futuro monotrilho, com acesso às avenidas Santa Catarina, Cupecê, Roberto Marinho, Washington Luís, Bandeirantes e Imigrantes.",
-      "Para a Open Group, essa combinação de mobilidade, vida cotidiana e valorização transforma a localização em tese de produto."
+      "Para a OGDI, essa combinação de mobilidade, vida cotidiana e valorização transforma a localização em tese de produto."
     ],
     "highlights": [
       {
@@ -180,10 +208,10 @@
     ]
   },
   "strategyStory": {
-    "kicker": "Estruturação Open Group",
+    "kicker": "Estruturação OGDI",
     "title": "A operação foi organizada antes de chegar ao canteiro.",
     "body": [
-      "No Start Park Jabaquara, a Open Group conectou leitura da oportunidade, conceituação do produto, modelagem da operação e articulação dos parceiros necessários.",
+      "No Start Park Jabaquara, a OGDI conectou leitura da oportunidade, conceituação do produto, modelagem da operação e articulação dos parceiros necessários.",
       "O resultado é um empreendimento em obra com uma tese construída antes da execução, reduzindo improviso e dando clareza ao processo."
     ]
   },

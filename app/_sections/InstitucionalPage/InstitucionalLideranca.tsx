@@ -159,7 +159,7 @@ export async function InstitucionalLideranca() {
   const lk = `leaders.${leader.key}`;
 
   return (
-    <section id="institucional-lideranca" className="py-section text-ink">
+    <section id="institucional-lideranca" className="pt-section pb-[clamp(32px,4vw,56px)] text-ink">
       <div className="wrap">
         <div className="reveal mb-[clamp(40px,5vw,68px)] max-w-[660px]">
           <Kicker>{t("kicker")}</Kicker>

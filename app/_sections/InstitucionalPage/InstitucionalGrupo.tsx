@@ -88,7 +88,7 @@ export async function InstitucionalGrupo() {
   const { grupo } = institucional;
 
   return (
-    <section id="institucional-grupo" className={cn(styles.section, "py-[clamp(72px,8vw,112px)] text-ink")}>
+    <section id="institucional-grupo" className={cn(styles.section, "pt-[clamp(32px,4vw,56px)] pb-[clamp(72px,8vw,112px)] text-ink")}>
       <div className="wrap relative z-[2]">
         <div className="reveal mx-auto mb-[clamp(28px,3.8vw,54px)] max-w-[980px] text-center">
           <Kicker className="justify-center">{t("kicker")}</Kicker>
