@@ -5,7 +5,8 @@ export const navItems: NavItem[] = [
   { key: "institucional", href: "/institucional" },
   { key: "projetos", href: "/projetos" },
   { key: "investidores", href: "/investidores" },
-  { key: "insights", href: "/insights" },
+  // Oculto da navegação (header + footer) até a automação de notícias; a rota /insights segue ativa.
+  // { key: "insights", href: "/insights" },
   { key: "contato", href: "/contato" },
 ];
 

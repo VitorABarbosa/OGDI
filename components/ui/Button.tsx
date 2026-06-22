@@ -12,6 +12,7 @@ type Props = {
   className?: string;
   // Abre o link em nova aba (links externos, ex.: site da incorporadora).
   target?: "_blank";
+  onClick?: () => void;
 };
 
 const base =
@@ -24,7 +25,7 @@ const variants: Record<Variant, string> = {
   "on-dark": "bg-white text-ink border-white hover:bg-green hover:text-white hover:border-green",
 };
 
-export function Button({ children, href, variant = "default", sm, arrow, type = "button", className, target }: Props) {
+export function Button({ children, href, variant = "default", sm, arrow, type = "button", className, target, onClick }: Props) {
   const cls = cn(base, variants[variant], sm ? "px-[22px] py-[13px] text-[11px]" : "px-[30px] py-4", className);
   const inner = (
     <>
@@ -38,10 +39,11 @@ export function Button({ children, href, variant = "default", sm, arrow, type = 
         href={href}
         target={target}
         rel={target === "_blank" ? "noopener noreferrer" : undefined}
+        onClick={onClick}
         className={cn("group", cls)}
       >
         {inner}
       </Link>
     );
-  return <button type={type} className={cn("group", cls)}>{inner}</button>;
+  return <button type={type} onClick={onClick} className={cn("group", cls)}>{inner}</button>;
 }

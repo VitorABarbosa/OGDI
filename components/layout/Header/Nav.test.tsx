@@ -15,19 +15,21 @@ vi.mock("@/i18n/navigation", () => ({
 describe("Nav", () => {
   it("renderiza os rotulos a partir das traducoes", () => {
     renderWithIntl(<Nav onDark={false} />);
-    expect(screen.getByRole("link", { name: "Home" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "HOME" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "A OGDI" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Projetos" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "PROJETOS" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "INVESTIDORES" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "INSIGHTS" })).toBeInTheDocument();
     // Clientes saiu do menu principal.
     expect(screen.queryByRole("link", { name: "Clientes" })).not.toBeInTheDocument();
   });
 
-  // Prova que os rótulos vêm da camada de tradução (não de strings PT fixas):
-  // em EN os mesmos itens aparecem traduzidos.
+  // Prova que os rótulos vêm da camada de tradução com a nomenclatura
+  // institucional padronizada do header.
   it("usa o idioma ativo nos rotulos (EN)", () => {
     renderWithIntl(<Nav onDark={false} />, { locale: "en", messages: enMessages });
-    expect(screen.getByRole("link", { name: "About OGDI" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Projects" })).toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: "A OGDI" })).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "A OGDI" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "PROJETOS" })).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "About OGDI" })).not.toBeInTheDocument();
   });
 });

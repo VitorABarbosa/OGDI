@@ -36,8 +36,8 @@ export async function ProjetosHero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
-          WebkitMaskImage: "url(/assets/logos/LOGO_SEM_FUNDO.png)",
-          maskImage: "url(/assets/logos/LOGO_SEM_FUNDO.png)",
+          WebkitMaskImage: "url(/assets/logos/OGDI_COMPLETO_SEM_FUNDO.png)",
+          maskImage: "url(/assets/logos/OGDI_COMPLETO_SEM_FUNDO.png)",
           WebkitMaskRepeat: "no-repeat",
           maskRepeat: "no-repeat",
           WebkitMaskPosition: "right 4vw bottom 3vw",

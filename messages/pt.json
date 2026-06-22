@@ -1,10 +1,10 @@
 {
   "nav": {
-    "home": "Home",
+    "home": "HOME",
     "institucional": "A OGDI",
-    "projetos": "Projetos",
-    "investidores": "Investidores",
-    "insights": "Insights",
+    "projetos": "PROJETOS",
+    "investidores": "INVESTIDORES",
+    "insights": "INSIGHTS",
     "contato": "Contato"
   },
   "common": {

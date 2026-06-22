@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
 import { institucional } from "./institucional.data";
+import { FitScale } from "./FitScale";
 
 // ───────────────────────────────────────────────────────────────
 // Retângulo ajustável — altere os números abaixo (tudo em px).
@@ -173,8 +174,9 @@ export async function InstitucionalLideranca() {
           </p>
         </div>
 
-        {/* Textos nas mesmas posições — sem o retângulo escuro e sem a foto. */}
-        <article className="reveal relative lg:h-[470px]">
+        {/* Composição em px fixos → escala p/ caber em telas menores (FitScale). */}
+        <article className="reveal">
+          <FitScale width={1420} height={470}>
           {/* Retângulo ajustável (parâmetros no topo do arquivo: RECT) */}
           <div
             aria-hidden
@@ -324,6 +326,7 @@ export async function InstitucionalLideranca() {
               borderRadius: BAR.radius,
             }}
           />
+          </FitScale>
         </article>
       </div>
     </section>

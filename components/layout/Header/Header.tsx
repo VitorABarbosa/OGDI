@@ -24,15 +24,15 @@ export function Header() {
         "fixed top-0 inset-x-0 z-[100] px-pad-x flex items-center justify-between",
         "transition-[background-color,padding,border-color,box-shadow] duration-[400ms] ease-brand border-b",
         scrolled && !onDark
-          ? "py-3 bg-white/[.92] backdrop-blur-[18px] backdrop-saturate-[1.8] border-[color:var(--line)] shadow-[0_10px_34px_-18px_rgba(23,26,27,0.16)]"
-          : "py-[18px] border-transparent",
+          ? "py-[3px] bg-white/[.92] backdrop-blur-[18px] backdrop-saturate-[1.8] border-[color:var(--line)] shadow-[0_10px_34px_-18px_rgba(23,26,27,0.16)]"
+          : "py-[9px] border-transparent",
         onDark && "!bg-transparent !backdrop-blur-none !border-transparent")}>
         <Link href="/#top" aria-label="Open Group — início" className="flex items-center gap-[11px]">
-          <Image src={lightForeground ? "/assets/logos/og-logo-light.png" : "/assets/logos/og-logo.png"}
-            alt="Open Group" width={34} height={34} className="w-[34px] h-[34px] object-contain" />
-          <span className={cn("font-sans font-medium text-[14.5px] leading-none", lightForeground ? "text-white" : "text-ink")}>
+          <Image src={lightForeground ? "/assets/logos/OGDI_COMPLETO_BRANCO.png" : "/assets/logos/OGDI_COMPLETO_SEM_FUNDO.png"}
+            alt="OGDI" width={2400} height={1792} sizes="80px" className="h-[52px] w-auto object-contain" />
+          <span className={cn("font-sans font-medium text-[12.5px] leading-none", lightForeground ? "text-white" : "text-ink")}>
             {site.name}
-            <small className={cn("block text-[8.5px] tracking-[.24em] uppercase mt-1 font-normal",
+            <small className={cn("block text-[7.5px] tracking-[.24em] uppercase mt-1 font-normal",
               lightForeground ? "text-white/80" : "text-ink-3")}>{site.subtitle}</small>
           </span>
         </Link>

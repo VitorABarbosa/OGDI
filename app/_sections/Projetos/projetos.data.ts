@@ -56,6 +56,8 @@ export type Projeto = {
   tone: "t1" | "t2" | "t3";
   ctaLabel: string;
   image?: string;
+  // Versão retrato (3:4) para o grid da página /projetos; cai em `image` se ausente.
+  imagePortrait?: string;
   // Imagem de destaque da Hero (ex.: portaria/entrada), p/ não repetir a fachada
   // usada na seção "Sobre o projeto". Cai em `image` quando ausente.
   heroImage?: string;
@@ -247,6 +249,8 @@ export const projetos: Projeto[] = [
   {
     cat: "futuro", status: "Futuro lançamento", name: "Guarulhos",
     slug: "guarulhos",
+    image: "/assets/projetos/OGDI_FUTURO_LANCAMENTO_HORIZONTAL.png",
+    imagePortrait: "/assets/projetos/OGDI_FUTURO_LANCAMENTO_RETRATO.png",
     tag: "Oportunidade originada e operação em estruturação.",
     tone: "t3", ctaLabel: "Falar sobre o projeto",
     segmento: "Residencial", local: "Guarulhos · SP",
