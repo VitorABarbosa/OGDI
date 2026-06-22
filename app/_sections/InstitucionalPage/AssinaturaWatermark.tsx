@@ -5,10 +5,10 @@ import { useEffect, useRef } from "react";
 
 // Mesma revelação por máscara orgânica da AtuacaoWatermark (home), com a
 // logo centralizada da Mensagem central.
-const logoSrc = "/assets/logos/LOGO_SEM_FUNDO.png";
-const logoSize = 1480;
+const logoSrc = "/assets/logos/OGDI_COMPLETO_SEM_FUNDO.png";
+const logoSize = 2300;
 const logoClassName =
-  "absolute left-1/2 top-[47%] h-auto w-[min(128vw,1480px)] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain";
+  "absolute left-1/2 top-[50%] h-auto w-[min(150vw,2000px)] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain";
 
 export function AssinaturaWatermark() {
   const layerRef = useRef<HTMLDivElement>(null);

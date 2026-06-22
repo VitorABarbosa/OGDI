@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-const logoSize = 1760;
-const logoSrc = "/assets/logos/LOGO_SEM_FUNDO.png";
+const logoSize = 2700;
+const logoSrc = "/assets/logos/OGDI_COMPLETO_SEM_FUNDO.png";
 const logoClassName =
-  "sticky top-0 mx-auto w-[1760px] h-[1760px] max-w-none -translate-y-[300px] object-contain object-center";
+  "sticky top-0 mx-auto w-[2200px] h-[2200px] max-w-none -translate-x-[100px] -translate-y-[480px] object-contain object-center";
 
 export function AtuacaoWatermark() {
   const layerRef = useRef<HTMLDivElement>(null);

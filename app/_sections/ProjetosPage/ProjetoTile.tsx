@@ -41,7 +41,7 @@ export function ProjetoTile({
     >
       {/* ── Media ── */}
       <div className="absolute inset-0 transition-transform duration-[1100ms] ease-brand group-hover:scale-[1.05]">
-        <MediaPlaceholder tone={p.tone} src={p.image} alt={p.image ? p.name : ""} />
+        <MediaPlaceholder tone={p.tone} src={p.imagePortrait ?? p.image} alt={p.imagePortrait ?? p.image ? p.name : ""} />
       </div>
 
       {/* Degradê permanente na base — garante leitura do texto sobre a foto */}

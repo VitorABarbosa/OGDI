@@ -13,9 +13,9 @@ export async function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.7fr_1fr_1fr_1.1fr] gap-12 pb-16 border-b border-[color:var(--line-dark)]">
         <div>
           <Link href="/#top" className="flex items-center gap-[11px]">
-            <Image src="/assets/logos/og-logo-light.png" alt="Open Group" width={34} height={34} className="w-[34px] h-[34px] object-contain" />
-            <span className="font-sans font-medium text-[14.5px] leading-none text-white">
-              {site.name}<small className="block text-[8.5px] tracking-[.24em] uppercase mt-1 text-on-dark-2 font-normal">{site.subtitle}</small>
+            <Image src="/assets/logos/OGDI_COMPLETO_BRANCO.png" alt="OGDI" width={2400} height={1792} sizes="80px" className="h-[52px] w-auto object-contain" />
+            <span className="font-sans font-medium text-[12.5px] leading-none text-white">
+              {site.name}<small className="block text-[7.5px] tracking-[.24em] uppercase mt-1 text-on-dark-2 font-normal">{site.subtitle}</small>
             </span>
           </Link>
           <p className="font-serif italic font-light text-[22px] text-on-dark mt-6 max-w-[280px] leading-[1.35]">{tf("tagline")}</p>
@@ -24,7 +24,7 @@ export async function Footer() {
           <h5 className="text-[11px] tracking-[.16em] uppercase text-on-dark-2 mb-5 font-medium">{tf("navTitle")}</h5>
           <ul className="list-none p-0 m-0 flex flex-col gap-3">
             {navItems.map((it) => (
-              <li key={it.key}><Link href={it.href} className="text-[14px] text-on-dark/80 hover:text-green transition-colors">{tn(it.key)}</Link></li>
+              <li key={it.key}><Link href={it.href} className="text-[14px] uppercase text-on-dark/80 hover:text-green transition-colors">{tn(it.key)}</Link></li>
             ))}
           </ul>
         </div>

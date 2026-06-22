@@ -1,5 +1,7 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import { Kicker } from "@/components/ui/Kicker";
 import { cn } from "@/lib/cn";
 import { institucional } from "./institucional.data";
@@ -83,9 +85,12 @@ function Motif({ id }: { id: string }) {
   }
 }
 
-export async function InstitucionalGrupo() {
-  const t = await getTranslations("institucional.grupo");
+export function InstitucionalGrupo() {
+  const t = useTranslations("institucional.grupo");
   const { grupo } = institucional;
+  // Acordeão no mobile: id do card aberto (no desktop o controle é hover/CSS).
+  const [openId, setOpenId] = useState<string | null>(null);
+  const isMobile = () => typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches;
 
   return (
     <section id="institucional-grupo" className={cn(styles.section, "pt-[clamp(32px,4vw,56px)] pb-[clamp(72px,8vw,112px)] text-ink")}>
@@ -165,6 +170,7 @@ export async function InstitucionalGrupo() {
               </>
             );
 
+            const open = openId === company.id;
             return company.href ? (
               <a
                 key={company.id}
@@ -175,11 +181,27 @@ export async function InstitucionalGrupo() {
                 className={cardClass}
                 style={cardStyle}
                 data-card
+                data-open={open ? "true" : undefined}
+                onClick={(e) => {
+                  // No mobile, o 1º toque abre (sem navegar); o 2º (já aberto) visita.
+                  if (isMobile() && !open) {
+                    e.preventDefault();
+                    setOpenId(company.id);
+                  }
+                }}
               >
                 {content}
               </a>
             ) : (
-              <article key={company.id} tabIndex={0} className={cardClass} style={cardStyle} data-card>
+              <article
+                key={company.id}
+                tabIndex={0}
+                className={cardClass}
+                style={cardStyle}
+                data-card
+                data-open={open ? "true" : undefined}
+                onClick={() => setOpenId(open ? null : company.id)}
+              >
                 {content}
               </article>
             );

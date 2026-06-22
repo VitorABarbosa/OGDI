@@ -373,10 +373,13 @@
 /* ============================================================
    Mobile: cards empilhados, todos expandidos (sem acordeão)
 ============================================================ */
+/* Mobile: acordeão vertical. Colapsado mostra a logo (idle); o card aberto
+   (data-open, via clique) revela o detalhe. Hover/focus não controlam aqui. */
 @media (max-width: 900px) {
   .stage {
     flex-direction: column;
-    min-height: auto;
+    height: auto;
+    gap: 10px;
   }
 
   .card,
@@ -384,57 +387,66 @@
   .stage:focus-within .card:not(:focus-within),
   .stage:hover .card:hover,
   .stage:focus-within .card:focus-within {
-    flex: 1 1 auto;
-    min-height: 440px;
+    flex: 0 0 auto;
+    min-height: 100px;
+    transition: min-height .5s var(--ease-pop), background .5s var(--ease-brand);
+  }
+
+  .mini,
+  .motifSvg {
+    display: none;
   }
 
   .idle,
-  .mini {
-    display: none;
+  .stage:hover .idle,
+  .stage:focus-within .idle {
+    opacity: 1;
+    transform: none;
+    padding: 16px;
+    gap: 10px;
   }
 
   .detail {
     position: relative;
     inset: auto;
     min-width: 0;
-    opacity: 1;
-    pointer-events: auto;
-    padding-top: clamp(96px, 22vw, 120px);
-  }
-
-  .detailWm {
-    top: clamp(22px, 5vw, 32px);
-    left: clamp(22px, 5vw, 32px);
-  }
-
-  .info > * {
-    opacity: 1;
-    transform: none;
-  }
-
-  .motifSvg {
-    opacity: .85;
-    right: -24px;
-    bottom: auto;
-    top: 12px;
-    width: 52%;
-  }
-
-  .bg::before {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
     opacity: 0;
+    pointer-events: none;
+    transition: none;
   }
 
   .bgImg {
     transform: none;
   }
 
-  .motifSvg :global(line),
-  .motifSvg :global(path),
-  .motifSvg :global(rect),
-  .motifSvg :global(circle),
-  .motifSvg :global(polyline) {
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
+  /* Card aberto */
+  .card[data-open="true"] .idle {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .card[data-open="true"] .detail {
+    height: auto;
+    opacity: 1;
+    pointer-events: auto;
+    padding: clamp(88px, 22vw, 116px) clamp(22px, 5vw, 30px) clamp(28px, 6vw, 40px);
+  }
+
+  .card[data-open="true"] .detailWm {
+    top: clamp(20px, 5vw, 30px);
+    left: clamp(20px, 5vw, 30px);
+  }
+
+  .card[data-open="true"] .info > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  .card[data-open="true"] .bg::before {
+    opacity: 0;
   }
 }
 
