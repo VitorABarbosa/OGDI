@@ -96,27 +96,32 @@
       "cards": {
         "hits-cupece": {
           "status": "Em obra",
-          "tag": "Operação estruturada na origem, do produto ao lançamento.",
+          "tag": "OGDI sócia da operação — leitura da oportunidade, produto e estruturação.",
           "ctaLabel": "Conheça o empreendimento"
         },
         "start-park-jabaquara": {
           "status": "Em obra",
-          "tag": "Da inteligência de mercado à condução até o lançamento.",
+          "tag": "OGDI sócia da operação — inteligência de mercado, viabilidade e condução até o lançamento.",
           "ctaLabel": "Conheça o empreendimento"
         },
         "oh-freguesia": {
           "status": "Em obra",
-          "tag": "Produto conceituado e operação estruturada pela OGDI.",
+          "tag": "OGDI sócia da operação — conceituação do produto e estruturação.",
           "ctaLabel": "Conheça o empreendimento"
         },
         "guarulhos": {
           "status": "Futuro lançamento",
-          "tag": "Oportunidade originada e operação em estruturação.",
+          "tag": "OGDI sócia da operação — oportunidade originada e estruturação.",
+          "ctaLabel": "Falar sobre o projeto"
+        },
+        "jabaquara": {
+          "status": "Futuro lançamento",
+          "tag": "OGDI sócia da operação — oportunidade originada e estruturação.",
           "ctaLabel": "Falar sobre o projeto"
         },
         "hits-santa-catarina": {
           "status": "Entregue",
-          "tag": "Da concepção ao lançamento — operação entregue.",
+          "tag": "OGDI sócia da operação — da concepção ao lançamento.",
           "ctaLabel": "Conheça o empreendimento"
         }
       }
@@ -238,7 +243,7 @@
     },
     "about": {
       "kicker": "Sobre a OGDI",
-      "heading": "Nosso trabalho começa <em>antes da obra</em>.",
+      "heading": "Nosso trabalho<br></br>começa <em>antes do lançamento</em>.",
       "models": {
         "consultoria": {
           "strong": "Consultoria",
@@ -305,7 +310,7 @@
           "role": "CEO and Founder",
           "statement": "Antes de desenvolver um empreendimento, é preciso enxergar o <em>valor</em> que ainda não foi revelado.",
           "quote1": "À frente da Open Group, Flying Studio, NID Studio e Rinno Films, conduzo um ecossistema criado para transformar oportunidades imobiliárias em operações mais claras, viáveis e preparadas para avançar.",
-          "quote2": "A estratégia é onde tudo começa, e dela nascem a arquitetura, a tecnologia e a comunicação. Cada empresa aprofunda uma dessas frentes com a mesma visão: desenvolver com estrutura desde a origem."
+          "quote2": "A visão estratégica é onde tudo começa, e dela nascem a formatação do produto, a arquitetura, a tecnologia e experiência no lançamento e a comunicação. Cada empresa, em sua área de genialidade, entrega etapas importantes e alinhadas a resultados."
         }
       }
     },
@@ -372,7 +377,7 @@
       "breadcrumbCurrent": "Projetos",
       "kicker": "Projetos · Cases",
       "title": "Empreendimentos",
-      "sub": "Da leitura da oportunidade ao lançamento — cada projeto reflete a atuação da Open Group na estruturação da operação imobiliária."
+      "sub": "Da leitura da oportunidade ao lançamento — cada projeto reflete a atuação da Open Group no lançamento."
     },
     "filtros": {
       "aria": "Filtrar projetos",
@@ -412,6 +417,11 @@
         "status": "Futuro lançamento",
         "segmento": "Residencial",
         "local": "Guarulhos · SP"
+      },
+      "jabaquara": {
+        "status": "Futuro lançamento",
+        "segmento": "Residencial",
+        "local": "Jabaquara · SP"
       }
     },
     "scp": {
@@ -460,7 +470,7 @@
           "desc": "O valor de um empreendimento é criado na estruturação — leitura da oportunidade, produto e operação — antes de a obra começar."
         },
         "02": {
-          "title": "Lemos o mercado.",
+          "title": "Entendemos o mercado.",
           "desc": "Cada operação nasce de inteligência de mercado e estudo de viabilidade, não de aposta."
         },
         "03": {

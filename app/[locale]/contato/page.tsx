@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RevealController } from "@/components/Reveal/RevealController";
-import { ContatoHero } from "@/app/_sections/ContatoPage/ContatoHero";
-import { ContatoConversa } from "@/app/_sections/ContatoPage/ContatoConversa";
+import { ContatoSection } from "@/app/_sections/ContatoPage/ContatoSection";
 
 export async function generateMetadata({
   params,
@@ -28,8 +27,7 @@ export default async function ContatoPage({
       {/* Página inteira sobre bg-dark: o marcador mantém a header branca
           enquanto o conteúdo estiver sob ela */}
       <div data-header-dark className="bg-dark">
-        <ContatoHero />
-        <ContatoConversa />
+        <ContatoSection />
       </div>
     </main>
   );

@@ -17,6 +17,9 @@ import ohFreguesiaEs from "./oh-freguesia/es.json";
 import guarulhosPt from "./guarulhos/pt.json";
 import guarulhosEn from "./guarulhos/en.json";
 import guarulhosEs from "./guarulhos/es.json";
+import jabaquaraPt from "./jabaquara/pt.json";
+import jabaquaraEn from "./jabaquara/en.json";
+import jabaquaraEs from "./jabaquara/es.json";
 import hitsScPt from "./hits-santa-catarina/pt.json";
 import hitsScEn from "./hits-santa-catarina/en.json";
 import hitsScEs from "./hits-santa-catarina/es.json";
@@ -28,6 +31,7 @@ const REGISTRY: Record<string, Record<Locale, unknown>> = {
   "start-park-jabaquara": { pt: startParkPt, en: startParkEn, es: startParkEs },
   "oh-freguesia": { pt: ohFreguesiaPt, en: ohFreguesiaEn, es: ohFreguesiaEs },
   guarulhos: { pt: guarulhosPt, en: guarulhosEn, es: guarulhosEs },
+  jabaquara: { pt: jabaquaraPt, en: jabaquaraEn, es: jabaquaraEs },
   "hits-santa-catarina": { pt: hitsScPt, en: hitsScEn, es: hitsScEs },
 };
 

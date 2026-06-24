@@ -41,8 +41,8 @@ export async function Footer() {
       <div className="mt-8 flex items-center justify-between flex-wrap gap-4">
         <div className="text-[12.5px] text-on-dark-2">{site.copyright} · <Link href="/politica-de-privacidade" className="text-on-dark/70 transition-colors hover:text-green">{tf("privacy")}</Link></div>
         <div className="flex gap-2">
-          <a href={site.social.linkedin} aria-label="LinkedIn" className="w-10 h-10 border border-[color:var(--line-dark)] inline-flex items-center justify-center text-on-dark hover:bg-white hover:text-dark hover:border-white transition-colors"><Icon name="linkedin" /></a>
-          <a href={site.social.instagram} aria-label="Instagram" className="w-10 h-10 border border-[color:var(--line-dark)] inline-flex items-center justify-center text-on-dark hover:bg-white hover:text-dark hover:border-white transition-colors"><Icon name="instagram" /></a>
+          <a href={site.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 border border-[color:var(--line-dark)] inline-flex items-center justify-center text-on-dark hover:bg-white hover:text-dark hover:border-white transition-colors"><Icon name="linkedin" /></a>
+          <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 border border-[color:var(--line-dark)] inline-flex items-center justify-center text-on-dark hover:bg-white hover:text-dark hover:border-white transition-colors"><Icon name="instagram" /></a>
         </div>
       </div>
     </footer>

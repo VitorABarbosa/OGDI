@@ -96,27 +96,32 @@
       "cards": {
         "hits-cupece": {
           "status": "En construcción",
-          "tag": "Operación estructurada en el origen, del producto al lanzamiento.",
+          "tag": "OGDI socia de la operación — lectura de la oportunidad, producto y estructuración.",
           "ctaLabel": "Conozca el emprendimiento"
         },
         "start-park-jabaquara": {
           "status": "En construcción",
-          "tag": "De la inteligencia de mercado a la conducción hasta el lanzamiento.",
+          "tag": "OGDI socia de la operación — inteligencia de mercado, viabilidad y conducción hasta el lanzamiento.",
           "ctaLabel": "Conozca el emprendimiento"
         },
         "oh-freguesia": {
           "status": "En construcción",
-          "tag": "Producto conceptualizado y operación estructurada por OGDI.",
+          "tag": "OGDI socia de la operación — conceptualización del producto y estructuración.",
           "ctaLabel": "Conozca el emprendimiento"
         },
         "guarulhos": {
           "status": "Próximos",
-          "tag": "Oportunidad originada y operación en estructuración.",
+          "tag": "OGDI socia de la operación — oportunidad originada y estructuración.",
+          "ctaLabel": "Hablar sobre el proyecto"
+        },
+        "jabaquara": {
+          "status": "Próximos",
+          "tag": "OGDI socia de la operación — oportunidad originada y estructuración.",
           "ctaLabel": "Hablar sobre el proyecto"
         },
         "hits-santa-catarina": {
           "status": "Entregado",
-          "tag": "De la concepción al lanzamiento — operación entregada.",
+          "tag": "OGDI socia de la operación — de la concepción al lanzamiento.",
           "ctaLabel": "Conozca el emprendimiento"
         }
       }
@@ -238,7 +243,7 @@
     },
     "about": {
       "kicker": "Sobre la OGDI",
-      "heading": "Nuestro trabajo comienza <em>antes de la obra</em>.",
+      "heading": "Nuestro trabajo<br></br>comienza <em>antes del lanzamiento</em>.",
       "models": {
         "consultoria": {
           "strong": "Consultoría",
@@ -305,7 +310,7 @@
           "role": "CEO y Fundador",
           "statement": "Antes de desarrollar un emprendimiento, hay que ver el <em>valor</em> que aún no se ha revelado.",
           "quote1": "Al frente de Open Group, Flying Studio, NID Studio y Rinno Films, conduzco un ecosistema creado para transformar oportunidades inmobiliarias en operaciones más claras, viables y preparadas para avanzar.",
-          "quote2": "La estrategia es donde todo empieza, y de ella nacen la arquitectura, la tecnología y la comunicación. Cada empresa profundiza una de esas frentes con la misma visión: desarrollar con estructura desde el origen."
+          "quote2": "La visión estratégica es donde todo empieza, y de ella nacen la conformación del producto, la arquitectura, la tecnología y la experiencia en el lanzamiento, y la comunicación. Cada empresa, en su área de genialidad, entrega etapas importantes y alineadas a resultados."
         }
       }
     },
@@ -372,7 +377,7 @@
       "breadcrumbCurrent": "Proyectos",
       "kicker": "Proyectos · Cases",
       "title": "Emprendimientos",
-      "sub": "De la lectura de la oportunidad al lanzamiento — cada proyecto refleja la actuación de Open Group en la estructuración de la operación inmobiliaria."
+      "sub": "De la lectura de la oportunidad al lanzamiento — cada proyecto refleja la actuación de Open Group en el lanzamiento."
     },
     "filtros": {
       "aria": "Filtrar proyectos",
@@ -412,6 +417,11 @@
         "status": "Próximos",
         "segmento": "Residencial",
         "local": "Guarulhos · SP"
+      },
+      "jabaquara": {
+        "status": "Próximos",
+        "segmento": "Residencial",
+        "local": "Jabaquara · SP"
       }
     },
     "scp": {
@@ -460,7 +470,7 @@
           "desc": "El valor de un emprendimiento se crea en la estructuración — lectura de la oportunidad, producto y operación — antes de que comience la obra."
         },
         "02": {
-          "title": "Leemos el mercado.",
+          "title": "Entendemos el mercado.",
           "desc": "Cada operación nace de inteligencia de mercado y estudio de viabilidad, no de una apuesta."
         },
         "03": {

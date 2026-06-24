@@ -8,7 +8,7 @@ export type HeroSlide = {
 
 export const heroSlides: HeroSlide[] = [
   { key: "hits-santa-catarina", name: "Hits Santa Catarina", localTbd: true, tone: "t1",
-    image: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.png" },
+    image: "/assets/projetos/HITS_SANTA_CATARINA/FACHADA.jpg" },
   { key: "hits-cupece", name: "Hits Cupecê", tone: "t2",
     image: "/assets/projetos/CUPECE/Cupece.png" },
   { key: "start-park-jabaquara", name: "Start Park Jabaquara", tone: "t3",

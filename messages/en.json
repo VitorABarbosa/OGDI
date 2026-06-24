@@ -96,27 +96,32 @@
       "cards": {
         "hits-cupece": {
           "status": "Under construction",
-          "tag": "A venture structured at the origin, from product to launch.",
+          "tag": "OGDI partner in the venture — reading the opportunity, product, and structuring.",
           "ctaLabel": "Explore the development"
         },
         "start-park-jabaquara": {
           "status": "Under construction",
-          "tag": "From market intelligence to guidance through to launch.",
+          "tag": "OGDI partner in the venture — market intelligence, feasibility, and guidance through to launch.",
           "ctaLabel": "Explore the development"
         },
         "oh-freguesia": {
           "status": "Under construction",
-          "tag": "Product concept and venture structured by OGDI.",
+          "tag": "OGDI partner in the venture — product concept and structuring.",
           "ctaLabel": "Explore the development"
         },
         "guarulhos": {
           "status": "Upcoming",
-          "tag": "Opportunity originated and venture under structuring.",
+          "tag": "OGDI partner in the venture — opportunity originated and structuring.",
+          "ctaLabel": "Discuss the project"
+        },
+        "jabaquara": {
+          "status": "Upcoming",
+          "tag": "OGDI partner in the venture — opportunity originated and structuring.",
           "ctaLabel": "Discuss the project"
         },
         "hits-santa-catarina": {
           "status": "Delivered",
-          "tag": "From concept to launch — venture delivered.",
+          "tag": "OGDI partner in the venture — from concept to launch.",
           "ctaLabel": "Explore the development"
         }
       }
@@ -238,7 +243,7 @@
     },
     "about": {
       "kicker": "About OGDI",
-      "heading": "Our work begins <em>before ground is broken</em>.",
+      "heading": "Our work<br></br>begins <em>before launch</em>.",
       "models": {
         "consultoria": {
           "strong": "Contracted",
@@ -305,7 +310,7 @@
           "role": "CEO and Founder",
           "statement": "Before developing a project, you must see the <em>value</em> that hasn't yet been revealed.",
           "quote1": "At the helm of Open Group, Flying Studio, NID Studio, and Rinno Films, I lead an ecosystem created to turn real estate opportunities into clearer, more feasible ventures, ready to move forward.",
-          "quote2": "Strategy is where it all begins, and from it come architecture, technology, and communication. Each company deepens one of these fronts with the same vision: to develop with structure from the very origin."
+          "quote2": "Strategic vision is where it all begins, and from it come the shaping of the product, the architecture, the technology and launch experience, and the communication. Each company, in its own area of genius, delivers important stages aligned with results."
         }
       }
     },
@@ -372,7 +377,7 @@
       "breadcrumbCurrent": "Projects",
       "kicker": "Projects · Cases",
       "title": "Developments",
-      "sub": "From reading the opportunity to launch — each project reflects Open Group's work in structuring the real estate venture."
+      "sub": "From reading the opportunity to launch — each project reflects Open Group's work in the launch."
     },
     "filtros": {
       "aria": "Filter projects",
@@ -412,6 +417,11 @@
         "status": "Upcoming",
         "segmento": "Residential",
         "local": "Guarulhos · SP"
+      },
+      "jabaquara": {
+        "status": "Upcoming",
+        "segmento": "Residential",
+        "local": "Jabaquara · SP"
       }
     },
     "scp": {
@@ -460,7 +470,7 @@
           "desc": "A development's value is created during structuring — reading the opportunity, the product, and the venture — before construction begins."
         },
         "02": {
-          "title": "We read the market.",
+          "title": "We understand the market.",
           "desc": "Every venture is born from market intelligence and a feasibility study, not from a bet."
         },
         "03": {
