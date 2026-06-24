@@ -6,6 +6,9 @@ export const site = {
   location: "São Paulo · SP",
   tagline: "O valor nasce antes da obra.",
   institutional: "Estruturação e desenvolvimento de empreendimentos imobiliários.",
-  social: { linkedin: "#", instagram: "#" },
+  social: {
+    linkedin: "https://www.linkedin.com/in/flying-studio/",
+    instagram: "https://www.instagram.com/ogdi.oficial/",
+  },
   copyright: "© 2026 Open Group — Desenvolvimento Imobiliário. Todos os direitos reservados.",
 } as const;

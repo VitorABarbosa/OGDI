@@ -8,6 +8,7 @@ const order = [
   "oh-freguesia",
   "hits-santa-catarina",
   "guarulhos",
+  "jabaquara",
 ];
 
 // ordered list of the actual Projeto objects for the grid

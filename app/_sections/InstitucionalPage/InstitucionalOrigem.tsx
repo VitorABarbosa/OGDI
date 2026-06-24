@@ -122,14 +122,12 @@ export function InstitucionalOrigem() {
           aria-hidden
           className="reveal my-[clamp(34px,4.5vw,58px)] h-px max-w-[680px] bg-gradient-to-r from-[color:var(--line-dark)] to-transparent"
         />
-        <div className="grid grid-cols-1 gap-[clamp(24px,3.5vw,56px)] lg:grid-cols-2 lg:items-start">
-          <p className="reveal font-news font-normal text-[clamp(1.25rem,2vw,1.7rem)] leading-[1.24] tracking-[-.01em] max-w-[26ch]">
-            {tm.rich("positioning", { em: green })}
-          </p>
-          <p className="reveal reveal-2 max-w-[58ch] text-[clamp(14px,1.1vw,16.5px)] leading-[1.66] text-white/[.6]">
-            {tm("institutional")}
-          </p>
-        </div>
+        <p className="reveal font-news font-normal text-[clamp(1.25rem,2vw,1.7rem)] leading-[1.24] tracking-[-.01em] max-w-[34ch]">
+          {tm.rich("positioning", { em: green })}
+        </p>
+        <p className="reveal reveal-2 mt-[clamp(22px,3vw,34px)] max-w-[60ch] text-[clamp(14px,1.1vw,16.5px)] leading-[1.66] text-white/[.6]">
+          {tm("institutional")}
+        </p>
         <p className="reveal mt-[clamp(28px,3.5vw,44px)] font-news italic text-green text-[clamp(1.2rem,2vw,1.7rem)] leading-[1.2]">
           {tm("closing")}
         </p>
