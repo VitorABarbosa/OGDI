@@ -96,32 +96,26 @@
       "cards": {
         "hits-cupece": {
           "status": "En construcción",
-          "tag": "OGDI socia de la operación — lectura de la oportunidad, producto y estructuración.",
           "ctaLabel": "Conozca el emprendimiento"
         },
         "start-park-jabaquara": {
           "status": "En construcción",
-          "tag": "OGDI socia de la operación — inteligencia de mercado, viabilidad y conducción hasta el lanzamiento.",
           "ctaLabel": "Conozca el emprendimiento"
         },
         "oh-freguesia": {
           "status": "En construcción",
-          "tag": "OGDI socia de la operación — conceptualización del producto y estructuración.",
           "ctaLabel": "Conozca el emprendimiento"
         },
         "guarulhos": {
           "status": "Próximos",
-          "tag": "OGDI socia de la operación — oportunidad originada y estructuración.",
           "ctaLabel": "Hablar sobre el proyecto"
         },
         "jabaquara": {
           "status": "Próximos",
-          "tag": "OGDI socia de la operación — oportunidad originada y estructuración.",
           "ctaLabel": "Hablar sobre el proyecto"
         },
         "hits-santa-catarina": {
           "status": "Entregado",
-          "tag": "OGDI socia de la operación — de la concepción al lanzamiento.",
           "ctaLabel": "Conozca el emprendimiento"
         }
       }
@@ -151,7 +145,7 @@
         },
         "04": {
           "title": "Desarrollo inmobiliario",
-          "desc": "Definición de la lógica del producto inmobiliario: tipología, mix y posicionamiento."
+          "desc": "Definición de la lógica del producto inmobiliario: tipología y posicionamiento."
         },
         "05": {
           "title": "Estructuración financiera",

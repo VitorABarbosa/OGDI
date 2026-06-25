@@ -96,32 +96,26 @@
       "cards": {
         "hits-cupece": {
           "status": "Em obra",
-          "tag": "OGDI sócia da operação — leitura da oportunidade, produto e estruturação.",
           "ctaLabel": "Conheça o empreendimento"
         },
         "start-park-jabaquara": {
           "status": "Em obra",
-          "tag": "OGDI sócia da operação — inteligência de mercado, viabilidade e condução até o lançamento.",
           "ctaLabel": "Conheça o empreendimento"
         },
         "oh-freguesia": {
           "status": "Em obra",
-          "tag": "OGDI sócia da operação — conceituação do produto e estruturação.",
           "ctaLabel": "Conheça o empreendimento"
         },
         "guarulhos": {
           "status": "Futuro lançamento",
-          "tag": "OGDI sócia da operação — oportunidade originada e estruturação.",
           "ctaLabel": "Falar sobre o projeto"
         },
         "jabaquara": {
           "status": "Futuro lançamento",
-          "tag": "OGDI sócia da operação — oportunidade originada e estruturação.",
           "ctaLabel": "Falar sobre o projeto"
         },
         "hits-santa-catarina": {
           "status": "Entregue",
-          "tag": "OGDI sócia da operação — da concepção ao lançamento.",
           "ctaLabel": "Conheça o empreendimento"
         }
       }
@@ -151,7 +145,7 @@
         },
         "04": {
           "title": "Desenvolvimento imobiliário",
-          "desc": "Definição da lógica do produto imobiliário: tipologia, mix e posicionamento."
+          "desc": "Definição da lógica do produto imobiliário: tipologia e posicionamento."
         },
         "05": {
           "title": "Estruturação financeira",
@@ -796,7 +790,7 @@
         "outro": "Outro"
       },
       "submit": "Enviar mensagem",
-      "consent": "Ao enviar, você concorda em ser contatado pela equipe da Open Group.",
+      "consent": "Ao enviar, você concorda em ser contatado pela equipe da OGDI.",
       "sucesso": {
         "title": "Mensagem recebida.",
         "body": "A equipe da Open Group faz a primeira leitura e retorna com os próximos passos."

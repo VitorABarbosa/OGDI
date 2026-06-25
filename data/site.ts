@@ -3,7 +3,7 @@ export const site = {
   subtitle: "Desenvolvimento Imobiliário",
   email: "max@ogdi.com.br",
   phone: "+55 11 98513-1748",
-  location: "São Paulo · SP",
+  location: "Itaim Bibi · São Paulo, SP",
   tagline: "O valor nasce antes da obra.",
   institutional: "Estruturação e desenvolvimento de empreendimentos imobiliários.",
   social: {
