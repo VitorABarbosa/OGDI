@@ -111,7 +111,6 @@ export function Projetos() {
                 p={p}
                 active={i === index}
                 status={t(`cards.${p.slug}.status`)}
-                tag={t(`cards.${p.slug}.tag`)}
                 ctaLabel={t(`cards.${p.slug}.ctaLabel`)}
               />
             ))}

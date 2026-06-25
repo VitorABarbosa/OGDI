@@ -96,32 +96,26 @@
       "cards": {
         "hits-cupece": {
           "status": "Under construction",
-          "tag": "OGDI partner in the venture — reading the opportunity, product, and structuring.",
           "ctaLabel": "Explore the development"
         },
         "start-park-jabaquara": {
           "status": "Under construction",
-          "tag": "OGDI partner in the venture — market intelligence, feasibility, and guidance through to launch.",
           "ctaLabel": "Explore the development"
         },
         "oh-freguesia": {
           "status": "Under construction",
-          "tag": "OGDI partner in the venture — product concept and structuring.",
           "ctaLabel": "Explore the development"
         },
         "guarulhos": {
           "status": "Upcoming",
-          "tag": "OGDI partner in the venture — opportunity originated and structuring.",
           "ctaLabel": "Discuss the project"
         },
         "jabaquara": {
           "status": "Upcoming",
-          "tag": "OGDI partner in the venture — opportunity originated and structuring.",
           "ctaLabel": "Discuss the project"
         },
         "hits-santa-catarina": {
           "status": "Delivered",
-          "tag": "OGDI partner in the venture — from concept to launch.",
           "ctaLabel": "Explore the development"
         }
       }
@@ -151,7 +145,7 @@
         },
         "04": {
           "title": "Real estate development",
-          "desc": "Defining the logic of the real estate product: unit mix, typology, and positioning."
+          "desc": "Defining the logic of the real estate product: typology and positioning."
         },
         "05": {
           "title": "Financial structuring",
