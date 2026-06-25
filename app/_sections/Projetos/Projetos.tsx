@@ -87,9 +87,9 @@ export function Projetos() {
     <section id="projetos" className="py-section">
       <div className="wrap">
         <div className="flex items-end justify-between gap-[24px_40px] flex-wrap mb-10">
-          <div className="max-w-[520px] reveal">
+          <div className="reveal">
             <Kicker>{t("kicker")}</Kicker>
-            <SectionHeading className="mt-[14px]">{t.rich("heading", { br: () => <br /> })}</SectionHeading>
+            <SectionHeading className="mt-[14px] whitespace-nowrap">{t.rich("heading", { br: () => <br /> })}</SectionHeading>
           </div>
           <div className="reveal reveal-2"><ProjetoTabs active={cat} onChange={onTab} /></div>
         </div>
