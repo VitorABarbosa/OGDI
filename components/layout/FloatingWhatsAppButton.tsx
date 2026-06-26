@@ -1,13 +1,14 @@
-const WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5511985131748&text&type=phone_number&app_absent=0";
+import { getTranslations } from "next-intl/server";
+import { whatsappUrl } from "@/lib/whatsapp";
 
-export function FloatingWhatsAppButton() {
+export async function FloatingWhatsAppButton() {
+  const t = await getTranslations("common");
   return (
     <a
-      href={WHATSAPP_URL}
+      href={whatsappUrl(t("whatsappMessage"))}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Falar com a Open Group pelo WhatsApp"
+      aria-label={t("whatsappAria")}
       className="fixed bottom-[clamp(18px,3vw,34px)] right-[clamp(18px,3vw,34px)] z-[85] grid h-[58px] w-[58px] place-items-center rounded-full bg-[#25D366] text-white shadow-[0_18px_42px_rgba(0,0,0,.26)] transition-[transform,box-shadow,background-color] duration-300 ease-brand hover:-translate-y-1 hover:bg-[#20bd5a] hover:shadow-[0_22px_48px_rgba(0,0,0,.34)] focus:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 focus-visible:ring-offset-white"
     >
       <svg viewBox="0 0 32 32" aria-hidden className="h-7 w-7" fill="currentColor">

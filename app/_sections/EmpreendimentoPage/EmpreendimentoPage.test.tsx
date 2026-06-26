@@ -24,8 +24,7 @@ const ohFreguesia = projetos.find((p) => p.slug === "oh-freguesia");
 const semMapa = projetos.find((p) => p.slug === "guarulhos");
 // Prosa por projeto agora vive em messages/projetos/<slug>/ (namespace proj.<slug>).
 const ptProj = projetoMessages("pt") as Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
-const TEAM_WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5511985131748&text&type=phone_number&app_absent=0";
+const TEAM_WHATSAPP_BASE = "https://api.whatsapp.com/send/?phone=5511985131748";
 
 describe("Empreendimento page data", () => {
   it("does not keep the duplicate standalone Cupece project", () => {
@@ -136,7 +135,9 @@ describe("Empreendimento page data", () => {
     const conheca = screen.getByRole("link", { name: /Conheça o empreendimento/i });
     expect(conheca).toHaveAttribute("href", "https://www.tsengenharia.com/imovel/hits-cupece/");
     expect(conheca).toHaveAttribute("target", "_blank");
-    expect(screen.getByRole("link", { name: /Falar com a equipe/i })).toHaveAttribute("href", TEAM_WHATSAPP_URL);
+    const falar = screen.getByRole("link", { name: /Falar com a equipe/i });
+    expect(falar.getAttribute("href")).toContain(TEAM_WHATSAPP_BASE);
+    expect(falar.getAttribute("href")).toContain("text="); // saudação pré-preenchida
   });
 
   it("renders the Cupece amenities (lazer) grid and feature band", () => {

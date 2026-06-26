@@ -10,6 +10,8 @@
   "common": {
     "ctaHeader": "Fale com a Open Group",
     "ctaMobile": "Apresentar oportunidade",
+    "whatsappMessage": "Olá! Vim pelo site da Open Group e gostaria de conversar sobre uma oportunidade.",
+    "whatsappAria": "Falar com a Open Group pelo WhatsApp",
     "langLabel": "Idioma: Português (Brasil). Ver outros idiomas",
     "placeholder": {
       "body": "Conteúdo em preparação. Esta página faz parte da arquitetura do site e receberá conteúdo em breve.",
@@ -790,6 +792,8 @@
         "outro": "Outro"
       },
       "submit": "Enviar mensagem",
+      "sending": "Enviando…",
+      "erro": "Não foi possível enviar agora. Tente novamente ou fale com a gente pelo WhatsApp.",
       "consent": "Ao enviar, você concorda em ser contatado pela equipe da OGDI.",
       "sucesso": {
         "title": "Mensagem recebida.",

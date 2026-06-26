@@ -13,10 +13,10 @@ do WhatsApp abrir uma conversa com mensagem pré-preenchida.
   `POST` para `https://api.web3forms.com/submit`; o Web3Forms encaminha por
   e-mail para o destino. Escolhido por não exigir nada no host (Napolean/cPanel
   só serve arquivos), sem SMTP nem credenciais privadas. Ver [[ogdi-deploy-cpanel-next-versionado]].
-- **Destino:** `contato@ogdi.com.br`.
-- **E-mail do site:** atualizar `site.email` de `max@ogdi.com.br` para
-  `contato@ogdi.com.br` (fonte única — reflete em footer, contato, ContatoInfo,
-  política de privacidade).
+- **Destino:** `max@ogdi.com.br` por enquanto (o `contato@ogdi.com.br` ainda não
+  existe; trocar depois é só atualizar o destino no painel do Web3Forms). Por
+  isso **não** mexemos no `site.email`.
+- **Access key:** guardada em `site.web3formsKey` (pública, versionada).
 - **WhatsApp:** saudação única (sem nome de projeto), nas 3 línguas.
 
 ## 1. Formulário de contato
