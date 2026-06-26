@@ -14,7 +14,8 @@
 /coverage
 
 # next.js
-/.next/
+# .next versionado de proposito (deploy via git no host). Cache de build fica fora.
+/.next/cache/
 /out/
 
 # production

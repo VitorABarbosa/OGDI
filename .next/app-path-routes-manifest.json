@@ -1,0 +1,19 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/apple-icon.png/route": "/apple-icon.png",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/icon.png/route": "/icon.png",
+  "/[locale]/[...rest]/page": "/[locale]/[...rest]",
+  "/[locale]/contato/page": "/[locale]/contato",
+  "/[locale]/institucional/page": "/[locale]/institucional",
+  "/[locale]/atuacao/page": "/[locale]/atuacao",
+  "/[locale]/insights/page": "/[locale]/insights",
+  "/[locale]/investidores/page": "/[locale]/investidores",
+  "/[locale]/page": "/[locale]",
+  "/[locale]/projetos/page": "/[locale]/projetos",
+  "/[locale]/parceiros/page": "/[locale]/parceiros",
+  "/[locale]/politica-de-privacidade/page": "/[locale]/politica-de-privacidade",
+  "/[locale]/projetos/[slug]/page": "/[locale]/projetos/[slug]"
+}
