@@ -10,6 +10,8 @@
   "common": {
     "ctaHeader": "Talk to Open Group",
     "ctaMobile": "Present an opportunity",
+    "whatsappMessage": "Hi! I came from the Open Group website and would like to talk about an opportunity.",
+    "whatsappAria": "Talk to Open Group on WhatsApp",
     "langLabel": "Language: English. View other languages",
     "placeholder": {
       "body": "Content in preparation. This page is part of the site architecture and will receive content soon.",
@@ -790,6 +792,8 @@
         "outro": "Other"
       },
       "submit": "Send message",
+      "sending": "Sending…",
+      "erro": "We couldn't send your message right now. Please try again or reach us on WhatsApp.",
       "consent": "By sending, you agree to be contacted by the Open Group team.",
       "sucesso": {
         "title": "Message received.",

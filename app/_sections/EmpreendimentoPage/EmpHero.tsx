@@ -1,11 +1,9 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
+import { whatsappUrl } from "@/lib/whatsapp";
 import { HeroParallaxImage } from "./HeroParallaxImage";
 import type { Projeto } from "@/app/_sections/Projetos/projetos.data";
-
-const TEAM_WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5511985131748&text&type=phone_number&app_absent=0";
 
 // Hero do empreendimento — imagem full-bleed, breadcrumb no topo e, ao centro,
 // eyebrow · wordmark · resumo curto · linha de essenciais · CTAs. Já entrega o
@@ -23,6 +21,7 @@ export function EmpHero({
 }) {
   const t = useTranslations("empreendimento.hero");
   const tp = useTranslations("proj");
+  const tw = useTranslations("common");
   const statusText = status ?? p.status;
   const segmentoText = segmento ?? p.segmento;
 
@@ -109,7 +108,7 @@ export function EmpHero({
           >
             {t("cta")}
           </Button>
-          <Button href={TEAM_WHATSAPP_URL} target="_blank" variant="light">
+          <Button href={whatsappUrl(tw("whatsappMessage"))} target="_blank" variant="light">
             {t("ctaContato")}
           </Button>
         </div>

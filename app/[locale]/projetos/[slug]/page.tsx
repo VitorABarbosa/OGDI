@@ -16,9 +16,7 @@ import { EmpNeighborhoodMap } from "@/app/_sections/EmpreendimentoPage/EmpNeighb
 import { EmpProximos } from "@/app/_sections/EmpreendimentoPage/EmpProximos";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { RevealController } from "@/components/Reveal/RevealController";
-
-const TEAM_WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5511985131748&text&type=phone_number&app_absent=0";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 export const dynamicParams = false;
 
@@ -53,6 +51,7 @@ export default async function Page({
   const t = await getTranslations("empreendimento.cta");
   const tc = await getTranslations(`proj.${p.slug}.card`);
   const tnav = await getTranslations("empreendimento.nav");
+  const tw = await getTranslations("common");
   const listing = {
     status: tc("status"),
     segmento: tc("segmento"),
@@ -91,7 +90,7 @@ export default async function Page({
         title={t("title", { name: p.name })}
         text={t("text")}
         ctaLabel={t("ctaLabel")}
-        href={TEAM_WHATSAPP_URL}
+        href={whatsappUrl(tw("whatsappMessage"))}
       />
     </main>
   );
