@@ -89,7 +89,7 @@ export function Projetos() {
         <div className="flex items-end justify-between gap-[24px_40px] flex-wrap mb-10">
           <div className="reveal">
             <Kicker>{t("kicker")}</Kicker>
-            <SectionHeading className="mt-[14px] whitespace-nowrap">{t.rich("heading", { br: () => <br /> })}</SectionHeading>
+            <SectionHeading className="mt-[14px] whitespace-nowrap max-md:whitespace-normal">{t.rich("heading", { br: () => <br /> })}</SectionHeading>
           </div>
           <div className="reveal reveal-2"><ProjetoTabs active={cat} onChange={onTab} /></div>
         </div>

@@ -1,0 +1,2 @@
+# Artefatos de build do Next: nao normalizar quebras de linha (byte-exato no host).
+.next/** -text

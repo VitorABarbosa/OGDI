@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://opengroup.com.br</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es" />
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/institucional</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/institucional" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/institucional" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/institucional" />
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/atuacao</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/atuacao" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/atuacao" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/atuacao" />
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/projetos</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/projetos" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/projetos" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/projetos" />
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/parceiros</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/parceiros" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/parceiros" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/parceiros" />
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/investidores</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/investidores" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/investidores" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/investidores" />
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/insights</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/insights" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/insights" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/insights" />
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/contato</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/contato" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/contato" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/contato" />
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/projetos/hits-cupece</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/projetos/hits-cupece" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/projetos/hits-cupece" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/projetos/hits-cupece" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/projetos/start-park-jabaquara</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/projetos/start-park-jabaquara" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/projetos/start-park-jabaquara" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/projetos/start-park-jabaquara" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/projetos/oh-freguesia</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/projetos/oh-freguesia" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/projetos/oh-freguesia" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/projetos/oh-freguesia" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/projetos/guarulhos</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/projetos/guarulhos" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/projetos/guarulhos" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/projetos/guarulhos" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/projetos/jabaquara</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/projetos/jabaquara" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/projetos/jabaquara" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/projetos/jabaquara" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://opengroup.com.br/projetos/hits-santa-catarina</loc>
+<xhtml:link rel="alternate" hreflang="pt" href="https://opengroup.com.br/projetos/hits-santa-catarina" />
+<xhtml:link rel="alternate" hreflang="en" href="https://opengroup.com.br/en/projetos/hits-santa-catarina" />
+<xhtml:link rel="alternate" hreflang="es" href="https://opengroup.com.br/es/projetos/hits-santa-catarina" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+</urlset>
