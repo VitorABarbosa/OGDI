@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Kicker } from "@/components/ui/Kicker";
 import { atuacaoSteps } from "@/app/_sections/Atuacao/atuacao.data";
+import styles from "./InvestidoresCiclo.module.css";
 
 // Etapa em que o capital entra na operação (Estruturação Financeira).
 const CAPITAL_IDX = "04";
@@ -32,11 +33,16 @@ export async function InvestidoresCiclo() {
               const capital = s.idx === CAPITAL_IDX;
               return (
                 <li key={s.idx} className="relative border-[color:var(--line-dark)] py-6 max-xl:border-t max-xl:pl-9 xl:border-l xl:px-[14px] xl:py-0">
-                  {/* marcador sobre a linha */}
+                  {/* marcador sobre a linha — capital pulsa igual ao no do hero */}
                   <span
                     aria-hidden
-                    className={`absolute block h-[9px] w-[9px] rounded-full max-xl:left-0 max-xl:top-[34px] xl:-left-[5px] xl:-top-[3px] ${capital ? "bg-green shadow-[0_0_0_5px_rgba(95,168,60,.18)]" : "bg-white/30"}`}
-                  />
+                    className="absolute block h-[9px] w-[9px] max-xl:left-0 max-xl:top-[34px] xl:-left-[5px] xl:-top-[3px]"
+                  >
+                    {capital && <span className={styles.halo} />}
+                    <span
+                      className={`absolute inset-0 rounded-full ${capital ? "bg-green shadow-[0_0_0_5px_rgba(95,168,60,.18)]" : "bg-white/30"}`}
+                    />
+                  </span>
                   <div className="xl:mt-8">
                     <span className="block font-sans text-[12px] tracking-[.18em] uppercase text-white/40 tabular-nums">
                       {s.idx}
