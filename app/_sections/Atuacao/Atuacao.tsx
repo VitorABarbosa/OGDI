@@ -8,7 +8,7 @@ import { AtuacaoWatermark } from "./AtuacaoWatermark";
 export async function Atuacao() {
   const t = await getTranslations("home.atuacao");
   return (
-    <section id="atuacao" className="relative py-section bg-bg-soft">
+    <section id="atuacao" className="relative overflow-x-clip py-section bg-bg-soft">
       <AtuacaoWatermark />
       <div className="wrap relative z-[1]">
         <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-[clamp(40px,6vw,96px)] items-start">
